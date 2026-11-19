@@ -21,6 +21,14 @@ function stripTags(s?: string): string | undefined {
   return s?.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
+/** Record titles: LaTeX math ("$\sqrt{s_{\text{NN}}}$" → "sNN") and article numbering of old journals ("XL. Cathode Rays"). */
+function cleanTitle(t: string): string {
+  return t
+    .replace(/\$([^$]{1,80})\$/g, (_, x: string) => x.replace(/\\(?:text|mathrm|rm|mathit|it|bf|mathbf|sqrt|left|right)\b/g, '').replace(/[{}_^\\]/g, ''))
+    .replace(/^(?:[IVXLCDM]{1,7}|\d{1,3})\.\s+(?=\p{Lu})/u, '')
+    .trim();
+}
+
 function yearsFromParts(...parts: any[]): number[] {
   const ys: number[] = [];
   for (const p of parts) {
@@ -40,7 +48,7 @@ export function fromCrossref(it: any): WorkRecord {
     source: 'crossref',
     sourceId: it.DOI,
     url: `https://doi.org/${it.DOI}`,
-    title: sub && !title.toLowerCase().includes(sub.toLowerCase()) ? `${title}: ${sub}` : title,
+    title: cleanTitle(sub && !title.toLowerCase().includes(sub.toLowerCase()) ? `${title}: ${sub}` : title),
     authors: (it.author ?? []).map((a: any) => (a.family ? { family: a.family, given: a.given } : splitFullName(a.name ?? ''))).filter((a: Person) => a.family),
     year: years[0],
     years,
@@ -106,6 +114,12 @@ export async function dataciteDoi(http: Http, doi: string): Promise<WorkRecord |
   return j?.data ? fromDatacite(j.data) : null;
 }
 
+/** Is the DOI registered at all (any agency: mEDRA, JaLC, CNKI, KISTI…)? doi.org's handle API answers with CORS. */
+export async function doiRegistered(http: Http, doi: string): Promise<boolean> {
+  const j = await http.get(`https://doi.org/api/handles/${encodeURI(doi)}`);
+  return j?.responseCode === 1;
+}
+
 export async function arxivRecord(http: Http, id: string): Promise<WorkRecord | null> {
   return dataciteDoi(http, `10.48550/arxiv.${id.replace(/v\d+$/, '')}`);
 }
@@ -128,7 +142,7 @@ export function fromOpenAlex(w: any): WorkRecord {
     source: 'openalex',
     sourceId: w.id,
     url: w.id,
-    title: w.title ?? '',
+    title: cleanTitle(w.title ?? ''),
     authors: (w.authorships ?? []).map((a: any) => splitFullName(a.author?.display_name ?? a.raw_author_name ?? '')),
     authorsTruncated: !!w.is_authors_truncated,
     year: w.publication_year,
@@ -161,6 +175,11 @@ export async function openalexDoi(http: Http, doi: string): Promise<WorkRecord |
 
 /* ------------------------------ Semantic Scholar ------------------------------ */
 
+function dblpVenue(key: string | undefined): string | undefined {
+  const m = key?.match(/^(?:conf|journals)\/([a-z0-9]+)\//i);
+  return m && m[1].toLowerCase() !== 'corr' ? m[1] : undefined;
+}
+
 const S2_FIELDS = 'title,year,authors,venue,publicationVenue,externalIds,publicationDate,abstract,openAccessPdf,journal,publicationTypes';
 
 export function fromS2(p: any): WorkRecord {
@@ -169,16 +188,17 @@ export function fromS2(p: any): WorkRecord {
     source: 'semanticscholar',
     sourceId: p.paperId,
     url: `https://www.semanticscholar.org/paper/${p.paperId}`,
-    title: p.title ?? '',
+    title: cleanTitle(p.title ?? ''),
     authors: (p.authors ?? []).map((a: any) => splitFullName(a.name ?? '')),
     year: p.year ?? undefined,
     years: [p.year, p.publicationDate ? parseInt(p.publicationDate.slice(0, 4), 10) : undefined].filter((x): x is number => !!x),
     venue: p.venue || pv?.name || p.journal?.name,
-    venueAliases: [p.venue, pv?.name, ...(pv?.alternate_names ?? []), p.journal?.name].filter(Boolean),
+    // DBLP keys name the original venue ("conf/nips/KrizhevskySH12") even when S2 shows a later reprint's journal
+    venueAliases: [p.venue, pv?.name, ...(pv?.alternate_names ?? []), p.journal?.name, dblpVenue(p.externalIds?.DBLP)].filter(Boolean),
     venueType: pv?.type,
     type: p.publicationTypes?.[0],
     doi: p.externalIds?.DOI?.toLowerCase(),
-    arxivId: p.externalIds?.ArXiv,
+    arxivId: p.externalIds?.ArXiv ?? p.externalIds?.DOI?.match(/^10\.48550\/arxiv\.(.+)$/i)?.[1],
     volume: /^abs\//i.test(p.journal?.volume ?? '') ? undefined : p.journal?.volume, // S2 stores arXiv ids as 'abs/…'
     pages: p.journal?.pages,
     abstract: p.abstract ?? undefined,
@@ -278,7 +298,7 @@ export async function checkSoftwareUrl(http: Http, url: string): Promise<WorkRec
     };
   }
   const hf = url.match(/huggingface\.co\/(datasets\/|spaces\/)?([\w.-]+)\/([\w.-]+)/i);
-  if (hf) {
+  if (hf && !/^(?:blog|docs|papers|learn|posts|collections|organizations|settings|tasks|join|pricing)$/i.test(hf[2])) {
     const kind = hf[1] === 'datasets/' ? 'datasets' : hf[1] === 'spaces/' ? 'spaces' : 'models';
     const j = await http.get(`https://huggingface.co/api/${kind}/${hf[2]}/${hf[3]}`);
     if (!j) return null;

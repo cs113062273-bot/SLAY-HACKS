@@ -3,7 +3,7 @@ import puppeteer from 'puppeteer-core';
 const file = process.argv[2];
 const browser = await puppeteer.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
 const page = await browser.newPage();
-await page.goto('http://localhost:4173/');
+await page.goto((process.env.VERACITE_URL ?? 'http://127.0.0.1:4180/'));
 await page.waitForSelector('#file-input');
 const input = (await page.$('#file-input'))!;
 await (input as any).uploadFile(file);

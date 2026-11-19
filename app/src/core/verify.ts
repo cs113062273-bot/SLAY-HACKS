@@ -4,7 +4,7 @@
  * does not depend on a perfect parse.
  */
 import type { Http } from './http';
-import { authorLikeness, parseAuthors, parseReference } from './parse';
+import { authorLikeness, doiAlternatives, parseAuthors, parseReference } from './parse';
 import {
   arxivRecord,
   checkSoftwareUrl,
@@ -12,6 +12,7 @@ import {
   crossrefDoi,
   crossrefUpdates,
   dataciteDoi,
+  doiRegistered,
   europePmcSearch,
   openalexDoi,
   openalexSearch,
@@ -53,6 +54,10 @@ const VENUE_CANON: [string, RegExp][] = [
   ['ICRA', /\bicra\b|international conference on robotics and automation/],
   ['INTERSPEECH', /interspeech/],
   ['ICASSP', /\bicassp\b|acoustics,? speech,? and signal processing/],
+  ['TPAMI', /\btpami\b|\bpami\b|pattern analysis and machine intelligence/],
+  ['IJCV', /\bijcv\b|international journal of computer vision/],
+  ['TNNLS', /\btnnls\b|transactions on neural networks and learning systems/],
+  ['CACM', /\bcacm\b|communications of the acm/],
 ];
 
 function canonVenues(...texts: (string | undefined)[]): Set<string> {
@@ -72,6 +77,8 @@ function canonVenues(...texts: (string | undefined)[]): Set<string> {
   return out;
 }
 
+const JOURNAL_CANON = new Set(['TPAMI', 'IJCV', 'TNNLS', 'CACM', 'JMLR', 'TMLR', 'TACL']);
+
 const PREPRINT_RE = /arxiv|corr|biorxiv|medrxiv|ssrn|preprint|research square|openreview|techrxiv|chemrxiv|psyarxiv|zenodo/i;
 
 /* ------------------------------ authors ------------------------------ */
@@ -83,6 +90,7 @@ interface AuthorAlign {
   givenMismatch: number;
   firstOk: boolean;
   omitted: number; // record authors not cited (when no et al.)
+  missing: Person[]; // those record authors
   score: number; // 0..1
 }
 
@@ -126,9 +134,17 @@ function isOrgAuthor(c: Person, title?: string): boolean {
 }
 
 function alignAuthors(cited: Person[], etAl: boolean, rec: WorkRecord): AuthorAlign {
-  const R = rec.authors.filter((a) => a.family);
+  // indexes sometimes list the same person twice ("Nielsen, S. F.; Nielsen, S. F.")
+  const seenNames = new Set<string>();
+  const R = rec.authors.filter((a) => {
+    if (!a.family) return false;
+    const k = `${foldName(a.family)}|${fold(a.given ?? '')}`; // exact repeats only: co-authors often share a surname
+    if (seenNames.has(k)) return false;
+    seenNames.add(k);
+    return true;
+  });
   // a sole organization author ("OpenCitations", "Microsoft Corporation") cannot be compared to people
-  if (cited.length === 1 && isOrgAuthor(cited[0], rec.title)) return { cited: [], matched: 0, unmatched: [], givenMismatch: 0, firstOk: true, omitted: 0, score: 0.5 };
+  if (cited.length === 1 && isOrgAuthor(cited[0], rec.title)) return { cited: [], matched: 0, unmatched: [], givenMismatch: 0, firstOk: true, omitted: 0, missing: [], score: 0.5 };
   const used = new Set<number>();
   let matched = 0;
   let givenMismatch = 0;
@@ -163,15 +179,35 @@ function alignAuthors(cited: Person[], etAl: boolean, rec: WorkRecord): AuthorAl
       unmatched.push(c);
     }
   });
-  if (!R.length) return { cited, matched: 0, unmatched: [], givenMismatch: 0, firstOk: true, omitted: 0, score: 0.5 };
+  if (!R.length) return { cited, matched: 0, unmatched: [], givenMismatch: 0, firstOk: true, omitted: 0, missing: [], score: 0.5 };
+  // the record lists only the first author (common for older Crossref deposits): co-authors cannot be checked
+  if (R.length === 1 && cited.length >= 3 && firstOk && matched === 1) return { cited: cited.slice(0, 1), matched: 1, unmatched: [], givenMismatch, firstOk, omitted: 0, missing: [], score: 1 };
   const people = R.filter((r, ri) => used.has(ri) || !isGroupName(r));
   const omitted = etAl || rec.authorsTruncated ? 0 : Math.max(0, people.length - used.size);
+  const missing = etAl || rec.authorsTruncated ? [] : R.filter((r, ri) => !used.has(ri) && !isGroupName(r));
   const denom = Math.max(1, cited.length);
   const score = cited.length ? matched / denom : 0.5;
-  return { cited, matched, unmatched, givenMismatch, firstOk, omitted, score };
+  return { cited, matched, unmatched, givenMismatch, firstOk, omitted, missing, score };
 }
 
 /* ------------------------------ alignment ------------------------------ */
+
+function nonLatin(s: string): boolean {
+  const letters = s.match(/\p{L}/gu) ?? [];
+  const latin = s.match(/\p{Script=Latin}/gu) ?? [];
+  return letters.length >= 4 && latin.length / letters.length < 0.5;
+}
+
+/** A journal item whose title is the cited book's title: a book review, which proves the book exists but not its details. */
+export function isBookReview(p: ParsedRef, rec: WorkRecord): boolean {
+  if (p.kind !== 'book') return false;
+  const journalItem = /journal-article|^article$|journalarticle|^review$/i.test(rec.type ?? '') || (rec.venueType === 'journal' && !/book/i.test(rec.type ?? ''));
+  const first = p.authors[0];
+  const byCited = !!first && rec.authors.some((a) => familyMatch(first, a) >= 0.85);
+  if (!byCited && first && rec.authors.length && !/book|monograph/i.test(rec.type ?? '') && (!p.year || !rec.year || rec.year >= p.year - 1)) return true;
+  if (!journalItem || !rec.venue) return false;
+  return !byCited || /\bby\b|\beds?\.|\bpp\.|\bisbn\b|\bpress\b|\(\s*\d{4}\s*\)|\$\s?\d/i.test(rec.title) || rec.authors.length > Math.max(1, p.authors.length);
+}
 
 export interface Alignment {
   rec: WorkRecord;
@@ -211,7 +247,11 @@ export function align(p: ParsedRef, rec: WorkRecord): Alignment {
   let ffScore = ff.score * lenPenalty;
   // (only when the parse is trustworthy: a 'title' that is really an author list means the split failed)
   if (ffScore > t1 && p.venue && p.title && authorLikeness(p.title) < 0.5 && fuzzyFind(rec.title, p.venue).score >= ff.score - 0.03) ffScore = 0;
-  const title = Math.max(t1, ffScore);
+  let title = Math.max(t1, ffScore);
+  // the DOI's record carries the title in another script (Cyrillic, CJK…), the reference a translation
+  if (title < 0.9 && rec.doi && p.dois.includes(rec.doi) && nonLatin(rec.title) && !nonLatin(p.title ?? p.clean)) title = 0.9;
+  // another instalment of a series ("The fifth PASCAL … challenge" vs "The third …", "SemEval-2016 Task 4" vs 2017) is a different work
+  if (p.title && title < 1 && seriesDiffer(p.title, rec.title)) title = Math.min(title, 0.6);
   const { authors: citedAuthors, etAl } = citedAuthorsFor(p, rec, ff.score > 0.85 ? ff : undefined);
   const authors = alignAuthors(citedAuthors, etAl, rec);
   let yearDiff: number | null = null;
@@ -289,13 +329,28 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
   /* 1. identifier records */
   const idRecs: { id: string; rec: WorkRecord | null }[] = [];
   const idJobs: Promise<void>[] = [];
+  const lookDoi = async (doi: string) => {
+    let rec = await safe('crossref', () => crossrefDoi(http, doi), failed, queried, until);
+    if (!rec) rec = await safe('datacite', () => dataciteDoi(http, doi), failed, queried, until);
+    if (!rec && use.has('openalex')) rec = await safe('openalex', () => openalexDoi(http, doi), failed, queried, until);
+    return rec;
+  };
   for (const doi of p.dois.slice(0, 2)) {
     idJobs.push(
       (async () => {
-        let rec = await safe('crossref', () => crossrefDoi(http, doi), failed, queried, until);
-        if (!rec) rec = await safe('datacite', () => dataciteDoi(http, doi), failed, queried, until);
-        if (!rec && use.has('openalex')) rec = await safe('openalex', () => openalexDoi(http, doi), failed, queried, until);
-        idRecs.push({ id: `doi:${doi}`, rec });
+        let rec = await lookDoi(doi);
+        let id = doi;
+        // PDF line breaks and publisher URLs garble DOIs: try the plausible readings before calling it unresolvable
+        if (!rec)
+          for (const alt of doiAlternatives(doi, p.raw)) {
+            const r2 = await lookDoi(alt);
+            if (r2 && align(p, r2).title >= 0.8) {
+              rec = r2;
+              id = alt;
+              break;
+            }
+          }
+        idRecs.push({ id: `doi:${id}`, rec });
       })(),
     );
   }
@@ -317,7 +372,16 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
   const swJob = (async () => {
     for (const u of p.urls) {
       if (!use.has('github') && /github/.test(u)) continue;
-      const r = await safe(/github/.test(u) ? 'github' : 'huggingface', () => checkSoftwareUrl(http, u), failed, queried, until);
+      const src = /github/.test(u) ? 'github' : 'huggingface';
+      let r = await safe(src, () => checkSoftwareUrl(http, u), failed, queried, until);
+      if (r === null) {
+        // a URL broken at a line end: "…/technical-tim eline"
+        const cont = p.raw.slice(p.raw.indexOf(u) + u.length).match(/^\s([a-z0-9][\w.\-/]*?)(?=[.,;]?(?:\s|$))/);
+        if (cont) {
+          const r2 = await safe(src, () => checkSoftwareUrl(http, u + cont[1]), failed, queried, until);
+          if (r2) r = r2;
+        }
+      }
       if (r !== undefined) {
         software = r;
         return;
@@ -329,7 +393,7 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
   let cands = dedupe([...(await Promise.all(searchJobs)).flat().filter((x): x is WorkRecord => !!x), ...idRecs.map((x) => x.rec).filter((x): x is WorkRecord => !!x)]);
 
   let aligned = cands.map((c) => align(p, c)).sort((a, b) => b.overall - a.overall);
-  let best = pickBest(aligned);
+  let best = pickBest(aligned, p);
 
   /* tier B: rate-limited indexes, only when tier A did not settle the reference */
   const citedConf = canonVenues(p.venue, p.raw).size > 0;
@@ -346,7 +410,7 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
     const more = (await Promise.all(tierB)).flat().filter((x): x is WorkRecord => !!x);
     cands = dedupe([...cands, ...more]);
     aligned = cands.map((c) => align(p, c)).sort((a, b) => b.overall - a.overall);
-    best = pickBest(aligned);
+    best = pickBest(aligned, p);
   }
 
   /* 2b. second-chance retrieval when nothing matched well */
@@ -360,7 +424,7 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
     const more = (await Promise.all(extra)).flat().filter((x): x is WorkRecord => !!x);
     cands = dedupe([...cands, ...more]);
     aligned = cands.map((c) => align(p, c)).sort((a, b) => b.overall - a.overall);
-    best = pickBest(aligned);
+    best = pickBest(aligned, p);
   }
 
   /* 2c. enrich: a strong match from Crossref/DataCite lacks venue aliases for ML conferences → ask S2 by id */
@@ -373,7 +437,7 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
       if (r) {
         cands.push(r);
         aligned = cands.map((c) => align(p, c)).sort((a, b) => b.overall - a.overall);
-        best = pickBest(aligned);
+        best = pickBest(aligned, p);
       }
     }
   }
@@ -386,8 +450,14 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
   // identifier consistency
   const idProblems: string[] = [];
   let renamed: WorkRecord | undefined;
+  const goodDoi = idRecs.some((o) => o.rec && o.id.startsWith('doi:') && align(p, o.rec).title >= 0.8);
   for (const { id, rec } of idRecs) {
     if (!rec) {
+      if (goodDoi && id.startsWith('doi:')) continue;
+      if (id.startsWith('doi:') && (await safe('crossref', () => doiRegistered(http, id.slice(4)), new Set(), queried, until))) {
+        checks.push({ field: 'identifier', status: 'na', cited: id, note: 'registered DOI, but its metadata is not in Crossref or DataCite' });
+        continue;
+      }
       if (!failed.has('crossref') || !failed.has('datacite')) idProblems.push(`${id} does not resolve to any record`);
       checks.push({ field: 'identifier', status: 'mismatch', cited: id, note: 'identifier not found' });
       continue;
@@ -402,7 +472,9 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
     const ct = new Set(contentTokens(p.title ?? ''));
     const rt = contentTokens(rec.title);
     const overlap = rt.filter((t) => ct.has(t)).length / Math.max(1, Math.min(ct.size, rt.length));
-    if (!tOk && sameAuthors && /arxiv/i.test(id) && yearOk && overlap >= 0.34) {
+    // another index still lists the cited title under this very identifier: an earlier version's title
+    const otherIndexAgrees = !!rec.arxivId && aligned.some((x) => x.rec !== rec && x.title >= 0.85 && x.rec.arxivId?.replace(/v\d+$/, '') === rec.arxivId!.replace(/v\d+$/, ''));
+    if (!tOk && sameAuthors && /arxiv/i.test(id) && yearOk && (overlap >= 0.34 || otherIndexAgrees)) {
       // arXiv titles change between versions; the identifier's current record has the same authors
       checks.push({ field: 'identifier', status: 'minor', cited: id, found: rec.title, note: 'same authors; the arXiv entry was likely retitled in a later version' });
       issues.push(`${id} now carries the title “${rec.title}” (same authors; likely a renamed version)`);
@@ -417,7 +489,17 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
     }
   }
 
-  if (best && best.title >= 0.85) {
+  const review = !!best && best.title >= 0.85 && isBookReview(p, best.rec);
+  if (best && review) {
+    const r = best.rec;
+    const ry = r.year;
+    const plausible = !p.year || !ry || (ry >= p.year - 1 && ry <= p.year + 6) || p.year > ry;
+    verdict = plausible ? 'verified_minor' : 'unverifiable';
+    confidence = plausible ? 0.75 : 0.5;
+    checks.unshift({ field: 'title', status: 'match', cited: p.title, found: r.title, score: best.title, note: `title found in a review of the book (${r.venue}${ry ? ', ' + ry : ''})` });
+    issues.push(`Book: indexed only through a review in “${r.venue}”${ry ? ` (${ry})` : ''}; authors, year and publisher could not be checked`);
+    if (idProblems.length) issues.push(...idProblems);
+  } else if (best && best.title >= 0.85) {
     const a = best;
     const r = a.rec;
     let major = 0;
@@ -436,6 +518,13 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
     // authors
     const au = a.authors;
     const citedN = au.cited.length;
+    const bookLike = p.kind === 'book' || /book|monograph|edited/i.test(r.type ?? '');
+    let otherItem = false;
+    const lowRaw = p.raw.toLowerCase();
+    const tAt = lowRaw.indexOf(r.title.toLowerCase().split(/\s+/).slice(0, 3).join(' '));
+    const authorRegion = p.raw.slice(0, tAt > 0 ? tAt : Math.ceil(p.raw.length * 0.5));
+    const inRaw = au.missing.filter((m) => m.family.length >= 2 && new RegExp(`(?:^|[^\\p{L}])${m.family.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?:[^\\p{L}]|$)`, 'iu').test(authorRegion));
+    const omittedEff = Math.max(0, au.omitted - inRaw.length);
     if (citedN && r.authors.length) {
       const um = au.unmatched.length;
       const recPeople = r.authors.filter((x) => !isGroupName(x)).length;
@@ -448,38 +537,63 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
         major++;
         issues.push(`Author list does not match the published work: ${au.unmatched.map((x) => x.family).join(', ') || 'first author'} not among its authors`);
         checks.push({ field: 'authors', status: 'mismatch', cited: au.cited.map((x) => x.family).join(', '), found: r.authors.slice(0, 8).map((x) => x.family).join(', ') + (r.authors.length > 8 ? ', …' : ''), note: `${um} cited author(s) not on the paper` });
-      } else if ((au.omitted >= 2 || (au.omitted >= 1 && au.omitted / r.authors.length >= 0.25)) && citedN < r.authors.length && r.authors.length <= 10 && !r.authorsTruncated && !p.etAl) {
+      } else if ((omittedEff >= 2 || (omittedEff >= 1 && omittedEff / r.authors.length >= 0.25)) && citedN < r.authors.length && r.authors.length <= 10 && !r.authorsTruncated && !p.etAl && !bookLike) {
         major++;
         issues.push(`Incomplete author list: ${au.omitted} of ${r.authors.length} authors omitted without “et al.”`);
         checks.push({ field: 'authors', status: 'mismatch', cited: au.cited.map((x) => x.family).join(', '), found: r.authors.slice(0, 8).map((x) => x.family).join(', ') + (r.authors.length > 8 ? ', …' : ''), note: `${au.omitted} author(s) omitted` });
-      } else if (um >= 1 || au.givenMismatch > 0 || au.omitted >= 1) {
+      } else if (um >= 1 || au.givenMismatch > 0 || omittedEff >= 1) {
         minor++;
-        const why = recordIncomplete && um ? `the index lists only ${recPeople} author(s); ${au.unmatched.map((x) => x.family).join(', ')} could not be confirmed` : um === 1 ? `“${au.unmatched[0].family}” not found (typo?)` : au.givenMismatch ? 'given-name differences' : `${au.omitted} author(s) omitted without “et al.”`;
+        const why = recordIncomplete && um ? `the index lists only ${recPeople} author(s); ${au.unmatched.map((x) => x.family).join(', ')} could not be confirmed` : um === 1 ? `“${au.unmatched[0].family}” not found (typo?)` : au.givenMismatch ? 'given-name differences' : bookLike ? `the index also lists ${au.missing.map((x) => x.family).slice(0, 3).join(', ')} (editors, translators or contributors?)` : `${omittedEff} author(s) omitted without “et al.”`;
         checks.push({ field: 'authors', status: 'minor', cited: au.cited.map((x) => x.family).join(', '), found: r.authors.slice(0, 8).map((x) => x.family).join(', '), note: why });
       } else checks.push({ field: 'authors', status: 'match', cited: au.cited.map((x) => x.family).join(', '), found: r.authors.slice(0, 8).map((x) => x.family).join(', ') });
     } else checks.push({ field: 'authors', status: 'na' });
     // year: the closest year among all records of this work (preprint and published versions)
     const sameWork = aligned.filter((x) => x.title >= 0.85 && x.authors.score >= 0.5 && x.yearDiff !== null);
     if (sameWork.length) a.yearDiff = Math.min(a.yearDiff ?? 99, ...sameWork.map((x) => x.yearDiff!));
+    // a proceedings paper whose only indexed record is its later journal extension (same title, a few years on)
+    // (S2 tags many conference papers "JournalArticle": trust only venue type, Crossref's type or a known journal,
+    // and never a record that names a conference)
+    const rc = canonVenues(r.venue, ...r.venueAliases);
+    const recIsJournal = ![...rc].some((v) => !JOURNAL_CANON.has(v)) && !/conference|proceedings|symposium|workshop/i.test(r.venue ?? '') && (r.venueType === 'journal' || r.type === 'journal-article' || [...rc].some((v) => JOURNAL_CANON.has(v)));
+    const citedProc = /proceedings|symposium|workshop|conference/i.test(p.venue ?? '') || [...canonVenues(p.venue)].some((v) => !JOURNAL_CANON.has(v));
+    const recFirst = r.years.length ? Math.min(...r.years) : 0;
+    const laterVersion = !!p.year && recIsJournal && citedProc && a.title >= 0.95 && au.firstOk && p.year < recFirst && recFirst - p.year <= 4;
     if (a.yearDiff !== null) {
       const onlyPreprints = aligned.filter((x) => x.title >= 0.85).every((x) => !x.rec.venue || PREPRINT_RE.test(x.rec.venue) || x.rec.source === 'datacite');
       const tol = onlyPreprints || PREPRINT_RE.test(p.raw) ? 2 : 1;
-      if (a.yearDiff > tol) {
+      const recMin = Math.min(...r.years);
+      const recMax = Math.max(...r.years);
+      // a book cited by a later edition or reprint, or an old work whose only record is a modern reprint/digitization
+      const edition = !!p.year && ((bookLike && (p.year > recMax || p.year < recMin)) || p.year <= recMin - 10);
+      if (a.yearDiff > tol && p.kind === 'book' && /chapter|article|section/i.test(r.type ?? '')) otherItem = true;
+      if (a.yearDiff > tol && (edition || laterVersion)) {
+        minor++;
+        checks.push({ field: 'year', status: 'minor', cited: String(p.year), found: r.years.join('/'), note: laterVersion && !edition ? 'the index holds the later journal version of this proceedings paper' : p.year! > recMax ? 'later edition or reprint' : 'the index dates a later reprint or digitized edition' });
+      } else if (a.yearDiff > tol) {
         major++;
         issues.push(`Year ${p.year} does not match the published record (${r.years.join('/')})`);
         checks.push({ field: 'year', status: 'mismatch', cited: String(p.year), found: r.years.join('/') });
       } else checks.push({ field: 'year', status: a.yearDiff === 0 ? 'match' : 'minor', cited: String(p.year), found: r.years.join('/') });
     }
     // venue
-    if (a.venueConflict) {
+    const recCanon = canonVenues(r.venue, ...r.venueAliases);
+    const laterJournal = laterVersion || a.venueConflict && !!p.year && p.year < Math.min(...r.years) && [...recCanon].every((v) => JOURNAL_CANON.has(v)) && [...canonVenues(p.venue)].some((v) => !JOURNAL_CANON.has(v));
+    if (laterJournal) {
+      // "Faster R-CNN, NIPS 2015" when the index only holds the 2017 TPAMI extension with the same title and authors
+      minor++;
+      checks.push({ field: 'venue', status: 'minor', cited: p.venue, found: r.venue, note: 'the index holds the later journal version of this conference paper' });
+    } else if (a.venueConflict) {
       major++;
       issues.push(`Venue mismatch: ${a.venueNote}`);
       checks.push({ field: 'venue', status: 'mismatch', cited: p.venue, found: r.venue, note: a.venueNote });
     } else {
       const vj = venueGeneralCheck(p, aligned.filter((x) => x.title >= 0.85 && x.authors.score >= 0.5).map((x) => x.rec).concat([r]));
-      if (vj === 'mismatch') {
+      if (vj === 'mismatch' && laterVersion) {
+        minor++;
+        checks.push({ field: 'venue', status: 'minor', cited: p.venue, found: r.venue, note: 'the index holds the later journal version of this proceedings paper' });
+      } else if (vj === 'mismatch') {
         major++;
-        issues.push(`Published in “${r.venue}”, not “${p.venue}”`);
+        issues.push(`Published in “${r.venue || r.venueAliases.find(Boolean) || 'another venue'}”, not “${p.venue}”`);
         checks.push({ field: 'venue', status: 'mismatch', cited: p.venue, found: r.venue });
       } else if (p.venue && r.venue) checks.push({ field: 'venue', status: vj === 'match' ? 'match' : 'na', cited: p.venue, found: r.venue });
     }
@@ -514,6 +628,11 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
 
     if (idProblems.some((x) => x.includes('different work'))) verdict = 'id_mismatch';
     else verdict = major ? 'metadata_error' : minor ? 'verified_minor' : 'verified';
+    if (otherItem && verdict === 'metadata_error') {
+      verdict = 'unverifiable';
+      issues.length = 0;
+      issues.push(`Book: only a related ${r.type ?? 'record'} (“${r.title}”, ${r.year ?? 'n.d.'}) is indexed, not the book itself; check manually`);
+    }
     confidence = major ? 0.35 : Math.min(0.99, 0.6 + a.title * 0.25 + a.authors.score * 0.14);
 
     // a same-titled scholarly record by other authors does not disprove a cited web page / dataset / tool
@@ -531,6 +650,9 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
   } else {
     // nothing matched by title
     const partial = aligned.find((a) => a.title >= 0.6 && a.authors.score >= 0.6 && (a.yearDiff ?? 9) <= 1);
+    const firstPage = (x?: string) => x?.match(/\d+/)?.[0];
+    const nums = new Set(p.raw.replace(/\(\s*(?:1[89]|20)\d\d[a-z]?\s*\)/g, ' ').match(/\b\d{1,5}\b/g) ?? []);
+    const titleless = p.title ? undefined : aligned.find((a) => a.authors.firstOk && a.authors.score >= 0.5 && (a.yearDiff ?? 9) <= 1 && !!a.rec.volume && nums.has(a.rec.volume) && !!firstPage(a.rec.pages) && nums.has(firstPage(a.rec.pages)!));
     if (renamed) {
       // the cited (older) title survives only in an earlier arXiv version; same identifier, same authors
       verdict = 'verified_minor';
@@ -545,10 +667,24 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
       verdict = 'not_found';
       confidence = 0.2;
       issues.push(`Linked resource ${p.urls[0]} does not exist`);
+    } else if (!p.title && titleless) {
+      verdict = 'verified_minor';
+      confidence = 0.7;
+      best = titleless;
+      checks.push({ field: 'title', status: 'na', found: titleless.rec.title, note: 'no title cited; matched by first author, year, volume and page' });
+    } else if (!p.title) {
+      verdict = 'unverifiable';
+      confidence = 0.5;
+      issues.push('No title is cited, and no record matched the authors, year, volume and page; check manually');
     } else if (p.placeholders.length) {
       verdict = 'fabricated';
       confidence = 0.02;
       issues.push(`Template / placeholder content: ${p.placeholders.join(', ')}`);
+    } else if (partial && seriesDiffer(p.title, partial.rec.title)) {
+      // e.g. "The fifth PASCAL RTE challenge" when only the third is indexed: a sibling, not evidence of an error
+      verdict = 'unverifiable';
+      confidence = 0.5;
+      issues.push(`Indexes hold another instalment of this series (“${partial.rec.title}”), not the one cited; check manually`);
     } else if (partial) {
       verdict = 'metadata_error';
       confidence = 0.3;
@@ -566,10 +702,24 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
       issues.push(...idProblems);
     } else {
       const answered = [...queried].filter((s) => !failed.has(s));
-      if (answered.length === 0) {
-        verdict = 'not_found';
+      const broadDown = ['semanticscholar', 'openalex'].every((s) => !queried.has(s as SourceName) || failed.has(s as SourceName)) && ['semanticscholar', 'openalex'].some((s) => queried.has(s as SourceName));
+      if (answered.length === 0 || (broadDown && !p.dois.length && !p.arxivIds.length)) {
+        // an outage is not evidence against the reference
+        verdict = 'unchecked';
         confidence = 0.5;
-        issues.push('Scholarly indexes unavailable; could not check');
+        issues.push(answered.length === 0 ? 'No scholarly index responded; retry later' : 'Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later');
+      } else if (p.year && p.year < 1950 && !p.dois.length) {
+        // index coverage before 1950 is sparse (archival sources, old periodicals): absence is not evidence
+        verdict = 'unverifiable';
+        confidence = 0.5;
+        issues.push(`Published ${p.year}: scholarly indexes cover this period sparsely; check manually`);
+      } else if (!p.dois.length && (LANG_TAG_RE.test(p.raw) || TRANSLATED_TITLE_RE.test(p.raw))) {
+        // the reference itself marks the work as non-English (a language tag, or a [bracketed translation] of
+        // the title): regional literature is sparsely indexed, so absence is not evidence
+        verdict = 'unverifiable';
+        confidence = 0.5;
+        const lang = p.raw.match(LANG_TAG_RE)?.[1];
+        issues.push(`${lang ? `Cited as a ${lang.toLowerCase()}-language work` : 'Cited with a translated title'}: scholarly indexes cover non-English literature sparsely; check manually`);
       } else {
         // only call it fabricated when the broad-coverage indexes actually answered
         const majorDown = ['semanticscholar', 'openalex'].filter((s) => queried.has(s as SourceName) && failed.has(s as SourceName));
@@ -585,6 +735,15 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
     if (!best && verdict !== 'unverifiable') best = undefined;
   }
 
+  // forthcoming / same-volume works are not indexed yet; a similar older record is not evidence against them
+  if (/\bin these proceedings\b|\bthis volume\b|\bforthcoming\b|\bin press\b|\bto appear\b|\bin preparation\b/i.test(p.raw) && (verdict === 'fabricated' || verdict === 'not_found' || (verdict === 'metadata_error' && checks.some((c) => c.status === 'mismatch' && (c.field === 'year' || c.field === 'authors'))))) {
+    verdict = 'unverifiable';
+    confidence = 0.5;
+    issues.length = 0;
+    issues.push('Forthcoming or same-volume work: not indexed yet; check manually');
+    best = undefined;
+  }
+
   // placeholder text is decisive even if a related work exists
   if (p.placeholders.length && verdict !== 'fabricated') {
     issues.push(`Template / placeholder content: ${p.placeholders.join(', ')}`);
@@ -594,7 +753,7 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
   if (/\band et al\b/i.test(p.raw)) issues.push('“and et al.” pattern (common in machine-generated references)');
 
   /* 4. retraction */
-  const m = best && best.title >= 0.85 ? best.rec : verdict === 'verified' && software ? software : undefined;
+  const m = best && best.title >= 0.85 && !review ? best.rec : verdict === 'verified' && software ? software : undefined;
   if (m && (verdict === 'verified' || verdict === 'verified_minor' || verdict === 'metadata_error')) {
     let retracted = !!m.isRetracted || aligned.some((a) => a.title >= 0.9 && a.rec.isRetracted && a.authors.score >= 0.5);
     if (!retracted && ctx.checkRetractions !== false && m.doi && use.has('crossref')) {
@@ -620,7 +779,7 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
     candidates: all.slice(0, 5),
     sourcesQueried: [...queried],
     sourcesFailed: [...failed],
-    suggestedFix: best && best.title >= 0.85 && verdict !== 'verified' ? formatReference(best.rec) : undefined,
+    suggestedFix: best && best.title >= 0.85 && verdict !== 'verified' && !review ? formatReference(best.rec) : undefined,
   };
 }
 
@@ -629,7 +788,7 @@ function differentWork(a: Alignment): boolean {
   return a.authors.cited.length > 0 && a.authors.matched === 0 && (a.yearDiff ?? 0) > 2 && tokens(a.rec.title).length <= 5;
 }
 
-function pickBest(aligned: Alignment[]): Alignment | undefined {
+function pickBest(aligned: Alignment[], p?: ParsedRef): Alignment | undefined {
   // among strong title matches prefer the best author agreement; prefer published over preprint on ties
   // The question is whether a record exists that matches the reference *as cited*, so among
   // same-title records (re-deposits, preprint vs. published versions) prefer the one that agrees
@@ -639,7 +798,7 @@ function pickBest(aligned: Alignment[]): Alignment | undefined {
   const agree = (a: Alignment) => {
     const y = a.yearDiff === null ? 0.5 : a.yearDiff === 0 ? 1 : a.yearDiff === 1 ? 0.75 : a.yearDiff === 2 ? 0.3 : 0;
     const rich = (a.rec.venueAliases.length > 1 ? 0.05 : 0) + (a.rec.doi || a.rec.arxivId ? 0.05 : 0);
-    return a.title * 0.5 + a.authors.score + y * 0.8 - (a.venueConflict ? 0.4 : 0) - a.authors.unmatched.length * 0.1 + rich;
+    return a.title * 0.5 + a.authors.score + y * 0.8 - (a.venueConflict ? 0.4 : 0) - a.authors.unmatched.length * 0.1 + rich - (p && isBookReview(p, a.rec) ? 0.8 : 0);
   };
   return strong.sort((a, b) => {
     const s = agree(b) - agree(a);
@@ -671,16 +830,31 @@ function normWord(w: string): string {
 }
 
 /** Classify how a cited title differs from the record title. */
+const LANG_TAG_RE = /[([]\s*in\s+(Russian|Ukrainian|Chinese|Japanese|Korean|German|French|Spanish|Portuguese|Italian|Polish|Czech|Turkish|Persian|Arabic|Hebrew|Hindi|Indonesian|Vietnamese|Thai|Greek|Dutch|Swedish|Norwegian|Danish|Finnish|Hungarian|Romanian|Bulgarian|Serbian|Croatian|Slovak|Slovenian|Lithuanian|Latvian|Estonian|Belarusian|Kazakh|Georgian|Armenian|Catalan|Latin)\b[^)\]]{0,40}[)\]]/i;
+// "Original title [English translation of four or more words]" (not "[Online]", "[Accessed 1 May 2020]")
+const TRANSLATED_TITLE_RE = /\s\[(?!(?:Accessed|Online|Internet|Cited|Retrieved|Viewed|Computer|Electronic|In press|Preprint)\b)\p{Lu}[\p{L}’'-]*(?:\s+[\p{L}’'-]+){3,}\]/u;
+const ORDINAL_RE = /^(?:first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth|eleventh|twelfth|\d+(?:st|nd|rd|th)?)$/;
+function seriesDiffer(cited: string, found: string): boolean {
+  const A = fold(cited).split(' ');
+  const B = fold(found).split(' ');
+  if (A.length !== B.length || A.length < 3) return false;
+  const diff = A.map((t, i) => [t, B[i]] as const).filter(([x, y]) => x !== y);
+  return diff.length === 1 && ORDINAL_RE.test(diff[0][0]) && ORDINAL_RE.test(diff[0][1]);
+}
+
 export function titleDiff(cited: string, found: string): { kind: 'identical' | 'cosmetic' | 'subtitle' | 'omission' | 'word'; words: string[] } {
-  const a = fold(cited);
-  const b = fold(found);
+  // an edition suffix on either side ("A Multigrid Tutorial, Second Edition") is not a different title
+  const ED = / (?:first|second|third|fourth|fifth|sixth|\d+(?:st|nd|rd|th)?) (?:edition|ed)$/;
+  const a = fold(cited).replace(ED, '');
+  const b = fold(found).replace(ED, '');
   if (a === b) return { kind: 'identical', words: [] };
   if (a.replace(/ /g, '') === b.replace(/ /g, '')) return { kind: 'cosmetic', words: [] };
   // one title is the other plus a subtitle (after a colon or dash)
   if (a.length >= 12 && b.startsWith(a + ' ') && /[:\-–—]/.test(found)) return { kind: 'subtitle', words: [] };
   if (b.length >= 12 && a.startsWith(b + ' ') && /[:\-–—]/.test(cited)) return { kind: 'subtitle', words: [] };
-  const A = a.split(' ').filter((t) => t !== 'and').map(normWord);
-  const B = b.split(' ').filter((t) => t !== 'and').map(normWord);
+  // "and" and a leading article ("The KGB…" vs "KGB…") are not substantive differences
+  const A = a.replace(/^(?:the|a|an) /, '').split(' ').filter((t) => t !== 'and').map(normWord);
+  const B = b.replace(/^(?:the|a|an) /, '').split(' ').filter((t) => t !== 'and').map(normWord);
   const cnt = new Map<string, number>();
   for (const t of A) cnt.set(t, (cnt.get(t) ?? 0) + 1);
   for (const t of B) cnt.set(t, (cnt.get(t) ?? 0) - 1);
@@ -716,10 +890,14 @@ function initials(s: string): string {
 /** Does the cited venue plausibly name the venue of any of the records (aliases, abbreviations, acronyms)? */
 function venueGeneralCheck(p: ParsedRef, recs: WorkRecord[]): 'match' | 'mismatch' | 'unknown' {
   if (!p.venue || PREPRINT_RE.test(p.venue)) return 'unknown';
+  // "Technical report", "PhD thesis": a document type, not a venue
+  if (p.kind === 'report' || p.kind === 'thesis' || /^(?:tech(?:nical|\.)?\s*rep(?:ort|\.)?|(?:ph\.?\s?d\.?|master'?s|doctoral)\s*(?:thesis|dissertation)|thesis|dissertation|manuscript|unpublished|white\s*paper)\b/i.test(p.venue.trim())) return 'unknown';
   // a publisher ("Cambridge University Press", "Springer") is not a venue that can be compared
-  if (p.kind === 'book' || /(?:press|publish(?:ers?|ing)|springer|elsevier|wiley|routledge|crc|academic|verlag|sage|mit|university of [a-z]+)/i.test(p.venue) && !/journal|proceedings|transactions|conference/i.test(p.venue)) return 'unknown';
-  const names = recs.flatMap((r) => [r.venue, ...r.venueAliases]).filter((x): x is string => !!x && !PREPRINT_RE.test(x) && !/^(?:front matter|unknown)$/i.test(x));
+  if (p.kind === 'book' || /\b(?:press|publish(?:ers?|ing)|springer|elsevier|wiley|routledge|crc|academic|verlag|sage|mit|university of [a-z]+)\b/i.test(p.venue) && !/journal|proceedings|transactions|conference/i.test(p.venue)) return 'unknown';
+  const names = recs.flatMap((r) => [r.venue, ...r.venueAliases].filter((x) => !!x && fold(x) !== fold(r.title))).filter((x): x is string => !!x && !PREPRINT_RE.test(x) && !/^(?:front matter|unknown)$/i.test(x));
   if (!names.length) return 'unknown';
+  const rawF = ' ' + fold(p.raw) + ' ';
+  if (names.some((n) => venueTokens(n).length >= 2 && rawF.includes(' ' + fold(n) + ' '))) return 'match';
   const C = venueTokens(p.venue);
   if (!C.length) return 'unknown';
   const citedCanon = canonVenues(p.venue);
@@ -727,6 +905,7 @@ function venueGeneralCheck(p: ParsedRef, recs: WorkRecord[]): 'match' | 'mismatc
   if (citedCanon.size && recCanon.size) return [...citedCanon].some((v) => recCanon.has(v)) ? 'match' : 'mismatch';
   const cInit = initials(p.venue);
   const cf = fold(p.venue);
+  const caps = (p.venue.match(/\b[A-Z][A-Za-z]*[a-z][A-Za-z]*[A-Z][A-Za-z]*\b/g) ?? []).map((w) => w.replace(/[^A-Z]/g, '').toLowerCase()).filter((k) => k.length >= 3);
   for (const n of names) {
     const N = venueTokens(n);
     if (!N.length) continue;
@@ -739,6 +918,9 @@ function venueGeneralCheck(p: ParsedRef, recs: WorkRecord[]): 'match' | 'mismatc
     if (C.some((c) => c.length >= 3 && (c === nInit || nf.split(' ').includes(c)))) return 'match';
     if (N.some((t) => t.length >= 3 && (t === cInit || (t.length >= 4 && cInit.startsWith(t)) || cf.split(' ').includes(t)))) return 'match';
     if (C.some((c) => c.length >= 4 && nInit.startsWith(c))) return 'match';
+    // capitals of a mixed-case acronym are the initials of the long form: "CoNLL" → CNLL, "NeurIPS" → NIPS
+    const fullInit = nf.split(' ').filter((t) => t && !/^(?:of|the|on|at|and|in|for|\d+)$/.test(t)).map((t) => t[0]).join('');
+    if (caps.some((k) => nInit === k || (k.length >= 4 && (nInit.includes(k) || fullInit.includes(k))))) return 'match';
   }
   return 'mismatch';
 }

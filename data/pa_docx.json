@@ -1,0 +1,36 @@
+{
+ "file": "review.docx",
+ "throttle": 0,
+ "offline": false,
+ "marks": {
+  "parsed": 1.012,
+  "model": 1.012,
+  "refs": 40.327,
+  "claimsStart": 41.329,
+  "claims": 162.252
+ },
+ "final": {
+  "verdicts": {
+   "verified": 3,
+   "id_mismatch": 1,
+   "fabricated": 1
+  },
+  "claims": {
+   "supported": 1,
+   "no_source": 2
+  },
+  "refs": 5
+ },
+ "hosts": {
+  "127.0.0.1:4180": 43,
+  "api.crossref.org": 18,
+  "api.datacite.org": 1,
+  "api.semanticscholar.org": 34,
+  "api.openalex.org": 1,
+  "www.ebi.ac.uk": 11,
+  "arxiv.org": 1
+ },
+ "nonGet": [],
+ "bodySentencesLeaked": 0,
+ "leakSamples": []
+}

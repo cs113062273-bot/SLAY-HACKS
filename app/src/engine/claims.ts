@@ -7,7 +7,7 @@ import { splitSentences } from '../core/doc';
 import type { Http } from '../core/http';
 import { europePmcByDoi, europePmcFullText, openalexDoi, s2Paper } from '../core/sources';
 import type { RefResult } from '../core/types';
-import type { ClaimCheck, Getter, Setter, SupportLabel } from './session';
+import { cache, type ClaimCheck, type Getter, type Setter, type SupportLabel } from './session';
 import { CLAIM_CONFIG } from './claimConfig';
 
 interface Source {
@@ -24,13 +24,20 @@ async function getSource(r: RefResult, http: Http): Promise<Source | null> {
   const arx = m.arxivId ?? r.parsed.arxivIds[0];
   // 1. open-access full text from arXiv (CORS-enabled)
   if (arx) {
+    // extracted sentences are cached, so a repeat audit neither re-downloads nor re-parses the PDF
+    const key = `fulltext:arxiv:${arx}`;
     try {
+      const hit = (await cache.get(key)) as string[] | undefined;
+      if (hit?.length) return { kind: 'full text', sentences: hit };
       const res = await fetch(`https://arxiv.org/pdf/${arx}`);
       if (res.ok) {
         const { docFromPdf } = await import('./inputs');
         const d = await docFromPdf(await res.arrayBuffer());
         const sents = d.sentences.filter((s) => s.length > 30 && s.length < 600);
-        if (sents.length > 20) return { kind: 'full text', sentences: sents };
+        if (sents.length > 20) {
+          await cache.set(key, sents).catch(() => undefined);
+          return { kind: 'full text', sentences: sents };
+        }
       }
     } catch (e) {
       console.warn(`Full text unavailable for arXiv:${arx}:`, e);
@@ -112,16 +119,17 @@ export async function runClaimChecks(my: number, current: () => number, get: Get
       return { claims };
     });
 
-  const ml = await import('./mlClient');
+  // the model client is a separate chunk: if it cannot be fetched (connection lost) claims fall back to retrieval only
+  const mlMod = await import('./mlClient').catch(() => null);
   let modelOk = true;
-  const modelLoad = ml
-    .loadModels((l, t) => my === current() && set({ modelProgress: t ? l / t : 0 }))
+  const modelLoad = (mlMod ? mlMod.loadModels((l, t) => my === current() && set({ modelProgress: t ? l / t : 0 })) : Promise.reject(new Error('model client unavailable')))
     .then(() => my === current() && set({ claimPhase: 'running' }))
     .catch((e) => {
       console.error('Verifier model failed to load:', e);
       modelOk = false;
       if (my === current()) set({ claimPhase: 'unavailable' });
     });
+  const ml = mlMod!; // only used while modelOk
 
   // fetch sources (deduplicated by reference), 3 at a time, while the model downloads
   const refs = [...new Set(tasks.map((t) => t.refIndex))];

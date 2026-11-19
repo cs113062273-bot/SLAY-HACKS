@@ -308,8 +308,8 @@ export function findCitations(sentences: string[], refs: ParsedRef[]): { citance
       }
     }
     if (!numericLabels || !found.length) {
-      // parenthetical (Smith et al., 2020; Doe and Roe, 2019a)
-      for (const m of s.matchAll(/\(([^()]{3,300}?\b(?:1[89]|20)\d\d[a-z]?)\)/g)) {
+      // parenthetical (Smith et al., 2020; Doe and Roe, 2019a), also bracketed [Plokhy, 2010; Snyder 2003]
+      for (const m of s.matchAll(/[([]([^()[\]]{3,300}?\b(?:1[89]|20)\d\d[a-z]?)[)\]]/g)) {
         const idx: number[] = [];
         for (const part of m[1].split(/;/)) {
           const mm = part.match(/(\p{Lu}[\p{L}'’-]+(?:\s+(?:van|von|de|der|del)\s+\p{Lu}[\p{L}'’-]+)?)(?:\s+(?:et al\.?|and|&)\s*(?:\p{Lu}[\p{L}'’-]+)?)?,?\s*((?:1[89]|20)\d\d[a-z]?)/u);
@@ -434,7 +434,19 @@ export function buildDoc(linesIn: Line[], pageWidths: Map<number, number>): Doc 
   }
   const sentences = splitSentences(body.replace(/\s+/g, ' '));
   const { citances, style } = findCitations(sentences, references);
-  const title = lines.filter((l) => l.page === 1).sort((a, b) => b.size - a.size)[0]?.text;
+  // the largest line on page 1, joined with the lines of the same size right below it (titles often wrap)
+  const p1 = lines.filter((l) => l.page === 1);
+  const top = [...p1].sort((a, b) => b.size - a.size)[0];
+  let title = top?.text;
+  if (top) {
+    let last = top;
+    for (const l of p1.filter((l) => l.y > top.y && Math.abs(l.size - top.size) < 0.6).sort((a, b) => a.y - b.y)) {
+      if (l.y - last.y > top.size * 1.8 || title!.length > 250) break;
+      title += ' ' + l.text;
+      last = l;
+    }
+  }
+  title = title?.replace(/[\s∗*†‡§¶]+$/u, '');
   return { title, sentences, references, rawReferences, citances, style, stats: { pages: nPages, words: body.split(/\s+/).length } };
 }
 

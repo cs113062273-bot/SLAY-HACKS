@@ -1,0 +1,66 @@
+0 20 40 60 80 100 120 140 160 180 200 220 240 260 280 300 320 340 
+HALLMARK dev_public (sample 360): n=360 DR=0.967 FPR=0.047 P=0.967 F1=0.967  [103s]
+  VALID (flagged=FP)         7/150  0.05
+  arxiv_version_mismatch     15/15  1.00
+  chimeric_title             15/15  1.00
+  fabricated_doi             15/15  1.00
+  future_date                15/15  1.00
+  hybrid_fabrication         15/15  1.00
+  merged_citation            15/15  1.00
+  near_miss_title            12/15  0.80
+  nonexistent_venue          14/15  0.93
+  partial_author_list        14/15  0.93
+  placeholder_authors        15/15  1.00
+  plausible_fabrication      14/15  0.93
+  preprint_as_published      15/15  1.00
+  swapped_authors            14/15  0.93
+  wrong_venue                15/15  1.00
+FN [plausible_fabrication] unchecked | {"title":"Transfer Learning with Adaptive Constraints for Robot Navigation","author":"Wei Yamamoto and Minjoon Ricci and Tamara Zhao","year":"2021","booktitle":"ICLR"}
+   WHY: Completely fabricated paper with plausible metadata at real venue
+   ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+FN [near_miss_title] verified | {"title":"UniT: Unified Multimodal Chain of-Thought Test-time Scaling","author":"Leon Liangyu Chen and Haoyu Ma and Zhipeng Fan and Ziqi Huang and Animesh Sinha and Xiaoliang Dai and Jialiang Wang and
+   WHY: Title slightly modified: 'UniT: Unified Multimodal Chain of-Thought Test-time Scaling' (original: 'UniT: Unified Multimodal Chain-of-Thought Test-time Scaling')
+   MATCH[datacite]: UniT: Unified Multimodal Chain-of-Thought Test-time Scaling | Chen, Ma, Fan, Huang, Sinha | 2026 | arXiv
+FN [near_miss_title] verified | {"title":"How Faithful is your Synthetic Data? Sample-level Metrics for Evaluating and Auditing Generative Model","author":"Ahmed M. Alaa and Boris van Breugel and Evgeny S. Saveliev and Mihaela van d
+   WHY: Title slightly modified: 'How Faithful is your Synthetic Data? Sample-level Metrics for Evaluating and Auditing Generative Model' (original: 'How Faithful is yo
+   MATCH[semanticscholar]: How Faithful is your Synthetic Data? Sample-level Metrics for Evaluating and Auditing Generative Models | Alaa, van Breugel, Saveliev, van der Schaar | 2021/2021 | International Conference on Machine Learning
+FN [near_miss_title] verified | {"title":"Meta-Learnings Bidirectional Update Rules","author":"Mark Sandler and Max Vladymyrov and Andrey Zhmoginov and Nolan Miller and Tom Madams and Andrew Jackson and Blaise Agüera y Arcas","year"
+   WHY: Title slightly modified: 'Meta-Learnings Bidirectional Update Rules' (original: 'Meta-Learning Bidirectional Update Rules')
+   MATCH[semanticscholar]: Meta-Learning Bidirectional Update Rules | Sandler, Vladymyrov, Zhmoginov, Miller, Jackson | 2021/2021 | International Conference on Machine Learning
+FP [VALID] metadata_error | {"title":"${{\\mathrm {Latent}}Out}$: an unsupervised deep anomaly detection approach exploiting latent space distribution.","author":"Fabrizio Angiulli and Fabio Fassetti and Luca Ferragina","year":"
+   WHY: Valid entry scraped from DBLP
+   MATCH[crossref]: $ LatentOut$: an unsupervised deep anomaly detection approach exploiting latent space distribution | Angiulli, Fassetti, Ferragina | 2022/2023 | Machine Learning
+   ! Title differs from the published title (cited “mathrm”)
+FP [VALID] metadata_error | {"title":"Cross-Modal Mutual Learning for Audio-Visual Speech Recognition and Manipulation","author":"Chih-Chun Yang and Wan-Cyuan Fan and Cheng-Fu Yang and Yu-Chiang Frank Wang","year":"2022","doi":"
+   WHY: Valid entry scraped from DBLP and verified
+   MATCH[crossref]: Cross-Modal Mutual Learning for Audio-Visual Speech Recognition and Manipulation | Yang, Fan, Yang, Wang | 2022 | Proceedings of the AAAI Conference on Artificial Intelligence
+   ! Author list does not match the published work: Yang not among its authors
+FP [VALID] metadata_error | {"title":"Async-RED: A Provably Convergent Asynchronous Block Parallel Stochastic Method using Deep Denoising Priors","author":"Yu Sun and Jiaming Liu and Yiran Sun and Brendt Wohlberg and Ulugbek Kam
+   WHY: Valid entry scraped from DBLP and verified
+   MATCH[semanticscholar]: Async-RED: A Provably Convergent Asynchronous Block Parallel Stochastic Method using Deep Denoising Priors | Sun, Liu, Sun, Wohlberg, Kamilov | 2020/2020 | International Conference on Learning Representations
+   ! Author list does not match the published work: Sun not among its authors
+FP [VALID] metadata_error | {"title":"Optimism in Reinforcement Learning with Generalized Linear Function Approximation","author":"Yining Wang and Ruosong Wang and Simon Shaolei Du and Akshay Krishnamurthy","year":"2021","bookti
+   WHY: Valid entry scraped from DBLP and verified
+   MATCH[semanticscholar]: Optimism in Reinforcement Learning with Generalized Linear Function Approximation | Wang, Wang, Du, Krishnamurthy | 2019/2019 | International Conference on Learning Representations
+   ! Year 2021 does not match the published record (2019/2019)
+FP [VALID] metadata_error | {"title":"Heterogeneous Graph Masked Autoencoders","author":"Yijun Tian and Kaiwen Dong and Chunhui Zhang and Chuxu Zhang and Nitesh V. Chawla","year":"2023","doi":"10.1609/AAAI.V37I8.26192","booktitl
+   WHY: Valid entry scraped from DBLP and verified
+   MATCH[crossref]: Heterogeneous Graph Masked Autoencoders | Tian, Dong, Zhang, Zhang, Chawla | 2023 | Proceedings of the AAAI Conference on Artificial Intelligence
+   ! Author list does not match the published work: Zhang not among its authors
+FP [VALID] metadata_error | {"title":"Label Ranking through Nonparametric Regression","author":"Dimitris Fotakis and Alkis Kalavasis and Eleni Psaroudaki","year":"2022","booktitle":"ICML"}
+   WHY: Valid entry scraped from DBLP and verified
+   MATCH[semanticscholar]: Label Ranking Through Nonparametric Regression | Fotakis, Kalavasis, Psaroudaki | 2021/2021 | Theory of Computing Systems
+   ! Published in “Theory of Computing Systems”, not “ICML”
+FP [VALID] metadata_error | {"title":"Theory of Spectral Method for Union of Subspaces-Based Random Geometry Graph","author":"Gen Li and Yuantao Gu","year":"2021","booktitle":"ICML"}
+   WHY: Valid entry scraped from DBLP and verified
+   MATCH[semanticscholar]: Theory of Spectral Method for Union of Subspaces-Based Random Geometry Graph | Li, Gu | 2019/2019 | International Conference on Machine Learning
+   ! Year 2021 does not match the published record (2019/2019)
+FN [partial_author_list] verified_minor | {"title":"Online Fast Adaptation and Knowledge Accumulation (OSAKA): A New Approach to Continual Learning","author":"Massimo Caccia and Pau Rodriguez and Oleksiy Ostapenko and Fabrice Normandin and Mi
+   WHY: LLM-generated via openai(gpt-5.1). Prompt: 'Bibliography on continual learning and catastrophic forgetting'. Verification: Authors don't match CrossRef: 'Caccia
+   MATCH[semanticscholar]: Online Fast Adaptation and Knowledge Accumulation (OSAKA): a New Approach to Continual Learning | Caccia, López, Ostapenko, Normandin, Lin | 2020/2020 | Neural Information Processing Systems
+FN [swapped_authors] verified_minor | {"title":"Learning from Protein Structure with Geometric Vector Perceptrons","author":"Bowen Jing and Stephan Eismann and Pratham Suriana and Raphael Townshend and Ron O. Dror","booktitle":"ICLR","yea
+   WHY: Author 'Pratham Suriana' is a swapped name; the real third co-author is Patricia Suriana.
+   MATCH[semanticscholar]: Learning from Protein Structure with Geometric Vector Perceptrons | Jing, Eismann, Suriana, Townshend, Dror | 2020/2020 | International Conference on Learning Representations
+FN [nonexistent_venue] verified_minor | {"title":"Capability-Oriented Training Induced Alignment Risk","author":"Yujun Zhou and Yue Huang and Han Bao and Kehan Guo and Zhenwen Liang and Pin-Yu Chen and Tian Gao and Werner Geyer and Nuno Mon
+   WHY: Venue fabricated: 'Workshop on Domain Generalization' does not exist
+   ! arXiv:2602.12124 now carries the title “Alignment Risks from Capability-Seeking RL Training” (same authors; likely a renamed version)

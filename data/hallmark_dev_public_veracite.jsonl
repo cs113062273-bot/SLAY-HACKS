@@ -9,7 +9,7 @@
 {"bibtex_key":"b15dc9664b48","label":"HALLUCINATED","confidence":0.9,"reason":"arXiv:2302.04133 points to a different work: “Isometric embeddings of surfaces for scl”"}
 {"bibtex_key":"b198ac27e836","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC"}
 {"bibtex_key":"b31c38a72d3c","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “CDS: Cross-Domain Self-supervised Pre-training” (71% title similarity)"}
-{"bibtex_key":"b4e44924b092","label":"HALLUCINATED","confidence":0.8,"reason":"Semantic Scholar and OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Europe PMC | Nearest record: “Lifelong, learning-augmented robot navigation” (50% title similarity)"}
+{"bibtex_key":"b4e44924b092","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC"}
 {"bibtex_key":"b5dc91d7f6e8","label":"HALLUCINATED","confidence":0.9,"reason":"arXiv:2201.09901 points to a different work: “Fraction of broad absorption line quasars in different radio morphologies”"}
 {"bibtex_key":"b647e6142991","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC"}
 {"bibtex_key":"b64d4175823c","label":"HALLUCINATED","confidence":0.9,"reason":"arXiv:2310.04363 points to a different work: “Amortizing intractable inference in large language models”"}
@@ -72,7 +72,7 @@
 {"bibtex_key":"a6032dae9458","label":"VALID","confidence":0.99,"reason":""}
 {"bibtex_key":"a6702e50eb2a","label":"VALID","confidence":0.99,"reason":""}
 {"bibtex_key":"a67afc6b01eb","label":"VALID","confidence":0.99,"reason":""}
-{"bibtex_key":"a687f76f3a21","label":"VALID","confidence":0.9875490196078431,"reason":""}
+{"bibtex_key":"a687f76f3a21","label":"VALID","confidence":0.99,"reason":""}
 {"bibtex_key":"a68acac6c1f2","label":"VALID","confidence":0.99,"reason":""}
 {"bibtex_key":"a68d2d3d3a52","label":"VALID","confidence":0.99,"reason":""}
 {"bibtex_key":"a6cc7b062e76","label":"VALID","confidence":0.99,"reason":""}
@@ -143,7 +143,7 @@
 {"bibtex_key":"b3f25dee2b23","label":"VALID","confidence":0.99,"reason":""}
 {"bibtex_key":"b4268fa6464e","label":"VALID","confidence":0.99,"reason":""}
 {"bibtex_key":"b43bb5e01b3f","label":"VALID","confidence":0.99,"reason":""}
-{"bibtex_key":"a05ffe5af18b","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2021 does not match the published record (2019) | Published in “The Springer Series on Challenges in Machine Learning”, not “JMLR” | Has published correction notice(s)"}
+{"bibtex_key":"a05ffe5af18b","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “The Springer Series on Challenges in Machine Learning”, not “JMLR” | Has published correction notice(s)"}
 {"bibtex_key":"a49d483ada00","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “International Conference on Learning Representations”, not “IJCAI”"}
 {"bibtex_key":"a512e256b5b1","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “International Conference on Machine Learning”, not “ICLR”"}
 {"bibtex_key":"a5f3fdcab699","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “International Conference on Machine Learning”, not “SIGIR”"}
@@ -170,7 +170,7 @@
 {"bibtex_key":"ae656965396c","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Xie, Zhang, Liu, Bai, Qian not among its authors | Published in “International Journal for Research in Applied Science and Engineering Technology”, not “AAAI” | doi:10.1609/aaai.v37i9.26247 points to a different work: “Towards Optimal Randomized Strategies in Adversarial Example Game”"}
 {"bibtex_key":"b06510c2fb42","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Huti, Mackintosh, Waldock, Andrews, Lelièvre, Boos, Murray, Atherton, Ince, Garrod not among its authors | arXiv:2602.12196 points to a different work: “Visual Reasoning Benchmark: Evaluating Multimodal LLMs on Classroom-Authentic Visual Problems from Primary Education”"}
 {"bibtex_key":"b29cd2e665aa","label":"HALLUCINATED","confidence":0.9,"reason":"doi:10.1109/cvpr46437.2021.01266 points to a different work: “Understanding Failures of Deep Networks via Robust Feature Extraction”"}
-{"bibtex_key":"b452f4c4af1c","label":"HALLUCINATED","confidence":0.8,"reason":"Semantic Scholar and OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Europe PMC"}
+{"bibtex_key":"b452f4c4af1c","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC"}
 {"bibtex_key":"b46955b4623f","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “Few-Shot Keyword Spotting With Prototypical Networks” (73% title similarity)"}
 {"bibtex_key":"b58a839ea0dd","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Zhang, Zhang not among its authors"}
 {"bibtex_key":"a30232aff331","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2031 does not match the published record (2022/2026) | Template / placeholder content: publication year 2031 is in the future"}

@@ -64,6 +64,9 @@ export class Http {
   private cooldown = new Map<string, number>();
   /** hosts whose daily allowance is spent for this session */
   readonly disabled = new Set<string>();
+  /** circuit breaker: consecutive requests that failed after all retries, and the time a tripped host is skipped until */
+  private fails = new Map<string, number>();
+  private trippedUntil = new Map<string, number>();
   private opts: HttpOptions;
   constructor(opts: HttpOptions = {}) {
     this.opts = opts;
@@ -109,11 +112,14 @@ export class Http {
       }
     }
     if (this.disabled.has(host)) throw new HttpError(429, url);
+    // a host that keeps failing (outage, sustained throttling) is skipped for a while instead of making every
+    // reference wait through a full retry cycle; callers report those lookups as unchecked, never as negative evidence
+    if ((this.trippedUntil.get(host) ?? 0) > Date.now()) throw new HttpError(503, url);
     const maxRetries = this.opts.maxRetries ?? 6;
     let lastStatus = 0;
     for (let attempt = 0; attempt <= maxRetries; attempt++) {
       const cd = this.cooldown.get(host);
-      if (cd && cd > Date.now()) await sleep(cd - Date.now());
+      if (cd && cd > Date.now()) await sleep(Math.max(0, cd - Date.now()));
       await this.acquire(host);
       let res: Response | undefined;
       try {
@@ -127,6 +133,7 @@ export class Http {
         this.release(host);
       }
       if (res && res.ok) {
+        this.fails.set(host, 0);
         this.opts.onEvent?.({ host, url, status: res.status, attempt });
         const body = as === 'json' ? await res.json() : as === 'text' ? await res.text() : await res.arrayBuffer();
         if (this.opts.cache && !init.noCache && as !== 'arraybuffer') await this.opts.cache.set(key, body);
@@ -135,6 +142,7 @@ export class Http {
       lastStatus = res?.status ?? 0;
       this.opts.onEvent?.({ host, url, status: res ? res.status : 'error', attempt });
       if (res && (res.status === 404 || res.status === 410 || res.status === 400 || res.status === 422)) {
+        this.fails.set(host, 0);
         if (this.opts.cache && !init.noCache && res.status !== 400) await this.opts.cache.set(key, null);
         return null;
       }
@@ -153,6 +161,12 @@ export class Http {
       // 429s, and in browsers CORS-masked throttling responses (res undefined), slow the whole host down
       if (!res || res.status === 429 || res.status === 503) this.cooldown.set(host, Math.max(this.cooldown.get(host) ?? 0, Date.now() + wait));
       await sleep(wait);
+    }
+    const n = (this.fails.get(host) ?? 0) + 1;
+    this.fails.set(host, n);
+    if (n >= 3) {
+      this.trippedUntil.set(host, Date.now() + 45000);
+      this.fails.set(host, 2); // after the pause one probe decides: another failure trips it again
     }
     throw new HttpError(lastStatus, url);
   }

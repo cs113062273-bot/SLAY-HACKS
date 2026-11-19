@@ -1,0 +1,278 @@
+[
+ {
+  "label": "supported",
+  "ref": 21,
+  "marker": "(Dai and Le, 2015; Peters et al., 2018a; Radford et al., 2018; Howard and Ruder, 2018)",
+  "claim": "It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5% (7.7% point absolute improvement), MultiNLI accuracy to 86.7% (4.6% absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement). 1 Introduction Language model pre-training has been shown to be effective for improving many natural language processing tasks.",
+  "nrefs": 4,
+  "title": "Universal Language Model Fine-tuning for Text Classification",
+  "src": "abstract",
+  "p": {
+   "ACCURATE": 0.8232815475816139,
+   "NOT_ACCURATE": 0.12268312036585094,
+   "NEI": 0.05403533205253526
+  },
+  "ev": "We propose Universal Language Model Fine-tuning (ULMFiT), an effective transfer learning method that can be applied to any task in NLP, and introduce techniques that are key for fine-tuning a language model."
+ },
+ {
+  "label": "mention",
+  "ref": 6,
+  "marker": "(Bowman et al., 2015; Williams et al., 2018)",
+  "claim": "These include sentence-level tasks such as natural language inference and paraphrasing, which aim to predict the relationships between sentences by analyzing them holistically, as well as token-level tasks such as named entity recognition and question answering, where models are required to produce fine-grained output at the token level.",
+  "nrefs": 2,
+  "title": "A large annotated corpus for learning natural language inference",
+  "src": "abstract"
+ },
+ {
+  "label": "unclear",
+  "ref": 39,
+  "marker": "(Tjong Kim Sang and De Meulder, 2003; Rajpurkar et al., 2016)",
+  "claim": "These include sentence-level tasks such as natural language inference and paraphrasing, which aim to predict the relationships between sentences by analyzing them holistically, as well as token-level tasks such as named entity recognition and question answering, where models are required to produce fine-grained output at the token level.",
+  "nrefs": 1,
+  "title": "SQuAD: 100,000+ Questions for Machine Comprehension of Text",
+  "src": "abstract",
+  "p": {
+   "ACCURATE": 0.0784685064215438,
+   "NOT_ACCURATE": 0.1482264318914261,
+   "NEI": 0.7733050616870301
+  },
+  "ev": "We present the Stanford Question Answering Dataset (SQuAD), a new reading comprehension dataset consisting of 100,000+ questions posed by crowdworkers on a set of Wikipedia articles, where the answer to each question is a segment of text from the corresponding reading passage."
+ },
+ {
+  "label": "unclear",
+  "ref": 46,
+  "marker": "(Vaswani et al., 2017)",
+  "claim": "For example, in OpenAI GPT, the authors use a left-toright architecture, where every token can only attend to previous tokens in the self-attention layers of the Transformer.",
+  "nrefs": 1,
+  "title": "Attention is All you Need",
+  "src": "full text",
+  "p": {
+   "ACCURATE": 0.3748836420059129,
+   "NOT_ACCURATE": 0.5504727367308245,
+   "NEI": 0.07464362126326256
+  },
+  "ev": "Each position in the encoder can attend to all positions in the previous layer of the encoder. • Similarly, self-attention layers in the decoder allow each position in the decoder to attend to all positions in the decoder up to and including that position."
+ },
+ {
+  "label": "unclear",
+  "ref": 43,
+  "marker": "(Taylor, 1953)",
+  "claim": "BERT alleviates the previously mentioned unidirectionality constraint by using a “masked language model” (MLM) pre-training objective, inspired by the Cloze task.",
+  "nrefs": 1,
+  "title": "“Cloze Procedure”: A New Tool for Measuring Readability",
+  "src": "abstract",
+  "p": {
+   "ACCURATE": 0.10894090219593879,
+   "NOT_ACCURATE": 0.3209549185463473,
+   "NEI": 0.570104179257714
+  },
+  "ev": "Included are findings from three pilot studies and two experiments in which “cloze procedure” results are compared with those of two readability formulas."
+ },
+ {
+  "label": "supported",
+  "ref": 31,
+  "marker": "(Mikolov et al., 2013; Pennington et al., 2014)",
+  "claim": "The code and pre-trained models are available at https://github.com/ google-research/bert. 2 Related Work There is a long history of pre-training general language representations, and we briefly review the most widely-used approaches in this section. 2.1 Unsupervised Feature-based Approaches Learning widely applicable representations of words has been an active area of research for decades, including non-neural and neural methods.",
+  "nrefs": 2,
+  "title": "Distributed Representations of Words and Phrases and their Compositionality",
+  "src": "full text",
+  "p": {
+   "ACCURATE": 0.6333650704750825,
+   "NOT_ACCURATE": 0.10505119231457088,
+   "NEI": 0.26158373721034656
+  },
+  "ev": "We made the code for training the word and phrase vectors based on the techniques described in this paper available as an open-source project4. 4code.google.com/p/word2vec"
+ },
+ {
+  "label": "unclear",
+  "ref": 31,
+  "marker": "(Mikolov et al., 2013)",
+  "claim": "To pretrain word embedding vectors, left-to-right language modeling objectives have been used, as well as objectives to discriminate correct from incorrect words in left and right context.",
+  "nrefs": 1,
+  "title": "Distributed Representations of Words and Phrases and their Compositionality",
+  "src": "full text",
+  "p": {
+   "ACCURATE": 0.40652640890091746,
+   "NOT_ACCURATE": 0.11325850460027653,
+   "NEI": 0.48021508649880595
+  },
+  "ev": "As the word vectors are trained to predict the surrounding words in the sentence, the vectors can be seen as representing the distribution of the context in which a word appears."
+ },
+ {
+  "label": "supported",
+  "ref": 25,
+  "marker": "(Kiros et al., 2015; Logeswaran and Lee, 2018)",
+  "claim": "These approaches have been generalized to coarser granularities, such as sentence embeddings or paragraph embeddings.",
+  "nrefs": 2,
+  "title": "Skip-Thought Vectors",
+  "src": "full text",
+  "p": {
+   "ACCURATE": 0.8529682672095892,
+   "NOT_ACCURATE": 0.10497951460656454,
+   "NEI": 0.0420522181838464
+  },
+  "ev": "In recent years, several approaches have been developed for learning composition operators that map word vectors to sentence vectors including recursive networks [1], recurrent networks [2], convolutional networks [3, 4] and recursive-convolutional methods [5, 6] among others."
+ },
+ {
+  "label": "review",
+  "ref": 28,
+  "marker": "(Kiros et al., 2015; Logeswaran and Lee, 2018)",
+  "claim": "These approaches have been generalized to coarser granularities, such as sentence embeddings or paragraph embeddings.",
+  "nrefs": 2,
+  "title": "An efficient framework for learning sentence representations",
+  "src": "full text",
+  "p": {
+   "ACCURATE": 0.016540622523758968,
+   "NOT_ACCURATE": 0.9654551566942811,
+   "NEI": 0.01800422078195996
+  },
+  "ev": "There have been attempts to use labeled/structured data to learn sentence representations."
+ },
+ {
+  "label": "supported",
+  "ref": 26,
+  "marker": "(Le and Mikolov, 2014)",
+  "claim": "These approaches have been generalized to coarser granularities, such as sentence embeddings or paragraph embeddings.",
+  "nrefs": 1,
+  "title": "Distributed Representations of Sentences and Documents",
+  "src": "full text",
+  "p": {
+   "ACCURATE": 0.9165606985897399,
+   "NOT_ACCURATE": 0.05869458830386025,
+   "NEI": 0.024744713106399828
+  },
+  "ev": "Unlike some of the previous approaches, it is general and applicable to texts of any length: sentences, paragraphs, and documents."
+ },
+ {
+  "label": "mention",
+  "ref": 28,
+  "marker": "(Jernite et al., 2017; Logeswaran and Lee, 2018)",
+  "claim": "To train sentence representations, prior work has used objectives to rank candidate next sentences, left-to-right generation of next sentence words given a representation of the previous sentence, or denoising autoencoder derived objectives.",
+  "nrefs": 2,
+  "title": "An efficient framework for learning sentence representations",
+  "src": "full text"
+ },
+ {
+  "label": "supported",
+  "ref": 25,
+  "marker": "(Kiros et al., 2015)",
+  "claim": "To train sentence representations, prior work has used objectives to rank candidate next sentences, left-to-right generation of next sentence words given a representation of the previous sentence, or denoising autoencoder derived objectives.",
+  "nrefs": 1,
+  "title": "Skip-Thought Vectors",
+  "src": "full text",
+  "p": {
+   "ACCURATE": 0.7701867212894586,
+   "NOT_ACCURATE": 0.08738493664632344,
+   "NEI": 0.14242834206421784
+  },
+  "ev": "One decoder is used for the next sentence si+1 while a second decoder is used for the previous sentence si−1."
+ },
+ {
+  "label": "review",
+  "ref": 39,
+  "marker": "(Rajpurkar et al., 2016)",
+  "claim": "When integrating contextual word embeddings with existing task-specific architectures, ELMo advances the state of the art for several major NLP benchmarks including question answering, sentiment analysis, and named entity recognition.",
+  "nrefs": 1,
+  "title": "SQuAD: 100,000+ Questions for Machine Comprehension of Text",
+  "src": "abstract",
+  "p": {
+   "ACCURATE": 0.0015773823333536084,
+   "NOT_ACCURATE": 0.01848385923655795,
+   "NEI": 0.9799387584300885
+  },
+  "ev": "We present the Stanford Question Answering Dataset (SQuAD), a new reading comprehension dataset consisting of 100,000+ questions posed by crowdworkers on a set of Wikipedia articles, where the answer to each question is a segment of text from the corresponding reading passage."
+ },
+ {
+  "label": "unclear",
+  "ref": 21,
+  "marker": "(Dai and Le, 2015; Howard and Ruder, 2018; Radford et al., 2018)",
+  "claim": "More recently, sentence or document encoders which produce contextual token representations have been pre-trained from unlabeled text and fine-tuned for a supervised downstream task.",
+  "nrefs": 3,
+  "title": "Universal Language Model Fine-tuning for Text Classification",
+  "src": "abstract",
+  "p": {
+   "ACCURATE": 0.20034843906123906,
+   "NOT_ACCURATE": 0.7940560914777851,
+   "NEI": 0.005595469460975673
+  },
+  "ev": "We propose Universal Language Model Fine-tuning (ULMFiT), an effective transfer learning method that can be applied to any task in NLP, and introduce techniques that are key for fine-tuning a language model."
+ },
+ {
+  "label": "mention",
+  "ref": 21,
+  "marker": "(Howard and Ruder, 2018; Radford et al., 2018; Dai and Le, 2015)",
+  "claim": "[CLS] is a special symbol added in front of every input example, and [SEP] is a special separator token (e.g. separating questions/answers). ing and auto-encoder objectives have been used for pre-training such models. 2.3 Transfer Learning from Supervised Data There has also been work showing effective transfer from supervised tasks with large datasets, such as natural language inference and machine translation.",
+  "nrefs": 3,
+  "title": "Universal Language Model Fine-tuning for Text Classification",
+  "src": "abstract"
+ },
+ {
+  "label": "supported",
+  "ref": 46,
+  "marker": "Vaswani et al. (2017)",
+  "claim": "Model Architecture BERT’s model architecture is a multi-layer bidirectional Transformer encoder based on the original implementation described in Vaswani et al. (2017) and released in the tensor2tensor library.",
+  "nrefs": 1,
+  "title": "Attention is All you Need",
+  "src": "full text",
+  "p": {
+   "ACCURATE": 0.6547638474961521,
+   "NOT_ACCURATE": 0.15457779879737463,
+   "NEI": 0.19065835370647327
+  },
+  "ev": "In this work, we presented the Transformer, the first sequence transduction model based entirely on attention, replacing the recurrent layers most commonly used in encoder-decoder architectures with multi-headed self-attention."
+ },
+ {
+  "label": "unclear",
+  "ref": 46,
+  "marker": "Vaswani et al. (2017)",
+  "claim": "Because the use of Transformers has become common and our implementation is almost identical to the original, we will omit an exhaustive background description of the model architecture and refer readers to Vaswani et al. (2017) as well as excellent guides such as “The Annotated Transformer.”",
+  "nrefs": 1,
+  "title": "Attention is All you Need",
+  "src": "full text",
+  "p": {
+   "ACCURATE": 0.25658049468400396,
+   "NOT_ACCURATE": 0.2920919715744524,
+   "NEI": 0.4513275337415436
+  },
+  "ev": "Figure 1: The Transformer - model architecture."
+ },
+ {
+  "label": "unclear",
+  "ref": 43,
+  "marker": "(Taylor, 1953)",
+  "claim": "We refer to this procedure as a “masked LM” (MLM), although it is often referred to as a Cloze task in the literature.",
+  "nrefs": 1,
+  "title": "“Cloze Procedure”: A New Tool for Measuring Readability",
+  "src": "abstract",
+  "p": {
+   "ACCURATE": 0.2842148521022978,
+   "NOT_ACCURATE": 0.27885769595990256,
+   "NEI": 0.4369274519377997
+  },
+  "ev": "Included are findings from three pilot studies and two experiments in which “cloze procedure” results are compared with those of two readability formulas."
+ },
+ {
+  "label": "mention",
+  "ref": 28,
+  "marker": "Logeswaran and Lee (2018)",
+  "claim": "The NSP task is closely related to representationlearning objectives used in Jernite et al. (2017) and Logeswaran and Lee (2018).",
+  "nrefs": 1,
+  "title": "An efficient framework for learning sentence representations",
+  "src": "full text"
+ },
+ {
+  "label": "unclear",
+  "ref": 39,
+  "marker": "(Rajpurkar et al., 2016)",
+  "claim": "The effect of model size is explored more thoroughly in Section 5.2. 4.2 SQuAD v1.1 The Stanford Question Answering Dataset (SQuAD v1.1) is a collection of 100k crowdsourced question/answer pairs.",
+  "nrefs": 1,
+  "title": "SQuAD: 100,000+ Questions for Machine Comprehension of Text",
+  "src": "abstract",
+  "p": {
+   "ACCURATE": 0.024377407632286973,
+   "NOT_ACCURATE": 0.06338688940579826,
+   "NEI": 0.9122357029619147
+  },
+  "ev": "We present the Stanford Question Answering Dataset (SQuAD), a new reading comprehension dataset consisting of 100,000+ questions posed by crowdworkers on a set of Wikipedia articles, where the answer to each question is a segment of text from the corresponding reading passage."
+ }
+]

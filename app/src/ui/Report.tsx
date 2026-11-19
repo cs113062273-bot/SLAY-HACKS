@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { FieldCheck, RefResult, Verdict } from '../core/types';
 import { formatReference, kindLabel, sourceLabel, toBibtex } from '../core/verify';
-import { getState, reset, useSession, type ClaimCheck } from '../engine/session';
+import { getState, reset, retryUnchecked, runClaimAudit, useSession, type ClaimCheck } from '../engine/session';
 import { Brand } from './Brand';
 import { correctedBibtex, download, jsonReport, markdownReport } from './exporters';
 import { SUPPORT, VERDICT, VERDICT_ORDER, isProblem, shortLabel } from './labels';
@@ -13,6 +13,7 @@ export function Report() {
   const results = useSession((s) => s.results);
   const claims = useSession((s) => s.claims);
   const phase = useSession((s) => s.phase);
+  const replayed = useSession((s) => s.replayed);
   const [tab, setTab] = useState<'refs' | 'claims'>('refs');
   const [filter, setFilter] = useState<Verdict | 'problems' | null>(null);
   const [q, setQ] = useState('');
@@ -49,6 +50,8 @@ export function Report() {
     if (sel || !results.some(Boolean)) return;
     const first = results.findIndex((r) => r && isProblem(r.verdict));
     if (first >= 0) setSel({ kind: 'ref', i: first });
+    // a clean paper: open the first reference so the evidence view is never empty
+    else if (results.length && results.every(Boolean)) setSel({ kind: 'ref', i: 0 });
   }, [results, sel]);
 
   // keyboard navigation
@@ -78,14 +81,19 @@ export function Report() {
 
   if (!doc) return null;
   const done = results.filter(Boolean).length;
+  // the paper's own title when it was extracted cleanly, otherwise the file name / arXiv ID
+  const inputName = getState().inputName ?? '';
+  const heading = doc.title && doc.title.length >= 8 && doc.title.length <= 220 && !/^arxiv:|^\d+$/i.test(doc.title) ? doc.title : inputName;
 
   return (
     <div className="report">
       <header className="topbar">
         <Brand />
         <div className="docname">
-          <b title={doc.title}>{getState().inputName}</b>
-          <small>
+          <b title={heading}>{heading}</b>
+          <small title={replayed ? `Sample: scholarly-index responses are replayed from a ${replayed} snapshot so the demo is fast and reproducible; parsing, matching, verification and the claim model all run live in this browser.` : undefined}>
+            {replayed ? `Sample, index responses replayed from a ${replayed} snapshot · ` : ''}
+            {heading !== inputName && inputName && !inputName.toLowerCase().includes(heading.toLowerCase().slice(0, 20)) ? `${inputName} · ` : ''}
             {doc.stats.pages ? `${doc.stats.pages} pages · ` : ''}
             {doc.references.length} references · {doc.citances.length} citing sentences
             {doc.style !== 'unknown' ? ` · ${doc.style} citations` : ''}
@@ -146,11 +154,13 @@ function Ledger({ filter, setFilter, openClaims }: { filter: Verdict | 'problems
   const claims = useSession((s) => s.claims);
   const claimPhase = useSession((s) => s.claimPhase);
   const modelProgress = useSession((s) => s.modelProgress);
+  const mode = useSession((s) => s.mode);
   const throttled = useSession((s) => (s.sourceStatus.semanticscholar?.limited ?? 0) >= 6);
   const rs = results.filter((r): r is RefResult => !!r);
   const counts = new Map<Verdict, number>();
   for (const r of rs) counts.set(r.verdict, (counts.get(r.verdict) ?? 0) + 1);
-  const checkable = rs.filter((r) => r.verdict !== 'unverifiable').length;
+  const checkable = rs.filter((r) => r.verdict !== 'unverifiable' && r.verdict !== 'unchecked').length;
+  const unchecked = counts.get('unchecked') ?? 0;
   const good = (counts.get('verified') ?? 0) + (counts.get('verified_minor') ?? 0);
   const problems = rs.filter((r) => isProblem(r.verdict)).length;
   const total = doc.references.length;
@@ -173,8 +183,22 @@ function Ledger({ filter, setFilter, openClaims }: { filter: Verdict | 'problems
             {good}/{checkable} verified
           </span>
         </div>
-        <p>{phase === 'checking' ? `Checking ${rs.length + 1} of ${total}…` : problems ? `${problems} reference${problems > 1 ? 's' : ''} need${problems > 1 ? '' : 's'} attention.` : 'No problems found.'}</p>
+        {phase !== 'checking' && problems > 0 ? (
+          <p>
+            <button className={`linkbtn${filter === 'problems' ? ' on' : ''}`} onClick={() => setFilter(filter === 'problems' ? null : 'problems')} title="Show only these references">
+              {problems} reference{problems > 1 ? 's' : ''} need{problems > 1 ? '' : 's'} attention
+            </button>
+            {filter === 'problems' ? ' (shown below)' : ''}
+          </p>
+        ) : (
+          <p>{phase === 'checking' ? `Checking ${rs.length + 1} of ${total}…` : 'No problems found.'}</p>
+        )}
         {phase === 'checking' && throttled && <p className="hint">Semantic Scholar is throttling anonymous lookups. A free key in Settings makes this faster.</p>}
+        {phase === 'done' && unchecked > 0 && (
+          <button className="btn" style={{ marginTop: 10, height: 28 }} onClick={() => retryUnchecked()}>
+            Retry {unchecked} not checked
+          </button>
+        )}
         {phase === 'checking' && (
           <div className="progress">
             <i style={{ width: `${(rs.length / total) * 100}%` }} />
@@ -190,12 +214,6 @@ function Ledger({ filter, setFilter, openClaims }: { filter: Verdict | 'problems
           })}
         </div>
         <div className="legend">
-          {problems > 0 && (
-            <button className={filter === 'problems' ? 'on' : ''} onClick={() => setFilter(filter === 'problems' ? null : 'problems')}>
-              <span className="chip v-fabricated">Needs attention</span>
-              <span className="n">{problems}</span>
-            </button>
-          )}
           {VERDICT_ORDER.filter((v) => v !== 'pending' && counts.get(v as Verdict)).map((v) => (
             <button key={v} className={filter === v ? 'on' : ''} title={VERDICT[v].help} onClick={() => setFilter(filter === v ? null : (v as Verdict))}>
               <span className={`chip v-${v}`}>{VERDICT[v].label}</span>
@@ -206,16 +224,31 @@ function Ledger({ filter, setFilter, openClaims }: { filter: Verdict | 'problems
       </section>
       <section>
         <div className="eyebrow">Claim support</div>
-        {claimPhase === 'idle' && <p>{phase === 'checking' ? 'Starts when references are resolved.' : doc.citances.length ? 'Waiting…' : 'No citing sentences found (reference list only).'}</p>}
+        {claimPhase === 'idle' && !doc.citances.length && <p>No citing sentences found (reference list only), so there are no claims to check.</p>}
+        {claimPhase === 'idle' && doc.citances.length > 0 && mode === 'full' && (
+          <p>{phase === 'checking' ? `Starts when references are resolved. Preparing the verifier in the background${modelProgress ? ` (${Math.round(modelProgress * 100)}%)` : '…'}` : 'Starting…'}</p>
+        )}
+        {claimPhase === 'idle' && doc.citances.length > 0 && mode === 'quick' && (
+          <div className="claim-offer">
+            <p>
+              Quick check: references only. {doc.citances.length} citing sentence{doc.citances.length > 1 ? 's' : ''} can also be tested against the text of the works they cite.
+            </p>
+            <button className="btn primary" disabled={phase !== 'done'} onClick={() => runClaimAudit()} title={phase !== 'done' ? 'Available when the reference check finishes' : undefined}>
+              Check claim support
+            </button>
+            <small>Runs on this device. Downloads a 136 MB verifier the first time, cached afterwards.</small>
+          </div>
+        )}
         {claimPhase === 'loading-model' && (
           <>
-            <p>Loading the verifier into your browser, about 130 MB the first time and cached afterwards{modelProgress ? ` (${Math.round(modelProgress * 100)}%)` : '…'}</p>
+            <p>Loading the verifier into your browser, about 136 MB the first time and cached afterwards{modelProgress ? ` (${Math.round(modelProgress * 100)}%)` : '…'}</p>
             <div className="progress">
               <i style={{ width: `${modelProgress * 100}%` }} />
             </div>
           </>
         )}
-        {(claimPhase === 'running' || claimPhase === 'done' || claimPhase === 'unavailable') && (
+        {claimPhase === 'done' && !claims.length && <p>{doc.citances.length ? 'No checkable claims: claims are checked only against references that were matched to a published record, and only when the citing sentence makes a statement.' : 'No citing sentences found (reference list only), so there are no claims to check.'}</p>}
+        {(claimPhase === 'running' || (claimPhase === 'done' && claims.length > 0) || claimPhase === 'unavailable') && (
           <>
             <div className="bar" aria-hidden="true">
               {claimOrder.map((k) => (sc.get(k) ? <i key={k} style={{ width: `${((sc.get(k) ?? 0) / Math.max(1, claims.length)) * 100}%`, background: sColor[k] }} /> : null))}
@@ -237,7 +270,12 @@ function Ledger({ filter, setFilter, openClaims }: { filter: Verdict | 'problems
               )}
             </div>
             {claimPhase === 'running' && <p>Checked {claims.filter((c) => c.status === 'done' || c.status === 'no_source').length} of {claims.length} claims…</p>}
-            {claimPhase === 'unavailable' && <p>The verifier model could not load in this browser. Evidence retrieval still works.</p>}
+            {claimPhase === 'unavailable' &&
+              (claims.length ? (
+                <p>The verifier model could not load (offline, or blocked by this browser). Retrieved evidence is still shown for each claim.</p>
+              ) : (
+                <p>Claim checks could not start (the connection dropped, or this browser blocked them). The reference results are complete.</p>
+              ))}
           </>
         )}
       </section>
@@ -249,7 +287,23 @@ function Ledger({ filter, setFilter, openClaims }: { filter: Verdict | 'problems
 
 function ClaimList({ rows, sel, setSel }: { rows: { c: ClaimCheck; i: number }[]; sel: Sel; setSel: (s: Sel) => void }) {
   const doc = useSession((s) => s.doc)!;
-  if (!rows.length) return <div className="detail"><p className="empty">{doc.citances.length ? 'Claims are checked after references are resolved.' : 'This input has no body text, so there are no claims to check.'}</p></div>;
+  const mode = useSession((s) => s.mode);
+  const claimPhase = useSession((s) => s.claimPhase);
+  const phase = useSession((s) => s.phase);
+  if (!rows.length) {
+    if (doc.citances.length && mode === 'quick' && claimPhase === 'idle')
+      return (
+        <div className="detail">
+          <p className="empty">This was a quick check of the references only.</p>
+          <p className="empty" style={{ marginTop: 10 }}>
+            <button className="btn primary" disabled={phase !== 'done'} onClick={() => runClaimAudit()}>
+              Check claim support
+            </button>
+          </p>
+        </div>
+      );
+    return <div className="detail"><p className="empty">{!doc.citances.length ? 'This input has no body text, so there are no claims to check.' : claimPhase === 'done' ? 'No checkable claims were found.' : 'Claims are checked after references are resolved.'}</p></div>;
+  }
   return (
     <>
       {rows.map(({ c, i }) => {

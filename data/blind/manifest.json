@@ -1,0 +1,145 @@
+{
+ "rule": "most recent primary-category arXiv submission per category; two most recent PLOS ONE research articles; skip only if PDF fails or <10 references",
+ "queriedAt": "2026-11-19T18:32:00.687Z",
+ "picked": [
+  {
+   "source": "arXiv",
+   "cat": "cs.CL",
+   "id": "2611.24936v1",
+   "title": "Jailbreak Detection on Large Language Models via Contrastive Prototype Structures",
+   "file": "cs.CL_2611.24936v1.pdf",
+   "refsParsed": 46
+  },
+  {
+   "source": "arXiv",
+   "cat": "cs.CV",
+   "id": "2611.24941v1",
+   "title": "UltraTex: Aligning Physical Knowledge for High-Fidelity PBR Texture Generation",
+   "file": "cs.CV_2611.24941v1.pdf",
+   "refsParsed": 86
+  },
+  {
+   "source": "arXiv",
+   "cat": "cs.SE",
+   "id": "2611.24924v1",
+   "title": "Agentic Harness Engineering Beta: Requirement-Centered Evolution of Agent Harnesses",
+   "file": "cs.SE_2611.24924v1.pdf",
+   "refsParsed": 90
+  },
+  {
+   "source": "arXiv",
+   "cat": "cs.HC",
+   "id": "2611.24888v1",
+   "title": "Who are you? The Personal Imitation Game",
+   "file": "cs.HC_2611.24888v1.pdf",
+   "refsParsed": 101
+  },
+  {
+   "source": "arXiv",
+   "cat": "astro-ph.GA",
+   "id": "2611.24937v1",
+   "title": "LEMUR: A Searchable Web Archive of Deep Chandra Images of Galaxies and Galaxy Clusters",
+   "file": "astro-ph.GA_2611.24937v1.pdf",
+   "refsParsed": 11
+  },
+  {
+   "source": "arXiv",
+   "cat": "cond-mat.mtrl-sci",
+   "id": "2611.24759v1",
+   "title": "Characterizing adsorption thermodynamics in carbon capture materials: an efficient first-principles approach",
+   "file": "cond-mat.mtrl-sci_2611.24759v1.pdf",
+   "refsParsed": 28
+  },
+  {
+   "source": "arXiv",
+   "cat": "quant-ph",
+   "id": "2611.24886v1",
+   "title": "CREST: A Hardware-Aware GNN-Based Framework for High-Fidelity and Robust Superconducting Quantum Compilation",
+   "file": "quant-ph_2611.24886v1.pdf",
+   "refsParsed": 39
+  },
+  {
+   "source": "arXiv",
+   "cat": "math.PR",
+   "id": "2611.24875v1",
+   "title": "Cameron--Martin theorem for SLE welding measures",
+   "file": "math.PR_2611.24875v1.pdf",
+   "refsParsed": 36
+  },
+  {
+   "source": "arXiv",
+   "cat": "q-bio.NC",
+   "id": "2611.24767v1",
+   "title": "Inferring Neural Activity Changes under Recording Uncertainty with Transformers and Variational Inference",
+   "file": "q-bio.NC_2611.24767v1.pdf",
+   "refsParsed": 36
+  },
+  {
+   "source": "arXiv",
+   "cat": "eess.SP",
+   "id": "2611.24829v1",
+   "title": "Greedy Vector Approximation Based on Rotation for Multiplierless Complex Products",
+   "file": "eess.SP_2611.24829v1.pdf",
+   "refsParsed": 13
+  },
+  {
+   "source": "arXiv",
+   "cat": "econ.EM",
+   "id": "2611.24402v1",
+   "title": "Design-Based Inference for Fuzzy Difference-in-Differences",
+   "file": "econ.EM_2611.24402v1.pdf",
+   "refsParsed": 37
+  },
+  {
+   "source": "arXiv",
+   "cat": "stat.ME",
+   "id": "2611.24929v1",
+   "title": "Improving External Prediction in New Clusters with Mixed-Effects Models: Implications for Multicenter Studies",
+   "file": "stat.ME_2611.24929v1.pdf",
+   "refsParsed": 33
+  },
+  {
+   "source": "PLOS ONE",
+   "id": "10.1371/journal.pone.0360919",
+   "title": "Navigating the adolescent digital playground: Executive function impacts mental health associations through digital media use in the ABCD Study",
+   "published": "2026-11-18T00:00:00Z",
+   "file": "plos_10_1371_journal_pone_0360919.pdf",
+   "refsParsed": 39
+  },
+  {
+   "source": "PLOS ONE",
+   "id": "10.1371/journal.pone.0359947",
+   "title": "The global burden of Alzheimer’s disease and related dementias: New public health intervention targets driven by the long-term impact of COVID-19 and sex and age differences",
+   "published": "2026-11-18T00:00:00Z",
+   "file": "plos_10_1371_journal_pone_0359947.pdf",
+   "refsParsed": 40
+  }
+ ],
+ "skipped": [
+  {
+   "cat": "cond-mat.mtrl-sci",
+   "id": "2611.24909v1",
+   "title": "Prediction and Screening of $η$-carbide-type Nitrides for Ammonia Synthesis",
+   "reason": "0 references parsed"
+  },
+  {
+   "cat": "quant-ph",
+   "id": "2611.24911v1",
+   "title": "A Nonsecular Quantum Master Equation with Detailed Balance and Second-order Error Bound",
+   "reason": "0 references parsed"
+  },
+  {
+   "cat": "quant-ph",
+   "id": "2611.24910v1",
+   "title": "Dressed-State Quantum Information Processing Using a Multilayer Ion Trap Chip with an Integrated Radio Frequency Resonator",
+   "reason": "0 references parsed"
+  },
+  {
+   "cat": "quant-ph",
+   "id": "2611.24890v1",
+   "title": "Residual-Algebraic Design of Symmetry-Preserving Variational Quantum Circuits",
+   "reason": "0 references parsed"
+  }
+ ],
+ "plosQueriedAt": "2026-11-19T18:34:36.969Z"
+}

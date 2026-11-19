@@ -3,12 +3,16 @@
 const LIGATURES: Record<string, string> = { 'ﬁ': 'fi', 'ﬂ': 'fl', 'ﬀ': 'ff', 'ﬃ': 'ffi', 'ﬄ': 'ffl', 'ß': 'ss', 'æ': 'ae', 'œ': 'oe', 'ø': 'o', 'ł': 'l', 'đ': 'd', 'ı': 'i' };
 
 /** Lowercase, strip diacritics/punctuation, collapse whitespace. */
+const HOMOGLYPH: Record<string, string> = { А: 'A', В: 'B', С: 'C', Е: 'E', Н: 'H', І: 'I', К: 'K', М: 'M', О: 'O', Р: 'P', Т: 'T', Х: 'X', а: 'a', е: 'e', і: 'i', о: 'o', р: 'p', с: 'c', у: 'y', х: 'x', ԁ: 'd', ј: 'j' };
 const HTML_ENT: Record<string, string> = { amp: '&', apos: "'", quot: '"', lt: '<', gt: '>', nbsp: ' ' };
 
 export function fold(s: string): string {
   return s
     .replace(/&(amp|apos|quot|lt|gt|nbsp);/gi, (_, e: string) => HTML_ENT[e.toLowerCase()])
+    .replace(/\\(?:mathrm|text|textrm|textit|textbf|mathit|mathbf|mathcal|emph|rm|it|bf|sqrt|left|right)\b\s*|[{}$]/g, '') // LaTeX in titles: "${\mathrm{Latent}Out}$" → "LatentOut"
     .replace(/(\p{L})['’`](\p{L})/gu, '$1$2') // can't → cant, O'Brien → OBrien
+    // Cyrillic look-alikes inside Latin words ("СERN" typed with a Cyrillic С)
+    .replace(/[\p{Script=Latin}\p{Script=Cyrillic}]+/gu, (w) => (/\p{Script=Latin}/u.test(w) && /\p{Script=Cyrillic}/u.test(w) ? w.replace(/[АВСЕНІКМОРТХаеіорсухԁј]/g, (c) => HOMOGLYPH[c] ?? c) : w))
     .replace(/[ﬁﬂﬀﬃﬄßæœøłđı]/gi, (c) => LIGATURES[c.toLowerCase()] ?? c)
     .normalize('NFKD')
     .replace(/[̀-ͯ]/g, '')

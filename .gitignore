@@ -20,3 +20,4 @@ data/*.err
 SKILL.md
 .claude/
 *.log
+data/mnli/

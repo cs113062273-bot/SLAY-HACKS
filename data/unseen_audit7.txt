@@ -1,0 +1,95 @@
+
+=== cs.CY_2611.22975v1.pdf | pages 50 | refs 45 | citances 37 (numeric) | refs cited in text 32/45 | parse 3109 ms | verify 50 s
+    {"verified_minor":4,"verified":38,"id_mismatch":1,"metadata_error":1,"unverifiable":1}
+  [8] id_mismatch: 8. Juzek, T. & Ward, Z. (2024). Why does ChatGPT ‘delve’ so much? Exploring the sources of overrepresentation in large language models. arXiv:2312.11385.
+      MATCH[semanticscholar] Why Does ChatGPT "Delve" So Much? Exploring the Sources of Lexical Overrepresentation in Large Langu | Juzek, Ward | 2024/2024 | International Conference on Computational Linguistics
+      ! arXiv:2312.11385 points to a different work: “Hypergraph Transformer for Semi-Supervised Classification”
+  [11] metadata_error: 11. McCreery, Z. & Noser, M. (2026). LLM-assisted writing in engineering is associated with higher citations as evidenced by 1.17 million papers. Journal of Informetrics, 20, article 101842.
+      MATCH[crossref] LLM-Assisted writing in engineering is associated with higher citations as evidenced from 1.17 milli | McCreery, Naser | 2026 | Journal of Informetrics
+      ! Title differs from the published title (cited “by”, published “from”)
+
+=== econ.GN_2611.21070v1.pdf | pages 39 | refs 24 | citances 15 (author-year) | refs cited in text 21/24 | parse 650 ms | verify 1 s
+    {"verified":23,"verified_minor":1}
+
+=== physics.soc-ph_2611.20886v1.pdf | pages 33 | refs 97 | citances 124 (author-year) | refs cited in text 79/97 | parse 980 ms | verify 128 s
+    {"unverifiable":50,"verified_minor":22,"verified":19,"id_mismatch":1,"metadata_error":3,"unchecked":2}
+  [32] id_mismatch: Grynyov, B. V., Titov, M. P., & Stadnik, P. O. (2019). Ukraine - CERN: The way to cooperation. Science and Innovation, 15(5), 87-98. https://doi.org/10.15407/scine15.05.087
+      MATCH[crossref] Ukraine - СERN: the Way to Cooperation | Ukraine, Grynyov, Titov, France | 2019 | Science and innovation
+      ! Incomplete author list: 3 of 6 authors omitted without “et al.”
+      ! doi:10.15407/scine15.05.087 points to a different work: “Manual Version of 3D Printing”
+  [63] metadata_error: Rovenchak O. and Volodko V. (2018), “Comparative Analysis of the Identity and Practices of Post-war Representatives and the Contemporary Wave of Ukrainian Immigrants to the United States”, Annales Universitatis Mariae Curie-Sklodo
+      MATCH[crossref] Comparative Analysis of the Identity and Practices of Post-war Representatives and the Contemporary  | Rovenchak, Volodko | 2018/2019 | Annales Universitatis Mariae Curie-Sklodowska, sectio I – Philosophia-Sociologia
+      ! Title differs from the published title (cited “to”, published “in”)
+  [68] metadata_error: Shiltsev, V. (2025). Post 1980s Diaspora of Russian Particle Physicists. 4th international symposium on history of particle physics. CERN. 10-13 November. https://indico.cern.ch/event/1480892/contributions/6386322/.
+      MATCH[semanticscholar] Post-Cold War Diaspora of Russian Particle Physicists | Shiltsev | 2025/2025 | 
+      ! Closest real work has a different title: “Post-Cold War Diaspora of Russian Particle Physicists”
+  [79] unchecked: Tarasov, V. (2026). ISMA's CsI scintillators in experiments on high-energy physics and astrophysics, in these proceedings.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [92] unchecked: Yanovsky, F. (2016). Glimpses of Early Radar Developments in Ukraine and the Former Soviet Union, Radio Science Bulletin 358, pp. 35-68.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [95] metadata_error: Zavorotna, N. (2020). In Scholars in Exile: The Ukrainian Intellectual World in Interwar Czechoslovakia Pages: 53-71 University of Toronto Press, https://utppublishing.com/doi/10.3138/9781487504458.004 (last accessed 4.04.2026).
+      MATCH[crossref] Scholars in Exile: The Ukrainian Intellectual World in Interwar Czechoslovakia | Zavorotna | 2020/2024 | 
+      ! doi:10.3138/9781487504458.004 does not resolve to any record
+
+=== q-bio.PE_2611.18781v1.pdf | pages 53 | refs 64 | citances 63 (author-year) | refs cited in text 61/64 | parse 1271 ms | verify 18 s
+    {"verified":56,"verified_minor":7,"unverifiable":1}
+
+=== q-fin.GN_2611.18531v1.pdf | pages 85 | refs 91 | citances 79 (author-year) | refs cited in text 82/91 | parse 2089 ms | verify 65 s
+    {"verified":73,"unverifiable":10,"verified_minor":7,"metadata_error":1}
+  [48] metadata_error: Liu, R., R. Yang, C. Jia, G. Zhang, D. Yang, and S. Vosoughi, 2024, Training socially aligned language models on simulated social interactions, in The Twelfth International Conference on Learning Representations (ICLR 2024).
+      MATCH[semanticscholar] Training Socially Aligned Language Models on Simulated Social Interactions | Liu, Yang, Jia, Zhang | 2023/2023 | International Conference on Learning Representations
+      ! Incomplete author list: 2 of 8 authors omitted without “et al.”
+
+=== stat.AP_2611.22149v1.pdf | pages 17 | refs 30 | citances 26 (numeric) | refs cited in text 30/30 | parse 300 ms | verify 60 s
+    {"verified_minor":4,"verified":25,"unverifiable":1}
+
+=== bert_1810.04805.pdf | pages 16 | refs 56 | citances 58 (author-year) | refs cited in text 46/56 | parse 523 ms | verify 3 s
+    {"verified":51,"unverifiable":2,"verified_minor":2,"metadata_error":1}
+  [17] metadata_error: William B Dolan and Chris Brockett. 2005. Automatically constructing a corpus of sentential paraphrases. In Proceedings of the Third International Workshop on Paraphrasing (IWP2005).
+      MATCH[semanticscholar] Automatically Constructing a Corpus of Sentential Paraphrases | Dolan, Brockett | 2005 | International Joint Conference on Natural Language Processing
+      ! Published in “International Joint Conference on Natural Language Processing”, not “Proceedings of the Third International Workshop on Paraphrasing (IWP2005)”
+
+=== resnet_1512.03385.pdf | pages 12 | refs 50 | citances 85 (numeric) | refs cited in text 47/50 | parse 409 ms | verify 233 s
+    {"verified":32,"unchecked":3,"metadata_error":11,"unverifiable":2,"id_mismatch":1,"verified_minor":1}
+  [3] unchecked: [3] W. L. Briggs, S. F. McCormick, et al. A Multigrid Tutorial. Siam, 2000.
+      MATCH[crossref] A Multigrid Tutorial, Second Edition | Briggs, Henson, McCormick | 2000/2012/2011 | 
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [5] metadata_error: [5] M. Everingham, L. Van Gool, C. K. Williams, J. Winn, and A. Zisserman. The Pascal Visual Object Classes (VOC) Challenge. IJCV, pages 303-338, 2010.
+      MATCH[crossref] The Pascal Visual Object Classes (VOC) Challenge | Everingham, Van Gool, Williams, Winn | 2009/2010 | International Journal of Computer Vision
+      ! Published in “International Journal of Computer Vision”, not “IJCV”
+  [7] metadata_error: [7] R. Girshick. Fast R-CNN. In ICCV, 2015.
+      MATCH[crossref] Fast R-CNN | Girshick | 2015/2016 | 2015 IEEE International Conference on Computer Vision (ICCV)
+      ! Author list does not match the published work: R-CNN not among its authors
+  [16] unchecked: [16] S. Ioffe and C. Szegedy. Batch normalization: Accelerating deep network training by reducing internal covariate shift. In ICML, 2015.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [17] metadata_error: [17] H. Jegou, M. Douze, and C. Schmid. Product quantization for nearest neighbor search. TPAMI, 33, 2011.
+      MATCH[crossref] Product Quantization for Nearest Neighbor Search | Jégou, Douze, Schmid | 2011/2010 | IEEE Transactions on Pattern Analysis and Machine Intelligence
+      ! Published in “IEEE Transactions on Pattern Analysis and Machine Intelligence”, not “TPAMI”
+  [18] metadata_error: [18] H. Jegou, F. Perronnin, M. Douze, J. Sanchez, P. Perez, and C. Schmid. Aggregating local image descriptors into compact codes. TPAMI, 2012.
+      MATCH[crossref] Aggregating Local Image Descriptors into Compact Codes | Jegou, Perronnin, Douze, Sanchez | 2012/2011 | IEEE Transactions on Pattern Analysis and Machine Intelligence
+      ! Published in “IEEE Transactions on Pattern Analysis and Machine Intelligence”, not “TPAMI”
+  [21] metadata_error: [21] A. Krizhevsky, I. Sutskever, and G. Hinton. Imagenet classification with deep convolutional neural networks. In NIPS, 2012.
+      MATCH[semanticscholar] ImageNet classification with deep convolutional neural networks | Krizhevsky, Sutskever, Hinton | 2012/2012 | Communications of the ACM
+      ! Published in “Communications of the ACM”, not “NIPS”
+  [24] id_mismatch: [24] C.-Y. Lee, S. Xie, P. Gallagher, Z. Zhang, and Z. Tu. Deeplysupervised nets. arXiv:1409.5185, 2014.
+      ! arXiv:1409.5185 points to a different work: “Deeply-Supervised Nets”
+  [26] metadata_error: [26] T.-Y. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Doll´ar, and C. L. Zitnick. Microsoft COCO: Common objects in context. In ECCV. 2014.
+      MATCH[crossref] Microsoft COCO: Common Objects in Context | Lin, Maire, Belongie, Hays | 2014 | Lecture Notes in Computer Science
+      ! Author list does not match the published work: T.-Y not among its authors
+  [32] metadata_error: [32] S. Ren, K. He, R. Girshick, and J. Sun. Faster R-CNN: Towards real-time object detection with region proposal networks. In NIPS, 2015.
+      MATCH[crossref] Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks | Ren, He, Girshick, Sun | 2017/2016 | IEEE Transactions on Pattern Analysis and Machine Intelligence
+      ! Published in “IEEE Transactions on Pattern Analysis and Machine Intelligence”, not “NIPS”
+  [38] metadata_error: [38] N. N. Schraudolph. Accelerated gradient descent by factor-centering decomposition. Technical report, 1998.
+      MATCH[semanticscholar] Accelerated Gradient Descent by Factor-Centering Decomposition | Schraudolph | 1998/1998 | 
+      ! Published in “”, not “Technical report”
+  [41] unchecked: [41] K. Simonyan and A. Zisserman. Very deep convolutional networks for large-scale image recognition. In ICLR, 2015.
+      ! No scholarly index responded; retry later
+  [45] metadata_error: [45] R. Szeliski. Fast surface interpolation using hierarchical basis functions. TPAMI, 1990.
+      MATCH[crossref] Fast surface interpolation using hierarchical basis functions | Szeliski | 1990/2002 | IEEE Transactions on Pattern Analysis and Machine Intelligence
+      ! Published in “IEEE Transactions on Pattern Analysis and Machine Intelligence”, not “TPAMI”
+  [48] metadata_error: [48] A. Vedaldi and B. Fulkerson. VLFeat: An open and portable library of computer vision algorithms, 2008.
+      MATCH[crossref] Vlfeat: an open and portable library of computer vision algorithms | Vedaldi, Fulkerson | 2010 | Proceedings of the 18th ACM international conference on Multimedia
+      ! Year 2008 does not match the published record (2010)
+  [50] metadata_error: [50] M. D. Zeiler and R. Fergus. Visualizing and understanding convolutional neural networks. In ECCV, 2014.
+      MATCH[crossref] Visualizing and Understanding Convolutional Networks | Zeiler, Fergus | 2014 | Lecture Notes in Computer Science
+      ! Title differs from the published title (cited “neural”)

@@ -24,8 +24,9 @@ FINE_TO_3 = {
 
 
 def normalize_claim(c: str) -> str:
-    c = re.sub(r"<\|multi_cit\|>|<CITATION_MARKER>|</CITATION_MARKER>", " ", c)
-    c = re.sub(r"\[\s*(?:\d+\s*[-–,]?\s*)*\]", " ", c)
+    c = re.sub(r"<\|(?:multi_)?cit\|>|<CITATION_MARKER>|</CITATION_MARKER>", " ", c)
+    c = re.sub(r"\[[\s\d,;–-]*\]", " ", c)  # [3], [3-5], and leftovers such as "[, 7]" or "[,]"
+    c = re.sub(r"\[[\s\d,;–-]*$", " ", c)
     c = re.sub(r"\(\s*(?:\d+\s*[-–,]?\s*)+\)", " ", c)
     c = re.sub(r"\s+([.,;:])", r"\1", c)
     return re.sub(r"\s+", " ", c).strip()

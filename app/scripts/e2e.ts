@@ -6,7 +6,7 @@ import puppeteer from 'puppeteer-core';
 
 const hash = process.argv[2] ?? '#sample-planted';
 const out = process.argv[3] ?? 'e2e';
-const url = `http://localhost:4173/${hash}`;
+const url = `${process.env.VERACITE_URL ?? 'http://127.0.0.1:4180/'}${hash}`;
 const browser = await puppeteer.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true, args: ['--window-size=1440,1000'] });
 const page = await browser.newPage();
 await page.setViewport({ width: 1440, height: 1000 });

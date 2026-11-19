@@ -2,19 +2,36 @@ import type { Cache } from '../core/http';
 
 /** IndexedDB-backed cache for API responses. Falls back to memory when storage is blocked. */
 export class IdbCache implements Cache {
-  private db: Promise<IDBDatabase | null>;
+  private dbp: Promise<IDBDatabase | null> | null = null;
   private mem = new Map<string, unknown>();
-  constructor(name = 'veracite-cache') {
-    this.db = new Promise((resolve) => {
+  constructor(private name = 'veracite-cache') {}
+  /**
+   * Opened lazily: on a first visit the cross-origin-isolation service worker reloads the page right after load,
+   * and an upgrade interrupted by that reload can leave later opens pending forever. A storage layer that does
+   * not answer within 2 s (blocked, private mode, broken profile) is skipped and the cache stays in memory.
+   */
+  private get db(): Promise<IDBDatabase | null> {
+    this.dbp ??= new Promise((resolve) => {
+      const timer = setTimeout(() => resolve(null), 2000);
+      const done = (db: IDBDatabase | null) => {
+        clearTimeout(timer);
+        resolve(db);
+      };
       try {
-        const req = indexedDB.open(name, 1);
+        const req = indexedDB.open(this.name, 1);
         req.onupgradeneeded = () => req.result.createObjectStore('kv');
-        req.onsuccess = () => resolve(req.result);
-        req.onerror = () => resolve(null);
+        req.onsuccess = () => {
+          const db = req.result;
+          db.onversionchange = () => db.close();
+          done(db);
+        };
+        req.onerror = () => done(null);
+        req.onblocked = () => done(null);
       } catch {
-        resolve(null);
+        done(null);
       }
     });
+    return this.dbp;
   }
   /** Seed with pre-fetched responses (used for the bundled sample papers). */
   seed(entries: Record<string, unknown>) {

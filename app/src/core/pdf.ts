@@ -25,7 +25,9 @@ export async function pdfToLines(pdfjs: PdfJs, data: ArrayBuffer | Uint8Array, o
     const items: Item[] = [];
     for (const it of tc.items as any[]) {
       if (!('str' in it) || !it.str) continue;
-      const [a, b, , d, e, f] = it.transform;
+      const [a, b, c, d, e, f] = it.transform;
+      // rotated text (arXiv's vertical side stamp, axis labels) is never body or reference text
+      if (Math.abs(b) > Math.abs(a) * 0.05 || Math.abs(c) > Math.abs(d) * 0.05) continue;
       const size = Math.hypot(a, b) || Math.abs(d) || 10;
       items.push({ str: it.str, x: e, y: vp.height - f, w: it.width, size, font: `${it.fontName} ${styles[it.fontName]?.fontFamily ?? ''}` });
     }
@@ -49,7 +51,11 @@ export async function pdfToLines(pdfjs: PdfJs, data: ArrayBuffer | Uint8Array, o
       for (let i = 1; i < g.length; i++) {
         const prev = g[i - 1];
         const gap = g[i].x - (prev.x + prev.w);
-        if (gap > Math.max(prev.size, g[i].size) * 2.2) parts.push([g[i]]);
+        const sz = Math.max(prev.size, g[i].size);
+        // narrow gutters (ACL two-column: ~17 pt at 10 pt type) are caught by a gap that straddles the page centre
+        const mid = vp.width / 2;
+        const gutter = gap > sz * 1.0 && prev.x + prev.w <= mid + sz && g[i].x >= mid - sz;
+        if (gap > sz * 2.2 || gutter) parts.push([g[i]]);
         else parts[parts.length - 1].push(g[i]);
       }
       for (const part of parts) {

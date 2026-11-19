@@ -79,7 +79,7 @@
    "gold": "verified",
    "verdict": "unverifiable",
    "issues": [
-    "Web resource: not indexed by scholarly databases; check manually"
+    "No title is cited, and no record matched the authors, year, volume and page; check manually"
    ]
   },
   {
@@ -302,8 +302,10 @@
   {
    "id": "P2 R11",
    "gold": "verified",
-   "verdict": "verified",
-   "issues": []
+   "verdict": "verified_minor",
+   "issues": [
+    "Book: indexed only through a review in “Scientific Data” (2023); authors, year and publisher could not be checked"
+   ]
   },
   {
    "id": "P2 R12",
@@ -667,7 +669,8 @@
    "verdict": "fabricated",
    "issues": [
     "OpenAlex did not respond; re-run later to confirm",
-    "No matching work in Crossref, Semantic Scholar, Europe PMC"
+    "No matching work in Crossref, Semantic Scholar, Europe PMC",
+    "Nearest record: “BERT-based Lexical Substitution” (68% title similarity)"
    ]
   },
   {
@@ -700,8 +703,7 @@
    "gold": "problematic",
    "verdict": "fabricated",
    "issues": [
-    "OpenAlex did not respond; re-run later to confirm",
-    "No matching work in Crossref, Semantic Scholar, Europe PMC",
+    "No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC",
     "Nearest record: “Graph Reasoning Transformers for Knowledge-Aware Question Answering” (78% title similarity)"
    ]
   },

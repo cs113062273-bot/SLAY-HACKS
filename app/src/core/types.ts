@@ -91,6 +91,7 @@ export type Verdict =
   | 'fabricated' // no matching work found anywhere; strong fabrication signals
   | 'not_found' // scholarly-looking but not found in any index
   | 'unverifiable' // non-scholarly (web/standard/report) that cannot be checked in indexes
+  | 'unchecked' // the indexes needed to judge it did not respond (outage, rate limit): never flagged
   | 'retracted';
 
 export interface RefResult {

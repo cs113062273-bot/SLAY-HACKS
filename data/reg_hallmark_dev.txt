@@ -1,0 +1,17 @@
+0 20 40 60 100 120 140 80 160 180 200 220 240 260 280 300 320 340 
+HALLMARK dev_public (sample 360): n=360 DR=0.962 FPR=0.047 P=0.967 F1=0.964  [275s]
+  VALID (flagged=FP)         7/150  0.05
+  arxiv_version_mismatch     15/15  1.00
+  chimeric_title             14/15  0.93
+  fabricated_doi             15/15  1.00
+  future_date                15/15  1.00
+  hybrid_fabrication         15/15  1.00
+  merged_citation            15/15  1.00
+  near_miss_title            12/15  0.80
+  nonexistent_venue          14/15  0.93
+  partial_author_list        14/15  0.93
+  placeholder_authors        15/15  1.00
+  plausible_fabrication      14/15  0.93
+  preprint_as_published      15/15  1.00
+  swapped_authors            14/15  0.93
+  wrong_venue                15/15  1.00

@@ -1,0 +1,401 @@
+
+=== cs.CY_2611.22975v1.pdf | pages 50 | refs 45 | citances 37 (numeric) | refs cited in text 32/45 | parse 1902 ms | verify 182 s
+    {"verified_minor":1,"verified":34,"id_mismatch":3,"metadata_error":6,"unverifiable":1}
+  [8] id_mismatch: 8. Juzek, T. & Ward, Z. (2024). Why does ChatGPT ‘delve’ so much? Exploring the sources of overrepresentation in large language models. arXiv:2312.11385.
+      MATCH[semanticscholar] Why Does ChatGPT "Delve" So Much? Exploring the Sources of Lexical Overrepresentation in Large Langu | Juzek, Ward | 2024/2024 | International Conference on Computational Linguistics
+      ! arXiv:2312.11385 points to a different work: “Hypergraph Transformer for Semi-Supervised Classification”
+  [9] metadata_error: 9. Sourati, Z., Karimi-Malekabadi, F., Ozcan, M., McDaniel, C., Ziabari, A., Trager, J., ... & Dehghani, M. (2026). The shrinking landscape of linguistic diversity in the age of large language models. Nature Human Behaviour, 1-18.
+      MATCH[crossref] The shrinking landscape of linguistic diversity in the age of large language models | Sourati, Karimi-Malekabadi, Ozcan, McDaniel | 2026 | Nature Human Behaviour
+      ! Incomplete author list: 3 of 10 authors omitted without “et al.”
+  [11] metadata_error: 11. McCreery, Z. & Noser, M. (2026). LLM-assisted writing in engineering is associated with higher citations as evidenced by 1.17 million papers. Journal of Informetrics, 20, article 101842.
+      MATCH[crossref] LLM-Assisted writing in engineering is associated with higher citations as evidenced from 1.17 milli | McCreery, Naser | 2026 | Journal of Informetrics
+      ! Title differs from the published title (cited “by”, published “from”)
+  [13] id_mismatch: 13. Filimonovic, D., Rutzer, C., Macher, J., & Weder, R. (2025). Generative AI as a Linguistic Equalizer in Global Science. arXiv:2511.11687.
+      MATCH[semanticscholar] Generative AI as a Linguistic Equalizer in Global Science | Filimonovic, Rutzer, Macher, Weder | 2025 | arXiv.org
+      ! arXiv:2511.11687 points to a different work: “Does Scientific Writing Converge to U.S. English? Evidence from Generative AI-Assisted Publications”
+  [18] id_mismatch: 18. Lin, D., Zhao, N., Tian, D., & Li, J. (2025). ChatGPT as linguistic equalizer? quantifying LLM-Driven lexical shifts in academic writing. arXiv:2504.12317.
+      MATCH[semanticscholar] ChatGPT as Linguistic Equalizer? Quantifying LLM-Driven Lexical Shifts in Academic Writing | Lin, Zhao, Tian, Li | 2025 | arXiv.org
+      ! arXiv:2504.12317 points to a different work: “Large language models reshape the language of science”
+  [20] metadata_error: 20. Kuhn, T. (1962). The structure of scientific revolutions. University of Chicago Press.
+      MATCH[openalex] The Structure of Scientific Revolutions | Kuhn, Hawkins | 1963 | Princeton University Press eBooks
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [27] metadata_error: 27. Whorf, B. L. (1956). Language, thought, and reality: Selected writings of Benjamin Lee Whorf (J. B. Carroll, Ed.). MIT Press.
+      MATCH[crossref] Language, Thought, and Reality: Selected Writings of Benjamin Lee Whorf . John B. Carroll | Waterman | 1956/2005 | International Journal of American Linguistics
+      ! Title differs from the published title (cited “j”, published “john”, published “b”, published “carroll”)
+  [33] metadata_error: 34. Zhang, A., Lipton, Z. C., Li, M., & Smola, A. J. (2023). Dive into deep learning. Cambridge University Press.
+      MATCH[semanticscholar] Dive into Deep Learning | Zhang, Lipton, Li, Smola | 2020/2020 | Journal of the American College of Radiology
+      ! Year 2023 does not match the published record (2020/2020)
+  [39] metadata_error: 40. Marsh, L. C., & Cormier, D. R. (2001). Spline regression models (No. 137). Sage.
+      MATCH[crossref] Spline Regression Models | Marsh, Cormier | 2002/2011 | 
+      ! Title differs from the published title (cited “no”)
+
+=== econ.GN_2611.21070v1.pdf | pages 39 | refs 24 | citances 15 (author-year) | refs cited in text 21/24 | parse 626 ms | verify 58 s
+    {"verified":22,"verified_minor":1,"metadata_error":1}
+  [18] metadata_error: - and Otani, S. (2026). Nonparametric estimation of matching efficiency and elasticity in a spot gig work platform: 2019-2023. Journal of the Japanese and International Economies, 81, 101439.
+      MATCH[crossref] Nonparametric estimation of matching efficiency and elasticity in a spot gig work platform: 2019–202 | Kanayama, Otani | 2026 | Journal of the Japanese and International Economies
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+
+=== physics.soc-ph_2611.20886v1.pdf | pages 33 | refs 97 | citances 0 (unknown) | refs cited in text 0/97 | parse 887 ms | verify 961 s
+    {"unchecked":20,"metadata_error":22,"verified":12,"unverifiable":35,"verified_minor":6,"id_mismatch":1,"fabricated":1}
+  [1] unchecked: Alexander III. (1889). On the Voluntary Resettlement of Rural Inhabitants and Burghers to State Lands (Law of 13 July 1889). In Complete Collection of Laws of the Russian Empire (Polnoe sobranie zakonov Rossiiskoi imperii), 3rd se
+      ! No scholarly index responded; retry later
+  [2] unchecked: Anna Ioannovna. (1905). Decree of Empress Anna Ioannovna to Prince Shakhovskoi, ruler of Little Russia, on marriages of Little Russians (January 31, 1734). Kievskaya Starina, 91 (October 10).
+      ! No scholarly index responded; retry later
+  [3] metadata_error: Azbel, M. (1981). “Refusenik: Trapped in the Soviet Union”, London: Hamish Hamilton.
+      MATCH[semanticscholar] Refusenik, trapped in the Soviet Union | Azbel, Forbes | 1981 | 
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [6] unchecked: Bogolyubov, A. N. (1996). N. N. Bogolyubov: Live, Creativity, Dubna: JINR
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [7] unchecked: Bogolyubov, N. N., & Parasyuk, O. S. (1955). O vychitatel’nom formalizme pri umnozhenii prichinnykh singulyarnykh funktsii [On a subtraction formalism in the multiplication of causal singular functions]. Doklady Akademii Nauk SSSR
+      ! No scholarly index responded; retry later
+  [8] metadata_error: Bogoliubow, N. N., & Parasiuk, O. S. (1957). Über die Multiplikation der Kausalfunktionen in der Quantentheorie der Felder [On the multiplication of causal functions in quantum field theory]. Acta Mathematica, 97, 227-266. https:/
+      MATCH[crossref] Über die Multiplikation der Kausalfunktionen in der Quantentheorie der Felder | Bogoliubow, Parasiuk | 1957/2006 | Acta Mathematica
+      ! Title differs from the published title (cited “in”, cited “on”, cited “the”, cited “multiplication”, cited “of”, cited “causal”)
+  [12] metadata_error: Charpak, G. (2008). “Mémoires d'un déraciné, physicien, citoyen du monde”, Paris: Odile Jacob.
+      MATCH[crossref] Mémoires d’un déraciné, physicien, citoyen du monde | Charpak | 2008/2024 | Mémoires d’un déraciné, physicien, citoyen du monde
+      ! Published in “Mémoires d’un déraciné, physicien, citoyen du monde”, not “, Paris: Odile Jacob”
+  [14] metadata_error: CMS Collaboration. (2025). Measurement of light-by-light scattering and the Breit-Wheeler process, and search for axion-like particles in ultraperipheral PbPb collisions at √sNN = 5.02 TeV. Journal of High Energy Physics, 2025(8),
+      MATCH[crossref] Measurement of light-by-light scattering and the Breit-Wheeler process, and search for axion-like pa | collaboration, Hayrapetyan, Tumasyan, Adam | 2025 | Journal of High Energy Physics
+      ! Title differs from the published title (cited “snn”, published “sqrt”, published “s”, published “text”, published “nn”)
+  [15] unchecked: Cockcroft, J.D. and Walton, E.T. (1932). Proc. Roy. Soc. A, 136, 619.
+      ! No scholarly index responded; retry later
+  [18] metadata_error: Cottrell, A. G., & Cottrell, L. S. (Eds.). (1995). Times to remember: The life of Edward L. Ginzton. Berkeley: Blackberry Creek Press.
+      MATCH[semanticscholar] Times to remember : the life of Edward L. Ginzton | Ginzton, Cottrell, Cottrell | 1996 | 
+      ! Incomplete author list: 1 of 3 authors omitted without “et al.”
+  [27] metadata_error: Gamow, G. (1970). “My world line”, New York: The Viking Press.
+      MATCH[semanticscholar] My world line; an informal autobiography | Gamow, Alpher, Herman | 1970 | 
+      ! Incomplete author list: 2 of 3 authors omitted without “et al.”
+  [28] metadata_error: Gerasimenko, V. (2026). Kyiv Origins of Modern Mathematical Physics, in these proceedings.
+      MATCH[crossref] Kyiv Origins of Modern Mathematical Physics | Gerasimenko | 2026 | 
+      ! Title differs from the published title (cited “in”, cited “these”, cited “proceedings”)
+  [29] unchecked: Gorenstein, M., Perepelytsya, S., Trubnikov, V. (2026). High Energy Density Physics at BITP: A Historical Overview, in these proceedings.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [30] unchecked: Grekov, V. (2026). Restoring the Narrative: Ways to Rethinking the Global Contribution of Ukrainian Physics, in these proceedings.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [31] metadata_error: Grynyov, B., Hryn’ova, T. (2026). UKRAINE-CERN: the way to cooperation, in these proceedings.
+      MATCH[crossref] Ukraine - СERN: the Way to Cooperation | Ukraine, Grynyov, Titov, France | 2019 | Science and innovation
+      ! Author list does not match the published work: Hryn’ova not among its authors
+      ! Year 2026 does not match the published record (2019)
+  [32] id_mismatch: Grynyov, B. V., Titov, M. P., & Stadnik, P. O. (2019). Ukraine - CERN: The way to cooperation. Science and Innovation, 15(5), 87-98. https://doi.org/10.15407/scine15.05.087
+      MATCH[crossref] Ukraine - СERN: the Way to Cooperation | Ukraine, Grynyov, Titov, France | 2019 | Science and innovation
+      ! Title differs from the published title (cited “cern”, published “ern”)
+      ! Incomplete author list: 3 of 6 authors omitted without “et al.”
+      ! doi:10.15407/scine15.05.087 points to a different work: “Manual Version of 3D Printing”
+  [34] metadata_error: Holovatch Yu., Honchar Y. and Krasnytska M. (2018), PHYSICS AND PHYSICISTS IN THE SHEVCHENKO SCIENTIFIC SOCIETY, Journal of physical studies, v. 22, No. 4 4003, https://doi.org/10.30970/jps.22.4003 (in Ukrainian); also in Leopolis
+      MATCH[crossref] Physics and physicists in the Shevchenko Scientific Society in Lviv | Holovatch, Honchar, Krasnytska | 2018 | Journal of Physical Studies
+      ! Author list does not match the published work: Yu not among its authors
+      ! Published in “Journal of Physical Studies”, not “22, No. 4 4003, (in Ukrainian); also in Leopolis Scientifica. Exact Sciences in Lviv until the middle of the 20th century. Lviv”
+  [38] unchecked: Khramov, Yu. (1991). History of formation and development of physics schools in Ukraine, Kyiv: Phenix (in Russian).
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [39] unchecked: Klyovanyy, L. (1928). “Geographical Atlas of Ukraine”, Kyiv: State Publishing House of Ukraine.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [49] metadata_error: Lucie Str. (1944). “I married a Russian : Letters from Kharkov”, London : George Allen & Unwin Ltd.
+      MATCH[crossref] I Married a Russian. Letters from Kharkov | C.G. | 1944/2006 | International Affairs
+      ! Author list does not match the published work: Str not among its authors
+      ! Published in “International Affairs”, not “, London : George Allen & Unwin Ltd”
+  [52] unchecked: Novosyadlyj, B. (2026). George Gamow: from beta decay to cosmological nucleosynthesis, in these proceedings.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [53] unchecked: Nurmagambetov, A. J. (2026). Prof. D. V. Volkov at CERN, in these proceedings.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [55] metadata_error: Panofsky, W. K. H. (2007). Panofsky on physics, politics, and peace: Pief remembers. Springer. https://doi.org/10.1007/978-0-387-69732-1.
+      MATCH[crossref] Panofsky on Physics, Politics, and Peace |  | 2007 | 
+      ! Published in “undefined”, not “Springer”
+  [56] metadata_error: Petrovsky-Shtern, Y., and Polonsky, A. (Eds.). (2014). POLIN: Studies in Polish Jewry (Vol. 26, Jews and Ukrainians). The Littman Library of Jewish Civilization. https://doi.org/10.2307/j.ctv2vr8vjf.
+      MATCH[crossref] Polin: Studies in Polish Jewry Volume 26: Jews and Ukrainians |  | 2022 | 
+      ! Title differs from the published title (cited “vol”, published “volume”, published “26”, published “jews”, published “ukrainians”)
+      ! Year 2014 does not match the published record (2022)
+  [57] metadata_error: Plokhy, S. (2010). “The origins of the Slavic Nations”. Cambridge: Cambridge University Press.
+      MATCH[semanticscholar] The origins of the Slavic nations : premodern identities in Russia, Ukraine, and Belarus | Plokhy | 2006/2006 | 
+      ! Year 2010 does not match the published record (2006/2006)
+  [58] metadata_error: Plokhy, S. (2015). “The Gates of Europe”. London: Allen Lane.
+      MATCH[semanticscholar] The gates of Europe: : A history of Ukraine | Legvold | 2016 | Foreign Affairs
+      ! Author list does not match the published work: Plokhy not among its authors
+      ! Published in “Foreign Affairs”, not “. London: Allen Lane”
+  [60] metadata_error: Pulyui, I. (1996). Collection of Works. Edited by V. Shenderovskyi, Kyiv: Rada (in Ukrainian).
+      MATCH[europepmc] [Collection of works of prof. Dr. Stanisław Popowski] |  | 1954 | Pediatria polska
+      ! Year 1996 does not match the published record (1954)
+      ! Published in “Pediatria polska”, not “Shenderovskyi, Kyiv: Rada (in Ukrainian)”
+  [61] unchecked: Ranyuk,Y. (2006), Laboratory N. 1: history of nuclear physics in Ukraine, Kharkiv: ACTA.
+      ! No scholarly index responded; retry later
+  [63] metadata_error: Rovenchak O. and Volodko V. (2018), “Comparative Analysis of the Identity and Practices of Post-war Representatives and the Contemporary Wave of Ukrainian Immigrants to the United States”, Annales Universitatis Mariae Curie-Sklodo
+      MATCH[crossref] Comparative Analysis of the Identity and Practices of Post-war Representatives and the Contemporary  | Rovenchak, Volodko | 2018/2019 | Annales Universitatis Mariae Curie-Sklodowska, sectio I – Philosophia-Sociologia
+      ! Title differs from the published title (cited “to”, published “in”)
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [65] unchecked: Schenderovskyi, V. (2026). The celebrated legacy of the eminent 20th-century physicist Dmytro Ivanenko, in these proceedings.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [71] unchecked: Sinelnikov, C., Leipunsky, A., Walther, A., and Latischev, G. (1932). The disintegration of lithium by high velocity protons. Physikalische Zeitschrift der Sowjetunion, 2(3), 285.
+      MATCH[crossref] The Disintegration of Lithium by Swiftly-Moving Protons | Lawrence, Livingston, White | 1932/2002 | Physical Review
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [72] metadata_error: Snyder, T. (2003). “The reconstruction of nations : Poland, Ukraine, Lithuania, Belarus, 1569-1999”. New Haven & London: Yale University Press.
+      MATCH[crossref] The Reconstruction of Nations: Poland, Ukraine, Lithuania, Belarus, 1569–1999, Timothy Snyder, (New  | Ramasheuskaya, Zajac | 2004/2018/2019 | Nationalities Papers
+      ! Author list does not match the published work: Snyder not among its authors
+  [73] unchecked: Snyder, T. (2015). “Bloodlands”, London: Vintage.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [79] unchecked: Tarasov, V. (2026). ISMA's CsI scintillators in experiments on high-energy physics and astrophysics, in these proceedings.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [81] metadata_error: Thomson, J. J. (1897). “Cathode Rays.” Philosophical Magazine, Series 5, 44 (269), 293-316.
+      MATCH[crossref] Cathode Rays | Thomson | 2010 | Philosophical Magazine
+      ! Year 1897 does not match the published record (2010)
+  [82] unchecked: Timoshenko, S. (1968). As I remember Princeton, N.J.: Van Nostrand.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [83] metadata_error: Timoshyn D., Hryn’ova T., Kostiuk I. (2025), Ukrainian contribution to particle physics: historical perspective and prospects, PoS ICHEP2024 1197, https://arxiv.org/abs/2501.03878
+      MATCH[crossref] Ukrainian Contribution to Particle Physics: Historical Perspective and Prospects | Timoshyn, Hryn'ova, Kostiuk | 2025 | 
+      ! Incomplete author list: 2 of 3 authors omitted without “et al.”
+  [89] unchecked: Weissberg-Cybulski, A. (1951). The Accused. Simon and Schuster.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [90] metadata_error: Weisskopf, V. (1972). Physics in the Twentieth Century: Selected Essays, Cambridge (USA) and London (England): The MIT Press.
+      MATCH[crossref] Physics in the Twentieth Century: Selected Essays | Weisskopf, Casimir | 1973/2008/2012 | Physics Today
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [91] unchecked: Weisskopf, V. (1991). The joy of insight, BasicBooks.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [92] unchecked: Yanovsky, F. (2016). Glimpses of Early Radar Developments in Ukraine and the Former Soviet Union, Radio Science Bulletin 358, pp. 35-68.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [94] metadata_error: Zagorodnii, A.G., et al. (2022). To the 100th anniversary of the outstanding scientist Ostap Stepanovych Parasyuk (20.12.1921-22.11.2007). Ukrains’kyi Matematychnyi Zhurnal, 74(2), 279-283. https://doi.org/10.37863/umzh.v74i2.6873
+      MATCH[crossref] До 100-річчя видатного вченого Остапа Степановича Парасюка (20.12.1921 – 22.11.2007) | Virchenko, Zagorodnii, Bugrov, Samoilenko | 2022 | Ukrains’kyi Matematychnyi Zhurnal
+      ! Closest real work has a different title: “До 100-річчя видатного вченого Остапа Степановича Парасюка (20.12.1921 – 22.11.2007)”
+  [95] metadata_error: Zavorotna, N. (2020). In Scholars in Exile: The Ukrainian Intellectual World in Interwar Czechoslovakia Pages: 53-71 University of Toronto Press, https://utppublishing.com/doi/10.3138/9781487504458.004 (last accessed 4.04.2026).
+      MATCH[crossref] Scholars in Exile: The Ukrainian Intellectual World in Interwar Czechoslovakia | Zavorotna | 2020/2024 | 
+      ! doi:10.3138/9781487504458.004 does not resolve to any record
+  [97] fabricated: Zhuk, S. (2026). Academic exchanges and technological/industrial espionage of the GRU/KGB in the West, in these proceedings.
+      MATCH[crossref] The US Exhibitions and Technological/Industrial Espionage | Zhuk | 2022 | KGB Operations against the USA and Canada in Soviet Ukraine, 1953–1991
+      ! OpenAlex did not respond; re-run later to confirm
+      ! No matching work in Crossref, Semantic Scholar, Europe PMC
+      ! Nearest record: “The US Exhibitions and Technological/Industrial Espionage” (74% title similarity)
+
+=== q-bio.PE_2611.18781v1.pdf | pages 53 | refs 64 | citances 61 (author-year) | refs cited in text 59/64 | parse 856 ms | verify 207 s
+    {"metadata_error":17,"verified_minor":2,"verified":41,"unverifiable":2,"id_mismatch":2}
+  [1] metadata_error: Lily Agranat-Tamir, Jazlyn A Mooney, and Noah A Rosenberg. Counting the genetic ancestors from source populations in members of an admixed population. GENETICS, 226(4):iyae011, April 2024. ISSN 1943- 2631. doi: 10.1093/genetics/iy
+      MATCH[crossref] Counting the genetic ancestors from source populations in members of an admixed population | Agranat-Tamir, Mooney, Rosenberg | 2024 | GENETICS
+      ! doi:10.1093/genetics/iyae011/7592060 does not resolve to any record
+  [7] metadata_error: Mark A Beaumont, Wenyang Zhang, and David J Balding. Approximate Bayesian computation in population genetics. Genetics, 162(4):2025-2035, December 2002. ISSN 1943-2631. doi: 10.1093/genetics/162. 4.2025. URL https://academic.oup.c
+      MATCH[crossref] Approximate Bayesian Computation in Population Genetics | Beaumont, Zhang, Balding | 2002/2021 | Genetics
+      ! doi:10.1093/genetics/162 does not resolve to any record
+  [9] metadata_error: Jean-Tristan Brandenburg, Tristan Mary-Huard, Guillem Rigaill, Sarah J. Hearne, Hélène Corti, Johann Joets, Clémentine Vitte, Alain Charcosset, Stéphane D. Nicolas, and Maud I. Tenaillon. Independent introductions and admixtures h
+      MATCH[crossref] Independent introductions and admixtures have contributed to adaptation of European maize and its Am | Brandenburg, Mary-Huard, Rigaill, Hearne | 2017 | PLOS Genetics
+      ! doi:10.1371/journal.pgen does not resolve to any record
+      ! Has published new_version notice(s)
+  [10] metadata_error: Abra Brisbin, Katarzyna Bryc, Jake Byrnes, Fouad Zakharia, Larsson Omberg, Jeremiah Degenhardt, Andrew Reynolds, Harry Ostrer, Jason G. Mezey, and Carlos D. Bustamante. PCAdmix: principal components-based assignment of ancestry al
+      MATCH[crossref] PCAdmix: Principal Components-Based Assignment of Ancestry Along Each Chromosome in Individuals with | Brisbin, Bryc, Byrnes, Zakharia | 2012 | Human Biology
+      ! doi:10.3378/027.084 does not resolve to any record
+  [11] metadata_error: Vince Buffalo, Stephen M Mount, and Graham Coop. A genealogical look at shared ancestry on the X chromosome. Genetics, 204(1):57-75, September 2016. ISSN 1943-2631. doi: 10.1534/genetics.116. 190041. URL https://academic.oup.com/g
+      MATCH[crossref] A Genealogical Look at Shared Ancestry on the X Chromosome | Buffalo, Mount, Coop | 2016 | Genetics
+      ! doi:10.1534/genetics.116 does not resolve to any record
+  [13] metadata_error: Erkan Ozge Buzbas and Paul Verdu. Inference on admixture fractions in a mechanistic model of recurrent admixture. Theoretical Population Biology, 122:149-157, July 2018. ISSN 00405809. doi: 10.1016/j.tpb. 2018.03.006. URL https://
+      MATCH[crossref] Inference on admixture fractions in a mechanistic model of recurrent admixture | Buzbas, Verdu | 2018 | Theoretical Population Biology
+      ! doi:10.1016/j.tpb does not resolve to any record
+  [15] metadata_error: Marta Ciccarella, Romain Laurent, Zachary A Szpiech, Etienne Patin, Françoise Dessarps-Freichey, José Utgé, Laure Lémée, Armando Semo, Jorge Rocha, and Paul Verdu. Nested admixture during and after the trans-Atlantic slave trade o
+      MATCH[crossref] Nested Admixture During and After the Trans-Atlantic Slave Trade on the Island of São Tomé | Ciccarella, Laurent, Szpiech, Patin | 2025 | Molecular Biology and Evolution
+      ! doi:10.1093/molbev/msaf156/8180117 does not resolve to any record
+  [17] metadata_error: James F. Crow and Motoo Kimura. An introduction to population genetics theory. Blackburn Press, Caldwell, 2010. ISBN 978-1-932846-12-6. OCLC: 1586704729.
+      MATCH[semanticscholar] An introduction to population genetics theory | Crow, Kimura | 1971/1971 | 
+      ! Year 2010 does not match the published record (1971/1971)
+  [23] metadata_error: David Eltis, David Richardson, David Brion Davis, and David W. Blight. Atlas of the transatlantic slave trade. The Lewis Walpole series in eighteenth-century culture and history. Yale university press, New Haven London, 2010. ISBN
+      MATCH[crossref] Atlas of the Transatlantic Slave Trade. By David Eltis and David Richardson. New Haven: Yale Univers | Hawthorne | 2011/2015 | The Americas
+      ! Author list does not match the published work: Eltis, Richardson, Davis, Blight not among its authors
+  [29] metadata_error: R.C. Griffiths and P. Marjoram. Ancestral inference from samples of DNA sequences with recombination. Journal of Computational Biology, 3(4):479-502, January 1996. ISSN 1066-5277, 1557-8666. doi: 10.1089/cmb.1996.3.479. URL https:
+      MATCH[crossref] Ancestral Inference from Samples of DNA Sequences with Recombination | GRIFFITHS, MARJORAM | 1996/2009 | Journal of Computational Biology
+      ! doi:10.1089/cmb.1996 does not resolve to any record
+  [32] metadata_error: John BS Haldane. The combination of linkage values, and the calculation of distances between the loci of linked factors. Journal of Genetics, 8:299-309, 1919.
+      MATCH[crossref] The Combination of Linkage Values, and the Calculation of Distances between the Loci of Linked Facto | Haldane | 2022/2024 | Selected Genetic Papers of J.B.S. Haldane (Routledge Revivals)
+      ! Year 1919 does not match the published record (2022/2024)
+  [37] metadata_error: Olav Kallenberg. Foundations of modern probability, volume 99 of Probability Theory and Stochastic Modelling. Springer International Publishing, Cham, 2021. ISBN 978-3-030-61870-4 978-3-030-61871-1. doi: 10.1007/978-3-030-61871-1.
+      MATCH[crossref] Foundations of Modern Probability | Kallenberg | 2021 | Probability Theory and Stochastic Modelling
+      ! Title differs from the published title (cited “of”, cited “probability”, cited “volume”, cited “99”, cited “theory”, cited “stochastic”)
+  [50] metadata_error: Dashiell J Massey, Zachary A Szpiech, and Amy Goldberg. Differentiating mechanism from outcome for ancestry-assortative mating in admixed human populations. GENETICS, 229(4):iyaf022, April 2025. ISSN 1943-2631. doi: 10.1093/geneti
+      MATCH[crossref] Differentiating mechanism from outcome for ancestry-assortative mating in admixed human populations | Massey, Szpiech, Goldberg | 2025 | GENETICS
+      ! doi:10.1093/genetics/iyaf022/8005249 does not resolve to any record
+  [51] metadata_error: Jazlyn A Mooney, Lily Agranat-Tamir, Jonathan K Pritchard, and Noah A Rosenberg. On the number of genealogical ancestors tracing to the source groups of an admixed population. GENETICS, 224(3): iyad079, July 2023. ISSN 1943-2631. 
+      MATCH[crossref] On the number of genealogical ancestors tracing to the source groups of an admixed population | Mooney, Agranat-Tamir, Pritchard, Rosenberg | 2023 | GENETICS
+      ! doi:10.1093/genetics/iyad079/7219728 does not resolve to any record
+  [52] metadata_error: Luca Nesterenko, Luc Blassel, Philippe Veber, Bastien Boussau, and Laurent Jacob. Phyloformer: fast, accurate, and versatile phylogenetic reconstruction with deep neural networks. Molecular Biology and Evolution, 42(4):msaf051, Ap
+      MATCH[crossref] Phyloformer: Fast, Accurate, and Versatile Phylogenetic Reconstruction with Deep Neural Networks | Nesterenko, Blassel, Veber, Boussau | 2025 | Molecular Biology and Evolution
+      ! doi:10.1093/molbev/msaf051/8069202 does not resolve to any record
+  [53] id_mismatch: Etienne Patin, Marie Lopez, Rebecca Grollemund, Paul Verdu, Christine Harmant, Hélène Quach, Guillaume Laval, George H. Perry, Luis B. Barreiro, Alain Froment, Evelyne Heyer, Achille Massougbodji, Cesar Fortes-Lima, Florence Migot
+      MATCH[crossref] Dispersals and genetic adaptation of Bantu-speaking populations in Africa and North America | Patin, Lopez, Grollemund, Verdu | 2017 | Science
+      ! Year 1988 does not match the published record (2017)
+      ! doi:10.1126/science points to a different work: “Science”
+  [57] id_mismatch: Harald Ringbauer, Ayelet Salman-Minkov, Dalit Regev, Iñigo Olalde, Tomer Peled, Luca Sineo, Gioacchino Falsone, Peter Van Dommelen, Alissa Mittnik, Iosif Lazaridis, Davide Pettener, Maria Bofill, Ana Mezquida, Benjamí Costa, Helen
+      ! doi:10.1038/s41586-025-08913-3 points to a different work: “Punic people were genetically diverse with almost no Levantine ancestors”
+  [61] metadata_error: Tom M. M. Versluys, Alex Mas-Sandoval, Ewan O. Flintham, and Vincent Savolainen. Why do we pick similar mates, or do we? Biology Letters, 17(11):20210463, November 2021. ISSN 1744-957X. doi: 10.1098/rsbl.2021.0463. URL https://roy
+      MATCH[crossref] Why do we pick similar mates, or do we? | Versluys, Mas-Sandoval, Flintham, Savolainen | 2021 | Biology Letters
+      ! doi:10.1098/rsbl.2021 does not resolve to any record
+  [64] metadata_error: Yan Wong, Anastasia Ignatieva, Jere Koskela, Gregor Gorjanc, Anthony W Wohns, and Jerome Kelleher. A general and efficient representation of ancestral recombination graphs. GENETICS, 228(1):iyae100, September 2024. ISSN 1943-2631.
+      MATCH[crossref] A general and efficient representation of ancestral recombination graphs | Wong, Ignatieva, Koskela, Gorjanc | 2024 | GENETICS
+      ! doi:10.1093/genetics/iyae100/7714980 does not resolve to any record
+(node:34304) TimeoutNegativeWarning: -0.569091796875 is a negative number.
+Timeout duration was set to 1.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+=== q-fin.GN_2611.18531v1.pdf | pages 85 | refs 91 | citances 71 (author-year) | refs cited in text 57/91 | parse 1896 ms | verify 578 s
+    {"not_found":2,"unchecked":14,"unverifiable":14,"verified":18,"metadata_error":34,"verified_minor":7,"fabricated":2}
+  [1] not_found: Achiam, J., D. Held, A. Tamar, and P. Abbeel, 2017, Constrained policy optimization, in Proceedings of the 34th International Conference on Machine Learning, volume 70 of Proceedings of Machine Learning Research, 22-31.
+      ! OpenAlex did not respond; re-run later to confirm
+      ! No matching work in Crossref, Semantic Scholar
+  [2] unchecked: Altman, E., 1999, Constrained Markov Decision Processes (Chapman & Hall/CRC, Boca Raton, FL).
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [6] metadata_error: Baker, B., J. Huizinga, L. Gao, Z. Dou, M. Y. Guan, A. Madry, W. Zaremba, J. Pachocki, and D. Farhi, 2025, Monitoring reasoning models for misbehavior and the risks of promoting obfuscation, arXiv:2503.11926.
+      MATCH[datacite] Monitoring Reasoning Models for Misbehavior and the Risks of Promoting Obfuscation | Baker, Huizinga, Gao, Dou | 2025 | arXiv
+      ! Title differs from the published title (cited “farhi”, cited “2025”)
+  [8] metadata_error: Bondarenko, A., D. Volk, D. Volkov, and J. Ladish, 2025, Demonstrating specification gaming in reasoning models, arXiv:2502.13295.
+      MATCH[datacite] Demonstrating specification gaming in reasoning models | Bondarenko, Volk, Volkov, Ladish | 2025 | arXiv
+      ! Incomplete author list: 1 of 4 authors omitted without “et al.”
+  [12] unchecked: Brennan, T. J., and A. W. Lo, 2011, The origin of behavior, Quarterly Journal of Finance 1, 55-108.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [13] metadata_error: Brennan, T. J., and A. W. Lo, 2012, An evolutionary model of bounded rationality and intelligence, PLoS ONE 7, e50310.
+      MATCH[crossref] An Evolutionary Model of Bounded Rationality and Intelligence | Brennan, Lo | 2012 | PLoS ONE
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [14] metadata_error: Brennan, T. J., A. W. Lo, and R. Zhang, 2018, Variety is the spice of life: Irrational behavior as adaptation to stochastic environments, Quarterly Journal of Finance 8, 1850009.
+      MATCH[crossref] Variety Is the Spice of Life: Irrational Behavior as Adaptation to Stochastic Environments | Brennan, Lo, Zhang | 2018 | Quarterly Journal of Finance
+      ! Author list does not match the published work: A. W. Lo not among its authors
+  [15] unchecked: Brinkmann, L., F. Baumann, J.-F. Bonnefon, M. Derex, T. F. Müller, A.-M. Nussberger, A. Czaplicka, A. Acerbi, T. L. Griffiths, J. Henrich, J. Z. Leibo, R. McElreath, P.-Y. Oudeyer, J. Stray, and I. Rahwan, 2023, Machine culture, N
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [17] unchecked: Christiano, P. F., J. Leike, T. B. Brown, M. Martic, S. Legg, and D. Amodei, 2017, Deep reinforcement learning from human preferences, in Advances in Neural Information Processing Systems, volume 30, 4299-4307.
+      MATCH[crossref] Small batch deep reinforcement learning | Ceron, Bellemare, Castro | 2023/2026 | Advances in Neural Information Processing Systems 36
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [18] metadata_error: Clarke, B. S., and A. R. Barron, 1990, Information-theoretic asymptotics of Bayes methods, IEEE Transactions on Information Theory 36, 453-471.
+      MATCH[crossref] Information-theoretic asymptotics of Bayes methods | Clarke, Barron | 1990/2002 | IEEE Transactions on Information Theory
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [20] unchecked: Conitzer, V., R. Freedman, J. Heitzig, W. H. Holliday, B. M. Jacobs, N. Lambert, M. Mossé, E. Pacuit, S. Russell, H. Schoelkopf, E. Tewolde, and W. S. Zwicker, 2024, Position: Social choice should guide AI alignment in dealing wit
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [21] unchecked: Cover, T. M., 1991, Universal portfolios, Mathematical Finance 1, 1-29.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [22] metadata_error: Cover, T. M., and E. Ordentlich, 1996, Universal portfolios with side information, IEEE Transactions on Information Theory 42, 348-363.
+      MATCH[crossref] Universal portfolios with side information | Cover, Ordentlich | 1996/2002 | IEEE Transactions on Information Theory
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [24] metadata_error: Das, I., and J. E. Dennis, 1997, A closer look at drawbacks of minimizing weighted sums of objectives for Pareto set generation in multicriteria optimization problems, Structural Optimization 14, 63-69.
+      MATCH[crossref] A closer look at drawbacks of minimizing weighted sums of objectives for Pareto set generation in mu | Das, Dennis | 1997/2005 | Structural Optimization
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [25] metadata_error: Frank, R. H., 1988, Passions Within Reason: The Strategic Role of the Emotions (W. W. Norton, New York).
+      MATCH[crossref] Passions Within Reason: The Strategic Role of the Emotions. | Gordon, Frank | 1990/2006 | Contemporary Sociology
+      ! Title differs from the published title (cited “h”, cited “1988”, cited “w”)
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+      ! Published in “Contemporary Sociology”, not “W. Norton, New York)”
+  [27] metadata_error: Grossman, S. J., and O. D. Hart, 1986, The costs and benefits of ownership: A theory of vertical and lateral integration, Journal of Political Economy 94, 691-719.
+      MATCH[crossref] The Costs and Benefits of Ownership: A Theory of Vertical and Lateral Integration | Grossman, Hart | 1986/2002 | Journal of Political Economy
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [29] unchecked: Haarnoja, T., A. Zhou, P. Abbeel, and S. Levine, 2018, Soft actor-critic: Off-policy maximum entropy deep reinforcement learning with a stochastic actor, in Proceedings of the 35th International Conference on Machine Learning, vol
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [30] metadata_error: Hadfield-Menell, D., and G. K. Hadfield, 2019, Incomplete contracting and AI alignment, in Proceedings of the 2019 AAAI/ACM Conference on AI, Ethics, and Society, 417-422.
+      MATCH[crossref] Incomplete Contracting and AI Alignment | Hadfield-Menell, Hadfield | 2019 | Proceedings of the 2019 AAAI/ACM Conference on AI, Ethics, and Society
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [31] unchecked: Hadfield-Menell, D., S. Milli, P. Abbeel, S. J. Russell, and A. Dragan, 2017, Inverse reward design, in Advances in Neural Information Processing Systems, volume 30, 6765-6774.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [32] unchecked: Hadfield-Menell, D., S. J. Russell, P. Abbeel, and A. Dragan, 2016, Cooperative inverse reinforcement learning, in Advances in Neural Information Processing Systems, volume 29, 3909-3917.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [34] metadata_error: Hart, O., and J. Moore, 1990, Property rights and the nature of the firm, Journal of Political Economy 98, 1119-1158.
+      MATCH[crossref] Property Rights and the Nature of the Firm | Hart, Moore | 1990/2002 | Journal of Political Economy
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [38] metadata_error: Holmström, B., and P. Milgrom, 1991, Multitask principal-agent analyses: Incentive contracts, asset ownership, and job design, Journal of Law, Economics, and Organization 7, 24-52.
+      MATCH[crossref] Multitask Principal–Agent Analyses: Incentive Contracts, Asset Ownership, and Job Design | Holmstrom, Milgrom | 1991/2012 | The Journal of Law, Economics, and Organization
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [40] not_found: Hugging Face, 2026, Anatomy of a frontier lab agent intrusion: A technical timeline of the July 2026 incident, https://huggingface.co/blog/agent-intrusion-technical-tim eline, Accessed October 2026.
+      ! Linked resource https://huggingface.co/blog/agent-intrusion-technical-tim does not exist
+  [43] metadata_error: Krakovna, V., L. Orseau, R. Kumar, M. Martic, and S. Legg, 2019, Penalizing side effects using stepwise relative reachability, arXiv:1806.01186.
+      MATCH[datacite] Penalizing side effects using stepwise relative reachability | Krakovna, Orseau, Kumar, Martic | 2018 | arXiv
+      ! Title differs from the published title (cited “legg”, cited “2019”)
+  [44] metadata_error: Krichevsky, R. E., and V. K. Trofimov, 1981, The performance of universal encoding, IEEE Transactions on Information Theory 27, 199-207.
+      MATCH[crossref] The performance of universal encoding | Krichevsky, Trofimov | 1981/2004 | IEEE Transactions on Information Theory
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [45] metadata_error: Kulveit, J., R. Douglas, N. Ammann, D. Turan, D. Krueger, and D. Duvenaud, 2025, Gradual disempowerment: Systemic existential risks from incremental AI development, arXiv:2501.16946.
+      MATCH[datacite] Gradual Disempowerment: Systemic Existential Risks from Incremental AI Development | Kulveit, Douglas, Ammann, Turan | 2025 | arXiv
+      ! Title differs from the published title (cited “duvenaud”, cited “2025”)
+  [46] metadata_error: Kussell, E., and S. Leibler, 2005, Phenotypic diversity, population growth, and information in fluctuating environments, Science 309, 2075-2078.
+      MATCH[crossref] Phenotypic Diversity, Population Growth, and Information in Fluctuating Environments | Kussell, Leibler | 2005 | Science
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [47] metadata_error: Leibo, J. Z., A. S. Vezhnevets, M. Diaz, J. P. Agapiou, W. A. Cunningham, P. Sunehag, J. Haas, R. Koster, E. A. Duéñez-Guzmán, W. S. Isaac, G. Piliouras, S. M. Bileschi, I. Rahwan, and S. Osindero, 2024, A theory of appropriatenes
+      MATCH[datacite] A theory of appropriateness with applications to generative artificial intelligence | Leibo, Vezhnevets, Diaz, Agapiou | 2024 | arXiv
+      ! Title differs from the published title (cited “osindero”, cited “2024”)
+  [48] unchecked: Liu, R., R. Yang, C. Jia, G. Zhang, D. Yang, and S. Vosoughi, 2024, Training socially aligned language models on simulated social interactions, in The Twelfth International Conference on Learning Representations (ICLR 2024).
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [49] unchecked: Lo, A. W., 2004, The Adaptive Markets Hypothesis: Market efficiency from an evolutionary perspective, Journal of Portfolio Management 30, 15-29.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [51] metadata_error: Lo, A. W., and R. Zhang, 2021, The evolutionary origin of Bayesian heuristics and finite memory, iScience 24, 102853.
+      MATCH[crossref] The evolutionary origin of Bayesian heuristics and finite memory | Lo, Zhang | 2021 | iScience
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [52] metadata_error: Lo, A. W., R. Zhang, and C. Zhao, 2025, The evolution of discrimination under finite memory constraints, Scientific Reports 15, 31774.
+      MATCH[crossref] The evolution of discrimination under finite memory constraints | Lo, Zhang, Zhao | 2025 | Scientific Reports
+      ! Incomplete author list: 1 of 3 authors omitted without “et al.”
+  [53] metadata_error: Lo, A. W., and C. Zhao, 2026a, Adapting the process of adaptation: Darwinian, Lamarckian, and agent-directed evolution in AI, arXiv:2611.07048.
+      MATCH[datacite] Adapting the Process of Adaptation: Darwinian, Lamarckian, and Agent-Directed Evolution in AI | Lo, Zhao | 2026 | arXiv
+      ! Title differs from the published title (cited “zhao”, cited “2026a”)
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [57] metadata_error: McFarland, D. J., and R. M. Sibly, 1975, The behavioural final common path, Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences 270, 265-293.
+      MATCH[crossref] The behavioural final common path | McFarland, Sibly | 1975/2006 | Philosophical Transactions of the Royal Society of London. B, Biological Sciences
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [58] metadata_error: McNamara, J. M., and A. I. Houston, 1986, The common currency for behavioral decisions, American Naturalist 127, 358-378.
+      MATCH[crossref] The Common Currency for Behavioral Decisions | McNamara, Houston | 1986/2002 | The American Naturalist
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [59] metadata_error: Müller, V., L. Steels, and E. Szathmáry, 2026a, Evolvable AI: Threats of a new major transition in evolution, Proceedings of the National Academy of Sciences 123, e2527700123.
+      MATCH[crossref] Evolvable AI: Threats of a new major transition in evolution | Müller, Steels, Szathmáry | 2026 | Proceedings of the National Academy of Sciences
+      ! Incomplete author list: 1 of 3 authors omitted without “et al.”
+  [60] metadata_error: Müller, V., L. Steels, and E. Szathmáry, 2026b, Reply to Rana and Singh: Critical thresholds and critical actions for evolvable AI, Proceedings of the National Academy of Sciences 123, e2619586123.
+      MATCH[crossref] Reply to Rana and Singh: Critical thresholds and critical actions for evolvable AI | Müller, Steels, Szathmáry | 2026 | Proceedings of the National Academy of Sciences
+      ! Incomplete author list: 1 of 3 authors omitted without “et al.”
+  [61] fabricated: Munos, R., M. Valko, D. Calandriello, M. G. Azar, M. Rowland, Z. D. Guo, Y. Tang, M. Geist, T. Mesnard, C. Fiegel, A. Michi, M. Selvi, S. Girgin, N. Momchev, O. Bachem, D. J. Mankowitz, D. Precup, and B. Piot, 2024, Nash learning 
+      ! OpenAlex did not respond; re-run later to confirm
+      ! No matching work in Crossref, Semantic Scholar, Europe PMC
+  [68] metadata_error: Rana, S., and H. Singh, 2026, Evolvable AI needs operational risk thresholds, Proceedings of the National Academy of Sciences 123, e2618781123.
+      MATCH[crossref] Evolvable AI needs operational risk thresholds | Rana, Singh | 2026 | Proceedings of the National Academy of Sciences
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [69] unchecked: Rayo, L., and G. S. Becker, 2007, Evolutionary efficiency and happiness, Journal of Political Economy 115, 302-337.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [72] metadata_error: Robson, A. J., and L. Samuelson, 2009, The evolution of time preference with aggregate uncertainty, American Economic Review 99, 1925-1953.
+      MATCH[crossref] The Evolution of Time Preference with Aggregate Uncertainty | Robson, Samuelson | 2009 | American Economic Review
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+      ! Year 1925 does not match the published record (2009)
+  [73] metadata_error: Robson, A. J., and L. Samuelson, 2011, The evolutionary foundations of preferences, in J. Benhabib, A. Bisin, and M. O. Jackson, eds., Handbook of Social Economics, volume 1A, 221-310 (North-Holland, Amsterdam).
+      MATCH[crossref] The Evolutionary Foundations of Preferences | Robson, Samuelson | 2011 | Handbook of Social Economics
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [74] metadata_error: Roijers, D. M., P. Vamplew, S. Whiteson, and R. Dazeley, 2013, A survey of multi-objective sequential decision-making, Journal of Artificial Intelligence Research 48, 67-113.
+      MATCH[crossref] A Survey of Multi-Objective Sequential Decision-Making | Roijers, Vamplew, Whiteson, Dazeley | 2013/2018 | Journal of Artificial Intelligence Research
+      ! Incomplete author list: 1 of 4 authors omitted without “et al.”
+  [75] metadata_error: Russell, S., 2019, Human Compatible: Artificial Intelligence and the Problem of Control (Viking, New York).
+      MATCH[crossref] Russell, Stuart. Human Compatible: Artificial Intelligence and the Problem of Control | Topf, Research | 2021 | Journal of Interdisciplinary Studies
+      ! Year 2019 does not match the published record (2021)
+  [77] unchecked: Samuelson, L., and J. Swinkels, 2006, Information, evolution and utility, Theoretical Economics 1, 119-142.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [78] unchecked: Seger, J., and H. J. Brockmann, 1987, What is bet-hedging?, Oxford Surveys in Evolutionary Biology 4, 182-211.
+      ! No scholarly index responded; retry later
+  [80] fabricated: Silver, D., S. Singh, D. Precup, and R. S. Sutton, 2021, Reward is enough, Artificial Intelligence 299, 103535.
+      ! OpenAlex did not respond; re-run later to confirm
+      ! No matching work in Crossref, Semantic Scholar, Europe PMC
+      ! Nearest record: “Reward is enough” (58% title similarity)
+  [81] metadata_error: Skalse, J., L. Hammond, C. Griffin, and A. Abate, 2022, Lexicographic multi-objective reinforcement learning, in Proceedings of the Thirty-First International Joint Conference on Artificial Intelligence (IJCAI-22), 3430-3436.
+      MATCH[crossref] Lexicographic Multi-Objective Reinforcement Learning | Skalse, Hammond, Griffin, Abate | 2022 | Proceedings of the Thirty-First International Joint Conference on Artificial Intelligence
+      ! Incomplete author list: 1 of 4 authors omitted without “et al.”
+  [84] metadata_error: Turner, A. M., D. Hadfield-Menell, and P. Tadepalli, 2020, Conservative agency via attainable utility preservation, in Proceedings of the 2020 AAAI/ACM Conference on AI, Ethics, and Society, 385-391.
+      MATCH[crossref] Conservative Agency via Attainable Utility Preservation | Turner, Hadfield-Menell, Tadepalli | 2020 | Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society
+      ! Incomplete author list: 1 of 3 authors omitted without “et al.”
+  [87] metadata_error: Vamplew, P., J. Yearwood, R. Dazeley, and A. Berry, 2008, On the limitations of scalarisation for multi-objective reinforcement learning of Pareto fronts, in AI 2008: Advances in Artificial Intelligence, volume 5360 of Lecture Not
+      MATCH[crossref] On the Limitations of Scalarisation for Multi-objective Reinforcement Learning of Pareto Fronts | Vamplew, Yearwood, Dazeley, Berry | 2008 | Lecture Notes in Computer Science
+      ! Incomplete author list: 1 of 4 authors omitted without “et al.”
+  [89] metadata_error: Xiao, J., Z. Li, X. Xie, E. Getzen, C. Fang, Q. Long, and W. J. Su, 2024, On the algorithmic bias of aligning large language models with RLHF: Preference collapse and matching regularization, arXiv:2405.16455.
+      MATCH[datacite] On the Algorithmic Bias of Aligning Large Language Models with RLHF: Preference Collapse and Matchin | Xiao, Li, Xie, Getzen | 2024 | arXiv
+      ! Title differs from the published title (cited “su”, cited “2024”)
+  [90] metadata_error: Zhang, R., T. J. Brennan, and A. W. Lo, 2014, The origin of risk aversion, Proceedings of the National Academy of Sciences 111, 17777-17782.
+      MATCH[crossref] The origin of risk aversion | Zhang, Brennan, Lo | 2014 | Proceedings of the National Academy of Sciences
+      ! Incomplete author list: 1 of 3 authors omitted without “et al.”
+
+=== stat.AP_2611.22149v1.pdf | pages 17 | refs 30 | citances 26 (numeric) | refs cited in text 30/30 | parse 341 ms | verify 186 s
+    {"metadata_error":4,"verified_minor":7,"verified":15,"unchecked":3,"unverifiable":1}
+  [1] metadata_error: [1] Titterington, D.M., Smith, A.F.M., Makov, U.E.: Statistical Analysis of Finite Mixture Distributions. Wiley, Chichester (1985)
+      MATCH[crossref] Statistical Analysis of Finite Mixture Distributions. | Newton, Titterington, Smith, Makov | 1986/2006 | Biometrics
+      ! Incomplete author list: 1 of 4 authors omitted without “et al.”
+      ! Published in “Biometrics”, not “Wiley, Chichester”
+  [4] unchecked: [4] McLachlan, G.J., Lee, S.X., Rathnayake, S.I.: Finite mixture models. Annual Review of Statistics and its Application 6(1), 355-378 (2019)
+      MATCH[crossref] Finite Mixture Models in Biostatistics | Lee, Ng, McLachlan | 2017 | Handbook of Statistics
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [5] metadata_error: [5] Celeux, G., Govaert, G.: Gaussian parsimonious clustering models. Pattern Recognition 28(5), 781-793 (1995)
+      MATCH[crossref] Gaussian parsimonious clustering models | Celeux, Govaert | 1995/2003 | Pattern Recognition
+      ! Closest real work has a different title: “Gaussian parsimonious clustering models”
+  [9] unchecked: [9] Tang, Y., Salakhutdinov, R., Hinton, G.E.: Deep mixtures of factor analysers. In: Proceedings of the 29th International Conference on Machine Learning, pp. 505-512 (2012)
+      MATCH[crossref] Infinite Mixtures of Infinite Factor Analysers | Murphy, Viroli, Gormley | 2020/2019 | Bayesian Analysis
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [10] metadata_error: [10] Viroli, C., McLachlan, G.J.: Deep Gaussian mixture models. Statistics and Computing 29(1), 43-51 (2019)
+      MATCH[crossref] Deep Gaussian mixture models | Viroli, McLachlan | 2017/2019 | Statistics and Computing
+      ! Closest real work has a different title: “Deep Gaussian mixture models”
+  [28] metadata_error: [28] Nielsen, S.F.: The stochastic EM algorithm: Estimation and asymptotic results. Bernoulli 6(3), 457-489 (2000)
+      MATCH[crossref] The Stochastic EM Algorithm: Estimation and Asymptotic Results | Nielsen, Nielsen | 2000/2006 | Bernoulli
+      ! Incomplete author list: 1 of 2 authors omitted without “et al.”
+  [29] unchecked: [29] Hubert, L., Arabie, P.: Comparing partitions. Journal of Classification 2, 193-218 (1985)
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later

@@ -3,14 +3,14 @@ import json, numpy as np, onnxruntime as ort
 from pathlib import Path
 from transformers import AutoTokenizer
 from train_verifier import build
-d = Path("../app/public/models/veracite-verifier"); meta = json.load(open(d / "veracite.json"))
+import os; d = Path(os.environ.get("VDIR", "../app/public/models/veracite-verifier")); meta = json.load(open(d / "veracite.json"))
 tok = AutoTokenizer.from_pretrained(d); s = ort.InferenceSession(str(d / "onnx/model_q4.onnx"), providers=["CPUExecutionProvider"])
 names = {i.name for i in s.get_inputs()}
 rows = build("dev", meta["k"]); y = np.array([r[2] for r in rows]); L = []
 for c, e, _ in rows:
     enc = tok(c, e, truncation="only_second", max_length=512, return_tensors="np")
     L.append(s.run(None, {n: enc[n].astype(np.int64) for n in names if n in enc})[0][0])
-P = np.exp(np.array(L)); P /= P.sum(1, keepdims=True); np.save("cache/dev_probs_shipped.npy", P)
+P = np.exp(np.array(L)); P /= P.sum(1, keepdims=True); np.save("cache/dev_probs_%s.npy" % d.name, P)
 names3 = ["ACCURATE", "NOT_ACCURATE", "NEI"]
 print("base rates:", {n: round(float((y == i).mean()), 2) for i, n in enumerate(names3)})
 for k, n in enumerate(names3):

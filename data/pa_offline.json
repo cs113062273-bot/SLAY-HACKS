@@ -1,0 +1,34 @@
+{
+ "file": "stat.AP_2611.22149v1.pdf",
+ "throttle": 0,
+ "offline": true,
+ "marks": {
+  "parsed": 1.038,
+  "model": 1.038,
+  "refs": 201.546,
+  "claims": 201.546
+ },
+ "final": {
+  "verdicts": {
+   "verified_minor": 1,
+   "verified": 1,
+   "unchecked": 25,
+   "unverifiable": 3
+  },
+  "claims": {
+   "queued": 2
+  },
+  "refs": 30
+ },
+ "hosts": {
+  "127.0.0.1:4180": 30,
+  "api.crossref.org": 98,
+  "api.semanticscholar.org": 84,
+  "api.openalex.org": 84,
+  "api.datacite.org": 12,
+  "www.ebi.ac.uk": 4
+ },
+ "nonGet": [],
+ "bodySentencesLeaked": 0,
+ "leakSamples": []
+}

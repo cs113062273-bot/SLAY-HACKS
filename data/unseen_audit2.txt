@@ -1,0 +1,116 @@
+
+=== cs.CY_2611.22975v1.pdf | pages 50 | refs 45 | citances 37 (numeric) | refs cited in text 32/45 | parse 2235 ms | verify 61 s
+    {"verified_minor":4,"verified":36,"id_mismatch":3,"metadata_error":1,"unverifiable":1}
+  [8] id_mismatch: 8. Juzek, T. & Ward, Z. (2024). Why does ChatGPT ‘delve’ so much? Exploring the sources of overrepresentation in large language models. arXiv:2312.11385.
+      MATCH[semanticscholar] Why Does ChatGPT "Delve" So Much? Exploring the Sources of Lexical Overrepresentation in Large Langu | Juzek, Ward | 2024/2024 | International Conference on Computational Linguistics
+      ! arXiv:2312.11385 points to a different work: “Hypergraph Transformer for Semi-Supervised Classification”
+  [11] metadata_error: 11. McCreery, Z. & Noser, M. (2026). LLM-assisted writing in engineering is associated with higher citations as evidenced by 1.17 million papers. Journal of Informetrics, 20, article 101842.
+      MATCH[crossref] LLM-Assisted writing in engineering is associated with higher citations as evidenced from 1.17 milli | McCreery, Naser | 2026 | Journal of Informetrics
+      ! Title differs from the published title (cited “by”, published “from”)
+  [13] id_mismatch: 13. Filimonovic, D., Rutzer, C., Macher, J., & Weder, R. (2025). Generative AI as a Linguistic Equalizer in Global Science. arXiv:2511.11687.
+      MATCH[semanticscholar] Generative AI as a Linguistic Equalizer in Global Science | Filimonovic, Rutzer, Macher, Weder | 2025 | arXiv.org
+      ! arXiv:2511.11687 points to a different work: “Does Scientific Writing Converge to U.S. English? Evidence from Generative AI-Assisted Publications”
+  [18] id_mismatch: 18. Lin, D., Zhao, N., Tian, D., & Li, J. (2025). ChatGPT as linguistic equalizer? quantifying LLM-Driven lexical shifts in academic writing. arXiv:2504.12317.
+      MATCH[semanticscholar] ChatGPT as Linguistic Equalizer? Quantifying LLM-Driven Lexical Shifts in Academic Writing | Lin, Zhao, Tian, Li | 2025 | arXiv.org
+      ! arXiv:2504.12317 points to a different work: “Large language models reshape the language of science”
+
+=== econ.GN_2611.21070v1.pdf | pages 39 | refs 24 | citances 15 (author-year) | refs cited in text 21/24 | parse 620 ms | verify 1 s
+    {"verified":23,"verified_minor":1}
+
+=== physics.soc-ph_2611.20886v1.pdf | pages 33 | refs 97 | citances 0 (unknown) | refs cited in text 0/97 | parse 705 ms | verify 628 s
+    {"unchecked":14,"verified_minor":17,"verified":19,"unverifiable":38,"fabricated":3,"id_mismatch":1,"metadata_error":5}
+  [1] unchecked: Alexander III. (1889). On the Voluntary Resettlement of Rural Inhabitants and Burghers to State Lands (Law of 13 July 1889). In Complete Collection of Laws of the Russian Empire (Polnoe sobranie zakonov Rossiiskoi imperii), 3rd se
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [2] unchecked: Anna Ioannovna. (1905). Decree of Empress Anna Ioannovna to Prince Shakhovskoi, ruler of Little Russia, on marriages of Little Russians (January 31, 1734). Kievskaya Starina, 91 (October 10).
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [6] unchecked: Bogolyubov, A. N. (1996). N. N. Bogolyubov: Live, Creativity, Dubna: JINR
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [7] unchecked: Bogolyubov, N. N., & Parasyuk, O. S. (1955). O vychitatel’nom formalizme pri umnozhenii prichinnykh singulyarnykh funktsii [On a subtraction formalism in the multiplication of causal singular functions]. Doklady Akademii Nauk SSSR
+      ! No scholarly index responded; retry later
+  [15] fabricated: Cockcroft, J.D. and Walton, E.T. (1932). Proc. Roy. Soc. A, 136, 619.
+      ! OpenAlex did not respond; re-run later to confirm
+      ! No matching work in Crossref, Semantic Scholar, Europe PMC
+  [30] unchecked: Grekov, V. (2026). Restoring the Narrative: Ways to Rethinking the Global Contribution of Ukrainian Physics, in these proceedings.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [32] id_mismatch: Grynyov, B. V., Titov, M. P., & Stadnik, P. O. (2019). Ukraine - CERN: The way to cooperation. Science and Innovation, 15(5), 87-98. https://doi.org/10.15407/scine15.05.087
+      MATCH[crossref] Ukraine - СERN: the Way to Cooperation | Ukraine, Grynyov, Titov, France | 2019 | Science and innovation
+      ! Title differs from the published title (cited “cern”, published “ern”)
+      ! Incomplete author list: 3 of 6 authors omitted without “et al.”
+      ! doi:10.15407/scine15.05.087 points to a different work: “Manual Version of 3D Printing”
+  [38] unchecked: Khramov, Yu. (1991). History of formation and development of physics schools in Ukraine, Kyiv: Phenix (in Russian).
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [52] unchecked: Novosyadlyj, B. (2026). George Gamow: from beta decay to cosmological nucleosynthesis, in these proceedings.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [53] unchecked: Nurmagambetov, A. J. (2026). Prof. D. V. Volkov at CERN, in these proceedings.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [56] metadata_error: Petrovsky-Shtern, Y., and Polonsky, A. (Eds.). (2014). POLIN: Studies in Polish Jewry (Vol. 26, Jews and Ukrainians). The Littman Library of Jewish Civilization. https://doi.org/10.2307/j.ctv2vr8vjf.
+      MATCH[crossref] Polin: Studies in Polish Jewry Volume 26: Jews and Ukrainians |  | 2022 | 
+      ! Year 2014 does not match the published record (2022)
+  [58] metadata_error: Plokhy, S. (2015). “The Gates of Europe”. London: Allen Lane.
+      MATCH[semanticscholar] The gates of Europe: : A history of Ukraine | Legvold | 2016 | Foreign Affairs
+      ! Author list does not match the published work: Plokhy not among its authors
+  [63] metadata_error: Rovenchak O. and Volodko V. (2018), “Comparative Analysis of the Identity and Practices of Post-war Representatives and the Contemporary Wave of Ukrainian Immigrants to the United States”, Annales Universitatis Mariae Curie-Sklodo
+      MATCH[crossref] Comparative Analysis of the Identity and Practices of Post-war Representatives and the Contemporary  | Rovenchak, Volodko | 2018/2019 | Annales Universitatis Mariae Curie-Sklodowska, sectio I – Philosophia-Sociologia
+      ! Title differs from the published title (cited “to”, published “in”)
+  [65] unchecked: Schenderovskyi, V. (2026). The celebrated legacy of the eminent 20th-century physicist Dmytro Ivanenko, in these proceedings.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [71] unchecked: Sinelnikov, C., Leipunsky, A., Walther, A., and Latischev, G. (1932). The disintegration of lithium by high velocity protons. Physikalische Zeitschrift der Sowjetunion, 2(3), 285.
+      MATCH[crossref] The Disintegration of Lithium by Swiftly-Moving Protons | Lawrence, Livingston, White | 1932/2002 | Physical Review
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [72] metadata_error: Snyder, T. (2003). “The reconstruction of nations : Poland, Ukraine, Lithuania, Belarus, 1569-1999”. New Haven & London: Yale University Press.
+      MATCH[semanticscholar] The Reconstruction of Nations Poland, Ukraine, Lithuania, Belarus, 1569–1999 | Drwecki | 2008 | 
+      ! Author list does not match the published work: Snyder not among its authors
+      ! Year 2003 does not match the published record (2008)
+  [73] fabricated: Snyder, T. (2015). “Bloodlands”, London: Vintage.
+      ! OpenAlex did not respond; re-run later to confirm
+      ! No matching work in Crossref, Semantic Scholar, Europe PMC
+  [79] unchecked: Tarasov, V. (2026). ISMA's CsI scintillators in experiments on high-energy physics and astrophysics, in these proceedings.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [82] fabricated: Timoshenko, S. (1968). As I remember Princeton, N.J.: Van Nostrand.
+      ! OpenAlex did not respond; re-run later to confirm
+      ! No matching work in Crossref, Semantic Scholar, Europe PMC
+  [91] unchecked: Weisskopf, V. (1991). The joy of insight, BasicBooks.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [92] unchecked: Yanovsky, F. (2016). Glimpses of Early Radar Developments in Ukraine and the Former Soviet Union, Radio Science Bulletin 358, pp. 35-68.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [95] metadata_error: Zavorotna, N. (2020). In Scholars in Exile: The Ukrainian Intellectual World in Interwar Czechoslovakia Pages: 53-71 University of Toronto Press, https://utppublishing.com/doi/10.3138/9781487504458.004 (last accessed 4.04.2026).
+      MATCH[crossref] Scholars in Exile: The Ukrainian Intellectual World in Interwar Czechoslovakia | Zavorotna | 2020/2024 | 
+      ! doi:10.3138/9781487504458.004 does not resolve to any record
+  [97] unchecked: Zhuk, S. (2026). Academic exchanges and technological/industrial espionage of the GRU/KGB in the West, in these proceedings.
+      MATCH[crossref] The US Exhibitions and Technological/Industrial Espionage | Zhuk | 2022 | KGB Operations against the USA and Canada in Soviet Ukraine, 1953–1991
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+
+=== q-bio.PE_2611.18781v1.pdf | pages 53 | refs 64 | citances 63 (author-year) | refs cited in text 61/64 | parse 5372 ms | verify 65 s
+    {"verified":55,"verified_minor":8,"unverifiable":1}
+
+=== q-fin.GN_2611.18531v1.pdf | pages 85 | refs 91 | citances 79 (author-year) | refs cited in text 82/91 | parse 1743 ms | verify 254 s
+    {"verified":68,"unverifiable":10,"verified_minor":5,"unchecked":2,"metadata_error":6}
+  [31] unchecked: Hadfield-Menell, D., S. Milli, P. Abbeel, S. J. Russell, and A. Dragan, 2017, Inverse reward design, in Advances in Neural Information Processing Systems, volume 30, 6765-6774.
+      ! No scholarly index responded; retry later
+  [32] unchecked: Hadfield-Menell, D., S. J. Russell, P. Abbeel, and A. Dragan, 2016, Cooperative inverse reinforcement learning, in Advances in Neural Information Processing Systems, volume 29, 3909-3917.
+      ! No scholarly index responded; retry later
+  [48] metadata_error: Liu, R., R. Yang, C. Jia, G. Zhang, D. Yang, and S. Vosoughi, 2024, Training socially aligned language models on simulated social interactions, in The Twelfth International Conference on Learning Representations (ICLR 2024).
+      MATCH[semanticscholar] Training Socially Aligned Language Models on Simulated Social Interactions | Liu, Yang, Jia, Zhang | 2023/2023 | International Conference on Learning Representations
+      ! Incomplete author list: 2 of 8 authors omitted without “et al.”
+  [51] metadata_error: Lo, A. W., and R. Zhang, 2021, The evolutionary origin of Bayesian heuristics and finite memory, iScience 24, 102853.
+      MATCH[crossref] The evolutionary origin of Bayesian heuristics and finite memory | Lo, Zhang | 2021 | iScience
+      ! Title differs from the published title (cited “iscience”, cited “24”)
+  [75] metadata_error: Russell, S., 2019, Human Compatible: Artificial Intelligence and the Problem of Control (Viking, New York).
+      MATCH[crossref] Artificial Intelligence and the Problem of Control | Russell | 2021/2022 | Perspectives on Digital Humanism
+      ! Year 2019 does not match the published record (2021/2022)
+  [82] metadata_error: Tinbergen, N., 1951, The Study of Instinct (Oxford University Press, Oxford).
+      MATCH[semanticscholar] The Study of Instinct | Evans | 1952/1952 | Annals of The Entomological Society of America
+      ! Author list does not match the published work: Tinbergen not among its authors
+  [83] metadata_error: Tomasello, M., 2019, Becoming Human: A Theory of Ontogeny (Harvard University Press, Cambridge, MA).
+      MATCH[semanticscholar] Becoming Human: A Theory of Ontogeny | Lobos | 2021/2021 | Estudios públicos
+      ! Author list does not match the published work: Tomasello not among its authors
+      ! Year 2019 does not match the published record (2021/2021)
+  [91] metadata_error: Ziebart, B. D., 2010, Modeling Purposeful Adaptive Behavior with the Principle of Maximum Causal Entropy, Ph.D. thesis, Carnegie Mellon University.
+      MATCH[semanticscholar] Modeling Purposeful Adaptive Behavior with the Principle of Maximum Causal Entropy | Ziebart | 2010 | 
+      ! Title differs from the published title (cited “ph”, cited “d”, cited “thesis”)
+
+=== stat.AP_2611.22149v1.pdf | pages 17 | refs 30 | citances 26 (numeric) | refs cited in text 30/30 | parse 428 ms | verify 60 s
+    {"verified_minor":4,"verified":24,"unverifiable":1,"metadata_error":1}
+  [23] metadata_error: [23] McCullagh, P., Nelder, J.A.: Generalized Linear Models, 2nd edn. Chapman & Hall, London (1989)
+      MATCH[crossref] Generalized Linear Models | McCullagh, Nelder | 1989/2013 | 
+      ! Title differs from the published title (cited “2nd”, cited “edn”)

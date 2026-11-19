@@ -37,17 +37,46 @@ function stripTrailingPunct(s: string): string {
   return s.replace(/[.,;:)\]}>'"’”]+$/, '');
 }
 
+/** A DOI broken at a line end ("10.1534/genetics.116. 190041") continues with a digit-bearing chunk. */
+const DOI_CONT_RE = /^\s([0-9a-z][\w.\-/()]*?\d[\w\-/()]*)(?=[.,;]?(?:\s|$))/i;
+
 export function extractDois(s: string): string[] {
   const out: string[] = [];
   for (const m of s.matchAll(DOI_RE)) {
     let d = stripTrailingPunct(m[1]);
+    if (m[1].endsWith('.')) {
+      const cont = s.slice((m.index ?? 0) + m[0].length).match(DOI_CONT_RE);
+      if (cont && !/^(?:1[89]|20)\d\d$/.test(cont[1])) d = `${d}.${stripTrailingPunct(cont[1])}`;
+    } else if (m[1].endsWith('-')) {
+      // broken after a hyphen: "10.1186/1471- 2105-9-359"
+      const cont = s.slice((m.index ?? 0) + m[0].length).match(DOI_CONT_RE);
+      if (cont) d = `${d}${stripTrailingPunct(cont[1])}`;
+    }
     // unbalanced trailing parenthesis
     if (d.endsWith(')') && !d.includes('(')) d = d.slice(0, -1);
     d = d.replace(/\.(?:pdf|html?)$/i, '');
     if (/^10\.48550\/arxiv/i.test(d)) continue; // arXiv DOI handled as arXiv ID
     out.push(d.toLowerCase());
   }
-  return [...new Set(out)];
+  const uniq = [...new Set(out)];
+  // "10.1371/journal.pgen" (truncated at a line break) next to the full DOI: keep the longer one;
+  // "10.1093/genetics/iyae011/7592060" (publisher URL path) next to the DOI: keep the shorter one
+  return uniq.filter((d) => !uniq.some((o) => o !== d && ((o.startsWith(d) && /^[.\-_]/.test(o.slice(d.length))) || (d.startsWith(o) && d[o.length] === '/'))));
+}
+
+/** Other plausible readings of a DOI that did not resolve (line-break joins, URL path suffixes). */
+export function doiAlternatives(doi: string, raw: string): string[] {
+  const alts: string[] = [];
+  const parts = doi.split('/');
+  // publisher URL paths append numeric article ids: ".../genetics/iyae011/7592060"
+  for (let k = parts.length - 1; k >= 3 && /^\d{4,}$/.test(parts[k]); k--) alts.push(parts.slice(0, k).join('/'));
+  const lower = raw.toLowerCase();
+  const at = lower.indexOf(doi);
+  if (at >= 0) {
+    const cont = raw.slice(at + doi.length).match(/^\.?\s([0-9a-z][\w.\-/()]*?\d[\w\-/()]*)(?=[.,;]?(?:\s|$))/i);
+    if (cont) alts.push(`${doi}.${stripTrailingPunct(cont[1])}`.toLowerCase());
+  }
+  return [...new Set(alts)].filter((a) => a !== doi && /^10\.\d{4,9}\/./.test(a));
 }
 
 export function extractArxiv(s: string): string[] {
@@ -66,7 +95,7 @@ function detectPlaceholders(s: string): string[] {
   return p;
 }
 
-const YEAR_RE = /(?<![\d./-])(1[89]\d\d|20[0-3]\d)[a-z]?(?![\d])/g;
+const YEAR_RE = /(?<![\p{L}\d./-])(1[89]\d\d|20[0-3]\d)[a-z]?(?![\d])/gu;
 
 function extractYears(s: string): { years: number[]; cited?: number } {
   // remove identifiers & urls & page ranges first
@@ -92,7 +121,7 @@ function extractYears(s: string): { years: number[]; cited?: number } {
 
 /* ---------------------------- authors ---------------------------- */
 
-const INITIALS_RE = /^(?:(?:\p{Lu}[a-z]?\.\s*-?\s*){1,4}|\p{Lu}{1,3})$/u;
+const INITIALS_RE = /^(?:(?:\p{Lu}[a-z]?\.\s*-?\s*){1,4}\p{Lu}?|\p{Lu}{1,3})$/u;
 const NAME_TOKEN_RE = /^[\p{Lu}][\p{L}'’`?-]*\.?$|^(?:van|von|der|den|de|del|della|di|da|du|le|la|dos|das|bin|al|el|ten|ter)$/u;
 
 function isInitials(s: string): boolean {
@@ -104,7 +133,7 @@ function isInitials(s: string): boolean {
 export function authorLikeness(text: string): number {
   const t = text.replace(/\bet\s*al\.?|\band others\b/gi, '').trim();
   if (!t) return 0;
-  if (t.length > 1200) return 0;
+  if (t.length > 6000) return 0;
   const items = t
     .split(/\s*(?:,|;|\band\b|&)\s*/u)
     .map((x) => x.trim())
@@ -132,7 +161,7 @@ export function parseAuthors(text: string): { authors: Person[]; etAl: boolean }
   const etAl = /\bet\.?\s*al\b|\bal\.?,?\s*et\b|\band others\b|\.\.\.|…/i.test(t);
   t = t
     .replace(/\(eds?\.?\)|\beds?\.\s*$/gi, '')
-    .replace(/,?\s*(?:and\s+|&\s*)?(?:et\.?\s*al\.?|al\.?,?\s*et\.?),?/gi, '')
+    .replace(/,?\s*(?:and\s+|&\s*)?(?:et\.?\s*al\.?|al\.?,?\s*et\.?),?/gi, ',') // keep the separator: "Doe, K., et al., Lee, M."
     .replace(/\band others\b|…|\.\.\./gi, '')
     .replace(/^\s*(?:by)\s+/i, '')
     .trim()
@@ -183,8 +212,13 @@ function splitName(p: string): Person {
   if (toks.length === 1) return { family: toks[0] };
   // Vancouver "Smith JA" — trailing all-caps initials
   const last = toks[toks.length - 1];
-  if (/^\p{Lu}{1,3}$/u.test(last) && toks.length >= 2 && !/^\p{Lu}{1,3}$/u.test(toks[0])) {
+  // ("Hu Zz" for Zhi-zhong Hu: hyphenated given names keep a lowercase second initial)
+  if ((/^\p{Lu}{1,3}$/u.test(last) || /^(\p{Lu})(\p{Ll})$/u.test(last) && last[1] === last[0].toLowerCase()) && toks.length >= 2 && !/^\p{Lu}{1,3}$/u.test(toks[0])) {
     return { family: toks.slice(0, -1).join(' '), given: last };
+  }
+  // "Holovatch Yu.", "Krasnytska M.", "Timoshyn D." — family first, dotted initials after
+  if (toks.length >= 2 && /^\p{Lu}[\p{Ll}]?\.$/u.test(last) && !/\.$/.test(toks[0]) && toks.slice(1).every((t) => /^\p{Lu}[\p{Ll}]?\.$/u.test(t))) {
+    return { family: toks[0], given: toks.slice(1).join(' ') };
   }
   // particles: "Ludwig van Beethoven" → family "van Beethoven"
   let i = toks.length - 1;
@@ -206,9 +240,10 @@ export function segments(s: string): string[] {
     last = m.index + m[0].length;
     cur += piece;
     const words = piece.trim().split(/\s+/);
-    const lastWord = (words[words.length - 1] || '').replace(/[.?!]$/, '');
+    const lastWord = (words[words.length - 1] || '').replace(/[.?!]$/, '').replace(/^[(\[“"‘]+/, '');
     const lw = lastWord.toLowerCase();
-    const isInitial = m[1] === '.' && /^\p{Lu}$/u.test(lastWord);
+    // "R." and hyphenated initials of East Asian given names ("T.-Y.", "C.-Y.")
+    const isInitial = m[1] === '.' && (/^\p{Lu}$/u.test(lastWord) || /^(?:\p{Lu}\.-?)+\p{Lu}$/u.test(lastWord) || /^\p{Lu}\.?-\p{Lu}$/u.test(lastWord));
     const isAbbrev = m[1] === '.' && (ABBREV.has(lw) || /^(?:\p{Lu}\.){1,3}\p{Lu}?$/u.test(lastWord + '.'));
     const nextChar = s[last] ?? '';
     // "et al. Title": a sentence break when followed by an uppercase/quote start
@@ -248,6 +283,9 @@ export function parseReference(input: string): ParsedRef {
 
   // text without urls/dois for title/author parsing
   const body = s
+    // APA "Smith, J., Doe, K., . . . Lee, M." — only after a comma or an initial, not inside a title ("science: . . .Error")
+    .replace(/(?:,\s*|(?<=\b\p{Lu}\.)\s*)(?:(?:\.\s?){3}|…)\s*(?=&|\p{Lu})/gu, ', et al., ')
+    .replace(/\.\s?\.\s?\./g, '…') // any other ellipsis is part of a title and must not end a segment
     .replace(/\b(?:doi|DOI)\s*:?\s*10\.\S+/g, ' ')
     .replace(URL_RE, ' ')
     .replace(/\b(?:url|URL|Available (?:at|from)|Retrieved from|Accessed|\(visited on [^)]*\))\s*:?/g, ' ')
@@ -260,10 +298,12 @@ export function parseReference(input: string): ParsedRef {
   let title: string | undefined;
   let authorsText: string | undefined;
   let after: string | undefined;
+  let yearAfterAuthors: number | undefined;
+  let publisherParen = false;
 
   // (a) quoted title
   const q = [...body.matchAll(/[“"‘«]([^”"’»]{8,400})[”"’»]/g)].sort((a, b) => b[1].length - a[1].length)[0];
-  if (q && q[1].trim().split(/\s+/).length >= 2) {
+  if (q && (q[1].trim().split(/\s+/).length >= 2 || (q[1].trim().length >= 6 && /^[,.]/.test(body.slice((q.index ?? 0) + q[0].length))))) {
     title = q[1].trim().replace(/[,.]$/, '');
     authorsText = body.slice(0, q.index).replace(/[\s,:.]+$/, '');
     after = body.slice((q.index ?? 0) + q[0].length);
@@ -277,6 +317,31 @@ export function parseReference(input: string): ParsedRef {
     if (apa) {
       authorsText = apa[1];
       const segs = segments(apa[2]);
+      title = segs[0];
+      after = segs.slice(1).join(' ');
+    }
+  }
+
+  // (b2) econ / finance: "Brennan, T. J., and A. W. Lo, 2012, Title, Journal 7, e50310."
+  //      and comma-after-parenthesis APA variants: "Holovatch Yu., Honchar Y. (2018), TITLE, Journal, v. 22"
+  if (!title || /^\s*\((?:1[89]\d\d|20[0-3]\d)[a-z]?\)\s*,/.test(body.slice((authorsText ?? '').length).trimStart())) {
+    const ec = [body.match(/^(.{2,6000}?),\s(1[89]\d\d|20[0-3]\d)([a-z])?,\s(.+)$/u), body.match(/^(.{2,6000}?)\s*\((1[89]\d\d|20[0-3]\d)([a-z])?\)\s*,\s*(.+)$/u)].find((m) => m && authorLikeness(m[1]) >= 0.7);
+    if (ec && !/^[“"‘«]/.test(ec[4])) {
+      const sp = splitTitleComma(ec[4]);
+      authorsText = ec[1];
+      title = sp.title;
+      after = sp.after;
+      publisherParen = sp.publisher;
+      yearAfterAuthors = parseInt(ec[2], 10);
+    }
+  }
+
+  // (b3) Springer LNCS: "Celeux, G., Govaert, G.: Gaussian parsimonious clustering models. Pattern Recognition 28(5)"
+  if (!title) {
+    const sp = body.match(/^(.{2,6000}?[\s.,-]\p{Lu}\.):\s+(.+)$/u);
+    if (sp && authorLikeness(sp[1]) >= 0.8) {
+      const segs = segments(sp[2]);
+      authorsText = sp[1];
       title = segs[0];
       after = segs.slice(1).join(' ');
     }
@@ -304,7 +369,8 @@ export function parseReference(input: string): ParsedRef {
         split = i;
         // keep extending while next segment is still name-like (Vancouver "Smith J, Doe A.")
         const nxt = segs[i + 1];
-        if (nxt && authorLikeness(nxt.replace(/\.$/, '')) >= 0.95 && nxt.split(/\s+/).length <= 4 && segs.length > i + 2) continue;
+        // (it must carry an initial, a comma or "and": "Fast R-CNN." is a title, not more names)
+        if (nxt && authorLikeness(nxt.replace(/\.$/, '')) >= 0.95 && nxt.split(/\s+/).length <= 4 && segs.length > i + 2 && /(?:^|\s)\p{Lu}{1,3}(?:\.|(?=,|$))|,|\band\b|&/u.test(nxt.replace(/\.$/, ''))) continue;
         break;
       }
     }
@@ -344,16 +410,31 @@ export function parseReference(input: string): ParsedRef {
   if (title) {
     title = title
       .replace(/^\s*(?:In:|In)\s+/, '')
-      .replace(/\s*\[[^\]]*\]\s*$/, '')
+      .replace(/[.,;:\s]+$/, '')
+      .replace(/\s*\[[^\]]*\]\s*$/, '') // translated title / medium in brackets
+      .replace(/,?\s*in these proceedings$|,?\s*\(?this volume\)?$/i, '')
+      .replace(/,\s*volume\s+\d+\s+of\s+.+$/i, '') // "Title, volume 99 of Series"
+      .replace(/\s*\((?:no\.|vol\.|volume|[^()]*\beds?\.)[^()]*\)\s*$/i, '') // "(No. 137)", "(Vol. 26, …)", "(J. B. Carroll, Ed.)"
+      .replace(/,?\s*\(?(?:\d+(?:st|nd|rd|th)|second|third|fourth|revised)\s+(?:edn|ed|edition)\.?\)?$/i, '') // "2nd edn"
+      .replace(/\s+\p{Lu}[\p{L}.]+(?:,\s*(?:\p{Lu}\.){1,3}|,\s*\p{Lu}{2})?\s*:\s*[^:]+$/u, (m) => (PUBLISHER_RE.test(m) ? '' : m)) // "As I remember Princeton, N.J.: Van Nostrand"
       .replace(/[.,;:\s]+$/, '')
       .trim();
-    if (title.split(/\s+/).length < 2 && after) {
+    // no title at all: "Cockcroft, J.D. and Walton, E.T. (1932). Proc. Roy. Soc. A, 136, 619."
+    const rest = `${title} ${after ?? ''}`.trim();
+    if (/^\p{Lu}[\p{L}]{0,7}\.\s*(?:\p{Lu}[\p{L}]{0,7}\.?\s*){0,4}(?:\p{Lu}\b\.?)?,?\s*\d{1,4}\s*[,(:]\s*\d+/u.test(rest)) {
+      after = rest;
+      title = undefined;
+    }
+    if (title && title.split(/\s+/).length < 2 && after) {
       // e.g. "Mistral 7B." is fine; but single token like "CoRR" is not a title
       if (title.length < 4) title = undefined;
     }
   }
 
-  const { authors, etAl } = authorsText ? parseAuthors(authorsText.replace(/\(\s*(?:1[89]\d\d|20[0-3]\d)[^)]*\)\s*$/, '')) : { authors: [], etAl: false };
+  const parsedAuthors = authorsText ? parseAuthors(authorsText.replace(/\(\s*(?:1[89]\d\d|20[0-3]\d)[^)]*\)\s*$/, '')) : { authors: [], etAl: false };
+  const authors = parsedAuthors.authors;
+  // "—, and Otani, S." / "___. 2019." — the first author(s) are repeated from the previous entry
+  const etAl = parsedAuthors.etAl || /^\s*(?:[-_]{1,}|—)\s*(?:,|and\b|&|\.|$)/.test(authorsText ?? body);
 
   // venue & volume/pages from the remainder
   let venue: string | undefined;
@@ -376,11 +457,15 @@ export function parseReference(input: string): ParsedRef {
     venue = v
       .split(/,\s*(?:vol|pp?\.|pages|volume|\d)|\s\d{1,4}\s*\(|\(\s*(?:1[89]|20)\d\d|;\s*\d|\s(?:1[89]|20)\d\d\b(?!\s+(?:conference|annual|international|meeting|workshop|joint|ieee|acm|[a-z]+\s+conference))/i)[0]
       .replace(/[.,;:\s]+$/, '')
+      .replace(/^[\s.,;:]+/, '')
       .trim();
     if (venue.length < 2) venue = undefined;
   }
 
-  const kind = classifyKind(raw, urls, dois, arxivIds, venue);
+  let kind = classifyKind(raw, urls, dois, arxivIds, venue);
+  if (kind === 'article' && !arxivIds.length && (publisherParen || (venue && looksLikePublisher(venue)) || (!dois.length && PUBLISHER_RE.test(raw) && !/journal|proceedings|conference|transactions|\d+\s*\(\d+\)/i.test(raw)))) kind = 'book';
+  // "…, Dubna: JINR" / ". Kyiv: Phenix": ends in City: Publisher with no volume or pages after the year
+  if (kind === 'article' && !arxivIds.length && !dois.length && !urls.length && year && CITY_PUBLISHER_END_RE.test(raw) && !/\d/.test(raw.slice(raw.indexOf(String(year)) + 4).replace(/\(\s*in [A-Z][a-z]+\s*\)/g, '')) && !/journal|proceedings|conference|transactions/i.test(raw)) kind = 'book';
 
   return {
     raw,
@@ -390,7 +475,7 @@ export function parseReference(input: string): ParsedRef {
     arxivIds,
     urls,
     pmid: pmidM?.[1],
-    year,
+    year: yearAfterAuthors ?? year,
     years,
     authors,
     authorsText,
@@ -405,6 +490,47 @@ export function parseReference(input: string): ParsedRef {
   };
 }
 
+/** Split "Title, Venue 7, 55-108." / "Title, in Proceedings …" / "Title (Publisher, City)." at the title's end. */
+function splitTitleComma(rest: string): { title: string; after: string; publisher: boolean } {
+  let r = rest.trim();
+  let tail = '';
+  let publisher = false;
+  const pub = r.match(/\s*\(([^()]{3,120})\)\.?\s*$/);
+  if (pub && /,|press|books|publish|norton|wiley|springer|viking|penguin|crc|hall/i.test(pub[1]) && !/^\d|^eds?\.?$|^vol/i.test(pub[1])) {
+    tail = pub[1];
+    r = r.slice(0, pub.index).trim();
+    publisher = true;
+  }
+  const ax = r.match(/\.\s+arXiv\.?\s*$/i);
+  if (ax) {
+    tail = 'arXiv' + (tail ? ', ' + tail : '');
+    r = r.slice(0, ax.index).trim();
+  }
+  const pieces = r.split(/,\s+/);
+  let cut = pieces.length;
+  for (let i = 1; i < pieces.length; i++) {
+    const x = pieces[i];
+    if (
+      /^(?:in\s|in:|arxiv|working paper|nber|mimeo|unpublished|forthcoming|vol\.?\s|v\.\s|pp?\.\s|ed\.|eds\.|no\.\s|\d|ph\.?\s?d|doctoral|master'?s|thesis|dissertation|technical report|tech\.)/i.test(x) ||
+      /^(?:\p{Lu}|\p{Ll}+\p{Lu})[\p{L}\d&.'’ -]*\s\d+[a-z]?\b/u.test(x) ||
+      /\b(?:journal|review|proceedings|transactions|letters|quarterly|annals|bulletin|magazine|press|university|publishing|publishers?)\b/i.test(x) ||
+      /^\p{Lu}[\p{L}. ]+:\s*\p{Lu}/u.test(x)
+    ) {
+      cut = i;
+      break;
+    }
+  }
+  return { title: pieces.slice(0, cut).join(', ').replace(/[.\s]+$/, ''), after: [pieces.slice(cut).join(', '), tail].filter(Boolean).join(', '), publisher };
+}
+
+const CITY_PUBLISHER_END_RE = /[.,]\s*\p{Lu}[\p{L}-]+(?:[\s-]\p{Lu}[\p{L}-]+)?\s*:\s*\p{Lu}[\p{L}&.'’\s-]{1,40}?\.?(?:\s*\(\s*in [A-Z][a-z]+\s*\))?\.?\s*$/u;
+const PUBLISHER_RE = /\b(?:press|publishers?|publishing|books|verlag|ltd|wiley|springer|elsevier|routledge|sage|norton|penguin|viking|vintage|chapman|crc|blackwell|mcgraw|prentice|addison|pearson|kluwer|birkh[aä]user|dover|freeman|van nostrand|simon (?:and|&) schuster|random house|harper|knopf|allen lane|hamish hamilton|odile jacob|north-holland|basicbooks|siam)\b/i;
+/** "London: Allen Lane", "Wiley, Chichester", "New Haven & London: Yale University Press" — a book's imprint, not a venue. */
+function looksLikePublisher(v: string): boolean {
+  if (/journal|proceedings|transactions|conference|symposium|workshop|letters|review|magazine|bulletin|\d+\s*\(\d/i.test(v)) return false;
+  return PUBLISHER_RE.test(v) || /^[\s,]*\p{Lu}[\p{L}.]*(?:[\s&,]+\p{Lu}[\p{L}.()]*)*\s?:\s?\p{Lu}/u.test(v);
+}
+
 const SOFTWARE_HOSTS = /github\.com|gitlab\.com|bitbucket\.org|pypi\.org|cran\.r-project\.org|npmjs\.com|huggingface\.co|sourceforge\.net|crates\.io/i;
 
 function classifyKind(raw: string, urls: string[], dois: string[], arxiv: string[], _venue?: string): RefKind {
@@ -412,7 +538,7 @@ function classifyKind(raw: string, urls: string[], dois: string[], arxiv: string
   if (arxiv.length) return 'article';
   // standards and specifications
   if (/\b(?:ansi|niso|iso(?:\/iec)?|ieee std|rfc|w3c|ietf|astm)\s*[/\s]?\s*[a-z]?\d/i.test(raw) && !dois.length) return 'web';
-  if (urls.some((u) => SOFTWARE_HOSTS.test(u)) || /\[computer software\]|\(version [\d.]+\)/.test(r)) {
+  if (urls.some((u) => SOFTWARE_HOSTS.test(u) && !/huggingface\.co\/(?:blog|docs|papers|learn|posts)\b/i.test(u)) || /\[computer software\]|\(version [\d.]+\)/.test(r)) {
     if (/\bdataset\b/.test(r)) return 'dataset';
     return 'software';
   }

@@ -1,8 +1,9 @@
 /// <reference lib="webworker" />
 /**
  * In-browser ML worker (transformers.js, ONNX Runtime Web).
- * - embedder: e5-small-v2 sentence embeddings for evidence retrieval (Hugging Face CDN)
- * - verifier: Veracite claim/evidence cross-encoder → [ACCURATE, NOT_ACCURATE, NEI] (served with the site)
+ * - embedder: e5-small-v2 sentence embeddings for evidence retrieval
+ * - verifier: Veracite claim/evidence cross-encoder → [ACCURATE, NOT_ACCURATE, NEI]
+ * Both are served with the site (public/models); nothing is fetched from a model hub.
  * Runs on WebGPU when available and falls back to WASM automatically if WebGPU fails at any point.
  */
 import { AutoModelForSequenceClassification, AutoTokenizer, env, pipeline } from '@huggingface/transformers';
@@ -40,14 +41,13 @@ function progress(kind: string) {
 
 async function load(dev: 'webgpu' | 'wasm') {
   device = dev;
-  // embedder from the Hugging Face CDN, verifier from this site: each model is looked up in exactly one place
-  env.allowLocalModels = false;
-  env.allowRemoteModels = true;
-  embedder = await pipeline('feature-extraction', MODELS.embedder.id, { device, dtype: device === 'webgpu' ? 'fp32' : 'q8', progress_callback: progress('embedder') } as any);
   env.allowLocalModels = true;
   env.allowRemoteModels = false;
   // must be a site-relative path: transformers.js skips its local probe for absolute URLs
   env.localModelPath = new URL('models/', base).pathname;
+  // ONNX Runtime's WASM binaries are served with the site too (default would be a public CDN)
+  if ((env as any).backends?.onnx?.wasm) (env as any).backends.onnx.wasm.wasmPaths = new URL('ort/', base).href;
+  embedder = await pipeline('feature-extraction', MODELS.embedder.id, { device, dtype: 'q8', progress_callback: progress('embedder') } as any);
   tok = tok ?? (await AutoTokenizer.from_pretrained(MODELS.verifier.id, { progress_callback: progress('verifier') } as any));
   // 4-bit weight-only MatMuls + int8 embeddings (dev macro-F1 equal to fp32; see ml/export_onnx.py)
   verifier = await AutoModelForSequenceClassification.from_pretrained(MODELS.verifier.id, { device, dtype: 'q4', progress_callback: progress('verifier') } as any);

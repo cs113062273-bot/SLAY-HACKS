@@ -10,10 +10,11 @@ export const VERDICT: Record<Verdict | 'pending', { label: string; short: string
   not_found: { label: 'Not found', short: 'Not found', help: 'Could not be matched to any indexed record. Check it by hand.', color: 'var(--bad)' },
   unverifiable: { label: 'Not indexed', short: 'Not indexed', help: 'A website, standard, report or other source that scholarly indexes do not cover.', color: 'var(--rule-2)' },
   retracted: { label: 'Retracted', short: 'Retracted', help: 'The cited work has a retraction notice.', color: 'var(--violet)' },
+  unchecked: { label: 'Not checked', short: 'Not checked', help: 'The scholarly indexes needed to judge this reference did not respond. Nothing is wrong with it as far as we know; retry later.', color: 'var(--rule-2)' },
   pending: { label: 'Checking', short: 'Checking', help: '', color: 'var(--wash)' },
 };
 
-export const VERDICT_ORDER: (Verdict | 'pending')[] = ['fabricated', 'id_mismatch', 'not_found', 'retracted', 'metadata_error', 'verified_minor', 'verified', 'unverifiable', 'pending'];
+export const VERDICT_ORDER: (Verdict | 'pending')[] = ['fabricated', 'id_mismatch', 'not_found', 'retracted', 'metadata_error', 'verified_minor', 'verified', 'unverifiable', 'unchecked', 'pending'];
 
 export const SUPPORT: Record<SupportLabel | 'none', { label: string; help: string }> = {
   supported: { label: 'Supported', help: 'The cited passages state what the sentence attributes to this work.' },

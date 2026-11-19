@@ -28,7 +28,25 @@ export interface ClaimCheck {
   unrelated?: boolean;
 }
 
+/** quick = references only (no model download); full = references, then claim support */
+export type Mode = 'quick' | 'full';
+export function savedMode(): Mode {
+  try {
+    return localStorage.getItem('veracite-mode') === 'quick' ? 'quick' : 'full';
+  } catch {
+    return 'full';
+  }
+}
+export function saveMode(m: Mode) {
+  try {
+    localStorage.setItem('veracite-mode', m);
+  } catch {
+    /* per-viewer convenience only */
+  }
+}
+
 export interface State {
+  mode: Mode;
   phase: 'idle' | 'reading' | 'checking' | 'done' | 'error';
   inputName?: string;
   readProgress: number;
@@ -41,9 +59,11 @@ export interface State {
   sourceStatus: Partial<Record<SourceName, { ok: number; limited: number; failed: number }>>;
   startedAt?: number;
   finishedAt?: number;
+  /** set for bundled samples: index responses replayed from a snapshot (checks and inference still run live) */
+  replayed?: string;
 }
 
-const initial: State = { phase: 'idle', readProgress: 0, doc: null, results: [], claims: [], claimPhase: 'idle', modelProgress: 0, sourceStatus: {} };
+const initial: State = { mode: 'full', phase: 'idle', readProgress: 0, doc: null, results: [], claims: [], claimPhase: 'idle', modelProgress: 0, sourceStatus: {} };
 
 let state: State = initial;
 const listeners = new Set<() => void>();
@@ -75,6 +95,8 @@ const HOST_SOURCE: Record<string, SourceName> = {
 };
 
 export const cache = new IdbCache();
+/** date the bundled sample snapshots were recorded (scripts/build-seeds.ts) */
+export const SNAPSHOT_DATE = '2026-11-19';
 let pendingEvents: HttpEvent[] = [];
 let flushTimer: number | undefined;
 function onHttp(e: HttpEvent) {
@@ -123,9 +145,13 @@ let runId = 0;
 
 export type Input = { kind: 'file'; file: File } | { kind: 'text'; text: string; name?: string } | { kind: 'arxiv'; id: string } | { kind: 'sample'; url: string; name: string; seed?: string };
 
-export async function analyze(input: Input) {
+/** what a quick check needs to start claim support later without re-reading the document */
+let claimCtx: { my: number; http: Http; mod: Promise<typeof import('./claims') | null> } | null = null;
+
+export async function analyze(input: Input, mode: Mode = savedMode()) {
   const my = ++runId;
-  set({ ...initial, phase: 'reading', inputName: input.kind === 'file' ? input.file.name : input.kind === 'arxiv' ? `arXiv:${input.id}` : input.kind === 'sample' ? input.name : (input.name ?? 'Pasted text'), startedAt: Date.now() });
+  claimCtx = null;
+  set({ ...initial, mode, phase: 'reading', inputName: input.kind === 'file' ? input.file.name : input.kind === 'arxiv' ? `arXiv:${input.id}` : input.kind === 'sample' ? input.name : (input.name ?? 'Pasted text'), startedAt: Date.now() });
   try {
     let doc: Doc;
     const onProgress = (p: number) => my === runId && set({ readProgress: p });
@@ -142,7 +168,10 @@ export async function analyze(input: Input) {
       if (input.seed) {
         try {
           const r = await fetch(input.seed);
-          if (r.ok) cache.seed(await r.json());
+          if (r.ok) {
+            cache.seed(await r.json());
+            set({ replayed: SNAPSHOT_DATE });
+          }
         } catch {
           /* seed is an optimization only */
         }
@@ -160,7 +189,14 @@ export async function analyze(input: Input) {
       return;
     }
     set({ doc, phase: 'checking', results: doc.references.map(() => null) });
+    // fetch the claim-check code now, so a connection lost during reference checks cannot break the report later
+    const claimsMod = import('./claims').catch(() => null);
+    // full audit: download the models in the background while references are checked (off the critical path)
+    if (mode === 'full' && doc.citances.length) {
+      import('./mlClient').then((ml) => ml.loadModels((l, t) => my === runId && set({ modelProgress: t ? l / t : 0 })).catch(() => undefined));
+    }
     const http = new Http({ cache, onEvent: onHttp, maxRetries: 5, hostParams: readKeys(), hostHeaders: readHeaders() });
+    claimCtx = { my, http, mod: claimsMod };
     let next = 0;
     const worker = async () => {
       while (next < doc.references.length && my === runId) {
@@ -169,7 +205,7 @@ export async function analyze(input: Input) {
         try {
           r = await verifyReference(doc.references[i], { http, budgetMs: 40000 }, i);
         } catch (e) {
-          r = { index: i, parsed: doc.references[i], verdict: 'not_found', confidence: 0.5, checks: [], issues: [`Check failed: ${(e as Error).message}`], candidates: [], sourcesQueried: [], sourcesFailed: [] };
+          r = { index: i, parsed: doc.references[i], verdict: 'unchecked', confidence: 0.5, checks: [], issues: [`Check failed: ${(e as Error).message}`], candidates: [], sourcesQueried: [], sourcesFailed: [] };
         }
         if (my !== runId) return;
         set((s) => {
@@ -182,11 +218,47 @@ export async function analyze(input: Input) {
     await Promise.all(Array.from({ length: 6 }, worker));
     if (my !== runId) return;
     set({ phase: 'done', finishedAt: Date.now() });
-    const { runClaimChecks } = await import('./claims');
-    await runClaimChecks(my, () => runId, getState, set, http);
+    if (mode === 'full') await runClaimAudit();
   } catch (e) {
     if (my === runId) set({ phase: 'error', error: (e as Error).message });
   }
+}
+
+/** Claim-support stage: runs after a full audit, or on request after a quick check. */
+export async function runClaimAudit() {
+  const ctx = claimCtx;
+  const s = getState();
+  if (!ctx || ctx.my !== runId || !s.doc || s.phase !== 'done' || s.claimPhase !== 'idle') return;
+  set({ mode: 'full', claimPhase: 'loading-model' }); // also guards against a second click
+  const mod = await ctx.mod;
+  if (ctx.my !== runId) return;
+  if (!mod) {
+    set({ claimPhase: 'unavailable' });
+    return;
+  }
+  await mod.runClaimChecks(ctx.my, () => runId, getState, set, ctx.http);
+}
+
+/** Re-run references that could not be checked (index outage or rate limit). */
+export async function retryUnchecked() {
+  const s = getState();
+  if (!s.doc || s.phase !== 'done') return;
+  const idx = s.results.map((r, i) => (r?.verdict === 'unchecked' ? i : -1)).filter((i) => i >= 0);
+  if (!idx.length) return;
+  const my = runId;
+  set({ phase: 'checking' });
+  const http = new Http({ cache, onEvent: onHttp, maxRetries: 5, hostParams: readKeys(), hostHeaders: readHeaders() });
+  for (const i of idx) {
+    if (my !== runId) return;
+    const r = await verifyReference(s.doc.references[i], { http, budgetMs: 40000 }, i).catch(() => null);
+    if (r && my === runId)
+      set((st) => {
+        const results = st.results.slice();
+        results[i] = r;
+        return { results };
+      });
+  }
+  if (my === runId) set({ phase: 'done' });
 }
 
 export function reset() {

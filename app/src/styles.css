@@ -253,6 +253,7 @@ a:hover {
   background: var(--violet-wash);
 }
 .v-unverifiable,
+.v-unchecked,
 .v-pending {
   color: var(--muted);
   background: var(--muted-wash);
@@ -401,6 +402,50 @@ a:hover {
   box-shadow: var(--shadow);
   overflow: hidden;
 }
+.mode {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 16px 16px 0;
+}
+.mode button {
+  text-align: left;
+  padding: 9px 12px;
+  border: 1px solid var(--rule-2);
+  border-radius: var(--r-sm);
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+}
+.mode button:hover {
+  background: var(--wash);
+}
+.mode button.on {
+  border-color: var(--accent);
+  background: var(--accent-wash);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+.mode b {
+  display: block;
+  font-size: var(--t-sm);
+  font-weight: 600;
+}
+.mode small {
+  display: block;
+  margin-top: 2px;
+  color: var(--ink-3);
+  font-size: var(--t-xs);
+  line-height: 1.35;
+}
+.claim-offer small {
+  display: block;
+  margin-top: 8px;
+  color: var(--ink-3);
+  font-size: var(--t-xs);
+}
+.claim-offer .btn {
+  margin-top: 10px;
+}
 .drop {
   margin: 16px;
   border: 1.5px dashed var(--rule-2);
@@ -539,7 +584,7 @@ a:hover {
 }
 .bench-bar {
   display: grid;
-  grid-template-columns: 120px 1fr 40px;
+  grid-template-columns: 150px 1fr 40px;
   align-items: center;
   gap: 10px;
   font-size: var(--t-xs);
@@ -559,6 +604,16 @@ a:hover {
   font-weight: 600;
   color: var(--ink);
   text-align: right;
+}
+.bench-bar span {
+  white-space: nowrap;
+}
+.bench-note {
+  display: block;
+  margin-top: 6px;
+  color: var(--ink-3);
+  font-size: 11px;
+  line-height: 1.45;
 }
 .bench-metric {
   color: var(--ink-3);
@@ -596,6 +651,9 @@ a:hover {
 .docname small {
   color: var(--ink-3);
   font-size: var(--t-xs);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .ledger {
   display: grid;
@@ -818,6 +876,7 @@ a:hover {
   background: var(--violet);
 }
 .stripe-unverifiable,
+.stripe-unchecked,
 .stripe-pending {
   background: var(--rule-2);
 }
@@ -1156,9 +1215,16 @@ a:hover {
 }
 .status-dots {
   display: flex;
-  gap: 10px;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 12px;
   font-size: var(--t-xs);
   color: var(--ink-3);
+}
+.status-dots span {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
 }
 .status-dots span::before {
   content: '';
@@ -1189,4 +1255,18 @@ a:hover {
   width: min(640px, 100%);
   margin: 80px auto;
   padding: 0 28px;
+}
+
+.linkbtn {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: var(--accent, #2457c5);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+.linkbtn.on {
+  font-weight: 600;
 }

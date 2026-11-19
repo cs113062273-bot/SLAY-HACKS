@@ -39,6 +39,74 @@ def build(split, k, gold_aug=0.0, seed=0, k_range=None):
     return rows
 
 
+import re as _re
+
+_SWAPS = [
+    ("increased", "decreased"), ("increase", "decrease"), ("increases", "decreases"), ("higher", "lower"), ("more", "less"),
+    ("positive", "negative"), ("positively", "negatively"), ("enhanced", "reduced"), ("enhances", "reduces"), ("promotes", "inhibits"),
+    ("upregulated", "downregulated"), ("up-regulated", "down-regulated"), ("improved", "worsened"), ("improves", "worsens"),
+    ("larger", "smaller"), ("greater", "smaller"), ("risk factor", "protective factor"), ("activates", "suppresses"), ("before", "after"),
+    ("all", "few"), ("most", "few"), ("majority", "minority"), ("strongly", "weakly"), ("significantly", "not significantly"),
+]
+# quantities only (not identifiers such as miR-211 or citation leftovers)
+_QTY = r"(?<![\w\-.])\d+(?:\.\d+)?(?=\s*(?:%|percent|-fold|\s?fold|\s?times))"
+_NEG = [(r"\b(is|are|was|were)\b", r"\1 not"), (r"\bcan\b", "cannot"), (r"\b(has|have)\b", r"\1 not"), (r"\b(may)\b", r"\1 not")]
+
+
+def perturb_claim(claim, rng):
+    """Turn a supported claim into a misrepresentation of the same evidence (direction, negation or number)."""
+    ops = []
+    for a, b in _SWAPS:
+        for x, z in ((a, b), (b, a)):
+            if _re.search(rf"\b{_re.escape(x)}\b", claim, _re.I):
+                ops.append(("swap", x, z))
+    if _re.search(_QTY, claim):
+        ops.append(("num",))
+    for pat, rep in _NEG:
+        if _re.search(pat, claim) and " not " not in claim:
+            ops.append(("neg", pat, rep))
+    if not ops:
+        return None
+    op = rng.choice(ops)
+    if op[0] == "swap":
+        return _re.sub(rf"\b{_re.escape(op[1])}\b", op[2], claim, count=1, flags=_re.I)
+    if op[0] == "num":
+        def bump(m):
+            v = float(m.group(0))
+            nv = v * rng.choice([2, 3, 0.5, 0.25]) if v != 0 else 5
+            return str(int(nv)) if float(nv).is_integer() else f"{nv:.1f}"
+        return _re.sub(_QTY, bump, claim, count=1)
+    return _re.sub(op[1], op[2], claim, count=1)
+
+
+def build_perturbed(seed=0, k_range=(2, 6), ratio=1.0):
+    """Synthetic NOT_ACCURATE: perturbed ACCURATE claims paired with their own gold evidence (+ retrieved context)."""
+    rng = random.Random(seed + 7)
+    data = load("train")
+    ctx = {c["id"]: c["order"] for c in json.load(open(CACHE / "contexts_train.json"))}
+    rows = []
+    for x in data:
+        if x["label"] != "ACCURATE" or not x["gold"] or rng.random() > ratio:
+            continue
+        pc = perturb_claim(x["claim"], rng)
+        if not pc or pc == x["claim"]:
+            continue
+        kk = rng.randint(*k_range)
+        order = list(dict.fromkeys(sorted(x["gold"])[:2] + ctx[x["id"]]))[:kk]
+        rows.append((pc, " ".join(x["sents"][i] for i in sorted(order)), LABELS.index("NOT_ACCURATE")))
+    return rows
+
+
+def build_mnli(n=12000, seed=0):
+    """NLI replay to keep the base model's contradiction skill: entail→ACC, contradiction→NOT_ACC, neutral→NEI."""
+    import pandas as pd
+
+    path = Path(__file__).resolve().parent.parent / "data" / "mnli" / "train.parquet"
+    df = pd.read_parquet(path).sample(n=n, random_state=seed)
+    m = {0: 0, 2: 1, 1: 2}  # MNLI: 0 entailment, 1 neutral, 2 contradiction
+    return [(h, p, m[int(l)]) for p, h, l in zip(df["premise"], df["hypothesis"], df["label"]) if int(l) in m]
+
+
 def build_scifact(seed=0, nei_ratio=0.3):
     """SciFact train as auxiliary data. SUPPORT→ACCURATE, CONTRADICT→NOT_ACCURATE,
     cited-but-no-rationale→NOT_ACCURATE (related but unsupporting), random abstract→NEI."""
@@ -133,8 +201,11 @@ def main():
     ap.add_argument("--seed", type=int, default=13)
     ap.add_argument("--scifact", action="store_true", help="add SciFact train as auxiliary data")
     ap.add_argument("--semcite", action="store_true", help="add SemanticCite (train split) as cross-domain data")
+    ap.add_argument("--perturb", type=float, default=0.0, help="fraction of ACCURATE train claims to turn into synthetic misrepresentations")
+    ap.add_argument("--mnli", type=int, default=0, help="number of MNLI pairs for NLI replay")
     ap.add_argument("--k_range", default=None, help="random evidence count per training example, e.g. 1-7")
     ap.add_argument("--out", required=True)
+    ap.add_argument("--grad_ckpt", action="store_true", help="gradient checkpointing (lower GPU memory)")
     ap.add_argument("--test", action="store_true", help="also evaluate on test (do this once, at the end)")
     a = ap.parse_args()
     torch.manual_seed(a.seed)
@@ -146,11 +217,21 @@ def main():
 
     tok = AutoTokenizer.from_pretrained(a.model)
     model = AutoModelForSequenceClassification.from_pretrained(a.model, num_labels=3, ignore_mismatched_sizes=True, id2label=dict(enumerate(LABELS)), label2id={l: i for i, l in enumerate(LABELS)}).to(device)
+    if a.grad_ckpt:
+        model.gradient_checkpointing_enable(gradient_checkpointing_kwargs={"use_reentrant": False})
     if hasattr(model, "gradient_checkpointing_enable") and "large" in a.model.lower():
-        model.gradient_checkpointing_enable()
+        model.gradient_checkpointing_enable(gradient_checkpointing_kwargs={"use_reentrant": False})
 
     kr = tuple(int(v) for v in a.k_range.split("-")) if a.k_range else None
     tr = build("train", a.k, a.gold_aug, a.seed, kr)
+    if a.perturb:
+        pr = build_perturbed(a.seed, kr or (2, 6), a.perturb)
+        print("perturbed rows", len(pr), flush=True)
+        tr = tr + pr
+    if a.mnli:
+        mn = build_mnli(a.mnli, a.seed)
+        print("mnli rows", len(mn), flush=True)
+        tr = tr + mn
     if a.semcite:
         from semcite import train_rows
 

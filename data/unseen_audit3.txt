@@ -1,0 +1,65 @@
+
+=== cs.CY_2611.22975v1.pdf | pages 50 | refs 45 | citances 37 (numeric) | refs cited in text 32/45 | parse 3582 ms | verify 57 s
+    {"verified_minor":4,"verified":38,"id_mismatch":1,"metadata_error":1,"unverifiable":1}
+  [8] id_mismatch: 8. Juzek, T. & Ward, Z. (2024). Why does ChatGPT ‘delve’ so much? Exploring the sources of overrepresentation in large language models. arXiv:2312.11385.
+      MATCH[semanticscholar] Why Does ChatGPT "Delve" So Much? Exploring the Sources of Lexical Overrepresentation in Large Langu | Juzek, Ward | 2024/2024 | International Conference on Computational Linguistics
+      ! arXiv:2312.11385 points to a different work: “Hypergraph Transformer for Semi-Supervised Classification”
+  [11] metadata_error: 11. McCreery, Z. & Noser, M. (2026). LLM-assisted writing in engineering is associated with higher citations as evidenced by 1.17 million papers. Journal of Informetrics, 20, article 101842.
+      MATCH[crossref] LLM-Assisted writing in engineering is associated with higher citations as evidenced from 1.17 milli | McCreery, Naser | 2026 | Journal of Informetrics
+      ! Title differs from the published title (cited “by”, published “from”)
+
+=== econ.GN_2611.21070v1.pdf | pages 39 | refs 24 | citances 15 (author-year) | refs cited in text 21/24 | parse 897 ms | verify 1 s
+    {"verified":23,"verified_minor":1}
+
+=== physics.soc-ph_2611.20886v1.pdf | pages 33 | refs 97 | citances 124 (author-year) | refs cited in text 79/97 | parse 1203 ms | verify 157 s
+    {"unchecked":10,"verified_minor":21,"verified":18,"unverifiable":43,"id_mismatch":1,"metadata_error":4}
+  [1] unchecked: Alexander III. (1889). On the Voluntary Resettlement of Rural Inhabitants and Burghers to State Lands (Law of 13 July 1889). In Complete Collection of Laws of the Russian Empire (Polnoe sobranie zakonov Rossiiskoi imperii), 3rd se
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [2] unchecked: Anna Ioannovna. (1905). Decree of Empress Anna Ioannovna to Prince Shakhovskoi, ruler of Little Russia, on marriages of Little Russians (January 31, 1734). Kievskaya Starina, 91 (October 10).
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [6] unchecked: Bogolyubov, A. N. (1996). N. N. Bogolyubov: Live, Creativity, Dubna: JINR
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [7] unchecked: Bogolyubov, N. N., & Parasyuk, O. S. (1955). O vychitatel’nom formalizme pri umnozhenii prichinnykh singulyarnykh funktsii [On a subtraction formalism in the multiplication of causal singular functions]. Doklady Akademii Nauk SSSR
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [32] id_mismatch: Grynyov, B. V., Titov, M. P., & Stadnik, P. O. (2019). Ukraine - CERN: The way to cooperation. Science and Innovation, 15(5), 87-98. https://doi.org/10.15407/scine15.05.087
+      MATCH[crossref] Ukraine - СERN: the Way to Cooperation | Ukraine, Grynyov, Titov, France | 2019 | Science and innovation
+      ! Title differs from the published title (cited “cern”, published “ern”)
+      ! Incomplete author list: 3 of 6 authors omitted without “et al.”
+      ! doi:10.15407/scine15.05.087 points to a different work: “Manual Version of 3D Printing”
+  [38] unchecked: Khramov, Yu. (1991). History of formation and development of physics schools in Ukraine, Kyiv: Phenix (in Russian).
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [53] unchecked: Nurmagambetov, A. J. (2026). Prof. D. V. Volkov at CERN, in these proceedings.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [63] metadata_error: Rovenchak O. and Volodko V. (2018), “Comparative Analysis of the Identity and Practices of Post-war Representatives and the Contemporary Wave of Ukrainian Immigrants to the United States”, Annales Universitatis Mariae Curie-Sklodo
+      MATCH[crossref] Comparative Analysis of the Identity and Practices of Post-war Representatives and the Contemporary  | Rovenchak, Volodko | 2018/2019 | Annales Universitatis Mariae Curie-Sklodowska, sectio I – Philosophia-Sociologia
+      ! Title differs from the published title (cited “to”, published “in”)
+  [65] unchecked: Schenderovskyi, V. (2026). The celebrated legacy of the eminent 20th-century physicist Dmytro Ivanenko, in these proceedings.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [68] metadata_error: Shiltsev, V. (2025). Post 1980s Diaspora of Russian Particle Physicists. 4th international symposium on history of particle physics. CERN. 10-13 November. https://indico.cern.ch/event/1480892/contributions/6386322/.
+      MATCH[semanticscholar] Post-Cold War Diaspora of Russian Particle Physicists | Shiltsev | 2025/2025 | 
+      ! Closest real work has a different title: “Post-Cold War Diaspora of Russian Particle Physicists”
+  [71] unchecked: Sinelnikov, C., Leipunsky, A., Walther, A., and Latischev, G. (1932). The disintegration of lithium by high velocity protons. Physikalische Zeitschrift der Sowjetunion, 2(3), 285.
+      MATCH[crossref] The Disintegration of Lithium by Swiftly-Moving Protons | Lawrence, Livingston, White | 1932/2002 | Physical Review
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [79] unchecked: Tarasov, V. (2026). ISMA's CsI scintillators in experiments on high-energy physics and astrophysics, in these proceedings.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [92] unchecked: Yanovsky, F. (2016). Glimpses of Early Radar Developments in Ukraine and the Former Soviet Union, Radio Science Bulletin 358, pp. 35-68.
+      ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [95] metadata_error: Zavorotna, N. (2020). In Scholars in Exile: The Ukrainian Intellectual World in Interwar Czechoslovakia Pages: 53-71 University of Toronto Press, https://utppublishing.com/doi/10.3138/9781487504458.004 (last accessed 4.04.2026).
+      MATCH[crossref] Scholars in Exile: The Ukrainian Intellectual World in Interwar Czechoslovakia | Zavorotna | 2020/2024 | 
+      ! doi:10.3138/9781487504458.004 does not resolve to any record
+  [96] metadata_error: Zhuk, S. (2024). The KGB, Russian Academic Imperialism, Ukraine, and Western Academia 1946-2024, Lanham: Lexington Books.
+      MATCH[crossref] KGB, Russian Academic Imperialism, Ukraine, and Western Academia, 1946–2024 | Zhuk | 2024/2025 | 
+      ! Title differs from the published title (cited “the”)
+
+=== q-bio.PE_2611.18781v1.pdf | pages 53 | refs 64 | citances 63 (author-year) | refs cited in text 61/64 | parse 2263 ms | verify 15 s
+    {"verified":55,"verified_minor":8,"unverifiable":1}
+
+=== q-fin.GN_2611.18531v1.pdf | pages 85 | refs 91 | citances 79 (author-year) | refs cited in text 82/91 | parse 3357 ms | verify 72 s
+    {"verified":72,"unverifiable":11,"verified_minor":7,"metadata_error":1}
+  [48] metadata_error: Liu, R., R. Yang, C. Jia, G. Zhang, D. Yang, and S. Vosoughi, 2024, Training socially aligned language models on simulated social interactions, in The Twelfth International Conference on Learning Representations (ICLR 2024).
+      MATCH[semanticscholar] Training Socially Aligned Language Models on Simulated Social Interactions | Liu, Yang, Jia, Zhang | 2023/2023 | International Conference on Learning Representations
+      ! Incomplete author list: 2 of 8 authors omitted without “et al.”
+
+=== stat.AP_2611.22149v1.pdf | pages 17 | refs 30 | citances 26 (numeric) | refs cited in text 30/30 | parse 597 ms | verify 29 s
+    {"verified_minor":4,"verified":25,"unverifiable":1}

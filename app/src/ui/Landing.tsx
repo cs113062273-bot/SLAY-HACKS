@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { analyze } from '../engine/session';
+import { analyze, saveMode, savedMode, type Mode } from '../engine/session';
 import { Brand } from './Brand';
 import { SettingsButton } from './Settings';
 
@@ -21,23 +21,39 @@ const SAMPLES = [
   },
 ];
 
-/** Reproducible with app/scripts/bench-*.ts and ml/eval_shipped.py; see README. */
-const BENCH = [
+/** Every number: source, version and conditions in the note; reproducible with app/scripts/bench-*.ts and ml/eval_shipped.py (README). */
+const BENCH: { name: string; what: string; metric: string; bars: { label: string; v: number; ours?: boolean }[]; note: string }[] = [
   {
     name: 'Reference verification',
-    what: '104 manually verified references, the same set five leading checkers were evaluated on (Badalova & Mayr, 2026)',
+    what: '104 manually verified references (33 problematic) on which five published checkers were evaluated.',
     metric: 'F1',
-    ours: 0.971,
-    baseline: 0.644,
-    baselineName: 'Best existing tool',
+    bars: [
+      { label: 'Veracite', v: 0.971, ours: true },
+      { label: 'Hallucinator (best of 5)', v: 0.644 },
+    ],
+    note: 'Badalova & Mayr 2026, Zenodo 10.5281/zenodo.21457492; baseline scores as published. This set was also used during development.',
   },
   {
     name: 'Hallucinated-citation detection',
-    what: 'HALLMARK test set, 825 citations and 14 fabrication types, held out and scored once. Veracite uses no LLM.',
+    what: 'HALLMARK v1.2 test_public: 825 citations, 14 fabrication types. Held out, scored once.',
     metric: 'F1',
-    ours: 0.959,
-    baseline: 0.916,
-    baselineName: 'Claude Sonnet 4.6',
+    bars: [
+      { label: 'Paid agent cascade', v: 0.986 },
+      { label: 'Veracite (no LLM)', v: 0.959, ours: true },
+      { label: 'Claude Sonnet 4.6', v: 0.916 },
+    ],
+    note: 'Reizinger et al. 2026; baselines from the paper. Cascade = bibtex-updater + Claude Sonnet 4.6 agent. OpenAlex quota ran out during our run.',
+  },
+  {
+    name: 'Claim support',
+    what: 'Citation-Integrity test split: does the cited abstract support the citing sentence? Model chosen on dev.',
+    metric: 'Macro-F1',
+    bars: [
+      { label: 'MultiVerS (GPU)', v: 0.52 },
+      { label: 'Veracite (in-browser)', v: 0.486, ours: true },
+      { label: 'GPT-4, in-context', v: 0.45 },
+    ],
+    note: 'Sarol et al. 2024; baselines from the paper. Veracite: 102 MB 4-bit model, top-5 retrieved evidence. Weakest on subtle misrepresentation. A withdrawn retrained variant was also scored on this split (.456).',
   },
 ];
 
@@ -62,6 +78,11 @@ export function Landing() {
   const [text, setText] = useState('');
   const [arxiv, setArxiv] = useState('');
   const file = useRef<HTMLInputElement>(null);
+  const [mode, setModeState] = useState<Mode>(savedMode);
+  const pickMode = (m: Mode) => {
+    saveMode(m);
+    setModeState(m);
+  };
 
   const onFiles = (fs: FileList | null) => {
     const f = fs?.[0];
@@ -113,6 +134,19 @@ export function Landing() {
             </figure>
           </div>
           <div className="intake">
+            <div className="mode" role="radiogroup" aria-label="Audit depth">
+              {(
+                [
+                  ['full', 'Full audit', 'References and claim support. Downloads a 136 MB verifier once.'],
+                  ['quick', 'Quick check', 'References only, fastest. Claim support stays one click away.'],
+                ] as const
+              ).map(([m, label, help]) => (
+                <button key={m} role="radio" aria-checked={mode === m} className={mode === m ? 'on' : ''} onClick={() => pickMode(m)}>
+                  <b>{label}</b>
+                  <small>{help}</small>
+                </button>
+              ))}
+            </div>
             <div
               className={`drop${over ? ' over' : ''}`}
               role="button"
@@ -190,17 +224,15 @@ export function Landing() {
                   <b>{b.name}</b>
                   <small>{b.what}</small>
                 </div>
-                <div className="bench-bars" role="img" aria-label={`${b.metric}: Veracite ${b.ours.toFixed(3)}, ${b.baselineName} ${b.baseline.toFixed(3)}`}>
-                  <div className="bench-bar">
-                    <span>Veracite</span>
-                    <i style={{ width: `${b.ours * 100}%` }} className="ours" />
-                    <em className="num">{b.ours.toFixed(2)}</em>
-                  </div>
-                  <div className="bench-bar">
-                    <span>{b.baselineName}</span>
-                    <i style={{ width: `${b.baseline * 100}%` }} />
-                    <em className="num">{b.baseline.toFixed(2)}</em>
-                  </div>
+                <div className="bench-bars" role="img" aria-label={`${b.metric}: ${b.bars.map((x) => `${x.label} ${x.v.toFixed(3)}`).join(', ')}`}>
+                  {b.bars.map((x) => (
+                    <div key={x.label} className="bench-bar">
+                      <span>{x.label}</span>
+                      <i style={{ width: `${x.v * 100}%` }} className={x.ours ? 'ours' : undefined} />
+                      <em className="num">{x.v.toFixed(2)}</em>
+                    </div>
+                  ))}
+                  <small className="bench-note">{b.note}</small>
                 </div>
                 <div className="bench-metric">{b.metric}</div>
               </div>

@@ -1,0 +1,4768 @@
+{
+ "cs.CY_2611.22975v1.pdf": [
+  {
+   "raw": "1. Liang, W., Zhang, Y., Wu, Z., Lepp, H., Ji, W., Zhao, X., ... & Zou, J. (2025). Quantifying large language model usage in scientific papers. Nature Human Behaviour, 1-11.",
+   "title": "Quantifying large language model usage in scientific papers",
+   "authors": [
+    "Liang",
+    "Zhang",
+    "Wu",
+    "Lepp",
+    "Ji",
+    "Zhao",
+    "Zou"
+   ],
+   "year": 2025,
+   "venue": "Nature Human Behaviour",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "2. Hao, Q., Xu, F., Li, Y., & Evans, J. (2026). Artificial intelligence tools expand scientists’ impact but contract science’s focus. Nature 649, 1237-1243.",
+   "title": "Artificial intelligence tools expand scientists’ impact but contract science’s focus",
+   "authors": [
+    "Hao",
+    "Xu",
+    "Li",
+    "Evans"
+   ],
+   "year": 2026,
+   "venue": "Nature 649",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "3. Geng, M., & Trotta, R. (2025). Human-LLM coevolution: Evidence from academic writing. In Findings of the Association for Computational Linguistics (ACL) 12689-12696.",
+   "title": "Human-LLM coevolution: Evidence from academic writing",
+   "authors": [
+    "Geng",
+    "Trotta"
+   ],
+   "year": 2025,
+   "venue": "Findings of the Association for Computational Linguistics (ACL) 12689-12696",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "4. Gray, A. (2024). ChatGPT \"contamination\": estimating the prevalence of LLMs in the scholarly literature. arXiv:2403.16887.",
+   "title": "ChatGPT \"contamination\": estimating the prevalence of LLMs in the scholarly literature",
+   "authors": [
+    "Gray"
+   ],
+   "year": 2024,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "5. Kusumegi, K., Yang, X., Ginsparg, P., de Vaan, M., Stuart, T., & Yin, Y. (2025). Scientific production in the era of large language models. Science, 390(6779), 1240-1243.",
+   "title": "Scientific production in the era of large language models",
+   "authors": [
+    "Kusumegi",
+    "Yang",
+    "Ginsparg",
+    "de Vaan",
+    "Stuart",
+    "Yin"
+   ],
+   "year": 2025,
+   "venue": "Science",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "6. Messeri, L., & Crockett, M. J. (2024). Artificial intelligence and illusions of understanding in scientific research. Nature, 627(8002), 49-58.",
+   "title": "Artificial intelligence and illusions of understanding in scientific research",
+   "authors": [
+    "Messeri",
+    "Crockett"
+   ],
+   "year": 2024,
+   "venue": "Nature",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "7. Traberg, C. S., Roozenbeek, J., & Van Der Linden, S. (2026). AI is turning research into a scientific monoculture. Communications Psychology, 4(1), 37.",
+   "title": "AI is turning research into a scientific monoculture",
+   "authors": [
+    "Traberg",
+    "Roozenbeek",
+    "Van Der Linden"
+   ],
+   "year": 2026,
+   "venue": "Communications Psychology",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "8. Juzek, T. & Ward, Z. (2024). Why does ChatGPT ‘delve’ so much? Exploring the sources of overrepresentation in large language models. arXiv:2312.11385.",
+   "title": "Why does ChatGPT ‘delve’ so much?",
+   "authors": [
+    "Juzek",
+    "Ward"
+   ],
+   "year": 2024,
+   "venue": "Exploring the sources of overrepresentation in large language models. arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "9. Sourati, Z., Karimi-Malekabadi, F., Ozcan, M., McDaniel, C., Ziabari, A., Trager, J., ... & Dehghani, M. (2026). The shrinking landscape of linguistic diversity in the age of large language models. Nature Human Behaviour, 1-18.",
+   "title": "The shrinking landscape of linguistic diversity in the age of large language models",
+   "authors": [
+    "Sourati",
+    "Karimi-Malekabadi",
+    "Ozcan",
+    "McDaniel",
+    "Ziabari",
+    "Trager",
+    "Dehghani"
+   ],
+   "year": 2026,
+   "venue": "Nature Human Behaviour",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "10. Alsudais, A. (2025). Exploring the change in scientific readability following the release of ChatGPT. Journal of Informetrics, 19(3), 101679.",
+   "title": "Exploring the change in scientific readability following the release of ChatGPT",
+   "authors": [
+    "Alsudais"
+   ],
+   "year": 2025,
+   "venue": "Journal of Informetrics",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "11. McCreery, Z. & Noser, M. (2026). LLM-assisted writing in engineering is associated with higher citations as evidenced by 1.17 million papers. Journal of Informetrics, 20, article 101842.",
+   "title": "LLM-assisted writing in engineering is associated with higher citations as evidenced by 1.17 million papers",
+   "authors": [
+    "McCreery",
+    "Noser"
+   ],
+   "year": 2026,
+   "venue": "Journal of Informetrics",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "12. Qi, M., Cao, Z., Wang, Q., Li, N., & Zhu, T. (2025). Does GenAI Rewrite How We Write? An Empirical Study on Two-Million Preprints. arXiv:2510.17882.",
+   "title": "Does GenAI Rewrite How We Write?",
+   "authors": [
+    "Qi",
+    "Cao",
+    "Wang",
+    "Li",
+    "Zhu"
+   ],
+   "year": 2025,
+   "venue": "An Empirical Study on Two-Million Preprints. arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "13. Filimonovic, D., Rutzer, C., Macher, J., & Weder, R. (2025). Generative AI as a Linguistic Equalizer in Global Science. arXiv:2511.11687.",
+   "title": "Generative AI as a Linguistic Equalizer in Global Science",
+   "authors": [
+    "Filimonovic",
+    "Rutzer",
+    "Macher",
+    "Weder"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "14. Liu, J., He, Y., Zheng, Z., Bu, Y., & Ni, C. (2025). AI-assisted writing is growing fastest among non-english-speaking and less established scientists. arXiv:2511.15872.",
+   "title": "AI-assisted writing is growing fastest among non-english-speaking and less established scientists",
+   "authors": [
+    "Liu",
+    "He",
+    "Zheng",
+    "Bu",
+    "Ni"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "15. Xu, S., Ye, X., Zhang, M., & Wang, P. (2024). Impact of ChatGPT on the writing style of condensed matter physicists. arXiv:2408.17325.",
+   "title": "Impact of ChatGPT on the writing style of condensed matter physicists",
+   "authors": [
+    "Xu",
+    "Ye",
+    "Zhang",
+    "Wang"
+   ],
+   "year": 2024,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "16. Ben-Zion, Y., Cohen, E., & Davidovitch, N. (2026). Changes in Manuscript Length, Research Team Size, and International Collaboration in the Post-2022 Period: Evidence from PLOS ONE. arXiv:2603.01718.",
+   "title": "Changes in Manuscript Length, Research Team Size, and International Collaboration in the Post-2022 Period: Evidence from PLOS ONE",
+   "authors": [
+    "Ben-Zion",
+    "Cohen",
+    "Davidovitch"
+   ],
+   "year": 2026,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "17. Bao, T., Zhao, Y., Mao, J., & Zhang, C. (2025). Examining linguistic shifts in academic writing before and after the launch of ChatGPT: a study on preprint papers. Scientometrics, 130(7), 3597-3627.",
+   "title": "Examining linguistic shifts in academic writing before and after the launch of ChatGPT: a study on preprint papers",
+   "authors": [
+    "Bao",
+    "Zhao",
+    "Mao",
+    "Zhang"
+   ],
+   "year": 2025,
+   "venue": "Scientometrics",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "18. Lin, D., Zhao, N., Tian, D., & Li, J. (2025). ChatGPT as linguistic equalizer? quantifying LLM-Driven lexical shifts in academic writing. arXiv:2504.12317.",
+   "title": "ChatGPT as linguistic equalizer?",
+   "authors": [
+    "Lin",
+    "Zhao",
+    "Tian",
+    "Li"
+   ],
+   "year": 2025,
+   "venue": "quantifying LLM-Driven lexical shifts in academic writing. arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "19. Kousha, K., & Thelwall, M. (2026). How much are LLMs changing the language of academic papers after ChatGPT? A multi-database and full text analysis. Scientometrics, 1-21.",
+   "title": "How much are LLMs changing the language of academic papers after ChatGPT?",
+   "authors": [
+    "Kousha",
+    "Thelwall"
+   ],
+   "year": 2026,
+   "venue": "A multi-database and full text analysis. Scientometrics",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "20. Kuhn, T. (1962). The structure of scientific revolutions. University of Chicago Press.",
+   "title": "The structure of scientific revolutions",
+   "authors": [
+    "Kuhn"
+   ],
+   "year": 1962,
+   "venue": "University of Chicago Press",
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "21. Kobak, D., González-Márquez, R., Horvát, E. Á., & Lause, J. (2025). Delving into LLM-assisted writing in biomedical publications through excess vocabulary. Science Advances, 11(27), eadt3813.",
+   "title": "Delving into LLM-assisted writing in biomedical publications through excess vocabulary",
+   "authors": [
+    "Kobak",
+    "González-Márquez",
+    "Horvát",
+    "Lause"
+   ],
+   "year": 2025,
+   "venue": "Science Advances",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "22. Bernal, J. L., Cummins, S., & Gasparrini, A. (2017). Interrupted time series regression for the evaluation of public health interventions: a tutorial. International Journal of Epidemiology, 46(1), 348-355.",
+   "title": "Interrupted time series regression for the evaluation of public health interventions: a tutorial",
+   "authors": [
+    "Bernal",
+    "Cummins",
+    "Gasparrini"
+   ],
+   "year": 2017,
+   "venue": "International Journal of Epidemiology",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "23. Cong, L. W., & Zhu, W. (2025). Divergent LLM adoption and heterogeneous convergence paths in research writing. arXiv:2504.13629.",
+   "title": "Divergent LLM adoption and heterogeneous convergence paths in research writing",
+   "authors": [
+    "Cong",
+    "Zhu"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "24. Malvern, D., Richards, B., Chipere, N., & Durán, P. (2004). Lexical diversity and language development. Palgrave Macmillan, UK.",
+   "title": "Lexical diversity and language development",
+   "authors": [
+    "Malvern",
+    "Richards",
+    "Chipere",
+    "Durán"
+   ],
+   "year": 2004,
+   "venue": "Palgrave Macmillan, UK",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "25. Covington, M. A., & McFall, J. D. (2010). Cutting the Gordian knot: The moving-average type-token ratio (MATTR). Journal of quantitative linguistics, 17(2), 94-100.",
+   "title": "Cutting the Gordian knot: The moving-average type-token ratio (MATTR)",
+   "authors": [
+    "Covington",
+    "McFall"
+   ],
+   "year": 2010,
+   "venue": "Journal of quantitative linguistics",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "26. https://research.njit.edu/leir/paperbasket-assessing-novelty-and-integrity-research",
+   "authors": [],
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "27. Whorf, B. L. (1956). Language, thought, and reality: Selected writings of Benjamin Lee Whorf (J. B. Carroll, Ed.). MIT Press.",
+   "title": "Language, thought, and reality: Selected writings of Benjamin Lee Whorf (J",
+   "authors": [
+    "Whorf"
+   ],
+   "year": 1956,
+   "venue": "B. Carroll, Ed.). MIT Press",
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "28. Quattrociocchi, W., Capraro, V., & Perc, M. (2025). Epistemological fault lines between human and artificial intelligence. arXiv:2512.19466.",
+   "title": "Epistemological fault lines between human and artificial intelligence",
+   "authors": [
+    "Quattrociocchi",
+    "Capraro",
+    "Perc"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "29. Nielsen, F. (2010). A family of statistical symmetric divergences based on Jensen's inequality. arXiv:1009.4004.",
+   "title": "A family of statistical symmetric divergences based on Jensen's inequality",
+   "authors": [
+    "Nielsen"
+   ],
+   "year": 2010,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "30. Buchanan, J., Hill, S. & Shapoval, O. (2024). ChatGPT hallucinates non-existent citations: Evidence from economics. The American Economist, 69, 80-87.",
+   "title": "ChatGPT hallucinates non-existent citations: Evidence from economics",
+   "authors": [
+    "Buchanan",
+    "Hill",
+    "Shapoval"
+   ],
+   "year": 2024,
+   "venue": "The American Economist",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "31. Topaz, M., Roguin, N., Gupta, P., Zhang, Z., & Peltonen, L. M. (2026). Fabricated citations: an audit across 2.5 million biomedical papers. The Lancet, 407(10541), 1779-1781.",
+   "title": "Fabricated citations: an audit across 2.5 million biomedical papers",
+   "authors": [
+    "Topaz",
+    "Roguin",
+    "Gupta",
+    "Zhang",
+    "Peltonen"
+   ],
+   "year": 2026,
+   "venue": "The Lancet",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "32. Liebrenz, M., Schleifer, R., Buadze, A., Bhugra, D., & Smith, A. (2023). Generating scholarly content with ChatGPT: ethical challenges for medical publishing. The Lancet Digital Health, 5(3), e105-e106.",
+   "title": "Generating scholarly content with ChatGPT: ethical challenges for medical publishing",
+   "authors": [
+    "Liebrenz",
+    "Schleifer",
+    "Buadze",
+    "Bhugra",
+    "Smith"
+   ],
+   "year": 2023,
+   "venue": "The Lancet Digital Health",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "34. Zhang, A., Lipton, Z. C., Li, M., & Smola, A. J. (2023). Dive into deep learning. Cambridge University Press.",
+   "title": "Dive into deep learning",
+   "authors": [
+    "Zhang",
+    "Lipton",
+    "Li",
+    "Smola"
+   ],
+   "year": 2023,
+   "venue": "Cambridge University Press",
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "35. Bekkerman, R., El-Yaniv, R., Tishby, N., & Winter, Y. (2003). Distributional word clusters vs. words for text categorization. Journal of Machine Learning Research, 3(Mar), 1183-1208.",
+   "title": "Distributional word clusters vs. words for text categorization",
+   "authors": [
+    "Bekkerman",
+    "El-Yaniv",
+    "Tishby",
+    "Winter"
+   ],
+   "year": 2003,
+   "venue": "Journal of Machine Learning Research",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "36. Bekkerman, R., Fich, E. M., & Khimich, N. V. (2023). The effect of innovation similarity on asset prices: Evidence from patents’ big data. The Review of Asset Pricing Studies, 13(1), 99-145.",
+   "title": "The effect of innovation similarity on asset prices: Evidence from patents’ big data",
+   "authors": [
+    "Bekkerman",
+    "Fich",
+    "Khimich"
+   ],
+   "year": 2023,
+   "venue": "The Review of Asset Pricing Studies",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "37. Lin, J. (2002). “Divergence measures based on the Shannon entropy.” IEEE Transactions on Information theory, 37(1), 145-151.",
+   "title": "Divergence measures based on the Shannon entropy",
+   "authors": [
+    "Lin"
+   ],
+   "year": 2002,
+   "venue": "IEEE Transactions on Information theory",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "38. Bodoff, D., Bekkerman, R., & Dai, J. (2017). “Evolution of language: An empirical study at eBay Big Data Lab.” PLOS One, 12(12), e0189107.",
+   "title": "Evolution of language: An empirical study at eBay Big Data Lab",
+   "authors": [
+    "Bodoff",
+    "Bekkerman",
+    "Dai"
+   ],
+   "year": 2017,
+   "venue": "PLOS One",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "39. Smith, P. L. (1979). Splines as a useful and convenient statistical tool. The American Statistician, 33(2), 57-62.",
+   "title": "Splines as a useful and convenient statistical tool",
+   "authors": [
+    "Smith"
+   ],
+   "year": 1979,
+   "venue": "The American Statistician",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "40. Marsh, L. C., & Cormier, D. R. (2001). Spline regression models (No. 137). Sage.",
+   "title": "Spline regression models (No",
+   "authors": [
+    "Marsh",
+    "Cormier"
+   ],
+   "year": 2001,
+   "venue": "137). Sage",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "41. Dunn, O. J. (1961). Multiple comparisons among means. Journal of the American statistical association, 56(293), 52-64.",
+   "title": "Multiple comparisons among means",
+   "authors": [
+    "Dunn"
+   ],
+   "year": 1961,
+   "venue": "Journal of the American statistical association",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "42. Taljaard, M., McKenzie, J. E., Ramsay, C. R., & Grimshaw, J. M. (2014). The use of segmented regression in analysing interrupted time series studies: an example in pre-hospital ambulance care. Implementation Science, 9(1), 77.",
+   "title": "The use of segmented regression in analysing interrupted time series studies: an example in pre-hospital ambulance care",
+   "authors": [
+    "Taljaard",
+    "McKenzie",
+    "Ramsay",
+    "Grimshaw"
+   ],
+   "year": 2014,
+   "venue": "Implementation Science",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "43. Lakens, D., McLatchie, N., Isager, P. M., Scheel, A. M., & Dienes, Z. (2020). Improving inferences about null effects with Bayes factors and equivalence tests. The Journals of Gerontology: Series B, 75(1), 45-57.",
+   "title": "Improving inferences about null effects with Bayes factors and equivalence tests",
+   "authors": [
+    "Lakens",
+    "McLatchie",
+    "Isager",
+    "Scheel",
+    "Dienes"
+   ],
+   "year": 2020,
+   "venue": "The Journals of Gerontology: Series B",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "44. Schuirmann, D. J. (1987). A comparison of the two one-sided tests procedure and the power approach for assessing the equivalence of average bioavailability. Journal of pharmacokinetics and biopharmaceutics, 15(6), 657-680.",
+   "title": "A comparison of the two one-sided tests procedure and the power approach for assessing the equivalence of average bioavailability",
+   "authors": [
+    "Schuirmann"
+   ],
+   "year": 1987,
+   "venue": "Journal of pharmacokinetics and biopharmaceutics",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "45. Dienes, Z. (2014). Using Bayes to get the most out of non-significant results. Frontiers in psychology, 5, 781.",
+   "title": "Using Bayes to get the most out of non-significant results",
+   "authors": [
+    "Dienes"
+   ],
+   "year": 2014,
+   "venue": "Frontiers in psychology",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "46. Turner, S. L., Forbes, A. B., Korevaar, E., & McKenzie, J. E. (2026). Immediate level change estimates can be biased when interrupted time series analyses aggregate over time using segmented linear regression. Journal of Clinical Epidemiology, 112416.",
+   "title": "Immediate level change estimates can be biased when interrupted time series analyses aggregate over time using segmented linear regression",
+   "authors": [
+    "Turner",
+    "Forbes",
+    "Korevaar",
+    "McKenzie"
+   ],
+   "year": 2026,
+   "venue": "Journal of Clinical Epidemiology",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  }
+ ],
+ "econ.GN_2611.21070v1.pdf": [
+  {
+   "raw": "Ahn, J., Greaney, T. M. and Kiyota, K. (2022). Political conflict and angry consumers: Evaluating the regional impacts of a consumer boycott on travel services trade. Journal of the Japanese and International Economies, 65, 101216.",
+   "title": "Political conflict and angry consumers: Evaluating the regional impacts of a consumer boycott on travel services trade",
+   "authors": [
+    "Ahn",
+    "Greaney",
+    "Kiyota"
+   ],
+   "year": 2022,
+   "venue": "Journal of the Japanese and International Economies",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Almagro, M. and Dominguez-Iino, T. (2025). Location sorting and endogenous amenities: Evidence from Amsterdam. Econometrica, 93 (3), 1031-1071.",
+   "title": "Location sorting and endogenous amenities: Evidence from Amsterdam",
+   "authors": [
+    "Almagro",
+    "Dominguez-Iino"
+   ],
+   "year": 2025,
+   "venue": "Econometrica",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Angrist, J. D., Caldwell, S. and Hall, J. V. (2021). Uber versus taxi: A driver’s eye view. American Economic Journal: Applied Economics, 13 (3), 272-308.",
+   "title": "Uber versus taxi: A driver’s eye view",
+   "authors": [
+    "Angrist",
+    "Caldwell",
+    "Hall"
+   ],
+   "year": 2021,
+   "venue": "American Economic Journal: Applied Economics",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Autor, D. H., Dorn, D. and Hanson, G. H. (2013). The China syndrome: Local labor market effects of import competition in the United States. American Economic Review, 103 (6), 2121-2168.",
+   "title": "The China syndrome: Local labor market effects of import competition in the United States",
+   "authors": [
+    "Autor",
+    "Dorn",
+    "Hanson"
+   ],
+   "year": 2013,
+   "venue": "American Economic Review",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Boeri, T., Giupponi, G., Krueger, A. B. and Machin, S. (2020). Solo self-employment and alternative work arrangements: A cross-country perspective on the changing composition of jobs. Journal of Economic Perspectives, 34 (1), 170-195.",
+   "title": "Solo self-employment and alternative work arrangements: A cross-country perspective on the changing composition of jobs",
+   "authors": [
+    "Boeri",
+    "Giupponi",
+    "Krueger",
+    "Machin"
+   ],
+   "year": 2020,
+   "venue": "Journal of Economic Perspectives",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Chen, Q. and Yan, G. (2023). A mixed placebo test for synthetic control method. Economics Letters, 224, 111004.",
+   "title": "A mixed placebo test for synthetic control method",
+   "authors": [
+    "Chen",
+    "Yan"
+   ],
+   "year": 2023,
+   "venue": "Economics Letters",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Cullen, Z. and Farronato, C. (2021). Outsourcing tasks online: Matching supply and demand on peer-to-peer internet platforms. Management Science, 67 (7), 3985-4003.",
+   "title": "Outsourcing tasks online: Matching supply and demand on peer-to-peer internet platforms",
+   "authors": [
+    "Cullen",
+    "Farronato"
+   ],
+   "year": 2021,
+   "venue": "Management Science",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Dube, A., Jacobs, J., Naidu, S. and Suri, S. (2020). Monopsony in online labor markets. American Economic Review: Insights, 2 (1), 33-46.",
+   "title": "Monopsony in online labor markets",
+   "authors": [
+    "Dube",
+    "Jacobs",
+    "Naidu",
+    "Suri"
+   ],
+   "year": 2020,
+   "venue": "American Economic Review: Insights",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Faber, B. and Gaubert, C. (2019). Tourism and economic development: Evidence from Mexico’s coastline. American Economic Review, 109 (6), 2245-2293.",
+   "title": "Tourism and economic development: Evidence from Mexico’s coastline",
+   "authors": [
+    "Faber",
+    "Gaubert"
+   ],
+   "year": 2019,
+   "venue": "American Economic Review",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Fisman, R., Hamao, Y. and Wang, Y. (2014). Nationalism and economic exchange: Evidence from shocks to Sino-Japanese relations. The Review of Financial Studies, 27 (9), 2626-2660.",
+   "title": "Nationalism and economic exchange: Evidence from shocks to Sino-Japanese relations",
+   "authors": [
+    "Fisman",
+    "Hamao",
+    "Wang"
+   ],
+   "year": 2014,
+   "venue": "The Review of Financial Studies",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Gonz´alez, L. and Surovtseva, T. (2025). Do more tourists promote local employment? Journal of Human Resources.",
+   "title": "Do more tourists promote local employment?",
+   "authors": [
+    "Gonz´alez",
+    "Surovtseva"
+   ],
+   "year": 2025,
+   "venue": "Journal of Human Resources",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Gopinath, G., Gourinchas, P.-O., Presbitero, A. F. and Topalova, P. (2025). Changing global linkages: A new Cold War? Journal of International Economics, 153, 104042.",
+   "title": "Changing global linkages: A new Cold War?",
+   "authors": [
+    "Gopinath",
+    "Gourinchas",
+    "Presbitero",
+    "Topalova"
+   ],
+   "year": 2025,
+   "venue": "Journal of International Economics",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Greaney, T. M. and Kiyota, K. (2026). Regional impacts of international tourism boycott: A China-Japan conflict. Economic Inquiry, 64 (2), 409-433.",
+   "title": "Regional impacts of international tourism boycott: A China-Japan conflict",
+   "authors": [
+    "Greaney",
+    "Kiyota"
+   ],
+   "year": 2026,
+   "venue": "Economic Inquiry",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Hazell, J. and Taska, B. (2025). Downward rigidity in the wage for new hires. American Economic Review, 115 (12), 4183-4217.",
+   "title": "Downward rigidity in the wage for new hires",
+   "authors": [
+    "Hazell",
+    "Taska"
+   ],
+   "year": 2025,
+   "venue": "American Economic Review",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Heilmann, K. (2016). Does political conflict hurt trade? Evidence from consumer boycotts. Journal of International Economics, 99, 179-191.",
+   "title": "Does political conflict hurt trade?",
+   "authors": [
+    "Heilmann"
+   ],
+   "year": 2016,
+   "venue": "Evidence from consumer boycotts. Journal of International Economics",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Hidalgo, A. (2024). Your room is ready: Tourism and urban revival. Regional Science and Urban Economics, 109, 104059.",
+   "title": "Your room is ready: Tourism and urban revival",
+   "authors": [
+    "Hidalgo"
+   ],
+   "year": 2024,
+   "venue": "Regional Science and Urban Economics",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Kanayama, H., Miyaji, S. and Otani, S. (2026). Just after minimum wage hikes: Shortrun labor-demand response and reallocation. arXiv preprint arXiv:2505.04555, version 3, March 2026; first posted May 2025.",
+   "title": "Just after minimum wage hikes: Shortrun labor-demand response and reallocation",
+   "authors": [
+    "Kanayama",
+    "Miyaji",
+    "Otani"
+   ],
+   "year": 2026,
+   "venue": "arXiv. , version 3, March",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "- and Otani, S. (2026). Nonparametric estimation of matching efficiency and elasticity in a spot gig work platform: 2019-2023. Journal of the Japanese and International Economies, 81, 101439.",
+   "title": "Nonparametric estimation of matching efficiency and elasticity in a spot gig work platform: 2019-2023",
+   "authors": [
+    "Otani"
+   ],
+   "year": 2026,
+   "venue": "Journal of the Japanese and International Economies",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Katz, L. F. and Krueger, A. B. (2019). The rise and nature of alternative work arrangements in the United States, 1995-2015. ILR Review, 72 (2), 382-416.",
+   "title": "The rise and nature of alternative work arrangements in the United States, 1995-2015",
+   "authors": [
+    "Katz",
+    "Krueger"
+   ],
+   "year": 2019,
+   "venue": "ILR Review",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Kurmann, A., Lal´e, E. and Martin, J. (2026). When neighbors stop knocking: The impact of Canada’s 2025 tourism decline on US local labor markets. Journal of International Economics, 162, 104269.",
+   "title": "When neighbors stop knocking: The impact of Canada’s 2025 tourism decline on US local labor markets",
+   "authors": [
+    "Kurmann",
+    "Lal´e",
+    "Martin"
+   ],
+   "year": 2026,
+   "venue": "Journal of International Economics",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Mas, A. and Pallais, A. (2020). Alternative work arrangements. Annual Review of Economics, 12 (1), 631-658.",
+   "title": "Alternative work arrangements",
+   "authors": [
+    "Mas",
+    "Pallais"
+   ],
+   "year": 2020,
+   "venue": "Annual Review of Economics",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Matsuura, T., Endoh, M. and Saito, H. (2026). Impact of Inbound Tourism on Regional Economic Development: Evidence from Japanese Commuting Zone-Level Data. RIETI Discussion Paper 26-E-020, Research Institute of Economy, Trade and Industry (RIETI).",
+   "title": "Impact of Inbound Tourism on Regional Economic Development: Evidence from Japanese Commuting Zone-Level Data",
+   "authors": [
+    "Matsuura",
+    "Endoh",
+    "Saito"
+   ],
+   "year": 2026,
+   "venue": "RIETI Discussion Paper 26-E-020, Research Institute of Economy, Trade and Industry (RIETI)",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Michaels, G. and Zhi, X. (2010). Freedom fries. American Economic Journal: Applied Economics, 2 (3), 256-281.",
+   "title": "Freedom fries",
+   "authors": [
+    "Michaels",
+    "Zhi"
+   ],
+   "year": 2010,
+   "venue": "American Economic Journal: Applied Economics",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Sekiya, K., Otani, S., Komatsu, Y., Fujii, Y., Ozeki, S. and Noda, S. (2026). Designing recommendation exposure and favorite lists: A field experiment in a spot-work platform. arXiv preprint arXiv:2606.17397.",
+   "title": "Designing recommendation exposure and favorite lists: A field experiment in a spot-work platform",
+   "authors": [
+    "Sekiya",
+    "Otani",
+    "Komatsu",
+    "Fujii",
+    "Ozeki",
+    "Noda"
+   ],
+   "year": 2026,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  }
+ ],
+ "physics.soc-ph_2611.20886v1.pdf": [
+  {
+   "raw": "Alexander III. (1889). On the Voluntary Resettlement of Rural Inhabitants and Burghers to State Lands (Law of 13 July 1889). In Complete Collection of Laws of the Russian Empire (Polnoe sobranie zakonov Rossiiskoi imperii), 3rd series, Vol. 9, No. 6198, pp. 535-538. St. Petersburg: Printing House of the Second Section of His Imperial Majesty’s Own Chancellery, 1891.",
+   "title": "On the Voluntary Resettlement of Rural Inhabitants and Burghers to State Lands (Law of 13 July 1889)",
+   "authors": [
+    "Alexander"
+   ],
+   "year": 1889,
+   "venue": "Complete Collection of Laws of the Russian Empire (Polnoe sobranie zakonov Rossiiskoi imperii)",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Anna Ioannovna. (1905). Decree of Empress Anna Ioannovna to Prince Shakhovskoi, ruler of Little Russia, on marriages of Little Russians (January 31, 1734). Kievskaya Starina, 91 (October 10).",
+   "title": "Decree of Empress Anna Ioannovna to Prince Shakhovskoi, ruler of Little Russia, on marriages of Little Russians (January 31, 1734)",
+   "authors": [
+    "Ioannovna"
+   ],
+   "year": 1905,
+   "venue": "Kievskaya Starina",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Azbel, M. (1981). “Refusenik: Trapped in the Soviet Union”, London: Hamish Hamilton.",
+   "title": "Refusenik: Trapped in the Soviet Union",
+   "authors": [
+    "Azbel"
+   ],
+   "year": 1981,
+   "venue": ", London: Hamish Hamilton",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Bakai, O. S., Bar’yakhtar, V. G., Gusynin, V. P., Zagorodny, A. G., Loktev, V. M., Peletminskii, S. V., Sitenko, Yu. O., Slyusarenko, Yu. V., Storizhko, V. Yu., & Shulga, M. F. (2020). To the 90th birthday of Petro Ivanovych Fomin (1930-2011). Ukrainian Journal of Physics, 65(8), 735-736. https://doi.org/10.15407/ujpe65.8.735",
+   "title": "To the 90th birthday of Petro Ivanovych Fomin (1930-2011)",
+   "authors": [
+    "Bakai",
+    "Bar’yakhtar",
+    "Gusynin",
+    "Zagorodny",
+    "Loktev",
+    "Peletminskii",
+    "Sitenko",
+    "Slyusarenko",
+    "Storizhko",
+    "Shulga"
+   ],
+   "year": 2020,
+   "venue": "Ukrainian Journal of Physics",
+   "dois": [
+    "10.15407/ujpe65.8.735"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Bilenky S., Struminsky B. (n.d.). “Lviv National University”. The Internet Encyclopedia of Ukraine. Available at: https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CL%5CV%5CLvivNation alUniversity.htm (last consulted 3.05.2026).",
+   "title": "Lviv National University",
+   "authors": [],
+   "venue": ". The Internet Encyclopedia of Ukraine. alUniversity.htm (last consulted 3.05.2026)",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Bogolyubov, A. N. (1996). N. N. Bogolyubov: Live, Creativity, Dubna: JINR",
+   "title": "N. N. Bogolyubov: Live, Creativity, Dubna: JINR",
+   "authors": [
+    "Bogolyubov"
+   ],
+   "year": 1996,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Bogolyubov, N. N., & Parasyuk, O. S. (1955). O vychitatel’nom formalizme pri umnozhenii prichinnykh singulyarnykh funktsii [On a subtraction formalism in the multiplication of causal singular functions]. Doklady Akademii Nauk SSSR, 100 (3) 429-432.",
+   "title": "O vychitatel’nom formalizme pri umnozhenii prichinnykh singulyarnykh funktsii [On a subtraction formalism in the multiplication of causal singular functions]",
+   "authors": [
+    "Bogolyubov",
+    "Parasyuk"
+   ],
+   "year": 1955,
+   "venue": "Doklady Akademii Nauk SSSR",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Bogoliubow, N. N., & Parasiuk, O. S. (1957). Über die Multiplikation der Kausalfunktionen in der Quantentheorie der Felder [On the multiplication of causal functions in quantum field theory]. Acta Mathematica, 97, 227-266. https://doi.org/10.1007/BF02392399",
+   "title": "Über die Multiplikation der Kausalfunktionen in der Quantentheorie der Felder [On the multiplication of causal functions in quantum field theory]",
+   "authors": [
+    "Bogoliubow",
+    "Parasiuk"
+   ],
+   "year": 1957,
+   "venue": "Acta Mathematica",
+   "dois": [
+    "10.1007/bf02392399"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "CERN (1992). Relation with Non-Members States. Ukraine, 1992-1994 CERN-ARCH-DSU-DO-02-2-17 https://cds.cern.ch/record/1953628?ln=en",
+   "title": "Relation with Non-Members States",
+   "authors": [
+    "CERN"
+   ],
+   "year": 1992,
+   "venue": "Ukraine",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "CERN (2024). Jacques Haissinski (1935-2024). CERN Courier, July 2024. Available at: https://cerncourier.com/a/jacques-haissinski-1935-2024/ (last consulted 10.04.2026).",
+   "title": "Jacques Haissinski (1935-2024)",
+   "authors": [
+    "CERN"
+   ],
+   "year": 2024,
+   "venue": "CERN Courier, July",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Chang, K. (2023). Stanley Deser, Whose Ideas on Gravity Help Explain the Universe, Dies at 92. The New York Times, 8-10 May 2023. Available at https://www.nytimes.com/2023/05/08/science/stanley-deser-dead.html (last consulted 28.04.2026).",
+   "title": "Stanley Deser, Whose Ideas on Gravity Help Explain the Universe, Dies at 92",
+   "authors": [
+    "Chang"
+   ],
+   "year": 2023,
+   "venue": "The New York Times",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Charpak, G. (2008). “Mémoires d'un déraciné, physicien, citoyen du monde”, Paris: Odile Jacob.",
+   "title": "Mémoires d'un déraciné, physicien, citoyen du monde",
+   "authors": [
+    "Charpak"
+   ],
+   "year": 2008,
+   "venue": ", Paris: Odile Jacob",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Chodorow (2005). Memorial resolution of Marvin Chodorow (1913-2005) https://web.archive.org/web/20111020145405/http://histsoc.stanford.edu/pdfmem/ChodorowM.p df (last consulted 3.04.2026).",
+   "title": "Memorial resolution of Marvin Chodorow (1913-2005) df (last consulted 3.04.2026)",
+   "authors": [
+    "Chodorow"
+   ],
+   "year": 2005,
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "CMS Collaboration. (2025). Measurement of light-by-light scattering and the Breit-Wheeler process, and search for axion-like particles in ultraperipheral PbPb collisions at √sNN = 5.02 TeV. Journal of High Energy Physics, 2025(8), Article 6. https://doi.org/10.1007/JHEP08(2025)006.",
+   "title": "Measurement of light-by-light scattering and the Breit-Wheeler process, and search for axion-like particles in ultraperipheral PbPb collisions at √sNN = 5.02 TeV",
+   "authors": [
+    "Collaboration"
+   ],
+   "year": 2025,
+   "venue": "Journal of High Energy Physics",
+   "dois": [
+    "10.1007/jhep08(2025)006"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Cockcroft, J.D. and Walton, E.T. (1932). Proc. Roy. Soc. A, 136, 619.",
+   "title": "Proc. Roy",
+   "authors": [
+    "Cockcroft",
+    "Walton"
+   ],
+   "year": 1932,
+   "venue": "Soc. A",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Constitution UkrSSR (1929). All-Ukrainian Central Executive Committee, Constitution of the Ukrainian Socialist Soviet Republic. Available at: https://zakon.rada.gov.ua/laws/show/n0001316-29#Text (last consulted 3.05.2026).",
+   "title": "All-Ukrainian Central Executive Committee, Constitution of the Ukrainian Socialist Soviet Republic",
+   "authors": [
+    "UkrSSR"
+   ],
+   "year": 1929,
+   "venue": "(last consulted 3.05.2026)",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Cottin, M. (1979). “Monsieur Moïse HAÏSSINSKY au Laboratoire”, JOURNAL DE CHIMIE PHYSIQUE. 1979. 76, n° 7-8.",
+   "title": "Monsieur Moïse HAÏSSINSKY au Laboratoire",
+   "authors": [
+    "Cottin"
+   ],
+   "year": 1979,
+   "venue": ", JOURNAL DE CHIMIE PHYSIQUE",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Cottrell, A. G., & Cottrell, L. S. (Eds.). (1995). Times to remember: The life of Edward L. Ginzton. Berkeley: Blackberry Creek Press.",
+   "title": "Times to remember: The life of Edward L. Ginzton",
+   "authors": [
+    "Cottrell",
+    "Cottrell"
+   ],
+   "year": 1995,
+   "venue": "Berkeley: Blackberry Creek Press",
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Crease R. and Goldhaber A. (2012). Maurice Goldhaber 1911-2011, National Academy of Sciences. Available at http://biographicalmemoirs.org/pdfs/goldhaber-maurice.pdf (last consulted 3.04.2026).",
+   "title": "Maurice Goldhaber 1911-2011, National Academy of Sciences",
+   "authors": [
+    "Goldhaber"
+   ],
+   "year": 2012,
+   "venue": "(last consulted 3.04.2026)",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Csörgő, T. (2025). In Memoriam László Jenkovszky, Low-X workshop. https://indico.cern.ch/event/1490864/contributions/6682446/attachments/3132867/5558039/202 5-09-09-Csorgo-4-Jenkovszky-v3.pdf (last accessed 5.04.2026).",
+   "title": "Memoriam László Jenkovszky, Low-X workshop. 5-09-09-Csorgo-4-Jenkovszky-v3.pdf (last accessed 5.04.2026)",
+   "authors": [
+    "Csörgő"
+   ],
+   "year": 2025,
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Dobrigkeit, C. (2026). Gleb Wataghin and his mission in Brazil, these proceedings.",
+   "title": "Gleb Wataghin and his mission in Brazil, these proceedings",
+   "authors": [
+    "Dobrigkeit"
+   ],
+   "year": 2026,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Dzyuba, I.M. “RUSSIFICATION in the Ukrainian context”, Encyclopedia of Ukrainian History [Electronic resource]. Available at: https://www.history.org.ua/?termin=Rusyfikatsiia (last viewed: 29.03.2026).",
+   "title": "RUSSIFICATION in the Ukrainian context",
+   "authors": [
+    "Dzyuba"
+   ],
+   "venue": ", Encyclopedia of Ukrainian History [Electronic resource]. (last viewed: 29.03.2026)",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "ESU Baier Mykola Mykolaiovych / Yu. V. Piadyk, L. V. Bazhenov // Encyclopedia of Modern Ukraine [Online] / Eds.: I. М. Dziuba, A. I. Zhukovsky, M. H. Zhelezniak [et al.]; National Academy of Sciences of Ukraine, Shevchenko Scientific Society. - Kyiv: Institute of Encyclopedic Research, NASU, 2003. - Available at: https://esu.com.ua/article-38794 (last consulted 9.04.2026).",
+   "title": "V. Piadyk, L. V. Bazhenov // Encyclopedia of Modern Ukraine [Online] / Eds.: I. М. Dziuba, A. I. Zhukovsky, M. H. Zhelezniak [et al.]; National Academy of Sciences of Ukraine, Shevchenko Scientific Society",
+   "authors": [
+    "Yu"
+   ],
+   "year": 2003,
+   "venue": "- Kyiv: Institute of Encyclopedic Research, NASU",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "ESU Sorokin Pavlo Volodymyrovych / R. P. Slabospytskyi // Encyclopedia of Modern Ukraine [Online] / Eds.: I. М. Dziuba, A. I. Zhukovsky, M. H. Zhelezniak [et al.]; National Academy of Sciences of Ukraine, Shevchenko Scientific Society. - Kyiv: Institute of Encyclopedic Research, NASU, 2024. - Available at: https://esu.com.ua/article-883374 (last consulted 9.04.2026).",
+   "title": "ESU Sorokin Pavlo Volodymyrovych / R. P. Slabospytskyi // Encyclopedia of Modern Ukraine [Online] / Eds.: I. М. Dziuba, A. I. Zhukovsky, M. H. Zhelezniak [et al.]; National Academy of Sciences of Ukraine, Shevchenko Scientific Society",
+   "authors": [],
+   "year": 2024,
+   "venue": "- Kyiv: Institute of Encyclopedic Research, NASU",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Fainberg, Ya. (2005). In Memory of Yakov Borisovich Fainberg (September 7, 1918-March 7, 2005). Plasma Physics Reports, Vol. 31, No. 10, 2005, pp. 891-892. Translated from Fizika Plazmy, Vol. 31, No. 10, 2005, pp. 959-960. Available at: https://link.springer.com/content/pdf/10.1134/1.2101977.pdf (last consulted 10.04.2026).",
+   "title": "Memory of Yakov Borisovich Fainberg (September 7, 1918-March 7, 2005)",
+   "authors": [
+    "Fainberg",
+    "Ya"
+   ],
+   "year": 2005,
+   "venue": "Plasma Physics Reports",
+   "dois": [
+    "10.1134/1.2101977"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Gamow, G. (1928). Zur Quantentheorie des Atomkernes. Zeitschrift für Physik, 51, 204-212.",
+   "title": "Zur Quantentheorie des Atomkernes",
+   "authors": [
+    "Gamow"
+   ],
+   "year": 1928,
+   "venue": "Zeitschrift für Physik",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Gamow, G. (1970). “My world line”, New York: The Viking Press.",
+   "title": "My world line",
+   "authors": [
+    "Gamow"
+   ],
+   "year": 1970,
+   "venue": ", New York: The Viking Press",
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Gerasimenko, V. (2026). Kyiv Origins of Modern Mathematical Physics, in these proceedings.",
+   "title": "Kyiv Origins of Modern Mathematical Physics, in these proceedings",
+   "authors": [
+    "Gerasimenko"
+   ],
+   "year": 2026,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Gorenstein, M., Perepelytsya, S., Trubnikov, V. (2026). High Energy Density Physics at BITP: A Historical Overview, in these proceedings.",
+   "title": "High Energy Density Physics at BITP: A Historical Overview, in these proceedings",
+   "authors": [
+    "Gorenstein",
+    "Perepelytsya",
+    "Trubnikov"
+   ],
+   "year": 2026,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Grekov, V. (2026). Restoring the Narrative: Ways to Rethinking the Global Contribution of Ukrainian Physics, in these proceedings.",
+   "title": "Restoring the Narrative: Ways to Rethinking the Global Contribution of Ukrainian Physics, in these proceedings",
+   "authors": [
+    "Grekov"
+   ],
+   "year": 2026,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Grynyov, B., Hryn’ova, T. (2026). UKRAINE-CERN: the way to cooperation, in these proceedings.",
+   "title": "UKRAINE-CERN: the way to cooperation, in these proceedings",
+   "authors": [
+    "Grynyov",
+    "Hryn’ova"
+   ],
+   "year": 2026,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Grynyov, B. V., Titov, M. P., & Stadnik, P. O. (2019). Ukraine - CERN: The way to cooperation. Science and Innovation, 15(5), 87-98. https://doi.org/10.15407/scine15.05.087",
+   "title": "Ukraine - CERN: The way to cooperation",
+   "authors": [
+    "Grynyov",
+    "Titov",
+    "Stadnik"
+   ],
+   "year": 2019,
+   "venue": "Science and Innovation",
+   "dois": [
+    "10.15407/scine15.05.087"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Haïssinski, M. (1957) La chimie nucléaire et ses applications. Paris: Masson.",
+   "title": "La chimie nucléaire et ses applications",
+   "authors": [
+    "Haïssinski"
+   ],
+   "year": 1957,
+   "venue": "Paris: Masson",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Holovatch Yu., Honchar Y. and Krasnytska M. (2018), PHYSICS AND PHYSICISTS IN THE SHEVCHENKO SCIENTIFIC SOCIETY, Journal of physical studies, v. 22, No. 4 4003, https://doi.org/10.30970/jps.22.4003 (in Ukrainian); also in Leopolis Scientifica. Exact Sciences in Lviv until the middle of the 20th century. Lviv, 2021, pp. 273-302 (in English).",
+   "title": "PHYSICS AND PHYSICISTS IN THE SHEVCHENKO SCIENTIFIC SOCIETY, Journal of physical studies, v",
+   "authors": [
+    "Yu",
+    "Krasnytska"
+   ],
+   "year": 2018,
+   "venue": "22, No. 4 4003, (in Ukrainian); also in Leopolis Scientifica. Exact Sciences in Lviv until the middle of the 20th century. Lviv",
+   "dois": [
+    "10.30970/jps.22.4003"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Hryn'ova, T., Grekov, V., and Spodenets, I. (2026). Quantum of independence: How Ukraine is reclaiming its pioneering role in the history of modern physics. ZN.UA. February 18. https://zn.ua/eng/quantum-of-independence-how-ukraine-is-reclaiming-its-pioneering-role-in-the -history-of-modern-physics.html.",
+   "title": "Quantum of independence: How Ukraine is reclaiming its pioneering role in the history of modern physics",
+   "authors": [
+    "Hryn'ova",
+    "Grekov",
+    "Spodenets"
+   ],
+   "year": 2026,
+   "venue": "ZN.UA. February 18. -history-of-modern-physics.html",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Hull, M. (1998). Gregory Breit 1899-1981, Washington D.C.: National Academies Press. http://biographicalmemoirs.org/pdfs/breit-gregory.pdf (last consulted 3.04.2026).",
+   "title": "Gregory Breit 1899-1981, Washington D.C.: National Academies Press",
+   "authors": [
+    "Hull"
+   ],
+   "year": 1998,
+   "venue": "(last consulted 3.04.2026)",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Johnsen, K. (1977). Gersh Budker. Nature 270, 459. https://doi.org/10.1038/270459a0",
+   "title": "Gersh Budker",
+   "authors": [
+    "Johnsen"
+   ],
+   "year": 1977,
+   "venue": "Nature 270",
+   "dois": [
+    "10.1038/270459a0"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Khramov, Yu. (1991). History of formation and development of physics schools in Ukraine, Kyiv: Phenix (in Russian).",
+   "title": "History of formation and development of physics schools in Ukraine, Kyiv: Phenix (in Russian)",
+   "authors": [
+    "Khramov",
+    "Yu"
+   ],
+   "year": 1991,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Klyovanyy, L. (1928). “Geographical Atlas of Ukraine”, Kyiv: State Publishing House of Ukraine.",
+   "title": "Geographical Atlas of Ukraine",
+   "authors": [
+    "Klyovanyy"
+   ],
+   "year": 1928,
+   "venue": ", Kyiv: State Publishing House of Ukraine",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Kobchenko, K. (2020). Ukrainian emigration to Germany after WWII: Formation and Self-Representation of a Transnational Community (1945-1991), Euxeinos, Vol. 10, No. 30, https://gce.unisg.ch/fileadmin/user_upload/HSG_ROOT/Institut_GCE/Euxeinos/30/Euxeinos_30 _71-89_Kobchenko.pdf (last accessed 5.04.2026).",
+   "title": "Ukrainian emigration to Germany after WWII: Formation and Self-Representation of a Transnational Community (1945-1991), Euxeinos, Vol. 10, No. 30, _71-89_Kobchenko.pdf (last accessed 5.04.2026)",
+   "authors": [
+    "Kobchenko"
+   ],
+   "year": 2020,
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Kozyrski, W. H., & Shenderovskyi, V. A. (2020). To the history of theoretical researches at the Institute of Physics of NAS of Ukraine. Optoelectronics and Semiconductor Technique, 55, 58-82. http://www.iop.kiev.ua/assets/files/2020/vtp_history.pdf",
+   "title": "To the history of theoretical researches at the Institute of Physics of NAS of Ukraine",
+   "authors": [
+    "Kozyrski",
+    "Shenderovskyi"
+   ],
+   "year": 2020,
+   "venue": "Optoelectronics and Semiconductor Technique",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Kragh, H. (2025). Tachyons before tachyons: Lev Strum (1890-1936) and superluminal velocities. EPJ H 50, 9 (2025). https://doi.org/10.1140/epjh/s13129-025-00103-z",
+   "title": "Tachyons before tachyons: Lev Strum (1890-1936) and superluminal velocities",
+   "authors": [
+    "Kragh"
+   ],
+   "year": 2025,
+   "venue": "EPJ H 50",
+   "dois": [
+    "10.1140/epjh/s13129-025-00103-z"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Lalli, R., & Navarro, J. (eds.) (2024). Globalizing Physics. Oxford: Oxford University Press.",
+   "title": "Globalizing Physics",
+   "authors": [
+    "Lalli",
+    "Navarro"
+   ],
+   "year": 2024,
+   "venue": "Oxford: Oxford University Press",
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Lazur, V. (2021). \"In Ukraine, I would have been sent to Siberia or shot\": Lyubomyr Romankiv on his brilliant career in the USA and Apple, Radio Svoboda (in Ukrainian). https://web.archive.org/web/20210417201817/https://www.radiosvoboda.org/a/lubomyr-romanki v-ibm-90-rokiv/31203042.html (last access 4.04.2026).",
+   "title": "Ukraine, I would have been sent to Siberia or shot",
+   "authors": [
+    "Lazur"
+   ],
+   "year": 2021,
+   "venue": ": Lyubomyr Romankiv on his brilliant career in the USA and Apple, Radio Svoboda (in Ukrainian). v-ibm-90-rokiv/31203042.html (last access 4.04.2026)",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Levchuk, L. (1992), The intra-atomic motion of bound electrons as a possible source of a systematic error in electron beam polarization measurements by means of a Moller polarimeter, KFTI 92-32, https://inis.iaea.org/records/58e6a-15s46 (last consulted 9.04.2026).",
+   "title": "The intra-atomic motion of bound electrons as a possible source of a systematic error in electron beam polarization measurements by means of a Moller polarimeter, KFTI 92-32, (last consulted 9.04.2026)",
+   "authors": [
+    "Levchuk"
+   ],
+   "year": 1992,
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Levchuk, L. (2026). NSC KIPT in experimental particle physics: from 2 GeV electron Linac to CMS experiment at LHC. Available at: https://indico.cern.ch/event/1603776/contributions/6848846/ (last consulted 4.05.2026).",
+   "title": "NSC KIPT in experimental particle physics: from 2 GeV electron Linac to CMS experiment at LHC",
+   "authors": [
+    "Levchuk"
+   ],
+   "year": 2026,
+   "venue": "(last consulted 4.05.2026)",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Linfield, H. S. (1928). The American Jewish Year Book, Vol. 31 (October 5, 1929, to September 22, 1930 / 5690), pp. 299-334, https://www.jstor.org/stable/pdf/23601425.pdf (last accessed 4.04.2026).",
+   "title": "The American Jewish Year Book, Vol. 31 (October 5, 1929, to September 22, 1930 / 5690), pp. 299-334, (last accessed 4.04.2026)",
+   "authors": [
+    "Linfield"
+   ],
+   "year": 1928,
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Lock, W.O. (1975). A history of the collaboration between the European Organization for Nuclear Research (CERN) and the Joint Institute for Nuclear Research (JINR), and with Soviet research institutes in the USSR 1955-1970, CERN-75-07, https://cds.cern.ch/record/186009 (last accessed 3.04.2026).",
+   "title": "A history of the collaboration between the European Organization for Nuclear Research (CERN) and the Joint Institute for Nuclear Research (JINR), and with Soviet research institutes in the USSR 1955-1970, CERN-75-07, (last accessed 3.04.2026)",
+   "authors": [
+    "Lock"
+   ],
+   "year": 1975,
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Lucie Str. (1944). “I married a Russian : Letters from Kharkov”, London : George Allen & Unwin Ltd.",
+   "title": "I married a Russian : Letters from Kharkov",
+   "authors": [
+    "Str"
+   ],
+   "year": 1944,
+   "venue": ", London : George Allen & Unwin Ltd",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Martynov, E., Nicolescu, B. (2019). Odderon effects in the differential cross-sections at Tevatron and LHC energies. Eur. Phys. J. C 79, 461. https://doi.org/10.1140/epjc/s10052-019-6954-6 (last consulted 9.04.2026).",
+   "title": "Odderon effects in the differential cross-sections at Tevatron and LHC energies",
+   "authors": [
+    "Martynov",
+    "Nicolescu"
+   ],
+   "year": 2019,
+   "venue": "Eur. Phys. J. C 79",
+   "dois": [
+    "10.1140/epjc/s10052-019-6954-6"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Neklyudov, I. M., et al. (2004). In memory of Mykhailo Petrovych Rekalo. Problems of Atomic Science and Technology, (4), 155-156. https://vant.kipt.kharkov.ua/ARTICLE/VANT_2004_4/article_2004_4_155.pdf",
+   "title": "memory of Mykhailo Petrovych Rekalo",
+   "authors": [
+    "Neklyudov"
+   ],
+   "year": 2004,
+   "venue": "Problems of Atomic Science and Technology, (4)",
+   "dois": [],
+   "kind": "web",
+   "etAl": true
+  },
+  {
+   "raw": "Novosyadlyj, B. (2026). George Gamow: from beta decay to cosmological nucleosynthesis, in these proceedings.",
+   "title": "George Gamow: from beta decay to cosmological nucleosynthesis, in these proceedings",
+   "authors": [
+    "Novosyadlyj"
+   ],
+   "year": 2026,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Nurmagambetov, A. J. (2026). Prof. D. V. Volkov at CERN, in these proceedings.",
+   "title": "Prof. D. V. Volkov at CERN, in these proceedings",
+   "authors": [
+    "Nurmagambetov"
+   ],
+   "year": 2026,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Oxford English Dictionary (n.d.), Russian (noun and adjective) https://www.oed.com/dictionary/russian_n (last viewed 12.05.2026).",
+   "title": "Russian (noun and adjective) (last viewed 12.05.2026)",
+   "authors": [
+    "Dictionary"
+   ],
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Panofsky, W. K. H. (2007). Panofsky on physics, politics, and peace: Pief remembers. Springer. https://doi.org/10.1007/978-0-387-69732-1.",
+   "title": "Panofsky on physics, politics, and peace: Pief remembers",
+   "authors": [
+    "Panofsky",
+    "W. K"
+   ],
+   "year": 2007,
+   "venue": "Springer",
+   "dois": [
+    "10.1007/978-0-387-69732-1"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Petrovsky-Shtern, Y., and Polonsky, A. (Eds.). (2014). POLIN: Studies in Polish Jewry (Vol. 26, Jews and Ukrainians). The Littman Library of Jewish Civilization. https://doi.org/10.2307/j.ctv2vr8vjf.",
+   "title": "POLIN: Studies in Polish Jewry (Vol",
+   "authors": [
+    "Petrovsky-Shtern",
+    "Polonsky"
+   ],
+   "year": 2014,
+   "venue": "26, Jews and Ukrainians). The Littman Library of Jewish Civilization",
+   "dois": [
+    "10.2307/j.ctv2vr8vjf"
+   ],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Plokhy, S. (2010). “The origins of the Slavic Nations”. Cambridge: Cambridge University Press.",
+   "title": "The origins of the Slavic Nations",
+   "authors": [
+    "Plokhy"
+   ],
+   "year": 2010,
+   "venue": ". Cambridge: Cambridge University Press",
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Plokhy, S. (2015). “The Gates of Europe”. London: Allen Lane.",
+   "title": "The Gates of Europe",
+   "authors": [
+    "Plokhy"
+   ],
+   "year": 2015,
+   "venue": ". London: Allen Lane",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "PT (1961). Physics Today January 1961, https://aip.brightspotcdn.com/PTO.v14.i1.98_3.online.pdf (last viewed 2.04.2026).",
+   "title": "Physics Today January 1961, (last viewed 2.04.2026)",
+   "authors": [
+    "PT"
+   ],
+   "year": 1961,
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Pulyui, I. (1996). Collection of Works. Edited by V. Shenderovskyi, Kyiv: Rada (in Ukrainian).",
+   "title": "Collection of Works",
+   "authors": [
+    "Pulyui"
+   ],
+   "year": 1996,
+   "venue": "Shenderovskyi, Kyiv: Rada (in Ukrainian)",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Ranyuk,Y. (2006), Laboratory N. 1: history of nuclear physics in Ukraine, Kharkiv: ACTA.",
+   "title": "Laboratory N. 1: history of nuclear physics in Ukraine, Kharkiv: ACTA",
+   "authors": [
+    "Ranyuk"
+   ],
+   "year": 2006,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "RASA, https://rasa-usa.org/en/ (last viewed: 2.04.2026).",
+   "title": "RASA, (last viewed: 2.04.2026)",
+   "authors": [],
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Rovenchak O. and Volodko V. (2018), “Comparative Analysis of the Identity and Practices of Post-war Representatives and the Contemporary Wave of Ukrainian Immigrants to the United States”, Annales Universitatis Mariae Curie-Sklodowska Lublin - Polonia, vol. XLIII, I, p. 33. Available at https://journals.umcs.pl/i/article/download/6541/5801 (last viewed: 20.03.2026).",
+   "title": "Comparative Analysis of the Identity and Practices of Post-war Representatives and the Contemporary Wave of Ukrainian Immigrants to the United States",
+   "authors": [
+    "Volodko"
+   ],
+   "year": 2018,
+   "venue": ", Annales Universitatis Mariae Curie-Sklodowska Lublin - Polonia",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Rutherford (1911). “The Scattering of α and β Particles by Matter and the Structure of the Atom.” Philosophical Magazine, Series 6, 21 (125), 669-688.",
+   "title": "The Scattering of α and β Particles by Matter and the Structure of the Atom",
+   "authors": [
+    "Rutherford"
+   ],
+   "year": 1911,
+   "venue": "Philosophical Magazine, Series 6",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Schenderovskyi, V. (2026). The celebrated legacy of the eminent 20th-century physicist Dmytro Ivanenko, in these proceedings.",
+   "title": "The celebrated legacy of the eminent 20th-century physicist Dmytro Ivanenko, in these proceedings",
+   "authors": [
+    "Schenderovskyi"
+   ],
+   "year": 2026,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Scherbak, O. (2012). Nathan Rozen in Ukraine: unknown pages of life and work, Visnyk NTU KhPI, 42 (948) p. 179. (in Ukrainian) https://library.kpi.kharkov.ua/files/Vestniki/2012_42.pdf.",
+   "title": "Nathan Rozen in Ukraine: unknown pages of life and work, Visnyk NTU KhPI, 42 (948) p. 179",
+   "authors": [
+    "Scherbak"
+   ],
+   "year": 2012,
+   "venue": "(in Ukrainian)",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Shepelev, A. and Larbalestier, D. (2011). The discovery of type II superconductors, CERN Courier, October 2011. Available at https://cerncourier.com/a/the-discovery-of-type-ii-superconductors/ (last consulted 10.04.2026).",
+   "title": "The discovery of type II superconductors, CERN Courier, October 2011",
+   "authors": [
+    "Shepelev",
+    "Larbalestier"
+   ],
+   "year": 2011,
+   "venue": "(last consulted 10.04.2026)",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Shiltsev, V. (2025). Post 1980s Diaspora of Russian Particle Physicists. 4th international symposium on history of particle physics. CERN. 10-13 November. https://indico.cern.ch/event/1480892/contributions/6386322/.",
+   "title": "Post 1980s Diaspora of Russian Particle Physicists",
+   "authors": [
+    "Shiltsev"
+   ],
+   "year": 2025,
+   "venue": "4th international symposium on history of particle physics. CERN. 10-13 November",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Shifman, M., Vainshtein, A., Shuryak E., and Zelevinsky V. (2025). Iosif Khriplovich 1937-2024 CERN Courier, May 2025. https://cerncourier.com/a/iosif-khriplovich-1937-2024/ (last consulted 9.04.2026).",
+   "title": "Iosif Khriplovich 1937-2024 CERN Courier, May 2025",
+   "authors": [
+    "Shifman",
+    "Vainshtein",
+    "Zelevinsky"
+   ],
+   "year": 2025,
+   "venue": "(last consulted 9.04.2026)",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Sidletskiy, O. (2025). Ukrainian crystals for the Large Hadron Collider: when science is stronger than war. Mirror of the Week, October 22. Available at: https://zn.ua/eng/ukrainian-crystals-for-the-large-hadron-collider-when-science-is-stronger-thanwar.html (last consulted 4.05.2026).",
+   "title": "Ukrainian crystals for the Large Hadron Collider: when science is stronger than war",
+   "authors": [
+    "Sidletskiy"
+   ],
+   "year": 2025,
+   "venue": "Mirror of the Week, October 22. (last consulted 4.05.2026)",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Sinelnikov, C., Leipunsky, A., Walther, A., and Latischev, G. (1932). The disintegration of lithium by high velocity protons. Physikalische Zeitschrift der Sowjetunion, 2(3), 285.",
+   "title": "The disintegration of lithium by high velocity protons",
+   "authors": [
+    "Sinelnikov",
+    "Leipunsky",
+    "Walther",
+    "Latischev"
+   ],
+   "year": 1932,
+   "venue": "Physikalische Zeitschrift der Sowjetunion",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Snyder, T. (2003). “The reconstruction of nations : Poland, Ukraine, Lithuania, Belarus, 1569-1999”. New Haven & London: Yale University Press.",
+   "title": "The reconstruction of nations : Poland, Ukraine, Lithuania, Belarus, 1569-1999",
+   "authors": [
+    "Snyder"
+   ],
+   "year": 2003,
+   "venue": ". New Haven & London: Yale University Press",
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Snyder, T. (2015). “Bloodlands”, London: Vintage.",
+   "title": "“Bloodlands”, London: Vintage",
+   "authors": [
+    "Snyder"
+   ],
+   "year": 2015,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "SSCU (2001). State Statistics Committee of Ukraine “All-Ukrainian population census”. Available at: https://web.archive.org/web/20110811204954/https://2001.ukrcensus.gov.ua/results/general/nati onality/ (last viewed: 30.03.2026).",
+   "title": "All-Ukrainian population census",
+   "authors": [
+    "Ukraine"
+   ],
+   "year": 2001,
+   "venue": ". onality/ (last viewed: 30.03.2026)",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Stober, D. (2009). Physicist: Universes pop up ad infinitum, Stanford report, April 1st, https://news.stanford.edu/news/2009/april1/hofstadter-lecture-tufts-cosmologist-alexander-vilenk in-040109.html (last viewed: 3.04.2026).",
+   "title": "Physicist: Universes pop up ad infinitum, Stanford report, April 1st, in-040109.html (last viewed: 3.04.2026)",
+   "authors": [
+    "Stober"
+   ],
+   "year": 2009,
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Strikha M.V. (2024). Ukrainian language and physics: a brief historical retrospective (to the 150th anniversary of the Shevchenko scientific society). Ukr. J. Phys. 69, No. 2, 124. https://doi.org/10.15407/ujpe69.2.124",
+   "title": "Ukrainian language and physics: a brief historical retrospective (to the 150th anniversary of the Shevchenko scientific society)",
+   "authors": [
+    "Strikha M"
+   ],
+   "year": 2024,
+   "venue": "Ukr. J. Phys. 69, No. 2",
+   "dois": [
+    "10.15407/ujpe69.2.124"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Swartz, M. (2025). https://indico.cern.ch/event/1480892/contributions/6377879/attachments/3170044/5635322/SLD _Electroweak_Physics_M_Swartz.pdf (last consulted 9.04.2026).",
+   "title": "_Electroweak_Physics_M_Swartz.pdf (last consulted 9.04.2026)",
+   "authors": [
+    "Swartz"
+   ],
+   "year": 2025,
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Sytov, A., et al. (2022). First design of a crystal-based extraction of 6 GeV electrons for the DESY II Booster Synchrotron. European Physical Journal C, 82 (3), Article 197. https://doi.org/10.1140/epjc/s10052-022-10115-4 Tan’shyna, A. (2019). Titans of Ukraine, Ukr. J. Phys. 2019. Vol. 64, No. 1 https://ujp.bitp.kiev.ua/index.php/ujp/article/view/2019294/1320 (consulted 31.03.2026).",
+   "title": "First design of a crystal-based extraction of 6 GeV electrons for the DESY II Booster Synchrotron",
+   "authors": [
+    "Sytov"
+   ],
+   "year": 2022,
+   "venue": "European Physical Journal C",
+   "dois": [
+    "10.1140/epjc/s10052-022-10115-4"
+   ],
+   "kind": "article",
+   "etAl": true
+  },
+  {
+   "raw": "Tarasov, V. (2026). ISMA's CsI scintillators in experiments on high-energy physics and astrophysics, in these proceedings.",
+   "title": "ISMA's CsI scintillators in experiments on high-energy physics and astrophysics, in these proceedings",
+   "authors": [
+    "Tarasov"
+   ],
+   "year": 2026,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Teryaeva, N. (2019). “Academician Khalatnikov turns 100!”, Otkrytanya Dubna, https://web.archive.org/web/20201031153708/https://open-dubna.ru/obshchestvo/7296-akademi ku-khalatnikovu-sto-let (last viewed 3.04.2006).",
+   "title": "Academician Khalatnikov turns 100!",
+   "authors": [
+    "Teryaeva"
+   ],
+   "year": 2019,
+   "venue": ", Otkrytanya Dubna, ku-khalatnikovu-sto-let (last viewed 3.04.2006)",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Thomson, J. J. (1897). “Cathode Rays.” Philosophical Magazine, Series 5, 44 (269), 293-316.",
+   "title": "Cathode Rays",
+   "authors": [
+    "Thomson"
+   ],
+   "year": 1897,
+   "venue": "Philosophical Magazine, Series 5",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Timoshenko, S. (1968). As I remember Princeton, N.J.: Van Nostrand.",
+   "title": "As I remember Princeton, N.J.: Van Nostrand",
+   "authors": [
+    "Timoshenko"
+   ],
+   "year": 1968,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Timoshyn D., Hryn’ova T., Kostiuk I. (2025), Ukrainian contribution to particle physics: historical perspective and prospects, PoS ICHEP2024 1197, https://arxiv.org/abs/2501.03878",
+   "title": "Ukrainian contribution to particle physics: historical perspective and prospects, PoS ICHEP2024 1197",
+   "authors": [
+    "Kostiuk"
+   ],
+   "year": 2025,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Tkachov, F. V. (2009). A contribution to the history of quarks: Boris Struminsky's 1965 JINR publication (arXiv:0904.0343). arXiv. https://doi.org/10.48550/arXiv.0904.0343",
+   "title": "A contribution to the history of quarks: Boris Struminsky's 1965 JINR publication (",
+   "authors": [
+    "Tkachov"
+   ],
+   "year": 2009,
+   "venue": "arXiv. ). arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Tupitsyna, I. (2026). PWO Scintillator: How the Story Began, in these proceedings.",
+   "title": "PWO Scintillator: How the Story Began, in these proceedings",
+   "authors": [
+    "Tupitsyna"
+   ],
+   "year": 2026,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "USSR (1959), All-Union Population Census. https://web.archive.org/web/20241206162837/https://www.demoscope.ru/weekly/ssp/sng_nac_ 59.php?reg=2 (accessed 5.04.2026).",
+   "title": "All-Union Population Census",
+   "authors": [
+    "USSR"
+   ],
+   "year": 1959,
+   "venue": "59.php?reg=2 (accessed 5.04.2026)",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "USSR (1970), All-Union Population Census. https://web.archive.org/web/20251212092033/https://www.demoscope.ru/weekly/ssp/sng_nac_ 70.php?reg=2 (accessed 5.04.2026).",
+   "title": "All-Union Population Census",
+   "authors": [
+    "USSR"
+   ],
+   "year": 1970,
+   "venue": "70.php?reg=2 (accessed 5.04.2026)",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "VRU (1992). “About the state border of Ukraine (Про державний кордон України)”, Information of the Verkhovna Rada of Ukraine (Відомості Верховної Ради України), 1992, № 2, article 5. Available at https://zakon.rada.gov.ua/laws/show/1777-12#Text (accessed March 29, 2026).",
+   "title": "About the state border of Ukraine (Про державний кордон України)",
+   "authors": [
+    "VRU"
+   ],
+   "year": 1992,
+   "venue": ", Information of the Verkhovna Rada of Ukraine (Відомості Верховної Ради України)",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Weissberg-Cybulski, A. (1951). The Accused. Simon and Schuster.",
+   "title": "The Accused",
+   "authors": [
+    "Weissberg-Cybulski"
+   ],
+   "year": 1951,
+   "venue": "Simon and Schuster",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Weisskopf, V. (1972). Physics in the Twentieth Century: Selected Essays, Cambridge (USA) and London (England): The MIT Press.",
+   "title": "Physics in the Twentieth Century: Selected Essays, Cambridge (USA) and London (England): The MIT Press",
+   "authors": [
+    "Weisskopf"
+   ],
+   "year": 1972,
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Weisskopf, V. (1991). The joy of insight, BasicBooks.",
+   "title": "The joy of insight, BasicBooks",
+   "authors": [
+    "Weisskopf"
+   ],
+   "year": 1991,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Yanovsky, F. (2016). Glimpses of Early Radar Developments in Ukraine and the Former Soviet Union, Radio Science Bulletin 358, pp. 35-68.",
+   "title": "Glimpses of Early Radar Developments in Ukraine and the Former Soviet Union, Radio Science Bulletin 358, pp. 35-68",
+   "authors": [
+    "Yanovsky"
+   ],
+   "year": 2016,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Yarba, V. (2019). Here and There, or There and Here A Physicist's Recollection: Science in the midst of political turmoil in the USSR and USA (Russian edition published Dubna: JINR in 2019, English edition published independently in 2022).",
+   "title": "Here and There, or There and Here A Physicist's Recollection: Science in the midst of political turmoil in the USSR and USA (Russian edition published Dubna: JINR in 2019, English edition published independently in 2022)",
+   "authors": [
+    "Yarba"
+   ],
+   "year": 2019,
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Zagorodnii, A.G., et al. (2022). To the 100th anniversary of the outstanding scientist Ostap Stepanovych Parasyuk (20.12.1921-22.11.2007). Ukrains’kyi Matematychnyi Zhurnal, 74(2), 279-283. https://doi.org/10.37863/umzh.v74i2.6873",
+   "title": "To the 100th anniversary of the outstanding scientist Ostap Stepanovych Parasyuk (20.12.1921-22.11.2007)",
+   "authors": [
+    "Zagorodnii"
+   ],
+   "year": 2022,
+   "venue": "Ukrains’kyi Matematychnyi Zhurnal",
+   "dois": [
+    "10.37863/umzh.v74i2.6873"
+   ],
+   "kind": "article",
+   "etAl": true
+  },
+  {
+   "raw": "Zavorotna, N. (2020). In Scholars in Exile: The Ukrainian Intellectual World in Interwar Czechoslovakia Pages: 53-71 University of Toronto Press, https://utppublishing.com/doi/10.3138/9781487504458.004 (last accessed 4.04.2026).",
+   "title": "Scholars in Exile: The Ukrainian Intellectual World in Interwar Czechoslovakia Pages: 53-71 University of Toronto Press, (last accessed 4.04.2026)",
+   "authors": [
+    "Zavorotna"
+   ],
+   "year": 2020,
+   "dois": [
+    "10.3138/9781487504458.004"
+   ],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Zhuk, S. (2024). The KGB, Russian Academic Imperialism, Ukraine, and Western Academia 1946-2024, Lanham: Lexington Books.",
+   "title": "The KGB, Russian Academic Imperialism, Ukraine, and Western Academia 1946-2024, Lanham: Lexington Books",
+   "authors": [
+    "Zhuk"
+   ],
+   "year": 2024,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Zhuk, S. (2026). Academic exchanges and technological/industrial espionage of the GRU/KGB in the West, in these proceedings.",
+   "title": "Academic exchanges and technological/industrial espionage of the GRU/KGB in the West, in these proceedings",
+   "authors": [
+    "Zhuk"
+   ],
+   "year": 2026,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  }
+ ],
+ "q-bio.PE_2611.18781v1.pdf": [
+  {
+   "raw": "Lily Agranat-Tamir, Jazlyn A Mooney, and Noah A Rosenberg. Counting the genetic ancestors from source populations in members of an admixed population. GENETICS, 226(4):iyae011, April 2024. ISSN 1943- 2631. doi: 10.1093/genetics/iyae011. URL https://academic.oup.com/genetics/article/doi/ 10.1093/genetics/iyae011/7592060.",
+   "title": "Counting the genetic ancestors from source populations in members of an admixed population",
+   "authors": [
+    "Agranat-Tamir",
+    "Mooney",
+    "Rosenberg"
+   ],
+   "year": 2024,
+   "venue": "GENETICS",
+   "dois": [
+    "10.1093/genetics/iyae011",
+    "10.1093/genetics/iyae011/7592060"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Lily Agranat-Tamir, Kennedy D. Agwamba, Jazlyn A. Mooney, and Noah A. Rosenberg. Shared ancestors and the birthday problem. The American Statistician, pages 1-10, February 2026. ISSN 0003-1305, 1537-2731. doi: 10.1080/00031305.2025.2595972. URL https://www.tandfonline.com/doi/full/ 10.1080/00031305.2025.2595972.",
+   "title": "Shared ancestors and the birthday problem",
+   "authors": [
+    "Agranat-Tamir",
+    "Agwamba",
+    "Mooney",
+    "Rosenberg"
+   ],
+   "year": 2026,
+   "venue": "The American Statistician",
+   "dois": [
+    "10.1080/00031305.2025.2595972"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "S.J.E. Baird, N.H. Barton, and A.M. Etheridge. The distribution of surviving blocks of an ancestral genome. Theoretical Population Biology, 64(4):451-471, December 2003. ISSN 00405809. doi: 10.1016/S0040-5809(03)00098-4. URL https://linkinghub.elsevier.com/retrieve/pii/ S0040580903000984.",
+   "title": "The distribution of surviving blocks of an ancestral genome",
+   "authors": [
+    "Baird",
+    "Barton",
+    "Etheridge"
+   ],
+   "year": 2003,
+   "venue": "Theoretical Population Biology",
+   "dois": [
+    "10.1016/s0040-5809(03)00098-4"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "R. Martin Ball, Joseph E. Neigel, and John C. Avise. Gene genealogies within the organismal pedigrees of random-mating populations. Evolution, 44(2):360-370, March 1990. ISSN 0014-3820, 1558-5646. doi: 10.1111/j.1558-5646.1990.tb05205.x. URL https://academic.oup.com/evolut/article/44/ 2/360/6869551.",
+   "title": "Gene genealogies within the organismal pedigrees of random-mating populations",
+   "authors": [
+    "Ball",
+    "Neigel",
+    "Avise"
+   ],
+   "year": 1990,
+   "venue": "Evolution",
+   "dois": [
+    "10.1111/j.1558-5646.1990.tb05205.x"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Yael Baran, Bogdan Pasaniuc, Sriram Sankararaman, Dara G. Torgerson, Christopher Gignoux, Celeste Eng, William Rodriguez-Cintron, Rocio Chapela, Jean G. Ford, Pedro C. Avila, Jose Rodriguez-Santana, Esteban Gonzàlez Burchard, and Eran Halperin. Fast and accurate inference of local ancestry in Latino populations. Bioinformatics, 28(10):1359-1367, May 2012. ISSN 1367-4811, 1367-4803. doi: 10.1093/bioinformatics/bts144. URL https://academic.oup.com/bioinformatics/article/28/ 10/1359/212139.",
+   "title": "Fast and accurate inference of local ancestry in Latino populations",
+   "authors": [
+    "Baran",
+    "Pasaniuc",
+    "Sankararaman",
+    "Torgerson",
+    "Gignoux",
+    "Eng",
+    "Rodriguez-Cintron",
+    "Chapela",
+    "Ford",
+    "Avila",
+    "Rodriguez-Santana",
+    "Burchard",
+    "Halperin"
+   ],
+   "year": 2012,
+   "venue": "Bioinformatics",
+   "dois": [
+    "10.1093/bioinformatics/bts144"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Nicholas H Barton and Alison M Etheridge. The relation between reproductive value and genetic contribution. Genetics, 188(4):953-973, August 2011. ISSN 1943-2631. doi: 10.1534/genetics.111.127555. URL https://academic.oup.com/genetics/article/188/4/953/6063410.",
+   "title": "The relation between reproductive value and genetic contribution",
+   "authors": [
+    "Barton",
+    "Etheridge"
+   ],
+   "year": 2011,
+   "venue": "Genetics",
+   "dois": [
+    "10.1534/genetics.111.127555"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Mark A Beaumont, Wenyang Zhang, and David J Balding. Approximate Bayesian computation in population genetics. Genetics, 162(4):2025-2035, December 2002. ISSN 1943-2631. doi: 10.1093/genetics/162. 4.2025. URL https://academic.oup.com/genetics/article/162/4/2025/6050069.",
+   "title": "Approximate Bayesian computation in population genetics",
+   "authors": [
+    "Beaumont",
+    "Zhang",
+    "Balding"
+   ],
+   "year": 2002,
+   "venue": "Genetics",
+   "dois": [
+    "10.1093/genetics/162"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Patrick Billingsley. Probability and measure. Wiley series in probability and mathematical statistics. Wiley, New York, NY, 3. ed edition, 1995. ISBN 978-0-471-00710-4.",
+   "title": "Probability and measure",
+   "authors": [
+    "Billingsley"
+   ],
+   "year": 1995,
+   "venue": "Wiley series in probability and mathematical statistics. Wiley, New York, NY",
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Jean-Tristan Brandenburg, Tristan Mary-Huard, Guillem Rigaill, Sarah J. Hearne, Hélène Corti, Johann Joets, Clémentine Vitte, Alain Charcosset, Stéphane D. Nicolas, and Maud I. Tenaillon. Independent introductions and admixtures have contributed to adaptation of European maize and its American counterparts. PLOS Genetics, 13(3):e1006666, March 2017. ISSN 1553-7404. doi: 10.1371/journal.pgen. 1006666. URL https://dx.plos.org/10.1371/journal.pgen.1006666.",
+   "title": "Independent introductions and admixtures have contributed to adaptation of European maize and its American counterparts",
+   "authors": [
+    "Brandenburg",
+    "Mary-Huard",
+    "Rigaill",
+    "Hearne",
+    "Corti",
+    "Joets",
+    "Vitte",
+    "Charcosset",
+    "Nicolas",
+    "Tenaillon"
+   ],
+   "year": 2017,
+   "venue": "PLOS Genetics",
+   "dois": [
+    "10.1371/journal.pgen",
+    "10.1371/journal.pgen.1006666"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Abra Brisbin, Katarzyna Bryc, Jake Byrnes, Fouad Zakharia, Larsson Omberg, Jeremiah Degenhardt, Andrew Reynolds, Harry Ostrer, Jason G. Mezey, and Carlos D. Bustamante. PCAdmix: principal components-based assignment of ancestry along each chromosome in individuals with admixed ancestry from two or more populations. Human Biology, 84(4):343-364, August 2012. ISSN 0018-7143, 1534-6617. doi: 10.3378/027.084.0401. URL http://www.bioone.org/doi/abs/10.3378/027.084. 0401.",
+   "title": "PCAdmix: principal components-based assignment of ancestry along each chromosome in individuals with admixed ancestry from two or more populations",
+   "authors": [
+    "Brisbin",
+    "Bryc",
+    "Byrnes",
+    "Zakharia",
+    "Omberg",
+    "Degenhardt",
+    "Reynolds",
+    "Ostrer",
+    "Mezey",
+    "Bustamante"
+   ],
+   "year": 2012,
+   "venue": "Human Biology",
+   "dois": [
+    "10.3378/027.084.0401",
+    "10.3378/027.084"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Vince Buffalo, Stephen M Mount, and Graham Coop. A genealogical look at shared ancestry on the X chromosome. Genetics, 204(1):57-75, September 2016. ISSN 1943-2631. doi: 10.1534/genetics.116. 190041. URL https://academic.oup.com/genetics/article/204/1/57/6066258.",
+   "title": "A genealogical look at shared ancestry on the X chromosome",
+   "authors": [
+    "Buffalo",
+    "Mount",
+    "Coop"
+   ],
+   "year": 2016,
+   "venue": "Genetics",
+   "dois": [
+    "10.1534/genetics.116"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "George Bj Busby, Gavin Band, Quang Si Le, Muminatou Jallow, Edith Bougama, Valentina D Mangano, Lucas N Amenga-Etego, Anthony Enimil, Tobias Apinjoh, Carolyne M Ndila, Alphaxard Manjurano, Vysaul Nyirongo, Ogobara Doumba, Kirk A Rockett, Dominic P Kwiatkowski, Chris Ca Spencer, and Malaria Genomic Epidemiology Network. Admixture into and within sub-Saharan Africa. eLife, 5:e15266, June 2016. ISSN 2050-084X. doi: 10.7554/eLife.15266. URL https://elifesciences.org/articles/ 15266.",
+   "title": "Admixture into and within sub-Saharan Africa",
+   "authors": [
+    "Busby",
+    "Band",
+    "Le",
+    "Jallow",
+    "Bougama",
+    "Mangano",
+    "Amenga-Etego",
+    "Enimil",
+    "Apinjoh",
+    "Ndila",
+    "Manjurano",
+    "Nyirongo",
+    "Doumba",
+    "Rockett",
+    "Kwiatkowski",
+    "Spencer",
+    "Network"
+   ],
+   "year": 2016,
+   "venue": "eLife",
+   "dois": [
+    "10.7554/elife.15266"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Erkan Ozge Buzbas and Paul Verdu. Inference on admixture fractions in a mechanistic model of recurrent admixture. Theoretical Population Biology, 122:149-157, July 2018. ISSN 00405809. doi: 10.1016/j.tpb. 2018.03.006. URL https://linkinghub.elsevier.com/retrieve/pii/S0040580918300662.",
+   "title": "Inference on admixture fractions in a mechanistic model of recurrent admixture",
+   "authors": [
+    "Buzbas",
+    "Verdu"
+   ],
+   "year": 2018,
+   "venue": "Theoretical Population Biology",
+   "dois": [
+    "10.1016/j.tpb"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Francisco C. Ceballos, Peter K. Joshi, David W. Clark, Michèle Ramsay, and James F. Wilson. Runs of homozygosity: windows into population history and trait architecture. Nature Reviews Genetics, 19 (4):220-234, April 2018. ISSN 1471-0056, 1471-0064. doi: 10.1038/nrg.2017.109. URL https://www. nature.com/articles/nrg.2017.109.",
+   "title": "Runs of homozygosity: windows into population history and trait architecture",
+   "authors": [
+    "Ceballos",
+    "Joshi",
+    "Clark",
+    "Ramsay",
+    "Wilson"
+   ],
+   "year": 2018,
+   "venue": "Nature Reviews Genetics",
+   "dois": [
+    "10.1038/nrg.2017.109"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Marta Ciccarella, Romain Laurent, Zachary A Szpiech, Etienne Patin, Françoise Dessarps-Freichey, José Utgé, Laure Lémée, Armando Semo, Jorge Rocha, and Paul Verdu. Nested admixture during and after the trans-Atlantic slave trade on the island of São Tomé. Molecular Biology and Evolution, 42 (7):msaf156, July 2025. ISSN 0737-4038, 1537-1719. doi: 10.1093/molbev/msaf156. URL https: //academic.oup.com/mbe/article/doi/10.1093/molbev/msaf156/8180117.",
+   "title": "Nested admixture during and after the trans-Atlantic slave trade on the island of São Tomé",
+   "authors": [
+    "Ciccarella",
+    "Laurent",
+    "Szpiech",
+    "Patin",
+    "Dessarps-Freichey",
+    "Utgé",
+    "Lémée",
+    "Semo",
+    "Rocha",
+    "Verdu"
+   ],
+   "year": 2025,
+   "venue": "Molecular Biology and Evolution",
+   "dois": [
+    "10.1093/molbev/msaf156",
+    "10.1093/molbev/msaf156/8180117"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Camille Coron and Yves Le Jan. Pedigree in the biparental Moran model. Journal of Mathematical Biology, 84(6):51, May 2022. ISSN 0303-6812, 1432-1416. doi: 10.1007/s00285-022-01752-0. URL https:// link.springer.com/10.1007/s00285-022-01752-0.",
+   "title": "Pedigree in the biparental Moran model",
+   "authors": [
+    "Coron",
+    "Le Jan"
+   ],
+   "year": 2022,
+   "venue": "Journal of Mathematical Biology",
+   "dois": [
+    "10.1007/s00285-022-01752-0"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "James F. Crow and Motoo Kimura. An introduction to population genetics theory. Blackburn Press, Caldwell, 2010. ISBN 978-1-932846-12-6. OCLC: 1586704729.",
+   "title": "An introduction to population genetics theory",
+   "authors": [
+    "Crow",
+    "Kimura"
+   ],
+   "year": 2010,
+   "venue": "Blackburn Press, Caldwell",
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Katalin Csilléry, Michael G.B. Blum, Oscar E. Gaggiotti, and Olivier François. Approximate Bayesian computation (ABC) in practice. Trends in Ecology & Evolution, 25(7):410-418, July 2010. ISSN 01695347. doi: 10.1016/j.tree.2010.04.001. URL https://linkinghub.elsevier.com/retrieve/ pii/S0169534710000662.",
+   "title": "Approximate Bayesian computation (ABC) in practice",
+   "authors": [
+    "Csilléry",
+    "Blum",
+    "Gaggiotti",
+    "François"
+   ],
+   "year": 2010,
+   "venue": "Trends in Ecology & Evolution",
+   "dois": [
+    "10.1016/j.tree.2010.04.001"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Sebastian Cuadros-Espinoza, Guillaume Laval, Lluis Quintana-Murci, and Etienne Patin. The genomic signatures of natural selection in admixed human populations. The American Journal of Human Genetics, 109(4):710-726, April 2022. ISSN 00029297. doi: 10.1016/j.ajhg.2022.02.011. URL https: //linkinghub.elsevier.com/retrieve/pii/S0002929722000623.",
+   "title": "The genomic signatures of natural selection in admixed human populations",
+   "authors": [
+    "Cuadros-Espinoza",
+    "Laval",
+    "Quintana-Murci",
+    "Patin"
+   ],
+   "year": 2022,
+   "venue": "The American Journal of Human Genetics",
+   "dois": [
+    "10.1016/j.ajhg.2022.02.011"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Angela Y. Davis. Women, race & class. Random House, 1981.",
+   "title": "Women, race & class",
+   "authors": [
+    "Davis"
+   ],
+   "year": 1981,
+   "venue": "Random House",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Yun Deng, Rasmus Nielsen, and Yun S. Song. Robust and accurate Bayesian inference of genome-wide genealogies for hundreds of genomes. Nature Genetics, 57(9):2124-2135, September 2025. ISSN 1061- 4036, 1546-1718. doi: 10.1038/s41588-025-02317-9.",
+   "title": "Robust and accurate Bayesian inference of genome-wide genealogies for hundreds of genomes",
+   "authors": [
+    "Deng",
+    "Nielsen",
+    "Song"
+   ],
+   "year": 2025,
+   "venue": "Nature Genetics",
+   "dois": [
+    "10.1038/s41588-025-02317-9"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Dimitrios Diamantidis, Wai-Tong (Louis) Fan, Matthias Birkner, and John Wakeley. Bursts of coalescence within population pedigrees whenever big families occur. Genetics, 227(1):iyae030, May 2024. ISSN 1943-2631. doi: 10.1093/genetics/iyae030.",
+   "title": "Bursts of coalescence within population pedigrees whenever big families occur",
+   "authors": [
+    "Diamantidis",
+    "Fan",
+    "Birkner",
+    "Wakeley"
+   ],
+   "year": 2024,
+   "venue": "Genetics",
+   "dois": [
+    "10.1093/genetics/iyae030"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "David Eltis, David Richardson, David Brion Davis, and David W. Blight. Atlas of the transatlantic slave trade. The Lewis Walpole series in eighteenth-century culture and history. Yale university press, New Haven London, 2010. ISBN 978-0-300-12460-6.",
+   "title": "Atlas of the transatlantic slave trade",
+   "authors": [
+    "Eltis",
+    "Richardson",
+    "Davis",
+    "Blight"
+   ],
+   "year": 2010,
+   "venue": "The Lewis Walpole series in eighteenth-century culture and history. Yale university press, New Haven London",
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Mareike Esser, Sebastian Probst, and Ellen Baake. Partitioning, duality, and linkage disequilibria in the Moran model with recombination. Journal of Mathematical Biology, 73(1):161-197, July 2016. ISSN 0303-6812, 1432-1416. doi: 10.1007/s00285-015-0936-6. URL http://link.springer.com/ 10.1007/s00285-015-0936-6.",
+   "title": "Partitioning, duality, and linkage disequilibria in the Moran model with recombination",
+   "authors": [
+    "Esser",
+    "Probst",
+    "Baake"
+   ],
+   "year": 2016,
+   "venue": "Journal of Mathematical Biology",
+   "dois": [
+    "10.1007/s00285-015-0936-6"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Shaohua Fan, Matthew E. B. Hansen, Yancy Lo, and Sarah A. Tishkoff. Going global by adapting local: A review of recent human adaptation. Science, 354(6308):54-59, October 2016. ISSN 0036-8075, 1095-9203. doi: 10.1126/science.aaf5098. URL https://www.science.org/doi/10.1126/science.aaf5098.",
+   "title": "Going global by adapting local: A review of recent human adaptation",
+   "authors": [
+    "Fan",
+    "Hansen",
+    "Lo",
+    "Tishkoff"
+   ],
+   "year": 2016,
+   "venue": "Science",
+   "dois": [
+    "10.1126/science.aaf5098"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Cesar A. Fortes-Lima, Romain Laurent, Valentin Thouzeau, Bruno Toupance, and Paul Verdu. Complex genetic admixture histories reconstructed with approximate Bayesian computation. Molecular Ecology Resources, 21(4):1098-1117, May 2021. ISSN 1755-098X, 1755-0998. doi: 10.1111/1755-0998.13325. URL https://onlinelibrary.wiley.com/doi/10.1111/1755-0998.13325.",
+   "title": "Complex genetic admixture histories reconstructed with approximate Bayesian computation",
+   "authors": [
+    "Fortes-Lima",
+    "Laurent",
+    "Thouzeau",
+    "Toupance",
+    "Verdu"
+   ],
+   "year": 2021,
+   "venue": "Molecular Ecology Resources",
+   "dois": [
+    "10.1111/1755-0998.13325"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Simon Gravel. Population genetics models of local ancestry. Genetics, 191(2):607-619, June 2012. ISSN 1943-2631. doi: 10.1534/genetics.112.139808. URL https://academic.oup.com/genetics/ article/191/2/607/5935164.",
+   "title": "Population genetics models of local ancestry",
+   "authors": [
+    "Gravel"
+   ],
+   "year": 2012,
+   "venue": "Genetics",
+   "dois": [
+    "10.1534/genetics.112.139808"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Simon Gravel and Mike Steel. The existence and abundance of ghost ancestors in biparental populations. Theoretical Population Biology, 101:47-53, May 2015. ISSN 00405809. doi: 10.1016/j.tpb.2015.02.002. URL https://linkinghub.elsevier.com/retrieve/pii/S0040580915000167.",
+   "title": "The existence and abundance of ghost ancestors in biparental populations",
+   "authors": [
+    "Gravel",
+    "Steel"
+   ],
+   "year": 2015,
+   "venue": "Theoretical Population Biology",
+   "dois": [
+    "10.1016/j.tpb.2015.02.002"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "R.C. Griffiths and P. Marjoram. Ancestral inference from samples of DNA sequences with recombination. Journal of Computational Biology, 3(4):479-502, January 1996. ISSN 1066-5277, 1557-8666. doi: 10.1089/cmb.1996.3.479. URL https://journals.sagepub.com/doi/full/10.1089/cmb.1996. 3.479.",
+   "title": "Ancestral inference from samples of DNA sequences with recombination",
+   "authors": [
+    "Griffiths",
+    "Marjoram"
+   ],
+   "year": 1996,
+   "venue": "Journal of Computational Biology",
+   "dois": [
+    "10.1089/cmb.1996.3.479",
+    "10.1089/cmb.1996"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Charles M. Grinstead and James Laurie Snell. Introduction to probability. American Mathematical Society, Providence, RI, 1998. ISBN 978-0-8218-0749-1.",
+   "title": "Introduction to probability",
+   "authors": [
+    "Grinstead",
+    "Snell"
+   ],
+   "year": 1998,
+   "venue": "American Mathematical Society, Providence, RI",
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Ryan N. Gutenkunst, Ryan D. Hernandez, Scott H. Williamson, and Carlos D. Bustamante. Inferring the joint demographic history of multiple populations from multidimensional SNP frequency data. PLoS Genetics, 5(10):e1000695, October 2009. ISSN 1553-7404. doi: 10.1371/journal.pgen.1000695. URL https://dx.plos.org/10.1371/journal.pgen.1000695.",
+   "title": "Inferring the joint demographic history of multiple populations from multidimensional SNP frequency data",
+   "authors": [
+    "Gutenkunst",
+    "Hernandez",
+    "Williamson",
+    "Bustamante"
+   ],
+   "year": 2009,
+   "venue": "PLoS Genetics",
+   "dois": [
+    "10.1371/journal.pgen.1000695"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "John BS Haldane. The combination of linkage values, and the calculation of distances between the loci of linked factors. Journal of Genetics, 8:299-309, 1919.",
+   "title": "The combination of linkage values, and the calculation of distances between the loci of linked factors",
+   "authors": [
+    "Haldane"
+   ],
+   "year": 1919,
+   "venue": "Journal of Genetics",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Garrett Hellenthal, George B. J. Busby, Gavin Band, James F. Wilson, Cristian Capelli, Daniel Falush, and Simon Myers. A genetic atlas of human admixture history. Science, 343(6172):747-751, February 2014. ISSN 0036-8075, 1095-9203. doi: 10.1126/science.1243518. URL https://www.science.org/doi/ 10.1126/science.1243518.",
+   "title": "A genetic atlas of human admixture history",
+   "authors": [
+    "Hellenthal",
+    "Busby",
+    "Band",
+    "Wilson",
+    "Capelli",
+    "Falush",
+    "Myers"
+   ],
+   "year": 2014,
+   "venue": "Science",
+   "dois": [
+    "10.1126/science.1243518"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Evelyne Heyer, Alexandre Sibert, and Frédéric Austerlitz. Cultural transmission of fitness: genes take the fast lane. Trends in Genetics, 21(4):234-239, April 2005. ISSN 01689525. doi: 10.1016/j.tig.2005.02.007. URL https://linkinghub.elsevier.com/retrieve/pii/S0168952505000478.",
+   "title": "Cultural transmission of fitness: genes take the fast lane",
+   "authors": [
+    "Heyer",
+    "Sibert",
+    "Austerlitz"
+   ],
+   "year": 2005,
+   "venue": "Trends in Genetics",
+   "dois": [
+    "10.1016/j.tig.2005.02.007"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Richard R. Hudson. Properties of a neutral allele model with intragenic recombination. Theoretical Population Biology, 23(2):183-201, April 1983. ISSN 00405809. doi: 10.1016/0040-5809(83)90013-8. URL https://linkinghub.elsevier.com/retrieve/pii/0040580983900138.",
+   "title": "Properties of a neutral allele model with intragenic recombination",
+   "authors": [
+    "Hudson"
+   ],
+   "year": 1983,
+   "venue": "Theoretical Population Biology",
+   "dois": [
+    "10.1016/0040-5809(83)90013-8"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Emilia Huerta-Sánchez, Xin Jin, Asan, Zhuoma Bianba, Benjamin M. Peter, Nicolas Vinckenbosch, Yu Liang, Xin Yi, Mingze He, Mehmet Somel, Peixiang Ni, Bo Wang, Xiaohua Ou, Huasang, Jiangbai Luosang, Zha Xi Ping Cuo, Kui Li, Guoyi Gao, Ye Yin, Wei Wang, Xiuqing Zhang, Xun Xu, Huanming Yang, Yingrui Li, Jian Wang, Jun Wang, and Rasmus Nielsen. Altitude adaptation in Tibetans caused by introgression of Denisovan-like DNA. Nature, 512(7513):194-197, August 2014. ISSN 0028-0836, 1476-4687. doi: 10.1038/nature13408. URL https://www.nature.com/articles/nature13408.",
+   "title": "Altitude adaptation in Tibetans caused by introgression of Denisovan-like DNA",
+   "authors": [
+    "Huerta-Sánchez",
+    "Jin",
+    "Asan",
+    "Bianba",
+    "Peter",
+    "Vinckenbosch",
+    "Liang",
+    "Yi",
+    "He",
+    "Somel",
+    "Ni",
+    "Wang",
+    "Ou",
+    "Huasang",
+    "Luosang",
+    "Cuo",
+    "Li",
+    "Gao",
+    "Yin",
+    "Wang",
+    "Zhang",
+    "Xu",
+    "Yang",
+    "Li",
+    "Wang",
+    "Wang",
+    "Nielsen"
+   ],
+   "year": 2014,
+   "venue": "Nature",
+   "dois": [
+    "10.1038/nature13408"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Olav Kallenberg. Foundations of modern probability, volume 99 of Probability Theory and Stochastic Modelling. Springer International Publishing, Cham, 2021. ISBN 978-3-030-61870-4 978-3-030-61871-1. doi: 10.1007/978-3-030-61871-1. URL https://link.springer.com/10.1007/978-3-030-61871-1.",
+   "title": "Foundations of modern probability, volume 99 of Probability Theory and Stochastic Modelling",
+   "authors": [
+    "Kallenberg"
+   ],
+   "year": 2021,
+   "venue": "Springer International Publishing, Cham",
+   "dois": [
+    "10.1007/978-3-030-61871-1"
+   ],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Jerome Kelleher, Kevin R. Thornton, Jaime Ashander, and Peter L. Ralph. Efficient pedigree recording for fast population genetics simulation. PLOS Computational Biology, 14(11):e1006581, November 2018. ISSN 1553-7358. doi: 10.1371/journal.pcbi.1006581. URL https://dx.plos.org/10.1371/ journal.pcbi.1006581.",
+   "title": "Efficient pedigree recording for fast population genetics simulation",
+   "authors": [
+    "Kelleher",
+    "Thornton",
+    "Ashander",
+    "Ralph"
+   ],
+   "year": 2018,
+   "venue": "PLOS Computational Biology",
+   "dois": [
+    "10.1371/journal.pcbi.1006581"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "J. F. C. Kingman. On the genealogy of large populations. Journal of Applied Probability, 19(A):27-43, 1982a. ISSN 0021-9002, 1475-6072. doi: 10.2307/3213548.",
+   "title": "On the genealogy of large populations",
+   "authors": [
+    "Kingman"
+   ],
+   "year": 1982,
+   "venue": "Journal of Applied Probability",
+   "dois": [
+    "10.2307/3213548"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "J.F.C. Kingman. The coalescent. Stochastic Processes and their Applications, 13(3):235-248, September 1982b. ISSN 03044149. doi: 10.1016/0304-4149(82)90011-4.",
+   "title": "The coalescent",
+   "authors": [
+    "Kingman"
+   ],
+   "year": 1982,
+   "venue": "Stochastic Processes and their Applications",
+   "dois": [
+    "10.1016/0304-4149(82)90011-4"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Augustine Kong, Daniel F. Gudbjartsson, Jesus Sainz, Gudrun M. Jonsdottir, Sigurjon A. Gudjonsson, Bjorgvin Richardsson, Sigrun Sigurdardottir, John Barnard, Bjorn Hallbeck, Gisli Masson, Adam Shlien, Stefan T. Palsson, Michael L. Frigge, Thorgeir E. Thorgeirsson, Jeffrey R. Gulcher, and Kari Stefansson. A high-resolution recombination map of the human genome. Nature Genetics, 31(3):241-247, July 2002. ISSN 1061-4036, 1546-1718. doi: 10.1038/ng917. URL https://www.nature.com/articles/ng917z.",
+   "title": "A high-resolution recombination map of the human genome",
+   "authors": [
+    "Kong",
+    "Gudbjartsson",
+    "Sainz",
+    "Jonsdottir",
+    "Gudjonsson",
+    "Richardsson",
+    "Sigurdardottir",
+    "Barnard",
+    "Hallbeck",
+    "Masson",
+    "Shlien",
+    "Palsson",
+    "Frigge",
+    "Thorgeirsson",
+    "Gulcher",
+    "Stefansson"
+   ],
+   "year": 2002,
+   "venue": "Nature Genetics",
+   "dois": [
+    "10.1038/ng917"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Amaury Lambert, Verónica Miró Pina, and Emmanuel Schertzer. Chromosome painting: How recombination mixes ancestral colors. The Annals of Applied Probability, 31(2), April 2021. ISSN 1050-5164. doi: 10.1214/20-AAP1606. URL https:// projecteuclid.org/journals/annals-of-applied-probability/volume-31/issue-2/ Chromosome-painting-How-recombination-mixes-ancestral-colors/10.1214/ 20-AAP1606.full.",
+   "title": "Chromosome painting: How recombination mixes ancestral colors",
+   "authors": [
+    "Lambert",
+    "Pina",
+    "Schertzer"
+   ],
+   "year": 2021,
+   "venue": "The Annals of Applied Probability",
+   "dois": [
+    "10.1214/20-aap1606"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Romain Laurent, Zachary A Szpiech, Sergio S Da Costa, Valentin Thouzeau, Cesar A Fortes-Lima, Françoise Dessarps-Freichey, Laure Lémée, José Utgé, Noah A Rosenberg, Marlyse Baptista, and Paul Verdu. A genetic and linguistic analysis of the admixture histories of the islands of Cabo Verde. eLife, 12: e79827, April 2023. ISSN 2050-084X. doi: 10.7554/eLife.79827. URL https://elifesciences.org/ articles/79827.",
+   "title": "A genetic and linguistic analysis of the admixture histories of the islands of Cabo Verde",
+   "authors": [
+    "Laurent",
+    "Szpiech",
+    "Da Costa",
+    "Thouzeau",
+    "Fortes-Lima",
+    "Dessarps-Freichey",
+    "Lémée",
+    "Utgé",
+    "Rosenberg",
+    "Baptista",
+    "Verdu"
+   ],
+   "year": 2023,
+   "venue": "eLife",
+   "dois": [
+    "10.7554/elife.79827"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Daniel John Lawson, Garrett Hellenthal, Simon Myers, and Daniel Falush. Inference of population structure using dense haplotype data. PLoS Genetics, 8(1):e1002453, January 2012. ISSN 1553-7404. doi: 10.1371/journal.pgen.1002453. URL https://dx.plos.org/10.1371/journal.pgen.1002453.",
+   "title": "Inference of population structure using dense haplotype data",
+   "authors": [
+    "Lawson",
+    "Hellenthal",
+    "Myers",
+    "Falush"
+   ],
+   "year": 2012,
+   "venue": "PLoS Genetics",
+   "dois": [
+    "10.1371/journal.pgen.1002453"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Mason Liang, Mikhail Shishkin, Vladimir Shchur, and Rasmus Nielsen. Understanding admixture fractions: theory and estimation of gene-flow. Journal of Mathematical Biology, 89(5):47, November 2024. ISSN 0303-6812, 1432-1416. doi: 10.1007/s00285-024-02146-0. URL https://link.springer.com/ 10.1007/s00285-024-02146-0.",
+   "title": "Understanding admixture fractions: theory and estimation of gene-flow",
+   "authors": [
+    "Liang",
+    "Shishkin",
+    "Shchur",
+    "Nielsen"
+   ],
+   "year": 2024,
+   "venue": "Journal of Mathematical Biology",
+   "dois": [
+    "10.1007/s00285-024-02146-0"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Joanne M. Lind, Holli B. Hutcheson-Dilks, Scott M. Williams, Jason H. Moore, Myron Essex, Eduardo Ruiz-Pesini, Douglas C. Wallace, Sarah A. Tishkoff, Stephen J. O’Brien, and Michael W. Smith. Elevated male European and female African contributions to the genomes of African American individuals. Human Genetics, 120(5):713-722, December 2006. ISSN 0340-6717, 1432-1203. doi: 10.1007/ s00439-006-0261-7. URL http://link.springer.com/10.1007/s00439-006-0261-7.",
+   "title": "Elevated male European and female African contributions to the genomes of African American individuals",
+   "authors": [
+    "Lind",
+    "Hutcheson-Dilks",
+    "Williams",
+    "Moore",
+    "Essex",
+    "Ruiz-Pesini",
+    "Wallace",
+    "Tishkoff",
+    "O’Brien",
+    "Smith"
+   ],
+   "year": 2006,
+   "venue": "Human Genetics",
+   "dois": [
+    "10.1007/s00439-006-0261-7"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "J C Long. The genetic structure of admixed populations. Genetics, 127(2):417-428, February 1991. ISSN 1943-2631. doi: 10.1093/genetics/127.2.417. URL https://academic.oup.com/genetics/ article/127/2/417/6006676.",
+   "title": "The genetic structure of admixed populations",
+   "authors": [
+    "Long"
+   ],
+   "year": 1991,
+   "venue": "Genetics",
+   "dois": [
+    "10.1093/genetics/127.2.417"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Brian K. Maples, Simon Gravel, Eimear E. Kenny, and Carlos D. Bustamante. RFMix: a discriminative modeling approach for rapid and robust local-ancestry inference. The American Journal of Human Genetics, 93(2):278-288, August 2013. ISSN 00029297. doi: 10.1016/j.ajhg.2013.06.020. URL https: //linkinghub.elsevier.com/retrieve/pii/S0002929713002899.",
+   "title": "RFMix: a discriminative modeling approach for rapid and robust local-ancestry inference",
+   "authors": [
+    "Maples",
+    "Gravel",
+    "Kenny",
+    "Bustamante"
+   ],
+   "year": 2013,
+   "venue": "The American Journal of Human Genetics",
+   "dois": [
+    "10.1016/j.ajhg.2013.06.020"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Alex Mas-Sandoval, Sara Mathieson, and Matteo Fumagalli. The genomic footprint of social stratification in admixing American populations. eLife, 12:e84429, December 2023. ISSN 2050-084X. doi: 10.7554/ eLife.84429. URL https://elifesciences.org/articles/84429.",
+   "title": "The genomic footprint of social stratification in admixing American populations",
+   "authors": [
+    "Mas-Sandoval",
+    "Mathieson",
+    "Fumagalli"
+   ],
+   "year": 2023,
+   "venue": "eLife",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Dashiell J Massey, Zachary A Szpiech, and Amy Goldberg. Differentiating mechanism from outcome for ancestry-assortative mating in admixed human populations. GENETICS, 229(4):iyaf022, April 2025. ISSN 1943-2631. doi: 10.1093/genetics/iyaf022. URL https://academic.oup.com/genetics/ article/doi/10.1093/genetics/iyaf022/8005249.",
+   "title": "Differentiating mechanism from outcome for ancestry-assortative mating in admixed human populations",
+   "authors": [
+    "Massey",
+    "Szpiech",
+    "Goldberg"
+   ],
+   "year": 2025,
+   "venue": "GENETICS",
+   "dois": [
+    "10.1093/genetics/iyaf022",
+    "10.1093/genetics/iyaf022/8005249"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Jazlyn A Mooney, Lily Agranat-Tamir, Jonathan K Pritchard, and Noah A Rosenberg. On the number of genealogical ancestors tracing to the source groups of an admixed population. GENETICS, 224(3): iyad079, July 2023. ISSN 1943-2631. doi: 10.1093/genetics/iyad079. URL https://academic.oup. com/genetics/article/doi/10.1093/genetics/iyad079/7219728.",
+   "title": "On the number of genealogical ancestors tracing to the source groups of an admixed population",
+   "authors": [
+    "Mooney",
+    "Agranat-Tamir",
+    "Pritchard",
+    "Rosenberg"
+   ],
+   "year": 2023,
+   "venue": "GENETICS",
+   "dois": [
+    "10.1093/genetics/iyad079",
+    "10.1093/genetics/iyad079/7219728"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Luca Nesterenko, Luc Blassel, Philippe Veber, Bastien Boussau, and Laurent Jacob. Phyloformer: fast, accurate, and versatile phylogenetic reconstruction with deep neural networks. Molecular Biology and Evolution, 42(4):msaf051, April 2025. ISSN 0737-4038, 1537-1719. doi: 10.1093/molbev/msaf051. URL https://academic.oup.com/mbe/article/doi/10.1093/molbev/msaf051/8069202.",
+   "title": "Phyloformer: fast, accurate, and versatile phylogenetic reconstruction with deep neural networks",
+   "authors": [
+    "Nesterenko",
+    "Blassel",
+    "Veber",
+    "Boussau",
+    "Jacob"
+   ],
+   "year": 2025,
+   "venue": "Molecular Biology and Evolution",
+   "dois": [
+    "10.1093/molbev/msaf051",
+    "10.1093/molbev/msaf051/8069202"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Etienne Patin, Marie Lopez, Rebecca Grollemund, Paul Verdu, Christine Harmant, Hélène Quach, Guillaume Laval, George H. Perry, Luis B. Barreiro, Alain Froment, Evelyne Heyer, Achille Massougbodji, Cesar Fortes-Lima, Florence Migot-Nabias, Gil Bellis, Jean-Michel Dugoujon, Joana B. Pereira, Verónica Fernandes, Luisa Pereira, Lolke Van Der Veen, Patrick Mouguiama-Daouda, Carlos D. Bustamante, Jean-Marie Hombert, and Lluís Quintana-Murci. Dispersals and genetic adaptation of Bantu-speaking populations in Africa and North America. Science, 356(6337):543-546, May 2017. ISSN 0036-8075, 1095-9203. doi: 10.1126/science.aal1988. URL https://www.science.org/doi/10.1126/science. aal1988.",
+   "title": "Dispersals and genetic adaptation of Bantu-speaking populations in Africa and North America",
+   "authors": [
+    "Patin",
+    "Lopez",
+    "Grollemund",
+    "Verdu",
+    "Harmant",
+    "Quach",
+    "Laval",
+    "Perry",
+    "Barreiro",
+    "Froment",
+    "Heyer",
+    "Massougbodji",
+    "Fortes-Lima",
+    "Migot-Nabias",
+    "Bellis",
+    "Dugoujon",
+    "Pereira",
+    "Fernandes",
+    "Pereira",
+    "Van Der Veen",
+    "Mouguiama-Daouda",
+    "Bustamante",
+    "Hombert",
+    "Quintana-Murci"
+   ],
+   "year": 1988,
+   "venue": "Science",
+   "dois": [
+    "10.1126/science.aal1988",
+    "10.1126/science"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Trevor J. Pemberton, Devin Absher, Marcus W. Feldman, Richard M. Myers, Noah A. Rosenberg, and Jun Z. Li. Genomic patterns of homozygosity in worldwide human populations. The American Journal of Human Genetics, 91(2):275-292, August 2012. ISSN 00029297. doi: 10.1016/j.ajhg.2012.06.014. URL https://linkinghub.elsevier.com/retrieve/pii/S0002929712003230.",
+   "title": "Genomic patterns of homozygosity in worldwide human populations",
+   "authors": [
+    "Pemberton",
+    "Absher",
+    "Feldman",
+    "Myers",
+    "Rosenberg",
+    "Li"
+   ],
+   "year": 2012,
+   "venue": "The American Journal of Human Genetics",
+   "dois": [
+    "10.1016/j.ajhg.2012.06.014"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Alkes L. Price, Arti Tandon, Nick Patterson, Kathleen C. Barnes, Nicholas Rafaels, Ingo Ruczinski, Terri H. Beaty, Rasika Mathias, David Reich, and Simon Myers. Sensitive detection of chromosomal segments of distinct ancestry in admixed populations. PLoS Genetics, 5(6):e1000519, June 2009. ISSN 1553-7404. doi: 10.1371/journal.pgen.1000519. URL https://dx.plos.org/10.1371/journal.pgen.1000519.",
+   "title": "Sensitive detection of chromosomal segments of distinct ancestry in admixed populations",
+   "authors": [
+    "Price",
+    "Tandon",
+    "Patterson",
+    "Barnes",
+    "Rafaels",
+    "Ruczinski",
+    "Beaty",
+    "Mathias",
+    "Reich",
+    "Myers"
+   ],
+   "year": 2009,
+   "venue": "PLoS Genetics",
+   "dois": [
+    "10.1371/journal.pgen.1000519"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Peter L. Ralph. An empirical approach to demographic inference with genomic data. Theoretical Population Biology, 127:91-101, June 2019. ISSN 00405809. doi: 10.1016/j.tpb.2019.03.005.",
+   "title": "An empirical approach to demographic inference with genomic data",
+   "authors": [
+    "Ralph"
+   ],
+   "year": 2019,
+   "venue": "Theoretical Population Biology",
+   "dois": [
+    "10.1016/j.tpb.2019.03.005"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Harald Ringbauer, Ayelet Salman-Minkov, Dalit Regev, Iñigo Olalde, Tomer Peled, Luca Sineo, Gioacchino Falsone, Peter Van Dommelen, Alissa Mittnik, Iosif Lazaridis, Davide Pettener, Maria Bofill, Ana Mezquida, Benjamí Costa, Helena Jiménez, Patricia Smith, Stefania Vai, Alessandra Modi, Arie Shaus, Kim Callan, Elizabeth Curtis, Aisling Kearns, Ann Marie Lawson, Matthew Mah, Adam Micco, Jonas Oppenheimer, Lijun Qiu, Kristin Stewardson, J. Noah Workman, Nicholas Márquez-Grant, Antonio M. Sáez Romero, María Luisa Lavado Florido, Juan Manuel Jiménez-Arenas, Isidro Jorge Toro Moyano, Enrique Viguera, José Suárez Padilla, Sonia López Chamizo, Tomas Marques-Bonet, Esther Lizano, Alicia Rodero Riaza, Francesca Olivieri, Pamela Toti, Valentina Giuliana, Alon Barash, Liran Carmel, Elisabetta Boaretto, Marina Faerman, Michaela Lucci, Francesco La Pastina, Alessia Nava, Francesco Genchi, Carla Del Vais, Gabriele Lauria, Francesca Meli, Paola Sconzo, Giulio Catalano, Elisabetta Cilli, Anna Chiara Fariselli, Francesco Fontani, Donata Luiselli, Brendan J. Culleton, Swapan Mallick, Nadin Rohland, Lorenzo Nigro, Alfredo Coppa, David Caramelli, Ron Pinhasi, Carles Lalueza-Fox, Ilan Gronau, and David Reich. Punic people were genetically diverse with almost no Levantine ancestors. Nature, 643(8070):139-147, July 2025. ISSN 0028-0836, 1476-4687. doi: 10.1038/s41586-025-08913-3. URL https://www.nature.com/articles/s41586-025-08913-3.",
+   "title": "Harald Ringbauer, Ayelet Salman-Minkov, Dalit Regev, Iñigo Olalde, Tomer Peled, Luca Sineo, Gioacchino Falsone, Peter Van Dommelen, Alissa Mittnik, Iosif Lazaridis, Davide Pettener, Maria Bofill, Ana Mezquida, Benjamí Costa, Helena Jiménez, Patricia Smith, Stefania Vai, Alessandra Modi, Arie Shaus, Kim Callan, Elizabeth Curtis, Aisling Kearns, Ann Marie Lawson, Matthew Mah, Adam Micco, Jonas Oppenheimer, Lijun Qiu, Kristin Stewardson, J. Noah Workman, Nicholas Márquez-Grant, Antonio M. Sáez Romero, María Luisa Lavado Florido, Juan Manuel Jiménez-Arenas, Isidro Jorge Toro Moyano, Enrique Viguera, José Suárez Padilla, Sonia López Chamizo, Tomas Marques-Bonet, Esther Lizano, Alicia Rodero Riaza, Francesca Olivieri, Pamela Toti, Valentina Giuliana, Alon Barash, Liran Carmel, Elisabetta Boaretto, Marina Faerman, Michaela Lucci, Francesco La Pastina, Alessia Nava, Francesco Genchi, Carla Del Vais, Gabriele Lauria, Francesca Meli, Paola Sconzo, Giulio Catalano, Elisabetta Cilli, Anna Chiara Fariselli, Francesco Fontani, Donata Luiselli, Brendan J. Culleton, Swapan Mallick, Nadin Rohland, Lorenzo Nigro, Alfredo Coppa, David Caramelli, Ron Pinhasi, Carles Lalueza-Fox, Ilan Gronau, and David Reich",
+   "authors": [],
+   "year": 2025,
+   "venue": "Punic people were genetically diverse with almost no Levantine ancestors. Nature",
+   "dois": [
+    "10.1038/s41586-025-08913-3"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Michael Salter-Townshend and Simon Myers. Fine-scale inference of ancestry segments without prior knowledge of admixing groups. Genetics, 212(3):869-889, July 2019. ISSN 1943-2631. doi: 10.1534/ genetics.119.302139. URL https://academic.oup.com/genetics/article/212/3/869/5931232.",
+   "title": "Fine-scale inference of ancestry segments without prior knowledge of admixing groups",
+   "authors": [
+    "Salter-Townshend",
+    "Myers"
+   ],
+   "year": 2019,
+   "venue": "Genetics",
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Andrey Tyukin. Quenched limits of coalescents in fixed pedigrees. Johannes-Gutenberg Universität Mainz (Master’s thesis), 2015.",
+   "title": "Quenched limits of coalescents in fixed pedigrees",
+   "authors": [
+    "Tyukin"
+   ],
+   "year": 2015,
+   "venue": "Johannes-Gutenberg Universität Mainz (Master’s thesis)",
+   "dois": [],
+   "kind": "thesis",
+   "etAl": false
+  },
+  {
+   "raw": "Paul Verdu and Noah A Rosenberg. A general mechanistic model for admixture histories of hybrid populations. Genetics, 189(4):1413-1426, December 2011. ISSN 1943-2631. doi: 10.1534/genetics.111.132787. URL https://academic.oup.com/genetics/article/189/4/1413/6089061.",
+   "title": "A general mechanistic model for admixture histories of hybrid populations",
+   "authors": [
+    "Verdu",
+    "Rosenberg"
+   ],
+   "year": 2011,
+   "venue": "Genetics",
+   "dois": [
+    "10.1534/genetics.111.132787"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Tom M. M. Versluys, Alex Mas-Sandoval, Ewan O. Flintham, and Vincent Savolainen. Why do we pick similar mates, or do we? Biology Letters, 17(11):20210463, November 2021. ISSN 1744-957X. doi: 10.1098/rsbl.2021.0463. URL https://royalsocietypublishing.org/doi/10.1098/rsbl.2021. 0463.",
+   "title": "Why do we pick similar mates, or do we?",
+   "authors": [
+    "Versluys",
+    "Mas-Sandoval",
+    "Flintham",
+    "Savolainen"
+   ],
+   "year": 2021,
+   "venue": "Biology Letters",
+   "dois": [
+    "10.1098/rsbl.2021.0463",
+    "10.1098/rsbl.2021"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "John Wakeley, Léandra King, Bobbi S Low, and Sohini Ramachandran. Gene genealogies within a fixed pedigree, and the robustness of Kingman’s coalescent. Genetics, 190(4):1433-1445, April 2012. ISSN 1943-2631. doi: 10.1534/genetics.111.135574. URL https://academic.oup.com/genetics/ article/190/4/1433/6064112.",
+   "title": "Gene genealogies within a fixed pedigree, and the robustness of Kingman’s coalescent",
+   "authors": [
+    "Wakeley",
+    "King",
+    "Low",
+    "Ramachandran"
+   ],
+   "year": 2012,
+   "venue": "Genetics",
+   "dois": [
+    "10.1534/genetics.111.135574"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "John Wakeley, Léandra King, and Peter R. Wilton. Effects of the population pedigree on genetic signatures of historical demographic events. Proceedings of the National Academy of Sciences, 113(29):7994-8001, July 2016. ISSN 0027-8424, 1091-6490. doi: 10.1073/pnas.1601080113.",
+   "title": "Effects of the population pedigree on genetic signatures of historical demographic events",
+   "authors": [
+    "Wakeley",
+    "King",
+    "Wilton"
+   ],
+   "year": 2016,
+   "venue": "Proceedings of the National Academy of Sciences",
+   "dois": [
+    "10.1073/pnas.1601080113"
+   ],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Yan Wong, Anastasia Ignatieva, Jere Koskela, Gregor Gorjanc, Anthony W Wohns, and Jerome Kelleher. A general and efficient representation of ancestral recombination graphs. GENETICS, 228(1):iyae100, September 2024. ISSN 1943-2631. doi: 10.1093/genetics/iyae100. URL https://academic.oup.com/ genetics/article/doi/10.1093/genetics/iyae100/7714980.",
+   "title": "A general and efficient representation of ancestral recombination graphs",
+   "authors": [
+    "Wong",
+    "Ignatieva",
+    "Koskela",
+    "Gorjanc",
+    "Wohns",
+    "Kelleher"
+   ],
+   "year": 2024,
+   "venue": "GENETICS",
+   "dois": [
+    "10.1093/genetics/iyae100",
+    "10.1093/genetics/iyae100/7714980"
+   ],
+   "kind": "article",
+   "etAl": false
+  }
+ ],
+ "q-fin.GN_2611.18531v1.pdf": [
+  {
+   "raw": "Achiam, J., D. Held, A. Tamar, and P. Abbeel, 2017, Constrained policy optimization, in Proceedings of the 34th International Conference on Machine Learning, volume 70 of Proceedings of Machine Learning Research, 22-31.",
+   "title": "Abbeel, 2017, Constrained policy optimization, in Proceedings of the 34th International Conference on Machine Learning, volume 70 of Proceedings of Machine Learning Research, 22-31",
+   "authors": [
+    "Achiam",
+    "Held",
+    "A. Tamar"
+   ],
+   "year": 2017,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Altman, E., 1999, Constrained Markov Decision Processes (Chapman & Hall/CRC, Boca Raton, FL).",
+   "title": "Altman, E., 1999, Constrained Markov Decision Processes (Chapman & Hall/CRC, Boca Raton, FL)",
+   "authors": [],
+   "year": 1999,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Anthropic, 2024, Claude’s character, https://www.anthropic.com/research/claude-cha racter, Accessed October 2026.",
+   "title": "Anthropic, 2024, Claude’s character, racter, October 2026",
+   "authors": [],
+   "year": 2026,
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Anthropic, 2025, Agentic misalignment: How LLMs could be insider threats, https://www. anthropic.com/research/agentic-misalignment, Accessed October 2026.",
+   "title": "Anthropic, 2025, Agentic misalignment: How LLMs could be insider threats, anthropic.com/research/agentic-misalignment, October 2026",
+   "authors": [],
+   "year": 2026,
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Bai, Y., et al., 2022, Constitutional AI: Harmlessness from AI feedback, arXiv:2212.08073.",
+   "title": "Bai, Y., et al., 2022, Constitutional AI: Harmlessness from AI feedback",
+   "authors": [],
+   "year": 2022,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Baker, B., J. Huizinga, L. Gao, Z. Dou, M. Y. Guan, A. Madry, W. Zaremba, J. Pachocki, and D. Farhi, 2025, Monitoring reasoning models for misbehavior and the risks of promoting obfuscation, arXiv:2503.11926.",
+   "title": "Farhi, 2025, Monitoring reasoning models for misbehavior and the risks of promoting obfuscation",
+   "authors": [
+    "Baker",
+    "Huizinga",
+    "Gao",
+    "Dou",
+    "Guan",
+    "Madry",
+    "Zaremba",
+    "Pachocki"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Boehm, C., 1999, Hierarchy in the Forest: The Evolution of Egalitarian Behavior (Harvard University Press, Cambridge, MA).",
+   "title": "Boehm, C., 1999, Hierarchy in the Forest: The Evolution of Egalitarian Behavior (Harvard University Press, Cambridge, MA)",
+   "authors": [],
+   "year": 1999,
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Bondarenko, A., D. Volk, D. Volkov, and J. Ladish, 2025, Demonstrating specification gaming in reasoning models, arXiv:2502.13295.",
+   "title": "Ladish, 2025, Demonstrating specification gaming in reasoning models",
+   "authors": [
+    "Bondarenko",
+    "Volk",
+    "D. Volkov"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Boudry, M., 2026, Domesticated, not feral: Why evolvable AI is not yet a Darwinian threat, Proceedings of the National Academy of Sciences 123, e2617785123.",
+   "title": "Boudry, M., 2026, Domesticated, not feral: Why evolvable AI is not yet a Darwinian threat, Proceedings of the National Academy of Sciences 123, e2617785123",
+   "authors": [],
+   "year": 2026,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Bowles, S., and H. Gintis, 2011, A Cooperative Species: Human Reciprocity and Its Evolution (Princeton University Press, Princeton, NJ).",
+   "title": "Bowles, S., and H. Gintis, 2011, A Cooperative Species: Human Reciprocity and Its Evolution (Princeton University Press, Princeton, NJ)",
+   "authors": [],
+   "year": 2011,
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Boyd, R., and P. J. Richerson, 1985, Culture and the Evolutionary Process (University of Chicago Press, Chicago).",
+   "title": "Richerson, 1985, Culture and the Evolutionary Process (University of Chicago Press, Chicago)",
+   "authors": [
+    "Boyd"
+   ],
+   "year": 1985,
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Brennan, T. J., and A. W. Lo, 2011, The origin of behavior, Quarterly Journal of Finance 1, 55-108.",
+   "title": "Lo, 2011, The origin of behavior, Quarterly Journal of Finance 1, 55-108",
+   "authors": [
+    "Brennan"
+   ],
+   "year": 2011,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Brennan, T. J., and A. W. Lo, 2012, An evolutionary model of bounded rationality and intelligence, PLoS ONE 7, e50310.",
+   "title": "Lo, 2012, An evolutionary model of bounded rationality and intelligence, PLoS ONE 7, e50310",
+   "authors": [
+    "Brennan"
+   ],
+   "year": 2012,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Brennan, T. J., A. W. Lo, and R. Zhang, 2018, Variety is the spice of life: Irrational behavior as adaptation to stochastic environments, Quarterly Journal of Finance 8, 1850009.",
+   "title": "Zhang, 2018, Variety is the spice of life: Irrational behavior as adaptation to stochastic environments, Quarterly Journal of Finance 8, 1850009",
+   "authors": [
+    "Brennan",
+    "A. W. Lo"
+   ],
+   "year": 2018,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Brinkmann, L., F. Baumann, J.-F. Bonnefon, M. Derex, T. F. Müller, A.-M. Nussberger, A. Czaplicka, A. Acerbi, T. L. Griffiths, J. Henrich, J. Z. Leibo, R. McElreath, P.-Y. Oudeyer, J. Stray, and I. Rahwan, 2023, Machine culture, Nature Human Behaviour 7, 1855-1868.",
+   "title": "Bonnefon, M. Derex, T. F. Müller, A.-M",
+   "authors": [
+    "Brinkmann",
+    "Baumann",
+    "J.-F"
+   ],
+   "year": 1855,
+   "venue": "Nussberger, A. Czaplicka, A. Acerbi, T. L. Griffiths, J. Henrich, J. Z. Leibo, R. McElreath",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Cesa-Bianchi, N., and G. Lugosi, 2006, Prediction, Learning, and Games (Cambridge University Press, Cambridge).",
+   "title": "Cesa-Bianchi, N., and G. Lugosi, 2006, Prediction, Learning, and Games (Cambridge University Press, Cambridge)",
+   "authors": [],
+   "year": 2006,
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Christiano, P. F., J. Leike, T. B. Brown, M. Martic, S. Legg, and D. Amodei, 2017, Deep reinforcement learning from human preferences, in Advances in Neural Information Processing Systems, volume 30, 4299-4307.",
+   "title": "Amodei, 2017, Deep reinforcement learning from human preferences, in Advances in Neural Information Processing Systems, volume 30, 4299-4307",
+   "authors": [
+    "Christiano",
+    "Leike",
+    "Brown",
+    "Martic",
+    "S. Legg"
+   ],
+   "year": 2017,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Clarke, B. S., and A. R. Barron, 1990, Information-theoretic asymptotics of Bayes methods, IEEE Transactions on Information Theory 36, 453-471.",
+   "title": "Barron, 1990, Information-theoretic asymptotics of Bayes methods, IEEE Transactions on Information Theory 36, 453-471",
+   "authors": [
+    "Clarke"
+   ],
+   "year": 1990,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Cohen, D., 1966, Optimizing reproduction in a randomly varying environment, Journal of Theoretical Biology 12, 119-129.",
+   "title": "Cohen, D., 1966, Optimizing reproduction in a randomly varying environment, Journal of Theoretical Biology 12, 119-129",
+   "authors": [],
+   "year": 1966,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Conitzer, V., R. Freedman, J. Heitzig, W. H. Holliday, B. M. Jacobs, N. Lambert, M. Mossé, E. Pacuit, S. Russell, H. Schoelkopf, E. Tewolde, and W. S. Zwicker, 2024, Position: Social choice should guide AI alignment in dealing with diverse human feedback, in Proceedings of the 41st International Conference on Machine Learning, volume 235 of Proceedings of Machine Learning Research, 9346-9360.",
+   "title": "Zwicker, 2024, Position: Social choice should guide AI alignment in dealing with diverse human feedback, in Proceedings of the 41st International Conference on Machine Learning, volume 235 of Proceedings of Machine Learning Research, 9346-9360",
+   "authors": [
+    "Conitzer",
+    "Freedman",
+    "Heitzig",
+    "Holliday",
+    "Jacobs",
+    "Lambert",
+    "Mossé",
+    "Pacuit",
+    "Russell",
+    "Schoelkopf",
+    "Tewolde"
+   ],
+   "year": 2024,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Cover, T. M., 1991, Universal portfolios, Mathematical Finance 1, 1-29.",
+   "title": "M., 1991, Universal portfolios, Mathematical Finance 1, 1-29",
+   "authors": [
+    "Cover"
+   ],
+   "year": 1991,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Cover, T. M., and E. Ordentlich, 1996, Universal portfolios with side information, IEEE Transactions on Information Theory 42, 348-363.",
+   "title": "Ordentlich, 1996, Universal portfolios with side information, IEEE Transactions on Information Theory 42, 348-363",
+   "authors": [
+    "Cover"
+   ],
+   "year": 1996,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Cover, T. M., and J. A. Thomas, 2006, Elements of Information Theory, second edition (Wiley, Hoboken, NJ).",
+   "title": "Thomas, 2006, Elements of Information Theory, second edition (Wiley, Hoboken, NJ)",
+   "authors": [
+    "Cover"
+   ],
+   "year": 2006,
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Das, I., and J. E. Dennis, 1997, A closer look at drawbacks of minimizing weighted sums of objectives for Pareto set generation in multicriteria optimization problems, Structural Optimization 14, 63-69.",
+   "title": "Dennis, 1997, A closer look at drawbacks of minimizing weighted sums of objectives for Pareto set generation in multicriteria optimization problems, Structural Optimization 14, 63-69",
+   "authors": [
+    "Das"
+   ],
+   "year": 1997,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Frank, R. H., 1988, Passions Within Reason: The Strategic Role of the Emotions (W. W. Norton, New York).",
+   "title": "H., 1988, Passions Within Reason: The Strategic Role of the Emotions (W",
+   "authors": [
+    "Frank"
+   ],
+   "year": 1988,
+   "venue": "W. Norton, New York)",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Greenblatt, R., A. Cotra, and H. Wijk, 2026, Brief independent investigation of agents’ behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident, METR and Redwood Research, https://metr.org/blog/2026-08-26-openai-hugging -face-incident-investigation/, Accessed October 2026.",
+   "title": "Wijk, 2026, Brief independent investigation of agents’ behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident, METR and Redwood Research, -face-incident-investigation/, October 2026",
+   "authors": [
+    "Greenblatt",
+    "A. Cotra"
+   ],
+   "year": 2026,
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Grossman, S. J., and O. D. Hart, 1986, The costs and benefits of ownership: A theory of vertical and lateral integration, Journal of Political Economy 94, 691-719.",
+   "title": "Hart, 1986, The costs and benefits of ownership: A theory of vertical and lateral integration, Journal of Political Economy 94, 691-719",
+   "authors": [
+    "Grossman"
+   ],
+   "year": 1986,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Güth, W., and M. Yaari, 1992, Explaining reciprocal behavior in simple strategic games: An evolutionary approach, in U. Witt, ed., Explaining Process and Change: Approaches to Evolutionary Economics, 23-34 (University of Michigan Press, Ann Arbor).",
+   "title": "Yaari, 1992, Explaining reciprocal behavior in simple strategic games: An evolutionary approach, in U. Witt, ed., Explaining Process and Change: Approaches to Evolutionary Economics, 23-34 (University of Michigan Press, Ann Arbor)",
+   "authors": [
+    "Güth"
+   ],
+   "year": 1992,
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Haarnoja, T., A. Zhou, P. Abbeel, and S. Levine, 2018, Soft actor-critic: Off-policy maximum entropy deep reinforcement learning with a stochastic actor, in Proceedings of the 35th International Conference on Machine Learning, volume 80 of Proceedings of Machine Learning Research, 1861-1870.",
+   "title": "Levine, 2018, Soft actor-critic: Off-policy maximum entropy deep reinforcement learning with a stochastic actor, in Proceedings of the 35th International Conference on Machine Learning, volume 80 of Proceedings of Machine Learning Research, 1861-1870",
+   "authors": [
+    "Haarnoja",
+    "Zhou",
+    "P. Abbeel"
+   ],
+   "year": 1861,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Hadfield-Menell, D., and G. K. Hadfield, 2019, Incomplete contracting and AI alignment, in Proceedings of the 2019 AAAI/ACM Conference on AI, Ethics, and Society, 417-422.",
+   "title": "Hadfield, 2019, Incomplete contracting and AI alignment, in Proceedings of the 2019 AAAI/ACM Conference on AI, Ethics, and Society, 417-422",
+   "authors": [
+    "Hadfield-Menell"
+   ],
+   "year": 2019,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Hadfield-Menell, D., S. Milli, P. Abbeel, S. J. Russell, and A. Dragan, 2017, Inverse reward design, in Advances in Neural Information Processing Systems, volume 30, 6765-6774.",
+   "title": "Dragan, 2017, Inverse reward design, in Advances in Neural Information Processing Systems, volume 30, 6765-6774",
+   "authors": [
+    "Hadfield-Menell",
+    "Milli",
+    "Abbeel",
+    "S. J. Russell"
+   ],
+   "year": 2017,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Hadfield-Menell, D., S. J. Russell, P. Abbeel, and A. Dragan, 2016, Cooperative inverse reinforcement learning, in Advances in Neural Information Processing Systems, volume 29, 3909-3917.",
+   "title": "Dragan, 2016, Cooperative inverse reinforcement learning, in Advances in Neural Information Processing Systems, volume 29, 3909-3917",
+   "authors": [
+    "Hadfield-Menell",
+    "Russell",
+    "P. Abbeel"
+   ],
+   "year": 2016,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Harper, M., 2009, The replicator equation as an inference dynamic, arXiv:0911.1763.",
+   "title": "Harper, M., 2009, The replicator equation as an inference dynamic",
+   "authors": [],
+   "year": 2009,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Hart, O., and J. Moore, 1990, Property rights and the nature of the firm, Journal of Political Economy 98, 1119-1158.",
+   "title": "Moore, 1990, Property rights and the nature of the firm, Journal of Political Economy 98, 1119-1158",
+   "authors": [
+    "Hart"
+   ],
+   "year": 1990,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Hayes, C. F., R. Rădulescu, E. Bargiacchi, J. Källström, M. Macfarlane, M. Reymond, T. Verstraeten, L. M. Zintgraf, R. Dazeley, F. Heintz, E. Howley, A. A. Irissappane, P. Mannion, A. Nowé, G. Ramos, M. Restelli, P. Vamplew, and D. M. Roijers, 2022, A practical guide to multi-objective reinforcement learning and planning, Autonomous Agents and Multi-Agent Systems 36, 26.",
+   "title": "Roijers, 2022, A practical guide to multi-objective reinforcement learning and planning, Autonomous Agents and Multi-Agent Systems 36, 26",
+   "authors": [
+    "Hayes",
+    "Rădulescu",
+    "Bargiacchi",
+    "Källström",
+    "Macfarlane",
+    "Reymond",
+    "Verstraeten",
+    "Zintgraf",
+    "Dazeley",
+    "Heintz",
+    "Howley",
+    "Irissappane",
+    "Mannion",
+    "Nowé",
+    "Ramos",
+    "Restelli",
+    "Vamplew"
+   ],
+   "year": 2022,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Hendrycks, D., 2023, Natural selection favors AIs over humans, arXiv:2303.16200.",
+   "title": "Hendrycks, D., 2023, Natural selection favors AIs over humans",
+   "authors": [],
+   "year": 2023,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Henrich, J., 2016, The Secret of Our Success: How Culture Is Driving Human Evolution, Domesticating Our Species, and Making Us Smarter (Princeton University Press, Princeton, NJ).",
+   "title": "Henrich, J., 2016, The Secret of Our Success: How Culture Is Driving Human Evolution, Domesticating Our Species, and Making Us Smarter (Princeton University Press, Princeton, NJ)",
+   "authors": [],
+   "year": 2016,
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Holmström, B., and P. Milgrom, 1991, Multitask principal-agent analyses: Incentive contracts, asset ownership, and job design, Journal of Law, Economics, and Organization 7, 24-52.",
+   "title": "Milgrom, 1991, Multitask principal-agent analyses: Incentive contracts, asset ownership, and job design, Journal of Law, Economics, and Organization 7, 24-52",
+   "authors": [
+    "Holmström"
+   ],
+   "year": 1991,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Houston, A. I., and J. M. McNamara, 1999, Models of Adaptive Behaviour: An Approach Based on State (Cambridge University Press, Cambridge).",
+   "title": "McNamara, 1999, Models of Adaptive Behaviour: An Approach Based on State (Cambridge University Press, Cambridge)",
+   "authors": [
+    "Houston"
+   ],
+   "year": 1999,
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Hugging Face, 2026, Anatomy of a frontier lab agent intrusion: A technical timeline of the July 2026 incident, https://huggingface.co/blog/agent-intrusion-technical-tim eline, Accessed October 2026.",
+   "title": "Hugging Face, 2026, Anatomy of a frontier lab agent intrusion: A technical timeline of the July 2026 incident, eline, October 2026",
+   "authors": [],
+   "year": 2026,
+   "dois": [],
+   "kind": "software",
+   "etAl": false
+  },
+  {
+   "raw": "Kelly, J. L., 1956, A new interpretation of information rate, Bell System Technical Journal 35, 917-926.",
+   "title": "L., 1956, A new interpretation of information rate, Bell System Technical Journal 35, 917-926",
+   "authors": [
+    "Kelly"
+   ],
+   "year": 1956,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Kerr, S., 1975, On the folly of rewarding A, while hoping for B, Academy of Management Journal 18, 769-783.",
+   "title": "Kerr, S., 1975, On the folly of rewarding A, while hoping for B, Academy of Management Journal 18, 769-783",
+   "authors": [],
+   "year": 1975,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Krakovna, V., L. Orseau, R. Kumar, M. Martic, and S. Legg, 2019, Penalizing side effects using stepwise relative reachability, arXiv:1806.01186.",
+   "title": "Legg, 2019, Penalizing side effects using stepwise relative reachability",
+   "authors": [
+    "Krakovna",
+    "Orseau",
+    "Kumar",
+    "M. Martic"
+   ],
+   "year": 2019,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Krichevsky, R. E., and V. K. Trofimov, 1981, The performance of universal encoding, IEEE Transactions on Information Theory 27, 199-207.",
+   "title": "Trofimov, 1981, The performance of universal encoding, IEEE Transactions on Information Theory 27, 199-207",
+   "authors": [
+    "Krichevsky"
+   ],
+   "year": 1981,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Kulveit, J., R. Douglas, N. Ammann, D. Turan, D. Krueger, and D. Duvenaud, 2025, Gradual disempowerment: Systemic existential risks from incremental AI development, arXiv:2501.16946.",
+   "title": "Duvenaud, 2025, Gradual disempowerment: Systemic existential risks from incremental AI development",
+   "authors": [
+    "Kulveit",
+    "Douglas",
+    "Ammann",
+    "Turan",
+    "D. Krueger"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Kussell, E., and S. Leibler, 2005, Phenotypic diversity, population growth, and information in fluctuating environments, Science 309, 2075-2078.",
+   "title": "Leibler, 2005, Phenotypic diversity, population growth, and information in fluctuating environments, Science 309, 2075-2078",
+   "authors": [
+    "Kussell"
+   ],
+   "year": 2005,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Leibo, J. Z., A. S. Vezhnevets, M. Diaz, J. P. Agapiou, W. A. Cunningham, P. Sunehag, J. Haas, R. Koster, E. A. Duéñez-Guzmán, W. S. Isaac, G. Piliouras, S. M. Bileschi, I. Rahwan, and S. Osindero, 2024, A theory of appropriateness with applications to generative artificial intelligence, arXiv:2412.19010.",
+   "title": "Osindero, 2024, A theory of appropriateness with applications to generative artificial intelligence",
+   "authors": [
+    "Leibo",
+    "Vezhnevets",
+    "Diaz",
+    "Agapiou",
+    "Cunningham",
+    "Sunehag",
+    "Haas",
+    "Koster",
+    "Duéñez-Guzmán",
+    "Isaac",
+    "Piliouras",
+    "Bileschi",
+    "Rahwan"
+   ],
+   "year": 2024,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Liu, R., R. Yang, C. Jia, G. Zhang, D. Yang, and S. Vosoughi, 2024, Training socially aligned language models on simulated social interactions, in The Twelfth International Conference on Learning Representations (ICLR 2024).",
+   "title": "Vosoughi, 2024, Training socially aligned language models on simulated social interactions, in The Twelfth International Conference on Learning Representations (ICLR 2024)",
+   "authors": [
+    "Liu",
+    "Yang",
+    "Jia",
+    "Zhang",
+    "D. Yang"
+   ],
+   "year": 2024,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Lo, A. W., 2004, The Adaptive Markets Hypothesis: Market efficiency from an evolutionary perspective, Journal of Portfolio Management 30, 15-29.",
+   "title": "W., 2004, The Adaptive Markets Hypothesis: Market efficiency from an evolutionary perspective, Journal of Portfolio Management 30, 15-29",
+   "authors": [
+    "Lo"
+   ],
+   "year": 2004,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Lo, A. W., 2017, Adaptive Markets: Financial Evolution at the Speed of Thought (Princeton University Press, Princeton, NJ).",
+   "title": "W., 2017, Adaptive Markets: Financial Evolution at the Speed of Thought (Princeton University Press, Princeton, NJ)",
+   "authors": [
+    "Lo"
+   ],
+   "year": 2017,
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Lo, A. W., and R. Zhang, 2021, The evolutionary origin of Bayesian heuristics and finite memory, iScience 24, 102853.",
+   "title": "Zhang, 2021, The evolutionary origin of Bayesian heuristics and finite memory, iScience 24, 102853",
+   "authors": [
+    "Lo"
+   ],
+   "year": 2021,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Lo, A. W., R. Zhang, and C. Zhao, 2025, The evolution of discrimination under finite memory constraints, Scientific Reports 15, 31774.",
+   "title": "Zhao, 2025, The evolution of discrimination under finite memory constraints, Scientific Reports 15, 31774",
+   "authors": [
+    "Lo",
+    "R. Zhang"
+   ],
+   "year": 2025,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Lo, A. W., and C. Zhao, 2026a, Adapting the process of adaptation: Darwinian, Lamarckian, and agent-directed evolution in AI, arXiv:2611.07048.",
+   "title": "Zhao, 2026a, Adapting the process of adaptation: Darwinian, Lamarckian, and agent-directed evolution in AI",
+   "authors": [
+    "Lo"
+   ],
+   "year": 2026,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Lo, A. W., and C. Zhao, 2026b, Human-AI co-evolution: Mutualism, targeted reciprocity, and the evolution of autonomy, Working paper, MIT Laboratory for Financial Engineering.",
+   "title": "Zhao, 2026b, Human-AI co-evolution: Mutualism, targeted reciprocity, and the evolution of autonomy, Working paper, MIT Laboratory for Financial Engineering",
+   "authors": [
+    "Lo"
+   ],
+   "year": 2026,
+   "dois": [],
+   "kind": "report",
+   "etAl": false
+  },
+  {
+   "raw": "MacDiarmid, M., B. Wright, J. Uesato, J. Benton, J. Kutasov, S. Price, N. Bouscal, S. Bowman, T. Bricken, A. Cloud, C. Denison, J. Gasteiger, R. Greenblatt, J. Leike, J. Lindsey, V. Mikulik, E. Perez, A. Rodrigues, D. Thomas, A. Webson, D. Ziegler, and E. Hubinger, 2025, Natural emergent misalignment from reward hacking in production RL, arXiv:2511.18397.",
+   "title": "Hubinger, 2025, Natural emergent misalignment from reward hacking in production RL",
+   "authors": [
+    "MacDiarmid",
+    "Wright",
+    "Uesato",
+    "Benton",
+    "Kutasov",
+    "Price",
+    "Bouscal",
+    "Bowman",
+    "Bricken",
+    "Cloud",
+    "Denison",
+    "Gasteiger",
+    "Greenblatt",
+    "Leike",
+    "Lindsey",
+    "Mikulik",
+    "Perez",
+    "Rodrigues",
+    "Thomas",
+    "Webson",
+    "Ziegler"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Mallen, A., and B. Shlegeris, 2025, The behavioral selection model for predicting AI motivations, AI Alignment Forum, https://www.alignmentforum.org/posts/FeaJcWkC6 fuRAMsfp/the-behavioral-selection-model-for-predicting-ai-motivations-1, Accessed October 2026.",
+   "title": "Shlegeris, 2025, The behavioral selection model for predicting AI motivations, AI Alignment Forum, fuRAMsfp/the-behavioral-selection-model-for-predicting-ai-motivations-1, October 2026",
+   "authors": [
+    "Mallen"
+   ],
+   "year": 2026,
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "McFarland, D. J., and R. M. Sibly, 1975, The behavioural final common path, Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences 270, 265-293.",
+   "title": "Sibly, 1975, The behavioural final common path, Philosophical Transactions of the Royal Society of London",
+   "authors": [
+    "McFarland"
+   ],
+   "year": 1975,
+   "venue": "Series B, Biological Sciences 270",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "McNamara, J. M., and A. I. Houston, 1986, The common currency for behavioral decisions, American Naturalist 127, 358-378.",
+   "title": "Houston, 1986, The common currency for behavioral decisions, American Naturalist 127, 358-378",
+   "authors": [
+    "McNamara"
+   ],
+   "year": 1986,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Müller, V., L. Steels, and E. Szathmáry, 2026a, Evolvable AI: Threats of a new major transition in evolution, Proceedings of the National Academy of Sciences 123, e2527700123.",
+   "title": "Szathmáry, 2026a, Evolvable AI: Threats of a new major transition in evolution, Proceedings of the National Academy of Sciences 123, e2527700123",
+   "authors": [
+    "Müller",
+    "L. Steels"
+   ],
+   "year": 2026,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Müller, V., L. Steels, and E. Szathmáry, 2026b, Reply to Rana and Singh: Critical thresholds and critical actions for evolvable AI, Proceedings of the National Academy of Sciences 123, e2619586123.",
+   "title": "Szathmáry, 2026b, Reply to Rana and Singh: Critical thresholds and critical actions for evolvable AI, Proceedings of the National Academy of Sciences 123, e2619586123",
+   "authors": [
+    "Müller",
+    "L. Steels"
+   ],
+   "year": 2026,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Munos, R., M. Valko, D. Calandriello, M. G. Azar, M. Rowland, Z. D. Guo, Y. Tang, M. Geist, T. Mesnard, C. Fiegel, A. Michi, M. Selvi, S. Girgin, N. Momchev, O. Bachem, D. J. Mankowitz, D. Precup, and B. Piot, 2024, Nash learning from human feedback, in Proceedings of the 41st International Conference on Machine Learning, volume 235 of Proceedings of Machine Learning Research, 36743-36768.",
+   "title": "Piot, 2024, Nash learning from human feedback, in Proceedings of the 41st International Conference on Machine Learning, volume 235 of Proceedings of Machine Learning Research, 36743-36768",
+   "authors": [
+    "Munos",
+    "Valko",
+    "Calandriello",
+    "Azar",
+    "Rowland",
+    "Guo",
+    "Tang",
+    "Geist",
+    "Mesnard",
+    "Fiegel",
+    "Michi",
+    "Selvi",
+    "Girgin",
+    "Momchev",
+    "Bachem",
+    "Mankowitz",
+    "Precup"
+   ],
+   "year": 2024,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Netzer, N., 2009, Evolution of time preferences and attitudes toward risk, American Economic Review 99, 937-955.",
+   "title": "Netzer, N., 2009, Evolution of time preferences and attitudes toward risk, American Economic Review 99, 937-955",
+   "authors": [],
+   "year": 2009,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "OpenAI, 2025, Model Spec, https://model-spec.openai.com/, Accessed October 2026.",
+   "title": "OpenAI, 2025, Model Spec, October 2026",
+   "authors": [],
+   "year": 2026,
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "OpenAI, 2026, OpenAI and Hugging Face partner to address security incident during model evaluation, https://openai.com/index/hugging-face-model-evaluation-securit y-incident/, Accessed October 2026.",
+   "title": "OpenAI, 2026, OpenAI and Hugging Face partner to address security incident during model evaluation, y-incident/, October 2026",
+   "authors": [],
+   "year": 2026,
+   "dois": [],
+   "kind": "web",
+   "etAl": false
+  },
+  {
+   "raw": "Ouyang, L., J. Wu, X. Jiang, D. Almeida, C. L. Wainwright, P. Mishkin, C. Zhang, S. Agarwal, K. Slama, A. Ray, J. Schulman, J. Hilton, F. Kelton, L. Miller, M. Simens, A. Askell, P. Welinder, P. F. Christiano, J. Leike, and R. Lowe, 2022, Training language models to follow instructions with human feedback, in Advances in Neural Information Processing Systems, volume 35, 27730-27744.",
+   "title": "Lowe, 2022, Training language models to follow instructions with human feedback, in Advances in Neural Information Processing Systems, volume 35, 27730-27744",
+   "authors": [
+    "Ouyang",
+    "Wu",
+    "Jiang",
+    "Almeida",
+    "Wainwright",
+    "Mishkin",
+    "Zhang",
+    "Agarwal",
+    "Slama",
+    "Ray",
+    "Schulman",
+    "Hilton",
+    "Kelton",
+    "Miller",
+    "Simens",
+    "Askell",
+    "Welinder",
+    "Christiano",
+    "Leike"
+   ],
+   "year": 2022,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Park, J. S., J. C. O’Brien, C. J. Cai, M. R. Morris, P. Liang, and M. S. Bernstein, 2023, Generative agents: Interactive simulacra of human behavior, in Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology (UIST ’23), 1-22.",
+   "title": "Bernstein, 2023, Generative agents: Interactive simulacra of human behavior, in Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology (UIST ’23), 1-22",
+   "authors": [
+    "Park",
+    "O’Brien",
+    "Cai",
+    "Morris",
+    "Liang"
+   ],
+   "year": 2023,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Rafailov, R., A. Sharma, E. Mitchell, C. D. Manning, S. Ermon, and C. Finn, 2023, Direct preference optimization: Your language model is secretly a reward model, in Advances in Neural Information Processing Systems, volume 36, 53728-53741.",
+   "title": "Finn, 2023, Direct preference optimization: Your language model is secretly a reward model, in Advances in Neural Information Processing Systems, volume 36, 53728-53741",
+   "authors": [
+    "Rafailov",
+    "Sharma",
+    "Mitchell",
+    "Manning",
+    "S. Ermon"
+   ],
+   "year": 2023,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Rana, S., and H. Singh, 2026, Evolvable AI needs operational risk thresholds, Proceedings of the National Academy of Sciences 123, e2618781123.",
+   "title": "Singh, 2026, Evolvable AI needs operational risk thresholds, Proceedings of the National Academy of Sciences 123, e2618781123",
+   "authors": [
+    "Rana"
+   ],
+   "year": 2026,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Rayo, L., and G. S. Becker, 2007, Evolutionary efficiency and happiness, Journal of Political Economy 115, 302-337.",
+   "title": "Becker, 2007, Evolutionary efficiency and happiness, Journal of Political Economy 115, 302-337",
+   "authors": [
+    "Rayo"
+   ],
+   "year": 2007,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Robson, A. J., 1996, A biological basis for expected and non-expected utility, Journal of Economic Theory 68, 397-424.",
+   "title": "J., 1996, A biological basis for expected and non-expected utility, Journal of Economic Theory 68, 397-424",
+   "authors": [
+    "Robson"
+   ],
+   "year": 1996,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Robson, A. J., 2001, The biological basis of economic behavior, Journal of Economic Literature 39, 11-33.",
+   "title": "J., 2001, The biological basis of economic behavior, Journal of Economic Literature 39, 11-33",
+   "authors": [
+    "Robson"
+   ],
+   "year": 2001,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Robson, A. J., and L. Samuelson, 2009, The evolution of time preference with aggregate uncertainty, American Economic Review 99, 1925-1953.",
+   "title": "Samuelson, 2009, The evolution of time preference with aggregate uncertainty, American Economic Review 99, 1925-1953",
+   "authors": [
+    "Robson"
+   ],
+   "year": 1925,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Robson, A. J., and L. Samuelson, 2011, The evolutionary foundations of preferences, in J. Benhabib, A. Bisin, and M. O. Jackson, eds., Handbook of Social Economics, volume 1A, 221-310 (North-Holland, Amsterdam).",
+   "title": "Samuelson, 2011, The evolutionary foundations of preferences, in J. Benhabib, A. Bisin, and M. O. Jackson, eds., Handbook of Social Economics, volume 1A, 221-310 (North-Holland, Amsterdam)",
+   "authors": [
+    "Robson"
+   ],
+   "year": 2011,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Roijers, D. M., P. Vamplew, S. Whiteson, and R. Dazeley, 2013, A survey of multi-objective sequential decision-making, Journal of Artificial Intelligence Research 48, 67-113.",
+   "title": "Dazeley, 2013, A survey of multi-objective sequential decision-making, Journal of Artificial Intelligence Research 48, 67-113",
+   "authors": [
+    "Roijers",
+    "Vamplew",
+    "S. Whiteson"
+   ],
+   "year": 2013,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Russell, S., 2019, Human Compatible: Artificial Intelligence and the Problem of Control (Viking, New York).",
+   "title": "Russell, S., 2019, Human Compatible: Artificial Intelligence and the Problem of Control (Viking, New York)",
+   "authors": [],
+   "year": 2019,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Samuelson, L., 2001, Introduction to the evolution of preferences, Journal of Economic Theory 97, 225-230.",
+   "title": "Samuelson, L., 2001, Introduction to the evolution of preferences, Journal of Economic Theory 97, 225-230",
+   "authors": [],
+   "year": 2001,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Samuelson, L., and J. Swinkels, 2006, Information, evolution and utility, Theoretical Economics 1, 119-142.",
+   "title": "Swinkels, 2006, Information, evolution and utility, Theoretical Economics 1, 119-142",
+   "authors": [
+    "Samuelson"
+   ],
+   "year": 2006,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Seger, J., and H. J. Brockmann, 1987, What is bet-hedging?, Oxford Surveys in Evolutionary Biology 4, 182-211.",
+   "title": "Brockmann, 1987, What is bet-hedging?, Oxford Surveys in Evolutionary Biology 4, 182-211",
+   "authors": [
+    "Seger"
+   ],
+   "year": 1987,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Shalizi, C. R., 2009, Dynamics of Bayesian updating with dependent data and misspecified models, Electronic Journal of Statistics 3, 1039-1074.",
+   "title": "R., 2009, Dynamics of Bayesian updating with dependent data and misspecified models, Electronic Journal of Statistics 3, 1039-1074",
+   "authors": [
+    "Shalizi"
+   ],
+   "year": 2009,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Silver, D., S. Singh, D. Precup, and R. S. Sutton, 2021, Reward is enough, Artificial Intelligence 299, 103535.",
+   "title": "Sutton, 2021, Reward is enough, Artificial Intelligence 299, 103535",
+   "authors": [
+    "Silver",
+    "Singh",
+    "Precup"
+   ],
+   "year": 2021,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Skalse, J., L. Hammond, C. Griffin, and A. Abate, 2022, Lexicographic multi-objective reinforcement learning, in Proceedings of the Thirty-First International Joint Conference on Artificial Intelligence (IJCAI-22), 3430-3436.",
+   "title": "Abate, 2022, Lexicographic multi-objective reinforcement learning, in Proceedings of the Thirty-First International Joint Conference on Artificial Intelligence (IJCAI-22), 3430-3436",
+   "authors": [
+    "Skalse",
+    "Hammond",
+    "C. Griffin"
+   ],
+   "year": 2022,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Tinbergen, N., 1951, The Study of Instinct (Oxford University Press, Oxford).",
+   "title": "Tinbergen, N., 1951, The Study of Instinct (Oxford University Press, Oxford)",
+   "authors": [],
+   "year": 1951,
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Tomasello, M., 2019, Becoming Human: A Theory of Ontogeny (Harvard University Press, Cambridge, MA).",
+   "title": "Tomasello, M., 2019, Becoming Human: A Theory of Ontogeny (Harvard University Press, Cambridge, MA)",
+   "authors": [],
+   "year": 2019,
+   "dois": [],
+   "kind": "book",
+   "etAl": false
+  },
+  {
+   "raw": "Turner, A. M., D. Hadfield-Menell, and P. Tadepalli, 2020, Conservative agency via attainable utility preservation, in Proceedings of the 2020 AAAI/ACM Conference on AI, Ethics, and Society, 385-391.",
+   "title": "Tadepalli, 2020, Conservative agency via attainable utility preservation, in Proceedings of the 2020 AAAI/ACM Conference on AI, Ethics, and Society, 385-391",
+   "authors": [
+    "Turner",
+    "D. Hadfield-Menell"
+   ],
+   "year": 2020,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Vamplew, P., R. Dazeley, C. Foale, S. Firmin, and J. Mummery, 2018, Human-aligned artificial intelligence is a multiobjective problem, Ethics and Information Technology 20, 27-40.",
+   "title": "Mummery, 2018, Human-aligned artificial intelligence is a multiobjective problem, Ethics and Information Technology 20, 27-40",
+   "authors": [
+    "Vamplew",
+    "Dazeley",
+    "Foale",
+    "S. Firmin"
+   ],
+   "year": 2018,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Vamplew, P., B. J. Smith, J. Källström, G. Ramos, R. Rădulescu, D. M. Roijers, C. F. Hayes, F. Heintz, P. Mannion, P. J. K. Libin, R. Dazeley, and C. Foale, 2022, Scalar reward is not enough: A response to Silver, Singh, Precup and Sutton (2021), Autonomous Agents and Multi-Agent Systems 36, 41.",
+   "title": "Foale, 2022, Scalar reward is not enough: A response to Silver, Singh, Precup and Sutton (2021), Autonomous Agents and Multi-Agent Systems 36, 41",
+   "authors": [
+    "Vamplew",
+    "Smith",
+    "Källström",
+    "Ramos",
+    "Rădulescu",
+    "Roijers",
+    "Hayes",
+    "Heintz",
+    "Mannion",
+    "Libin",
+    "Dazeley"
+   ],
+   "year": 2021,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Vamplew, P., J. Yearwood, R. Dazeley, and A. Berry, 2008, On the limitations of scalarisation for multi-objective reinforcement learning of Pareto fronts, in AI 2008: Advances in Artificial Intelligence, volume 5360 of Lecture Notes in Computer Science, 372-378 (Springer, Berlin).",
+   "title": "Berry, 2008, On the limitations of scalarisation for multi-objective reinforcement learning of Pareto fronts, in AI 2008: Advances in Artificial Intelligence, volume 5360 of Lecture Notes in Computer Science, 372-378 (Springer, Berlin)",
+   "authors": [
+    "Vamplew",
+    "Yearwood",
+    "R. Dazeley"
+   ],
+   "year": 2008,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Williams, R. J., 1992, Simple statistical gradient-following algorithms for connectionist reinforcement learning, Machine Learning 8, 229-256.",
+   "title": "J., 1992, Simple statistical gradient-following algorithms for connectionist reinforcement learning, Machine Learning 8, 229-256",
+   "authors": [
+    "Williams"
+   ],
+   "year": 1992,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Xiao, J., Z. Li, X. Xie, E. Getzen, C. Fang, Q. Long, and W. J. Su, 2024, On the algorithmic bias of aligning large language models with RLHF: Preference collapse and matching regularization, arXiv:2405.16455.",
+   "title": "Su, 2024, On the algorithmic bias of aligning large language models with RLHF: Preference collapse and matching regularization",
+   "authors": [
+    "Xiao",
+    "Li",
+    "Xie",
+    "Getzen",
+    "Fang",
+    "Long"
+   ],
+   "year": 2024,
+   "venue": "arXiv",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Zhang, R., T. J. Brennan, and A. W. Lo, 2014, The origin of risk aversion, Proceedings of the National Academy of Sciences 111, 17777-17782.",
+   "title": "Lo, 2014, The origin of risk aversion, Proceedings of the National Academy of Sciences 111, 17777-17782",
+   "authors": [
+    "Zhang",
+    "Brennan"
+   ],
+   "year": 2014,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "Ziebart, B. D., 2010, Modeling Purposeful Adaptive Behavior with the Principle of Maximum Causal Entropy, Ph.D. thesis, Carnegie Mellon University.",
+   "title": "D., 2010, Modeling Purposeful Adaptive Behavior with the Principle of Maximum Causal Entropy, Ph.D",
+   "authors": [
+    "Ziebart"
+   ],
+   "year": 2010,
+   "venue": "thesis, Carnegie Mellon University",
+   "dois": [],
+   "kind": "thesis",
+   "etAl": false
+  }
+ ],
+ "stat.AP_2611.22149v1.pdf": [
+  {
+   "raw": "[1] Titterington, D.M., Smith, A.F.M., Makov, U.E.: Statistical Analysis of Finite Mixture Distributions. Wiley, Chichester (1985)",
+   "title": "Titterington, D.M., Smith, A.F.M., Makov, U.E.: Statistical Analysis of Finite Mixture Distributions",
+   "authors": [],
+   "year": 1985,
+   "venue": "Wiley, Chichester",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[2] McLachlan, G.J., Peel, D.: Finite Mixture Models. Wiley, New York (2000)",
+   "title": "Wiley, New York (2000)",
+   "authors": [
+    "McLachlan",
+    "Peel",
+    "Models"
+   ],
+   "year": 2000,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[3] Fraley, C., Raftery, A.E.: Model-based clustering, discriminant analysis, and density estimation. Journal of the American Statistical Association 97(458), 611-631 (2002)",
+   "title": "Fraley, C., Raftery, A.E.: Model-based clustering, discriminant analysis, and density estimation",
+   "authors": [],
+   "year": 2002,
+   "venue": "Journal of the American Statistical Association",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[4] McLachlan, G.J., Lee, S.X., Rathnayake, S.I.: Finite mixture models. Annual Review of Statistics and its Application 6(1), 355-378 (2019)",
+   "title": "Annual Review of Statistics and its Application 6(1), 355-378 (2019)",
+   "authors": [
+    "McLachlan",
+    "Lee",
+    "Rathnayake",
+    "models"
+   ],
+   "year": 2019,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[5] Celeux, G., Govaert, G.: Gaussian parsimonious clustering models. Pattern Recognition 28(5), 781-793 (1995)",
+   "title": "Pattern Recognition 28(5), 781-793 (1995)",
+   "authors": [
+    "Celeux",
+    "Govaert",
+    "models"
+   ],
+   "year": 1995,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[6] Ghahramani, Z., Hinton, G.E.: The EM algorithm for mixtures of factor analyzers. Technical Report CRG-TR-96-1, University of Toronto (1996). Revised February 1997",
+   "title": "Revised February 1997",
+   "authors": [
+    "Ghahramani",
+    "Hinton",
+    "CRG-TR",
+    "Toronto"
+   ],
+   "year": 1996,
+   "dois": [],
+   "kind": "report",
+   "etAl": false
+  },
+  {
+   "raw": "[7] McLachlan, G.J., Peel, D., Bean, R.W.: Modelling high-dimensional data by mixtures of factor analyzers. Computational Statistics & Data Analysis 41(3-4), 379-388 (2003)",
+   "title": "McLachlan, G.J., Peel, D., Bean, R.W.: Modelling high-dimensional data by mixtures of factor analyzers",
+   "authors": [],
+   "year": 2003,
+   "venue": "Computational Statistics & Data Analysis",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[8] Baek, J., McLachlan, G.J., Flack, L.K.: Mixtures of factor analyzers with common factor loadings: Applications to the clustering and visualization of high-dimensional data. IEEE Transactions on Pattern Analysis and Machine Intelligence 32(7), 1298-1309 (2010)",
+   "title": "Baek, J., McLachlan, G.J., Flack, L.K.: Mixtures of factor analyzers with common factor loadings: Applications to the clustering and visualization of high-dimensional data",
+   "authors": [],
+   "year": 2010,
+   "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[9] Tang, Y., Salakhutdinov, R., Hinton, G.E.: Deep mixtures of factor analysers. In: Proceedings of the 29th International Conference on Machine Learning, pp. 505-512 (2012)",
+   "title": "Tang, Y., Salakhutdinov, R., Hinton, G.E.: Deep mixtures of factor analysers",
+   "authors": [],
+   "year": 2012,
+   "venue": "Proceedings of the 29th International Conference on Machine Learning",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[10] Viroli, C., McLachlan, G.J.: Deep Gaussian mixture models. Statistics and Computing 29(1), 43-51 (2019)",
+   "title": "Statistics and Computing 29(1), 43-51 (2019)",
+   "authors": [
+    "Viroli",
+    "McLachlan",
+    "models"
+   ],
+   "year": 2019,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[11] Kock, L., Klein, N., Nott, D.J.: Variational inference and sparsity in highdimensional deep Gaussian mixture models. Statistics and Computing 32 (2022)",
+   "title": "Kock, L., Klein, N., Nott, D.J.: Variational inference and sparsity in highdimensional deep Gaussian mixture models",
+   "authors": [],
+   "year": 2022,
+   "venue": "Statistics and Computing",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[12] Peel, D., McLachlan, G.J.: Robust mixture modelling using the t distribution. Statistics and Computing 10(4), 339-348 (2000)",
+   "title": "Peel, D., McLachlan, G.J.: Robust mixture modelling using the t distribution",
+   "authors": [],
+   "year": 2000,
+   "venue": "Statistics and Computing",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[13] Wu, J., McLachlan, G.J.: Robust deep mixture models. arXiv preprint arXiv:2608.01613 (2026)",
+   "title": "arXiv",
+   "authors": [
+    "Wu",
+    "McLachlan",
+    "models"
+   ],
+   "year": 2026,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[14] Wu, J., Wang, Y.-G., McLachlan, G.J.: Deep skew-t mixture models. arXiv preprint arXiv:2609.00773 (2026)",
+   "title": "arXiv",
+   "authors": [
+    "Wu",
+    "Wang",
+    "McLachlan",
+    "models"
+   ],
+   "year": 2026,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[15] Moustaki, I., Knott, M.: Generalized latent trait models. Psychometrika 65(3), 391-411 (2000)",
+   "title": "Psychometrika 65(3), 391-411 (2000)",
+   "authors": [
+    "Moustaki",
+    "Knott",
+    "models"
+   ],
+   "year": 2000,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[16] Gollini, I., Murphy, T.B.: Mixture of latent trait analyzers for model-based clustering of categorical data. Statistics and Computing 24(4), 569-588 (2014)",
+   "title": "Gollini, I., Murphy, T.B.: Mixture of latent trait analyzers for model-based clustering of categorical data",
+   "authors": [],
+   "year": 2014,
+   "venue": "Statistics and Computing",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[17] McParland, D., Gormley, I.C.: Model based clustering for mixed data: clustMD. Advances in Data Analysis and Classification 10(2), 155-169 (2016)",
+   "title": "McParland, D., Gormley, I.C.: Model based clustering for mixed data: clustMD",
+   "authors": [],
+   "year": 2016,
+   "venue": "Advances in Data Analysis and Classification",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[18] Fuchs, R., Pommeret, D., Viroli, C.: Mixed deep Gaussian mixture model: A clustering model for mixed datasets. Advances in Data Analysis and Classification 16(1), 31-53 (2022)",
+   "title": "Fuchs, R., Pommeret, D., Viroli, C.: Mixed deep Gaussian mixture model: A clustering model for mixed datasets",
+   "authors": [],
+   "year": 2022,
+   "venue": "Advances in Data Analysis and Classification",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[19] Andrews, D.F., Mallows, C.L.: Scale mixtures of normal distributions. Journal of the Royal Statistical Society: Series B 36(1), 99-102 (1974)",
+   "title": "Andrews, D.F., Mallows, C.L.: Scale mixtures of normal distributions",
+   "authors": [],
+   "year": 1974,
+   "venue": "Journal of the Royal Statistical Society: Series B",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[20] Azzalini, A., Capitanio, A.: Distributions generated by perturbation of symmetry with emphasis on a multivariate skew t-distribution. Journal of the Royal Statistical Society: Series B 65(2), 367-389 (2003)",
+   "title": "Azzalini, A., Capitanio, A.: Distributions generated by perturbation of symmetry with emphasis on a multivariate skew t-distribution",
+   "authors": [],
+   "year": 2003,
+   "venue": "Journal of the Royal Statistical Society: Series B",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[21] Lee, S.X., McLachlan, G.J.: Finite mixtures of multivariate skew t-distributions: Some recent and new results. Statistics and Computing 24, 181-202 (2014)",
+   "title": "Lee, S.X., McLachlan, G.J.: Finite mixtures of multivariate skew t-distributions: Some recent and new results",
+   "authors": [],
+   "year": 2014,
+   "venue": "Statistics and Computing 24",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[22] Browne, R.P., McNicholas, P.D.: A mixture of generalized hyperbolic distributions. Canadian Journal of Statistics 43(2), 176-198 (2015)",
+   "title": "Browne, R.P., McNicholas, P.D.: A mixture of generalized hyperbolic distributions",
+   "authors": [],
+   "year": 2015,
+   "venue": "Canadian Journal of Statistics",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[23] McCullagh, P., Nelder, J.A.: Generalized Linear Models, 2nd edn. Chapman & Hall, London (1989)",
+   "title": "Chapman & Hall, London (1989)",
+   "authors": [
+    "McCullagh",
+    "Nelder",
+    "Models",
+    "edn"
+   ],
+   "year": 1989,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[24] McLachlan, G.J., Krishnan, T.: The EM Algorithm and Extensions. John Wiley & Sons, New York (2008)",
+   "title": "John Wiley & Sons, New York (2008)",
+   "authors": [
+    "McLachlan",
+    "Krishnan",
+    "Algorithm",
+    "Extensions"
+   ],
+   "year": 2008,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[25] Wei, G.C.G., Tanner, M.A.: A Monte Carlo implementation of the EM algorithm and the poor man’s data augmentation algorithms. Journal of the American Statistical Association 85(411), 699-704 (1990)",
+   "title": "Wei, G.C.G., Tanner, M.A.: A Monte Carlo implementation of the EM algorithm and the poor man’s data augmentation algorithms",
+   "authors": [],
+   "year": 1990,
+   "venue": "Journal of the American Statistical Association",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[26] Dempster, A.P., Laird, N.M., Rubin, D.B.: Maximum likelihood from incomplete data via the EM algorithm. Journal of the Royal Statistical Society: Series B 39(1), 1-38 (1977)",
+   "title": "Dempster, A.P., Laird, N.M., Rubin, D.B.: Maximum likelihood from incomplete data via the EM algorithm",
+   "authors": [],
+   "year": 1977,
+   "venue": "Journal of the Royal Statistical Society: Series B",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[27] Lange, K.L., Little, R.J.A., Taylor, J.M.G.: Robust statistical modeling using the t distribution. Journal of the American Statistical Association 84(408), 881-896 (1989)",
+   "title": "Lange, K.L., Little, R.J.A., Taylor, J.M.G.: Robust statistical modeling using the t distribution",
+   "authors": [],
+   "year": 1989,
+   "venue": "Journal of the American Statistical Association",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[28] Nielsen, S.F.: The stochastic EM algorithm: Estimation and asymptotic results. Bernoulli 6(3), 457-489 (2000)",
+   "title": "Nielsen, S.F.: The stochastic EM algorithm: Estimation and asymptotic results",
+   "authors": [],
+   "year": 2000,
+   "venue": "Bernoulli",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[29] Hubert, L., Arabie, P.: Comparing partitions. Journal of Classification 2, 193-218 (1985)",
+   "title": "Journal of Classification 2, 193-218 (1985)",
+   "authors": [
+    "Hubert",
+    "Arabie",
+    "partitions"
+   ],
+   "year": 1985,
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  },
+  {
+   "raw": "[30] Schwarz, G.: Estimating the dimension of a model. The Annals of Statistics 6(2), 461-464 (1978)",
+   "title": "Schwarz, G.: Estimating the dimension of a model",
+   "authors": [],
+   "year": 1978,
+   "venue": "The Annals of Statistics",
+   "dois": [],
+   "kind": "article",
+   "etAl": false
+  }
+ ]
+}
