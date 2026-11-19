@@ -1,0 +1,13 @@
+import { readFileSync } from 'node:fs';
+import * as pdfjs from 'pdfjs-dist/legacy/build/pdf.mjs';
+import { pdfToLines } from '../src/core/pdf';
+import { buildDoc } from '../src/core/doc';
+const f = process.argv[2];
+const { lines, pageWidths } = await pdfToLines(pdfjs as any, new Uint8Array(readFileSync(f)));
+const doc = buildDoc(lines, pageWidths);
+console.log('title:', doc.title, '| pages', doc.stats.pages, '| sentences', doc.sentences.length, '| refs', doc.references.length, '| citances', doc.citances.length, '| style', doc.style);
+doc.rawReferences.forEach((r, i) => console.log(`R${i + 1}: ${r.slice(0, 170)}`));
+console.log('--- citances sample');
+for (const c of doc.citances.slice(0, 12)) console.log(`[${c.refIndices.map((i) => i + 1)}] ${c.marker} :: ${c.claim.slice(0, 160)}`);
+const cited = new Set(doc.citances.flatMap((c) => c.refIndices));
+console.log('refs cited in text:', cited.size, '/', doc.references.length);

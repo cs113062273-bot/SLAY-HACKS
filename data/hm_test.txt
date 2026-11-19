@@ -1,0 +1,164 @@
+
+HALLMARK test_public: n=825 DR=0.949 FPR=0.054 P=0.969 F1=0.959  [7216s]
+  VALID (flagged=FP)         16/299  0.05
+  arxiv_version_mismatch     42/46  0.91
+  chimeric_title             20/23  0.87
+  fabricated_doi             29/29  1.00
+  future_date                29/29  1.00
+  hybrid_fabrication         32/32  1.00
+  merged_citation            29/29  1.00
+  near_miss_title            34/40  0.85
+  nonexistent_venue          26/37  0.70
+  partial_author_list        31/32  0.97
+  placeholder_authors        33/33  1.00
+  plausible_fabrication      68/68  1.00
+  preprint_as_published      30/30  1.00
+  swapped_authors            62/63  0.98
+  wrong_venue                34/35  0.97
+FP [VALID] metadata_error | {"title":"Gating Dropout: Communication-efficient Regularization for Sparsely Activated Transformers","author":"Rui Liu and Young Jin Kim and Alexandre Muzio and Hany Hassan","year":"2022","booktitle"
+   WHY: Valid entry scraped from DBLP and verified
+   MATCH[semanticscholar]: Gating Dropout: Communication-efficient Regularization for Sparsely Activated Transformers | Liu, Kim, Muzio, Mozafari, Awadalla | 2022/2022 | International Conference on Machine Learning
+   ! Author list does not match the published work: Hassan not among its authors
+FN [nonexistent_venue] verified_minor | {"title":"RLang: A Declarative Language for Describing Partial World Knowledge to Reinforcement Learning Agents","author":"Rafael Rodríguez-Sánchez and Benjamin Adin Spiegel and Jennifer Wang and Roma
+   WHY: Venue fabricated: 'Transactions on Autonomous Learning Systems' does not exist
+   MATCH[semanticscholar]: RLang: A Declarative Language for Describing Partial World Knowledge to Reinforcement Learning Agents | Rodríguez-Sánchez, Spiegel, Wang, Patel, Tellex | 2022/2022 | International Conference on Machine Learning
+FP [VALID] metadata_error | {"title":"Estimating Density Models with Truncation Boundaries using Score Matching.","author":"Song Liu and Takafumi Kanamori and Daniel J. Williams","year":"2022","url":"https://jmlr.org/papers/v23/
+   WHY: Valid entry scraped from DBLP
+   MATCH[semanticscholar]: Estimating Density Models with Truncation Boundaries using Score Matching | Liu, Kanamori, Williams | 2019/2019 | Journal of machine learning research
+   ! Year 2022 does not match the published record (2019/2019)
+FN [near_miss_title] verified | {"title":"Structured State Space Models for In Context Reinforcement Learning","author":"Chris Lu and Yannick Schroecker and Albert Gu and Emilio Parisotto and Jakob N. Foerster and Satinder Singh and
+   WHY: Title slightly modified: 'Structured State Space Models for In Context Reinforcement Learning' (original: 'Structured State Space Models for In-Context Reinforc
+   MATCH[crossref]: Structured State Space Models for In-Context Reinforcement Learning | Lu, Schroecker, Gu, Parisotto, Foerster | 2023/2026 | Advances in Neural Information Processing Systems 36
+FP [VALID] metadata_error | {"title":"Communication-Efficient Distributed Optimization with Quantized Preconditioners","author":"Foivos Alimisis and Peter Davies and Dan Alistarh","year":"2021","booktitle":"ICML"}
+   WHY: Valid entry scraped from DBLP and verified
+   MATCH[semanticscholar]: Communication-Efficient Distributed Optimization with Quantized Preconditioners | Alimisis, Davies, Jaggi | 2021/2021 | International Conference on Machine Learning
+   ! Author list does not match the published work: Alistarh not among its authors
+FP [VALID] metadata_error | {"title":"Towards the Generalization of Contrastive Self-Supervised Learning","author":"Weiran Huang and Mingyang Yi and Xuyang Zhao and Zihao Jiang","year":"2023","booktitle":"ICLR"}
+   WHY: Valid entry scraped from DBLP and verified
+   MATCH[semanticscholar]: Towards the Generalization of Contrastive Self-Supervised Learning | Huang, Yi, Zhao, Jiang | 2021/2021 | International Conference on Learning Representations
+   ! Year 2023 does not match the published record (2021/2021)
+FN [arxiv_version_mismatch] verified | {"title":"Structured State Space Models for In-Context Reinforcement Learning","author":"Chris Lu and Yannick Schroecker and Albert Gu and Emilio Parisotto and Jakob N. Foerster and Satinder Singh and
+   WHY: Real paper cited with wrong venue 'NeurIPS' and year shifted to 2024; metadata mixes preprint and publication versions
+   MATCH[crossref]: Structured State Space Models for In-Context Reinforcement Learning | Lu, Schroecker, Gu, Parisotto, Foerster | 2023/2026 | Advances in Neural Information Processing Systems 36
+FP [VALID] metadata_error | {"title":"Minimum Cost Intervention Design for Causal Effect Identification","author":"Sina Akbari and Jalal Etesami and Negar Kiyavash","year":"2022","booktitle":"ICML"}
+   WHY: Valid entry scraped from DBLP and verified
+   MATCH[semanticscholar]: Minimum Cost Intervention Design for Causal Effect Identification | Akbari, Etesami, Kiyavash | 2022 | International Conference on Machine Learning
+   ! Author list does not match the published work: Jalesami not among its authors
+FP [VALID] metadata_error | {"title":"Byzantine-Resilient Non-Convex Stochastic Gradient Descent","author":"Zeyuan Allen-Zhu and Faeze Ebrahimianghazani and Jerry Li and Dan Alistarh","year":"2021","booktitle":"ICLR"}
+   WHY: Valid entry scraped from DBLP and verified
+   MATCH[semanticscholar]: Byzantine-Resilient Non-Convex Stochastic Gradient Descent | Allen-Zhu, Ebrahimian, Li, Jaggi | 2020/2020 | International Conference on Learning Representations
+   ! Author list does not match the published work: Alistarh not among its authors
+FN [nonexistent_venue] verified | {"title":"Near-Optimal Deployment Efficiency in Reward-Free Reinforcement Learning with Linear Function Approximation","author":"Dan Qiao and Yu-Xiang Wang","year":"2023","booktitle":"ACM Conference o
+   WHY: Venue fabricated: 'ACM Conference on Automated Reasoning and Learning' does not exist
+   MATCH[semanticscholar]: Near-Optimal Deployment Efficiency in Reward-Free Reinforcement Learning with Linear Function Approximation | Qiao, Wang | 2022/2022 | International Conference on Learning Representations
+FN [arxiv_version_mismatch] verified | {"title":"Supervised Contrastive Learning","author":"Prannay Khosla and Piotr Teterwak and Chen Wang and Aaron Sarna and Yonglong Tian and Phillip Isola and Aaron Maschinot and Ce Liu and Dilip Krishn
+   WHY: Real paper (arXiv:2004.11362) appeared at NeurIPS 2020; cited here as NeurIPS 2022.
+   MATCH[semanticscholar]: Supervised Contrastive Learning | Khosla, Teterwak, Wang, Sarna, Tian | 2020/2020 | Neural Information Processing Systems
+FN [arxiv_version_mismatch] verified | {"title":"Reliable Evaluation of Adversarial Robustness with an Ensemble of Diverse Parameter-Free Attacks","author":"Francesco Croce and Matthias Hein","booktitle":"ICML","year":"2022","doi":"10.4855
+   WHY: Real paper (AutoAttack, arXiv:2003.01690) appeared at ICML 2020; cited here as ICML 2022.
+   MATCH[semanticscholar]: Reliable evaluation of adversarial robustness with an ensemble of diverse parameter-free attacks | Croce, Hein | 2020/2020 | International Conference on Machine Learning
+FN [nonexistent_venue] verified | {"title":"Achieving Envy-freeness and Equitability with Monetary Transfers","author":"Haris Aziz","year":"2021","doi":"10.1609/AAAI.V35I6.16645","booktitle":"Journal of Explainable Artificial Intellig
+   WHY: Venue fabricated: 'Journal of Explainable Artificial Intelligence' does not exist
+   MATCH[crossref]: Achieving Envy-freeness and Equitability with Monetary Transfers | Aziz | 2021/2022 | Proceedings of the AAAI Conference on Artificial Intelligence
+FP [VALID] metadata_error | {"title":"Pseudo-Marginal Hamiltonian Monte Carlo.","author":"Johan Alenlöv and Arnoud Doucet and Fredrik Lindsten","year":"2021","url":"https://jmlr.org/papers/v22/19-486.html","booktitle":"J. Mach. 
+   WHY: Valid entry scraped from DBLP
+   MATCH[semanticscholar]: Pseudo-Marginal Hamiltonian Monte Carlo | Alenlöv, Doucet, Lindsten | 2016/2016 | Journal of machine learning research
+   ! Year 2021 does not match the published record (2016/2016)
+FP [VALID] metadata_error | {"title":"Hierarchical Shrinkage: Improving the accuracy and interpretability of tree-based models","author":"Abhineet Agarwal and Yan Shuo Tan and Omer Ronen and Chandan Singh and Bin Yu","year":"202
+   WHY: Valid entry scraped from DBLP and verified
+   MATCH[semanticscholar]: Hierarchical Shrinkage: improving the accuracy and interpretability of tree-based methods | Agarwal, Tan, Ronen, Singh, Yu | 2022/2022 | International Conference on Machine Learning
+   ! Title differs from the published title (cited “models”, published “methods”)
+FP [VALID] metadata_error | {"title":"Neural Contextual Bandits with Deep Representation and Shallow Exploration","author":"Pan Xu and Zheng Wen and Handong Zhao and Quanquan Gu","year":"2022","booktitle":"ICLR"}
+   WHY: Valid entry scraped from DBLP and verified
+   MATCH[semanticscholar]: Neural Contextual Bandits with Deep Representation and Shallow Exploration | Xu, Wen, Zhao, Gu | 2020/2020 | International Conference on Learning Representations
+   ! Year 2022 does not match the published record (2020/2020)
+FN [near_miss_title] verified | {"title":"Spatial-temporal Concept based Explanations of 3D ConvNets","author":"Ying Ji and Yu Wang and Jien Kato","year":"2023","doi":"10.1109/CVPR52729.2023.01482","booktitle":"CVPR"}
+   WHY: Title slightly modified: 'Spatial-temporal Concept based Explanations of 3D ConvNets' (original: 'Spatial-temporal Concept based Explanation of 3D ConvNets')
+   MATCH[crossref]: Spatial-temporal Concept based Explanation of 3D ConvNets | Ji, Wang, Kato | 2023 | 2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
+FP [VALID] metadata_error | {"title":"Inference for Multiple Heterogeneous Networks with a Common Invariant Subspace.","author":"Jesús Arroyo and Avanti Athreya and Joshua Cape and Guodong Chen and Carey E. Priebe and Joshua T. 
+   WHY: Valid entry scraped from DBLP
+   MATCH[semanticscholar]: Inference for Multiple Heterogeneous Networks with a Common Invariant Subspace | Arroyo, Athreya, Cape, Chen, Priebe | 2019/2019 | Journal of machine learning research
+   ! Year 2021 does not match the published record (2019/2019)
+FN [nonexistent_venue] verified | {"title":"Towards the Unification and Robustness of Perturbation and Gradient Based Explanations","author":"Sushant Agarwal and Shahin Jabbari and Chirag Agarwal and Sohini Upadhyay and Steven Wu and 
+   WHY: Venue fabricated: 'Journal of Statistical Machine Learning Theory' does not exist
+   MATCH[semanticscholar]: Towards the Unification and Robustness of Perturbation and Gradient Based Explanations | Agarwal, Jabbari, Agarwal, Upadhyay, Wu | 2021/2021 | International Conference on Machine Learning
+FP [VALID] metadata_error | {"title":"Understanding Deep Neural Function Approximation in Reinforcement Learning via $\\epsilon$-Greedy Exploration","author":"Fanghui Liu and Luca Viano and Volkan Cevher","year":"2022","booktitl
+   WHY: Valid entry scraped from DBLP and verified
+   MATCH[crossref]: Understanding Deep Neural Function Approximation in Reinforcement Learning Via e-Greedy Exploration | Liu, Viano, Cevher | 2022/2026 | Advances in Neural Information Processing Systems 35
+   ! Title differs from the published title (cited “epsilon”, published “e”)
+FP [VALID] metadata_error | {"title":"Query-focused and Memory-aware Reranker for Long Context Processing","author":"Yuqing Li and Jiangnan Li and Mo Yu and Guoxuan Ding and Zheng Lin and Weiping Wang and Jie Zhou","year":"2026"
+   WHY: Valid arXiv preprint (2026)
+   MATCH[crossref]: Query-focused and Memory-aware Reranker for Long Context Processing | Li, Li, Yu, Chen, Ding | 2026 | Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing
+   ! Incomplete author list: 2 of 8 authors omitted without “et al.”
+FN [near_miss_title] verified | {"title":"OrdinalCLIP: Learning Rank Prompts for Language Guided Ordinal Regression","author":"Wanhua Li and Xiaoke Huang and Zheng Zhu and Yansong Tang and Xiu Li and Jie Zhou and Jiwen Lu","year":"2
+   WHY: Title slightly modified: 'OrdinalCLIP: Learning Rank Prompts for Language Guided Ordinal Regression' (original: 'OrdinalCLIP: Learning Rank Prompts for Language
+   MATCH[crossref]: OrdinalCLIP: Learning Rank Prompts for Language-Guided Ordinal Regression | Li, Huang, Zhu, Tang, Li | 2022/2026 | Advances in Neural Information Processing Systems 35
+FN [nonexistent_venue] verified | {"title":"Transform2Act: Learning a Transform-and-Control Policy for Efficient Agent Design","author":"Ye Yuan and Yuda Song and Zhengyi Luo and Wen Sun and Kris M. Kitani","year":"2022","booktitle":"
+   WHY: Venue fabricated: 'Conference on Distributed Machine Learning' does not exist
+   MATCH[semanticscholar]: Transform2Act: Learning a Transform-and-Control Policy for Efficient Agent Design | Yuan, Song, Luo, Sun, Kitani | 2021/2021 | International Conference on Learning Representations
+FN [chimeric_title] verified_minor | {"title":"Retrieval-Augmented Generation for Long-Form Question Answering","author":"Ibne Farabi Shihab and Sanjeda Akter and Anuj Sharma","year":"2021","doi":"10.48550/arXiv.2602.12204"}
+   WHY: Title 'Retrieval-Augmented Generation for Long-Form Question Answering' is fabricated; authors are real
+   ! arXiv:2602.12204 now carries the title “Learning to Forget Attention: Memory Consolidation for Adaptive Compute Reduction” (same authors; likely a renamed version)
+FN [swapped_authors] verified_minor | {"title":"ConvMAE: Masked Convolution Meets Masked Autoencoders","author":"Peng Gao and Teli Ma and Hongsheng Li and Dahua Lin and Yu Qiao and Jifeng Dai and Hongyang Li","booktitle":"NeurIPS","year":
+   WHY: Real ConvMAE byline is Gao, Ma, Li, Ziyi Lin, Dai, Qiao; here "Dahua Lin" and "Hongyang Li" replace real co-authors.
+   MATCH[semanticscholar]: ConvMAE: Masked Convolution Meets Masked Autoencoders | Gao, Ma, Li, Lin, Dai | 2022/2022 | arXiv.org
+FN [nonexistent_venue] verified | {"title":"Online Unrelated Machine Load Balancing with Predictions Revisited","author":"Shi Li and Jiayi Xian","year":"2021","booktitle":"Conference on Bayesian Deep Learning Methods"}
+   WHY: Venue fabricated: 'Conference on Bayesian Deep Learning Methods' does not exist
+   MATCH[semanticscholar]: Online Unrelated Machine Load Balancing with Predictions Revisited | Li, Xian | 2021 | International Conference on Machine Learning
+FP [VALID] metadata_error | {"title":"Bayesian Structural Adaptation for Continual Learning","author":"Abhishek Kumar and Sunabha Chatterjee and Piyush Rai","year":"2021","booktitle":"ICML"}
+   WHY: Valid entry scraped from DBLP and verified
+   MATCH[semanticscholar]: Bayesian Structure Adaptation for Continual Learning | Kumar, Chatterjee, Rai | 2019/2019 | arXiv: Learning
+   ! Title differs from the published title (cited “structural”, published “structure”)
+   ! Only a preprint was found; publication in “ICML” could not be confirmed
+FP [VALID] metadata_error | {"title":"Fundamental Limits and Tradeoffs in Invariant Representation Learning.","author":"Han Zhao and Chen Dan and Bryon Aragam and Tommi S. Jaakkola and Geoffrey J. Gordon and Pradeep Ravikumar","
+   WHY: Valid entry scraped from DBLP
+   MATCH[semanticscholar]: Fundamental Limits and Tradeoffs in Invariant Representation Learning | Zhao, Dan, Aragam, Jaakkola, Gordon | 2020/2020 | Journal of machine learning research
+   ! Year 2022 does not match the published record (2020/2020)
+FN [partial_author_list] verified_minor | {"title":"PaLM-E: An Embodied Multimodal Language Model","author":"Danny Driess and Fei Xia and Mehdi S. M. Sajjadi and Corey Lynch and Aakanksha Chowdhery and Brian Ichter and Jonathan Tompson and et
+   WHY: PaLM-E (ICML 2023); 'Driess ... Ichter, Tompson, et al.' skips the 7th author, Ayzaan Wahid, who is 7th on every version (PMLR, OpenReview, arXiv v1, DBLP), so 
+   MATCH[semanticscholar]: PaLM-E: An Embodied Multimodal Language Model | Driess, Xia, Sajjadi, Lynch, Chowdhery | 2023/2023 | International Conference on Machine Learning
+FN [arxiv_version_mismatch] verified | {"title":"Task-Agnostic Meta-Learning for Few-Shot Learning","author":"Muhammad Jamal and Guo-Jun Qi","booktitle":"CVPR","year":"2021","doi":"10.1109/CVPR.2019.01199"}
+   WHY: Real paper (Muhammad Abdullah Jamal and Guo-Jun Qi) published at CVPR 2019; cited here with year 2021.
+   MATCH[crossref]: Task Agnostic Meta-Learning for Few-Shot Learning | Jamal, Qi | 2019/2020 | 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
+FP [VALID] metadata_error | {"title":"Dependent randomized rounding for clustering and partition systems with knapsack constraints.","author":"David G. Harris and Thomas W. Pensyl and Aravind Srinivasan and Khoa Trinh","year":"2
+   WHY: Valid entry scraped from DBLP
+   MATCH[semanticscholar]: Dependent randomized rounding for clustering and partition systems with knapsack constraints | Harris, Pensyl, Srinivasan, Trinh | 2017/2017 | International Conference on Artificial Intelligence and Statistics
+   ! Year 2022 does not match the published record (2017/2017)
+   ! Venue mismatch: cited as JMLR, published in AISTATS
+FP [VALID] metadata_error | {"title":"State and parameter learning with PARIS particle Gibbs","author":"Gabriel Cardoso and Yazid Janati El Idrissi and Sylvain Le Corff and Eric Moulines and Jimmy Olsson","year":"2023","booktitl
+   WHY: Valid entry scraped from DBLP and verified
+   MATCH[semanticscholar]: State and parameter learning with PARIS particle Gibbs | Cardoso, Janati, Le Corff, Moulines, Olsson | 2023/2023 | International Conference on Machine Learning
+   ! Author list does not match the published work: Idrissi not among its authors
+FN [nonexistent_venue] verified | {"title":"Are Neural Rankers still Outperformed by Gradient Boosted Decision Trees?","author":"Zhen Qin and Le Yan and Honglei Zhuang and Yi Tay and Rama Kumar Pasumarthi and Xuanhui Wang and Michael 
+   WHY: Venue fabricated: 'International Journal of Context Learning' does not exist
+   MATCH[semanticscholar]: Are Neural Rankers still Outperformed by Gradient Boosted Decision Trees? | Qin, Yan, Zhuang, Tay, Pasumarthi | 2021 | International Conference on Learning Representations
+FN [near_miss_title] verified | {"title":"Transform2Act: Learning a Transform and-Control Policy for Efficient Agent Design","author":"Ye Yuan and Yuda Song and Zhengyi Luo and Wen Sun and Kris M. Kitani","year":"2022","booktitle":"
+   WHY: Title slightly modified: 'Transform2Act: Learning a Transform and-Control Policy for Efficient Agent Design' (original: 'Transform2Act: Learning a Transform-and
+   MATCH[semanticscholar]: Transform2Act: Learning a Transform-and-Control Policy for Efficient Agent Design | Yuan, Song, Luo, Sun, Kitani | 2021/2021 | International Conference on Learning Representations
+FN [near_miss_title] verified | {"title":"Pedagogically-Inspired Data Synthesis for Language Models Knowledge Distillation","author":"Bowei He and Yankai Chen and Xiaokun Zhang and Linghe Kong and Philip S. Yu and Xue Liu and Chen M
+   WHY: Title slightly modified: 'Pedagogically-Inspired Data Synthesis for Language Models Knowledge Distillation' (original: 'Pedagogically-Inspired Data Synthesis fo
+   MATCH[datacite]: Pedagogically-Inspired Data Synthesis for Language Model Knowledge Distillation | He, Chen, Zhang, Kong, Yu | 2026 | arXiv
+FN [nonexistent_venue] verified | {"title":"A technical curriculum on language-oriented artificial intelligence in translation and specialised communication","author":"Ralph Krüger","year":"2026","doi":"10.48550/arXiv.2602.12251","jou
+   WHY: Venue fabricated: 'Conference on Neural Theorem Proving' does not exist
+   MATCH[datacite]: A technical curriculum on language-oriented artificial intelligence in translation and specialised communication | Krüger | 2026 | arXiv
+FN [nonexistent_venue] verified | {"title":"Neutral Prompts, Non-Neutral People: Quantifying Gender and Skin-Tone Bias in Gemini Flash 2.5 Image and GPT Image 1.5","author":"Roberto Balestri","year":"2026","doi":"10.48550/arXiv.2602.1
+   WHY: Venue fabricated: 'Workshop on Low-Resource Language Processing' does not exist
+   MATCH[datacite]: Neutral Prompts, Non-Neutral People: Quantifying Gender and Skin-Tone Bias in Gemini Flash 2.5 Image and GPT Image 1.5 | Balestri | 2026 | arXiv
+FN [chimeric_title] verified_minor | {"title":"Few-Shot Meta-Learning with Task-Adaptive Initialization","author":"Xin Ju and Jiachen Yao and Anima Anandkumar and Sally M. Benson and Gege Wen","year":"2026","doi":"10.48550/arXiv.2602.122
+   WHY: Title 'Few-Shot Meta-Learning with Task-Adaptive Initialization' is fabricated; authors are real
+   ! arXiv:2602.12274 now carries the title “Function-Space Decoupled Diffusion for Forward and Inverse Modeling in Carbon Capture and Storage” (same authors; likely a renamed version)
+FN [near_miss_title] verified | {"title":"Diffusion Alignment Beyond KL: Variance Minimization as Effective Policy Optimiser","author":"Zijing Ou and Jacob Si and Junyi Zhu and Ondrej Bohdal and Mete Ozay and Taha Ceritli and Yingzh
+   WHY: Title slightly modified: 'Diffusion Alignment Beyond KL: Variance Minimization as Effective Policy Optimiser' (original: 'Diffusion Alignment Beyond KL: Varianc
+   MATCH[datacite]: Diffusion Alignment Beyond KL: Variance Minimisation as Effective Policy Optimiser | Ou, Si, Zhu, Bohdal, Ozay | 2026 | arXiv
+FN [chimeric_title] verified_minor | {"title":"Meta-Reinforcement Learning for Task Distribution","author":"Zijing Ou and Jacob Si and Junyi Zhu and Ondrej Bohdal and Mete Ozay and Taha Ceritli and Yingzhen Li","year":"2026","doi":"10.48
+   WHY: Title 'Meta-Reinforcement Learning for Task Distribution' is fabricated; authors are real
+   ! arXiv:2602.12229 now carries the title “Diffusion Alignment Beyond KL: Variance Minimisation as Effective Policy Optimiser” (same authors; likely a renamed version)
+FN [wrong_venue] verified | {"title":"Learning to Forget Attention: Memory Consolidation for Adaptive Compute Reduction","author":"Ibne Farabi Shihab and Sanjeda Akter and Anuj Sharma","year":"2026","doi":"10.48550/arXiv.2602.12
+   WHY: Venue changed to 'AAAI' (original was different)
+   MATCH[datacite]: Learning to Forget Attention: Memory Consolidation for Adaptive Compute Reduction | Shihab, Akter, Sharma | 2026 | arXiv
+FN [nonexistent_venue] verified | {"title":"Learning to Forget Attention: Memory Consolidation for Adaptive Compute Reduction","author":"Ibne Farabi Shihab and Sanjeda Akter and Anuj Sharma","year":"2026","doi":"10.48550/arXiv.2602.12
+   WHY: Venue fabricated: 'Symposium on Regularization Techniques' does not exist
+   MATCH[datacite]: Learning to Forget Attention: Memory Consolidation for Adaptive Compute Reduction | Shihab, Akter, Sharma | 2026 | arXiv
+FN [nonexistent_venue] verified | {"title":"Agentic Test-Time Scaling for WebAgents","author":"Nicholas Lee and Lutfi Eren Erdogan and Chris Joseph John and Surya Krishnapillai and Michael W. Mahoney and Kurt Keutzer and Amir Gholami"
+   WHY: Venue fabricated: 'Conference on Emergent Communication in AI' does not exist
+   MATCH[datacite]: Agentic Test-Time Scaling for WebAgents | Lee, Erdogan, John, Krishnapillai, Mahoney | 2026 | arXiv

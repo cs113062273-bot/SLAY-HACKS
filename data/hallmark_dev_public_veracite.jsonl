@@ -1,0 +1,310 @@
+{"bibtex_key":"0ce201612f87","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “Aligning Agent Policies with Preferences: Human-Centered Interpretable Reinforcement Learning” (50% title similarity)"}
+{"bibtex_key":"a0bce9dcc3d0","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “Direct3D: Scalable Image-to-3D Generation via 3D Latent Diffusion Transformer” (50% title similarity)"}
+{"bibtex_key":"a1a52be81664","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “Large‐scale 3D fast Fourier transform computation on a GPU” (55% title similarity)"}
+{"bibtex_key":"aa2c1918bed1","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC"}
+{"bibtex_key":"aacc02631cc8","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “Reinforcement Learning for Credit Index Option Hedging” (70% title similarity)"}
+{"bibtex_key":"ac6ca276f55a","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “Traffic flow modeling and control using artificial neural networks” (53% title similarity)"}
+{"bibtex_key":"ad73125cb4d0","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC"}
+{"bibtex_key":"af11adaa9e85","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “Mercer Features for Efficient Combinatorial Bayesian Optimization” (56% title similarity)"}
+{"bibtex_key":"b15dc9664b48","label":"HALLUCINATED","confidence":0.9,"reason":"arXiv:2302.04133 points to a different work: “Isometric embeddings of surfaces for scl”"}
+{"bibtex_key":"b198ac27e836","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC"}
+{"bibtex_key":"b31c38a72d3c","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “CDS: Cross-Domain Self-supervised Pre-training” (71% title similarity)"}
+{"bibtex_key":"b4e44924b092","label":"HALLUCINATED","confidence":0.8,"reason":"Semantic Scholar and OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Europe PMC | Nearest record: “Lifelong, learning-augmented robot navigation” (50% title similarity)"}
+{"bibtex_key":"b5dc91d7f6e8","label":"HALLUCINATED","confidence":0.9,"reason":"arXiv:2201.09901 points to a different work: “Fraction of broad absorption line quasars in different radio morphologies”"}
+{"bibtex_key":"b647e6142991","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC"}
+{"bibtex_key":"b64d4175823c","label":"HALLUCINATED","confidence":0.9,"reason":"arXiv:2310.04363 points to a different work: “Amortizing intractable inference in large language models”"}
+{"bibtex_key":"02dcaa2e4555","label":"HALLUCINATED","confidence":0.7,"reason":"Closest real work has a different title: “Is Online Linear Optimization Sufficient for Strategic Robustness?”"}
+{"bibtex_key":"1cc022db3273","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"6ce5917cf1a3","label":"HALLUCINATED","confidence":0.65,"reason":"Title differs from the published title (cited “towards”, published “for”)"}
+{"bibtex_key":"a1ffdd203a7d","label":"HALLUCINATED","confidence":0.65,"reason":"Title differs from the published title (cited “training”, published “learning”)"}
+{"bibtex_key":"a2a50b837083","label":"HALLUCINATED","confidence":0.65,"reason":"Title differs from the published title (cited “scene”) | doi:10.1109/iccv48922.2021.01493 points to a different work: “Globally Optimal and Efficient Manhattan Frame Estimation by Delimiting Rotation Search Space”"}
+{"bibtex_key":"a3f1f22d00f2","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2022 does not match the published record (2019/2019) | Only a preprint was found; publication in “ICML” could not be confirmed"}
+{"bibtex_key":"a7b8e368f9ac","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC"}
+{"bibtex_key":"a93bfbef2351","label":"HALLUCINATED","confidence":0.65,"reason":"Title differs from the published title (cited “towards”, published “for”)"}
+{"bibtex_key":"aa70a149a26b","label":"HALLUCINATED","confidence":0.65,"reason":"Title differs from the published title (cited “learned”, published “neural”)"}
+{"bibtex_key":"ad54151534ef","label":"VALID","confidence":0.9875490196078431,"reason":""}
+{"bibtex_key":"aff3dc08bac9","label":"VALID","confidence":0.9839024390243902,"reason":""}
+{"bibtex_key":"b1dfba0c1452","label":"HALLUCINATED","confidence":0.65,"reason":"Title differs from the published title (cited “towards”, published “for”)"}
+{"bibtex_key":"b215b462cfe2","label":"HALLUCINATED","confidence":0.7,"reason":"Closest real work has a different title: “FedNPC: A Federated Learning Framework for Large Language Models in Game NPCs”"}
+{"bibtex_key":"b2244309e63c","label":"HALLUCINATED","confidence":0.65,"reason":"Title differs from the published title (cited “tuning”, published “optimization”)"}
+{"bibtex_key":"b232cea86084","label":"HALLUCINATED","confidence":0.65,"reason":"Title differs from the published title (cited “hidden”, published “latent”)"}
+{"bibtex_key":"a1d8a34bfd70","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Guo, Qiu, Leng, Gao, Zhang, Liu, Yang, Zhu, Guo not among its authors | Year 2022 does not match the published record (2026/2026) | Published in “International Conference on Agents and Artificial Intelligence”, not “ICLR”"}
+{"bibtex_key":"a2a9bff9338d","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Ding, Yang, Larsson, Olsson, Åström not among its authors | Published in “Proceedings of the AAAI Conference on Artificial Intelligence”, not “CVPR”"}
+{"bibtex_key":"a49a36fd4a07","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Jin, Khattar, Kaushik, Sel, Jia not among its authors | Published in “Proceedings of the AAAI Conference on Artificial Intelligence”, not “NeurIPS”"}
+{"bibtex_key":"a561d750ace7","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Cohen, Sharifi-Malvajerdi, Stangl, Vakilian, Ziani not among its authors | Year 2021 does not match the published record (2023)"}
+{"bibtex_key":"ae1b1255eb4e","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Wang, Du, Krishnamurthy not among its authors | Venue mismatch: cited as ICLR, published in CVPR"}
+{"bibtex_key":"b225b0c450cd","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Li, Huang, Feng, Zhou not among its authors | Published in “International Conference on Learning Representations”, not “CVPR”"}
+{"bibtex_key":"b8d6a54dae43","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Wang, Eykholt, Lee, Jang, Molloy not among its authors"}
+{"bibtex_key":"bfa63f49d844","label":"HALLUCINATED","confidence":0.65,"reason":"Title differs from the published title (cited “rock”) | Author list does not match the published work: Wang, Diao, Tan, Guo not among its authors | Venue mismatch: cited as ICLR, published in ICML"}
+{"bibtex_key":"c21925357997","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Morgado, Vasconcelos, Misra not among its authors | Published in “International Conference on Machine Learning”, not “CVPR”"}
+{"bibtex_key":"c2618088742f","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Wang, Zhang, Du, Lin, Wang not among its authors | Venue mismatch: cited as ICML, published in CVPR"}
+{"bibtex_key":"cb5782ae035d","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Kamath, Liu, Zhang not among its authors | Venue mismatch: cited as AAAI, published in ICML"}
+{"bibtex_key":"cb603ef5f1fe","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Wang, Wang, Yang, Lin not among its authors"}
+{"bibtex_key":"ce034d80f2ee","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Ahuja, Caballero, Zhang, Gagnon-Audet, Bengio, Mitliagkas, Rish not among its authors | Year 2023 does not match the published record (2021) | Venue mismatch: cited as AAAI, published in ICML"}
+{"bibtex_key":"ced7ce302ff0","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Akakzia, Colas, Oudeyer, Chetouani, Sigaud not among its authors | Venue mismatch: cited as ICLR, published in ICML"}
+{"bibtex_key":"d2138053887f","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Acharya, Canonne, Mayekar, Tyagi not among its authors | Year 2021 does not match the published record (2023) | Venue mismatch: cited as NeurIPS, published in ICML"}
+{"bibtex_key":"a0002eb5a5d2","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a02638e78c15","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a033e65eff07","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a045c005ca52","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a0527a7c2d1b","label":"VALID","confidence":0.75,"reason":"arXiv:2602.12124 now carries the title “Alignment Risks from Capability-Seeking RL Training” (same authors; likely a renamed version)"}
+{"bibtex_key":"a05291223406","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a09fbe8995d1","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a18047c61ef7","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a1de81b91af8","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a26e44ec61e0","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a2974be79850","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a2efcd9cc256","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a31c4651c577","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a387f28cb5f5","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a39d3e201cdd","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a3ef799098c5","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a3fd6ee06480","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a464d8b9cc5d","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a4751d2e66d3","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a4a7b24aa6bd","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a4a90253cc4d","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a4d318041956","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a505663a6c59","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a587b26fb82a","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a5c19bd99eda","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a5d8103a6ffa","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a6032dae9458","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a6702e50eb2a","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a67afc6b01eb","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a687f76f3a21","label":"VALID","confidence":0.9875490196078431,"reason":""}
+{"bibtex_key":"a68acac6c1f2","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a68d2d3d3a52","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a6cc7b062e76","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a6cc89238da1","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a6d85a5ff63b","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a7697f4fac70","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a82bf021ee35","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a84cbac4c0ef","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a858a493a8e8","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a88f3f32e5e0","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a8a2c212f66e","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a8c2652e1932","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a8e70624591a","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a9916c91ef35","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a99a488f23a1","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a9c8550d8f6b","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"aa0970ef02f9","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"aa0b837e7ae2","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"aa27de4ff20f","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"aa61455fb133","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"aa8381f273a4","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"aaefe29933ae","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"ab21985b3249","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"ab577bb33db9","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"ab70d4861127","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"ab7c03be5d66","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"ab8c1fcd94ab","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"aba7d684745d","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"abf69d6107fc","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"ac1435cb9ccc","label":"VALID","confidence":0.9843181818181818,"reason":""}
+{"bibtex_key":"ac1d9ca06bbe","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"ac5d7204a237","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"acc3479ced5d","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"ace7ffc87dcf","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"ad1e1007a2c5","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"ad46dd2009a8","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"ad5646f659b7","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"ade421cc76b4","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"ade993fc079d","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"adf6c58262bf","label":"VALID","confidence":0.75,"reason":"arXiv:2602.12250 now carries the title “Community Concealment from Graph Neural Networks” (same authors; likely a renamed version)"}
+{"bibtex_key":"ae46343d5431","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"af077f7e40a4","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"af0c36fa9b6b","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"af1141b42cd7","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b0135c300a2a","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b01689afa316","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b0435865ae63","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b06fe7dda74c","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b08eb7ba8bd4","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b0a37fb19f6d","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b0b15e6c62a3","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b1195b962203","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b13a0e12a1e4","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b158187671ed","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b16fccd537f5","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b1c7540c6fa5","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b1d1ae075e3d","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b1e1546cff1b","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b21fd5158fdc","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b223823a645c","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b2505314787f","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b2639c2834fd","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b316da73bd27","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b33c6e6cea9f","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b39ad6551161","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b3df54dd03dc","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b3e46f55435f","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b3f25dee2b23","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b4268fa6464e","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b43bb5e01b3f","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"a05ffe5af18b","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2021 does not match the published record (2019) | Published in “The Springer Series on Challenges in Machine Learning”, not “JMLR” | Has published correction notice(s)"}
+{"bibtex_key":"a49d483ada00","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “International Conference on Learning Representations”, not “IJCAI”"}
+{"bibtex_key":"a512e256b5b1","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “International Conference on Machine Learning”, not “ICLR”"}
+{"bibtex_key":"a5f3fdcab699","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “International Conference on Machine Learning”, not “SIGIR”"}
+{"bibtex_key":"a7bab76d8764","label":"HALLUCINATED","confidence":0.65,"reason":"Venue mismatch: cited as EMNLP, published in NeurIPS"}
+{"bibtex_key":"a8c1698a41e3","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “International Conference on Learning Representations”, not “UAI”"}
+{"bibtex_key":"a9b6f1b5c5ca","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2022 does not match the published record (2019)"}
+{"bibtex_key":"abab80f50b05","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2022 does not match the published record (2020/2020) | Venue mismatch: cited as EMNLP, published in NeurIPS"}
+{"bibtex_key":"ae30af541b9e","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2023 does not match the published record (2019/2019)"}
+{"bibtex_key":"aea4d5108c01","label":"HALLUCINATED","confidence":0.65,"reason":"Venue mismatch: cited as ICML, published in CVPR"}
+{"bibtex_key":"af76804b3e00","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “Neural Information Processing Systems”, not “IJCAI”"}
+{"bibtex_key":"b4f21f933c2e","label":"HALLUCINATED","confidence":0.65,"reason":"Venue mismatch: cited as ECCV, published in CVPR"}
+{"bibtex_key":"b9e1e0f7b04f","label":"HALLUCINATED","confidence":0.65,"reason":"Venue mismatch: cited as ICLR, published in CVPR"}
+{"bibtex_key":"badd727690e3","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2021 does not match the published record (2023) | Venue mismatch: cited as ICML, published in CVPR"}
+{"bibtex_key":"bd3eeeb03bae","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2022 does not match the published record (2026/2026) | Only a preprint was found; publication in “IJCAI” could not be confirmed"}
+{"bibtex_key":"1c484516bb04","label":"HALLUCINATED","confidence":0.9,"reason":"arXiv:2602.12132 points to a different work: “A Rule-based Computational Model for Gaidhlig Morphology”"}
+{"bibtex_key":"25b91c1376ed","label":"HALLUCINATED","confidence":0.9,"reason":"arXiv:2602.12222 points to a different work: “Towards On-Policy SFT: Distribution Discriminant Theory and its Applications in LLM Training”"}
+{"bibtex_key":"40af5f0eace4","label":"HALLUCINATED","confidence":0.9,"reason":"arXiv:2602.12196 points to a different work: “Visual Reasoning Benchmark: Evaluating Multimodal LLMs on Classroom-Authentic Visual Problems from Primary Education”"}
+{"bibtex_key":"55248d48974d","label":"HALLUCINATED","confidence":0.9,"reason":"arXiv:2602.12218 points to a different work: “The Observer Effect in World Models: Invasive Adaptation Corrupts Latent Physics”"}
+{"bibtex_key":"698e59351803","label":"HALLUCINATED","confidence":0.9,"reason":"arXiv:2602.12146 points to a different work: “Seq2Seq2Seq: Lossless Data Compression via Discrete Latent Transformers and Reinforcement Learning”"}
+{"bibtex_key":"880d5f98a1e5","label":"HALLUCINATED","confidence":0.9,"reason":"arXiv:2602.12135 points to a different work: “WavBench: Benchmarking Reasoning, Colloquialism, and Paralinguistics for End-to-End Spoken Dialogue Models”"}
+{"bibtex_key":"a33b0f07764a","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “SHAPE: Coalition-Aware Expert Pruning for Sparse Mixture-of-Experts LLMs” (52% title similarity)"}
+{"bibtex_key":"a43311c18e20","label":"HALLUCINATED","confidence":0.9,"reason":"doi:10.1609/aaai.v37i5.25786 points to a different work: “Finite Based Contraction and Expansion via Models”"}
+{"bibtex_key":"acbc14251e24","label":"HALLUCINATED","confidence":0.65,"reason":"Title differs from the published title (cited “for”, cited “distribution”, cited “robustness”) | Author list does not match the published work: Acharya, Canonne, Singh, Tyagi not among its authors | Published in “Adversarial Robustness for Machine Learning”, not “NeurIPS”"}
+{"bibtex_key":"ae656965396c","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Xie, Zhang, Liu, Bai, Qian not among its authors | Published in “International Journal for Research in Applied Science and Engineering Technology”, not “AAAI” | doi:10.1609/aaai.v37i9.26247 points to a different work: “Towards Optimal Randomized Strategies in Adversarial Example Game”"}
+{"bibtex_key":"b06510c2fb42","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Huti, Mackintosh, Waldock, Andrews, Lelièvre, Boos, Murray, Atherton, Ince, Garrod not among its authors | arXiv:2602.12196 points to a different work: “Visual Reasoning Benchmark: Evaluating Multimodal LLMs on Classroom-Authentic Visual Problems from Primary Education”"}
+{"bibtex_key":"b29cd2e665aa","label":"HALLUCINATED","confidence":0.9,"reason":"doi:10.1109/cvpr46437.2021.01266 points to a different work: “Understanding Failures of Deep Networks via Robust Feature Extraction”"}
+{"bibtex_key":"b452f4c4af1c","label":"HALLUCINATED","confidence":0.8,"reason":"Semantic Scholar and OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Europe PMC"}
+{"bibtex_key":"b46955b4623f","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “Few-Shot Keyword Spotting With Prototypical Networks” (73% title similarity)"}
+{"bibtex_key":"b58a839ea0dd","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Zhang, Zhang not among its authors"}
+{"bibtex_key":"a30232aff331","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2031 does not match the published record (2022/2026) | Template / placeholder content: publication year 2031 is in the future"}
+{"bibtex_key":"a9ed8e0f2e8b","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2032 does not match the published record (2020/2020) | Template / placeholder content: publication year 2032 is in the future"}
+{"bibtex_key":"aa49c228428a","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2032 does not match the published record (2021) | Template / placeholder content: publication year 2032 is in the future"}
+{"bibtex_key":"ad71cd65fa4f","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2030 does not match the published record (2022/2022) | Template / placeholder content: publication year 2030 is in the future"}
+{"bibtex_key":"ade129d40251","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2031 does not match the published record (2021/2021) | Template / placeholder content: publication year 2031 is in the future"}
+{"bibtex_key":"b2e955860c08","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2035 does not match the published record (2026/2026) | Template / placeholder content: publication year 2035 is in the future"}
+{"bibtex_key":"b81db378c3b2","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2036 does not match the published record (2022) | Template / placeholder content: publication year 2036 is in the future"}
+{"bibtex_key":"bb9fc680c843","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2034 does not match the published record (2022/2022) | Template / placeholder content: publication year 2034 is in the future"}
+{"bibtex_key":"bc9f7e25cb78","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2032 does not match the published record (2023/2023) | Template / placeholder content: publication year 2032 is in the future"}
+{"bibtex_key":"bcd7ebdad1c6","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2036 does not match the published record (2021) | Template / placeholder content: publication year 2036 is in the future"}
+{"bibtex_key":"c6a41e340bbe","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2034 does not match the published record (2021/2021) | Template / placeholder content: publication year 2034 is in the future"}
+{"bibtex_key":"c77e15688bec","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2030 does not match the published record (2022/2022) | Template / placeholder content: publication year 2030 is in the future"}
+{"bibtex_key":"cade77661889","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2032 does not match the published record (2022) | Template / placeholder content: publication year 2032 is in the future"}
+{"bibtex_key":"cc27515ebe5c","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2034 does not match the published record (2022/2022) | Template / placeholder content: publication year 2034 is in the future"}
+{"bibtex_key":"cd588085bf52","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2033 does not match the published record (2022/2022) | Template / placeholder content: publication year 2033 is in the future"}
+{"bibtex_key":"09d390a6a348","label":"HALLUCINATED","confidence":0.65,"reason":"Only a preprint was found; publication in “ICLR” could not be confirmed"}
+{"bibtex_key":"2c5f8471a545","label":"HALLUCINATED","confidence":0.65,"reason":"Only a preprint was found; publication in “ICML” could not be confirmed"}
+{"bibtex_key":"4407d6409a44","label":"HALLUCINATED","confidence":0.65,"reason":"Only a preprint was found; publication in “NeurIPS” could not be confirmed"}
+{"bibtex_key":"46bb7c407957","label":"HALLUCINATED","confidence":0.65,"reason":"Only a preprint was found; publication in “NAACL” could not be confirmed"}
+{"bibtex_key":"49ea31cdd8c6","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “arXiv”, not “AAAI”"}
+{"bibtex_key":"883321e7088f","label":"HALLUCINATED","confidence":0.65,"reason":"Only a preprint was found; publication in “AAAI” could not be confirmed"}
+{"bibtex_key":"8c43969b72ce","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “Trans. Mach. Learn. Res.”, not “AISTATS”"}
+{"bibtex_key":"8d22fd960054","label":"HALLUCINATED","confidence":0.65,"reason":"Only a preprint was found; publication in “ICLR” could not be confirmed"}
+{"bibtex_key":"91ff2674f171","label":"HALLUCINATED","confidence":0.65,"reason":"Only a preprint was found; publication in “ICLR” could not be confirmed"}
+{"bibtex_key":"a0478afc6fb9","label":"HALLUCINATED","confidence":0.65,"reason":"Only a preprint was found; publication in “NeurIPS” could not be confirmed"}
+{"bibtex_key":"a0ec0badfca6","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2022 does not match the published record (2019) | Venue mismatch: cited as NeurIPS, published in IJCAI | arXiv:1903.06298 points to a different work: “Unidirectional propulsion of planar magnetic nanomachines”"}
+{"bibtex_key":"a55082bb1917","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2023 does not match the published record (2019)"}
+{"bibtex_key":"ab807101613e","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “International Conference on Learning Representations”, not “CVPR”"}
+{"bibtex_key":"ac0393b63e90","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2021 does not match the published record (2026/2026) | Only a preprint was found; publication in “UAI” could not be confirmed"}
+{"bibtex_key":"ac3b1baad664","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2023 does not match the published record (2019/2019)"}
+{"bibtex_key":"a1182ab1ba08","label":"HALLUCINATED","confidence":0.65,"reason":"Incomplete author list: 1 of 2 authors omitted without “et al.”"}
+{"bibtex_key":"acdb909a116f","label":"HALLUCINATED","confidence":0.65,"reason":"Incomplete author list: 3 of 5 authors omitted without “et al.”"}
+{"bibtex_key":"aff3df193dde","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"b3dfdbf9bebf","label":"HALLUCINATED","confidence":0.65,"reason":"Incomplete author list: 2 of 4 authors omitted without “et al.”"}
+{"bibtex_key":"b6526bfa4b62","label":"HALLUCINATED","confidence":0.65,"reason":"Incomplete author list: 2 of 5 authors omitted without “et al.”"}
+{"bibtex_key":"b71b4da9eb50","label":"HALLUCINATED","confidence":0.65,"reason":"Incomplete author list: 1 of 3 authors omitted without “et al.”"}
+{"bibtex_key":"b76f5bcce451","label":"HALLUCINATED","confidence":0.65,"reason":"Incomplete author list: 2 of 4 authors omitted without “et al.” | Year 2021 does not match the published record (2019/2019)"}
+{"bibtex_key":"bea9cbcb1796","label":"HALLUCINATED","confidence":0.65,"reason":"Incomplete author list: 5 of 7 authors omitted without “et al.”"}
+{"bibtex_key":"bfe6ad82b933","label":"HALLUCINATED","confidence":0.65,"reason":"Incomplete author list: 2 of 4 authors omitted without “et al.”"}
+{"bibtex_key":"c290c3fe5433","label":"HALLUCINATED","confidence":0.65,"reason":"Incomplete author list: 3 of 5 authors omitted without “et al.”"}
+{"bibtex_key":"c69f9eeb7f62","label":"HALLUCINATED","confidence":0.65,"reason":"Incomplete author list: 3 of 6 authors omitted without “et al.”"}
+{"bibtex_key":"c77f41c08910","label":"HALLUCINATED","confidence":0.65,"reason":"Incomplete author list: 2 of 6 authors omitted without “et al.” | Year 2021 does not match the published record (2018/2018) | Published in “Conference on Machine Learning and Systems”, not “SysML”"}
+{"bibtex_key":"c9055b18c70f","label":"HALLUCINATED","confidence":0.65,"reason":"Incomplete author list: 2 of 5 authors omitted without “et al.” | Published in “AAAI Conference on Artificial Intelligence”, not “ICML”"}
+{"bibtex_key":"c9fa01b83b92","label":"HALLUCINATED","confidence":0.65,"reason":"Incomplete author list: 1 of 2 authors omitted without “et al.”"}
+{"bibtex_key":"cd906ff8ac4f","label":"HALLUCINATED","confidence":0.65,"reason":"Incomplete author list: 2 of 5 authors omitted without “et al.”"}
+{"bibtex_key":"a16cf7d5e205","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Park, Han, Lee, Ha, Kim not among its authors | Venue mismatch: cited as AAAI, published in CVPR | doi:10.1609/aaai.v37i9.26293 points to a different work: “Lifelong Variational Autoencoder via Online Adversarial Expansion Strategy”"}
+{"bibtex_key":"a20ba23ff2c1","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Ding, Wang, Li not among its authors | doi:10.1609/aaai.v35i9.16909 does not resolve to any record"}
+{"bibtex_key":"a24129d1c5e5","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Koppula, Valko, Denoyer not among its authors"}
+{"bibtex_key":"a3486b456acb","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Aïvodji, Arai, Gambs, Hara not among its authors"}
+{"bibtex_key":"a54d5b9913a7","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Rajeswaran, Srinivas not among its authors"}
+{"bibtex_key":"a5acaa736d25","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Brandt, Bullinger, Tappe not among its authors"}
+{"bibtex_key":"a8fc7e02004e","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2022 does not match the published record (2018) | doi:10.1145/3394486.3403088 points to a different work: “Policy-GNN: Aggregation Optimization for Graph Neural Networks”"}
+{"bibtex_key":"ab0f3b832ff6","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Richardson not among its authors | Only a preprint was found; publication in “EMNLP” could not be confirmed"}
+{"bibtex_key":"ab67ecdd4887","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Schick, Scharli, Wei, Scales, Chung, Tay, Wang, Le, Chi, Schuurmans, Zhou not among its authors | Published in “International Conference on Learning Representations”, not “NeurIPS”"}
+{"bibtex_key":"ac385f0b087d","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Larsson, Benali, Ito not among its authors"}
+{"bibtex_key":"ad4df9c829f4","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Agarwala, Schoenholz not among its authors"}
+{"bibtex_key":"ada7bb27c934","label":"VALID","confidence":0.99,"reason":""}
+{"bibtex_key":"adeb07a411c7","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Deng, Xiao, Long, Zhang not among its authors"}
+{"bibtex_key":"b099243869b6","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Fernández, García, Fisteus, Brill not among its authors"}
+{"bibtex_key":"b1fe0b307446","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Agarwala, Das, Juba, Panigrahy, Sharan, Wang, Zhang not among its authors"}
+{"bibtex_key":"0a3f7b6a9905","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Patel, Brown not among its authors"}
+{"bibtex_key":"207663616a60","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Müller, Koné, Watanabe not among its authors"}
+{"bibtex_key":"306b141e4e85","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Petrov, Traoré, Yamamoto not among its authors"}
+{"bibtex_key":"3d81b80646ff","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Sokolov, Kone, Suzuki not among its authors"}
+{"bibtex_key":"51bc6a1e570f","label":"HALLUCINATED","confidence":0.9,"reason":"arXiv:2602.12250 points to a different work: “Community Concealment from Graph Neural Networks”"}
+{"bibtex_key":"79b66a9f7f38","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Garcia, Hassan, Tanaka not among its authors"}
+{"bibtex_key":"7da0d6fcd8f5","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Fernandez, Traore, Yamada not among its authors"}
+{"bibtex_key":"a1ec5e5ce378","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Martinez, Ndiaye, Sato not among its authors"}
+{"bibtex_key":"a4a867240b20","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Rodriguez, Osei, Huang not among its authors"}
+{"bibtex_key":"a4f41baa713a","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Romano, Benali, Takahashi not among its authors"}
+{"bibtex_key":"a6cfb2f846d1","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Rodriguez, Diallo, Yamamoto not among its authors"}
+{"bibtex_key":"a887eebddde3","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Rahman, Johansson, Suzuki not among its authors"}
+{"bibtex_key":"ac7657669b2e","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Santos, Ibrahim, Takahashi not among its authors"}
+{"bibtex_key":"ae1a83a6ba02","label":"HALLUCINATED","confidence":0.9,"reason":"arXiv:2602.12124 points to a different work: “Alignment Risks from Capability-Seeking RL Training”"}
+{"bibtex_key":"aec7940da59e","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Schneider, Ahmed, Tanaka not among its authors"}
+{"bibtex_key":"a603db063be6","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “Proceedings of the AAAI Conference on Artificial Intelligence”, not “ICLR”"}
+{"bibtex_key":"a8f5c85ae634","label":"HALLUCINATED","confidence":0.65,"reason":"Venue mismatch: cited as KDD, published in ICML"}
+{"bibtex_key":"aa6d3a6b533d","label":"HALLUCINATED","confidence":0.65,"reason":"Venue mismatch: cited as ICML, published in NeurIPS"}
+{"bibtex_key":"ac19f67d3d2e","label":"HALLUCINATED","confidence":0.65,"reason":"Venue mismatch: cited as ACL, published in ICML"}
+{"bibtex_key":"ac44311748ae","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “International Conference on Machine Learning”, not “COLT”"}
+{"bibtex_key":"ad679049c7fd","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “Neural Information Processing Systems”, not “SIGIR”"}
+{"bibtex_key":"ae11e32486e2","label":"HALLUCINATED","confidence":0.65,"reason":"Venue mismatch: cited as AISTATS, published in CVPR"}
+{"bibtex_key":"af46c87acb8b","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “International Conference on Learning Representations”, not “KDD”"}
+{"bibtex_key":"aff0025676ba","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “International Conference on Learning Representations”, not “WWW”"}
+{"bibtex_key":"b409338821b7","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “Proceedings of the AAAI Conference on Artificial Intelligence”, not “AISTATS”"}
+{"bibtex_key":"b4d93e177279","label":"HALLUCINATED","confidence":0.65,"reason":"Venue mismatch: cited as ICLR, published in CVPR"}
+{"bibtex_key":"b53fff577a5c","label":"HALLUCINATED","confidence":0.65,"reason":"Venue mismatch: cited as KDD, published in ICML"}
+{"bibtex_key":"b6c663d116ef","label":"HALLUCINATED","confidence":0.65,"reason":"Venue mismatch: cited as ICML, published in CVPR"}
+{"bibtex_key":"b72f15981b6f","label":"HALLUCINATED","confidence":0.65,"reason":"Venue mismatch: cited as WWW, published in CVPR"}
+{"bibtex_key":"b7ef6fc08cc4","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “Proceedings of the AAAI Conference on Artificial Intelligence”, not “ACL”"}
+{"bibtex_key":"0184a693b2bf","label":"HALLUCINATED","confidence":0.65,"reason":"doi:10.99993/art/7992495 does not resolve to any record"}
+{"bibtex_key":"086cfbb9e23c","label":"HALLUCINATED","confidence":0.65,"reason":"doi:10.77771/conf/5520200 does not resolve to any record"}
+{"bibtex_key":"50e9ed6eba00","label":"HALLUCINATED","confidence":0.65,"reason":"doi:10.99990/rpln.3164744 does not resolve to any record"}
+{"bibtex_key":"5769fb7ee5cb","label":"HALLUCINATED","confidence":0.65,"reason":"doi:10.99992/vlvrr.33933 does not resolve to any record"}
+{"bibtex_key":"7b6b97446c94","label":"HALLUCINATED","confidence":0.65,"reason":"doi:10.66660/85sdy726lo does not resolve to any record"}
+{"bibtex_key":"9abd113363ad","label":"HALLUCINATED","confidence":0.65,"reason":"doi:10.99996/pub/3560319 does not resolve to any record"}
+{"bibtex_key":"a1ee92fab537","label":"HALLUCINATED","confidence":0.65,"reason":"doi:10.99999/ilq.04962 does not resolve to any record"}
+{"bibtex_key":"a637b56f3646","label":"HALLUCINATED","confidence":0.65,"reason":"Year 2021 does not match the published record (2026/2026) | doi:10.93105/qvzghr.2249743 does not resolve to any record"}
+{"bibtex_key":"a96ea1f74b38","label":"HALLUCINATED","confidence":0.65,"reason":"doi:10.5432/conf/6835227 does not resolve to any record"}
+{"bibtex_key":"aa3b7dc92464","label":"HALLUCINATED","confidence":0.65,"reason":"doi:10.60715/dozcdt.4692 does not resolve to any record"}
+{"bibtex_key":"aa6b330e71fa","label":"HALLUCINATED","confidence":0.65,"reason":"doi:10.7777/2020.39899 does not resolve to any record"}
+{"bibtex_key":"aad4b3d96cd6","label":"HALLUCINATED","confidence":0.65,"reason":"doi:10.8888/ngtbpa.458568 does not resolve to any record"}
+{"bibtex_key":"abcf65e83a07","label":"HALLUCINATED","confidence":0.65,"reason":"doi:10.66660/jour/5125162 does not resolve to any record"}
+{"bibtex_key":"abd68711ff28","label":"HALLUCINATED","confidence":0.65,"reason":"doi:10.7777/2024.39405 does not resolve to any record"}
+{"bibtex_key":"ae9b20989609","label":"HALLUCINATED","confidence":0.65,"reason":"doi:10.60715/conf/1121349 does not resolve to any record"}
+{"bibtex_key":"a39d8b4eed8c","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC"}
+{"bibtex_key":"a5d63032de4c","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Okonkwo, Fischer, Hsu not among its authors"}
+{"bibtex_key":"a7caf7867d5f","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC"}
+{"bibtex_key":"aa387a45c4df","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC"}
+{"bibtex_key":"ab09f417dc63","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “Directed homophily-aware graph neural network” (60% title similarity)"}
+{"bibtex_key":"ab46b00de6cf","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “Causal Reasoning and Causal Inference” (57% title similarity)"}
+{"bibtex_key":"ad2869ce3435","label":"HALLUCINATED","confidence":0.92,"reason":"OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “A Simple Decentralized Cross-Entropy Method” (84% title similarity)"}
+{"bibtex_key":"b04a45dee19a","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Okonkwo, Fischer, Hsu not among its authors | Year 2023 does not match the published record (2026)"}
+{"bibtex_key":"bae6b04ff9be","label":"HALLUCINATED","confidence":0.9,"reason":"doi:10.1109/cvpr52729.2023.00751 points to a different work: “Task Difficulty Aware Parameter Allocation &amp; Regularization for Lifelong Learning”"}
+{"bibtex_key":"be28bb03faf7","label":"HALLUCINATED","confidence":0.9,"reason":"doi:10.1109/cvpr52729.2023.00794 points to a different work: “Privacy-preserving Adversarial Facial Features”"}
+{"bibtex_key":"c26df498c493","label":"HALLUCINATED","confidence":0.65,"reason":"Title differs from the published title (cited “novel”, published “repairing”) | Author list does not match the published work: Rezaei, Thompson, Morita not among its authors"}
+{"bibtex_key":"c568cdbdcfe5","label":"HALLUCINATED","confidence":0.65,"reason":"Title differs from the published title (cited “efficient”, published “networks”) | Author list does not match the published work: Chatterjee, Bianchi, Choi not among its authors"}
+{"bibtex_key":"ca9f04e16455","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Larsson, Benali, Ito not among its authors"}
+{"bibtex_key":"cb48d6d467c7","label":"HALLUCINATED","confidence":0.65,"reason":"Author list does not match the published work: Anderson, Kumar, Park not among its authors"}
+{"bibtex_key":"cbe44712134a","label":"HALLUCINATED","confidence":0.65,"reason":"Title differs from the published title (cited “novel”, published “loss”) | Author list does not match the published work: Sokolova, Wright, Lin not among its authors"}
+{"bibtex_key":"07d69ea24ed9","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “Proceedings of the 18th International Conference on Agents and Artificial Intelligence”, not “Symposium on Regularization Techniques”"}
+{"bibtex_key":"08ebaa54f666","label":"VALID","confidence":0.75,"reason":"arXiv:2602.12124 now carries the title “Alignment Risks from Capability-Seeking RL Training” (same authors; likely a renamed version)"}
+{"bibtex_key":"0ad0a4545b13","label":"HALLUCINATED","confidence":0.65,"reason":"Only a preprint was found; publication in “International Conference on Quantum Machine Learning” could not be confirmed"}
+{"bibtex_key":"0f265de753bd","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “Engineering Research Express”, not “Journal of Adversarial Machine Learning”"}
+{"bibtex_key":"26d2ae9ea0e6","label":"HALLUCINATED","confidence":0.65,"reason":"Only a preprint was found; publication in “International Conference on Quantum Machine Learning” could not be confirmed"}
+{"bibtex_key":"335cad9423a8","label":"HALLUCINATED","confidence":0.65,"reason":"Only a preprint was found; publication in “Symposium on Transfer Learning Paradigms” could not be confirmed"}
+{"bibtex_key":"348d177caec3","label":"HALLUCINATED","confidence":0.65,"reason":"Only a preprint was found; publication in “Conference on Reward Learning and Alignment” could not be confirmed"}
+{"bibtex_key":"758c627287f2","label":"HALLUCINATED","confidence":0.65,"reason":"Only a preprint was found; publication in “Workshop on Scalable Representation Learning” could not be confirmed"}
+{"bibtex_key":"87a25c18d319","label":"HALLUCINATED","confidence":0.65,"reason":"Only a preprint was found; publication in “Symposium on Probabilistic Reasoning” could not be confirmed"}
+{"bibtex_key":"acabe94d06c1","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “Advances in Neural Information Processing Systems 36”, not “Symposium on Test-Time Adaptation Methods”"}
+{"bibtex_key":"aeedac67811f","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)”, not “Transactions on Autonomous Learning Systems”"}
+{"bibtex_key":"afbeec3a1b8c","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)”, not “Conference on Reward Learning and Alignment”"}
+{"bibtex_key":"b0a2f8946b95","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)”, not “Annual Workshop on AI Safety and Alignment”"}
+{"bibtex_key":"b4573da92e44","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “Proceedings of the AAAI Conference on Artificial Intelligence”, not “Transactions on Meta-Learning and Adaptation”"}
+{"bibtex_key":"ba41340acea8","label":"HALLUCINATED","confidence":0.65,"reason":"Published in “International Conference on Machine Learning”, not “International Conference on Multimodal Integration”"}

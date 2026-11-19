@@ -1,0 +1,799 @@
+{
+ "table": {
+  "checkifexist": {
+   "tp": 31,
+   "fn": 2,
+   "fp": 34,
+   "tn": 37,
+   "rec": 0.9393939393939394,
+   "spec": 0.5211267605633803,
+   "prec": 0.47692307692307695,
+   "f1": 0.6326530612244897,
+   "acc": 0.6538461538461539
+  },
+  "hallucitechecker": {
+   "tp": 18,
+   "fn": 15,
+   "fp": 20,
+   "tn": 51,
+   "rec": 0.5454545454545454,
+   "spec": 0.7183098591549296,
+   "prec": 0.47368421052631576,
+   "f1": 0.5070422535211268,
+   "acc": 0.6634615384615384
+  },
+  "hallucinator": {
+   "tp": 29,
+   "fn": 4,
+   "fp": 28,
+   "tn": 43,
+   "rec": 0.8787878787878788,
+   "spec": 0.6056338028169014,
+   "prec": 0.5087719298245614,
+   "f1": 0.6444444444444445,
+   "acc": 0.6923076923076923
+  },
+  "halref": {
+   "tp": 24,
+   "fn": 9,
+   "fp": 53,
+   "tn": 18,
+   "rec": 0.7272727272727273,
+   "spec": 0.2535211267605634,
+   "prec": 0.3116883116883117,
+   "f1": 0.4363636363636364,
+   "acc": 0.40384615384615385
+  },
+  "refchecker": {
+   "tp": 32,
+   "fn": 1,
+   "fp": 36,
+   "tn": 35,
+   "rec": 0.9696969696969697,
+   "spec": 0.49295774647887325,
+   "prec": 0.47058823529411764,
+   "f1": 0.6336633663366337,
+   "acc": 0.6442307692307693
+  },
+  "VERACITE": {
+   "tp": 33,
+   "fn": 0,
+   "fp": 2,
+   "tn": 69,
+   "rec": 1,
+   "spec": 0.971830985915493,
+   "prec": 0.9428571428571428,
+   "f1": 0.9705882352941176,
+   "acc": 0.9807692307692307
+  }
+ },
+ "results": [
+  {
+   "id": "P1 R1",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P1 R2",
+   "gold": "verified",
+   "verdict": "unverifiable",
+   "issues": [
+    "Web resource: not indexed by scholarly databases; check manually"
+   ]
+  },
+  {
+   "id": "P1 R3",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P1 R4",
+   "gold": "problematic",
+   "verdict": "fabricated",
+   "issues": [
+    "No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC"
+   ]
+  },
+  {
+   "id": "P1 R5",
+   "gold": "verified",
+   "verdict": "unverifiable",
+   "issues": [
+    "Web resource: not indexed by scholarly databases; check manually"
+   ]
+  },
+  {
+   "id": "P1 R6",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P1 R7",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P1 R8",
+   "gold": "verified",
+   "verdict": "unverifiable",
+   "issues": [
+    "Dataset: not indexed by scholarly databases; check manually"
+   ]
+  },
+  {
+   "id": "P1 R9",
+   "gold": "verified",
+   "verdict": "unverifiable",
+   "issues": [
+    "Dataset: a different work with the same title is indexed; check the linked page manually"
+   ]
+  },
+  {
+   "id": "P1 R10",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P1 R11",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P1 R12",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P1 R13",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P1 R14",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P1 R15",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P1 R16",
+   "gold": "problematic",
+   "verdict": "metadata_error",
+   "issues": [
+    "Published in “Lecture Notes in Computer Science”, not “International Journal on Document Analysis and Recognition”"
+   ]
+  },
+  {
+   "id": "P1 R17",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P1 R18",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P1 R19",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P1 R20",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P1 R21",
+   "gold": "problematic",
+   "verdict": "metadata_error",
+   "issues": [
+    "Author list does not match the published work: Fedoryszak, Dendek, Bolikowski not among its authors"
+   ]
+  },
+  {
+   "id": "P1 R22",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P1 R23",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P1 R24",
+   "gold": "verified",
+   "verdict": "verified_minor",
+   "issues": []
+  },
+  {
+   "id": "P2 R1",
+   "gold": "problematic",
+   "verdict": "id_mismatch",
+   "issues": [
+    "Published in “The Astrophysical Journal Supplement Series”, not “F1000Research”",
+    "doi:10.12688/f1000research.26932.2 points to a different work: “Recognizing the value of software: a software citation guide”"
+   ]
+  },
+  {
+   "id": "P2 R2",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P2 R3",
+   "gold": "verified",
+   "verdict": "fabricated",
+   "issues": [
+    "No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC"
+   ]
+  },
+  {
+   "id": "P2 R4",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P2 R5",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P2 R6",
+   "gold": "problematic",
+   "verdict": "metadata_error",
+   "issues": [
+    "Author list does not match the published work: Zapilko not among its authors",
+    "Published in “Proceedings of the 30th ACM International Conference on Information &amp; Knowledge Management”, not “Scientific Data 9.1”",
+    "doi:10.1038/s41597-022-01328-8 does not resolve to any record"
+   ]
+  },
+  {
+   "id": "P2 R7",
+   "gold": "verified",
+   "verdict": "verified_minor",
+   "issues": []
+  },
+  {
+   "id": "P2 R8",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P2 R9",
+   "gold": "problematic",
+   "verdict": "not_found",
+   "issues": [
+    "doi:10.3233/sw-223172 does not resolve to any record"
+   ]
+  },
+  {
+   "id": "P2 R10",
+   "gold": "problematic",
+   "verdict": "metadata_error",
+   "issues": [
+    "Only a preprint was found; publication in “Proceedings of the Joint Conference on Digital Libraries, JCDL” could not be confirmed"
+   ]
+  },
+  {
+   "id": "P2 R11",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P2 R12",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P2 R13",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P2 R14",
+   "gold": "verified",
+   "verdict": "unverifiable",
+   "issues": [
+    "Dataset: a different work with the same title is indexed; check the linked page manually"
+   ]
+  },
+  {
+   "id": "P2 R15",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R1",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R2",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R3",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R4",
+   "gold": "problematic",
+   "verdict": "fabricated",
+   "issues": [
+    "Template / placeholder content: generic placeholder name"
+   ]
+  },
+  {
+   "id": "P3 R5",
+   "gold": "problematic",
+   "verdict": "metadata_error",
+   "issues": [
+    "Author list does not match the published work: Austin not among its authors",
+    "“and et al.” pattern (common in machine-generated references)"
+   ]
+  },
+  {
+   "id": "P3 R6",
+   "gold": "problematic",
+   "verdict": "fabricated",
+   "issues": [
+    "Template / placeholder content: placeholder arXiv identifier, unfilled template text",
+    "“and et al.” pattern (common in machine-generated references)"
+   ]
+  },
+  {
+   "id": "P3 R7",
+   "gold": "problematic",
+   "verdict": "fabricated",
+   "issues": [
+    "Template / placeholder content: placeholder arXiv identifier, unfilled template text",
+    "“and et al.” pattern (common in machine-generated references)"
+   ]
+  },
+  {
+   "id": "P3 R8",
+   "gold": "problematic",
+   "verdict": "fabricated",
+   "issues": [
+    "Template / placeholder content: placeholder arXiv identifier, unfilled template text",
+    "“and et al.” pattern (common in machine-generated references)"
+   ]
+  },
+  {
+   "id": "P3 R9",
+   "gold": "problematic",
+   "verdict": "fabricated",
+   "issues": [
+    "No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC",
+    "“and et al.” pattern (common in machine-generated references)"
+   ]
+  },
+  {
+   "id": "P3 R10",
+   "gold": "problematic",
+   "verdict": "fabricated",
+   "issues": [
+    "Template / placeholder content: placeholder arXiv identifier, unfilled template text",
+    "“and et al.” pattern (common in machine-generated references)"
+   ]
+  },
+  {
+   "id": "P3 R11",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R12",
+   "gold": "verified",
+   "verdict": "verified_minor",
+   "issues": []
+  },
+  {
+   "id": "P3 R13",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R14",
+   "gold": "verified",
+   "verdict": "verified_minor",
+   "issues": []
+  },
+  {
+   "id": "P3 R15",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R16",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R17",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R18",
+   "gold": "verified",
+   "verdict": "metadata_error",
+   "issues": [
+    "Author list does not match the published work: Uthoff, Heil, Li not among its authors"
+   ]
+  },
+  {
+   "id": "P3 R19",
+   "gold": "problematic",
+   "verdict": "metadata_error",
+   "issues": [
+    "Author list does not match the published work: Pang, Ding, Xu, Carin not among its authors",
+    "Year 2021 does not match the published record (2018)"
+   ]
+  },
+  {
+   "id": "P3 R20",
+   "gold": "problematic",
+   "verdict": "metadata_error",
+   "issues": [
+    "Closest real work has a different title: “Calibration of Pre-trained Transformers”"
+   ]
+  },
+  {
+   "id": "P3 R21",
+   "gold": "problematic",
+   "verdict": "fabricated",
+   "issues": [
+    "No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC"
+   ]
+  },
+  {
+   "id": "P3 R22",
+   "gold": "problematic",
+   "verdict": "fabricated",
+   "issues": [
+    "No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC",
+    "Nearest record: “Figure 3: Types of abstractive text summarization.” (56% title similarity)"
+   ]
+  },
+  {
+   "id": "P3 R23",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R24",
+   "gold": "problematic",
+   "verdict": "fabricated",
+   "issues": [
+    "No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC",
+    "Nearest record: “Teaching Large Language Models an Unseen Language on the Fly” (50% title similarity)"
+   ]
+  },
+  {
+   "id": "P3 R25",
+   "gold": "problematic",
+   "verdict": "id_mismatch",
+   "issues": [
+    "arXiv:2205.05407 points to a different work: “Gamma-ray Diagnostics of r-process Nucleosynthesis in the Remnants of Galactic Binary Neutron-Star Mergers”"
+   ]
+  },
+  {
+   "id": "P3 R26",
+   "gold": "problematic",
+   "verdict": "fabricated",
+   "issues": [
+    "No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC",
+    "Nearest record: “Evaluating the reliability of function calling by large language models for ukrainian-language requests” (54% title similarity)"
+   ]
+  },
+  {
+   "id": "P3 R27",
+   "gold": "problematic",
+   "verdict": "fabricated",
+   "issues": [
+    "No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC",
+    "Nearest record: “Red Teaming Language Models with Language Models” (50% title similarity)"
+   ]
+  },
+  {
+   "id": "P3 R28",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R29",
+   "gold": "verified",
+   "verdict": "verified_minor",
+   "issues": []
+  },
+  {
+   "id": "P3 R30",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R31",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R32",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R33",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R34",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R35",
+   "gold": "problematic",
+   "verdict": "metadata_error",
+   "issues": [
+    "Closest real work has a different title: “Conformal Prediction: A Gentle Introduction”"
+   ]
+  },
+  {
+   "id": "P3 R36",
+   "gold": "problematic",
+   "verdict": "fabricated",
+   "issues": [
+    "OpenAlex did not respond; re-run later to confirm",
+    "No matching work in Crossref, Semantic Scholar, Europe PMC"
+   ]
+  },
+  {
+   "id": "P3 R37",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R38",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R39",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R40",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R41",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R42",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R43",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R44",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R45",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R46",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R47",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R48",
+   "gold": "problematic",
+   "verdict": "fabricated",
+   "issues": [
+    "OpenAlex did not respond; re-run later to confirm",
+    "No matching work in Crossref, Semantic Scholar, Europe PMC"
+   ]
+  },
+  {
+   "id": "P3 R49",
+   "gold": "problematic",
+   "verdict": "fabricated",
+   "issues": [
+    "OpenAlex did not respond; re-run later to confirm",
+    "No matching work in Crossref, Semantic Scholar, Europe PMC",
+    "Nearest record: “Improved Word Sense Disambiguation Using Pre-Trained Contextualized Word Representations” (58% title similarity)"
+   ]
+  },
+  {
+   "id": "P3 R50",
+   "gold": "problematic",
+   "verdict": "fabricated",
+   "issues": [
+    "OpenAlex did not respond; re-run later to confirm",
+    "No matching work in Crossref, Semantic Scholar, Europe PMC"
+   ]
+  },
+  {
+   "id": "P3 R51",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R52",
+   "gold": "problematic",
+   "verdict": "fabricated",
+   "issues": [
+    "OpenAlex did not respond; re-run later to confirm",
+    "No matching work in Crossref, Semantic Scholar, Europe PMC",
+    "Nearest record: “Graph Reasoning Transformers for Knowledge-Aware Question Answering” (78% title similarity)"
+   ]
+  },
+  {
+   "id": "P3 R53",
+   "gold": "problematic",
+   "verdict": "id_mismatch",
+   "issues": [
+    "arXiv:2107.13586 points to a different work: “Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing”"
+   ]
+  },
+  {
+   "id": "P3 R54",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R55",
+   "gold": "problematic",
+   "verdict": "metadata_error",
+   "issues": [
+    "Venue mismatch: cited as NAACL, published in TACL"
+   ]
+  },
+  {
+   "id": "P3 R56",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R57",
+   "gold": "problematic",
+   "verdict": "metadata_error",
+   "issues": [
+    "Author list does not match the published work: Lewis, Jurafsky not among its authors"
+   ]
+  },
+  {
+   "id": "P3 R58",
+   "gold": "problematic",
+   "verdict": "metadata_error",
+   "issues": [
+    "Author list does not match the published work: Jiang, Kos not among its authors"
+   ]
+  },
+  {
+   "id": "P3 R59",
+   "gold": "problematic",
+   "verdict": "metadata_error",
+   "issues": [
+    "Author list does not match the published work: Stone, Albert not among its authors"
+   ]
+  },
+  {
+   "id": "P3 R60",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R61",
+   "gold": "verified",
+   "verdict": "unverifiable",
+   "issues": [
+    "Technical report: not indexed by scholarly databases; check manually"
+   ]
+  },
+  {
+   "id": "P3 R62",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R63",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R64",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  },
+  {
+   "id": "P3 R65",
+   "gold": "verified",
+   "verdict": "verified",
+   "issues": []
+  }
+ ]
+}

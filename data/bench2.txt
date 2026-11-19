@@ -1,0 +1,77 @@
+
+Tool               TP  FN  FP  TN   Recall  Spec   Prec   F1     Acc
+checkifexist       31   2  34  37   0.939  0.521  0.477  0.633  0.654
+hallucitechecker   18  15  20  51   0.545  0.718  0.474  0.507  0.663
+hallucinator       29   4  28  43   0.879  0.606  0.509  0.644  0.692
+halref             24   9  53  18   0.727  0.254  0.312  0.436  0.404
+refchecker         32   1  36  35   0.970  0.493  0.471  0.634  0.644
+VERACITE           29   4  12  59   0.879  0.831  0.707  0.784  0.846
+
+Errors:
+FP P1 R2 gold=verified → fabricated (0.08) failed=[]
+   REF: ANSI/NISO Z39.96-2024: JATS: Journal Article Tag Suite (2024). https://www.niso.org/publications/z3996-2024-jats 
+   MATCH[openalex]: ANSI/NISO Z39.96-2024, JATS: Journal Article Tag Suite, version 1.4 |  | 2024 | 
+   ! No matching work in Crossref, Hugging Face, Semantic Scholar, OpenAlex
+   ! Nearest record: “ANSI/NISO Z39.96-2024, JATS: Journal Article Tag Suite, version 1.4” (84% title similarity)
+FP P1 R9 gold=verified → metadata_error (0.35) failed=[]
+   REF: Garnett, A. (2016). The XML Markup Evaluation Corpus. In Public Knowledge Project. https://pkp.sfu.ca/2016/04/18/the-xml-markup-evaluation-corpus/ 
+   MATCH[crossref]: The XML Markup Evaluation Corpus | Casas Niño de Rivera | 2016/2025 | Front Matter
+   authors:mismatch 1 cited author(s) not on the paper cited=Garnett found=Casas Niño de Rivera
+   ! Author list does not match the published work: Garnett not among its authors
+FP P1 R12 gold=verified → metadata_error (0.35) failed=[]
+   REF: Grennan, M., Schibel, M., Collins, A., & Beel, J. (2019). GIANT: The 1-Billion Annotated Synthetic Bibliographic-Reference-String Dataset for Deep Citation Parsing. In E. Curry, M. T. Keane, A. Ojo, &
+   MATCH[semanticscholar]: GIANT: The 1-Billion Annotated Synthetic Bibliographic-Reference-String Dataset for Deep Citation Parsing | Grennan, Schibel, Collins, Beel | 2019 | Irish Conference on Artificial Intelligence and Cognitive Science
+   pages:mismatch Bibliographic details differ: pages 5-6 vs 260-271 cited=5-6 found=260-271
+   ! Bibliographic details differ: pages 5-6 vs 260-271
+FP P1 R19 gold=verified → metadata_error (0.35) failed=[]
+   REF: OpenCitations. (2025). Workshop on Open Citations and Open Scholarly Metadata. https://workshop-oc.github.io/
+   MATCH[crossref]: Workshop on Open Citations and Open Scholarly Metadata – 5 October 2022 | Di Giambattista | 2022/2025 | Front Matter
+   title:minor  cited=Workshop on Open Citations and Open Scholarly Metadata found=Workshop on Open Citations and Open Scholarly Metadata – 5 October 2022
+   authors:mismatch 1 cited author(s) not on the paper cited=OpenCitations found=Di Giambattista
+   ! Author list does not match the published work: OpenCitations not among its authors
+FP P1 R20 gold=verified → metadata_error (0.35) failed=[]
+   REF: sarin, parth, & Alperin, J. P. (2025). Citation Parsing and Analysis with Language Models. arXiv Preprint arXiv:2505.15948
+   MATCH[semanticscholar]: Citation Parsing and Analysis with Language Models | Sarin, Alperin | 2025/2025 | WOOC
+   authors:mismatch 1 cited author(s) not on the paper cited=sarin, parth, Alperin found=Sarin, Alperin
+   ! Author list does not match the published work: parth not among its authors
+FP P2 R3 gold=verified → fabricated (0.08) failed=[semanticscholar]
+   REF: Caifan Du, James Howison, and Patrice Lopez. “Softcite: Automatic Extraction of Software Mentions in Research Literature”. In: Poster abstracts of the 1st Workshop on Natural Language Processing and D
+   ! No matching work in Crossref, OpenAlex, Europe PMC
+FN P2 R10 gold=problematic → verified (0.99) failed=[]
+   REF: Matteo Cancellieri, David Pride, and Petr Knoth. “Identifying and extracting Data Access Statements from full-text academic articles”. In: Proceedings of the Joint Conference on Digital Libraries, JCD
+   MATCH[semanticscholar]: Identifying and extracting Data Access Statements from full-text academic articles | Pride, Cancellieri, Knoth | 2025/2025 | arXiv.org
+FP P3 R18 gold=verified → metadata_error (0.35) failed=[]
+   REF: Andrey Malinin, David Uthoff, Roman Heil, Yaya Li, and Mark Gales. Ensemble distribution distillation. International Conference on Learning Representations (ICLR), 2020
+   MATCH[semanticscholar]: Ensemble Distribution Distillation | Malinin, Mlodozeniec, Gales | 2019/2019 | International Conference on Learning Representations
+   authors:mismatch 3 cited author(s) not on the paper cited=Malinin, Uthoff, Heil, Li, Gales found=Malinin, Mlodozeniec, Gales
+   year:minor  cited=2020 found=2019/2019
+   ! Author list does not match the published work: Uthoff, Heil, Li not among its authors
+FN P3 R21 gold=problematic → verified (0.92) failed=[]
+   REF: Maria Glushkova, Shiori Kobayashi, and Junichi Suzuki. Uncertainty estimation in neural text regression. In Findings of the Association for Computational Linguistics: EMNLP 2021, pp. 4567–4576, 2021
+   MATCH[crossref]: Findings of the Association for Computational Linguistics: EMNLP 2021 |  | 2021 | Findings of the Association for Computational Linguistics: EMNLP 2021
+FN P3 R26 gold=problematic → verified (0.92) failed=[]
+   REF: Sam Mielke, Elif Akyürek, and Ond?rej Dusek. Evaluating the reliability of self-assessment in language models. In Findings of the Association for Computational Linguistics: EMNLP 2020, pp. 4320–4330, 
+   MATCH[crossref]: Findings of the Association for Computational Linguistics: EMNLP 2020 |  | 2020 | Findings of the Association for Computational Linguistics: EMNLP 2020
+FP P3 R29 gold=verified → id_mismatch (0.10) failed=[semanticscholar]
+   REF: Deep Ganguli, Amanda Askell, Nicholas Schiefer, Thomas I. Liao, Kamile? Luko?iut?e, Anna Chen, Anna Goldie, Azalia Mirhoseini, Catherine Olsson, Danny Hernandez, Dawn Drain, Dustin Li, Eli Tran-Johnso
+   identifier:mismatch identifier resolves to a different work cited=arXiv:2302.07459 found=The Capacity for Moral Self-Correction in Large Language Models
+   ! arXiv:2302.07459 points to a different work: “The Capacity for Moral Self-Correction in Large Language Models”
+FP P3 R30 gold=verified → fabricated (0.08) failed=[]
+   REF: Jie Ren, Yao Zhao, Tu Vu, Peter J. Liu, and Balaji Lakshminarayanan. Self-evaluation improves selective generation in large language models. In Javier Antorán, Arno Blaas, Kelly Buchanan,Fan Feng, Vin
+   ! No matching work in Crossref, Hugging Face, Semantic Scholar, OpenAlex, Europe PMC
+FP P3 R38 gold=verified → fabricated (0.08) failed=[semanticscholar]
+   REF: Daniel D. Johnson, Daniel Tarlow, David Duvenaud, and Chris J. Maddison. Experts don?t cheat: learning what you don?t know by predicting pairs. In Proceedings of the 41st International Conference on M
+   ! No matching work in Crossref, OpenAlex, Europe PMC
+FP P3 R42 gold=verified → metadata_error (0.35) failed=[]
+   REF: Yik-Cheung Tam. Cluster-based beam search for pointer-generator chatbot grounded by knowledge. Computer Speech & Language, 64:101094, 2020. ISSN 0885-2308
+   MATCH[crossref]: Cluster-based beam search for pointer-generator chatbot grounded by knowledge | Tam | 2020 | Computer Speech &amp; Language
+   pages:mismatch Bibliographic details differ: pages 0885-2308 vs 101094 cited=0885-2308 found=64 / 101094
+   ! Bibliographic details differ: pages 0885-2308 vs 101094
+FP P3 R45 gold=verified → metadata_error (0.35) failed=[]
+   REF: Peter W Culicover. Paraphrase generation and information retrieval from stored text. Mech. Transl. Comput. Linguistics, 11(3-4):78–88, 1968
+   MATCH[semanticscholar]: Paraphrase generation and information retrieval from stored text | Culicover | 1968 | Mechanical Translation and Computational Linguistics
+   pages:mismatch Bibliographic details differ: pages 3-4 vs 78-88 cited=11 / 3-4 found=11 / 78-88
+   ! Bibliographic details differ: pages 3-4 vs 78-88
+FN P3 R50 gold=problematic → verified (0.92) failed=[]
+   REF: Lei Yu, Jimmy Dumsmyr, and Kevin Knight. Deep paraphrase identification. In Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP), pp.650–655, 2014
+   MATCH[crossref]: Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP) |  | 2014/2015 | Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)

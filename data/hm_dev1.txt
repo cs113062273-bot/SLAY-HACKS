@@ -1,0 +1,81 @@
+
+HALLMARK dev_public (sample 310): n=310 DR=0.929 FPR=0.050 P=0.975 F1=0.951  [1678s]
+  VALID (flagged=FP)         5/100  0.05
+  arxiv_version_mismatch     14/15  0.93
+  chimeric_title             15/15  1.00
+  fabricated_doi             15/15  1.00
+  future_date                15/15  1.00
+  hybrid_fabrication         15/15  1.00
+  merged_citation            15/15  1.00
+  near_miss_title            12/15  0.80
+  nonexistent_venue          9/15  0.60
+  partial_author_list        12/15  0.80
+  placeholder_authors        15/15  1.00
+  plausible_fabrication      15/15  1.00
+  preprint_as_published      15/15  1.00
+  swapped_authors            14/15  0.93
+  wrong_venue                14/15  0.93
+FN [near_miss_title] verified | {"title":"UniT: Unified Multimodal Chain of-Thought Test-time Scaling","author":"Leon Liangyu Chen and Haoyu Ma and Zhipeng Fan and Ziqi Huang and Animesh Sinha and Xiaoliang Dai and Jialiang Wang and
+   WHY: Title slightly modified: 'UniT: Unified Multimodal Chain of-Thought Test-time Scaling' (original: 'UniT: Unified Multimodal Chain-of-Thought Test-time Scaling')
+   MATCH[datacite]: UniT: Unified Multimodal Chain-of-Thought Test-time Scaling | Chen, Ma, Fan, Huang, Sinha | 2026 | arXiv
+FN [near_miss_title] verified | {"title":"How Faithful is your Synthetic Data? Sample-level Metrics for Evaluating and Auditing Generative Model","author":"Ahmed M. Alaa and Boris van Breugel and Evgeny S. Saveliev and Mihaela van d
+   WHY: Title slightly modified: 'How Faithful is your Synthetic Data? Sample-level Metrics for Evaluating and Auditing Generative Model' (original: 'How Faithful is yo
+   MATCH[semanticscholar]: How Faithful is your Synthetic Data? Sample-level Metrics for Evaluating and Auditing Generative Models | Alaa, van Breugel, Saveliev, van der Schaar | 2021/2021 | International Conference on Machine Learning
+FN [near_miss_title] verified | {"title":"Meta-Learnings Bidirectional Update Rules","author":"Mark Sandler and Max Vladymyrov and Andrey Zhmoginov and Nolan Miller and Tom Madams and Andrew Jackson and Blaise Agüera y Arcas","year"
+   WHY: Title slightly modified: 'Meta-Learnings Bidirectional Update Rules' (original: 'Meta-Learning Bidirectional Update Rules')
+   MATCH[semanticscholar]: Meta-Learning Bidirectional Update Rules | Sandler, Vladymyrov, Zhmoginov, Miller, Jackson | 2021/2021 | International Conference on Machine Learning
+FP [VALID] metadata_error | {"title":"Context-Aware Sparse Deep Coordination Graphs","author":"Tonghan Wang and Liang Zeng and Weijun Dong and Qianlan Yang and Yang Yu and Chongjie Zhang","year":"2022","booktitle":"ICLR"}
+   WHY: Valid entry scraped from DBLP and verified
+   MATCH[semanticscholar]: Context-Aware Sparse Deep Coordination Graphs | Wang, Zeng, Dong, Yang, Yu | 2021/2021 | 
+   ! Only a preprint was found; publication in “ICLR” could not be confirmed
+FP [VALID] id_mismatch | {"title":"Capability-Oriented Training Induced Alignment Risk","author":"Yujun Zhou and Yue Huang and Han Bao and Kehan Guo and Zhenwen Liang and Pin-Yu Chen and Tian Gao and Werner Geyer and Nuno Mon
+   WHY: Valid arXiv preprint (2026)
+   ! arXiv:2602.12124 points to a different work: “Alignment Risks from Capability-Seeking RL Training”
+FP [VALID] metadata_error | {"title":"Planning with Biological Neurons and Synapses","author":"Francesco d&apos;Amore and Daniel Mitropolsky and Pierluigi Crescenzi and Emanuele Natale and Christos H. Papadimitriou","year":"2022
+   WHY: Valid entry scraped from DBLP and verified
+   MATCH[crossref]: Planning with Biological Neurons and Synapses | D'Amore, Mitropolsky, Crescenzi, Natale, Papadimitriou | 2022 | Proceedings of the AAAI Conference on Artificial Intelligence
+   ! Author list does not match the published work: d&apos not among its authors
+FP [VALID] metadata_error | {"title":"Foundation Models and Fair Use.","author":"Peter Henderson and Xuechen Li and Dan Jurafsky and Tatsunori Hashimoto and Mark A. Lemley and Percy Liang","year":"2023","url":"http://jmlr.org/pa
+   WHY: Valid entry scraped from DBLP
+   MATCH[crossref]: Foundation Models and Fair Use | Henderson, Li, Jurafsky, Hashimoto, Lemley | 2023 | Elsevier BV
+   ! Published in “Elsevier BV”, not “J. Mach. Learn. Res.”
+FP [VALID] id_mismatch | {"title":"Community Concealment from Unsupervised Graph Learning-Based Clustering","author":"Dalyapraz Manatova and Pablo Moriano and L. Jean Camp","year":"2026","doi":"10.48550/arXiv.2602.12250","url
+   WHY: Valid arXiv preprint (2026)
+   MATCH[datacite]: Community Concealment from Graph Neural Networks | Manatova, Moriano, Camp | 2026 | arXiv
+   ! arXiv:2602.12250 points to a different work: “Community Concealment from Graph Neural Networks”
+FN [arxiv_version_mismatch] verified | {"title":"SCAFFOLD: Stochastic Controlled Averaging for Federated Learning","author":"Sai Praneeth Karimireddy and Satyen Kale and Mehryar Mohri and Sashank Reddi and Sebastian U. Stich and Ananda The
+   WHY: Real paper published at ICML 2020; cited here with year 2023.
+   MATCH[datacite]: SCAFFOLD: Stochastic Controlled Averaging for Federated Learning | Karimireddy, Kale, Mohri, Reddi, Stich | 2019/2020/2021 | arXiv
+FN [wrong_venue] verified | {"title":"The Observer Effect in World Models: Invasive Adaptation Corrupts Latent Physics","author":"Christian Internò and Jumpei Yamaguchi and Loren Amdahl-Culleton and Markus Olhofer and David Klin
+   WHY: Venue changed to 'AAAI' (original was different)
+   MATCH[datacite]: The Observer Effect in World Models: Invasive Adaptation Corrupts Latent Physics | Internò, Yamaguchi, Amdahl-Culleton, Olhofer, Klindt | 2026 | arXiv
+FN [partial_author_list] verified_minor | {"title":"Kajibuntan: A House Chore Division App","author":"Tomohiko Yokoyama","year":"2023","doi":"10.1609/AAAI.V37I13.27075","booktitle":"AAAI"}
+   WHY: Partial author list: 2 authors reduced to 1
+   MATCH[crossref]: Kajibuntan: A House Chore Division App | Igarashi, Yokoyama | 2023 | Proceedings of the AAAI Conference on Artificial Intelligence
+FN [partial_author_list] verified_minor | {"title":"Participatory Budgeting with Donations and Diversity Constraints","author":"Jiehua Chen and Jan Maly","year":"2022","doi":"10.1609/AAAI.V36I9.21163","booktitle":"AAAI"}
+   WHY: Partial author list: 3 authors reduced to 2
+   MATCH[crossref]: Participatory Budgeting with Donations and Diversity Constraints | Chen, Lackner, Maly | 2022 | Proceedings of the AAAI Conference on Artificial Intelligence
+FN [partial_author_list] verified_minor | {"title":"Generalized Delayed Feedback Model with Post-Click Information in Recommender Systems","author":"De-Chuan Zhan","year":"2022","booktitle":"NeurIPS"}
+   WHY: Partial author list: 2 authors reduced to 1
+   MATCH[crossref]: Generalized Delayed Feedback Model with Post-Click Information in Recommender Systems | Yang, Zhan | 2022/2026 | Advances in Neural Information Processing Systems 35
+FN [swapped_authors] verified_minor | {"title":"Learning from Protein Structure with Geometric Vector Perceptrons","author":"Bowen Jing and Stephan Eismann and Pratham Suriana and Raphael Townshend and Ron O. Dror","booktitle":"ICLR","yea
+   WHY: Author 'Pratham Suriana' is a swapped name; the real third co-author is Patricia Suriana.
+   MATCH[datacite]: Learning from Protein Structure with Geometric Vector Perceptrons | Jing, Eismann, Suriana, Townshend, Dror | 2020/2021 | arXiv
+FN [nonexistent_venue] verified | {"title":"Towards On-Policy SFT: Distribution Discriminant Theory and its Applications in LLM Training","author":"Miaosen Zhang and Yishan Liu and Shuxia Lin and Xu Yang and Qi Dai and Chong Luo and W
+   WHY: Venue fabricated: 'International Conference on Quantum Machine Learning' does not exist
+   MATCH[datacite]: Towards On-Policy SFT: Distribution Discriminant Theory and its Applications in LLM Training | Zhang, Liu, Lin, Yang, Dai | 2026 | arXiv
+FN [nonexistent_venue] verified | {"title":"Learning to Control: The iUzawa-Net for Nonsmooth Optimal Control of Linear PDEs","author":"Yongcun Song and Xiaoming Yuan and Hangrui Yue and Tianyou Zeng","year":"2026","doi":"10.48550/arX
+   WHY: Venue fabricated: 'International Conference on Quantum Machine Learning' does not exist
+   MATCH[datacite]: Learning to Control: The iUzawa-Net for Nonsmooth Optimal Control of Linear PDEs | Song, Yuan, Yue, Zeng | 2026 | arXiv
+FN [nonexistent_venue] verified | {"title":"Meta-Sel: Efficient Demonstration Selection for In-Context Learning via Supervised Meta-Learning","author":"Xubin Wang and Weijia Jia","year":"2026","doi":"10.48550/arXiv.2602.12123","journa
+   WHY: Venue fabricated: 'Symposium on Transfer Learning Paradigms' does not exist
+   MATCH[datacite]: Meta-Sel: Efficient Demonstration Selection for In-Context Learning via Supervised Meta-Learning | Wang, Jia | 2026 | arXiv
+FN [nonexistent_venue] verified | {"title":"How Sampling Shapes LLM Alignment: From One-Shot Optima to Iterative Dynamics","author":"Yurong Chen and Yu He and Michael I. Jordan and Fan Yao","year":"2026","doi":"10.48550/arXiv.2602.121
+   WHY: Venue fabricated: 'Conference on Reward Learning and Alignment' does not exist
+   MATCH[datacite]: How Sampling Shapes LLM Alignment: From One-Shot Optima to Iterative Dynamics | Chen, He, Jordan, Yao | 2026 | arXiv
+FN [nonexistent_venue] verified | {"title":"Is Online Linear Optimization Sufficient for Strategic Robustness?","author":"Yang Cai and Haipeng Luo and Chen-Yu Wei and Weiqiang Zheng","year":"2026","doi":"10.48550/arXiv.2602.12253","jo
+   WHY: Venue fabricated: 'Workshop on Scalable Representation Learning' does not exist
+   MATCH[datacite]: Is Online Linear Optimization Sufficient for Strategic Robustness? | Cai, Luo, Wei, Zheng | 2026 | arXiv
+FN [nonexistent_venue] verified | {"title":"MonarchRT: Efficient Attention for Real-Time Video Generation","author":"Krish Agarwal and Zhuoming Chen and Cheng Luo and Yongqi Chen and Haizhong Zheng and Xun Huang and Atri Rudra and Bei
+   WHY: Venue fabricated: 'Symposium on Probabilistic Reasoning' does not exist
+   MATCH[datacite]: MonarchRT: Efficient Attention for Real-Time Video Generation | Agarwal, Chen, Luo, Chen, Zheng | 2026 | arXiv

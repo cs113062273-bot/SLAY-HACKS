@@ -1,0 +1,63 @@
+
+Tool               TP  FN  FP  TN   Recall  Spec   Prec   F1     Acc
+checkifexist       31   2  34  37   0.939  0.521  0.477  0.633  0.654
+hallucitechecker   18  15  20  51   0.545  0.718  0.474  0.507  0.663
+hallucinator       29   4  28  43   0.879  0.606  0.509  0.644  0.692
+halref             24   9  53  18   0.727  0.254  0.312  0.436  0.404
+refchecker         32   1  36  35   0.970  0.493  0.471  0.634  0.644
+VERACITE           33   0  11  60   1.000  0.845  0.750  0.857  0.894
+
+Errors:
+FP P1 R18 gold=verified → metadata_error (0.35) failed=[]
+   REF: OpenAI, Agarwal, S., Ahmad, L., Ai, J., Altman, S., Applebaum, A., Arbus, E., Arora, R. K., Bai, Y., Baker, B., Bao, H., Barak, B., Bennett, A., Bertao, T., Brett, N., Brevdo, E., Brockman, G., Bubeck
+   MATCH[datacite]: gpt-oss-120b &amp; gpt-oss-20b Model Card | OpenAI, :, Agarwal, Ahmad, Ai, Altman | 2025 | arXiv
+   title:mismatch words differ: published “amp” cited=gpt-oss-120b & gpt-oss-20b Model Card found=gpt-oss-120b &amp; gpt-oss-20b Model Card
+   ! Title differs from the published title (published “amp”)
+FP P1 R24 gold=verified → metadata_error (0.35) failed=[]
+   REF: Yang, A., Yang, B., Zhang, B., Hui, B., Zheng, B., Yu, B., Li, C., Liu, D., Huang, F., Wei, H., Lin, H., & al., et. (2025). Qwen2.5 Technical Report. arXiv preprint arXiv:2412.15115. https://doi.org/1
+   MATCH[semanticscholar]: Qwen2.5 Technical Report | Yang, Yang, Zhang, Hui, Zheng, Yu | 2024/2024 | arXiv.org
+   authors:mismatch 33 author(s) omitted cited=Yang, Yang, Zhang, Hui, Zheng, Yu, Li, Liu, Huang, Wei, Lin found=Yang, Yang, Zhang, Hui, Zheng, Yu, Li, Liu, …
+   ! Incomplete author list: 33 of 44 authors omitted without “et al.”
+FP P2 R3 gold=verified → fabricated (0.08) failed=[]
+   REF: Caifan Du, James Howison, and Patrice Lopez. “Softcite: Automatic Extraction of Software Mentions in Research Literature”. In: Poster abstracts of the 1st Workshop on Natural Language Processing and D
+   ! No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC
+FP P2 R11 gold=verified → metadata_error (0.99) failed=[]
+   REF: Petr Knoth et al. “CORE: A Global Aggregation Service for Open Access Papers”. en. In: Scientific Data 10.1 (June 2023). Publisher: Nature Publishing Group, p. 366. issn: 2052-4463. doi: 10.1038/s4159
+   MATCH[crossref]: CORE: A Global Aggregation Service for Open Access Papers | Knoth, Herrmannova, Cancellieri, Anastasiou, Pontika, Pearce | 2023 | Scientific Data
+   ! Template / placeholder content: publication year 2052 is in the future
+FP P2 R13 gold=verified → metadata_error (0.35) failed=[]
+   REF: Micha? Marci?czuk and Marcin Oleksy. “Inforex ” a Collaborative System for Text Corpora Annotation and Analysis Goes Open?. In: Proceedings of the International Conference on Recent Advances in Natura
+   MATCH[crossref]: Inforex—a Collaborative System for Text Corpora Annotation and Analysis Goes Open | G4.19 Research Group, Marcińczuk, Oleksy | 2019 | Proceedings - Natural Language Processing in a Deep Learning World
+   authors:mismatch 1 author(s) omitted cited=Marci?czuk, Oleksy found=G4.19 Research Group, Marcińczuk, Oleksy
+   ! Incomplete author list: 1 of 3 authors omitted without “et al.”
+FP P2 R15 gold=verified → metadata_error (0.35) failed=[]
+   REF: Arfon M. Smith, Daniel S. Katz, and Kyle E. Niemeyer. “Software citation principles”. en. In: PeerJ Computer Science 2 (Sept. 2016). Publisher: PeerJ Inc., e86. issn: 2376-5992. doi: 10.7717/peerj-cs.
+   MATCH[crossref]: Software citation principles | Smith, Katz, Niemeyer, Group | 2016 | PeerJ Computer Science
+   authors:mismatch 1 author(s) omitted cited=Smith, Katz, Niemeyer found=Smith, Katz, Niemeyer, Group
+   ! Incomplete author list: 1 of 4 authors omitted without “et al.”
+FP P3 R14 gold=verified → metadata_error (0.35) failed=[]
+   REF: Mandar Joshi, Eunsol Choi, Daniel S. Weld, and Luke Zettlemoyer. Triviaqa: A large scale distantly supervised challenge for reading comprehension. In Proceedings of the 55th Annual Meeting of the Asso
+   MATCH[crossref]: TriviaQA: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension | Joshi, Choi, Weld, Zettlemoyer | 2017 | Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)
+   title:mismatch words differ: published “dataset” cited=Triviaqa: A large scale distantly supervised challenge for reading comprehension found=TriviaQA: A Large Scale Distantly Supervised Challenge Dataset for Reading Compr
+   ! Title differs from the published title (published “dataset”)
+FP P3 R18 gold=verified → metadata_error (0.35) failed=[]
+   REF: Andrey Malinin, David Uthoff, Roman Heil, Yaya Li, and Mark Gales. Ensemble distribution distillation. International Conference on Learning Representations (ICLR), 2020
+   MATCH[semanticscholar]: Ensemble Distribution Distillation | Malinin, Mlodozeniec, Gales | 2019/2019 | International Conference on Learning Representations
+   authors:mismatch 3 cited author(s) not on the paper cited=Malinin, Uthoff, Heil, Li, Gales found=Malinin, Mlodozeniec, Gales
+   year:minor  cited=2020 found=2019/2019
+   ! Author list does not match the published work: Uthoff, Heil, Li not among its authors
+FP P3 R29 gold=verified → metadata_error (0.35) failed=[]
+   REF: Deep Ganguli, Amanda Askell, Nicholas Schiefer, Thomas I. Liao, Kamile? Luko?iut?e, Anna Chen, Anna Goldie, Azalia Mirhoseini, Catherine Olsson, Danny Hernandez, Dawn Drain, Dustin Li, Eli Tran-Johnso
+   MATCH[datacite]: The Capacity for Moral Self-Correction in Large Language Models | Ganguli, Askell, Schiefer, Liao, Lukošiūtė, Chen | 2023 | arXiv
+   authors:mismatch 44 author(s) omitted cited=Ganguli, Askell, Schiefer, Liao, Kamile found=Ganguli, Askell, Schiefer, Liao, Lukošiūtė, Chen, Goldie, Mirhoseini, …
+   ! Incomplete author list: 44 of 49 authors omitted without “et al.”
+FP P3 R30 gold=verified → metadata_error (0.35) failed=[openalex]
+   REF: Jie Ren, Yao Zhao, Tu Vu, Peter J. Liu, and Balaji Lakshminarayanan. Self-evaluation improves selective generation in large language models. In Javier Antorán, Arno Blaas, Kelly Buchanan,Fan Feng, Vin
+   MATCH[semanticscholar]: Self-Evaluation Improves Selective Generation in Large Language Models | Ren, Zhao, Vu, Liu, Lakshminarayanan | 2023/2023 | ICBINB
+   venue:mismatch  cited=Proceedings on "I Can’t Believe It’s Not Better: Failure Modes in the Age of Fou found=ICBINB
+   ! Published in “ICBINB”, not “Proceedings on "I Can’t Believe It’s Not Better: Failure Modes in the Age of Foundation Models" at NeurIPS 2023 Workshops”
+FP P3 R62 gold=verified → metadata_error (0.35) failed=[]
+   REF: Ilia Kulikov, Alexander Miller, Kyunghyun Cho, and Jason Weston. Importance of search and evaluation strategies in neural dialogue modeling. pp. 76–87, 01 2019. doi: 10.18653/v1/W19-8609.
+   MATCH[crossref]: Importance of Search and Evaluation Strategies in Neural Dialogue Modeling | Kulikov, Miller, Cho, Weston | 2019 | Proceedings of the 12th International Conference on Natural Language Generation
+   venue:mismatch  cited=pp. 76-87 found=Proceedings of the 12th International Conference on Natural Language Generation
+   ! Published in “Proceedings of the 12th International Conference on Natural Language Generation”, not “pp. 76-87”

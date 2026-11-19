@@ -1,0 +1,49 @@
+
+HALLMARK dev_public (sample 310): n=310 DR=0.971 FPR=0.030 P=0.986 F1=0.978  [587s]
+  VALID (flagged=FP)         3/100  0.03
+  arxiv_version_mismatch     15/15  1.00
+  chimeric_title             15/15  1.00
+  fabricated_doi             15/15  1.00
+  future_date                15/15  1.00
+  hybrid_fabrication         15/15  1.00
+  merged_citation            15/15  1.00
+  near_miss_title            12/15  0.80
+  nonexistent_venue          14/15  0.93
+  partial_author_list        14/15  0.93
+  placeholder_authors        15/15  1.00
+  plausible_fabrication      15/15  1.00
+  preprint_as_published      15/15  1.00
+  swapped_authors            14/15  0.93
+  wrong_venue                15/15  1.00
+FN [near_miss_title] verified | {"title":"UniT: Unified Multimodal Chain of-Thought Test-time Scaling","author":"Leon Liangyu Chen and Haoyu Ma and Zhipeng Fan and Ziqi Huang and Animesh Sinha and Xiaoliang Dai and Jialiang Wang and
+   WHY: Title slightly modified: 'UniT: Unified Multimodal Chain of-Thought Test-time Scaling' (original: 'UniT: Unified Multimodal Chain-of-Thought Test-time Scaling')
+   MATCH[datacite]: UniT: Unified Multimodal Chain-of-Thought Test-time Scaling | Chen, Ma, Fan, Huang, Sinha | 2026 | arXiv
+FN [near_miss_title] verified | {"title":"How Faithful is your Synthetic Data? Sample-level Metrics for Evaluating and Auditing Generative Model","author":"Ahmed M. Alaa and Boris van Breugel and Evgeny S. Saveliev and Mihaela van d
+   WHY: Title slightly modified: 'How Faithful is your Synthetic Data? Sample-level Metrics for Evaluating and Auditing Generative Model' (original: 'How Faithful is yo
+   MATCH[semanticscholar]: How Faithful is your Synthetic Data? Sample-level Metrics for Evaluating and Auditing Generative Models | Alaa, van Breugel, Saveliev, van der Schaar | 2021/2021 | International Conference on Machine Learning
+FN [near_miss_title] verified | {"title":"Meta-Learnings Bidirectional Update Rules","author":"Mark Sandler and Max Vladymyrov and Andrey Zhmoginov and Nolan Miller and Tom Madams and Andrew Jackson and Blaise Agüera y Arcas","year"
+   WHY: Title slightly modified: 'Meta-Learnings Bidirectional Update Rules' (original: 'Meta-Learning Bidirectional Update Rules')
+   MATCH[semanticscholar]: Meta-Learning Bidirectional Update Rules | Sandler, Vladymyrov, Zhmoginov, Miller, Jackson | 2021/2021 | International Conference on Machine Learning
+FP [VALID] metadata_error | {"title":"Context-Aware Sparse Deep Coordination Graphs","author":"Tonghan Wang and Liang Zeng and Weijun Dong and Qianlan Yang and Yang Yu and Chongjie Zhang","year":"2022","booktitle":"ICLR"}
+   WHY: Valid entry scraped from DBLP and verified
+   MATCH[semanticscholar]: Context-Aware Sparse Deep Coordination Graphs | Wang, Zeng, Dong, Yang, Yu | 2021/2021 | 
+   ! Only a preprint was found; publication in “ICLR” could not be confirmed
+FP [VALID] fabricated | {"title":"Capability-Oriented Training Induced Alignment Risk","author":"Yujun Zhou and Yue Huang and Han Bao and Kehan Guo and Zhenwen Liang and Pin-Yu Chen and Tian Gao and Werner Geyer and Nuno Mon
+   WHY: Valid arXiv preprint (2026)
+   ! arXiv:2602.12124 now carries the title “Alignment Risks from Capability-Seeking RL Training” (same authors; likely a renamed version)
+   ! OpenAlex did not respond; re-run later to confirm
+   ! No matching work in DataCite, Crossref, Semantic Scholar, Europe PMC
+FP [VALID] metadata_error | {"title":"Community Concealment from Unsupervised Graph Learning-Based Clustering","author":"Dalyapraz Manatova and Pablo Moriano and L. Jean Camp","year":"2026","doi":"10.48550/arXiv.2602.12250","url
+   WHY: Valid arXiv preprint (2026)
+   MATCH[datacite]: Community Concealment from Graph Neural Networks | Manatova, Moriano, Camp | 2026 | arXiv
+   ! arXiv:2602.12250 now carries the title “Community Concealment from Graph Neural Networks” (same authors; likely a renamed version)
+   ! Closest real work has a different title: “Community Concealment from Graph Neural Networks”
+FN [partial_author_list] verified_minor | {"title":"Online Fast Adaptation and Knowledge Accumulation (OSAKA): A New Approach to Continual Learning","author":"Massimo Caccia and Pau Rodriguez and Oleksiy Ostapenko and Fabrice Normandin and Mi
+   WHY: LLM-generated via openai(gpt-5.1). Prompt: 'Bibliography on continual learning and catastrophic forgetting'. Verification: Authors don't match CrossRef: 'Caccia
+   MATCH[semanticscholar]: Online Fast Adaptation and Knowledge Accumulation (OSAKA): a New Approach to Continual Learning | Caccia, López, Ostapenko, Normandin, Lin | 2020/2020 | Neural Information Processing Systems
+FN [swapped_authors] verified_minor | {"title":"Learning from Protein Structure with Geometric Vector Perceptrons","author":"Bowen Jing and Stephan Eismann and Pratham Suriana and Raphael Townshend and Ron O. Dror","booktitle":"ICLR","yea
+   WHY: Author 'Pratham Suriana' is a swapped name; the real third co-author is Patricia Suriana.
+   MATCH[semanticscholar]: Learning from Protein Structure with Geometric Vector Perceptrons | Jing, Eismann, Suriana, Townshend, Dror | 2020/2020 | International Conference on Learning Representations
+FN [nonexistent_venue] verified | {"title":"Learning to Control: The iUzawa-Net for Nonsmooth Optimal Control of Linear PDEs","author":"Yongcun Song and Xiaoming Yuan and Hangrui Yue and Tianyou Zeng","year":"2026","doi":"10.48550/arX
+   WHY: Venue fabricated: 'International Conference on Quantum Machine Learning' does not exist
+   MATCH[datacite]: Learning to Control: The iUzawa-Net for Nonsmooth Optimal Control of Linear PDEs | Song, Yuan, Yue, Zeng | 2026 | arXiv

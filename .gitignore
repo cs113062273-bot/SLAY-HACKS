@@ -1,0 +1,22 @@
+# dependencies and builds
+node_modules/
+app/dist/
+ml/.venv/
+__pycache__/
+
+# training artifacts and caches (large, reproducible)
+ml/runs/
+ml/cache/
+data/cache/
+data/pdfs/
+data/Citation-Integrity/
+data/hallmark/
+data/scifact/
+data/semanticcite/
+data/zenodo/refs.csv
+data/*.err
+
+# local notes
+SKILL.md
+.claude/
+*.log

@@ -1,0 +1,25 @@
+References
+
+[1] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. Attention is all you need. In Advances in Neural Information Processing Systems, 2017.
+
+[2] Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. BERT: Pre-training of deep bidirectional transformers for language understanding. In Proceedings of NAACL-HLT, pages 4171-4186, 2019.
+
+[3] Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. Deep residual learning for image recognition. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pages 770-778, 2016.
+
+[4] Alex Wang, Rishi Bommasani, Dan Hendrycks, Daniel Song, and Zhilin Zhang. Efficient few-shot learning with EFL: A single transformer for all tasks. arXiv preprint arXiv:2107.13586, 2021.
+
+[5] Zayne Sprague, Xi Ye, Kyle Richardson, and Greg Durrett. MuSR: Testing the limits of chain-of-thought with multistep soft reasoning. In EMNLP, 2023.
+
+[6] John Smith and Jane Doe. Deep learning techniques for avatar-based interaction in virtual environments. IEEE Transactions on Neural Networks and Learning Systems, 32(12):5600-5612, 2021.
+
+[7] Firstname Lastname and Others. Drivlme: A large-scale multi-agent driving benchmark, 2023. URL or arXiv ID to be updated.
+
+[8] Diederik P. Kingma and Jimmy Ba. Adam: A method for stochastic optimization. In International Conference on Learning Representations (ICLR), 2015.
+
+[9] Heinrich Jiang, Been Kim, Melody Y. Guan, and Maya Gupta. To trust or not to trust a classifier. In International Conference on Learning Representations (ICLR), 2021.
+
+[10] J. Smith and A. Patel. Leveraging large language models for financial forecasting. International Journal of Financial Technology, 9(2):101-115, 2024.
+
+[11] Andrew J. Wakefield, Simon H. Murch, Andrew Anthony, et al. Ileal-lymphoid-nodular hyperplasia, non-specific colitis, and pervasive developmental disorder in children. The Lancet, 351(9103):637-641, 1998.
+
+[12] Thomas Wolf, Lysandre Debut, Victor Sanh, et al. Transformers: State-of-the-art natural language processing. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations, pages 38-45, 2020. https://github.com/huggingface/transformers
