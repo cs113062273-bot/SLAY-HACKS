@@ -40,10 +40,15 @@ export function Report() {
       .sort((a, b) => (filter === 'problems' ? VERDICT_ORDER.indexOf(a.r!.verdict) - VERDICT_ORDER.indexOf(b.r!.verdict) || a.i - b.i : a.i - b.i));
   }, [doc, results, filter, q]);
 
+  const claimPhase = useSession((s) => s.claimPhase);
   const claimRows = useMemo(() => {
     const ql = q.toLowerCase();
-    return claims.map((c, i) => ({ c, i })).filter(({ c }) => !ql || doc!.citances[c.citanceId].claim.toLowerCase().includes(ql));
-  }, [claims, q, doc]);
+    const rows = claims.map((c, i) => ({ c, i })).filter(({ c }) => !ql || doc!.citances[c.citanceId].claim.toLowerCase().includes(ql));
+    // once all claims are checked, list what needs action first (rows stay in document order while checks stream in)
+    if (claimPhase !== 'done') return rows;
+    const rank = (c: ClaimCheck) => (c.label ? { review: 0, supported: 1, unclear: 2, mention: 4 }[c.label] : c.status === 'no_source' ? 3 : 2);
+    return rows.sort((a, b) => rank(a.c) - rank(b.c) || a.i - b.i);
+  }, [claims, q, doc, claimPhase]);
 
   // select the first problem automatically once results arrive
   useEffect(() => {

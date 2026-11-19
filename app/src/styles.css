@@ -634,6 +634,7 @@ a:hover {
   height: 100%;
   display: grid;
   grid-template-rows: 56px auto 1fr;
+  grid-template-columns: minmax(0, 1fr); /* long titles or many index names must never widen the page */
 }
 .docname {
   display: flex;
@@ -1216,7 +1217,9 @@ a:hover {
 .status-dots {
   display: flex;
   flex-wrap: nowrap;
-  flex-shrink: 0;
+  flex-shrink: 1;
+  min-width: 0;
+  overflow: hidden;
   gap: 12px;
   font-size: var(--t-xs);
   color: var(--ink-3);

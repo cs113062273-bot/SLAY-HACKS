@@ -132,6 +132,20 @@ Veracite is a static site. There is no Veracite server, account, database or API
 - **Graceful degradation.** Every host has per-host concurrency limits, retries with backoff, honours `Retry-After`, and has a circuit breaker. If OpenAlex reports a spent daily allowance it is switched off for the session; nothing is ever paid for automatically. A reference whose indexes did not answer is reported as *unchecked* (never as fabricated) and can be re-checked with one click. Claim checking runs fully offline once the models are cached.
 - **No GPU needed.** Inference runs on WebAssembly (multi-threaded when the page is cross-origin isolated, which a small service worker arranges). WebGPU is not required.
 
+## Speed and the two modes
+
+**Quick check** verifies the references only and never downloads the models. **Full audit** also checks claim support. References always stream into the report first, and claim results follow one by one. After a quick check, one click starts claim support on the same document.
+
+Measured with `app/scripts/mode-e2e.ts` on the *Attention Is All You Need* sample: 40 references, 56 claim checks. Setup: headless Chrome 157, Intel i7-12700H laptop (no GPU used), production build served locally. Times include downloading the models from the local server, but not over the internet. On a 50 Mbit/s line the 136 MB model download adds about 22 s once.
+
+| Run | References done | First claim result | All 56 claims |
+|---|---|---|---|
+| Quick check, fresh profile | 3.4 s (no model requests) | 14.5 s after clicking *Check claim support* | 178 s after the click |
+| Full audit, fresh profile (cold) | 3.4 s | 84 s | 261 s |
+| Full audit, same profile (warm: models and cited full texts cached) | 2.2 s | | 136 s |
+
+The sample replays recorded index responses (see above). A live paper's reference check depends on how fast the indexes respond; the blind test reports live, uncached times. With Chrome's CPU throttled 4×, a stand-in for a low-end laptop, 30 references took 98 s and 32 claim checks took 7.8 minutes. Claim checks run one after another on the CPU, at about 2.4 s each on this laptop when warm. The labels were identical in all three runs.
+
 ## Run locally
 
 ```bash
