@@ -1,0 +1,162 @@
+{
+ "rule": "most recent primary-category arXiv submission per category; two most recent PLOS ONE research articles; skip only if PDF fails or <10 references",
+ "queriedAt": "2026-11-20T03:38:19.949Z",
+ "picked": [
+  {
+   "source": "arXiv",
+   "cat": "cs.CR",
+   "id": "2611.25479v1",
+   "title": "Side-Channel Analysis of the RP2350 Challenge 2",
+   "file": "cs.CR_2611.25479v1.pdf",
+   "refsParsed": 25
+  },
+  {
+   "source": "arXiv",
+   "cat": "cs.RO",
+   "id": "2611.25462v1",
+   "title": "Demonstration-Free Skill Composition for Navigation and Manipulation",
+   "file": "cs.RO_2611.25462v1.pdf",
+   "refsParsed": 19
+  },
+  {
+   "source": "arXiv",
+   "cat": "cs.DB",
+   "id": "2611.25416v1",
+   "title": "Standardized Tolerance for Adaptive Reuse and Repair: A Method for HNSW Migration Under Embedding Model Change Scenarios",
+   "file": "cs.DB_2611.25416v1.pdf",
+   "refsParsed": 23
+  },
+  {
+   "source": "arXiv",
+   "cat": "physics.optics",
+   "id": "2611.25432v1",
+   "title": "A fast and accurate model for gradient-based inverse design of multimode waveguides",
+   "file": "physics.optics_2611.25432v1.pdf",
+   "refsParsed": 23
+  },
+  {
+   "source": "arXiv",
+   "cat": "cond-mat.stat-mech",
+   "id": "2611.25491v1",
+   "title": "Dynamical Variational Theory of Stochastic Reaction Networks",
+   "file": "cond-mat.stat-mech_2611.25491v1.pdf",
+   "refsParsed": 12
+  },
+  {
+   "source": "arXiv",
+   "cat": "hep-ph",
+   "id": "2611.25910v1",
+   "title": "New unintegrated gluon density in proton and nuclei tested with small $x$ processes at modern colliders",
+   "file": "hep-ph_2611.25910v1.pdf",
+   "refsParsed": 66
+  },
+  {
+   "source": "arXiv",
+   "cat": "math.AP",
+   "id": "2611.26051v1",
+   "title": "A variational theory for von Kármán vortex streets",
+   "file": "math.AP_2611.26051v1.pdf",
+   "refsParsed": 40
+  },
+  {
+   "source": "arXiv",
+   "cat": "q-bio.GN",
+   "id": "2611.22256v1",
+   "title": "ST-FateFlow: Continuous Gene-Spatial Reconstruction with Differentiation-Potential Learning from Time-Resolved Spatial Transcriptomics",
+   "file": "q-bio.GN_2611.22256v1.pdf",
+   "refsParsed": 25
+  },
+  {
+   "source": "arXiv",
+   "cat": "eess.SY",
+   "id": "2611.25962v1",
+   "title": "Safe Data-Driven Insulin Dosage Decision Based on Physiology-Constrained Gaussian Process Learning",
+   "file": "eess.SY_2611.25962v1.pdf",
+   "refsParsed": 36
+  },
+  {
+   "source": "arXiv",
+   "cat": "stat.ML",
+   "id": "2611.25936v1",
+   "title": "Hellinger Decision Trees for Density Ratio Estimation: Finite-Sample Guarantees",
+   "file": "stat.ML_2611.25936v1.pdf",
+   "refsParsed": 39
+  },
+  {
+   "source": "arXiv",
+   "cat": "physics.chem-ph",
+   "id": "2611.25052v1",
+   "title": "MAPPA: Mapping of Atoms by Progressive Pattern Assembly with Molecular Symmetry",
+   "file": "physics.chem-ph_2611.25052v1.pdf",
+   "refsParsed": 41
+  },
+  {
+   "source": "arXiv",
+   "cat": "gr-qc",
+   "id": "2611.25786v1",
+   "title": "Phase transitions in self-gravitating objects and black holes: Common properties and interpretations",
+   "file": "gr-qc_2611.25786v1.pdf",
+   "refsParsed": 18
+  },
+  {
+   "source": "PLOS ONE",
+   "id": "10.1371/journal.pone.0347190",
+   "title": "Perceived community acceptance on maternal and newborns care continuum and its correlates in Ethiopia",
+   "published": "2026-11-19T00:00:00Z",
+   "file": "plos_10_1371_journal_pone_0347190.pdf",
+   "refsParsed": 75
+  },
+  {
+   "source": "PLOS ONE",
+   "id": "10.1371/journal.pone.0355629",
+   "title": "Entrepreneurial exit pathways in Italy: Evidence from GEM Adult Population Survey data, 2007–2025",
+   "published": "2026-11-19T00:00:00Z",
+   "file": "plos_10_1371_journal_pone_0355629.pdf",
+   "refsParsed": 23
+  }
+ ],
+ "skipped": [
+  {
+   "cat": "cs.RO",
+   "id": "2611.25480v1",
+   "title": "Learning Ankle Exoskeleton Control for Reactive Standing Balance Through Neuromusculoskeletal Simulation",
+   "reason": "0 references parsed"
+  },
+  {
+   "cat": "cond-mat.stat-mech",
+   "id": "2611.25764v1",
+   "title": "Critical droplets and metastability in long-range chains",
+   "reason": "0 references parsed"
+  },
+  {
+   "cat": "hep-ph",
+   "id": "2611.26026v1",
+   "title": "Concerning Factorization at Lepton Colliders",
+   "reason": "0 references parsed"
+  },
+  {
+   "cat": "hep-ph",
+   "id": "2611.25933v1",
+   "title": "Inclusive and diffractive D meson photoproduction in $pPb$ collisions at the LHC using Pythia8 framework",
+   "reason": "0 references parsed"
+  },
+  {
+   "cat": "hep-ph",
+   "id": "2611.25931v1",
+   "title": "Interpretation of the LZ Event via Inelastic ALP-Dark Photon Transition with Photon Exchange",
+   "reason": "0 references parsed"
+  },
+  {
+   "cat": "physics.chem-ph",
+   "id": "2611.25851v1",
+   "title": "Witnessing Molecular Conformation via Optical Cycling Centers",
+   "reason": "0 references parsed"
+  },
+  {
+   "cat": "gr-qc",
+   "id": "2611.25992v1",
+   "title": "Revisiting Kerr-Newman-(A)dS Black Holes in \\(f(R)\\) Gravity: A Kerr-Schild Approach",
+   "reason": "0 references parsed"
+  }
+ ]
+}

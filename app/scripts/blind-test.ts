@@ -4,7 +4,7 @@
  * lookup is live and timings are cold. Run once; results are reported as they come out.
  * Output: data/blind/results.json (per paper: counts, coverage, timing, every flag with evidence) and
  *         data/blind/miss_sample.txt (seeded random sample of verified references for a manual miss check).
- * Usage: npx tsx scripts/blind-test.ts
+ * Usage: npx tsx scripts/blind-test.ts   (BLIND_SET=2 for data/blind2/)
  */
 import { execSync } from 'node:child_process';
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -17,7 +17,8 @@ import { FLAGGED_VERDICTS, type RefResult } from '../src/core/types';
 import { verifyReference } from '../src/core/verify';
 
 const root = fileURLToPath(new URL('../../data/', import.meta.url));
-const manifest = JSON.parse(readFileSync(`${root}blind/manifest.json`, 'utf-8'));
+const B = process.env.BLIND_SET && process.env.BLIND_SET !== '1' ? `blind${process.env.BLIND_SET}` : 'blind';
+const manifest = JSON.parse(readFileSync(`${root}${B}/manifest.json`, 'utf-8'));
 const commit = execSync('git rev-parse --short HEAD').toString().trim();
 const dirty = execSync('git status --porcelain -- src').toString().trim().length > 0;
 
@@ -38,7 +39,7 @@ const out: any = { commit, srcDirty: dirty, startedAt: new Date().toISOString(),
 const missLines: string[] = [];
 for (const p of manifest.picked) {
   const t0 = Date.now();
-  const { lines, pageWidths } = await pdfToLines(pdfjs as any, new Uint8Array(readFileSync(`${root}pdfs/blind/${p.file}`)));
+  const { lines, pageWidths } = await pdfToLines(pdfjs as any, new Uint8Array(readFileSync(`${root}pdfs/${B}/${p.file}`)));
   const doc = buildDoc(lines, pageWidths);
   const tParse = Date.now() - t0;
   const res: RefResult[] = new Array(doc.references.length);
@@ -94,7 +95,7 @@ for (const p of manifest.picked) {
     const { r, i } = pool.splice(Math.floor(rand() * pool.length), 1)[0];
     missLines.push(`## ${p.file} [${i + 1}] ${r.verdict}\nCITED: ${doc.references[i].raw}\nMATCH: ${r.match?.title} | ${r.match?.authors.map((a) => a.family).join(', ')} | ${r.match?.years.join('/')} | ${r.match?.venue ?? ''} | ${r.match?.doi ?? r.match?.url ?? ''}\nJUDGEMENT: \n`);
   }
-  writeFileSync(`${root}blind/results.json`, JSON.stringify(out, null, 1));
+  writeFileSync(`${root}${B}/results.json`, JSON.stringify(out, null, 1));
 }
 out.finishedAt = new Date().toISOString();
 out.hostStats = hostStats;
@@ -109,7 +110,7 @@ out.totals = {
   unchecked: sum((x) => x.counts.unchecked ?? 0),
   verifySeconds: Math.round(sum((x) => x.verifyMs) / 1000),
 };
-writeFileSync(`${root}blind/results.json`, JSON.stringify(out, null, 1));
-writeFileSync(`${root}blind/miss_sample.txt`, missLines.join('\n'));
+writeFileSync(`${root}${B}/results.json`, JSON.stringify(out, null, 1));
+writeFileSync(`${root}${B}/miss_sample.txt`, missLines.join('\n'));
 console.log(JSON.stringify(out.totals), JSON.stringify(hostStats));
 process.exit(0);

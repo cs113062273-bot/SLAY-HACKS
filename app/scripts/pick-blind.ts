@@ -6,7 +6,9 @@
  *  - A paper is skipped only if its PDF cannot be downloaded or yields fewer than 10 references; the
  *    next one in the same listing replaces it. Skips are recorded in the manifest.
  * Writes data/blind/manifest.json and the PDFs to data/pdfs/blind/.
- * Usage: npx tsx scripts/pick-blind.ts
+ * Usage: npx tsx scripts/pick-blind.ts            (set 1, data/blind/)
+ *        BLIND_SET=2 npx tsx scripts/pick-blind.ts (set 2, data/blind2/: new categories, picked after set 1 was run;
+ *        papers already picked in an earlier set are excluded)
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -14,10 +16,20 @@ import * as pdfjs from 'pdfjs-dist/legacy/build/pdf.mjs';
 import { buildDoc } from '../src/core/doc';
 import { pdfToLines } from '../src/core/pdf';
 
-export const CATEGORIES = ['cs.CL', 'cs.CV', 'cs.SE', 'cs.HC', 'astro-ph.GA', 'cond-mat.mtrl-sci', 'quant-ph', 'math.PR', 'q-bio.NC', 'eess.SP', 'econ.EM', 'stat.ME'];
+const SET = process.env.BLIND_SET && process.env.BLIND_SET !== '1' ? process.env.BLIND_SET : '';
+const SETS: Record<string, string[]> = {
+  '': ['cs.CL', 'cs.CV', 'cs.SE', 'cs.HC', 'astro-ph.GA', 'cond-mat.mtrl-sci', 'quant-ph', 'math.PR', 'q-bio.NC', 'eess.SP', 'econ.EM', 'stat.ME'],
+  // set 2: none of these categories was used in development or in set 1
+  '2': ['cs.CR', 'cs.RO', 'cs.DB', 'physics.optics', 'cond-mat.stat-mech', 'hep-ph', 'math.AP', 'q-bio.GN', 'eess.SY', 'stat.ML', 'physics.chem-ph', 'gr-qc'],
+};
+export const CATEGORIES = SETS[SET];
 const root = fileURLToPath(new URL('../../data/', import.meta.url));
-mkdirSync(`${root}blind`, { recursive: true });
-mkdirSync(`${root}pdfs/blind`, { recursive: true });
+const B = `blind${SET}`;
+mkdirSync(`${root}${B}`, { recursive: true });
+mkdirSync(`${root}pdfs/${B}`, { recursive: true });
+// papers picked in earlier sets are never picked again
+const seen = new Set<string>();
+for (const d of ['blind', 'blind2', 'blind3']) if (d !== B && existsSync(`${root}${d}/manifest.json`)) for (const x of JSON.parse(readFileSync(`${root}${d}/manifest.json`, 'utf-8')).picked) seen.add(x.id);
 const UA = { 'User-Agent': 'veracite-benchmark/1.0 (research evaluation script)' };
 
 async function refsIn(buf: Uint8Array) {
@@ -26,8 +38,8 @@ async function refsIn(buf: Uint8Array) {
 }
 
 // --plos-only: keep the arXiv picks already in the manifest (re-querying arXiv later would change the selection)
-const plosOnly = process.argv.includes('--plos-only') && existsSync(`${root}blind/manifest.json`);
-const manifest: { picked: any[]; skipped: any[]; rule: string; queriedAt: string; plosQueriedAt?: string } = plosOnly ? JSON.parse(readFileSync(`${root}blind/manifest.json`, 'utf-8')) : {
+const plosOnly = process.argv.includes('--plos-only') && existsSync(`${root}${B}/manifest.json`);
+const manifest: { picked: any[]; skipped: any[]; rule: string; queriedAt: string; plosQueriedAt?: string } = plosOnly ? JSON.parse(readFileSync(`${root}${B}/manifest.json`, 'utf-8')) : {
   rule: 'most recent primary-category arXiv submission per category; two most recent PLOS ONE research articles; skip only if PDF fails or <10 references',
   queriedAt: new Date().toISOString(),
   picked: [],
@@ -48,7 +60,7 @@ for (const cat of plosOnly ? [] : CATEGORIES) {
     const id = e.match(/<id>http:\/\/arxiv\.org\/abs\/([^<]+)<\/id>/)?.[1];
     const primary = e.match(/<arxiv:primary_category[^>]*term="([^"]+)"/)?.[1];
     const title = e.match(/<title>([\s\S]*?)<\/title>/)?.[1].replace(/\s+/g, ' ').trim();
-    if (!id || primary !== cat) continue;
+    if (!id || primary !== cat || seen.has(id)) continue;
     const file = `${cat}_${id.replace('/', '_')}.pdf`;
     try {
       const r = await fetch(`https://arxiv.org/pdf/${id}`, { headers: UA });
@@ -59,7 +71,7 @@ for (const cat of plosOnly ? [] : CATEGORIES) {
         manifest.skipped.push({ cat, id, title, reason: `${n} references parsed` });
         continue;
       }
-      writeFileSync(`${root}pdfs/blind/${file}`, buf);
+      writeFileSync(`${root}pdfs/${B}/${file}`, buf);
       manifest.picked.push({ source: 'arXiv', cat, id, title, file, refsParsed: n });
       console.log(`${cat}: ${id} (${n} refs) ${title?.slice(0, 80)}`);
       got = true;
@@ -77,6 +89,7 @@ const plos = await (await fetch('https://api.plos.org/search?q=journal:%22PLOS%2
 let nPlos = 0;
 for (const d of plos.response.docs) {
   if (nPlos >= 2) break;
+  if (seen.has(d.id)) continue;
   const file = `plos_${d.id.replace(/[/.]/g, '_')}.pdf`;
   try {
     const r = await fetch(`https://journals.plos.org/plosone/article/file?id=${d.id}&type=printable`, { headers: UA });
@@ -87,7 +100,7 @@ for (const d of plos.response.docs) {
       manifest.skipped.push({ source: 'PLOS ONE', id: d.id, reason: `${n} references parsed` });
       continue;
     }
-    writeFileSync(`${root}pdfs/blind/${file}`, buf);
+    writeFileSync(`${root}pdfs/${B}/${file}`, buf);
     manifest.picked.push({ source: 'PLOS ONE', id: d.id, title: d.title_display, published: d.publication_date, file, refsParsed: n });
     console.log(`PLOS ONE: ${d.id} (${n} refs) ${String(d.title_display).slice(0, 80)}`);
     nPlos++;
@@ -95,6 +108,6 @@ for (const d of plos.response.docs) {
     manifest.skipped.push({ source: 'PLOS ONE', id: d.id, reason: String(err) });
   }
 }
-writeFileSync(`${root}blind/manifest.json`, JSON.stringify(manifest, null, 1));
+writeFileSync(`${root}${B}/manifest.json`, JSON.stringify(manifest, null, 1));
 console.log(`picked ${manifest.picked.length}, skipped ${manifest.skipped.length}`);
 process.exit(0);
