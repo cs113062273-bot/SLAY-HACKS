@@ -195,29 +195,42 @@ function continueAcrossBackMatter(lines: Line[], range: [number, number]): Line[
   return out;
 }
 
+// a label line that begins with a person's name: "[1] Y. Cao, V. Fatemi", "1. Smith, J.", "[2] S. Peotta and …"
+const NAMEY = /^\s*(?:\[\d{1,4}\]|\d{1,3}\.?)\s?(?:\p{Lu}\p{Ll}?\.\s?(?:-?\p{Lu}\p{Ll}?\.\s?)*(?:(?:van|von|de|der|da|di|le|la)\s)?\p{Lu}[\p{L}'’-]+|\p{Lu}[\p{L}'’-]+,\s\p{Lu}\.|\p{Lu}[\p{L}'’-]+\s\p{Lu}{1,3}[,.\s]|\p{Lu}\p{Ll}+\s\p{Lu}[\p{L}'’-]+[,\s])/u;
+
 function findHeadinglessStart(lines: Line[]): number {
+  // anywhere in the document (REVTeX papers often put supplementary material after the references): the longest
+  // sequential run of labels whose lines start with names and whose entries carry years
+  let best = -1;
+  let bestHits = 0;
   for (const re of LABEL_RES) {
-    for (let i = lines.length - 1; i >= lines.length * 0.3; i--) {
+    for (let i = lines.length - 1; i >= 0; i--) {
       const m = lines[i].text.match(re);
       if (!m || m[1] !== '1') continue;
       let expect = 1;
       let hits = 1;
       let last = i;
+      const labelled = [lines[i]];
       for (let j = i + 1; j < lines.length; j++) {
         const n = Number(lines[j].text.match(re)?.[1] ?? NaN);
         if (n > expect && n <= expect + 3) {
           expect = n;
           hits++;
           last = j;
+          labelled.push(lines[j]);
         }
       }
       // a reference list, not an enumerated list in the text: several entries, most labels in sequence, years inside
       const span = lines.slice(i, last + 1);
       const years = span.filter((l) => /\b(?:1[89]\d\d|20[0-3]\d)\b/.test(l.text)).length;
-      if (hits >= 5 && hits >= expect * 0.7 && years >= hits * 0.5) return i;
+      const named = labelled.filter((l) => NAMEY.test(l.text)).length;
+      if (hits >= 5 && hits >= expect * 0.7 && years >= hits * 0.5 && named >= hits * 0.6 && hits > bestHits) {
+        best = i;
+        bestHits = hits;
+      }
     }
   }
-  return -1;
+  return best;
 }
 
 function median(xs: number[]): number {
