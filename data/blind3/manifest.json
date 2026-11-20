@@ -1,0 +1,536 @@
+{
+  "rule": "blind set 3: first recent primary-category arXiv paper per category with a >=10-entry .bbl; two newest PLOS ONE research articles; parser not used in selection",
+  "freezeCommit": "3e47ac9dedfaa3d90e981f16437e29928b99c8d7",
+  "queriedAt": "2026-11-20T15:05:16.406667+00:00",
+  "picked": [
+    {
+      "source": "arXiv",
+      "cat": "cs.DC",
+      "id": "2611.26526v1",
+      "pdfUrl": "https://arxiv.org/pdf/2611.26526v1",
+      "title": "Thinflow: Organizing HPC Benchmarking Campaigns as Rerunnable Directory Trees",
+      "file": "cs.DC_2611.26526.pdf",
+      "truthRefs": 40,
+      "truthMethod": "main .bbl, else largest .bbl"
+    },
+    {
+      "source": "arXiv",
+      "cat": "cs.SI",
+      "id": "2611.23175v1",
+      "pdfUrl": "https://arxiv.org/pdf/2611.23175v1",
+      "title": "Finding Patient Zero in Temporal Contact Networks: A Comparative Study",
+      "file": "cs.SI_2611.23175.pdf",
+      "truthRefs": 48,
+      "truthMethod": "main .bbl, else largest .bbl"
+    },
+    {
+      "source": "arXiv",
+      "cat": "math.NA",
+      "id": "2611.25245v1",
+      "pdfUrl": "https://arxiv.org/pdf/2611.25245v1",
+      "title": "A fast iterative solver for lopsided Sylvester matrix equations",
+      "file": "math.NA_2611.25245.pdf",
+      "truthRefs": 85,
+      "truthMethod": "main .bbl, else largest .bbl"
+    },
+    {
+      "source": "arXiv",
+      "cat": "math.ST",
+      "id": "2611.25163v1",
+      "pdfUrl": "https://arxiv.org/pdf/2611.25163v1",
+      "title": "The low-degree sample complexity of clustering Gaussian mixtures with more groups than dimensions",
+      "file": "math.ST_2611.25163.pdf",
+      "truthRefs": 52,
+      "truthMethod": "main .bbl, else largest .bbl"
+    },
+    {
+      "source": "arXiv",
+      "cat": "physics.plasm-ph",
+      "id": "2611.24523v1",
+      "pdfUrl": "https://arxiv.org/pdf/2611.24523v1",
+      "title": "Fundamental-derivative criticality of ion-acoustic solitons in fluid-Poisson plasmas with general equations of state",
+      "file": "physics.plasm-ph_2611.24523.pdf",
+      "truthRefs": 58,
+      "truthMethod": "main .bbl, else largest .bbl"
+    },
+    {
+      "source": "arXiv",
+      "cat": "physics.ins-det",
+      "id": "2611.24776v1",
+      "pdfUrl": "https://arxiv.org/pdf/2611.24776v1",
+      "title": "4D-TEMPO: Differentiable 4D-STEM ptychography via fast Physics Optimizers",
+      "file": "physics.ins-det_2611.24776.pdf",
+      "truthRefs": 72,
+      "truthMethod": "main .bbl, else largest .bbl"
+    },
+    {
+      "source": "arXiv",
+      "cat": "cond-mat.mes-hall",
+      "id": "2611.26616v1",
+      "pdfUrl": "https://arxiv.org/pdf/2611.26616v1",
+      "title": "Fractional Charge at Dislocations from Band-Inversion Cancellation",
+      "file": "cond-mat.mes-hall_2611.26616.pdf",
+      "truthRefs": 78,
+      "truthMethod": "main .bbl, else largest .bbl"
+    },
+    {
+      "source": "arXiv",
+      "cat": "astro-ph.HE",
+      "id": "2611.26547v1",
+      "pdfUrl": "https://arxiv.org/pdf/2611.26547v1",
+      "title": "Nonlinearly Causal General-Relativistic Superfluid Hydrodynamics: Simulating Vortex Dynamics in Neutron-Star Interiors",
+      "file": "astro-ph.HE_2611.26547.pdf",
+      "truthRefs": 164,
+      "truthMethod": "main .bbl, else largest .bbl"
+    },
+    {
+      "source": "arXiv",
+      "cat": "hep-ex",
+      "id": "2611.26449v1",
+      "pdfUrl": "https://arxiv.org/pdf/2611.26449v1",
+      "title": "Progress in measurements of the CKM angle $\\gamma$ and charm mixing at LHCb",
+      "file": "hep-ex_2611.26449.pdf",
+      "truthRefs": 151,
+      "truthMethod": "main .bbl, else largest .bbl"
+    },
+    {
+      "source": "arXiv",
+      "cat": "q-bio.BM",
+      "id": "2611.19885v1",
+      "pdfUrl": "https://arxiv.org/pdf/2611.19885v1",
+      "title": "An Exploration of Physical and Chemical Representation in Coarse-Grained, Machine-Learned Protein Models",
+      "file": "q-bio.BM_2611.19885.pdf",
+      "truthRefs": 63,
+      "truthMethod": "main .bbl, else largest .bbl"
+    },
+    {
+      "source": "arXiv",
+      "cat": "cs.NE",
+      "id": "2611.24848v1",
+      "pdfUrl": "https://arxiv.org/pdf/2611.24848v1",
+      "title": "Old Matches, New Frames: Schedule-Gated Stereo Memory from Human Vision to Machine Matching",
+      "file": "cs.NE_2611.24848.pdf",
+      "truthRefs": 22,
+      "truthMethod": "main .bbl, else largest .bbl"
+    },
+    {
+      "source": "arXiv",
+      "cat": "nlin.CD",
+      "id": "2611.23434v1",
+      "pdfUrl": "https://arxiv.org/pdf/2611.23434v1",
+      "title": "Replicating chaotic dynamics from sparse sensors with recurrent latent states",
+      "file": "nlin.CD_2611.23434.pdf",
+      "truthRefs": 66,
+      "truthMethod": "main .bbl, else largest .bbl"
+    },
+    {
+      "source": "PLOS ONE",
+      "id": "10.1371/journal.pone.0363220",
+      "title": "Clinical features, first aid practices, and hospital management of snakebites in Northern Uganda: A multi-facility cross-sectional study",
+      "published": "2026-11-19T00:00:00Z",
+      "file": "plos_10_1371_journal_pone_0363220.pdf",
+      "truthRefs": 45
+    },
+    {
+      "source": "PLOS ONE",
+      "id": "10.1371/journal.pone.0360499",
+      "title": "<i>Neoehrlichia mikurensis,</i> where art thou? A negative analysis of 87 Swedish wild boars (<i>Sus scrofa</i>)",
+      "published": "2026-11-19T00:00:00Z",
+      "file": "plos_10_1371_journal_pone_0360499.pdf",
+      "truthRefs": 25
+    }
+  ],
+  "skipped": [
+    {
+      "cat": "cs.DC",
+      "id": "2611.26619",
+      "title": "TideCache: Efficient Hybrid LLM Serving with Transparent Cache Management and Layer-Wise Streaming",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "cs.SI",
+      "id": "2611.26564",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "cs.SI",
+      "id": "2611.26104",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "cs.SI",
+      "id": "2611.26092",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "cs.SI",
+      "id": "2611.26052",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "cs.SI",
+      "id": "2611.25860",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "cs.SI",
+      "id": "2611.25258",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "cs.SI",
+      "id": "2611.24899",
+      "title": "&#34;I Don&#39;t Think It&#39;s a Scam&#34;: A First Look at Family Intervention Barriers in Elder Abuse Discussions on Reddit and Baidu Tieba",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "cs.SI",
+      "id": "2611.24613",
+      "title": "Dessins d&#39;Enfants as a Topological Lens on Temporal Hypergraphs",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "cs.SI",
+      "id": "2611.24449",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "cs.SI",
+      "id": "2611.24383",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "cs.SI",
+      "id": "2611.23753",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "cs.SI",
+      "id": "2611.23204",
+      "title": "A comparative exploration of Steinerberger curvature and resistance curvature in model and real-world complex networks",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.NA",
+      "id": "2611.26575",
+      "title": "Stochastic counterpart of Nesterov&#39;s method for sampling and provable non-acceleration of samplers with heavy-ball structure",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.NA",
+      "id": "2611.26546",
+      "title": "A time-domain adversarial example demonstrating the failure of $H^1$ elements in $a$-$\\phi$ electromagnetic simulation",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.NA",
+      "id": "2611.26322",
+      "title": "Signed QoI Gaps for Goal-Oriented Error Estimation: Reliability and Sharpness from the Same First-Order System Residuals",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.NA",
+      "id": "2611.26136",
+      "title": "Perturbation Algorithm and Iterative Realization of a Four-Layer Semi-Discrete Scheme for an Evolutionary Problem with a Variable Operator",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.NA",
+      "id": "2611.26099",
+      "title": "Regularity transfer for the Ritz projection",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.NA",
+      "id": "2611.26014",
+      "title": "High-Order Area-Preserving Runge--Kutta Methods for Surface Diffusion Flow of Curves",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.NA",
+      "id": "2611.25922",
+      "title": "Time-independent equivalent matrix representation for time-domain boundary element analysis of large-scale 3D acoustic problems",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.NA",
+      "id": "2611.25919",
+      "title": "Quasi-orthogonality is a geometric property",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.NA",
+      "id": "2611.25867",
+      "title": "Full Rank and Stable Sampling of $\\tanh$ Networks",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.NA",
+      "id": "2611.25791",
+      "title": "Kernel Compensation and Quasi-Newton Iteration for Nonlinear Non-Hermitian Eigenproblems in Photonic Crystals",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.NA",
+      "id": "2611.25515",
+      "title": "When and why can integral constraints improve the accuracy of physics-informed neural networks?",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.NA",
+      "id": "2611.25443",
+      "title": "An explicit domain-preserving projected Milstein scheme with strong order one for stochastic systems",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.NA",
+      "id": "2611.25441",
+      "title": "A decoupled structure-preserving scheme for pressure-driven multispecies tumor growth",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.NA",
+      "id": "2611.25386",
+      "title": "A GPU Interior-Point Solver with Macro-Element Condensation for Equilibrium-Based Plasticity",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.NA",
+      "id": "2611.25313",
+      "title": "Variational integrators for time-dependent Lagrangian systems on Lie groups",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.ST",
+      "id": "2611.26536",
+      "title": "Anytime-valid inference for time series via self-normalization",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.ST",
+      "id": "2611.26515",
+      "title": "Simple Private Noisy SGD is Minimax-Optimal under Population Strong Convexity",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.ST",
+      "id": "2611.26487",
+      "title": "Local Clustering Tests and Botnet Localization in Sparse Random Geometric Networks",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.ST",
+      "id": "2611.26124",
+      "title": "Asymptotic efficiency comparison of explicit Dirichlet shape estimators",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.ST",
+      "id": "2611.26047",
+      "title": "Sharp minimax rates and adaptive estimation of latent proportions in bivariate Poisson mixtures",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.ST",
+      "id": "2611.25864",
+      "title": "Inference in High-Dimensional Linear Mediation Models",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.ST",
+      "id": "2611.25329",
+      "title": "Gaussian Quasi-Likelihood Estimation for Nonsynchronously Observed L\\&#39;evy processes",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.ST",
+      "id": "2611.25295",
+      "title": "Kernel Regression using Persistence Diagrams",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "math.ST",
+      "id": "2611.25287",
+      "title": "Pointwise Minmax Representations for Total Variation Denoising on Graphs",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "physics.plasm-ph",
+      "id": "2611.26402",
+      "title": "Aggregating soft-photon recoil with a positive finite-step sampler",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "physics.plasm-ph",
+      "id": "2611.26032",
+      "title": "Dephasing-free plasma acceleration with millijoule picosecond lasers",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "physics.plasm-ph",
+      "id": "2611.25686",
+      "title": "Energy transfers in decaying three-dimensional Hall-magnetohydrodynamics turbulence: Dependence on the Ion-Inertial Length and the Magnetic Prandtl Number",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "physics.plasm-ph",
+      "id": "2611.25571",
+      "title": "How zonal states beat-driven by Alfven eigenmodes stabilize micro-turbulence in tokamak plasmas",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "physics.plasm-ph",
+      "id": "2611.25234",
+      "title": "A new efficient and accurate approximation for the dielectric function of the weakly coupled electron gas",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "physics.plasm-ph",
+      "id": "2611.26547",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "physics.plasm-ph",
+      "id": "2611.25552",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "physics.plasm-ph",
+      "id": "2611.24914",
+      "title": "The role of externally-driven density fluctuations in the enhancement of beam spray",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "physics.ins-det",
+      "id": "2611.26308",
+      "title": "Compact GridPix Tracking: Test Beam Performance and Detector Response Modelling",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "physics.ins-det",
+      "id": "2611.25354",
+      "title": "Design of an electrostatic violin mode damper for gravitational wave detector enhancement",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "physics.ins-det",
+      "id": "2611.26418",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "physics.ins-det",
+      "id": "2611.26371",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "physics.ins-det",
+      "id": "2611.26057",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "physics.ins-det",
+      "id": "2611.25888",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "q-bio.BM",
+      "id": "2611.25076",
+      "title": "ShEPhERD-score: Fast, adaptable three-dimensional alignment of molecular features",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "q-bio.BM",
+      "id": "2611.24546",
+      "title": "Biases and Limits of AlphaFold Predictions for Non-Globular Proteins",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "q-bio.BM",
+      "id": "2611.24150",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "q-bio.BM",
+      "id": "2611.22230",
+      "title": "Discovery of new antiviral agents through artificial intelligence: in vitro and in vivo results",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "cs.NE",
+      "id": "2611.26011",
+      "title": "A Matter of Representation: Evolving Partial Spreads for Bent Functions",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "cs.NE",
+      "id": "2611.25610",
+      "title": "Hierarchical Spatiotemporal World Modeling with Content-Adaptive Spatial Addressing",
+      "reason": "no .bbl"
+    },
+    {
+      "cat": "cs.NE",
+      "id": "2611.26412",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "cs.NE",
+      "id": "2611.25896",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "cs.NE",
+      "id": "2611.25880",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "cs.NE",
+      "id": "2611.25855",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "cs.NE",
+      "id": "2611.25352",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "cs.NE",
+      "id": "2611.24980",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "nlin.CD",
+      "id": "2611.26215",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "nlin.CD",
+      "id": "2611.26182",
+      "reason": "previously downloaded or selected"
+    },
+    {
+      "cat": "nlin.CD",
+      "id": "2611.26006",
+      "reason": "not primary category"
+    },
+    {
+      "cat": "nlin.CD",
+      "id": "2611.23582",
+      "title": "Relative periodic orbits of a free spinning loop",
+      "reason": "no .bbl"
+    }
+  ],
+  "selectionComplete": true,
+  "selectionFreezeCommit": "497cb22379ea0c1f55a0e13dbc0f57c7d12e754e",
+  "freezeHistory": [
+    {
+      "commit": "497cb22379ea0c1f55a0e13dbc0f57c7d12e754e",
+      "role": "selection freeze"
+    },
+    {
+      "commit": "3e47ac9dedfaa3d90e981f16437e29928b99c8d7",
+      "role": "audit freeze",
+      "recordedAt": "2026-11-20T16:46:01.242695+00:00",
+      "reason": "One bounded spent/dev-only amendment before any selected PDF was parsed or verified; see AMENDMENT.md; selection unchanged"
+    }
+  ]
+}
