@@ -5,7 +5,8 @@ Read this first in any new session. Details are in research/competition_and_land
 ## Status (2026-11-20)
 - Direction: **Veracite**, an in-browser citation-integrity auditor (reference existence + field-level cross-verification + claim support). Deadline Dec 7, 2026 5pm EST.
 - Web app (app/, Vite + React 19 + TS) builds and runs end to end: PDF/DOCX/BibTeX/text/arXiv input → references verified → report UI with field diff, corrections, exports. Deep links: `#sample-planted`, `#sample-neurips`, `#sample-attention`, `#arxiv-<id>`.
-- Claim-support stage shipped (runs/deb_base_sf_k26, 4-bit, 102 MB). Git repo on main (2 commits); later work uncommitted until the user asks.
+- Claim-support stage shipped (runs/deb_base_sf_k26, 4-bit, 102 MB). Git repo on main; local commits authorized by the user (2026-11-20); **no push until the user confirms account/repo**.
+- Blind test 1 done (2026-11-20, frozen): 635 refs, 86 false alarms (13.5%), 5 real errors, 0/42 misses. Fixes committed after it (3f1aad6, 532c978). Blind set 2 selected (c690ed7) and runs automatically once the OpenAlex allowance resets (scratchpad wait_blind2.sh → data/blind2/run.log); judge every flag by hand, then fill {{BLIND2_*}} in README and DEVPOST.
 
 ## Layout
 - app/src/core: parse.ts (reference parser), text.ts (fuzzy), http.ts (retry/backoff/cache), sources.ts (Crossref/OpenAlex/S2/DataCite/EuropePMC/GitHub/HF), verify.ts (alignment + verdicts), doc.ts (PDF lines → refs, citances), pdf.ts (pdf.js), bm25.ts
@@ -81,6 +82,15 @@ Read this first in any new session. Details are in research/competition_and_land
 - Tried and removed: a "numbers in the claim missing from the passages" hint. It fired on 6/36 judged Attention claims, almost all about the citing paper's own setup, and no true numeric misquote was found. My motivating example (claim "37000 tokens" vs "32,000") was wrong: the cited paper says 32,000 merges → vocabulary ≈37k, so the model's Supported was right.
 - Selection already exposed a failure: 4 of 16 arXiv PDFs pulled (cond-mat 2611.24909, quant-ph 2611.24911/24910/24890) parsed to 0 references and were skipped by the rule; report them as extraction failures. Causes: REVTeX numbered lists without a "References" heading; and in 2611.24911 two-column reference pages whose lines are split by column but read in y order (interleaved). Fix only AFTER the frozen blind run.
 
+## Blind test 1 and fixes (2026-11-20)
+- Run: commit 15daf9d (core identical to 79fa273), `npx tsx scripts/blind-test.ts`, 43 min wall, 6 papers in parallel, in-memory empty cache. Crossref 429 ×963, S2 429 ×412 (parallelism; one user causes far fewer).
+- 14 papers, 635 refs: verified 506 (79.7%), flagged 92, unverifiable 24, unchecked 13. Manual review of all 92 flags (results.json `judgement`, `review`): 5 real (Lloyd year, Simoncelli authors, Hua 2 dropped authors, Bitsko title, DemoEvolve title; last two overstated as id_mismatch), 1 uncertain, 86 false. Miss sample 0/42. Median 101 s per paper.
+- False-alarm causes: author-list debris 29, PDF text artefacts 12, year glued to title 9, exists-but-not-found 9 (6 rate limits), harmless record differences 6, venue 8, AAS/two-column 6, other 7. RAG (Lewis 2020) and GDPR labelled fabricated while S2 was down.
+- Fixes (general rules, after the frozen run): isParseDebris in alignAuthors; titleDiff ignores glued years, contained titles, ?/! truncation, symbol fragments, compounds, transpositions; truncated DOI extended by matched record = minor; no id_mismatch when record title is in the text; venue abbreviation coverage uses stop words; future-year placeholder only for the cited year; fabricated requires S2 and OpenAlex both answered; broad outage → unchecked even with an arXiv ID; heading-less numbered reference lists (REVTeX/AIP) and AIP glued/superscript labels (attachLabels before dropFurniture).
+- Regression after fixes: Zenodo F1 .971, HALLMARK dev .986, identical flags on 11 dev papers, identical reference counts on all other PDFs. Set-1 zero-ref PDFs (data/pdfs/dev_zero): 0 → 29/49/46/82 refs. Held-out: set-2's 7 skipped zero-ref PDFs (data/pdfs/blind2_skipped, parsed once, no changes after) → all 7 now 15–58 refs.
+- Privacy audit on the new build (resnet, fresh profile): GET only, 0 body sentences leaked; refs 85 s, 97 claims 300 s. The earlier exit code 4 was the session teardown, not the script.
+- Blind set 2 (data/blind2/manifest.json, 12 new categories + 2 PLOS, queried 2026-11-20T03:38Z): run with `BLIND_SET=2 npx tsx scripts/blind-test.ts` on the current core only. Do not change app/src/core before it runs.
+
 ## Failed approaches / gotchas
 - Fine-tuned MiniLM evidence reranker on CI gold evidence made retrieval worse (dev R@5 .29 vs zero-shot .35): evidence labels too noisy (κ .2–.37). Kept hybrid retrieval.
 - OpenAlex anonymous tier = $0.10/day budget; once spent, 429 forever → Http disables host for the session.
@@ -100,9 +110,8 @@ Read this first in any new session. Details are in research/competition_and_land
 - Python heredocs in Git Bash mangle backslashes in regex patches; use the Edit tool or raw-string patch files.
 - DBLP is behind a bot wall; arXiv export API has no CORS (use DataCite 10.48550/arXiv.ID instead).
 
-## Next steps (as of 2026-11-19)
-1. Deploy: needs the user's GitHub account (repo + Pages via .github/workflows/pages.yml; model file 102 MB = 97 MiB < 100 MiB limit). Git repo exists on main; never commit/push without the user's go-ahead.
-2. After deploy: run scripts/e2e.ts against the live URL; check Firefox/Edge.
-3. Untested paths: DOCX upload (mammoth).
-4. Possible improvements (validate on dev/Zenodo only; HALLMARK test is spent): nonexistent_venue (26/37 on test), near-miss plural/hyphen titles, claim recall.
-5. Demo video / Devpost text only after user approval (SKILL.md req. 11).
+## Next steps (as of 2026-11-20)
+1. Blind set 2: when data/blind2/run.log exists, judge every flag and the miss sample by hand (same categories as set 1), commit, fill {{BLIND2_SUMMARY}}, {{BLIND2_SENTENCE}}, {{BLIND2_README}}.
+2. Deploy: user must confirm GitHub account cs113062273-bot and repo SLAY-HACKS (visibility public) before any push. Then Pages via .github/workflows/pages.yml; run deploy-check.ts and privacy-audit.ts against the live URL; fill {{LIVE_URL}}.
+3. Demo video: script in submission/DEMO_SCRIPT.md; recording needs the user's approval (SKILL.md).
+4. Do not tune on blind sets, HALLMARK test or CI test.
