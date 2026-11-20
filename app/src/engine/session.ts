@@ -1,6 +1,6 @@
 import { useSyncExternalStore } from 'react';
 import type { Doc } from '../core/doc';
-import { Http, type HttpEvent } from '../core/http';
+import { Http, MemoryCache, type Cache, type HttpEvent } from '../core/http';
 import type { RefResult, SourceName } from '../core/types';
 import { verifyReference } from '../core/verify';
 import { IdbCache } from './idbCache';
@@ -63,7 +63,10 @@ export interface State {
   replayed?: string;
 }
 
-const initial: State = { mode: 'full', phase: 'idle', readProgress: 0, doc: null, results: [], claims: [], claimPhase: 'idle', modelProgress: 0, sourceStatus: {} };
+const initial: State = {
+  mode: 'full', phase: 'idle', readProgress: 0, doc: null, results: [], claims: [], claimPhase: 'idle', modelProgress: 0, sourceStatus: {},
+  inputName: undefined, error: undefined, startedAt: undefined, finishedAt: undefined, replayed: undefined,
+};
 
 let state: State = initial;
 const listeners = new Set<() => void>();
@@ -95,6 +98,8 @@ const HOST_SOURCE: Record<string, SourceName> = {
 };
 
 export const cache = new IdbCache();
+// Recorded sample responses belong to that audit only. Live inputs use the persistent live-response cache.
+let activeCache: Cache = cache;
 /** date the bundled sample snapshots were recorded (scripts/build-seeds.ts) */
 export const SNAPSHOT_DATE = '2026-11-19';
 let pendingEvents: HttpEvent[] = [];
@@ -154,6 +159,8 @@ export async function analyze(input: Input, mode: Mode = savedMode()) {
   set({ ...initial, mode, phase: 'reading', inputName: input.kind === 'file' ? input.file.name : input.kind === 'arxiv' ? `arXiv:${input.id}` : input.kind === 'sample' ? input.name : (input.name ?? 'Pasted text'), startedAt: Date.now() });
   try {
     let doc: Doc;
+    const runCache = input.kind === 'sample' ? new MemoryCache() : cache;
+    activeCache = runCache;
     const onProgress = (p: number) => my === runId && set({ readProgress: p });
     if (input.kind === 'file') {
       const name = input.file.name.toLowerCase();
@@ -169,8 +176,9 @@ export async function analyze(input: Input, mode: Mode = savedMode()) {
         try {
           const r = await fetch(input.seed);
           if (r.ok) {
-            cache.seed(await r.json());
-            set({ replayed: SNAPSHOT_DATE });
+            const entries = await r.json();
+            await Promise.all(Object.entries(entries).map(([key, value]) => runCache.set(key, value)));
+            if (my === runId) set({ replayed: SNAPSHOT_DATE });
           }
         } catch {
           /* seed is an optimization only */
@@ -195,7 +203,7 @@ export async function analyze(input: Input, mode: Mode = savedMode()) {
     if (mode === 'full' && doc.citances.length) {
       import('./mlClient').then((ml) => ml.loadModels((l, t) => my === runId && set({ modelProgress: t ? l / t : 0 })).catch(() => undefined));
     }
-    const http = new Http({ cache, onEvent: onHttp, maxRetries: 5, hostParams: readKeys(), hostHeaders: readHeaders() });
+    const http = new Http({ cache: runCache, onEvent: onHttp, maxRetries: 5, hostParams: readKeys(), hostHeaders: readHeaders() });
     claimCtx = { my, http, mod: claimsMod };
     let next = 0;
     const worker = async () => {
@@ -247,7 +255,7 @@ export async function retryUnchecked() {
   if (!idx.length) return;
   const my = runId;
   set({ phase: 'checking' });
-  const http = new Http({ cache, onEvent: onHttp, maxRetries: 5, hostParams: readKeys(), hostHeaders: readHeaders() });
+  const http = new Http({ cache: activeCache, onEvent: onHttp, maxRetries: 5, hostParams: readKeys(), hostHeaders: readHeaders() });
   for (const i of idx) {
     if (my !== runId) return;
     const r = await verifyReference(s.doc.references[i], { http, budgetMs: 40000 }, i).catch(() => null);
@@ -263,6 +271,8 @@ export async function retryUnchecked() {
 
 export function reset() {
   runId++;
+  claimCtx = null;
+  activeCache = cache;
   if (location.hash) history.replaceState(null, '', location.pathname + location.search);
   set(initial);
 }

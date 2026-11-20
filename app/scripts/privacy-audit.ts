@@ -66,16 +66,18 @@ const final = await page.evaluate(() => {
     const k = x.label ?? x.status;
     c[k] = (c[k] ?? 0) + 1;
   }
-  return { verdicts: v, claims: c, error: s.error, sentences: (s.doc?.sentences ?? []) as string[], refs: s.doc?.references.length };
+  return { phase: s.phase, claimPhase: s.claimPhase, verdicts: v, claims: c, error: s.error, sentences: (s.doc?.sentences ?? []) as string[], refs: s.doc?.references.length };
 });
 // leakage check: does any 7-word window of any body sentence appear in any request?
 const haystack = reqs.map((r) => decodeURIComponent(r.url.replace(/\+/g, ' ')) + ' ' + r.body).join('\n').toLowerCase();
 let leaks = 0;
+let windowsChecked = 0;
 const probes: string[] = [];
 for (const s of final?.sentences ?? []) {
-  const w = s.toLowerCase().split(/\s+/).filter((x) => x.length > 2);
-  for (let i = 0; i + 7 <= w.length; i += 7) {
+  const w = s.toLowerCase().split(/\s+/).filter(Boolean);
+  for (let i = 0; i + 7 <= w.length; i++) {
     const frag = w.slice(i, i + 7).join(' ');
+    windowsChecked++;
     if (frag.length > 30 && haystack.includes(frag)) {
       leaks++;
       if (probes.length < 3) probes.push(frag);
@@ -88,5 +90,7 @@ for (const r of reqs) {
   hosts[h] = (hosts[h] ?? 0) + 1;
 }
 const nonGet = reqs.filter((r) => r.method !== 'GET' && !r.url.startsWith('data:') && !r.url.startsWith('blob:'));
-console.log(JSON.stringify({ file: file.split(/[\\/]/).pop(), throttle, offline, marks, final: { verdicts: final?.verdicts, claims: final?.claims, refs: final?.refs, error: final?.error }, hosts, nonGet: nonGet.map((r) => `${r.method} ${r.url.slice(0, 80)}`), bodySentencesLeaked: leaks, leakSamples: probes }, null, 1));
+const passed = final?.phase === 'done' && ['done', 'unavailable'].includes(final?.claimPhase) && !final?.error && windowsChecked > 0 && !nonGet.length && !leaks;
+console.log(JSON.stringify({ passed, file: file.split(/[\\/]/).pop(), throttle, offline, marks, final: { phase: final?.phase, claimPhase: final?.claimPhase, verdicts: final?.verdicts, claims: final?.claims, refs: final?.refs, error: final?.error }, hosts, nonGet: nonGet.map((r) => `${r.method} ${r.url.slice(0, 80)}`), windowsChecked, bodySentencesLeaked: leaks, leakSamples: probes }, null, 1));
 await browser.close();
+process.exit(passed ? 0 : 1);
