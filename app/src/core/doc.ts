@@ -81,6 +81,21 @@ export function orderLines(lines: Line[], pageWidths: Map<number, number>): Line
   return out;
 }
 
+/** A superscript reference label set as its own line ("2" beside "C. Monroe, …", AIP style) belongs to that line. */
+function attachLabels(lines: Line[]): Line[] {
+  const drop = new Set<Line>();
+  const out = lines.map((l) => ({ ...l }));
+  for (const lab of out) {
+    if (!/^\s*\d{1,3}\s*$/.test(lab.text)) continue;
+    const next = out.find((m) => m !== lab && m.page === lab.page && !drop.has(m) && Math.abs(m.y - lab.y) < lab.size * 0.8 && m.x > lab.x && m.x - (lab.x + lab.w) < lab.size * 1.5 && /^\p{Lu}/u.test(m.text));
+    if (!next) continue;
+    next.text = `${lab.text.trim()}${next.text}`;
+    next.x = lab.x;
+    drop.add(lab);
+  }
+  return out.filter((l) => !drop.has(l));
+}
+
 /** Drop running headers/footers and page numbers (text repeated on many pages at the same y). */
 function dropFurniture(lines: Line[], nPages: number): Line[] {
   if (nPages < 3) return lines.filter((l) => !/^\s*\d{1,3}\s*$/.test(l.text));
@@ -101,7 +116,7 @@ function dropFurniture(lines: Line[], nPages: number): Line[] {
 const REF_HEAD = /^(?:[0-9IVX]+\.?|[A-Z]\.)?\s*(references|bibliography|works cited|literature cited|reference list|references and notes|cited literature)\s*:?\s*$/i;
 const END_HEAD = /^(?:[A-Z]|[0-9]{1,2}|[IVX]+)?(?:\.\d+)*\.?\s*(appendix|appendices|supplementary|supplemental|acknowledg(?:e)?ments?|neurips paper checklist|checklist|author contributions|funding|conflicts? of interest|ethics statement|broader impact|limitations|declaration|data availability|code availability|biograph)/i;
 
-function findReferenceRange(lines: Line[]): [number, number] | null {
+export function findReferenceRange(lines: Line[]): [number, number] | null {
   let start = -1;
   for (let i = lines.length - 1; i >= 0; i--) {
     if (REF_HEAD.test(lines[i].text.trim())) {
@@ -109,7 +124,14 @@ function findReferenceRange(lines: Line[]): [number, number] | null {
       break;
     }
   }
-  if (start < 0) return null;
+  let first = start + 1;
+  if (start < 0) {
+    // no heading (REVTeX, AIP and some APS styles omit it): a numbered list that runs to the back of the paper
+    const h = findHeadinglessStart(lines);
+    if (h < 0) return null;
+    start = h - 1;
+    first = h;
+  }
   const refSize = median(lines.slice(start + 1, start + 40).map((l) => l.size));
   let end = lines.length;
   for (let i = start + 1; i < lines.length; i++) {
@@ -125,7 +147,35 @@ function findReferenceRange(lines: Line[]): [number, number] | null {
       break;
     }
   }
-  return [start + 1, end];
+  return [first, end];
+}
+
+/** Labels of numbered reference lists: "[1]", "1. ", and AIP's label glued to the first initial ("24P. Kunert"). */
+const LABEL_RES = [/^\s*\[(\d{1,4})\]/, /^\s*(\d{1,3})\.\s/, /^\s*(\d{1,3}) ?(?=\p{Lu}\.)/u];
+
+function findHeadinglessStart(lines: Line[]): number {
+  for (const re of LABEL_RES) {
+    for (let i = lines.length - 1; i >= lines.length * 0.3; i--) {
+      const m = lines[i].text.match(re);
+      if (!m || m[1] !== '1') continue;
+      let expect = 1;
+      let hits = 1;
+      let last = i;
+      for (let j = i + 1; j < lines.length; j++) {
+        const n = Number(lines[j].text.match(re)?.[1] ?? NaN);
+        if (n > expect && n <= expect + 3) {
+          expect = n;
+          hits++;
+          last = j;
+        }
+      }
+      // a reference list, not an enumerated list in the text: several entries, most labels in sequence, years inside
+      const span = lines.slice(i, last + 1);
+      const years = span.filter((l) => /\b(?:1[89]\d\d|20[0-3]\d)\b/.test(l.text)).length;
+      if (hits >= 5 && hits >= expect * 0.7 && years >= hits * 0.5) return i;
+    }
+  }
+  return -1;
 }
 
 function median(xs: number[]): number {
@@ -137,7 +187,7 @@ function median(xs: number[]): number {
 /** Split reference-section lines into entries using labels, hanging indents or vertical gaps. */
 export function splitEntries(lines: Line[]): string[] {
   if (!lines.length) return [];
-  const numbered = lines.filter((l) => /^\s*(?:\[\d{1,4}\]|\d{1,4}\.\s|\(\d{1,4}\)\s)/.test(l.text)).length;
+  const numbered = lines.filter((l) => /^\s*(?:\[\d{1,4}\]|\d{1,4}\.\s|\(\d{1,4}\)\s|\d{1,3} ?(?=\p{Lu}\.))/u.test(l.text)).length;
   const entries: string[] = [];
   let cur = '';
   const push = () => {
@@ -152,18 +202,22 @@ export function splitEntries(lines: Line[]): string[] {
       [/^\s*\[(\d{1,4})\]/, 0],
       [/^\s*(\d{1,4})\.\s/, 0],
       [/^\s*\((\d{1,4})\)\s/, 0],
+      [/^\s*(\d{1,3}) ?(?=\p{Lu}\.)/u, 0],
     ];
     for (const s of styles) s[1] = lines.filter((l) => s[0].test(l.text)).length;
     const re = styles.sort((a, b) => b[1] - a[1])[0][0];
     let expect = 0;
+    const glued = re.flags.includes('u'); // AIP: the label touches the first initial, so it must be removed
     for (const l of lines) {
       const m = l.text.match(re);
       const n = m ? parseInt(m[1], 10) : -1;
+      let text = l.text;
       if (m && (expect === 0 || n === expect + 1 || (n > expect && n <= expect + 3))) {
         if (cur) push();
         expect = n;
+        if (glued) text = text.replace(re, '');
       }
-      cur = join(cur, l.text.trim());
+      cur = join(cur, text.trim());
     }
     push();
     return entries;
@@ -410,7 +464,7 @@ function keepReferenceLike(entries: string[]): string[] {
 
 export function buildDoc(linesIn: Line[], pageWidths: Map<number, number>): Doc {
   const nPages = new Set(linesIn.map((l) => l.page)).size;
-  const lines = orderLines(dropFurniture(linesIn, nPages), pageWidths);
+  const lines = orderLines(dropFurniture(attachLabels(linesIn), nPages), pageWidths);
   const range = findReferenceRange(lines);
   const bodyLines = range ? lines.slice(0, range[0] - 1) : lines;
   const refLines = range ? lines.slice(range[0], range[1]) : [];
