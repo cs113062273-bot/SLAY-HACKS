@@ -51,8 +51,8 @@ Source: slayy-hacks.devpost.com (rules and overview, rechecked 2026-11-20).
 - [x] Zenodo F1 .971; HALLMARK dev 310 rows F1 .986, FPR 0.
 - [x] Frozen set-2 results and sampled misses disclosed; historical test results distinguished from current regressions.
 - [x] Production URL responds; build and deployment succeeded for freeze 497cb22.
-- [ ] Fresh-profile five-input E2E passes on production.
-- [x] Production privacy audit passes on DOCX (3 refs, 2 claims, 5 body windows); scope in VALIDATION.md.
+- [x] Fresh-profile five-input E2E passes on final production 07f4f4a, without sample snapshots.
+- [x] Final-version production privacy audit passes on DOCX (3 refs, 2 claim tasks, 5 body windows); scope and unavailable source in VALIDATION.md.
 - [ ] Independent set 3 selected at a frozen commit, run after free allowance reset, and all flags/miss/field samples reviewed.
 - [ ] False alarms ≤2%, extraction completeness ≥95%, with useful coverage retained.
 - [ ] Final score supported by those results. A 95/100 readiness claim is not justified while these gates are pending.

@@ -14,6 +14,7 @@ A free citation-integrity audit that runs in your browser. It catches fabricated
 - **Live demo:** https://cs113062273-bot.github.io/SLAY-HACKS/. No account, no install, no API key. Click a sample on the right, or drop in a PDF, Word file, BibTeX file or arXiv ID.
 - **Source:** https://github.com/cs113062273-bot/SLAY-HACKS
 - Best on a desktop Chrome, Edge or Firefox. The first full audit downloads 136 MB of models once; **Quick check** skips it.
+- For a fast first check, choose **Reference list with planted errors**. Choose **Attention Is All You Need**, then **Check claim support**, to inspect the local AI and its evidence; the first full audit can take several minutes.
 
 ---
 
@@ -40,7 +41,7 @@ There are two modes: **Quick check** (references only) and **Full audit** (refer
 
 ## How we built it
 
-- **Fully client-side.** A static React 19 + TypeScript site (Vite). There is no server, database or account. The same TypeScript core runs in Node for our benchmarks, so the numbers we report come from the shipped code.
+- **Fully client-side.** A static React 19 + TypeScript site (Vite). There is no server, database or account. Browser and Node evaluations share the same TypeScript core; frozen commits and separate current regressions make the results reproducible.
 - **PDF understanding.** pdf.js text runs are rebuilt into lines with column-gutter detection, rotated-text filtering and running-header removal. A reference parser handles numbered, author–year, Vancouver, Springer and economics styles, hyphenated initials and DOIs broken across lines.
 - **Resolution and verification.** Tiered lookups start with identifiers and Crossref, then move to rate-limited indexes only when needed. Each candidate record is aligned back onto the raw reference string, field by field, and the record that agrees with the most cited fields wins. Per-host concurrency, backoff, `Retry-After`, a circuit breaker and IndexedDB caching keep it inside every free tier.
 - **Claim support model.** We started from DeBERTa-v3-base (NLI) and fine-tuned it on Citation-Integrity and SciFact, with the number of evidence passages randomised so that short abstracts don't break it. We then pruned the vocabulary (128k → 45k pieces) and applied 4-bit weight-only quantization: 102 MB, with dev accuracy unchanged. It runs in ONNX Runtime WebAssembly, multi-threaded through a small cross-origin-isolation service worker. No GPU is needed.
@@ -52,7 +53,7 @@ There are two modes: **Quick check** (references only) and **Full audit** (refer
 | Benchmark | Veracite | Best comparison |
 |---|---|---|
 | 104 hand-verified references (Badalova & Mayr 2026) | **F1 .971**, 2 of 71 genuine references flagged | Hallucinator F1 .644 (28 of 71 flagged) |
-| HALLMARK v1.2 test, 825 citations, held out | **F1 .959**, no LLM | Claude Sonnet 4.6 alone .916; paid agent cascade .986 |
+| HALLMARK v1.2 test, 825 citations, historical held-out run | **F1 .959**, no LLM | Claude Sonnet 4.6 alone .916; paid agent cascade .986 |
 | Citation-Integrity claim support, test split | macro-F1 .486, micro .634, in the browser | MultiVerS (GPU) .52 / .59; GPT-4 .45 / .65 |
 | Blind test 1: 14 new papers from 14 fields, code frozen, every flag checked by hand | 635 references: 80% confirmed, 5 real errors found, **86 false alarms (13.5% of references)**, 0 misses in a random sample of 42 | n/a (no published tool has been run on these papers) |
 | Blind test 2: 14 more papers from 12 further fields, after the fixes | 465 references: 77.8% verified, 7 real errors, 54 false alarms (11.6% of references), 2 uncertain flags; 0/41 sampled misses | n/a |

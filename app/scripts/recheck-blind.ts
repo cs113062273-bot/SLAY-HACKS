@@ -87,6 +87,8 @@ for (const p of frozen.papers) {
     const r = res[i];
     out.push(`  NEW FLAG [${i + 1}] ${r.verdict}  ${doc.rawReferences[i].slice(0, 200)}\n      ${r.issues.join(' | ').slice(0, 260)}\n      rec: ${r.match ? `${r.match.title} / ${r.match.authors.slice(0, 4).map((a) => a.family).join(', ')} / ${r.match.years.join('/')} / ${r.match.venue ?? ''} / ${r.match.doi ?? ''}` : '-'}`);
   }
+  console.log(`${B}: completed ${p.file}, ${res.length} refs, ${flaggedNow.size} flags`);
+  writeFileSync(`${root}${B}/recheck-progress.json`, JSON.stringify({ completedThrough: p.file, tally }, null, 2));
 }
 const summary = `\n${B} re-check with the current core: refs ${tally.refs}, flags now ${tally.flagsNow}; judged false alarms fixed ${tally.oldFalseGone}/${tally.oldFalse}; judged real errors still flagged ${tally.oldRealKept}/${tally.oldReal}; uncertain still flagged ${tally.oldUncertainKept}/${tally.oldUncertain}; new flags to judge ${tally.newFlags}`;
 console.log(out.join('\n') + summary);

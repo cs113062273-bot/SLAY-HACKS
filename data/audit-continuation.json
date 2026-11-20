@@ -1,0 +1,20 @@
+{
+  "observedAt": "2026-11-20T15:49:43.950551+00:00",
+  "testedProductCommit": "07f4f4a",
+  "referenceFreezeCommit": "497cb22379ea0c1f55a0e13dbc0f57c7d12e754e",
+  "selectedPapersSoFar": 10,
+  "selectionComplete": false,
+  "selectionWorktree": "C:\\Users\\c9408\\Desktop\\SLAY HACKS\\.runs\\blind3",
+  "selectionProcessObserved": 26160,
+  "selectionSession": "61187",
+  "recheckProcessObserved": 8996,
+  "recheckSession": "45983",
+  "outputs": [
+    "data/blind3/selection.log",
+    "data/blind3/run.log",
+    "data/blind3/allowance.jsonl",
+    "data/blind/recheck-freeze.txt",
+    "data/blind2/recheck-freeze.txt"
+  ],
+  "instructions": "Inspect actual process command lines and result files before restarting. Selector continues into the free-allowance waiter and then one frozen run; manual reviews remain required. Recheck session runs set1 then set2."
+}

@@ -1,0 +1,38 @@
+{
+ "passed": true,
+ "file": "test.docx",
+ "throttle": 0,
+ "offline": false,
+ "marks": {
+  "parsed": 1.033,
+  "model": 17.167,
+  "refs": 41.432,
+  "claimsStart": 185.838,
+  "claims": 192.925
+ },
+ "final": {
+  "phase": "done",
+  "claimPhase": "done",
+  "verdicts": {
+   "verified": 2,
+   "unchecked": 1
+  },
+  "claims": {
+   "supported": 1,
+   "no_source": 1
+  },
+  "refs": 3
+ },
+ "hosts": {
+  "cs113062273-bot.github.io": 41,
+  "api.crossref.org": 9,
+  "api.semanticscholar.org": 17,
+  "api.openalex.org": 1,
+  "www.ebi.ac.uk": 2,
+  "arxiv.org": 1
+ },
+ "nonGet": [],
+ "windowsChecked": 5,
+ "bodySentencesLeaked": 0,
+ "leakSamples": []
+}

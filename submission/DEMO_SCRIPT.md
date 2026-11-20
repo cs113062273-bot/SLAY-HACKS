@@ -19,11 +19,11 @@ Setup before recording:
 | 1:30–2:10 | Open the **Claims** tab. Click a **Supported** claim: citing sentence on top, highlighted evidence passages below. Then click a **Needs review** claim. | "Existence is only half the problem. A real paper can be cited for something it never said. For every citing sentence, Veracite retrieves the most relevant passages of the cited work and a fine-tuned verifier, running locally, judges whether they support the claim. It always shows the passages, and it only gives a verdict where the model was reliable on held-out data." |
 | 2:10–2:25 | New audit → **Quick check** → drag the PDF onto the drop zone. Results appear; point at the **Check claim support** button. | "In a hurry? Quick check verifies the references without downloading any models and keeps claim support one click away." |
 | 2:25–2:42 | Scroll to the benchmark section of the landing page. | "We measured all of this on public benchmarks. On the 104 references the five leading tools were tested on, Veracite reaches an F1 of 0.97; the best of them, 0.64. On the held-out HALLMARK test set it is the strongest system that needs no paid language model." |
-| 2:42–2:50 | Footer: "Runs locally. Only reference strings are sent to public scholarly indexes." Then the URL. | "Your paper never leaves your computer. Veracite is free and open source. Try it before you submit." |
+| 2:42–2:50 | Footer: "Runs locally. Only reference strings are sent to public scholarly indexes." Then the URL. | "Your paper never leaves your computer. Veracite is free, with source code on GitHub. Try it before you submit." |
 
 Cut list (if over time): drop 2:10–2:25 first, then shorten 0:12–0:28 to one statistic.
 
 On-screen text overlays (small, bottom left):
 - 0:40 "Samples replay recorded index responses. Uploads use live lookups."
 - 1:30 "Verifier: DeBERTa-v3, 4-bit, 102 MB, WebAssembly"
-- 2:25 "Sources: Badalova & Mayr 2026; Reizinger et al. 2026"
+- 2:25 "Sources: Badalova & Mayr 2026; Reizinger et al. 2026. HALLMARK: historical frozen run."
