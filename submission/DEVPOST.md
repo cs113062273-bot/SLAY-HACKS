@@ -54,25 +54,26 @@ There are two modes: **Quick check** (references only, results in seconds) and *
 | 104 hand-verified references (Badalova & Mayr 2026) | **F1 .971**, 2 of 71 genuine references flagged | Hallucinator F1 .644 (28 of 71 flagged) |
 | HALLMARK v1.2 test, 825 citations, held out | **F1 .959**, no LLM | Claude Sonnet 4.6 alone .916; paid agent cascade .986 |
 | Citation-Integrity claim support, test split | macro-F1 .486, micro .634, in the browser | MultiVerS (GPU) .52 / .59; GPT-4 .45 / .65 |
-| Blind test: {{BLIND_N}} new papers from {{BLIND_FIELDS}} fields, code frozen | {{BLIND_SUMMARY}} | n/a |
+| Blind test 1: 14 new papers from 14 fields, code frozen, every flag checked by hand | 635 references: 80% confirmed, 5 real errors found, **86 false alarms (13.5% of references)**, 0 misses in a random sample of 42 | n/a (no published tool has been run on these papers) |
+| Blind test 2: 14 more papers from 12 further fields, after the fixes | {{BLIND2_SUMMARY}} | n/a |
 
 ## Challenges we ran into
 
-- **False alarms are the real enemy.** Our first run on six unseen papers flagged 95 references, and only 5 were real errors. Most of the rest came from reference styles we had never seen, from books matched to reviews of those books, and from conference papers indexed only as their later journal version. After general fixes, re-checked against both benchmarks each time, the same papers produce 7 flags, 6 of them real errors.
+- **False alarms are the real enemy, and benchmarks hide them.** Our first run on six unseen papers flagged 95 references, and only 5 were real errors. After general fixes, the same papers produced 7 flags, 6 of them real. Then we froze the code and ran a blind test on 14 brand-new papers from 14 fields, chosen by a rule fixed before we opened any of them: 92 flags, only 5 real. Our fixes had fitted the papers we had seen. Almost every false alarm was a parsing problem, not a lookup problem: words of a title read as author names, a year glued onto a title, symbols lost in PDF text, a DOI split across lines, and references that were not found while two free indexes were rate-limiting us. Four physics PDFs gave no reference list at all, because REVTeX prints none of the usual headings. We fixed each class with a general rule, confirmed that no benchmark moved, and picked a second blind set before running anything on it. {{BLIND2_SENTENCE}}
 - **Free APIs fail in interesting ways.** Crossref's throttle responses carry no CORS headers, so they look like network errors. OpenAlex's anonymous allowance is a daily dollar budget. A service-worker reload on first visit interrupted IndexedDB and made every lookup hang. Each one is now handled, and a reference whose indexes did not answer is shown as *unchecked*, never as fabricated.
 - **Shrinking a 700 MB model to run in a browser tab.** Dynamic int8 quantization destroyed DeBERTa (macro-F1 .49 → .11), because it quantizes activations inside the disentangled attention. 4-bit weight-only quantization kept accuracy intact.
 - **Being honest with ourselves.** A retrained verifier looked clearly better on our dev set (+.10 macro-F1, statistically significant). It was worse on the two held-out sets, so we withdrew it, and the README documents that episode.
 
 ## Accomplishments that we're proud of
 
-- The lowest false-alarm rate on the public reference benchmark: 2 genuine references flagged out of 71, where the published tools flag 20 to 53.
+- The lowest false-alarm rate on the public reference benchmark: 2 genuine references flagged out of 71, where the published tools flag 20 to 53. On brand-new papers the rate was much higher (13.5% of references in blind test 1), and we publish that number with every flag and our judgement of it.
 - The strongest system without a paid LLM on the held-out HALLMARK test, ahead of every LLM evaluated on its own.
 - Claim checking with evidence, running privately on the reader's own laptop.
 - A privacy audit that records every request the page makes: only GET requests and only bibliographic strings. No sentence of the document body appears in any request.
 
 ## What we learned
 
-Precision matters more than recall for a tool like this: one wrong accusation costs more trust than one missed typo. The hardest part of citation checking is not search but deciding *when two records are the same work*. And a small dev set stops predicting held-out results sooner than you expect.
+Precision matters more than recall for a tool like this: one wrong accusation costs more trust than one missed typo. The hardest part of citation checking is not search but deciding *when two records are the same work*, and before that, reading the reference correctly out of a PDF. A small dev set stops predicting held-out results sooner than you expect, and only a frozen blind test on papers nobody has looked at tells you how the tool behaves for a stranger.
 
 ## What's next
 
@@ -84,6 +85,8 @@ Precision matters more than recall for a tool like this: one wrong accusation co
 ## Limitations (disclosed)
 
 - Claim support is weakest on subtle misrepresentation ("not substantiated"), a class where GPT-4 also fails. That is why the interface never states that verdict.
+- False alarms on new papers: in blind test 1 (before the fixes), 86 of 635 references (13.5%) were flagged although they were correct. Each flag shows the record it was compared with and the fields that differ, so a reader can dismiss a false alarm quickly, but it is still a false alarm.
+- Papers that cite with superscript numbers (common in AIP physics journals) get reference checks but no claim checks.
 - Coverage depends on public indexes. Archival, regional and very old literature is often *unverifiable*, and is reported that way.
 - Sample papers replay index responses recorded on 2026-11-19 so the demo is fast and repeatable. Uploaded papers are always checked live.
 - The verifier was trained on SciFact (CC BY-NC 2.0), so the model is for non-commercial use.

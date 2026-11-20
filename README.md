@@ -31,6 +31,8 @@ Existing checkers test whether a title exists. On a public benchmark of 104 manu
 
 ## Results
 
+In short: on the two public reference benchmarks Veracite has the fewest false alarms of the free tools evaluated. On 14 brand-new papers in a frozen blind test, though, 13.5% of correct references were flagged, mostly through PDF parsing problems that the benchmarks (which supply clean reference strings) never exercise. Those causes have since been fixed with general rules, and a second blind set is being used to measure the result. All numbers below come from the shipped code and can be reproduced.
+
 ### Reference verification: same 104 references the five leading tools were evaluated on
 
 Badalova & Mayr (2026), Zenodo [10.5281/zenodo.21457492](https://doi.org/10.5281/zenodo.21457492). 33 problematic, 71 verified.
@@ -63,7 +65,42 @@ Veracite is the strongest system that needs no paid LLM, and it beats every LLM 
 
 Per type: perfect on fabricated DOIs, future dates, hybrid fabrications, merged citations, placeholder authors, plausible fabrications and preprint-as-published. Weakest on nonexistent venues (26/37) and near-miss titles (34/40). Reproduce: `cd app && npx tsx scripts/bench-hallmark.ts --split test_public`.
 
-### Unseen papers from six fields
+### Blind test: 14 new papers from 14 fields, code frozen
+
+The benchmarks above were used, at least in part, while the code was being developed. To measure what a stranger would see, 14 papers were chosen by a rule fixed in code before any of them was opened (`app/scripts/pick-blind.ts`: the newest paper in each of 12 arXiv categories never used during development, plus the two newest PLOS ONE research articles). They were audited once, from the PDF, with the code frozen (commit `15daf9d`; reference-checking code identical to `79fa273`). Every flag, and a random sample of confirmed references, was then checked by hand against the publisher's record.
+
+| | Blind test 1 |
+|---|---|
+| Fields | cs.CL, cs.CV, cs.SE, cs.HC, astro-ph.GA, cond-mat.mtrl-sci, quant-ph, math.PR, q-bio.NC, eess.SP, econ.EM, stat.ME, PLOS ONE ×2 (psychology, public health) |
+| PDFs tried / reference list extracted | 18 / 14. Four physics PDFs (REVTeX/AIP) gave no references and were replaced by the next paper, as the rule specifies |
+| References | 635 |
+| Confirmed (coverage) | 506 (79.7%) |
+| Flagged as a problem | 92 (14.5%) |
+| of which real citation errors | 5, plus 1 uncertain |
+| of which false alarms | **86 (13.5% of all references)** |
+| *Unverifiable* (not indexed: web pages, datasets, legal texts) | 24 (3.8%) |
+| *Unchecked* (an index did not answer) | 13 (2.0%) |
+| Misses: errors among 42 randomly sampled confirmed references | 0 (95% upper bound about 7%) |
+| Time per paper, live, no cache | median 101 s (24 s to 16 min); six papers ran at once against rate-limited free APIs |
+
+This is much worse than the benchmark results, and it is the honest number for real-world false alarms before the fixes below. The five real errors were a wrong year, an author list that names the wrong people, two authors dropped without "et al.", a title that is not the official one and a title that differs from its arXiv record (the last two were labelled more severely than they deserve). The 86 false alarms were almost all parsing problems, not lookup problems:
+
+| Cause | False alarms |
+|---|---|
+| Words of the title or venue, or "arXiv", read as author names | 29 |
+| PDF text artefacts: lost symbols (τ, CO₂, R̂), accents, hyphenation, a title cut at "?" | 12 |
+| A year glued onto the title | 9 |
+| The work exists but was not found (six while Semantic Scholar and OpenAlex were rate-limiting; three not indexed) | 9 |
+| The index record differs harmlessly (an arXiv version title, a 3rd edition matched to the 1st, translators listed as authors, a misspelt 1944 record, an arXiv year for a journal paper) | 6 |
+| Venue mis-parsed (5) or abbreviated (3) | 8 |
+| AAS astronomy style, two-column text mixed into one reference | 6 |
+| Other (a year in the title read as the publication year, a DOI split across lines, two wrong matches, a truncated entry) | 7 |
+
+Two real papers (Lewis et al. 2020 on retrieval-augmented generation, and the GDPR) were labelled *fabricated* while an index was down. Crossref answered HTTP 429 963 times and Semantic Scholar 412 times during the run, because six papers ran at once; a single user checking one paper causes far fewer. Every flag, with the record it was compared with and our judgement, is in `data/blind/results.json`; the miss sample is `data/blind/miss_sample.txt`. Reproduce with `cd app && npx tsx scripts/blind-test.ts`.
+
+**After blind test 1.** Each failure class was fixed with a general rule (commits `3f1aad6` and `532c978`): parsing debris is no longer counted as an author; years glued onto titles, text that runs past the title, symbols lost in extraction and a title cut at "?" no longer count as title changes; a DOI that the matched record's DOI extends is treated as cut off; a "wrong identifier" is not reported when the record's full title is written in the reference; journal abbreviations of words such as "Association" are recognised; *fabricated* now requires both broad indexes (Semantic Scholar and OpenAlex) to have answered, otherwise the reference is *not found* or *unchecked*; and reference lists without a heading (REVTeX, AIP) are now found. None of this changed any benchmark result (Zenodo F1 .971, HALLMARK dev F1 .986, identical flags on the 11 development papers). The heading-less lists were fixed using only the four failed PDFs of blind test 1. As an independent check, the seven PDFs that blind set 2 had to skip for the same reason (never opened before) were parsed once after the fix: all seven now yield their reference lists (15 to 58 references each). Blind test 1 itself cannot measure the fixes, because it was used to find the problems. A second blind set (14 papers from 12 further fields, selected before anything was run on it: `data/blind2/manifest.json`) {{BLIND2_README}}
+
+### Development papers from six fields
 
 To check behaviour on papers the code had never seen, six arXiv preprints posted after development started were audited end to end from the PDF (cs.CY, econ.GN, physics.soc-ph, q-bio.PE, q-fin.GN, stat.AP; numeric and author-year styles, 17 to 85 pages, 351 references in total). Every flag was judged by hand against the publisher's record.
 
@@ -144,7 +181,7 @@ Measured with `app/scripts/mode-e2e.ts` on the *Attention Is All You Need* sampl
 | Full audit, fresh profile (cold) | 3.4 s | 84 s | 261 s |
 | Full audit, same profile (warm: models and cited full texts cached) | 2.2 s | | 136 s |
 
-The sample replays recorded index responses (see above). A live paper's reference check depends on how fast the indexes respond; the blind test reports live, uncached times. With Chrome's CPU throttled 4×, a stand-in for a low-end laptop, 30 references took 98 s and 32 claim checks took 7.8 minutes. Claim checks run one after another on the CPU, at about 2.4 s each on this laptop when warm. The labels were identical in all three runs.
+The sample replays recorded index responses (see above). A live paper's reference check depends on how fast the indexes respond: in blind test 1 (live, no cache, six papers at once against rate-limited free APIs) a paper took a median 101 s, from 24 s for 13 references to 16 minutes for 90 references under heavy Crossref throttling. References appear one by one as they are checked, so the first results show within seconds. With Chrome's CPU throttled 4×, a stand-in for a low-end laptop, 30 references took 98 s and 32 claim checks took 7.8 minutes. Claim checks run one after another on the CPU, at about 2.4 s each on this laptop when warm. The labels were identical in all three runs.
 
 ## Run locally
 
