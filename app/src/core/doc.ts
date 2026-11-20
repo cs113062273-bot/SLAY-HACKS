@@ -286,7 +286,11 @@ export function splitEntries(lines: Line[]): string[] {
   const margin = new Map<string, number>();
   for (const [k, ls] of byCol) margin.set(k, Math.min(...ls.map((l) => l.x)));
   const indented = lines.filter((l) => l.x - margin.get(`${l.page}:${l.col ?? 0}`)! > l.size * 0.6).length;
-  const hanging = indented > lines.length * 0.2;
+  // hanging indents; when most entries fit on one line few lines are indented, so also accept a layout whose
+  // unindented lines nearly all begin like an entry ("Benz, A. O. 2017, …")
+  const flush = lines.filter((l) => l.x - margin.get(`${l.page}:${l.col ?? 0}`)! <= l.size * 0.6);
+  const entryLike = flush.filter((l) => AY_START.test(l.text)).length;
+  const hanging = indented > lines.length * 0.2 || (indented >= 2 && flush.length >= 5 && entryLike >= flush.length * 0.8);
   const gaps: number[] = [];
   for (let i = 1; i < lines.length; i++) if (lines[i].page === lines[i - 1].page && lines[i].col === lines[i - 1].col) gaps.push(lines[i].y - lines[i - 1].y);
   const g = median(gaps);
