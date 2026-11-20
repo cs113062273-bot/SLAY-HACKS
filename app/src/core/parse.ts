@@ -316,7 +316,9 @@ export function parseReference(input: string): ParsedRef {
   // (b) APA / Harvard: Authors (2020). Title. Venue
   if (!title) {
     const apa = body.match(/^(.{2,1500}?)\s*\(\s*(?:1[89]\d\d|20[0-3]\d|n\.\s?d\.)[a-z]?(?:,\s*[^)]{0,40})?\)\s*[.,:]?\s*(.+)$/);
-    if (apa) {
+    // not when the "authors" already hold an ACM-style year ("Shazeer. 2020. Title. arXiv:… (2020).") or
+    // nothing worded follows the parenthesised year: that year closes the reference, it does not follow the authors
+    if (apa && !/\.\s(?:1[89]\d\d|20[0-3]\d)[a-z]?\.\s/.test(apa[1]) && /\p{L}{3}/u.test(apa[2])) {
       authorsText = apa[1];
       const segs = segments(apa[2]);
       title = segs[0];

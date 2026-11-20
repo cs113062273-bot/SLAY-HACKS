@@ -23,9 +23,9 @@ for cat in $CATS; do
     f="${cat}_${id}.pdf"; grep -q "^$f" "$TRUTH" && { n=$((n+1)); continue; }
     rm -rf "$TMP"/*; get "https://arxiv.org/e-print/$id" "$TMP/src" || continue; sleep 5
     ( cd "$TMP" && (tar -xzf src 2>/dev/null || (gzip -dc src > main.tex 2>/dev/null)) )
-    bb=$(find "$TMP" -name '*.bbl' | head -5)
+    bb=$(find "$TMP" -name '*.bbl' | head -1)
     [ -z "$bb" ] && continue   # no .bbl in source: no ground truth, skip
-    k=$(cat $bb | grep -c -E '\bibitem|\entry\{')
+    k=$(grep -c -F -e '\bibitem' -e '\entry{' "$bb")
     [ "$k" -lt 5 ] && continue
     get "https://arxiv.org/pdf/$id" "$OUT/$f" || continue; sleep 5
     printf '%s\t%s\t%s\t%s\n' "$f" "$cat" "$id" "$k" >> "$TRUTH"; echo "$f $k"; n=$((n+1))
