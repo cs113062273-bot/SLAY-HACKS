@@ -160,7 +160,7 @@ export function parseAuthors(text: string): { authors: Person[]; etAl: boolean }
   let t = text.trim();
   const etAl = /\bet\.?\s*al\b|\bal\.?,?\s*et\b|\band (?:others|coauthors)\b|\.\.\.|…/i.test(t);
   t = t
-    .replace(/\(eds?\.?\)|\beds?\.\s*$/gi, '')
+    .replace(/\(eds?\.?\)|\beds?\.\s*$|,?\s*\beditors?\.?\s*$/gi, '')
     .replace(/,?\s*(?:and\s+|&\s*)?(?:et\.?\s*al\.?|al\.?,?\s*et\.?),?/gi, ',') // keep the separator: "Doe, K., et al., Lee, M."
     .replace(/,?\s*\band (?:others|coauthors)\b|…|\.\.\./gi, '') // AMS: "Irbah, A., and Coauthors"
     .replace(/^\s*(?:by)\s+/i, '')
@@ -482,6 +482,7 @@ export function parseReference(input: string): ParsedRef {
       .replace(/[.,;:\s]+$/, '')
       .replace(/\s*\[[^\]]*\]\s*$/, '') // translated title / medium in brackets
       .replace(/,?\s*in these proceedings$|,?\s*\(?this volume\)?$/i, '')
+      .replace(/,\s*(?:1[89]|20)\d\d[a-z]?$/, '') // numbered styles: "Title, 2022. URL …"
       .replace(/,\s*volume\s+\d+\s+of\s+.+$/i, '') // "Title, volume 99 of Series"
       .replace(/\s*\((?:no\.|vol\.|volume|[^()]*\beds?\.)[^()]*\)\s*$/i, '') // "(No. 137)", "(Vol. 26, …)", "(J. B. Carroll, Ed.)"
       .replace(/,?\s*\(?(?:\d+(?:st|nd|rd|th)|second|third|fourth|revised)\s+(?:edn|ed|edition)\.?\)?$/i, '') // "2nd edn"
