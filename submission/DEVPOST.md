@@ -13,7 +13,7 @@ A free citation-integrity audit that runs in your browser. It catches fabricated
 ## Try it
 - **Live demo:** https://cs113062273-bot.github.io/SLAY-HACKS/. No account, no install, no API key. Click a sample on the right, or drop in a PDF, Word file, BibTeX file or arXiv ID.
 - **Source:** https://github.com/cs113062273-bot/SLAY-HACKS
-- Best on a desktop Chrome, Edge or Firefox. The first full audit downloads 136 MB of models once; **Quick check** skips it.
+- Validated on desktop Chrome. The first full audit downloads 136 MB of models once; **Quick check** skips it.
 - For a fast first check, choose **Reference list with planted errors**. Choose **Attention Is All You Need**, then **Check claim support**, to inspect the local AI and its evidence; the first full audit can take several minutes.
 
 ---
@@ -46,7 +46,7 @@ There are two modes: **Quick check** (references only) and **Full audit** (refer
 - **Resolution and verification.** Tiered lookups start with identifiers and Crossref, then move to rate-limited indexes only when needed. Each candidate record is aligned back onto the raw reference string, field by field, and the record that agrees with the most cited fields wins. Per-host concurrency, backoff, `Retry-After`, a circuit breaker and IndexedDB caching keep it inside every free tier.
 - **Claim support model.** We started from DeBERTa-v3-base (NLI) and fine-tuned it on Citation-Integrity and SciFact, with the number of evidence passages randomised so that short abstracts don't break it. We then pruned the vocabulary (128k → 45k pieces) and applied 4-bit weight-only quantization: 102 MB, with dev accuracy unchanged. It runs in ONNX Runtime WebAssembly, multi-threaded through a small cross-origin-isolation service worker. No GPU is needed.
 - **Evidence retrieval.** BM25 plus e5-small-v2 embeddings, combined with reciprocal rank fusion, over the abstract or the open-access full text. On Citation-Integrity dev it reaches R@5 .36, against .31 for the paper's BM25 + MonoT5.
-- **Calibrated output.** The model's "not accurate" class alone is close to chance, so the interface never shows it as a verdict. Instead, thresholds were set on held-out data: *Supported* at P(accurate) ≥ .5 (precision .93 on SemanticCite across 8 fields) and *Needs review* at P(not accurate or unrelated) ≥ .98. Every other claim is labelled *Inconclusive*, and the evidence is still shown.
+- **Calibrated output.** The model's "not accurate" class alone is close to chance, so the interface never shows it as a verdict. Thresholds were set using Citation-Integrity dev and SemanticCite: *Supported* at P(accurate) ≥ .5 (calibration precision .93 on SemanticCite across 8 fields) and *Needs review* at P(not accurate or unrelated) ≥ .98. SemanticCite also informed model selection, so this is not an independent new-paper estimate. Every other claim is labelled *Inconclusive*, and the evidence is still shown.
 
 ## Results (all reproducible from the repository)
 
@@ -63,14 +63,14 @@ There are two modes: **Quick check** (references only) and **Full audit** (refer
 - **False alarms are the real enemy, and benchmarks hide them.** Our first run on six unseen papers flagged 95 references, and only 5 were real errors. After general fixes, the same papers produced 7 flags, 6 of them real. Then we froze the code and ran a blind test on 14 brand-new papers from 14 fields, chosen by a rule fixed before we opened any of them: 92 flags; after correcting one mistaken manual label, 4 are labelled real. Our fixes had fitted the papers we had seen. Almost every false alarm was a parsing problem, not a lookup problem: words of a title read as author names, a year glued onto a title, symbols lost in PDF text, a DOI split across lines, and references that were not found while two free indexes were rate-limiting us. Four physics PDFs gave no reference list at all, because REVTeX prints none of the usual headings. We fixed each class with a general rule, confirmed that no benchmark moved, and picked a second blind set before running anything on it. The second frozen run still produced 54 false alarms among 465 references (11.6%). Later fixes are development work; a third frozen audit will measure them independently.
 - **Free APIs fail in interesting ways.** Crossref's throttle responses carry no CORS headers, so they look like network errors. OpenAlex's anonymous allowance is a daily dollar budget. A service-worker reload on first visit interrupted IndexedDB and made every lookup hang. Each one is now handled, and a reference whose indexes did not answer is shown as *unchecked*, never as fabricated.
 - **Shrinking a 700 MB model to run in a browser tab.** Dynamic int8 quantization destroyed DeBERTa (macro-F1 .49 → .11), because it quantizes activations inside the disentangled attention. 4-bit weight-only quantization kept accuracy intact.
-- **Being honest with ourselves.** A retrained verifier looked clearly better on our dev set (+.10 macro-F1, statistically significant). It was worse on the two held-out sets, so we withdrew it, and the README documents that episode.
+- **Being honest with ourselves.** A retrained verifier looked clearly better on our dev set (+.10 macro-F1, statistically significant), but failed our preset cross-field selection rule. We briefly shipped it and also scored the test split, where it was worse. We restored the model required by the original selection rule and disclose the extra test exposure in the README. No further model selection uses that test.
 
 ## Accomplishments that we're proud of
 
 - The lowest false-alarm rate on the public reference benchmark: 2 genuine references flagged out of 71, where the published tools flag 20 to 53. On brand-new papers the rate was much higher (13.7% of references in blind test 1), and we publish that number with every flag and our judgement of it.
 - The strongest system without a paid LLM on the held-out HALLMARK test, ahead of every LLM evaluated on its own.
 - Claim checking with evidence, running privately on the reader's own laptop.
-- A privacy audit that records every request the page makes: only GET requests and only bibliographic strings. No sentence of the document body appears in any request.
+- A production privacy audit of a three-reference DOCX with two claim tasks: zero non-GET requests and no matches for five contiguous seven-word body windows in observed requests. Bibliographic metadata reaches public indexes; the audit's scope is documented in `VALIDATION.md`.
 
 ## What we learned
 

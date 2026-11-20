@@ -14,7 +14,7 @@ Large language models invent references, and the invented ones survive review:
 - 100 fabricated citations appeared in 53 papers accepted at NeurIPS 2025, each paper reviewed by 3–5 experts (GPTZero; Ansari, arXiv:2602.05930). Every one combined several deceptions, such as a plausible title with real authors, or a valid arXiv ID pointing to a different paper.
 - 39% of citations in an annotated biomedical corpus contained accuracy errors, from oversimplification to outright contradiction (Sarol et al., *Bioinformatics* 2024).
 
-Existing checkers test whether a title exists. On a public benchmark of 104 manually verified references, the five leading tools falsely flag 20 to 53 of the 71 genuine references (Badalova & Mayr, arXiv:2607.22693). None of them checks whether the cited work says what the citing sentence claims.
+Existing checkers test whether a title exists. On a public benchmark of 104 manually verified references, the five checkers evaluated in that study falsely flag 20 to 53 of the 71 genuine references (Badalova & Mayr, arXiv:2607.22693). None of them checks whether the cited work says what the citing sentence claims.
 
 ## What Veracite does
 
@@ -33,7 +33,7 @@ Existing checkers test whether a title exists. On a public benchmark of 104 manu
 
 ## Results
 
-On the public reference benchmarks, Veracite outperformed the evaluated free baselines. Frozen end-to-end PDF audits were weaker: false alarms were 87/635 references (13.7%) in set 1 and 54/465 (11.6%) in set 2. Those errors informed later fixes, so neither set now independently evaluates the current parser. A third audit is pre-registered in `data/blind3/PROTOCOL.md`. Benchmark provenance matters: Zenodo and HALLMARK dev were rechecked on the current core; HALLMARK test .959 is a historical held-out run, and claim-model results concern the retained model described below.
+On the public reference benchmarks, Veracite outperformed the evaluated free baselines. Frozen end-to-end PDF audits were weaker: false alarms were 87/635 references (13.7%) in set 1 and 54/465 (11.6%) in set 2. Those errors informed later fixes, so neither set now independently evaluates the current parser. A third audit is pre-registered in `data/blind3/PROTOCOL.md`: selection at `497cb22` is preserved, with a bounded spent/dev-only pre-run amendment and separate audit freeze `3e47ac9`. Its 14 selected papers await the free allowance; no quality result is available yet. Benchmark provenance matters: Zenodo and HALLMARK dev were rechecked on the current core; HALLMARK test .959 is a historical held-out run, and claim-model results concern the retained model described below.
 
 ### Reference verification: same 104 references the five leading tools were evaluated on
 
@@ -65,7 +65,7 @@ HALLMARK (Reizinger et al., arXiv:2607.18360) has 825 test citations: 526 halluc
 
 Among these evaluated systems, the historical Veracite run has the highest F1 without a paid LLM and exceeds each standalone LLM result. One paid agentic cascade scores higher. During this run, OpenAlex's free daily allowance was exhausted, so Veracite ran with one index fewer than usual.
 
-Per type: perfect on fabricated DOIs, future dates, hybrid fabrications, merged citations, placeholder authors, plausible fabrications and preprint-as-published. Weakest on nonexistent venues (26/37) and near-miss titles (34/40). Reproduce: `cd app && npx tsx scripts/bench-hallmark.ts --split test_public`.
+Per type: perfect on fabricated DOIs, future dates, hybrid fabrications, merged citations, placeholder authors, plausible fabrications and preprint-as-published. Weakest on nonexistent venues (26/37) and near-miss titles (34/40). Historical output: `data/hm_test.txt`. Later commits change the core, so running the test on the latest source would be a new experiment. Current regression uses `cd app && npx tsx scripts/bench-hallmark.ts --split dev_public --per-type 15 --valid 100`.
 
 ### Blind test: 14 new papers from 14 fields, code frozen
 
@@ -99,7 +99,7 @@ These frozen PDF results are weaker than the clean-string benchmarks. Four refer
 | AAS astronomy style, two-column text mixed into one reference | 6 |
 | Other (a year in the title read as the publication year, a DOI split across lines, two wrong matches, a truncated entry) | 7 |
 
-Two real papers (Lewis et al. 2020 on retrieval-augmented generation, and the GDPR) were labelled *fabricated* while an index was down. Crossref answered HTTP 429 963 times and Semantic Scholar 412 times during the run, because six papers ran at once; a single user checking one paper causes far fewer. Every flag, with the record it was compared with and our judgement, is in `data/blind/results.json`; the miss sample is `data/blind/miss_sample.txt`. Reproduce with `cd app && npx tsx scripts/blind-test.ts`.
+Two real papers (Lewis et al. 2020 on retrieval-augmented generation, and the GDPR) were labelled *fabricated* while an index was down. Crossref answered HTTP 429 963 times and Semantic Scholar 412 times during the run, because six papers ran at once; a single user checking one paper causes far fewer. Every flag, with the record it was compared with and our judgement, is in `data/blind/results.json`; the miss sample is `data/blind/miss_sample.txt`. Preserve that frozen output. Current spent-set regression uses `cd app && npx tsx scripts/recheck-blind.ts`; it is development evidence, not a new independent test.
 
 **After blind test 1.** Each failure class was fixed with a general rule (commits `3f1aad6` and `532c978`): parsing debris is no longer counted as an author; years glued onto titles, text that runs past the title, symbols lost in extraction and a title cut at "?" no longer count as title changes; a DOI that the matched record's DOI extends is treated as cut off; a "wrong identifier" is not reported when the record's full title is written in the reference; journal abbreviations of words such as "Association" are recognised; *fabricated* now requires both broad indexes (Semantic Scholar and OpenAlex) to have answered, otherwise the reference is *not found* or *unchecked*; and reference lists without a heading (REVTeX, AIP) are now found. None of this changed any benchmark result (Zenodo F1 .971, HALLMARK dev F1 .986, identical flags on the 11 development papers). The heading-less lists were fixed using only the four failed PDFs of blind test 1. As an independent check, the seven PDFs that blind set 2 had to skip for the same reason (never opened before) were parsed once after the fix: all seven now yield their reference lists (15 to 58 references each). Blind test 1 itself cannot measure the fixes, because it was used to find the problems. A second blind set (14 papers from 12 further fields, selected before anything was run on it: `data/blind2/manifest.json`) completed at commit `61f1844`. Its unchanged frozen results are below.
 
@@ -119,7 +119,7 @@ Two real papers (Lewis et al. 2020 on retrieval-augmented generation, and the GD
 
 Artifacts: `data/blind2/results.json`, `miss_sample.txt`, `manifest.json`. The frozen set measured the earlier code; subsequent development regressions are not blind results.
 
-The parser development manifest contains 38 PDF files representing **37 distinct papers** (one cross-listed arXiv paper appeared twice). Before deduplication, count completeness was 1890/1896 (99.7%). Deduplicated count completeness is **1833/1839 (99.7%)**, with no zero-reference PDFs. Field-health rates are no author 0.9%, no year 1.1%, debris author 3.3%; output is in `data/parser_dev/freeze-eval-unique.txt`; these are development measurements and missing-field/debris heuristics, not independently judged field accuracy. Some APS references omit titles in the source, so “no title” alone is not an error.
+The parser development manifest contains 38 PDF files representing **37 distinct papers** (one cross-listed arXiv paper appeared twice). Before deduplication, count completeness was 1890/1896 (99.7%). Deduplicated count completeness is **1833/1839 (99.7%)**, with no zero-reference PDFs. Field-health rates are no author 0.9%, no year 1.1%, debris author 3.3%; the latest amended-core output is in `data/parser_dev/preblind-eval.txt`; these are development measurements and missing-field/debris heuristics, not independently judged field accuracy. Some APS references omit titles in the source, so “no title” alone is not an error.
 
 On the 25 papers in spent sets 1 and 2 with available source/JATS counts, current count completeness is 693/706 (98.2%) and 477/479 (99.6%), compared with the original 599/706 (84.8%) and 359/479 (74.9%). Counts are capped per paper and several source counts are only citation-key approximations. In particular, `cond-mat.mtrl-sci_2611.24759v1.pdf` has main labels [1]–[90] plus a separate supplement; its 103-key estimate mixes scopes. `gr-qc_2611.25786v1.pdf` has 32 labels, including explanatory note [19]; the parser returns 31 bibliographic entries. We retain these denominator discrepancies rather than treating them as proven parser errors or changing them to obtain a better score. The product currently audits the main bibliography, not separately numbered supplementary bibliographies.
 
@@ -159,7 +159,7 @@ The shipped browser model (DeBERTa-v3-base, 4-bit, 102 MB) uses top-5 hybrid-ret
 
 Veracite beats the paper's best model on micro-F1 and on recognising accurate and unrelated citations. It is weaker on subtle "not substantiated" errors, a class where GPT-4 also fails. The interface is built around that measured profile, so it never shows "not substantiated" as a verdict:
 
-- **Supported** when P(accurate) ≥ 0.5. Precision is .93 on SemanticCite (8 fields, held out) and .75 on Citation-Integrity dev.
+- **Supported** when P(accurate) ≥ 0.5. Precision is .93 on SemanticCite (8 fields, used for calibration/selection rather than weight training) and .75 on Citation-Integrity dev. These are calibration results, not independent estimates for new papers.
 - **Needs review** when P(not accurate or unrelated) ≥ 0.98. Across fields this flags 8% of supported and 41% of unsupported citations.
 - **Inconclusive** otherwise, with the evidence passages still shown. Citations that only name a method or give an example are labelled **Mention** and are not judged.
 
@@ -175,7 +175,7 @@ Training data: Citation-Integrity train + SciFact, with evidence counts randomis
 
 ## Network, privacy and cost
 
-Veracite is a static site. There is no Veracite server, account, database or API key. Everything below was checked in a fresh Chrome profile with `app/scripts/privacy-audit.ts`, which records every request the page makes.
+Veracite is a static site. There is no Veracite server, account, database or required API key. `app/scripts/privacy-audit.ts` observes browser requests; the completed production check used a three-reference DOCX with two claim tasks (details in `submission/VALIDATION.md`).
 
 | Host | What is sent | Why |
 |---|---|---|
@@ -187,7 +187,7 @@ Veracite is a static site. There is no Veracite server, account, database or API
 | `api.github.com`, `huggingface.co` | repository / model ID from a cited URL | software and model references |
 | `arxiv.org` | arXiv ID | the sample papers, and full text of cited arXiv papers |
 
-- **Only GET requests, and only bibliographic strings.** The audit found no POST requests. It also slid a 7-word window over every sentence of the document body and found none of them in any URL or request body.
+- **Observed network boundary.** The production DOCX audit found zero non-GET requests and no matches for its five contiguous seven-word body windows in URLs or request bodies. Bibliographic metadata is expected to reach public indexes. This fixture-based observation is not a universal privacy proof.
 - **Free tiers only.** All indexes are used anonymously within their free limits. The optional OpenAlex and Semantic Scholar keys (Settings) are the user's own. They are stored in that browser's `localStorage` only and never leave it except to those two hosts. The repository and the built site contain no credentials.
 - **Samples and live inputs are separate.** Recorded sample responses use an in-memory cache limited to that sample audit. A later upload in the same tab cannot use those recorded responses. Live inputs use public indexes and may reuse actual responses previously obtained in that browser's persistent cache.
 - **Graceful degradation.** Every host has per-host concurrency limits, retries with backoff, honours `Retry-After`, and has a circuit breaker. If OpenAlex reports a spent daily allowance it is switched off for the session; nothing is ever paid for automatically. A reference whose indexes did not answer is reported as *unchecked* (never as fabricated) and can be re-checked with one click. Claim checking runs fully offline once the models are cached.

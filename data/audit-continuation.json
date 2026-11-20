@@ -1,6 +1,6 @@
 {
-  "observedAt": "2026-11-20T16:46:57.343460+00:00",
-  "testedProductCommit": "07f4f4a",
+  "observedAt": "2026-11-20T16:57:33.797789+00:00",
+  "testedProductCommit": "3e47ac9",
   "auditFreezeCommit": "3e47ac9dedfaa3d90e981f16437e29928b99c8d7",
   "selectionFreezeCommit": "497cb22379ea0c1f55a0e13dbc0f57c7d12e754e",
   "selectedPapers": 14,
@@ -22,5 +22,10 @@
     "data/blind3/field_sample.json",
     "data/blind3/miss_sample.txt"
   ],
-  "instructions": "Check full process command lines and results/run.lock before restarting. One waiter runs the clean detached audit once after positive free allowance; keep machine awake. Selection unchanged. Manual flag/miss/field reviews remain required. Never launch another run if results or lock exists."
+  "instructions": "Check full process command lines and results/run.lock before restarting. One waiter runs the clean detached audit once after positive free allowance; keep machine awake. Selection unchanged. Manual flag/miss/field reviews remain required. Never launch another run if results or lock exists.",
+  "deploymentCommit": "9b345e78101b4c71607f6c8b254ad178dc14e580",
+  "deploymentWorkflow": 44776807750,
+  "latestFiveInputEvidence": "data/production-inputs-amended.json",
+  "fiveInputAcceptance": "passed; exit0; no site/page errors; no sample seeds",
+  "unchangedSubsystemEvidenceCommit": "07f4f4a"
 }

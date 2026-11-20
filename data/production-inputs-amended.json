@@ -1,0 +1,67 @@
+{
+ "base": "https://cs113062273-bot.github.io/SLAY-HACKS/",
+ "crossOriginIsolated": true,
+ "results": [
+  {
+   "name": "upload-pdf",
+   "sec": 157,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 50,
+   "verdicts": {
+    "verified": 44,
+    "metadata_error": 3,
+    "unchecked": 1,
+    "verified_minor": 2
+   }
+  },
+  {
+   "name": "upload-docx",
+   "sec": 39,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 3,
+   "verdicts": {
+    "verified": 2,
+    "unchecked": 1
+   }
+  },
+  {
+   "name": "upload-bib",
+   "sec": 40,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 3,
+   "verdicts": {
+    "verified": 1,
+    "id_mismatch": 1,
+    "fabricated": 1
+   }
+  },
+  {
+   "name": "paste",
+   "sec": 41,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 2,
+   "verdicts": {
+    "verified": 1,
+    "unchecked": 1
+   }
+  },
+  {
+   "name": "arxiv-id",
+   "sec": 121,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 40,
+   "verdicts": {
+    "verified": 34,
+    "verified_minor": 4,
+    "unchecked": 2
+   }
+  }
+ ],
+ "http4xx": [],
+ "pageErrors": []
+}

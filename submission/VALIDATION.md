@@ -34,3 +34,17 @@ Production timings from that run: planted sample 4s, NeurIPS sample 37s, Attenti
 ## November 21 pre-run amendment
 
 One bounded pass on spent/dev data fixes AAS author-year segmentation, comma-separated journal tails, date-only venues, and title-tail venue recovery with explicit raw-reference evidence. An exact-span fast path preserves fuzzy-search output in 24 regression cases; eight date/year assertions and three positive/negative venue assertions pass without network requests. Models, thresholds and abstention policy are unchanged. Zenodo, HALLMARK dev, the 37-paper corpus and both spent verification regressions passed; historical held-out benchmark tests were not rerun. Selection at 497cb22 is preserved; the manifest records separate audit commit `3e47ac9dedfaa3d90e981f16437e29928b99c8d7` before the third run. The final application typecheck/build passed (`data/build-preblind.txt`). A clean detached snapshot waits for the free allowance (Nov21 00:46 Taipei: HTTP429, remaining USD0, reset26027 seconds, about08:00); no third outcome exists yet.
+
+## Amended production acceptance (November 21)
+
+[Build and deployment](https://github.com/cs113062273-bot/SLAY-HACKS/actions/runs/44776807750) succeeded for main 9b345e7, whose application source is the audit freeze 3e47ac9. The served HTML referenced expected bundle index-BwFacMSf.js before the fresh-profile run. `data/production-inputs-amended.json` passed (exit0, empty stderr): crossOriginIsolated true, no site HTTP errors or page errors, all five live inputs finished without loading recorded samples.
+
+| Input | Extracted refs | Verified + minor | Flags | Unchecked | Seconds |
+|---|---:|---:|---:|---:|---:|
+| PDF (ResNet development control) | 50 | 46 | 3 | 1 | 157 |
+| DOCX fixture | 3 | 2 | 0 | 1 | 39 |
+| BibTeX fixture with planted errors | 3 | 1 | 2 | 0 | 40 |
+| Pasted text fixture | 2 | 1 | 0 | 1 | 41 |
+| arXiv (Attention development control) | 40 | 38 | 0 | 2 | 121 |
+
+These are observed live timings and functional completion, not a quality benchmark. The three PDF flags have not been adjudicated in this smoke test; prior runs' flags/coverage differ with index responses. This test does not establish their precision. The model and sample-cache routing were unchanged by the bounded amendment; full claim/export/isolation/privacy acceptance remains explicitly attributed to 07f4f4a above rather than relabelled as a new test.
