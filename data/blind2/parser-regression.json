@@ -1,0 +1,112 @@
+{
+  "summary": {
+    "set": "blind2",
+    "papers": 12,
+    "denominator": 479,
+    "old": 359,
+    "current": 477,
+    "excess": 0,
+    "papersWithNoReferences": 0
+  },
+  "papers": [
+    {
+      "file": "cs.CR_2611.25479v1.pdf",
+      "truth": 25,
+      "how": "cite",
+      "old": 25,
+      "current": 25
+    },
+    {
+      "file": "cs.RO_2611.25462v1.pdf",
+      "truth": 19,
+      "how": "cite",
+      "old": 19,
+      "current": 19
+    },
+    {
+      "file": "cs.DB_2611.25416v1.pdf",
+      "truth": 23,
+      "how": "cite",
+      "old": 23,
+      "current": 23
+    },
+    {
+      "file": "physics.optics_2611.25432v1.pdf",
+      "truth": 23,
+      "how": "cite",
+      "old": 23,
+      "current": 23
+    },
+    {
+      "file": "cond-mat.stat-mech_2611.25491v1.pdf",
+      "truth": 118,
+      "how": "bbl",
+      "old": 12,
+      "current": 117
+    },
+    {
+      "file": "hep-ph_2611.25910v1.pdf",
+      "truth": null,
+      "how": null,
+      "old": 66,
+      "current": 66
+    },
+    {
+      "file": "math.AP_2611.26051v1.pdf",
+      "truth": null,
+      "how": null,
+      "old": 40,
+      "current": 40
+    },
+    {
+      "file": "q-bio.GN_2611.22256v1.pdf",
+      "truth": 25,
+      "how": "cite",
+      "old": 25,
+      "current": 25
+    },
+    {
+      "file": "eess.SY_2611.25962v1.pdf",
+      "truth": 36,
+      "how": "cite",
+      "old": 36,
+      "current": 36
+    },
+    {
+      "file": "stat.ML_2611.25936v1.pdf",
+      "truth": 39,
+      "how": "cite",
+      "old": 39,
+      "current": 39
+    },
+    {
+      "file": "physics.chem-ph_2611.25052v1.pdf",
+      "truth": 41,
+      "how": "bbl",
+      "old": 41,
+      "current": 41
+    },
+    {
+      "file": "gr-qc_2611.25786v1.pdf",
+      "truth": 32,
+      "how": "cite",
+      "old": 18,
+      "current": 31
+    },
+    {
+      "file": "plos_10_1371_journal_pone_0347190.pdf",
+      "truth": 75,
+      "how": "jats",
+      "old": 75,
+      "current": 75
+    },
+    {
+      "file": "plos_10_1371_journal_pone_0355629.pdf",
+      "truth": 23,
+      "how": "jats",
+      "old": 23,
+      "current": 23
+    }
+  ],
+  "caveat": "Spent sets. Count completeness capped per paper, not field accuracy. cite truth is approximate; references in separately numbered supplements are not included by the parser."
+}

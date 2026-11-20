@@ -1,0 +1,204 @@
+## cs.CR_2611.25479v1.pdf [23] verified
+CITED: [23] J. Balasch et al., “On the Cost of Lazy Engineering for Masked Software Implementations,” in Smart Card Research and Advanced Applications, M. Joye and A. Moradi, Eds., Cham: Springer International Publishing, 2015, pp. 64-81.
+MATCH: On the Cost of Lazy Engineering for Masked Software Implementations | Balasch, Gierlichs, Grosso, Reparaz, Standaert | 2015 | Lecture Notes in Computer Science | 10.1007/978-3-319-16763-3_5
+JUDGEMENT: correct (no error in the cited reference)
+
+## cs.CR_2611.25479v1.pdf [25] verified
+CITED: [25] J. Bosland et al., “High-performance design patterns and file formats for side-channel analysis,” IACR Transactions on Cryptographic Hardware and Embedded Systems, vol. 2024, no. 2, pp. 769-794, Mar. 2024.
+MATCH: High-Performance Design Patterns and File Formats for Side-Channel Analysis | Bosland, Ene, Baumgartner, Immler | 2024 | IACR Transactions on Cryptographic Hardware and Embedded Systems | 10.46586/tches.v2024.i2.769-794
+JUDGEMENT: correct (no error in the cited reference)
+
+## cs.CR_2611.25479v1.pdf [22] verified
+CITED: [22] M. Rivain et al., “Block Ciphers Implementations Provably Secure Against Second Order Side Channel Analysis,” in Fast Software Encryption, K. Nyberg, Ed., Berlin, Heidelberg: Springer, 2008, pp. 127-143.
+MATCH: Block Ciphers Implementations Provably Secure Against Second Order Side Channel Analysis | Rivain, Dottax, Prouff | 2008 | Lecture Notes in Computer Science | 10.1007/978-3-540-71039-4_8
+JUDGEMENT: correct (no error in the cited reference)
+
+## cs.RO_2611.25462v1.pdf [13] verified_minor
+CITED: [Kwon et al., 2024] Gunam Kwon, Byeongjun Kim, and Nam Kyu Kwon. Reinforcement learning with task decomposition and task-specific reward system for automation of high-level tasks. Biomimetics, 9(4):196, 2024.
+MATCH: Reinforcement Learning with Task Decomposition and Task-Specific Reward System for Automation of High-Level Tasks | Kwon, Kim, Kwon | 2024 | Biomimetics | 10.3390/biomimetics9040196
+JUDGEMENT: correct (no error in the cited reference)
+
+## cs.RO_2611.25462v1.pdf [6] verified_minor
+CITED: [Chevalier-Boisvert et al., 2023] Maxime Chevalier- Boisvert, Bolun Dai, Mark Towers, Rodrigo de Lazcano, Lucas Willems, Salem Lahlou, Suman Pal, Pablo Samuel Castro, and Jordan Terry. Minigrid & Miniworld: Modular & Customizable Reinforcement Learning Environments for Goal-Oriented Tasks, June 2023.
+MATCH: Minigrid & Miniworld: Modular & Customizable Reinforcement Learning Environments for Goal-Oriented Tasks | Chevalier-Boisvert, Dai, Towers, de Lazcano, Willems, Lahlou, Pal, Castro, Terry | 2023 | arXiv (Cornell University) | 10.48550/arxiv.2306.13831
+JUDGEMENT: correct (no error in the cited reference)
+
+## cs.DB_2611.25416v1.pdf [19] verified
+CITED: [19] J. Yoon and S. O. Arik, “Embedding-Converter: A unified framework for cross-model embedding transformation,” in Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), 2025, pp. 25 464-25 482. [Online]. Available: https://doi.org/10.18653/v1/2025.acl-long.1237
+MATCH: Embedding-Converter: A Unified Framework for Cross-Model Embedding Transformation | Yoon, Arik | 2025 | Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) | 10.18653/v1/2025.acl-long.1237
+JUDGEMENT: correct (no error in the cited reference)
+
+## cs.DB_2611.25416v1.pdf [18] verified
+CITED: [18] S. Yang, J. Xie, Y. Liu, J. X. Yu, X. Gao, Q. Wang, Y. Peng, and J. Cui, “Revisiting the index construction of proximity graph-based approximate nearest neighbor search,” Proceedings of the VLDB Endowment, vol. 18, no. 6, pp. 1825-1838, 2025. [Online]. Available: https://doi.org/10.14778/3725688.3725709
+MATCH: Revisiting the Index Construction of Proximity Graph-Based Approximate Nearest Neighbor Search | Yang, Xie, Liu, Yu, Gao, Wang, Peng, Cui | 2025 | Proceedings of the VLDB Endowment | 10.14778/3725688.3725709
+JUDGEMENT: correct (no error in the cited reference)
+
+## cs.DB_2611.25416v1.pdf [13] verified
+CITED: [13] H. Ootomo, A. Naruse, C. Nolet, R. Wang, T. Feher, and Y. Wang, “CAGRA: Highly parallel graph construction and approximate nearest neighbor search for GPUs,” in 2024 IEEE 40th International Conference on Data Engineering (ICDE), 2024, pp. 4236-4247. [Online]. Available: https://doi.org/10.1109/ICDE60146.2024.00323
+MATCH: CAGRA: Highly Parallel Graph Construction and Approximate Nearest Neighbor Search for GPUs | Ootomo, Naruse, Nolet, Wang, Feher, Wang | 2024 | 2024 IEEE 40th International Conference on Data Engineering (ICDE) | 10.1109/icde60146.2024.00323
+JUDGEMENT: correct (no error in the cited reference)
+
+## physics.optics_2611.25432v1.pdf [9] verified_minor
+CITED: 9. M. C. Oktay, K. Gorgulu, and E. S. Magden, J. Light. Technol. 42, 7894 (2024).
+MATCH: undefined | undefined | undefined |  | 
+JUDGEMENT: correct (no error in the cited reference)
+
+## physics.optics_2611.25432v1.pdf [21] verified_minor
+CITED: 21. D. Dai, Y. Tang, and J. E. Bowers, Opt. Express 20, 13425 (2012).
+MATCH: undefined | undefined | undefined |  | 
+JUDGEMENT: correct (no error in the cited reference)
+
+## physics.optics_2611.25432v1.pdf [16] verified_minor
+CITED: 16. W.-P. Huang, J. Opt. Soc. Am. A 11, 963 (1994).
+MATCH: undefined | undefined | undefined |  | 
+JUDGEMENT: correct (no error in the cited reference)
+
+## cond-mat.stat-mech_2611.25491v1.pdf [9] verified
+CITED: [9] M. Harsh, Dynamics and Machine Learning Inference using Memory in Stochastic Biochemical Reaction Networks, Doctoral thesis, Georg-August-Universit¨at G¨ottingen, G¨ottingen, Germany (2024).
+MATCH: Dynamics and Machine Learning Inference using Memory in Stochastic Biochemical Reaction Networks | Harsh | 2024 |  | 10.53846/goediss-10564
+JUDGEMENT: correct (no error in the cited reference)
+
+## cond-mat.stat-mech_2611.25491v1.pdf [3] verified_minor
+CITED: [3] L. Peliti, Journal de Physique 46, 1469 (1985).
+MATCH: undefined | undefined | undefined |  | 
+JUDGEMENT: correct (no error in the cited reference)
+
+## cond-mat.stat-mech_2611.25491v1.pdf [2] verified_minor
+CITED: [2] M. Doi, Journal of Physics A: Mathematical and General 9, 1465 (1976).
+MATCH: undefined | undefined | undefined |  | 
+JUDGEMENT: correct (no error in the cited reference)
+
+## hep-ph_2611.25910v1.pdf [4] verified
+CITED: [4] Y. L. Dokshitzer, “Calculation of the structure functions for deep inelastic scattering and e+eannihilation by perturbation theory in quantum chromodynamics”, Sov. Phys. JETP 46 (1977) 641.
+MATCH: Calculation of the Structure Functions for Deep Inelastic Scattering and e+ e- Annihilation by Perturbation Theory in Quantum Chromodynamics. | Dokshitzer | 1977 |  | https://www.semanticscholar.org/paper/c96496a859a2cc104ef305bb8604871fbfa2971f
+JUDGEMENT: correct (no error in the cited reference)
+
+## hep-ph_2611.25910v1.pdf [50] verified
+CITED: [50] G. R. Boroun and B. Rezaei, “The improved saturation model in the nuclei”, Pramana 98 (2024), no. 4, 161, arXiv:2303.07654.
+MATCH: The improved saturation model in the nuclei | Boroun, Rezaei | 2024 | Pramana | 10.1007/s12043-024-02854-8
+JUDGEMENT: correct (no error in the cited reference)
+
+## hep-ph_2611.25910v1.pdf [19] verified
+CITED: [19] A. Buckley et al., “LHAPDF6: parton density access in the LHC precision era”, Eur. Phys. J. C 75 (2015) 132, arXiv:1412.7420.
+MATCH: LHAPDF6: parton density access in the LHC precision era | Buckley, Ferrando, Lloyd, Nordström, Page, Rüfenacht, Schönherr, Watt | 2015 | The European Physical Journal C | 10.1140/epjc/s10052-015-3318-8
+JUDGEMENT: correct (no error in the cited reference)
+
+## math.AP_2611.26051v1.pdf [27] verified_minor
+CITED: [27] Saffman, P. G., and Schatzman, J. C. Properties of a vortex street of finite vortices. SIAM Journal on Scientific and Statistical Computing 2, 3 (1981), 285-295.
+MATCH: Properties of a Vortex Street of Finite Vortices | Saffman, Schatzman | 1981/2012/2005 | SIAM Journal on Scientific and Statistical Computing | 10.1137/0902023
+JUDGEMENT: correct (no error in the cited reference)
+
+## math.AP_2611.26051v1.pdf [38] verified
+CITED: [38] Wang, G. On concentrated traveling vortex pairs with prescribed impulse. Trans. Amer. Math. Soc. 377, 4 (2024), 2635- 2661.
+MATCH: On concentrated traveling vortex pairs with prescribed impulse | Wang | 2024/2023 | Transactions of the American Mathematical Society | 10.1090/tran/9105
+JUDGEMENT: correct (no error in the cited reference)
+
+## math.AP_2611.26051v1.pdf [6] verified_minor
+CITED: [6] Burton, G. R. Global nonlinear stability for steady ideal fluid flow in bounded planar domains. Arch. Ration. Mech. Anal. 176, 2 (2005), 149-163.
+MATCH: Global Nonlinear Stability for Steady Ideal Fluid Flow in Bounded Planar Domains | Burton | 2004/2005 | Archive for Rational Mechanics and Analysis | 10.1007/s00205-004-0339-0
+JUDGEMENT: correct (no error in the cited reference)
+
+## q-bio.GN_2611.22256v1.pdf [24] verified_minor
+CITED: [24] Grace Hui Ting Yeo, Sachit D Saksena, and David K Gifford. 2021. Generative modeling of single-cell time series with PRESCIENT enables prediction of cell trajectories with interventions. Nature communications 12, 1 (2021), 3222.
+MATCH: Generative modeling of single-cell time series with PRESCIENT enables prediction of cell trajectories with interventions | Yeo, Saksena, Gifford | 2021 | Nature Communications | 10.1038/s41467-021-23518-w
+JUDGEMENT: correct (no error in the cited reference)
+
+## q-bio.GN_2611.22256v1.pdf [14] verified
+CITED: [14] Michelli F Oliveira, Juan P Romero, Meii Chung, Stephen Williams, Andrew D Gottscho, Anushka Gupta, Susan E Pilipauskas, Syrus Mohabbat, Nandhini Raman, David Sukovich, et al. 2024. Characterization of immune cell populations in the tumor microenvironment of colorectal cancer using high definition spatial profiling. BioRxiv (2024), 2024-06.
+MATCH: Characterization of immune cell populations in the tumor microenvironment of colorectal cancer using high definition spatial profiling | Oliveira, Romero, Chung, Williams, Gottscho, Gupta, Pilipauskas, Mohabbat, Raman, Sukovich, Patterson, Team, Taylor | 2024 |  | 10.1101/2024.06.04.597233
+JUDGEMENT: correct (no error in the cited reference)
+
+## q-bio.GN_2611.22256v1.pdf [19] verified_minor
+CITED: [19] Xunan Shen, Lulu Zuo, Zhongfei Ye, Zhongyang Yuan, Ke Huang, Zeyu Li, Qichao Yu, Xuanxuan Zou, Xiaoyu Wei, Ping Xu, et al. 2025. Inferring cell trajectories of spatial transcriptomics via optimal transport analysis. Cell systems 16, 2 (2025).
+MATCH: Inferring cell trajectories of spatial transcriptomics via optimal transport analysis | Shen, Zuo, Ye, Yuan, Huang, Li, Yu, Zou, Wei, Xu, Deng, Jin, Xu, Wu, Zhu, Qin | 2025 | Cell Systems | 10.1016/j.cels.2025.101194
+JUDGEMENT: correct (no error in the cited reference)
+
+## eess.SY_2611.25962v1.pdf [10] verified
+CITED: [10] F. Torrent-Fontbona and B. Lopez, “Personalized adaptive CBR bolus recommender system for type 1 diabetes,” IEEE Journal of Biomedical and Health Informatics, vol. 23, no. 1, pp. 387-394, 2019.
+MATCH: Personalized Adaptive CBR Bolus Recommender System for Type 1 Diabetes | Torrent-Fontbona, Lopez | 2019/2018 | IEEE Journal of Biomedical and Health Informatics | 10.1109/jbhi.2018.2813424
+JUDGEMENT: correct (no error in the cited reference)
+
+## eess.SY_2611.25962v1.pdf [7] verified
+CITED: [7] model-based insulin dose optimization algorithm for people with type 1 diabetes on multiple daily injections therapy,” IEEE Transactions on Biomedical Engineering, vol. 68, no. 4, pp. 1208-1219, 2021. P. Herrero, P. Pesl, M. Reddy, N. Oliver, P. Georgiou, and C. Toumazou,
+MATCH: A Model-Based Insulin Dose Optimization Algorithm for People With Type 1 Diabetes on Multiple Daily Injections Therapy | Fathi, Kearney, Palisaitis, Boulet, Haidar | 2021/2020 | IEEE Transactions on Biomedical Engineering | 10.1109/tbme.2020.3023555
+JUDGEMENT: correct (no error in the cited reference)
+
+## eess.SY_2611.25962v1.pdf [21] verified
+CITED: [21] A. Calzavara, F. Prendin, G. Cappon, S. Del Favero, and A. Facchinetti, “Embc special issue: Phynet: A physiology-constrained monotonic neural network for safe and explainable blood glucose forecasting,” IEEE Transactions on Biomedical Engineering, 2026.
+MATCH: PhyNet: A Physiology-Constrained Monotonic Neural Network for Safe and Explainable Blood Glucose Forecasting | Calzavara, Prendin, Cappon, Favero, Facchinetti | 2026 | IEEE Transactions on Biomedical Engineering | 10.1109/tbme.2026.3730324
+JUDGEMENT: correct (no error in the cited reference)
+
+## stat.ML_2611.25936v1.pdf [35] verified
+CITED: Zineng Xu, Subhro Ghosh, and Yan Shuo Tan. On the statistical optimality of optimal decision trees, 2026. URL https://arxiv.org/abs/2603.05340.
+MATCH: On the Statistical Optimality of Optimal Decision Trees | Xu, Ghosh, Tan | 2026 | arXiv | 10.48550/arxiv.2603.05340
+JUDGEMENT: correct (no error in the cited reference)
+
+## stat.ML_2611.25936v1.pdf [4] verified
+CITED: Peter L. Bartlett, Olivier Bousquet, and Shahar Mendelson. Local Rademacher complexities. The Annals of Statistics, 33(4):1497-1537, 2005.
+MATCH: Local Rademacher complexities | Bartlett, Bousquet, Mendelson | 2005 | The Annals of Statistics | 10.1214/009053605000000282
+JUDGEMENT: correct (no error in the cited reference)
+
+## stat.ML_2611.25936v1.pdf [8] verified
+CITED: Elke R. Gizewski, Lukas Mayer, Bernhard A. Moser, Duc Hoan Nguyen, Sergiy Pereverzyev Jr., Sergei V. Pereverzyev, Natalia Shepeleva, and Werner Zellinger. On a regularization of unsupervised domain adaptation in RKHS. Applied and Computational Harmonic Analysis, 57:201-227, 2022.
+MATCH: On a regularization of unsupervised domain adaptation in RKHS | Gizewski, Mayer, Moser, Nguyen, Pereverzyev, Pereverzyev, Shepeleva, Zellinger | 2022/2021 | Applied and Computational Harmonic Analysis | 10.1016/j.acha.2021.12.002
+JUDGEMENT: correct (no error in the cited reference)
+
+## physics.chem-ph_2611.25052v1.pdf [13] verified
+CITED: [13] Thomas D. Goddard, Conrad C. Huang, Elaine C. Meng, Eric F. Pettersen, Gregory S. Couch, John H. Morris, and Thomas E. Ferrin. UCSF ChimeraX: Meeting modern challenges in visualization and analysis. Protein Science, 27:14-25, 2018. doi: 10.1002/pro.3235.
+MATCH: UCSF ChimeraX: Meeting modern challenges in visualization and analysis | Goddard, Huang, Meng, Pettersen, Couch, Morris, Ferrin | 2017/2018 | Protein Science | 10.1002/pro.3235
+JUDGEMENT: correct (no error in the cited reference)
+
+## physics.chem-ph_2611.25052v1.pdf [25] verified
+CITED: [25] Michael F. Lynch and Peter Willett. The Automatic Detection of Chemical Reaction Sites. Journal of Chemical Information and Computer Sciences, 18(3):154-159, 1978. doi: 10.1021/ci60015a009.
+MATCH: The Automatic Detection of Chemical Reaction Sites | Lynch, Willett | 1978/2002/2007 | Journal of Chemical Information and Computer Sciences | 10.1021/ci60015a009
+JUDGEMENT: correct (no error in the cited reference)
+
+## physics.chem-ph_2611.25052v1.pdf [4] verified
+CITED: [4] Maryam Astero and Juho Rousu. Learning symmetry-aware atom mapping in chemical reactions through deep graph matching. Journal of Cheminformatics, 16(1):46, 2024. doi: 10.1186/s13321-024-00841-0.
+MATCH: Learning symmetry-aware atom mapping in chemical reactions through deep graph matching | Astero, Rousu | 2024 | Journal of Cheminformatics | 10.1186/s13321-024-00841-0
+JUDGEMENT: correct (no error in the cited reference)
+
+## gr-qc_2611.25786v1.pdf [2] verified
+CITED: [15] N. Altamirano, D. Kubizˇn´ak, and R. B. Mann, Reentrant phase transitions in rotating anti-de Sitter black holes, Physical Review D 88, 101502 (2013), arXiv:1306.5756 [hep-th].
+MATCH: Reentrant phase transitions in rotating anti–de Sitter black holes | Altamirano, Kubizňák, Mann | 2013 | Physical Review D | 10.1103/physrevd.88.101502
+JUDGEMENT: correct (no error in the cited reference)
+
+## gr-qc_2611.25786v1.pdf [6] verified_minor
+CITED: [20] S. W. Hawking and D. N. Page, Thermodynamics of black holes in anti-de Sitter space, Communications in Mathematical Physics 87, 577 (1983).
+MATCH: Thermodynamics of black holes in anti-de Sitter space | Hawking, Page | 1983/2005 | Communications in Mathematical Physics | 10.1007/bf01208266
+JUDGEMENT: correct (no error in the cited reference)
+
+## gr-qc_2611.25786v1.pdf [16] verified
+CITED: [30] T. Padmanabhan, Statistical mechanics of gravitating systems, in Dynamics and Thermodynamics of Systems with Long Range Interactions, Lecture Notes in Physics, Vol. 602, edited by T. Dauxois, S. Ruffo, E. Arimondo, and M. Wilkens (Springer, Berlin, Heidelberg, 2002) pp. 165-207, arXiv:astro-ph/0206131.
+MATCH: Dynamics and Thermodynamics of Systems with Long-Range Interactions |  | 2002/2007 | Lecture Notes in Physics | 10.1007/3-540-45835-2
+JUDGEMENT: correct (no error in the cited reference)
+
+## plos_10_1371_journal_pone_0347190.pdf [74] verified
+CITED: 74. Damtew SA, Shiferaw S, Seme A, Kassa BA, Fantaye FT, Armdie AZ, et al. Intimate Partner Violence during the Index Pregnancy and its correlates among a panel of pregnant women in Ethiopia, evidence from performance, and monitoring for action (PMA) 2021 cohort two baseline survey. BMC Pregnancy Childbirth. 2024;24(1):759. https://doi.org/10.1186/s12884-024-06947-5 PMID: 39550540
+MATCH: Intimate Partner Violence during the Index Pregnancy and its correlates among a panel of pregnant women in Ethiopia, evidence from performance, and monitoring for action (PMA) 2021 cohort two baseline survey | Damtew, Shiferaw, Seme, Kassa, Fantaye, Armdie, Berhe, Nerisho, Amogne, Gidey, Atnafu | 2024 | BMC Pregnancy and Childbirth | 10.1186/s12884-024-06947-5
+JUDGEMENT: correct (no error in the cited reference)
+
+## plos_10_1371_journal_pone_0347190.pdf [63] verified
+CITED: 63. Aynalem BY, Melesse MF, Bitewa YB. Cultural Beliefs and Traditional Practices During Pregnancy, Child Birth, and the Postpartum Period in East Gojjam Zone, Northwest Ethiopia: A Qualitative Study. Womens Health Rep (New Rochelle). 2023;4(1):415-22. https://doi.org/10.1089/ whr.2023.0024 PMID: 37645589
+MATCH: Cultural Beliefs and Traditional Practices During Pregnancy, Child Birth, and the Postpartum Period in East Gojjam Zone, Northwest Ethiopia: A Qualitative Study | Aynalem, Melesse, Bitewa | 2023 | Women's Health Reports | 10.1089/whr.2023.0024
+JUDGEMENT: correct (no error in the cited reference)
+
+## plos_10_1371_journal_pone_0347190.pdf [33] verified_minor
+CITED: 33. WHO, UNICEF, UNFPA. Trends in Maternal Mortality: 1990 to 2015 Estimates by WHO, UNICEF, UNFPA, World Bank Group and the United Nations Population Division Executive Summary. 2015.
+MATCH: Trends in Maternal Mortality : 1990 to 2013 | WHO, UNICEF, UNFPA, Bank, Division | 2014/2025 |  | 10.1596/978-92-4-150722-6
+JUDGEMENT: correct (no error in the cited reference)
+
+## plos_10_1371_journal_pone_0355629.pdf [4] verified
+CITED: 4. Shahid S, Hossain M, Karami M. Entrepreneurial exit: A systematic review and research agenda. Int J Entrep Innov. 2026. https://doi. org/10.1177/14657503251410904
+MATCH: Entrepreneurial exit: A systematic review and research agenda | Shahid, Hossain, Karami | 2026 | The International Journal of Entrepreneurship and Innovation | 10.1177/14657503251410904
+JUDGEMENT: correct (no error in the cited reference)
+
+## plos_10_1371_journal_pone_0355629.pdf [16] verified
+CITED: 16. Sohag K, Urazbaeva A, Shams SMR, Mariev O. Government policy innovation in spurring nascent entrepreneurship during pandemic. Eur Manag J. 2025;43(5):723-32. https://doi.org/10.1016/j.emj.2024.09.004
+MATCH: Government policy innovation in spurring nascent entrepreneurship during pandemic | Sohag, Urazbaeva, Shams, Mariev | 2025/2024 | European Management Journal | 10.1016/j.emj.2024.09.004
+JUDGEMENT: correct (no error in the cited reference)
+
+## plos_10_1371_journal_pone_0355629.pdf [7] verified
+CITED: 7. Rico P, Cabrer-Borras B. Entrepreneurship, firms creation and regional performance. Eur J Manag Bus Econ. 2019;28(2):158-73. https://doi. org/10.1108/EJMBE-07-2018-0077
+MATCH: Entrepreneurship, firms creation and regional performance | Rico, Cabrer-Borrás | 2019 | European Journal of Management and Business Economics | 10.1108/ejmbe-07-2018-0077
+JUDGEMENT: correct (no error in the cited reference)

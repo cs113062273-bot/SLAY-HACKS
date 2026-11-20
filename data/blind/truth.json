@@ -1,0 +1,58 @@
+{
+ "cs.CL_2611.24936v1.pdf": {
+  "n": 46,
+  "how": "cite"
+ },
+ "cs.CV_2611.24941v1.pdf": {
+  "n": 86,
+  "how": "bbl"
+ },
+ "cs.SE_2611.24924v1.pdf": {
+  "n": 90,
+  "how": "cite"
+ },
+ "cs.HC_2611.24888v1.pdf": {
+  "n": 101,
+  "how": "bbl"
+ },
+ "astro-ph.GA_2611.24937v1.pdf": {
+  "n": 43,
+  "how": "cite"
+ },
+ "cond-mat.mtrl-sci_2611.24759v1.pdf": {
+  "n": 103,
+  "how": "cite"
+ },
+ "quant-ph_2611.24886v1.pdf": {
+  "n": 39,
+  "how": "cite"
+ },
+ "math.PR_2611.24875v1.pdf": {
+  "n": 36,
+  "how": "bbl"
+ },
+ "q-bio.NC_2611.24767v1.pdf": {
+  "n": null,
+  "how": null
+ },
+ "eess.SP_2611.24829v1.pdf": {
+  "n": 13,
+  "how": "cite"
+ },
+ "econ.EM_2611.24402v1.pdf": {
+  "n": 37,
+  "how": "cite"
+ },
+ "stat.ME_2611.24929v1.pdf": {
+  "n": 33,
+  "how": "cite"
+ },
+ "plos_10_1371_journal_pone_0360919.pdf": {
+  "n": 39,
+  "how": "jats"
+ },
+ "plos_10_1371_journal_pone_0359947.pdf": {
+  "n": 40,
+  "how": "jats"
+ }
+}

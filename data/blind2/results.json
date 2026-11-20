@@ -1,0 +1,1869 @@
+{
+ "commit": "61f1844",
+ "srcDirty": false,
+ "startedAt": "2026-11-20T10:49:38.918Z",
+ "node": "v24.19.0",
+ "papers": [
+  {
+   "source": "arXiv",
+   "cat": "cs.CR",
+   "id": "2611.25479v1",
+   "title": "Side-Channel Analysis of the RP2350 Challenge 2",
+   "file": "cs.CR_2611.25479v1.pdf",
+   "refsParsed": 25,
+   "pages": 7,
+   "refs": 25,
+   "citances": 47,
+   "style": "numeric",
+   "parseMs": 613,
+   "verifyMs": 80300,
+   "counts": {
+    "not_found": 2,
+    "unverifiable": 7,
+    "verified": 15,
+    "fabricated": 1
+   },
+   "coverage": 0.6,
+   "unverifiableShare": 0.28,
+   "uncheckedShare": 0,
+   "flagged": 3,
+   "flags": [
+    {
+     "n": 1,
+     "verdict": "not_found",
+     "raw": "[1] “Common Criteria for Information Technology Security Evaluation,” Sep. 2006. S. Mangard et al., Power Analysis Attacks: Revealing",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in Crossref, OpenAlex",
+      "Nearest record: “The Common Criteria for IT Security Evaluation” (61% title similarity)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "The Common Criteria for IT Security Evaluation",
+      "authors": [],
+      "years": [
+       2007,
+       2020
+      ],
+      "venue": "Information Security Management Handbook",
+      "doi": "10.1201/9781439833032-120"
+     },
+     "judgement": "false: two-column text interleaved: two references merged or cut",
+     "reviewIndex": 1
+    },
+    {
+     "n": 8,
+     "verdict": "not_found",
+     "raw": "[8] for side-channel analysis and benchmarking,” Journal of Cryptographic Engineering, vol. 15, no. 2, p. 10, Apr. 18, 2025. Raspberrypi/rp2350_hacking_challenge_2, Raspberry Pi,",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in Crossref, OpenAlex, Europe PMC",
+      "Nearest record: “Basics of Side-Channel Analysis” (74% title similarity)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Basics of Side-Channel Analysis",
+      "authors": [
+       "Joye"
+      ],
+      "years": [
+       2009,
+       2008
+      ],
+      "venue": "Cryptographic Engineering",
+      "doi": "10.1007/978-0-387-71817-0_13"
+     },
+     "judgement": "false: two-column text interleaved: two references merged or cut",
+     "reviewIndex": 2
+    },
+    {
+     "n": 10,
+     "verdict": "fabricated",
+     "raw": "[10] G. Goodwill et al., “A testing methodology for sidechannel resistance validation,” 2011. T. Schneider and A. Moradi. “Leakage Assessment",
+     "issues": [
+      "No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC"
+     ],
+     "judgement": "false: two-column text interleaved: two references merged or cut; labelled fabricated",
+     "reviewIndex": 3
+    }
+   ]
+  },
+  {
+   "source": "arXiv",
+   "cat": "cs.RO",
+   "id": "2611.25462v1",
+   "title": "Demonstration-Free Skill Composition for Navigation and Manipulation",
+   "file": "cs.RO_2611.25462v1.pdf",
+   "refsParsed": 19,
+   "pages": 10,
+   "refs": 19,
+   "citances": 8,
+   "style": "author-year",
+   "parseMs": 473,
+   "verifyMs": 120681,
+   "counts": {
+    "not_found": 10,
+    "unverifiable": 1,
+    "metadata_error": 6,
+    "verified_minor": 2
+   },
+   "coverage": 0.10526315789473684,
+   "unverifiableShare": 0.05263157894736842,
+   "uncheckedShare": 0,
+   "flagged": 16,
+   "flags": [
+    {
+     "n": 1,
+     "verdict": "not_found",
+     "raw": "[Bacon et al., 2016] Pierre-Luc Bacon, Jean Harb, and Doina Precup. The Option-Critic Architecture, December 2016.",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in Crossref, OpenAlex",
+      "Nearest record: “The Option-Critic Architecture” (58% title similarity)"
+     ],
+     "judgement": "false: not found while Semantic Scholar was rate-limited; the work exists",
+     "reviewIndex": 4
+    },
+    {
+     "n": 2,
+     "verdict": "not_found",
+     "raw": "[Bagaria and Konidaris, 2020] Akhil Bagaria and George Konidaris. Option discovery using deep skill chaining. In International Conference on Learning Representations, 2020.",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in Crossref, OpenAlex"
+     ],
+     "judgement": "false: not found while Semantic Scholar was rate-limited; the work exists",
+     "reviewIndex": 5
+    },
+    {
+     "n": 3,
+     "verdict": "not_found",
+     "raw": "[Byun and Perrault, 2022] Ju-Seung Byun and Andrew Perrault. Training Transition Policies via Distribution Matching for Complex Tasks, March 2022.",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in Crossref, OpenAlex"
+     ],
+     "judgement": "false: not found while Semantic Scholar was rate-limited; the work exists",
+     "reviewIndex": 6
+    },
+    {
+     "n": 5,
+     "verdict": "metadata_error",
+     "raw": "[Chen et al., 2024] Zixuan Chen, Yang Gao, Jing Huo, and Ze Ji. SCaR: Refining skill chaining for longhorizon robotic manipulation via dual regularization. pages 111679-111714, January 2024.",
+     "issues": [
+      "Author list does not match the published work: Chen, Ze not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "SCaR: Refining Skill Chaining for Long-Horizon Robotic Manipulation via Dual Regularization",
+      "authors": [
+       "Chen",
+       "Ji",
+       "Huo",
+       "Gao"
+      ],
+      "years": [
+       2024,
+       2025
+      ],
+      "venue": "Advances in Neural Information Processing Systems 37",
+      "doi": "10.52202/079017-3547"
+     },
+     "judgement": "false: bracketed author-year label \"[Name et al., 2016]\" read as part of the author list",
+     "reviewIndex": 7
+    },
+    {
+     "n": 7,
+     "verdict": "metadata_error",
+     "raw": "[Clegg et al., 2018] Alexander Clegg, Wenhao Yu, Jie Tan, C. Karen Liu, and Greg Turk. Learning to dress: Synthesizing human dressing motion via deep reinforcement learning. ACM Transactions on Graphics, 37(6):179:1-179:10, 2018.",
+     "issues": [
+      "Author list does not match the published work: Clegg, Tu not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Learning to dress: synthesizing human dressing motion via deep reinforcement learning",
+      "authors": [
+       "Clegg",
+       "Yu",
+       "Tan",
+       "Liu",
+       "Turk"
+      ],
+      "years": [
+       2018
+      ],
+      "venue": "ACM Transactions on Graphics",
+      "doi": "10.1145/3272127.3275048"
+     },
+     "judgement": "false: bracketed author-year label \"[Name et al., 2016]\" read as part of the author list",
+     "reviewIndex": 8
+    },
+    {
+     "n": 8,
+     "verdict": "not_found",
+     "raw": "[Eberhard et al., 2023] Onno Eberhard, Jakob Hollenstein, Cristina Pinneri, and Georg Martius. pink noise is all you need: colored noise exploration in deep reinforcement learning. 2023.",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in Crossref, OpenAlex",
+      "Nearest record: “An Invitation to Deep Reinforcement Learning” (77% title similarity)"
+     ],
+     "match": {
+      "source": "openalex",
+      "title": "An Invitation to Deep Reinforcement Learning",
+      "authors": [
+       "Jaeger",
+       "Geiger"
+      ],
+      "years": [
+       2024
+      ],
+      "venue": "Foundations and Trends® in Optimization",
+      "doi": "10.1561/2400000049"
+     },
+     "judgement": "false: not found while Semantic Scholar was rate-limited; the work exists",
+     "reviewIndex": 9
+    },
+    {
+     "n": 9,
+     "verdict": "not_found",
+     "raw": "[Haarnoja et al., 2018] Tuomas Haarnoja, Aurick Zhou, Pieter Abbeel, and Sergey Levine. Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor, August 2018.",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in Crossref, OpenAlex",
+      "Nearest record: “Learning to Walk Via Deep Reinforcement Learning” (65% title similarity)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Learning to Walk Via Deep Reinforcement Learning",
+      "authors": [
+       "Haarnoja",
+       "Ha",
+       "Zhou",
+       "Tan",
+       "Tucker",
+       "Levine"
+      ],
+      "years": [
+       2019
+      ],
+      "venue": "Robotics: Science and Systems XV",
+      "doi": "10.15607/rss.2019.xv.011"
+     },
+     "judgement": "false: not found while Semantic Scholar was rate-limited; the work exists",
+     "reviewIndex": 10
+    },
+    {
+     "n": 10,
+     "verdict": "metadata_error",
+     "raw": "[Hutsebaut-Buysse et al., 2022] Matthias Hutsebaut- Buysse, Kevin Mets, and Steven Latré. Hierarchical Reinforcement Learning: A Survey and Open Research Challenges. MAKE, 4(1):172-221, February 2022.",
+     "issues": [
+      "Author list does not match the published work: Buysse not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Hierarchical Reinforcement Learning: A Survey and Open Research Challenges",
+      "authors": [
+       "Hutsebaut-Buysse",
+       "Mets",
+       "Latré"
+      ],
+      "years": [
+       2022
+      ],
+      "venue": "Machine Learning and Knowledge Extraction",
+      "doi": "10.3390/make4010009"
+     },
+     "judgement": "false: name hyphenated across a line break (\"Hutsebaut- Buysse\")",
+     "reviewIndex": 11
+    },
+    {
+     "n": 11,
+     "verdict": "metadata_error",
+     "raw": "[Kim et al., 2023] Byeongjun Kim, Gunam Kwon, Chaneun Park, and Nam Kyu Kwon. The task decomposition and dedicated reward-system-based reinforcement learning algorithm for pick-and-place. Biomimetics, 8(2):240, 2023.",
+     "issues": [
+      "Author list does not match the published work: Kim, Kw not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "The Task Decomposition and Dedicated Reward-System-Based Reinforcement Learning Algorithm for Pick-and-Place",
+      "authors": [
+       "Kim",
+       "Kwon",
+       "Park",
+       "Kwon"
+      ],
+      "years": [
+       2023
+      ],
+      "venue": "Biomimetics",
+      "doi": "10.3390/biomimetics8020240"
+     },
+     "judgement": "false: bracketed author-year label \"[Name et al., 2016]\" read as part of the author list",
+     "reviewIndex": 12
+    },
+    {
+     "n": 12,
+     "verdict": "not_found",
+     "raw": "[Konidaris and Barto, 2009] George Konidaris and Andrew Barto. Skill discovery in continuous reinforcement learning domains using skill chaining. In Y. Bengio, D. Schuurmans, J. Lafferty, C. Williams, and A. Culotta, editors, Advances in Neural Information Processing Systems, volume 22. Curran Associates, Inc., 2009.",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in Crossref, OpenAlex",
+      "Nearest record: “Nonparametric Bayesian reward segmentation for skill discovery using inverse reinforcement learning” (58% title similarity)"
+     ],
+     "judgement": "false: not found while Semantic Scholar was rate-limited; the work exists",
+     "reviewIndex": 13
+    },
+    {
+     "n": 14,
+     "verdict": "not_found",
+     "raw": "[Lee et al., 2019] Youngwoon Lee, Shao-Hua Sun, Sriram Somasundaram, Edward S Hu, and Joseph J Lim. Composing complex skills by learning transition policies. 2019.",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in Crossref, OpenAlex",
+      "Nearest record: “Review of Lee et al. 2019” (58% title similarity)"
+     ],
+     "judgement": "false: not found while Semantic Scholar was rate-limited; the work exists",
+     "reviewIndex": 14
+    },
+    {
+     "n": 15,
+     "verdict": "not_found",
+     "raw": "[Lee et al., 2021] Youngwoon Lee, Joseph J. Lim, Anima Anandkumar, and Yuke Zhu. Adversarial Skill Chaining for Long-Horizon Robot Manipulation via Terminal State Regularization, November 2021.",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in Crossref, OpenAlex, Europe PMC",
+      "Nearest record: “SCaR: Refining Skill Chaining for Long-Horizon Robotic Manipulation via Dual Regularization” (74% title similarity)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "SCaR: Refining Skill Chaining for Long-Horizon Robotic Manipulation via Dual Regularization",
+      "authors": [
+       "Chen",
+       "Ji",
+       "Huo",
+       "Gao"
+      ],
+      "years": [
+       2024,
+       2025
+      ],
+      "venue": "Advances in Neural Information Processing Systems 37",
+      "doi": "10.52202/079017-3547"
+     },
+     "judgement": "false: not found while Semantic Scholar was rate-limited; the work exists",
+     "reviewIndex": 15
+    },
+    {
+     "n": 16,
+     "verdict": "not_found",
+     "raw": "[Mnih et al., 2013] Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, and Martin Riedmiller. Playing Atari with Deep Reinforcement Learning, December 2013.",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in Crossref, OpenAlex",
+      "Nearest record: “Human-level control through deep reinforcement learning” (60% title similarity)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Human-level control through deep reinforcement learning",
+      "authors": [
+       "Mnih",
+       "Kavukcuoglu",
+       "Silver",
+       "Rusu",
+       "Veness",
+       "Bellemare"
+      ],
+      "years": [
+       2015
+      ],
+      "venue": "Nature",
+      "doi": "10.1038/nature14236"
+     },
+     "judgement": "false: not found while Semantic Scholar was rate-limited; the work exists",
+     "reviewIndex": 16
+    },
+    {
+     "n": 17,
+     "verdict": "not_found",
+     "raw": "[Raffin et al., 2021] Antonin Raffin, Ashley Hill, Adam Gleave, Anssi Kanervisto, Maximilian Ernestus, and Noah Dormann. Stable-baselines3: Reliable reinforcement learning implementations. Journal of Machine Learning Research, 22(268):1-8, 2021.",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in Crossref, OpenAlex",
+      "Nearest record: “imitation: Clean Imitation Learning Implementations” (62% title similarity)"
+     ],
+     "match": {
+      "source": "openalex",
+      "title": "imitation: Clean Imitation Learning Implementations",
+      "authors": [
+       "Gleave",
+       "Taufeeque",
+       "Rocamonde",
+       "Jenner",
+       "Wang",
+       "Toyer"
+      ],
+      "years": [
+       2022
+      ],
+      "venue": "arXiv (Cornell University)",
+      "doi": "10.48550/arxiv.2211.11972"
+     },
+     "judgement": "false: not found while Semantic Scholar was rate-limited; the work exists",
+     "reviewIndex": 17
+    },
+    {
+     "n": 18,
+     "verdict": "metadata_error",
+     "raw": "[Sutton et al., 1999] Richard S. Sutton, Doina Precup, and Satinder Singh. Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning. Artificial Intelligence, 112(1-2):181- 211, August 1999.",
+     "issues": [
+      "Author list does not match the published work: Sutton not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning",
+      "authors": [
+       "Sutton",
+       "Precup",
+       "Singh"
+      ],
+      "years": [
+       1999,
+       2002
+      ],
+      "venue": "Artificial Intelligence",
+      "doi": "10.1016/s0004-3702(99)00052-1"
+     },
+     "judgement": "false: bracketed author-year label \"[Name et al., 2016]\" read as part of the author list",
+     "reviewIndex": 18
+    },
+    {
+     "n": 19,
+     "verdict": "metadata_error",
+     "raw": "[Zhu et al., 2025] Yuke Zhu, Josiah Wong, Ajay Mandlekar, Roberto Martín-Martín, Abhishek Joshi, Kevin Lin, Abhiram Maddukuri, Soroush Nasiriany, and Yifeng Zhu. Robosuite: A Modular Simulation Framework and Benchmark for Robot Learning, January 2025.",
+     "issues": [
+      "Year 2025 does not match the published record (2020/2020)"
+     ],
+     "match": {
+      "source": "semanticscholar",
+      "title": "robosuite: A Modular Simulation Framework and Benchmark for Robot Learning",
+      "authors": [
+       "Zhu",
+       "Wong",
+       "Mandlekar",
+       "Martín-Martín",
+       "Joshi",
+       "Lin"
+      ],
+      "years": [
+       2020,
+       2020
+      ],
+      "venue": "arXiv.org",
+      "doi": "10.48550/arxiv.2009.12293"
+     },
+     "judgement": "uncertain: cited January 2025; arXiv 2009.12293 has versions from 2020 and 2022 only (the 2025 date may refer to the v1.5 release)",
+     "reviewIndex": 19
+    }
+   ]
+  },
+  {
+   "source": "arXiv",
+   "cat": "cs.DB",
+   "id": "2611.25416v1",
+   "title": "Standardized Tolerance for Adaptive Reuse and Repair: A Method for HNSW Migration Under Embedding Model Change Scenarios",
+   "file": "cs.DB_2611.25416v1.pdf",
+   "refsParsed": 23,
+   "pages": 13,
+   "refs": 23,
+   "citances": 38,
+   "style": "numeric",
+   "parseMs": 732,
+   "verifyMs": 53939,
+   "counts": {
+    "id_mismatch": 1,
+    "verified": 19,
+    "verified_minor": 1,
+    "not_found": 1,
+    "metadata_error": 1
+   },
+   "coverage": 0.8695652173913043,
+   "unverifiableShare": 0,
+   "uncheckedShare": 0,
+   "flagged": 3,
+   "flags": [
+    {
+     "n": 1,
+     "verdict": "id_mismatch",
+     "raw": "[1] evaluation of the state-of-the-art,” Proceedings of An experimental the ACM on Management of Data, vol. 3, no. 1, 2025, art. no. 43, 31 pages. [Online]. Available: https://doi.org/10.1145/3709693",
+     "issues": [
+      "doi:10.1145/3709693 points to a different work: “Graph-Based Vector Search: An Experimental Evaluation of the State-of-the-Art”"
+     ],
+     "judgement": "false: two-column text interleaved: two references merged or cut",
+     "reviewIndex": 20
+    },
+    {
+     "n": 6,
+     "verdict": "not_found",
+     "raw": "[6] M. Huh, B. Cheung, T. Wang, and P. Isola, “Position: The Platonic representation hypothesis,” in Proceedings of the 41st International Conference on Machine Learning, ser. Proceedings of Machine Learning Research, vol. 235, 2024, pp. 20 617-20 642. [Online]. Available: https://proceedings.mlr.press/v235/huh24a.html",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in Crossref, Hugging Face, OpenAlex, Europe PMC",
+      "Nearest record: “Dreaming User Multimodal Representation Guided by The Platonic Representation Hypothesis for Micro-Video Recommendation” (52% title similarity)"
+     ],
+     "judgement": "false: not found while Semantic Scholar was rate-limited; the work exists",
+     "reviewIndex": 21
+    },
+    {
+     "n": 22,
+     "verdict": "metadata_error",
+     "raw": "[22] Z. Zhang, Z. Liao, H. Yu, P. Di, and R. Wang, “ML-Embed: Inclusive and efficient embeddings for a multilingual world,” in Proceedings of the 43rd International Conference on Machine Learning, ser. Proceedings of Machine Learning Research, vol. 306, 2026, pp. 157 026-157 063. [Online]. Available: https://proceedings.mlr.press/v306/zhang26dh.html",
+     "issues": [
+      "Only a preprint was found; publication in “in Proceedings of the 43rd International Conference on Machine Learning, ser. Proceedings of Machine Learning Research” could not be confirmed"
+     ],
+     "match": {
+      "source": "openalex",
+      "title": "ML-Embed: Inclusive and Efficient Embeddings for a Multilingual World",
+      "authors": [
+       "Zhang",
+       "Liao",
+       "Yu",
+       "Di",
+       "Wang"
+      ],
+      "years": [
+       2026
+      ],
+      "venue": "arXiv (Cornell University)",
+      "doi": "10.48550/arxiv.2605.15081"
+     },
+     "judgement": "false: ICML 2026 proceedings not indexed yet; only the preprint found",
+     "reviewIndex": 22
+    }
+   ]
+  },
+  {
+   "source": "arXiv",
+   "cat": "physics.optics",
+   "id": "2611.25432v1",
+   "title": "A fast and accurate model for gradient-based inverse design of multimode waveguides",
+   "file": "physics.optics_2611.25432v1.pdf",
+   "refsParsed": 23,
+   "pages": 5,
+   "refs": 23,
+   "citances": 14,
+   "style": "numeric",
+   "parseMs": 449,
+   "verifyMs": 54166,
+   "counts": {
+    "verified_minor": 18,
+    "unverifiable": 4,
+    "verified": 1
+   },
+   "coverage": 0.8260869565217391,
+   "unverifiableShare": 0.17391304347826086,
+   "uncheckedShare": 0,
+   "flagged": 0,
+   "flags": []
+  },
+  {
+   "source": "arXiv",
+   "cat": "cond-mat.stat-mech",
+   "id": "2611.25491v1",
+   "title": "Dynamical Variational Theory of Stochastic Reaction Networks",
+   "file": "cond-mat.stat-mech_2611.25491v1.pdf",
+   "refsParsed": 12,
+   "pages": 56,
+   "refs": 12,
+   "citances": 35,
+   "style": "numeric",
+   "parseMs": 2729,
+   "verifyMs": 80036,
+   "counts": {
+    "fabricated": 2,
+    "verified_minor": 2,
+    "unverifiable": 3,
+    "metadata_error": 1,
+    "not_found": 2,
+    "unchecked": 1,
+    "verified": 1
+   },
+   "coverage": 0.25,
+   "unverifiableShare": 0.25,
+   "uncheckedShare": 0.08333333333333333,
+   "flagged": 5,
+   "flags": [
+    {
+     "n": 1,
+     "verdict": "fabricated",
+     "raw": "[1] M. Harsh and P. Sollich, Journal of Physics A: Mathematical and Theoretical 56, 455004 (2023).",
+     "issues": [
+      "No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC"
+     ],
+     "judgement": "false: reference without a title (APS style) not found by author, journal, volume and page; the work exists; labelled fabricated",
+     "reviewIndex": 23
+    },
+    {
+     "n": 5,
+     "verdict": "metadata_error",
+     "raw": "[5] J. Cardy, in Non-equilibrium Statistical Mechanics and Turbulence, London Mathematical Society Lecture Note Series, edited by G. Falkovich, J. Cardy, K. Gawedzki, O. V. Zaboronski, and S. Nazarenko (Cambridge University Press, 2006) pp. 108-161.",
+     "issues": [
+      "Author list does not match the published work: in not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Non-equilibrium Statistical Mechanics and Turbulence",
+      "authors": [
+       "Cardy",
+       "Falkovich",
+       "Gawedzki"
+      ],
+      "years": [
+       2008,
+       2012
+      ],
+      "doi": "10.1017/cbo9780511812149"
+     },
+     "judgement": "false: the word \"in\" (chapter in an edited book) read as an author",
+     "reviewIndex": 24
+    },
+    {
+     "n": 6,
+     "verdict": "not_found",
+     "raw": "[6] R. B. Potts, Australian Journal of Physics 6, 498 (1953).",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in Crossref, OpenAlex, Europe PMC",
+      "Nearest record: “Australian Journal of Physics, Table of Contents, Volume 6, 1953” (59% title similarity)"
+     ],
+     "judgement": "false: reference without a title (APS style) not found by author, journal, volume and page; the work exists",
+     "reviewIndex": 25
+    },
+    {
+     "n": 8,
+     "verdict": "fabricated",
+     "raw": "[8] B. Bravi, P. Sollich, and M. Opper, Journal of Physics A: Mathematical and Theoretical 49, 194003 (2016).",
+     "issues": [
+      "No matching work in Crossref, Semantic Scholar, OpenAlex"
+     ],
+     "judgement": "false: reference without a title (APS style) not found by author, journal, volume and page; the work exists; labelled fabricated",
+     "reviewIndex": 26
+    },
+    {
+     "n": 11,
+     "verdict": "not_found",
+     "raw": "[11] B. Munsky and M. Khammash, The Journal of Chemical Physics 124, 044104 (2006).",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in Crossref, OpenAlex, Europe PMC"
+     ],
+     "judgement": "false: reference without a title (APS style) not found by author, journal, volume and page; the work exists",
+     "reviewIndex": 27
+    }
+   ]
+  },
+  {
+   "source": "arXiv",
+   "cat": "hep-ph",
+   "id": "2611.25910v1",
+   "title": "New unintegrated gluon density in proton and nuclei tested with small $x$ processes at modern colliders",
+   "file": "hep-ph_2611.25910v1.pdf",
+   "refsParsed": 66,
+   "pages": 14,
+   "refs": 66,
+   "citances": 43,
+   "style": "numeric",
+   "parseMs": 459,
+   "verifyMs": 135692,
+   "counts": {
+    "verified": 47,
+    "metadata_error": 12,
+    "id_mismatch": 2,
+    "verified_minor": 1,
+    "unchecked": 4
+   },
+   "coverage": 0.7272727272727273,
+   "unverifiableShare": 0,
+   "uncheckedShare": 0.06060606060606061,
+   "flagged": 14,
+   "flags": [
+    {
+     "n": 6,
+     "verdict": "metadata_error",
+     "raw": "[6] E. A. Kuraev, L. N. Lipatov, and V. S. Fadin, “Multi-Reggeon processes in the Yang-Mills theory”, Sov. Phys. JETP 44 (1976) 443.",
+     "issues": [
+      "Published in “another venue”, not “Sov. Phys. JETP”"
+     ],
+     "match": {
+      "source": "semanticscholar",
+      "title": "Multi - Reggeon Processes in the Yang-Mills Theory",
+      "authors": [
+       "Kuraev",
+       "Fadin",
+       "Lipatov"
+      ],
+      "years": [
+       1976
+      ],
+      "venue": ""
+     },
+     "judgement": "false: index record has no venue",
+     "reviewIndex": 28
+    },
+    {
+     "n": 7,
+     "verdict": "metadata_error",
+     "raw": "[7] E. A. Kuraev, L. N. Lipatov, and V. S. Fadin, “The Pomeranchuk singularity in nonabelian gauge theories”, Sov. Phys. JETP 45 (1977) 199.",
+     "issues": [
+      "Published in “Journal of Experimental and Theoretical Physics”, not “Sov. Phys. JETP”"
+     ],
+     "match": {
+      "source": "semanticscholar",
+      "title": "The Pomeranchuk Singularity in Nonabelian Gauge Theories",
+      "authors": [
+       "Kuraev",
+       "Lipatov",
+       "Fadin"
+      ],
+      "years": [
+       1977,
+       1977
+      ],
+      "venue": "Journal of Experimental and Theoretical Physics"
+     },
+     "judgement": "false: journal translation name (\"Sov. Phys. JETP\" vs \"Journal of Experimental and Theoretical Physics\")",
+     "reviewIndex": 29
+    },
+    {
+     "n": 15,
+     "verdict": "id_mismatch",
+     "raw": "[15] A. D. Martin, M. G. Ryskin, and G. Watt, “NLO prescription for unintegrated parton distributions”, Eur. Phys. J. C 66 (2010) 163, arXiv:0912.3685.",
+     "issues": [
+      "arXiv:0912.3685 points to a different work: “Mutual Coupling of two Semiconductor Quantum Dots via an Optical Nanocavity Mode”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "NLO prescription for unintegrated parton distributions",
+      "authors": [
+       "Martin",
+       "Ryskin",
+       "Watt"
+      ],
+      "years": [
+       2010
+      ],
+      "venue": "The European Physical Journal C",
+      "doi": "10.1140/epjc/s10052-010-1242-5"
+     },
+     "judgement": "real: arXiv:0912.3685 is a quantum-dot paper; this article is arXiv:0909.5529",
+     "reviewIndex": 30
+    },
+    {
+     "n": 18,
+     "verdict": "metadata_error",
+     "raw": "[18] A. V. Lipatov, S. P. Baranov, and M. A. Malyshev, “Semi-hard QCD processes beyond the collinear approach”, Phys. Part. Nucl. 55 (2024) 256.",
+     "issues": [
+      "Title differs from the published title (cited “approach”, published “approximation”)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Semihard QCD Processes beyond the Collinear Approximation",
+      "authors": [
+       "Lipatov",
+       "Baranov",
+       "Malyshev"
+      ],
+      "years": [
+       2024
+      ],
+      "venue": "Physics of Particles and Nuclei",
+      "doi": "10.1134/s1063779624020047"
+     },
+     "judgement": "real: title says \"approach\", the published title says \"approximation\"",
+     "reviewIndex": 31
+    },
+    {
+     "n": 32,
+     "verdict": "metadata_error",
+     "raw": "[32] ATLAS Collaboration, “Charged-particle multiplicities in pp interactions measured with the ATLAS detector at the LHC”, New J. Phys. 13 (2011) 053033,",
+     "issues": [
+      "Year 2011 does not match the published record (2016)",
+      "Published in “OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)”, not “New J. Phys”"
+     ],
+     "match": {
+      "source": "openalex",
+      "title": "Charged-particle multiplicities in pp interactions measured with the ATLAS detector at the LHC",
+      "authors": [
+       "Collaboration"
+      ],
+      "years": [
+       2016
+      ],
+      "venue": "OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)",
+      "doi": "10.17182/hepdata.57077"
+     },
+     "judgement": "false: matched to the HEPData record (2016) instead of the article",
+     "reviewIndex": 32
+    },
+    {
+     "n": 33,
+     "verdict": "metadata_error",
+     "raw": "[33] CMS Collaboration, “Transverse-momentum and pseudorapidity distributions of √ charged hadrons in pp collisions at s = 7 TeV”, Phys. Rev. Lett. 105 (2010) 022002,",
+     "issues": [
+      "Author list does not match the published work: Collaboration not among its authors"
+     ],
+     "match": {
+      "source": "semanticscholar",
+      "title": "Transverse-momentum and pseudorapidity distributions of charged hadrons in pp collisions at sqrt(s) = 7 TeV",
+      "authors": [
+       "Khachatryan",
+       "Sirunyan",
+       "Tumasyan",
+       "Adam",
+       "Bergauer",
+       "Dragicevic"
+      ],
+      "years": [
+       2010,
+       2010
+      ],
+      "doi": "10.1103/physrevlett.105.022002"
+     },
+     "judgement": "false: collaboration name as author vs. member list in the record",
+     "reviewIndex": 33
+    },
+    {
+     "n": 42,
+     "verdict": "id_mismatch",
+     "raw": "[42] S. A. Kulagin and R. Petti, “Nuclear parton distributions and the Drell-Yan process”, Phys. Rev. C 90 (2014) 045204, arXiv:1401.1233.",
+     "issues": [
+      "arXiv:1401.1233 points to a different work: “Correlations in double parton distributions: effects of evolution”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Nuclear parton distributions and the Drell-Yan process",
+      "authors": [
+       "Kulagin",
+       "Petti"
+      ],
+      "years": [
+       2014
+      ],
+      "venue": "Physical Review C",
+      "doi": "10.1103/physrevc.90.045204"
+     },
+     "judgement": "real: arXiv:1401.1233 is a different paper (double parton distributions)",
+     "reviewIndex": 34
+    },
+    {
+     "n": 48,
+     "verdict": "metadata_error",
+     "raw": "[48] A. M. Sta´ sto, K. Golec-Biernat, and J. Kwieci ´nski, “Geometric scaling for the total γ∗p cross-section in the low x region”, Phys. Rev. Lett. 86 (2001) 596, arXiv:hep-ph/0007192.",
+     "issues": [
+      "Author list does not match the published work: sto not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Geometric Scaling for the Total γ * p Cross Section in the Low x Region",
+      "authors": [
+       "Staśto",
+       "Golec-Biernat",
+       "Kwieciński"
+      ],
+      "years": [
+       2001,
+       2002
+      ],
+      "venue": "Physical Review Letters",
+      "doi": "10.1103/physrevlett.86.596"
+     },
+     "judgement": "false: accent split from its letter in PDF text (\"Sta´ sto\")",
+     "reviewIndex": 35
+    },
+    {
+     "n": 55,
+     "verdict": "metadata_error",
+     "raw": "[55] European Muon Collaboration, “Measurement of the ratios of deep inelastic muon-nucleus cross sections on various nuclei compared to deuterium”, Phys. Lett. B 202 (1988) 603.",
+     "issues": [
+      "Author list does not match the published work: Collaboration not among its authors"
+     ],
+     "match": {
+      "source": "semanticscholar",
+      "title": "Measurement of the ratios of deep inelastic muon-nucleus cross sections on various nuclei compared to deuterium",
+      "authors": [
+       "Ashman",
+       "Badelek",
+       "Baum",
+       "Beaufays",
+       "Bee",
+       "Benchouk"
+      ],
+      "years": [
+       1988,
+       1988
+      ],
+      "venue": "Physics Letters B",
+      "doi": "10.1016/0370-2693(88)91872-2"
+     },
+     "judgement": "false: collaboration name as author vs. member list in the record",
+     "reviewIndex": 36
+    },
+    {
+     "n": 56,
+     "verdict": "metadata_error",
+     "raw": "[56] European Muon Collaboration, “Shadowing in Deep Inelastic Muon Scattering from Nuclear Targets”, Phys. Lett. B 211 (1988) 493-499.",
+     "issues": [
+      "Author list does not match the published work: Collaboration not among its authors"
+     ],
+     "match": {
+      "source": "semanticscholar",
+      "title": "Shadowing in deep inelastic muon scattering from nuclear targets",
+      "authors": [
+       "Arneodo",
+       "Aubert",
+       "Benchouk",
+       "D'Agostini",
+       "Montanet",
+       "Payre"
+      ],
+      "years": [
+       1988,
+       1988
+      ],
+      "venue": "Physics Letters B",
+      "doi": "10.1016/0370-2693(88)91900-4"
+     },
+     "judgement": "false: collaboration name as author vs. member list in the record",
+     "reviewIndex": 37
+    },
+    {
+     "n": 58,
+     "verdict": "metadata_error",
+     "raw": "[58] Fermilab E665 Collaboration, “Shadowing in inelastic scattering of muons on carbon, calcium and lead at low xBj ”, Phys. Rev. Lett. 68 (1992) 3266.",
+     "issues": [
+      "Year 1992 does not match the published record (1995/1995)",
+      "Published in “Zeitschrift für Physik C Particles and Fields”, not “Phys. Rev. Lett”"
+     ],
+     "match": {
+      "source": "semanticscholar",
+      "title": "Shadowing in inelastic scattering of muons on carbon, calcium and lead at lowxBj",
+      "authors": [
+       "Adams",
+       "Aïd",
+       "Anthony",
+       "Averill",
+       "Baker",
+       "Baller"
+      ],
+      "years": [
+       1995,
+       1995
+      ],
+      "venue": "Zeitschrift für Physik C Particles and Fields",
+      "doi": "10.1007/bf01624583"
+     },
+     "judgement": "real: title of the E665 Z. Phys. C 67 (1995) paper cited with the PRL 68 (1992) venue (titles of [58] and [59] swapped)",
+     "reviewIndex": 38
+    },
+    {
+     "n": 59,
+     "verdict": "metadata_error",
+     "raw": "[59] Fermilab E665 Collaboration, “Shadowing in the muon-xenon inelastic scattering cross section at 490 GeV”, Z. Phys. C 67 (1995) 403.",
+     "issues": [
+      "Author list does not match the published work: Collaboration not among its authors",
+      "Year 1995 does not match the published record (1992/1992)",
+      "Published in “Physics Letters B”, not “Z. Phys. C”"
+     ],
+     "match": {
+      "source": "semanticscholar",
+      "title": "Shadowing in the muon-xenon inelastic scattering cross section at 490 GeV",
+      "authors": [
+       "Adams",
+       "Aïd",
+       "Anthony",
+       "Baker",
+       "Bartlett",
+       "Bhatti"
+      ],
+      "years": [
+       1992,
+       1992
+      ],
+      "venue": "Physics Letters B",
+      "doi": "10.1016/0370-2693(92)90999-k"
+     },
+     "judgement": "real: title of the E665 Phys. Lett. B (1992) paper cited with the Z. Phys. C 67 (1995) venue (titles of [58] and [59] swapped)",
+     "reviewIndex": 39
+    },
+    {
+     "n": 61,
+     "verdict": "metadata_error",
+     "raw": "[61] CMS Collaboration, “Study of the production of charged pions, kaons, and protons in √ pPb collisions at sN N = 5.02 TeV”, Eur. Phys. J. C 74 (2014) 2847,",
+     "issues": [
+      "Author list does not match the published work: Collaboration not among its authors"
+     ],
+     "match": {
+      "source": "semanticscholar",
+      "title": "Study of the production of charged pions, kaons, and protons in pPb collisions at $sNN =; sNN=5.02, TeV$TeV",
+      "authors": [
+       "Chatrchyan",
+       "Khachatryan",
+       "Sirunyan",
+       "Tumasyan",
+       "Adam",
+       "Bergauer"
+      ],
+      "years": [
+       2014
+      ],
+      "venue": "The European Physical Journal C",
+      "doi": "10.1140/epjc/210052-014-2847-x"
+     },
+     "judgement": "false: collaboration name as author vs. member list in the record",
+     "reviewIndex": 40
+    },
+    {
+     "n": 62,
+     "verdict": "metadata_error",
+     "raw": "[62] ALICE Collaboration, “Multiplicity dependence of pion, kaon, proton and lambda √ production in p-Pb collisions at sN N = 5.02 TeV”, Phys. Lett. B 728 (2014) 25,",
+     "issues": [
+      "Author list does not match the published work: Collaboration not among its authors"
+     ],
+     "match": {
+      "source": "semanticscholar",
+      "title": "Multiplicity dependence of pion, kaon, proton and lambda production in p–Pb collisions at sNN=5.02 TeV",
+      "authors": [
+       "Abelev",
+       "Adam",
+       "Adamová",
+       "Adare",
+       "Aggarwal",
+       "Rinella"
+      ],
+      "years": [
+       2013,
+       2013
+      ],
+      "venue": "Physics Letters B",
+      "doi": "10.1016/j.physletb.2013.11.020"
+     },
+     "judgement": "false: collaboration name as author vs. member list in the record",
+     "reviewIndex": 41
+    }
+   ]
+  },
+  {
+   "source": "arXiv",
+   "cat": "math.AP",
+   "id": "2611.26051v1",
+   "title": "A variational theory for von Kármán vortex streets",
+   "file": "math.AP_2611.26051v1.pdf",
+   "refsParsed": 40,
+   "pages": 51,
+   "refs": 40,
+   "citances": 29,
+   "style": "numeric",
+   "parseMs": 2326,
+   "verifyMs": 78074,
+   "counts": {
+    "unchecked": 3,
+    "verified": 15,
+    "verified_minor": 19,
+    "metadata_error": 3
+   },
+   "coverage": 0.85,
+   "unverifiableShare": 0,
+   "uncheckedShare": 0.075,
+   "flagged": 3,
+   "flags": [
+    {
+     "n": 21,
+     "verdict": "metadata_error",
+     "raw": "[21] Marchioro, C., and Pagani, E. Evolution of two concentrated vortices in a two-dimensional bounded domain. Mathematical Methods in the Applied Sciences 8 (1986), 328-344.",
+     "issues": [
+      "Incomplete author list: 1 of 3 authors omitted without “et al.”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Evolution of two concentrated vortices in a two‐dimensional bounded domain",
+      "authors": [
+       "Marchioro",
+       "Pagani",
+       "Neunzert"
+      ],
+      "years": [
+       1986,
+       2011,
+       2007
+      ],
+      "venue": "Mathematical Methods in the Applied Sciences",
+      "doi": "10.1002/mma.1670080122"
+     },
+     "judgement": "false: index record lists a third name (Neunzert) not on the paper",
+     "reviewIndex": 42
+    },
+    {
+     "n": 35,
+     "verdict": "metadata_error",
+     "raw": "[35] von K´arm´an, T. Uber den Mechanismus des Widerstandes,¨ den ein bewegter K¨orper in einer Fl¨ussigkeit erf¨ahrt. Nachrichten von der Gesellschaft der Wissenschaften zu G¨ottingen, Mathematisch-Physikalische Klasse (1911), 509-517.",
+     "issues": [
+      "Author list does not match the published work: K´arm´an, Widerstandes, G¨ottingen not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Aus den Nachrichten der Gesellschaft der Wissenschaften zu G�ttingen: Mathematisch-physikalische Klasse 1928",
+      "authors": [
+       "Stille"
+      ],
+      "years": [
+       1929,
+       2005
+      ],
+      "venue": "Die Naturwissenschaften",
+      "doi": "10.1007/bf01506800"
+     },
+     "judgement": "false: accents split from letters in PDF text; matched to an unrelated record",
+     "reviewIndex": 43
+    },
+    {
+     "n": 36,
+     "verdict": "metadata_error",
+     "raw": "[36] von K´arm´an, T. Uber den Mechanismus des Widerstandes, den ein bewegter K¨¨ orper in einer Fl¨ussigkeit erf¨ahrt. II. Nachrichten von der Gesellschaft der Wissenschaften zu G¨ottingen, Mathematisch-Physikalische Klasse (1912), 547-556.",
+     "issues": [
+      "Author list does not match the published work: K´arm´an, Widerstandes, G¨ottingen not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Aus den Nachrichten der Gesellschaft der Wissenschaften zu G�ttingen: Mathematisch-physikalische Klasse 1928",
+      "authors": [
+       "Stille"
+      ],
+      "years": [
+       1929,
+       2005
+      ],
+      "venue": "Die Naturwissenschaften",
+      "doi": "10.1007/bf01506800"
+     },
+     "judgement": "false: accents split from letters in PDF text; matched to an unrelated record",
+     "reviewIndex": 44
+    }
+   ]
+  },
+  {
+   "source": "arXiv",
+   "cat": "q-bio.GN",
+   "id": "2611.22256v1",
+   "title": "ST-FateFlow: Continuous Gene-Spatial Reconstruction with Differentiation-Potential Learning from Time-Resolved Spatial Transcriptomics",
+   "file": "q-bio.GN_2611.22256v1.pdf",
+   "refsParsed": 25,
+   "pages": 10,
+   "refs": 25,
+   "citances": 27,
+   "style": "numeric",
+   "parseMs": 1173,
+   "verifyMs": 68644,
+   "counts": {
+    "verified_minor": 13,
+    "verified": 9,
+    "metadata_error": 2,
+    "id_mismatch": 1
+   },
+   "coverage": 0.88,
+   "unverifiableShare": 0,
+   "uncheckedShare": 0,
+   "flagged": 3,
+   "flags": [
+    {
+     "n": 11,
+     "verdict": "metadata_error",
+     "raw": "[11] Enikő Lázár and Joakim Lundeberg. 2026. Spatial architecture of development and disease. Nature Reviews Genetics 27, 2 (2026), 118-136.",
+     "issues": [
+      "Author list does not match the published work: development not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Spatial architecture of development and disease",
+      "authors": [
+       "Lázár",
+       "Lundeberg"
+      ],
+      "years": [
+       2025,
+       2026
+      ],
+      "venue": "Nature Reviews Genetics",
+      "doi": "10.1038/s41576-025-00892-5"
+     },
+     "judgement": "false: title word read as an author (ACM \"Author. Year. Title\" style)",
+     "reviewIndex": 45
+    },
+    {
+     "n": 21,
+     "verdict": "id_mismatch",
+     "raw": "[21] Alexander Tong, Nikolay Malkin, Guillaume Huguet, Yanlei Zhang, Jarrid Rector-Brooks, Kilian Fatras, Guy Wolf, and Yoshua Bengio. 2023. Conditional flow matching: Simulation-free dynamic optimal transport. arXiv preprint arXiv:2302.00482 2, 3 (2023).",
+     "issues": [
+      "arXiv:2302.00482 points to a different work: “Improving and generalizing flow-based generative models with minibatch optimal transport”"
+     ],
+     "judgement": "false: arXiv paper renamed after v1; the cited v1 title is right",
+     "reviewIndex": 46
+    },
+    {
+     "n": 25,
+     "verdict": "metadata_error",
+     "raw": "[25] Jiaqi Zhang, Erica Larschan, Jeremy Bigness, and Ritambhara Singh. 2024. scN- ODE: generative model for temporal single cell transcriptomic data prediction. Bioinformatics 40, Supplement_2 (2024), ii146-ii154.",
+     "issues": [
+      "Author list does not match the published work: Supplement not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "scNODE : generative model for temporal single cell transcriptomic data prediction",
+      "authors": [
+       "Zhang",
+       "Larschan",
+       "Bigness",
+       "Singh"
+      ],
+      "years": [
+       2024
+      ],
+      "venue": "Bioinformatics",
+      "doi": "10.1093/bioinformatics/btae393"
+     },
+     "judgement": "false: \"Supplement_2\" read as an author (ACM style)",
+     "reviewIndex": 47
+    }
+   ]
+  },
+  {
+   "source": "arXiv",
+   "cat": "eess.SY",
+   "id": "2611.25962v1",
+   "title": "Safe Data-Driven Insulin Dosage Decision Based on Physiology-Constrained Gaussian Process Learning",
+   "file": "eess.SY_2611.25962v1.pdf",
+   "refsParsed": 36,
+   "pages": 10,
+   "refs": 36,
+   "citances": 43,
+   "style": "numeric",
+   "parseMs": 512,
+   "verifyMs": 57443,
+   "counts": {
+    "verified": 25,
+    "unchecked": 2,
+    "metadata_error": 2,
+    "verified_minor": 7
+   },
+   "coverage": 0.8888888888888888,
+   "unverifiableShare": 0,
+   "uncheckedShare": 0.05555555555555555,
+   "flagged": 2,
+   "flags": [
+    {
+     "n": 4,
+     "verdict": "metadata_error",
+     "raw": "[4] F. J. Doyle III, “Run-to-run control of blood glucose concentrations for people with type 1 diabetes mellitus,” IEEE Transactions on Biomedical , vol. 53, no. 6, pp. 996-1005, 2006. Engineering M. Cescon, S. Deshpande, R. Nimri, F. J. Doyle III, and E. Dassau, “Us-",
+     "issues": [
+      "Incomplete author list: 5 of 6 authors omitted without “et al.”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Run-to-run control of blood glucose concentrations for people with type 1 diabetes mellitus",
+      "authors": [
+       "Owens",
+       "Zisser",
+       "Jovanovic",
+       "Srinivasan",
+       "Bonvin",
+       "Doyle"
+      ],
+      "years": [
+       2006
+      ],
+      "venue": "IEEE Transactions on Biomedical Engineering",
+      "doi": "10.1109/tbme.2006.872818"
+     },
+     "judgement": "false: two-column text interleaved: two references merged or cut",
+     "reviewIndex": 48
+    },
+    {
+     "n": 6,
+     "verdict": "metadata_error",
+     "raw": "[6] C. Toumazou, “Method for automatic adjustment of an insulin bolus calculator: In silico robustness evaluation under intra-day variability,” Computer Methods and Programs in Biomedicine, vol. 119, no. 1, pp. 1-8, 2015. A. E. Fathi, R. E. Kearney, E. Palisaitis, B. Boulet, and A. Haidar, “A",
+     "issues": [
+      "Incomplete author list: 6 of 7 authors omitted without “et al.”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Method for automatic adjustment of an insulin bolus calculator: In silico robustness evaluation under intra-day variability",
+      "authors": [
+       "Herrero",
+       "Pesl",
+       "Bondia",
+       "Reddy",
+       "Oliver",
+       "Georgiou"
+      ],
+      "years": [
+       2015
+      ],
+      "venue": "Computer Methods and Programs in Biomedicine",
+      "doi": "10.1016/j.cmpb.2015.02.003"
+     },
+     "judgement": "false: two-column text interleaved: two references merged or cut",
+     "reviewIndex": 49
+    }
+   ]
+  },
+  {
+   "source": "arXiv",
+   "cat": "stat.ML",
+   "id": "2611.25936v1",
+   "title": "Hellinger Decision Trees for Density Ratio Estimation: Finite-Sample Guarantees",
+   "file": "stat.ML_2611.25936v1.pdf",
+   "refsParsed": 39,
+   "pages": 45,
+   "refs": 39,
+   "citances": 52,
+   "style": "author-year",
+   "parseMs": 844,
+   "verifyMs": 69621,
+   "counts": {
+    "verified": 33,
+    "metadata_error": 3,
+    "verified_minor": 2,
+    "unverifiable": 1
+   },
+   "coverage": 0.8974358974358975,
+   "unverifiableShare": 0.02564102564102564,
+   "uncheckedShare": 0,
+   "flagged": 3,
+   "flags": [
+    {
+     "n": 2,
+     "verdict": "metadata_error",
+     "raw": "Idan Attias and Aryeh Kontorovich. Fat-shattering dimension of k-fold aggregations. Journal of Machine Learning Research, 25(144):1-29, 2024.",
+     "issues": [
+      "Year 2024 does not match the published record (2021/2021)"
+     ],
+     "match": {
+      "source": "semanticscholar",
+      "title": "Fat-Shattering Dimension of k-fold Aggregations",
+      "authors": [
+       "Attias",
+       "Kontorovich"
+      ],
+      "years": [
+       2021,
+       2021
+      ],
+      "venue": "Journal of machine learning research"
+     },
+     "judgement": "false: index year is the 2021 preprint; JMLR published it in 2024",
+     "reviewIndex": 50
+    },
+    {
+     "n": 26,
+     "verdict": "metadata_error",
+     "raw": "Fabio Sigrist. Gradient and Newton boosting for tree ensembles. Machine Learning, 111(5):1817- 1867, 2022.",
+     "issues": [
+      "Closest real work has a different title: “Gradient and Newton boosting for classification and regression”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Gradient and Newton boosting for classification and regression",
+      "authors": [
+       "Sigrist"
+      ],
+      "years": [
+       2021,
+       2020
+      ],
+      "venue": "Expert Systems with Applications",
+      "doi": "10.1016/j.eswa.2020.114080"
+     },
+     "judgement": "uncertain: cited title and venue (Machine Learning 111:1817) not found in Crossref; the closest work is ESWA 2021 with a different title",
+     "reviewIndex": 51
+    },
+    {
+     "n": 32,
+     "verdict": "metadata_error",
+     "raw": "Tyler M. Tomita, James Browne, Cencheng Shen, Jaewon Chung, Jesse L. Patsolic, Benjamin Falk, Jason Yim, Carey E. Priebe, Randal Burns, Mauro Maggioni, and Joshua T. Vogelstein. Sparse projection oblique Randomer Forests. Journal of Machine Learning Research, 21:1-39, 2020.",
+     "issues": [
+      "Year 2020 does not match the published record (2015/2015)"
+     ],
+     "match": {
+      "source": "semanticscholar",
+      "title": "Sparse Projection Oblique Randomer Forests",
+      "authors": [
+       "Tomita",
+       "Browne",
+       "Shen",
+       "Chung",
+       "Patsolic",
+       "Falk"
+      ],
+      "years": [
+       2015,
+       2015
+      ],
+      "venue": "Journal of machine learning research"
+     },
+     "judgement": "false: index year is the 2015 preprint; JMLR published it in 2020",
+     "reviewIndex": 52
+    }
+   ]
+  },
+  {
+   "source": "arXiv",
+   "cat": "physics.chem-ph",
+   "id": "2611.25052v1",
+   "title": "MAPPA: Mapping of Atoms by Progressive Pattern Assembly with Molecular Symmetry",
+   "file": "physics.chem-ph_2611.25052v1.pdf",
+   "refsParsed": 41,
+   "pages": 23,
+   "refs": 41,
+   "citances": 0,
+   "style": "unknown",
+   "parseMs": 519,
+   "verifyMs": 90761,
+   "counts": {
+    "verified": 39,
+    "verified_minor": 2
+   },
+   "coverage": 1,
+   "unverifiableShare": 0,
+   "uncheckedShare": 0,
+   "flagged": 0,
+   "flags": []
+  },
+  {
+   "source": "arXiv",
+   "cat": "gr-qc",
+   "id": "2611.25786v1",
+   "title": "Phase transitions in self-gravitating objects and black holes: Common properties and interpretations",
+   "file": "gr-qc_2611.25786v1.pdf",
+   "refsParsed": 18,
+   "pages": 14,
+   "refs": 18,
+   "citances": 14,
+   "style": "numeric",
+   "parseMs": 203,
+   "verifyMs": 63507,
+   "counts": {
+    "verified": 11,
+    "verified_minor": 4,
+    "unchecked": 1,
+    "unverifiable": 2
+   },
+   "coverage": 0.8333333333333334,
+   "unverifiableShare": 0.1111111111111111,
+   "uncheckedShare": 0.05555555555555555,
+   "flagged": 0,
+   "flags": []
+  },
+  {
+   "source": "PLOS ONE",
+   "id": "10.1371/journal.pone.0347190",
+   "title": "Perceived community acceptance on maternal and newborns care continuum and its correlates in Ethiopia",
+   "published": "2026-11-19T00:00:00Z",
+   "file": "plos_10_1371_journal_pone_0347190.pdf",
+   "refsParsed": 75,
+   "pages": 22,
+   "refs": 75,
+   "citances": 67,
+   "style": "numeric",
+   "parseMs": 385,
+   "verifyMs": 156957,
+   "counts": {
+    "unverifiable": 5,
+    "verified": 52,
+    "unchecked": 6,
+    "metadata_error": 7,
+    "verified_minor": 5
+   },
+   "coverage": 0.76,
+   "unverifiableShare": 0.06666666666666667,
+   "uncheckedShare": 0.08,
+   "flagged": 7,
+   "flags": [
+    {
+     "n": 16,
+     "verdict": "metadata_error",
+     "raw": "16. Wood N, Shiferaw S. The impact of partner autonomy constraints on women’s health-seeking across the maternal and newborn continuum of care. 2022.",
+     "issues": [
+      "Incomplete author list: 4 of 6 authors omitted without “et al.”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "The impact of partner autonomy constraints on women's health-seeking across the maternal and newborn continuum of care",
+      "authors": [
+       "Wood",
+       "Yirgu",
+       "Karp",
+       "Tadesse",
+       "Shiferaw",
+       "Zimmerman"
+      ],
+      "years": [
+       2022
+      ],
+      "venue": "eClinicalMedicine",
+      "doi": "10.1016/j.eclinm.2022.101715"
+     },
+     "judgement": "real: 2 of 5 authors listed, without \"et al.\"",
+     "reviewIndex": 53
+    },
+    {
+     "n": 20,
+     "verdict": "metadata_error",
+     "raw": "20. Moran AC. Assessing the continuum of care pathway for maternal health in South Asia and sub-Saharan Africa. Maternal and child health journal. 2016;20(2):281-9.",
+     "issues": [
+      "Incomplete author list: 2 of 3 authors omitted without “et al.”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Assessing the Continuum of Care Pathway for Maternal Health in South Asia and Sub-Saharan Africa",
+      "authors": [
+       "Singh",
+       "Story",
+       "Moran"
+      ],
+      "years": [
+       2015,
+       2016
+      ],
+      "venue": "Maternal and Child Health Journal",
+      "doi": "10.1007/s10995-015-1827-6"
+     },
+     "judgement": "real: only the last of 3 authors listed (Singh K, Story WT omitted)",
+     "reviewIndex": 54
+    },
+    {
+     "n": 22,
+     "verdict": "metadata_error",
+     "raw": "22. Chaka EE, Parsaeian M, Majdzadeh R. Factors Associated with the Completion of the Continuum of Care for Maternal, Newborn, and Child Health Services in Ethiopia. Multilevel Model Analysis. Int J Prev Med. 2019;10:136. https://doi.org/10.4103/ijpvm.IJPVM_26_19 PMID: 31516677",
+     "issues": [
+      "Published in “International Journal of Preventive Medicine”, not “Multilevel Model Analysis. Int J Prev Med”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Factors Associated with the Completion of the Continuum of Care for Maternal, Newborn, and Child Health Services in Ethiopia. Multilevel Model Analysis",
+      "authors": [
+       "Chaka",
+       "Parsaeian",
+       "Majdzadeh"
+      ],
+      "years": [
+       2019,
+       2020
+      ],
+      "venue": "International Journal of Preventive Medicine",
+      "doi": "10.4103/ijpvm.ijpvm_26_19"
+     },
+     "judgement": "false: title cut at \"?\" or \".\" by the parser; the rest read as the venue",
+     "reviewIndex": 55
+    },
+    {
+     "n": 51,
+     "verdict": "metadata_error",
+     "raw": "51. Do Mai, Kurimoto N. Women’s empowerment and choice of contraceptive methods in selected African countries. Int Perspect Sex Reprod Health. 2012;38(1):23-33. https://doi.org/10.1363/3802312 PMID: 22481146",
+     "issues": [
+      "Author list does not match the published work: Mai not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Women’s Empowerment and Choice of Contraceptive Methods in Selected African Countries",
+      "authors": [
+       "Do",
+       "Kurimoto"
+      ],
+      "years": [
+       2012
+      ],
+      "venue": "International Perspectives on Sexual and Reproductive Health",
+      "doi": "10.1363/3802312"
+     },
+     "judgement": "false: author written \"Do Mai\" (given name in full) read as surname Mai",
+     "reviewIndex": 56
+    },
+    {
+     "n": 52,
+     "verdict": "metadata_error",
+     "raw": "52. Rimon JG 2nd, Tsui AO. Regaining Momentum in Family Planning. Glob Health Sci Pract. 2018;6(4):626-8. https://doi.org/10.9745/ GHSP-D-18-00483 PMID: 30591572",
+     "issues": [
+      "Author list does not match the published work: nd not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Regaining Momentum in Family Planning",
+      "authors": [
+       "Rimon",
+       "Tsui"
+      ],
+      "years": [
+       2018
+      ],
+      "venue": "Global Health: Science and Practice",
+      "doi": "10.9745/ghsp-d-18-00483"
+     },
+     "judgement": "false: suffix \"2nd\" read as an author",
+     "reviewIndex": 57
+    },
+    {
+     "n": 57,
+     "verdict": "metadata_error",
+     "raw": "57. Fedral Democratic Republic of Ethiopia Health Minister. National healthcare quality and safety strategy (NQSS), 2021 -25. 2021.",
+     "issues": [
+      "Year 2021 does not match the published record (2026)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "The Federal Democratic Republic of Ethiopia",
+      "authors": [
+       "Fund"
+      ],
+      "years": [
+       2026
+      ],
+      "doi": "10.5089/9781451812725.002.a001"
+     },
+     "judgement": "false: government strategy document matched to an unrelated record",
+     "reviewIndex": 58
+    },
+    {
+     "n": 62,
+     "verdict": "metadata_error",
+     "raw": "62. Gurara M, Muyldermans K, Jacquemyn Y, Van Geertruyden J-P, Draulans V. Traditional birth attendants’ roles and homebirth choices in Ethiopia: A qualitative study. Women Birth. 2020;33(5):e464-72. https://doi.org/10.1016/j.wombi.2019.09.004 PMID: 31699461",
+     "issues": [
+      "Author list does not match the published work: J-P not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Traditional birth attendants’ roles and homebirth choices in Ethiopia: A qualitative study",
+      "authors": [
+       "Gurara",
+       "Muyldermans",
+       "Jacquemyn",
+       "Van geertruyden",
+       "Draulans"
+      ],
+      "years": [
+       2020,
+       2019
+      ],
+      "venue": "Women and Birth",
+      "doi": "10.1016/j.wombi.2019.09.004"
+     },
+     "judgement": "false: hyphenated initials \"J-P\" read as an author",
+     "reviewIndex": 59
+    }
+   ]
+  },
+  {
+   "source": "PLOS ONE",
+   "id": "10.1371/journal.pone.0355629",
+   "title": "Entrepreneurial exit pathways in Italy: Evidence from GEM Adult Population Survey data, 2007–2025",
+   "published": "2026-11-19T00:00:00Z",
+   "file": "plos_10_1371_journal_pone_0355629.pdf",
+   "refsParsed": 23,
+   "pages": 18,
+   "refs": 23,
+   "citances": 14,
+   "style": "numeric",
+   "parseMs": 473,
+   "verifyMs": 56111,
+   "counts": {
+    "metadata_error": 4,
+    "verified": 19
+   },
+   "coverage": 0.8260869565217391,
+   "unverifiableShare": 0,
+   "uncheckedShare": 0,
+   "flagged": 4,
+   "flags": [
+    {
+     "n": 1,
+     "verdict": "metadata_error",
+     "raw": "1. Gimeno J, Folta TB, Cooper AC, Woo CY. Survival of the fittest? Entrepreneurial human capital and the persistence of underperforming firms. Adm Sci Q. 1997;42(4):750. https://doi.org/10.2307/2393656",
+     "issues": [
+      "Published in “Administrative Science Quarterly”, not “Entrepreneurial human capital and the persistence of underperforming firms. Adm Sci Q”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Survival of the Fittest? Entrepreneurial Human Capital and the Persistence of Underperforming Firms",
+      "authors": [
+       "Gimeno",
+       "Folta",
+       "Cooper",
+       "Woo"
+      ],
+      "years": [
+       1997,
+       2006
+      ],
+      "venue": "Administrative Science Quarterly",
+      "doi": "10.2307/2393656"
+     },
+     "judgement": "false: title cut at \"?\" or \".\" by the parser; the rest read as the venue",
+     "reviewIndex": 60
+    },
+    {
+     "n": 8,
+     "verdict": "metadata_error",
+     "raw": "8. Sánchez-Escobedo MC, Fernández-Portillo A, Díaz-Casero JC, Hernández-Mogollón R. Research in entrepreneurship using GEM data. Approach to the state of affairs in gender studies. Eur J Manag Bus Econ. 2016;25(3):150-60. https://doi.org/10.1016/j.redeen.2016.09.002",
+     "issues": [
+      "Published in “European Journal of Management and Business Economics”, not “Approach to the state of affairs in gender studies. Eur J Manag Bus Econ”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Research in entrepreneurship using GEM data. Approach to the state of affairs in gender studies",
+      "authors": [
+       "Sánchez-Escobedo",
+       "Fernández-Portillo",
+       "Díaz-Casero",
+       "Hernández-Mogollón"
+      ],
+      "years": [
+       2016
+      ],
+      "venue": "European Journal of Management and Business Economics",
+      "doi": "10.1016/j.redeen.2016.09.002"
+     },
+     "judgement": "false: title cut at \"?\" or \".\" by the parser; the rest read as the venue",
+     "reviewIndex": 61
+    },
+    {
+     "n": 13,
+     "verdict": "metadata_error",
+     "raw": "13. Chang Y-Y, Chen M-H. Creative entrepreneurs’ creativity, opportunity recognition, and career success: Is resource availability a double-edged sword? Eur Manag J. 2020;38(5):750-62. https://doi.org/10.1016/j.emj.2020.03.004",
+     "issues": [
+      "Author list does not match the published work: Y-Y, M-H not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Creative entrepreneurs’ creativity, opportunity recognition, and career success: Is resource availability a double-edged sword?",
+      "authors": [
+       "Chang",
+       "Chen"
+      ],
+      "years": [
+       2020
+      ],
+      "venue": "European Management Journal",
+      "doi": "10.1016/j.emj.2020.03.004"
+     },
+     "judgement": "false: hyphenated initials \"Y-Y\", \"M-H\" read as authors",
+     "reviewIndex": 62
+    },
+    {
+     "n": 14,
+     "verdict": "metadata_error",
+     "raw": "14. Georgiou A, Murillo D. From strangers to social collectives? Sensemaking and organizing in response to a pandemic. Eur Manag J. 2023;41(4):621-33. https://doi.org/10.1016/j.emj.2023.05.005 PMID: 37362858",
+     "issues": [
+      "Published in “European Management Journal”, not “Sensemaking and organizing in response to a pandemic. Eur Manag J”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "From strangers to social collectives? Sensemaking and organizing in response to a pandemic",
+      "authors": [
+       "Georgiou",
+       "Murillo"
+      ],
+      "years": [
+       2023
+      ],
+      "venue": "European Management Journal",
+      "doi": "10.1016/j.emj.2023.05.005"
+     },
+     "judgement": "false: title cut at \"?\" or \".\" by the parser; the rest read as the venue",
+     "reviewIndex": 63
+    }
+   ]
+  }
+ ],
+ "finishedAt": "2026-11-20T11:09:16.774Z",
+ "hostStats": {
+  "api.crossref.org": {
+   "200": 992,
+   "404": 5,
+   "429": 787,
+   "cache": 1
+  },
+  "api.semanticscholar.org": {
+   "200": 63,
+   "404": 74,
+   "429": 382
+  },
+  "api.openalex.org": {
+   "200": 100,
+   "429": 1
+  },
+  "www.ebi.ac.uk": {
+   "200": 50,
+   "503": 15,
+   "error": 47
+  },
+  "api.datacite.org": {
+   "200": 35,
+   "404": 5
+  },
+  "api.github.com": {
+   "200": 2
+  },
+  "doi.org": {
+   "404": 3
+  }
+ },
+ "totals": {
+  "papers": 14,
+  "refs": 465,
+  "verified": 362,
+  "flagged": 63,
+  "unverifiable": 23,
+  "unchecked": 17,
+  "verifySeconds": 1166
+ },
+ "review": {
+  "judgedBy": "manual, 2026-11-20, every flag checked against the index record; \"not found\" against arXiv/publisher pages; arXiv IDs and the E665 titles checked on arxiv.org",
+  "tally": {
+   "real": 7,
+   "uncertain": 2,
+   "false": 54
+  },
+  "byCause": {
+   "not found while Semantic Scholar was rate-limited; the work exists": 11,
+   "two-column text interleaved: two references merged or cut": 5,
+   "collaboration name as author vs. member list in the record": 5,
+   "bracketed author-year label \"[Name et al., 2016]\" read as part of the author list": 4,
+   "title cut at \"?\" or \".\" by the parser; the rest read as the venue": 4,
+   "reference without a title (APS style) not found by author, journal, volume and page; the work exists; labelled fabricated": 2,
+   "reference without a title (APS style) not found by author, journal, volume and page; the work exists": 2,
+   "accents split from letters in PDF text; matched to an unrelated record": 2,
+   "two-column text interleaved: two references merged or cut; labelled fabricated": 1,
+   "name hyphenated across a line break (\"Hutsebaut- Buysse\")": 1,
+   "ICML 2026 proceedings not indexed yet; only the preprint found": 1,
+   "the word \"in\" (chapter in an edited book) read as an author": 1,
+   "index record has no venue": 1,
+   "journal translation name (\"Sov. Phys. JETP\" vs \"Journal of Experimental and Theoretical Physics\")": 1,
+   "matched to the HEPData record (2016) instead of the article": 1,
+   "accent split from its letter in PDF text (\"Sta´ sto\")": 1,
+   "index record lists a third name (Neunzert) not on the paper": 1,
+   "title word read as an author (ACM \"Author. Year. Title\" style)": 1,
+   "arXiv paper renamed after v1; the cited v1 title is right": 1,
+   "\"Supplement_2\" read as an author (ACM style)": 1,
+   "index year is the 2021 preprint; JMLR published it in 2024": 1,
+   "index year is the 2015 preprint; JMLR published it in 2020": 1,
+   "author written \"Do Mai\" (given name in full) read as surname Mai": 1,
+   "suffix \"2nd\" read as an author": 1,
+   "government strategy document matched to an unrelated record": 1,
+   "hyphenated initials \"J-P\" read as an author": 1,
+   "hyphenated initials \"Y-Y\", \"M-H\" read as authors": 1
+  },
+  "missSample": {
+   "checked": 41,
+   "missed": 0,
+   "note": "3 verified references per paper (seeded; cs.RO had only 2 verified); none contained an error. Two notes: eess.SY [7] was verified from a garbled (interleaved) text, and PLOS 0347190 [33] (WHO 2015 report) was matched to the 2013 edition record."
+  },
+  "frozenCommit": "61f1844 (worktree); the first launch crashed on import (no node_modules in the worktree) before any request was made"
+ }
+}

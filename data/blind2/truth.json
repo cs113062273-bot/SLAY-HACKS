@@ -1,0 +1,58 @@
+{
+ "cs.CR_2611.25479v1.pdf": {
+  "n": 25,
+  "how": "cite"
+ },
+ "cs.RO_2611.25462v1.pdf": {
+  "n": 19,
+  "how": "cite"
+ },
+ "cs.DB_2611.25416v1.pdf": {
+  "n": 23,
+  "how": "cite"
+ },
+ "physics.optics_2611.25432v1.pdf": {
+  "n": 23,
+  "how": "cite"
+ },
+ "cond-mat.stat-mech_2611.25491v1.pdf": {
+  "n": 118,
+  "how": "bbl"
+ },
+ "hep-ph_2611.25910v1.pdf": {
+  "n": null,
+  "how": null
+ },
+ "math.AP_2611.26051v1.pdf": {
+  "n": null,
+  "how": null
+ },
+ "q-bio.GN_2611.22256v1.pdf": {
+  "n": 25,
+  "how": "cite"
+ },
+ "eess.SY_2611.25962v1.pdf": {
+  "n": 36,
+  "how": "cite"
+ },
+ "stat.ML_2611.25936v1.pdf": {
+  "n": 39,
+  "how": "cite"
+ },
+ "physics.chem-ph_2611.25052v1.pdf": {
+  "n": 41,
+  "how": "bbl"
+ },
+ "gr-qc_2611.25786v1.pdf": {
+  "n": 32,
+  "how": "cite"
+ },
+ "plos_10_1371_journal_pone_0347190.pdf": {
+  "n": 75,
+  "how": "jats"
+ },
+ "plos_10_1371_journal_pone_0355629.pdf": {
+  "n": 23,
+  "how": "jats"
+ }
+}

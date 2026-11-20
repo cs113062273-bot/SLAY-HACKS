@@ -4,6 +4,8 @@
 
 Built for SLAY HACKS 2026.
 
+Try [Veracite on GitHub Pages](https://cs113062273-bot.github.io/SLAY-HACKS/). Freeze `497cb22` deployed successfully on November 20. Production acceptance evidence is recorded in `submission/VALIDATION.md`. Local setup is below.
+
 ## The problem
 
 Large language models invent references, and the invented ones survive review:
@@ -31,7 +33,7 @@ Existing checkers test whether a title exists. On a public benchmark of 104 manu
 
 ## Results
 
-In short: on the two public reference benchmarks Veracite has the fewest false alarms of the free tools evaluated. On 14 brand-new papers in a frozen blind test, though, 13.5% of correct references were flagged, mostly through PDF parsing problems that the benchmarks (which supply clean reference strings) never exercise. Those causes have since been fixed with general rules, and a second blind set is being used to measure the result. All numbers below come from the shipped code and can be reproduced.
+On the public reference benchmarks, Veracite outperformed the evaluated free baselines. Frozen end-to-end PDF audits were weaker: false alarms were 86/635 references (13.5%) in set 1 and 54/465 (11.6%) in set 2. Those errors informed later fixes, so neither set now independently evaluates the current parser. A third audit is pre-registered in `data/blind3/PROTOCOL.md`. Benchmark provenance matters: Zenodo and HALLMARK dev were rechecked on the current core; HALLMARK test .959 is a historical held-out run, and claim-model results concern the retained model described below.
 
 ### Reference verification: same 104 references the five leading tools were evaluated on
 
@@ -48,7 +50,7 @@ Badalova & Mayr (2026), Zenodo [10.5281/zenodo.21457492](https://doi.org/10.5281
 
 Reproduce: `cd app && npx tsx scripts/bench-refs.ts`. The two remaining false positives are a workshop poster that no index covers and one entry whose cited co-authors do not match the paper. This set was used during development, so the held-out result below is the fairer test.
 
-### Held-out: HALLMARK v1.2 `test_public` (scored once)
+### Historical held-out result: HALLMARK v1.2 `test_public` (scored once)
 
 HALLMARK (Reizinger et al., arXiv:2607.18360) has 825 test citations: 526 hallucinated across 14 types, and 299 valid. Veracite was developed on a stratified sample of `dev_public` and run on `test_public` once. Published results on the same split:
 
@@ -61,7 +63,7 @@ HALLMARK (Reizinger et al., arXiv:2607.18360) has 825 test citations: 526 halluc
 | bibtex-updater | no | .835 | .074 | .890 |
 | GPT-5.4 | yes | .774 | .221 | .815 |
 
-Veracite is the strongest system that needs no paid LLM, and it beats every LLM evaluated on its own. One paid agentic cascade scores higher. During this run, OpenAlex's free daily allowance was exhausted, so Veracite ran with one index fewer than usual.
+Among these evaluated systems, the historical Veracite run has the highest F1 without a paid LLM and exceeds each standalone LLM result. One paid agentic cascade scores higher. During this run, OpenAlex's free daily allowance was exhausted, so Veracite ran with one index fewer than usual.
 
 Per type: perfect on fabricated DOIs, future dates, hybrid fabrications, merged citations, placeholder authors, plausible fabrications and preprint-as-published. Weakest on nonexistent venues (26/37) and near-miss titles (34/40). Reproduce: `cd app && npx tsx scripts/bench-hallmark.ts --split test_public`.
 
@@ -98,7 +100,27 @@ This is much worse than the benchmark results, and it is the honest number for r
 
 Two real papers (Lewis et al. 2020 on retrieval-augmented generation, and the GDPR) were labelled *fabricated* while an index was down. Crossref answered HTTP 429 963 times and Semantic Scholar 412 times during the run, because six papers ran at once; a single user checking one paper causes far fewer. Every flag, with the record it was compared with and our judgement, is in `data/blind/results.json`; the miss sample is `data/blind/miss_sample.txt`. Reproduce with `cd app && npx tsx scripts/blind-test.ts`.
 
-**After blind test 1.** Each failure class was fixed with a general rule (commits `3f1aad6` and `532c978`): parsing debris is no longer counted as an author; years glued onto titles, text that runs past the title, symbols lost in extraction and a title cut at "?" no longer count as title changes; a DOI that the matched record's DOI extends is treated as cut off; a "wrong identifier" is not reported when the record's full title is written in the reference; journal abbreviations of words such as "Association" are recognised; *fabricated* now requires both broad indexes (Semantic Scholar and OpenAlex) to have answered, otherwise the reference is *not found* or *unchecked*; and reference lists without a heading (REVTeX, AIP) are now found. None of this changed any benchmark result (Zenodo F1 .971, HALLMARK dev F1 .986, identical flags on the 11 development papers). The heading-less lists were fixed using only the four failed PDFs of blind test 1. As an independent check, the seven PDFs that blind set 2 had to skip for the same reason (never opened before) were parsed once after the fix: all seven now yield their reference lists (15 to 58 references each). Blind test 1 itself cannot measure the fixes, because it was used to find the problems. A second blind set (14 papers from 12 further fields, selected before anything was run on it: `data/blind2/manifest.json`) {{BLIND2_README}}
+**After blind test 1.** Each failure class was fixed with a general rule (commits `3f1aad6` and `532c978`): parsing debris is no longer counted as an author; years glued onto titles, text that runs past the title, symbols lost in extraction and a title cut at "?" no longer count as title changes; a DOI that the matched record's DOI extends is treated as cut off; a "wrong identifier" is not reported when the record's full title is written in the reference; journal abbreviations of words such as "Association" are recognised; *fabricated* now requires both broad indexes (Semantic Scholar and OpenAlex) to have answered, otherwise the reference is *not found* or *unchecked*; and reference lists without a heading (REVTeX, AIP) are now found. None of this changed any benchmark result (Zenodo F1 .971, HALLMARK dev F1 .986, identical flags on the 11 development papers). The heading-less lists were fixed using only the four failed PDFs of blind test 1. As an independent check, the seven PDFs that blind set 2 had to skip for the same reason (never opened before) were parsed once after the fix: all seven now yield their reference lists (15 to 58 references each). Blind test 1 itself cannot measure the fixes, because it was used to find the problems. A second blind set (14 papers from 12 further fields, selected before anything was run on it: `data/blind2/manifest.json`) completed at commit `61f1844`. Its unchanged frozen results are below.
+
+### Blind test 2 and current parser regression
+
+| Metric | Frozen set 2 |
+|---|---|
+| Candidate PDFs / extracted papers | 21 / 14; seven zero-reference PDFs were replaced under the original selection rule |
+| Extracted references | 465 |
+| Verified coverage | 362/465 (77.8%) |
+| Flags | 63: 7 real errors, 54 false alarms, 2 uncertain |
+| Flag precision | 7/63 (11.1%); uncertain flags remain in the denominator |
+| False alarms / all extracted references | 54/465 (11.6%); this is not a conditional false-positive rate |
+| Unverifiable / unchecked | 23 (4.9%) / 17 (3.7%) |
+| Sampled misses | 0/41 verified references; not evidence of zero misses overall |
+| Live verification time | median 74 seconds per paper, range 54–157 seconds |
+
+Artifacts: `data/blind2/results.json`, `miss_sample.txt`, `manifest.json`. The frozen set measured the earlier code; subsequent development regressions are not blind results.
+
+The parser development manifest contains 38 PDF files representing **37 distinct papers** (one cross-listed arXiv paper appeared twice). Before deduplication, count completeness was 1890/1896 (99.7%). Deduplicated count completeness is **1833/1839 (99.7%)**, with no zero-reference PDFs. Field-health rates are no author 0.9%, no year 1.1%, debris author 3.3%; output is in `data/parser_dev/freeze-eval-unique.txt`; these are development measurements and missing-field/debris heuristics, not independently judged field accuracy. Some APS references omit titles in the source, so “no title” alone is not an error.
+
+On the 25 papers in spent sets 1 and 2 with available source/JATS counts, current count completeness is 693/706 (98.2%) and 477/479 (99.6%), compared with the original 599/706 (84.8%) and 359/479 (74.9%). Counts are capped per paper and several source counts are only citation-key approximations. In particular, `cond-mat.mtrl-sci_2611.24759v1.pdf` has main labels [1]–[90] plus a separate supplement; its 103-key estimate mixes scopes. `gr-qc_2611.25786v1.pdf` has 32 labels, including explanatory note [19]; the parser returns 31 bibliographic entries. We retain these denominator discrepancies rather than treating them as proven parser errors or changing them to obtain a better score. The product currently audits the main bibliography, not separately numbered supplementary bibliographies.
 
 ### Development papers from six fields
 
@@ -166,6 +188,7 @@ Veracite is a static site. There is no Veracite server, account, database or API
 
 - **Only GET requests, and only bibliographic strings.** The audit found no POST requests. It also slid a 7-word window over every sentence of the document body and found none of them in any URL or request body.
 - **Free tiers only.** All indexes are used anonymously within their free limits. The optional OpenAlex and Semantic Scholar keys (Settings) are the user's own. They are stored in that browser's `localStorage` only and never leave it except to those two hosts. The repository and the built site contain no credentials.
+- **Samples and live inputs are separate.** Recorded sample responses use an in-memory cache limited to that sample audit. A later upload in the same tab cannot use those recorded responses. Live inputs use public indexes and may reuse actual responses previously obtained in that browser's persistent cache.
 - **Graceful degradation.** Every host has per-host concurrency limits, retries with backoff, honours `Retry-After`, and has a circuit breaker. If OpenAlex reports a spent daily allowance it is switched off for the session; nothing is ever paid for automatically. A reference whose indexes did not answer is reported as *unchecked* (never as fabricated) and can be re-checked with one click. Claim checking runs fully offline once the models are cached.
 - **No GPU needed.** Inference runs on WebAssembly (multi-threaded when the page is cross-origin isolated, which a small service worker arranges). WebGPU is not required.
 
@@ -219,7 +242,7 @@ app/scripts       bench-refs.ts · bench-hallmark.ts · build-seeds.ts
 ml/               Citation-Integrity loader, retrieval experiments, verifier training, ONNX export
 ```
 
-The same TypeScript core runs in the browser and in Node, so every benchmark number measures the shipped code.
+The browser and Node evaluations share the same TypeScript core. Historical frozen results measure the commits recorded with those runs; they do not automatically describe later parser changes.
 
 ## Data and licenses
 

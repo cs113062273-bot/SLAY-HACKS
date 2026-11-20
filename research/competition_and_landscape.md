@@ -50,3 +50,9 @@
 - CORS OK: Crossref (reliable), Semantic Scholar (anonymous → frequent 429), OpenAlex (singleton by DOI fine; anonymous search paused under load; free key available), Europe PMC, NCBI eutils (3 rps), doi.org handles API, **arxiv.org/pdf (ACAO *)**, Unpaywall (needs email param).
 - No CORS: export.arxiv.org API, DBLP.
 - Local HW: RTX 3060 Laptop 6 GB, i7-12700H, 16 GB RAM; Python 3.11 + torch 2.7.1; Node 24.
+
+## Official recheck — November 20, 2026
+
+[Overview](https://slayy-hacks.devpost.com/) and [official rules](https://slayy-hacks.devpost.com/rules) still show the December 7, 17:00 EST deadline and the two differing rubrics above. The overview now shows 453 participants; its prize widget totals $4,500 while prose/rules still say $5,000. Do not use participant or prize totals as product claims. Only Dr. Aliza Bano is listed; the earlier background match remains unconfirmed and is not treated as verified identity.
+
+Rules require accessible demo/video, screenshots, source and accurate disclosures. The public demo's initial 404 was a material submission blocker; deployment of `497cb22` now succeeds. Production acceptance and an independently measured false-alarm rate take priority over further parser formats or model training.

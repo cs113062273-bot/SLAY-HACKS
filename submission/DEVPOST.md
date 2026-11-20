@@ -11,9 +11,9 @@ Veracite
 A free citation-integrity audit that runs in your browser. It catches fabricated and misattributed references and checks whether each cited work supports the claim, showing the evidence each time.
 
 ## Try it
-- **Live demo:** {{LIVE_URL}}. No account, no install, no API key. Click a sample on the right, or drop in a PDF, Word file, BibTeX file or arXiv ID.
+- **Live demo:** https://cs113062273-bot.github.io/SLAY-HACKS/. No account, no install, no API key. Click a sample on the right, or drop in a PDF, Word file, BibTeX file or arXiv ID.
 - **Source:** https://github.com/cs113062273-bot/SLAY-HACKS
-- Best on a desktop Chrome, Edge or Firefox. The first full audit downloads a 136 MB model once; **Quick check** skips it.
+- Best on a desktop Chrome, Edge or Firefox. The first full audit downloads 136 MB of models once; **Quick check** skips it.
 
 ---
 
@@ -36,7 +36,7 @@ Drop in a paper (PDF, DOCX, BibTeX, pasted text or an arXiv ID). Veracite:
 5. **Checks claim support.** For each citing sentence it retrieves the most relevant passages of the cited work and runs a fine-tuned verifier. It shows those passages and labels the claim *Supported*, *Needs review* or *Inconclusive*.
 6. **Fixes what it can.** A per-field diff against the published record, a suggested correction, one-click corrected BibTeX, and Markdown / JSON audit reports.
 
-There are two modes: **Quick check** (references only, results in seconds) and **Full audit** (references, then claim support). Results stream in as they arrive.
+There are two modes: **Quick check** (references only) and **Full audit** (references, then claim support). Results stream in as they arrive.
 
 ## How we built it
 
@@ -55,11 +55,11 @@ There are two modes: **Quick check** (references only, results in seconds) and *
 | HALLMARK v1.2 test, 825 citations, held out | **F1 .959**, no LLM | Claude Sonnet 4.6 alone .916; paid agent cascade .986 |
 | Citation-Integrity claim support, test split | macro-F1 .486, micro .634, in the browser | MultiVerS (GPU) .52 / .59; GPT-4 .45 / .65 |
 | Blind test 1: 14 new papers from 14 fields, code frozen, every flag checked by hand | 635 references: 80% confirmed, 5 real errors found, **86 false alarms (13.5% of references)**, 0 misses in a random sample of 42 | n/a (no published tool has been run on these papers) |
-| Blind test 2: 14 more papers from 12 further fields, after the fixes | {{BLIND2_SUMMARY}} | n/a |
+| Blind test 2: 14 more papers from 12 further fields, after the fixes | 465 references: 77.8% verified, 7 real errors, 54 false alarms (11.6% of references), 2 uncertain flags; 0/41 sampled misses | n/a |
 
 ## Challenges we ran into
 
-- **False alarms are the real enemy, and benchmarks hide them.** Our first run on six unseen papers flagged 95 references, and only 5 were real errors. After general fixes, the same papers produced 7 flags, 6 of them real. Then we froze the code and ran a blind test on 14 brand-new papers from 14 fields, chosen by a rule fixed before we opened any of them: 92 flags, only 5 real. Our fixes had fitted the papers we had seen. Almost every false alarm was a parsing problem, not a lookup problem: words of a title read as author names, a year glued onto a title, symbols lost in PDF text, a DOI split across lines, and references that were not found while two free indexes were rate-limiting us. Four physics PDFs gave no reference list at all, because REVTeX prints none of the usual headings. We fixed each class with a general rule, confirmed that no benchmark moved, and picked a second blind set before running anything on it. {{BLIND2_SENTENCE}}
+- **False alarms are the real enemy, and benchmarks hide them.** Our first run on six unseen papers flagged 95 references, and only 5 were real errors. After general fixes, the same papers produced 7 flags, 6 of them real. Then we froze the code and ran a blind test on 14 brand-new papers from 14 fields, chosen by a rule fixed before we opened any of them: 92 flags, only 5 real. Our fixes had fitted the papers we had seen. Almost every false alarm was a parsing problem, not a lookup problem: words of a title read as author names, a year glued onto a title, symbols lost in PDF text, a DOI split across lines, and references that were not found while two free indexes were rate-limiting us. Four physics PDFs gave no reference list at all, because REVTeX prints none of the usual headings. We fixed each class with a general rule, confirmed that no benchmark moved, and picked a second blind set before running anything on it. The second frozen run still produced 54 false alarms among 465 references (11.6%). Later fixes are development work; a third frozen audit will measure them independently.
 - **Free APIs fail in interesting ways.** Crossref's throttle responses carry no CORS headers, so they look like network errors. OpenAlex's anonymous allowance is a daily dollar budget. A service-worker reload on first visit interrupted IndexedDB and made every lookup hang. Each one is now handled, and a reference whose indexes did not answer is shown as *unchecked*, never as fabricated.
 - **Shrinking a 700 MB model to run in a browser tab.** Dynamic int8 quantization destroyed DeBERTa (macro-F1 .49 → .11), because it quantizes activations inside the disentangled attention. 4-bit weight-only quantization kept accuracy intact.
 - **Being honest with ourselves.** A retrained verifier looked clearly better on our dev set (+.10 macro-F1, statistically significant). It was worse on the two held-out sets, so we withdrew it, and the README documents that episode.
@@ -79,16 +79,17 @@ Precision matters more than recall for a tool like this: one wrong accusation co
 
 - Per-sentence claim checks against full text for more publishers through Europe PMC and Unpaywall.
 - A reviewer mode that audits a batch of submissions and exports one table.
-- Better coverage for physics and mathematics reference styles (REVTeX, AMS).
+- Independent field-accuracy evaluation of the newly added REVTeX and AMS parser support.
 - A browser extension for Overleaf and Google Docs.
 
 ## Limitations (disclosed)
 
 - Claim support is weakest on subtle misrepresentation ("not substantiated"), a class where GPT-4 also fails. That is why the interface never states that verdict.
-- False alarms on new papers: in blind test 1 (before the fixes), 86 of 635 references (13.5%) were flagged although they were correct. Each flag shows the record it was compared with and the fields that differ, so a reader can dismiss a false alarm quickly, but it is still a false alarm.
+- False alarms on new papers: frozen set 1 had 86/635 (13.5%); frozen set 2 had 54/465 (11.6%). Later parser fixes await a third independent audit. Each flag shows the record it was compared with and the fields that differ, so a reader can dismiss a false alarm quickly, but it is still a false alarm.
+- Separately numbered supplementary bibliographies are not included in the main-bibliography audit.
 - Papers that cite with superscript numbers (common in AIP physics journals) get reference checks but no claim checks.
 - Coverage depends on public indexes. Archival, regional and very old literature is often *unverifiable*, and is reported that way.
-- Sample papers replay index responses recorded on 2026-11-19 so the demo is fast and repeatable. Uploaded papers are always checked live.
+- Sample papers replay index responses recorded on 2026-11-19 so the demo is fast and repeatable. Each sample uses an isolated cache. Uploads use live indexes and may reuse actual prior lookup responses from that browser, never the recorded sample snapshot.
 - The verifier was trained on SciFact (CC BY-NC 2.0), so the model is for non-commercial use.
 
 ## Built with
