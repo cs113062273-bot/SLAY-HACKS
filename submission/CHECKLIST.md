@@ -12,7 +12,7 @@ Source: slayy-hacks.devpost.com (rules and overview, checked 2026-11-18).
 | Problem and solution | drafted | done |
 | AI implementation (models, frameworks) | drafted, with model sizes and training data | done |
 | **Working demo link** with access instructions | waiting for GitHub Pages deploy | you approve the push |
-| Screenshots | `data/shots/` (landing, report, claim view, quick mode) | done; pick 3–5 |
+| Screenshots | `submission/shots/` at 1500×1000 (3:2): landing, fabricated reference, wrong identifier, wrong details, quick check, supported claim, needs-review claim, dark mode. Regenerate with `npx tsx scripts/shots.ts` | done; pick 4–6 |
 | **Source repository** with docs and setup steps | README.md; repo `cs113062273-bot/SLAY-HACKS` | you confirm account and visibility |
 | Disclose significant limitations and external dependencies | README "Responsible use" and DEVPOST "Limitations" | done |
 | Description matches what the product actually does (misrepresentation = disqualification) | every claim is tied to a reproducible script | done |
@@ -24,11 +24,11 @@ Source: slayy-hacks.devpost.com (rules and overview, checked 2026-11-18).
 |---|---|
 | 2–4 minute demo video | script in `submission/DEMO_SCRIPT.md`; **recording needs your approval** (SKILL.md rule) |
 | Built-with tags | listed in DEVPOST.md |
-| Thumbnail / cover image | use `data/shots/landing-modes.png` or a crop of the report |
+| Thumbnail / cover image | `submission/shots/3-wrong-identifier.png` (shows the core idea at a glance) |
 
 ## Before pressing Submit
 
-1. Open the live URL in a private window on a second machine: run all three samples, upload one PDF and one .bib.
+1. Run `VERACITE_URL=<live url> npx tsx scripts/deploy-check.ts` (checks cross-origin isolation, 404s and a full sample with claim support). Then open the live URL in a private window on a second machine: run all three samples, upload one PDF and one .bib.
 2. Run `VERACITE_URL=<live url> npx tsx scripts/privacy-audit.ts` against the live site: no POST requests, no document text in any request.
 3. Check that the Devpost text, README and landing page show the same numbers.
 4. Make the repository public (or confirm judges can access it).
