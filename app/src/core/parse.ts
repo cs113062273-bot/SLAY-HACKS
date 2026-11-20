@@ -278,7 +278,9 @@ export function parseReference(input: string): ParsedRef {
   const placeholders = detectPlaceholders(s);
   const { years, cited: year } = extractYears(s);
   const nowYear = new Date().getFullYear();
-  const future = [...s.replace(/https?:\/\/\S+|10\.\d{4,9}\/\S+/g, ' ').replace(/\b(?:issn|isbn|eissn)[:\s]*[\dxX-]+/gi, ' ').matchAll(/(?<![\d-])(20[3-9]\d)(?![\d-])/g)].map((m) => +m[1]).filter((y) => y > nowYear + 1);
+  const future = [...s.replace(/https?:\/\/\S+|10\.\d{4,9}\/\S+/g, ' ').replace(/\b(?:issn|isbn|eissn)[:\s]*[\dxX-]+/gi, ' ').matchAll(/(?<![\d-])(20[3-9]\d)(?![\d-])/g)].map((m) => +m[1]).filter((y) => y > nowYear + 1)
+    // a projection inside the title ("from 2019 to 2050") is not the publication year when a plausible year is cited
+    .filter((y) => y === year || !years.some((v) => v <= nowYear + 1));
   if (future.length) placeholders.push(`publication year ${future[0]} is in the future`);
 
   // text without urls/dois for title/author parsing

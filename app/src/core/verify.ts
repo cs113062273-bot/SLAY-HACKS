@@ -60,7 +60,7 @@ const VENUE_CANON: [string, RegExp][] = [
   ['CACM', /\bcacm\b|communications of the acm/],
 ];
 
-function canonVenues(...texts: (string | undefined)[]): Set<string> {
+export function canonVenues(...texts: (string | undefined)[]): Set<string> {
   const out = new Set<string>();
   for (const t of texts) {
     if (!t) continue;
@@ -133,6 +133,16 @@ function isOrgAuthor(c: Person, title?: string): boolean {
   return /^[A-Z0-9]{2,}$/.test(f) || /[a-z][A-Z]/.test(f) || /@/.test(f) || /\b(?:team|group|consortium|corporation|inc|ltd|foundation|institute|commission|organization|organisation|committee|association)\b/i.test(f) || (!!title && fold(title).includes(fold(f)));
 }
 
+function isParseDebris(c: Person, rec: WorkRecord): boolean {
+  const f = c.family.trim();
+  if (/^(?:arxiv|org|preprint|corr|abs|doi|url|https?|online|available)$/i.test(f)) return true;
+  if (!c.given && /^\p{Lu}{1,2}(?:-\p{Lu}{1,2})+\.?$/u.test(f)) return true;
+  const words = tokens(`${c.given ?? ''} ${f}`).filter((t) => t.length >= 3);
+  if (!words.length) return false;
+  const pool = new Set(tokens(`${rec.title} ${rec.venue ?? ''} ${(rec.venueAliases ?? []).join(' ')}`));
+  return words.every((t) => pool.has(t));
+}
+
 function alignAuthors(cited: Person[], etAl: boolean, rec: WorkRecord): AuthorAlign {
   // indexes sometimes list the same person twice ("Nielsen, S. F.; Nielsen, S. F.")
   const seenNames = new Set<string>();
@@ -173,6 +183,9 @@ function alignAuthors(cited: Person[], etAl: boolean, rec: WorkRecord): AuthorAl
         firstOk = true;
         return;
       }
+      // parsing debris, not a person: a split initial ("S-J"), an index label ("arXiv"), or words that all
+      // occur in the record's title or venue (the author/title boundary was misplaced)
+      if (isParseDebris(c, rec)) return;
       // a given name split off as its own "author" ("sarin, parth" → Parth Sarin)
       const cf = foldName(c.family);
       if (!c.given && R.some((r, ri) => used.has(ri) && !!r.given && fold(r.given).split(' ').some((g) => g.length > 2 && nameSim(g, cf) >= 0.9))) return;
@@ -458,6 +471,13 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
         checks.push({ field: 'identifier', status: 'na', cited: id, note: 'registered DOI, but its metadata is not in Crossref or DataCite' });
         continue;
       }
+      // a DOI cut at a line break ("10.1103/RevModPhys.87." for "…87.307"): the matched work's DOI extends it
+      const cut = id.startsWith('doi:') ? id.slice(4).toLowerCase().replace(/[.\-_/]+$/, '') : '';
+      const ext = cut ? aligned.find((x) => x.title >= 0.9 && x.rec.doi && x.rec.doi.toLowerCase().startsWith(cut) && x.rec.doi.length > cut.length) : undefined;
+      if (ext) {
+        checks.push({ field: 'identifier', status: 'minor', cited: id, found: ext.rec.doi, note: 'DOI appears cut off in the text (line break?)' });
+        continue;
+      }
       if (!failed.has('crossref') || !failed.has('datacite')) idProblems.push(`${id} does not resolve to any record`);
       checks.push({ field: 'identifier', status: 'mismatch', cited: id, note: 'identifier not found' });
       continue;
@@ -481,7 +501,9 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
       renamed = rec;
       continue;
     }
-    if (!tOk && !(p.title === undefined && aOk)) {
+    // the record's full title is written in the reference: the title split failed, the identifier is right
+    const titleInText = tokens(rec.title).length >= 3 && ` ${fold(p.clean)} `.includes(` ${fold(rec.title)} `) && aOk;
+    if (!tOk && !(p.title === undefined && aOk) && !titleInText) {
       idProblems.push(`${id} points to a different work: “${rec.title}”`);
       checks.push({ field: 'identifier', status: 'mismatch', cited: id, found: rec.title, note: 'identifier resolves to a different work' });
     } else {
@@ -703,7 +725,8 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
     } else {
       const answered = [...queried].filter((s) => !failed.has(s));
       const broadDown = ['semanticscholar', 'openalex'].every((s) => !queried.has(s as SourceName) || failed.has(s as SourceName)) && ['semanticscholar', 'openalex'].some((s) => queried.has(s as SourceName));
-      if (answered.length === 0 || (broadDown && !p.dois.length && !p.arxivIds.length)) {
+      // (an arXiv ID alone does not help: arXiv records are looked up through the same broad indexes)
+      if (answered.length === 0 || (broadDown && !p.dois.length && !idProblems.length)) {
         // an outage is not evidence against the reference
         verdict = 'unchecked';
         confidence = 0.5;
@@ -723,7 +746,8 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
       } else {
         // only call it fabricated when the broad-coverage indexes actually answered
         const majorDown = ['semanticscholar', 'openalex'].filter((s) => queried.has(s as SourceName) && failed.has(s as SourceName));
-        const strong = answered.length >= 2 && majorDown.length < 2 && !(majorDown.length && answered.length < 3);
+        // "fabricated" is the harshest label: require both broad-coverage indexes to have answered
+        const strong = answered.length >= 2 && majorDown.length === 0;
         verdict = strong ? 'fabricated' : 'not_found';
         confidence = strong ? 0.08 : 0.2;
         if (majorDown.length) issues.push(`${majorDown.map((s) => sourceLabel(s as SourceName)).join(' and ')} did not respond; re-run later to confirm`);
@@ -858,8 +882,41 @@ export function titleDiff(cited: string, found: string): { kind: 'identical' | '
   const cnt = new Map<string, number>();
   for (const t of A) cnt.set(t, (cnt.get(t) ?? 0) + 1);
   for (const t of B) cnt.set(t, (cnt.get(t) ?? 0) - 1);
-  const plus = [...cnt.entries()].filter(([, v]) => v > 0).map(([t]) => t);
-  const minus = [...cnt.entries()].filter(([, v]) => v < 0).map(([t]) => t);
+  // a year that only the cited "title" has was glued on by the parse ("Agent workflow memory, 2024")
+  let plus = [...cnt.entries()].filter(([, v]) => v > 0).map(([t]) => t).filter((t) => !/^(?:19|20)\d\d$/.test(t));
+  let minus = [...cnt.entries()].filter(([, v]) => v < 0).map(([t]) => t);
+  if (!plus.length && !minus.length) return { kind: 'cosmetic', words: [] };
+  // the published title appears intact inside the cited one: the parse ran into the year or venue
+  if (B.length >= 4 && ` ${A.join(' ')} `.includes(` ${B.join(' ')} `)) return { kind: 'subtitle', words: [] };
+  // the cited title stops at a "?" or "!" that the published title continues past
+  if (!plus.length && /[?!]/.test(found) && B.slice(0, A.length).join(' ') === A.join(' ')) return { kind: 'subtitle', words: [] };
+  // symbols lost in PDF text extraction: subscripts ("CO 2" vs "CO"), Greek letters ("τ-bench" → "au-bench"),
+  // accents split off ("K\"ahler"), hats ("R̂" → "Rb"), LaTeX commands ("\operatorname{SLE}")
+  const symbolic = /[^\x00-\x7F]|\\[a-z]+/i.test(found) || /[^\x00-\x7F]/.test(cited);
+  minus = minus.filter((m) => !(/^\d{1,2}$/.test(m) || m.length === 1));
+  const pairs = (t: string, m: string) => {
+    const [s, l] = t.length <= m.length ? [t, m] : [m, t];
+    if ((s.length >= 3 || /\d/.test(l)) && (l.startsWith(s) || l.endsWith(s))) return true;
+    return t.length >= 5 && [...t].sort().join('') === [...m].sort().join(''); // transposed letters ("Weiner")
+  };
+  // a compound joined by hyphenation removal ("softwareengineering" for "software engineering")
+  for (const [X, Y] of [[plus, minus], [minus, plus]] as const) {
+    for (const t of [...X]) {
+      const hit = Y.flatMap((m1) => Y.filter((m2) => m2 !== m1 && m1 + m2 === t).map((m2) => [m1, m2]))[0];
+      if (hit) {
+        X.splice(X.indexOf(t), 1);
+        for (const m of hit) Y.splice(Y.indexOf(m), 1);
+      }
+    }
+  }
+  const freeM = [...minus];
+  plus = plus.filter((t) => {
+    const k = freeM.findIndex((m) => pairs(t, m));
+    if (k < 0) return !(symbolic && t.length <= 3);
+    freeM.splice(k, 1);
+    return false;
+  });
+  minus = freeM;
   if (!plus.length && !minus.length) return { kind: 'cosmetic', words: [] };
   // joined/split compounds: "pre training" vs "pretraining"
   if ([...plus].sort().join('') === [...minus].sort().join('') || plus.join('') === minus.join('')) return { kind: 'cosmetic', words: [] };
@@ -888,7 +945,7 @@ function initials(s: string): string {
 }
 
 /** Does the cited venue plausibly name the venue of any of the records (aliases, abbreviations, acronyms)? */
-function venueGeneralCheck(p: ParsedRef, recs: WorkRecord[]): 'match' | 'mismatch' | 'unknown' {
+export function venueGeneralCheck(p: ParsedRef, recs: WorkRecord[]): 'match' | 'mismatch' | 'unknown' {
   if (!p.venue || PREPRINT_RE.test(p.venue)) return 'unknown';
   // "Technical report", "PhD thesis": a document type, not a venue
   if (p.kind === 'report' || p.kind === 'thesis' || /^(?:tech(?:nical|\.)?\s*rep(?:ort|\.)?|(?:ph\.?\s?d\.?|master'?s|doctoral)\s*(?:thesis|dissertation)|thesis|dissertation|manuscript|unpublished|white\s*paper)\b/i.test(p.venue.trim())) return 'unknown';
@@ -911,7 +968,9 @@ function venueGeneralCheck(p: ParsedRef, recs: WorkRecord[]): 'match' | 'mismatc
     if (!N.length) continue;
     const nf = fold(n);
     // abbreviation-aware coverage ("IEEE Trans. Pattern Anal. Mach. Intell.")
-    const covered = C.filter((c) => N.some((t) => t === c || (c.length >= 3 && t.startsWith(c)) || (t.length >= 3 && c.startsWith(t)) || ratio(t, c) >= 0.85)).length;
+    // (abbreviations may stand for stop words of the long form: "Assoc" → "Association", "Am" → "American")
+    const NF = nf.split(' ').filter(Boolean);
+    const covered = C.filter((c) => NF.some((t) => t === c || (c.length >= 3 && t.startsWith(c)) || (c.length === 2 && t.length >= 6 && t.startsWith(c)) || (t.length >= 3 && c.startsWith(t) && N.includes(t)) || ratio(t, c) >= 0.85)).length;
     if (covered / C.length >= 0.6) return 'match';
     // acronym ↔ long form ("TPAMI", "JMLR", "CVPR")
     const nInit = initials(n);
