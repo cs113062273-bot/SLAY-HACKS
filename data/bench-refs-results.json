@@ -591,7 +591,7 @@
   {
    "id": "P3 R36",
    "gold": "problematic",
-   "verdict": "fabricated",
+   "verdict": "not_found",
    "issues": [
     "OpenAlex did not respond; re-run later to confirm",
     "No matching work in Crossref, Semantic Scholar, Europe PMC"
@@ -666,7 +666,7 @@
   {
    "id": "P3 R48",
    "gold": "problematic",
-   "verdict": "fabricated",
+   "verdict": "not_found",
    "issues": [
     "OpenAlex did not respond; re-run later to confirm",
     "No matching work in Crossref, Semantic Scholar, Europe PMC",
@@ -676,7 +676,7 @@
   {
    "id": "P3 R49",
    "gold": "problematic",
-   "verdict": "fabricated",
+   "verdict": "not_found",
    "issues": [
     "OpenAlex did not respond; re-run later to confirm",
     "No matching work in Crossref, Semantic Scholar, Europe PMC",
@@ -686,7 +686,7 @@
   {
    "id": "P3 R50",
    "gold": "problematic",
-   "verdict": "fabricated",
+   "verdict": "not_found",
    "issues": [
     "OpenAlex did not respond; re-run later to confirm",
     "No matching work in Crossref, Semantic Scholar, Europe PMC"
