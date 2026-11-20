@@ -2,6 +2,8 @@
 
 Pre-registered before selection or parsing. Code and this protocol are committed before running `pick-blind3.py`; the manifest records that commit. No core changes until the run and its reviews are complete.
 
+Pre-run exception: `AMENDMENT.md` records one bounded correction pass on spent/development data, before any selected paper was parsed or verified. Preserve the original selection freeze and selected papers; record the separate audit freeze before running. The amendment does not permit tuning on third-round outcomes.
+
 - Selection: the 12 categories in `pick-blind3.py`, newest primary-category article with a downloadable PDF and at least 10 main-bibliography entries in its source .bbl; two newest eligible PLOS ONE research articles, counted from JATS. Exclude every previously downloaded arXiv paper, including failed candidates. Record rejected candidates and reasons. Source availability is a sampling restriction, not evidence of general PDF performance.
 - Do not run the parser to select or replace papers. Extraction failures stay in the denominator and have zero verified references. Report candidate/download success and selected-PDF extraction success separately. Evaluate the main bibliography; separately numbered supplementary bibliographies are outside the current product scope and must be disclosed.
 - Freeze: record full git commit, clean source state, query time, fixed PDF version/URL, source count method and runtime. Refuse to overwrite any results. Keep one empty in-memory cache per run; papers sequentially, six reference workers, 40-second per-reference budget, the same settings as the browser. No paid keys or quota. Start after OpenAlex's response headers show a positive free allowance, and record any later exhaustion.

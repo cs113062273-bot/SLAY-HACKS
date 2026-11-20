@@ -11,7 +11,7 @@ Source: slayy-hacks.devpost.com (rules and overview, rechecked 2026-11-20).
 | Project name and overview | drafted in `submission/DEVPOST.md` | done |
 | Problem and solution | drafted | done |
 | AI implementation (models, frameworks) | drafted, with model sizes and training data | done |
-| **Working demo link** with access instructions | live at https://cs113062273-bot.github.io/SLAY-HACKS/; production E2E in progress | agent |
+| **Working demo link** with access instructions | live at https://cs113062273-bot.github.io/SLAY-HACKS/; production E2E passed on 07f4f4a; latest amendment acceptance tracked in VALIDATION.md | agent |
 | Screenshots | `submission/shots/` at 1500×1000 (3:2): landing, fabricated reference, wrong identifier, wrong details, quick check, supported claim, needs-review claim, dark mode. Regenerate with `npx tsx scripts/shots.ts` | done; pick 4–6 |
 | **Source repository** with docs and setup steps | README.md; repo `cs113062273-bot/SLAY-HACKS` | public repository confirmed |
 | Disclose significant limitations and external dependencies | README "Responsible use" and DEVPOST "Limitations" | done |

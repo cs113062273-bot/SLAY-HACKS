@@ -5,7 +5,7 @@
  * Uses the shared HTTP cache (data/cache/http.json), so repeated runs are mostly offline.
  * Usage: BLIND_SET=2 npx tsx scripts/recheck-blind.ts   (BLIND_SET=1 for data/blind/)
  */
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import * as pdfjs from 'pdfjs-dist/legacy/build/pdf.mjs';
 import { buildDoc } from '../src/core/doc';
@@ -16,10 +16,15 @@ import { verifyReference } from '../src/core/verify';
 import { FileCache } from './node-cache';
 
 const B = process.env.BLIND_SET && process.env.BLIND_SET !== '1' ? `blind${process.env.BLIND_SET}` : 'blind';
+const suffix = process.env.RECHECK_SUFFIX ?? '';
+if (!/^(?:-[a-z0-9-]+)?$/i.test(suffix)) throw new Error('Invalid recheck output suffix');
 const root = fileURLToPath(new URL('../../data/', import.meta.url));
 const frozen = JSON.parse(readFileSync(`${root}${B}/results.json`, 'utf-8'));
 if (!frozen.review) throw new Error(`${B} has not been judged yet: re-checking is only for spent, judged sets`);
-const cache = new FileCache(`${root}cache/http.json`);
+const correctionsPath = `${root}${B}/review-corrections.json`;
+const corrections = new Map<number, string>(existsSync(correctionsPath)
+  ? JSON.parse(readFileSync(correctionsPath, 'utf8')).corrections.map((c: any) => [c.reviewIndex, c.correctedJudgement]) : []);
+const cache = new FileCache(process.env.VERACITE_CACHE_PATH ?? `${root}cache/http.json`);
 const http = new Http({ cache, maxRetries: 6 });
 
 const toks = (s: string) => new Set(s.toLowerCase().normalize('NFKD').replace(/[^a-z0-9 ]+/g, ' ').split(/\s+/).filter((t) => t.length > 2));
@@ -63,7 +68,8 @@ for (const p of frozen.papers) {
         bi = i;
       }
     });
-    const kind = f.judgement.startsWith('false') ? 'false' : f.judgement.startsWith('uncertain') ? 'uncertain' : 'real';
+    const judgement = corrections.get(f.reviewIndex) ?? f.judgement;
+    const kind = judgement.startsWith('false') ? 'false' : judgement.startsWith('uncertain') ? 'uncertain' : 'real';
     const now = bi >= 0 && bs >= 0.5 ? res[bi] : undefined;
     const still = !!now && flaggedNow.has(bi);
     if (bi >= 0 && bs >= 0.5) explained.add(bi);
@@ -88,9 +94,9 @@ for (const p of frozen.papers) {
     out.push(`  NEW FLAG [${i + 1}] ${r.verdict}  ${doc.rawReferences[i].slice(0, 200)}\n      ${r.issues.join(' | ').slice(0, 260)}\n      rec: ${r.match ? `${r.match.title} / ${r.match.authors.slice(0, 4).map((a) => a.family).join(', ')} / ${r.match.years.join('/')} / ${r.match.venue ?? ''} / ${r.match.doi ?? ''}` : '-'}`);
   }
   console.log(`${B}: completed ${p.file}, ${res.length} refs, ${flaggedNow.size} flags`);
-  writeFileSync(`${root}${B}/recheck-progress.json`, JSON.stringify({ completedThrough: p.file, tally }, null, 2));
+  writeFileSync(`${root}${B}/recheck${suffix}-progress.json`, JSON.stringify({ completedThrough: p.file, tally }, null, 2));
 }
 const summary = `\n${B} re-check with the current core: refs ${tally.refs}, flags now ${tally.flagsNow}; judged false alarms fixed ${tally.oldFalseGone}/${tally.oldFalse}; judged real errors still flagged ${tally.oldRealKept}/${tally.oldReal}; uncertain still flagged ${tally.oldUncertainKept}/${tally.oldUncertain}; new flags to judge ${tally.newFlags}`;
 console.log(out.join('\n') + summary);
-writeFileSync(`${root}${B}/recheck.txt`, out.join('\n') + summary + '\n');
+writeFileSync(`${root}${B}/recheck${suffix}.txt`, out.join('\n') + summary + '\n');
 process.exit(0);

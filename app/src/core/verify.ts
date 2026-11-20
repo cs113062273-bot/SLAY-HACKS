@@ -960,6 +960,16 @@ export function venueGeneralCheck(p: ParsedRef, recs: WorkRecord[]): 'match' | '
   if (!names.length) return 'unknown';
   const rawF = ' ' + fold(p.raw) + ' ';
   if (names.some((n) => venueTokens(n).length >= 2 && rawF.includes(' ' + fold(n) + ' '))) return 'match';
+  // A parsed "venue" can be the end of the title. Recover it only when the actual reference explicitly
+  // names the record's venue outside that complete title (and outside URLs).
+  const parsedVenueWords = venueTokens(p.venue);
+  for (const r of recs) {
+    const title = fold(r.title);
+    if (!title || !rawF.includes(' ' + title + ' ') || !parsedVenueWords.length || !parsedVenueWords.every((w) => title.split(' ').includes(w))) continue;
+    const remainder = fold(p.raw.replace(/https?:\/\/\S+/g, ' ')).replace(title, ' ');
+    const cited = canonVenues(remainder);
+    if ([...canonVenues(r.venue, ...r.venueAliases)].some((v) => cited.has(v))) return 'match';
+  }
   // the parser cut the title at "?" or "." and read the subtitle as the start of the venue:
   // "Survival of the fittest? | Entrepreneurial human capital … firms. Adm Sci Q" → venue "Adm Sci Q"
   let venue = p.venue;

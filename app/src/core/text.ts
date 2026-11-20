@@ -90,6 +90,10 @@ export function fuzzyFind(needle: string, haystack: string): { score: number; st
   const h = tokens(haystack);
   if (!n.length || !h.length) return { score: 0, start: -1, end: -1 };
   const nj = n.join(' ');
+  // An exact token span is the global maximum. Return its first occurrence, matching the fuzzy loop's tie rule.
+  for (let i = 0; i + n.length <= h.length; i++) {
+    if (n.every((t, j) => h[i + j] === t)) return { score: 1, start: i, end: i + n.length };
+  }
   let best = { score: 0, start: -1, end: -1 };
   const minW = Math.max(1, n.length - 3);
   const maxW = n.length + 3;

@@ -41,7 +41,7 @@ if (perType || nValid) {
   }
 }
 
-const cache = new FileCache(fileURLToPath(new URL('../../data/cache/http.json', import.meta.url)));
+const cache = new FileCache(process.env.VERACITE_CACHE_PATH ?? fileURLToPath(new URL('../../data/cache/http.json', import.meta.url)));
 const http = new Http({ cache, maxRetries: 6 });
 
 const results: RefResult[] = new Array(rows.length);

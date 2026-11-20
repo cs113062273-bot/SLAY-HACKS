@@ -15,7 +15,7 @@ const verbose = process.argv.includes('--verbose');
 const onlyIdx = process.argv.indexOf('--only');
 const only = onlyIdx > 0 ? process.argv[onlyIdx + 1] : undefined;
 
-const cache = new FileCache(fileURLToPath(new URL('../../data/cache/http.json', import.meta.url)));
+const cache = new FileCache(process.env.VERACITE_CACHE_PATH ?? fileURLToPath(new URL('../../data/cache/http.json', import.meta.url)));
 const http = new Http({ cache, maxRetries: 8 });
 
 const rows = loadBench().filter((r) => !only || r.doc === only);

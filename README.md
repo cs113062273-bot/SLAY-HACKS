@@ -33,7 +33,7 @@ Existing checkers test whether a title exists. On a public benchmark of 104 manu
 
 ## Results
 
-On the public reference benchmarks, Veracite outperformed the evaluated free baselines. Frozen end-to-end PDF audits were weaker: false alarms were 86/635 references (13.5%) in set 1 and 54/465 (11.6%) in set 2. Those errors informed later fixes, so neither set now independently evaluates the current parser. A third audit is pre-registered in `data/blind3/PROTOCOL.md`. Benchmark provenance matters: Zenodo and HALLMARK dev were rechecked on the current core; HALLMARK test .959 is a historical held-out run, and claim-model results concern the retained model described below.
+On the public reference benchmarks, Veracite outperformed the evaluated free baselines. Frozen end-to-end PDF audits were weaker: false alarms were 87/635 references (13.7%) in set 1 and 54/465 (11.6%) in set 2. Those errors informed later fixes, so neither set now independently evaluates the current parser. A third audit is pre-registered in `data/blind3/PROTOCOL.md`. Benchmark provenance matters: Zenodo and HALLMARK dev were rechecked on the current core; HALLMARK test .959 is a historical held-out run, and claim-model results concern the retained model described below.
 
 ### Reference verification: same 104 references the five leading tools were evaluated on
 
@@ -78,17 +78,18 @@ The benchmarks above were used, at least in part, while the code was being devel
 | References | 635 |
 | Confirmed (coverage) | 506 (79.7%) |
 | Flagged as a problem | 92 (14.5%) |
-| of which real citation errors | 5, plus 1 uncertain |
-| of which false alarms | **86 (13.5% of all references)** |
+| of which real citation errors | 4, plus 1 uncertain (corrected adjudication) |
+| of which false alarms | **87 (13.7% of all references)** |
 | *Unverifiable* (not indexed: web pages, datasets, legal texts) | 24 (3.8%) |
 | *Unchecked* (an index did not answer) | 13 (2.0%) |
 | Misses: errors among 42 randomly sampled confirmed references | 0 (95% upper bound about 7%) |
 | Time per paper, live, no cache | median 101 s (24 s to 16 min); six papers ran at once against rate-limited free APIs |
 
-This is much worse than the benchmark results, and it is the honest number for real-world false alarms before the fixes below. The five real errors were a wrong year, an author list that names the wrong people, two authors dropped without "et al.", a title that is not the official one and a title that differs from its arXiv record (the last two were labelled more severely than they deserve). The 86 false alarms were almost all parsing problems, not lookup problems:
+These frozen PDF results are weaker than the clean-string benchmarks. Four references remain labelled as real errors: a wrong year, two omitted authors without et al., a title that is not the official one, and a title that differs from its arXiv record (the last two were labelled too severely). The original manual count was 5 real / 86 false. Re-review of the original PDF page 18 showed that all four authors of the Pillow et al. reference were present; the extractor had dropped them. Corrected counts are 4 real / 87 false / 1 uncertain, precision 4.3%. The frozen outputs are unchanged; evidence and the correction overlay are in `data/blind/REVIEW_CORRECTIONS.md` and `review-corrections.json`. False-alarm causes:
 
 | Cause | False alarms |
 |---|---|
+| Author line lost during extraction (manual label corrected after PDF review) | 1 |
 | Words of the title or venue, or "arXiv", read as author names | 29 |
 | PDF text artefacts: lost symbols (τ, CO₂, R̂), accents, hyphenation, a title cut at "?" | 12 |
 | A year glued onto the title | 9 |

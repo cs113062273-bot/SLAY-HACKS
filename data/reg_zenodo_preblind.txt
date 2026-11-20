@@ -1,0 +1,19 @@
+
+Tool               TP  FN  FP  TN   Recall  Spec   Prec   F1     Acc
+checkifexist       31   2  34  37   0.939  0.521  0.477  0.633  0.654
+hallucitechecker   18  15  20  51   0.545  0.718  0.474  0.507  0.663
+hallucinator       29   4  28  43   0.879  0.606  0.509  0.644  0.692
+halref             24   9  53  18   0.727  0.254  0.312  0.436  0.404
+refchecker         32   1  36  35   0.970  0.493  0.471  0.634  0.644
+VERACITE           33   0   2  69   1.000  0.972  0.943  0.971  0.981
+
+Errors:
+FP P2 R3 gold=verified → fabricated (0.08) failed=[]
+   REF: Caifan Du, James Howison, and Patrice Lopez. “Softcite: Automatic Extraction of Software Mentions in Research Literature”. In: Poster abstracts of the 1st Workshop on Natural Language Processing and D
+   ! No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC
+FP P3 R18 gold=verified → metadata_error (0.35) failed=[]
+   REF: Andrey Malinin, David Uthoff, Roman Heil, Yaya Li, and Mark Gales. Ensemble distribution distillation. International Conference on Learning Representations (ICLR), 2020
+   MATCH[semanticscholar]: Ensemble Distribution Distillation | Malinin, Mlodozeniec, Gales | 2019/2019 | International Conference on Learning Representations
+   authors:mismatch 3 cited author(s) not on the paper cited=Malinin, Uthoff, Heil, Li, Gales found=Malinin, Mlodozeniec, Gales
+   year:minor  cited=2020 found=2019/2019
+   ! Author list does not match the published work: Uthoff, Heil, Li not among its authors

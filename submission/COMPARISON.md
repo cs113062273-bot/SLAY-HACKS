@@ -17,7 +17,7 @@ Five checkers, published results (arXiv:2607.22693, Zenodo 10.5281/zenodo.214574
 | RefChecker | .970 | .493 | .471 | .634 | 36 of 71 |
 | **Veracite** | **1.000** | **.972** | **.943** | **.971** | **2 of 71** |
 
-Caveat: this set was also used during development, and it supplies clean reference strings. On 14 brand-new papers read from PDF in a frozen blind test, 86 false alarms occurred among 635 extracted references (13.5%), mostly through PDF parsing problems that have informed later fixes (README, "Blind test"); set 2 still had 54/465 false alarms (11.6%), and current independent performance is pending. The five tools above were not run on those papers, so no comparison is claimed there.
+Caveat: this set was also used during development, and it supplies clean reference strings. On 14 brand-new papers read from PDF in a frozen blind test, 87 false alarms occurred among 635 extracted references (13.7%), mostly through PDF parsing problems that have informed later fixes (README, "Blind test"); set 2 still had 54/465 false alarms (11.6%), and current independent performance is pending. The five tools above were not run on those papers, so no comparison is claimed there.
 
 ### Hallucinated-citation detection: HALLMARK v1.2 `test_public`, 825 citations, held out
 

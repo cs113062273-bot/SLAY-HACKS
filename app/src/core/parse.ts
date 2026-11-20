@@ -358,7 +358,7 @@ export function parseReference(input: string): ParsedRef {
   // (b2) econ / finance: "Brennan, T. J., and A. W. Lo, 2012, Title, Journal 7, e50310."
   //      and comma-after-parenthesis APA variants: "Holovatch Yu., Honchar Y. (2018), TITLE, Journal, v. 22"
   if (!title || /^\s*\((?:1[89]\d\d|20[0-3]\d)[a-z]?\)\s*,/.test(body.slice((authorsText ?? '').length).trimStart())) {
-    const ec = [body.match(/^(.{2,6000}?),\s(1[89]\d\d|20[0-3]\d)([a-z])?,\s(.+)$/u), body.match(/^(.{2,6000}?)\s*\((1[89]\d\d|20[0-3]\d)([a-z])?\)\s*,\s*(.+)$/u)].find((m) => m && authorLikeness(m[1]) >= 0.7);
+    const ec = [body.match(/^(.{2,6000}?)[,.]\s(1[89]\d\d|20[0-3]\d)([a-z])?,\s(.+)$/u), body.match(/^(.{2,6000}?)\s*\((1[89]\d\d|20[0-3]\d)([a-z])?\)\s*,\s*(.+)$/u)].find((m) => m && authorLikeness(m[1]) >= 0.7);
     if (ec && !/^[“"‘«]/.test(ec[4])) {
       const sp = splitTitleComma(ec[4]);
       authorsText = ec[1];
@@ -539,6 +539,9 @@ export function parseReference(input: string): ParsedRef {
       .replace(/^[\s.,;:]+/, '')
       .trim();
     if (venue.length < 2) venue = undefined;
+    // A publication date left after title/venue segmentation is not a venue, e.g. "(December 2022)".
+    if (venue && /^[([]?\s*(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Sept(?:ember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\.?\s*[)\]]?$/i.test(venue)
+      && /^[\s.,;:(]*(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+(?:\d{1,2},?\s+)?(?:1[89]|20)\d\d\b/i.test(after)) venue = undefined;
   }
 
   let kind = classifyKind(raw, urls, dois, arxivIds, venue);
@@ -592,6 +595,8 @@ function splitTitleComma(rest: string): { title: string; after: string; publishe
     if (
       /^(?:in\s|in:|arxiv|working paper|nber|mimeo|unpublished|forthcoming|vol\.?\s|v\.\s|pp?\.\s|ed\.|eds\.|no\.\s|\d|ph\.?\s?d|doctoral|master'?s|thesis|dissertation|technical report|tech\.)/i.test(x) ||
       /^(?:\p{Lu}|\p{Ll}+\p{Lu})[\p{L}\d&.'’ -]*\s\d+[a-z]?\b/u.test(x) ||
+      // AAS comma-separated journal, volume, page: "Nature, 585, 357" / "Astronomy and Astrophysics, 641, A6".
+      (journalLike(x) && /^\d{1,4}(?:\(\d+\))?$/.test(pieces[i + 1] ?? '') && /^[A-Z]?\d+(?:[-–]\d+)?(?:[.,]|$)/.test(pieces[i + 2] ?? '')) ||
       /\b(?:journal|review|proceedings|transactions|letters|quarterly|annals|bulletin|magazine|press|university|publishing|publishers?)\b/i.test(x) ||
       /^\p{Lu}[\p{L}. ]+:\s*\p{Lu}/u.test(x)
     ) {

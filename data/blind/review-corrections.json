@@ -1,0 +1,25 @@
+{
+  "scope": "Post-run adjudication correction; original frozen results and verdicts are preserved unchanged",
+  "corrections": [
+    {
+      "reviewIndex": 76,
+      "file": "q-bio.NC_2611.24767v1.pdf",
+      "extractedReferenceIndex1Based": 25,
+      "originalJudgement": "real: cited author list (J. P. Simoncelli) omits the actual first three authors",
+      "correctedJudgement": "false: the original PDF lists all four authors; the old extractor lost the first three and corrupted the remaining initials",
+      "evidence": {
+        "pdfPage": 18,
+        "pdf": "https://arxiv.org/pdf/2611.24767v1",
+        "publisher": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0062123",
+        "authorsInPDFAndPublisher": ["Pillow", "Shlens", "Chichilnisky", "Simoncelli"],
+        "visualReview": "review-evidence/simoncelli-p18.png"
+      },
+      "effect": "A correct verification after parser repair, not a newly missed citation error"
+    }
+  ],
+  "originalAdjudication": { "real": 5, "false": 86, "uncertain": 1 },
+  "correctedAdjudication": { "real": 4, "false": 87, "uncertain": 1 },
+  "unchangedRun": { "references": 635, "flags": 92, "verified": 506, "sampledMisses": "0/42" },
+  "correctedFalseAlarmsOverAllReferences": 0.13700787401574804,
+  "correctedFlagPrecision": 0.043478260869565216
+}

@@ -31,7 +31,7 @@ const BENCH: { name: string; what: string; metric: string; bars: { label: string
       { label: 'Veracite', v: 0.971, ours: true },
       { label: 'Hallucinator (best of 5)', v: 0.644 },
     ],
-    note: 'Badalova & Mayr 2026, Zenodo 10.5281/zenodo.21457492; used during development. Frozen PDF audits: 86/635 (13.5%) and 54/465 (11.6%) references falsely flagged. Later parser fixes need an independent audit.',
+    note: 'Badalova & Mayr 2026, Zenodo 10.5281/zenodo.21457492; used during development. Frozen PDF audits: 87/635 (13.7%, corrected adjudication) and 54/465 (11.6%) references falsely flagged. Later fixes need an independent audit.',
   },
   {
     name: 'Hallucinated-citation detection',
