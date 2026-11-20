@@ -1,0 +1,2627 @@
+{
+ "commit": "15daf9d",
+ "srcDirty": false,
+ "startedAt": "2026-11-20T01:27:02.412Z",
+ "node": "v24.19.0",
+ "papers": [
+  {
+   "source": "arXiv",
+   "cat": "cs.CL",
+   "id": "2611.24936v1",
+   "title": "Jailbreak Detection on Large Language Models via Contrastive Prototype Structures",
+   "file": "cs.CL_2611.24936v1.pdf",
+   "refsParsed": 46,
+   "pages": 15,
+   "refs": 46,
+   "citances": 51,
+   "style": "author-year",
+   "parseMs": 1254,
+   "verifyMs": 118063,
+   "counts": {
+    "verified": 40,
+    "verified_minor": 4,
+    "unchecked": 1,
+    "metadata_error": 1
+   },
+   "coverage": 0.9565217391304348,
+   "unverifiableShare": 0,
+   "uncheckedShare": 0.021739130434782608,
+   "flagged": 1,
+   "flags": [
+    {
+     "n": 26,
+     "verdict": "metadata_error",
+     "raw": "S. Lloyd. 2006. Least squares quantization in pcm. IEEE Trans. Inf. Theor., 28(2):129-137.",
+     "issues": [
+      "Year 2006 does not match the published record (1982/2004)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Least squares quantization in PCM",
+      "authors": [
+       "Lloyd"
+      ],
+      "years": [
+       1982,
+       2004
+      ],
+      "venue": "IEEE Transactions on Information Theory",
+      "doi": "10.1109/tit.1982.1056489"
+     },
+     "judgement": "real: year 2006 cited, record and volume 28 are 1982",
+     "reviewIndex": 1
+    }
+   ]
+  },
+  {
+   "source": "arXiv",
+   "cat": "cs.CV",
+   "id": "2611.24941v1",
+   "title": "UltraTex: Aligning Physical Knowledge for High-Fidelity PBR Texture Generation",
+   "file": "cs.CV_2611.24941v1.pdf",
+   "refsParsed": 86,
+   "pages": 14,
+   "refs": 86,
+   "citances": 37,
+   "style": "author-year",
+   "parseMs": 502,
+   "verifyMs": 284037,
+   "counts": {
+    "unverifiable": 8,
+    "verified": 43,
+    "verified_minor": 17,
+    "metadata_error": 17,
+    "unchecked": 1
+   },
+   "coverage": 0.6976744186046512,
+   "unverifiableShare": 0.09302325581395349,
+   "uncheckedShare": 0.011627906976744186,
+   "flagged": 17,
+   "flags": [
+    {
+     "n": 4,
+     "verdict": "metadata_error",
+     "raw": "Raphael Bensadoun, Yanir Kleiman, Idan Azuri, Omri Harosh, Andrea Vedaldi, Natalia Neverova, and Oran Gafni. 2024. Meta 3d texturegen: Fast and consistent texture generation for 3d objects. arXiv preprint arXiv:2407.02430 (2024).",
+     "issues": [
+      "Author list does not match the published work: Fast, arXiv not among its authors"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "Meta 3D TextureGen: Fast and Consistent Texture Generation for 3D Objects",
+      "authors": [
+       "Bensadoun",
+       "Kleiman",
+       "Azuri",
+       "Harosh",
+       "Vedaldi",
+       "Neverova"
+      ],
+      "years": [
+       2024
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2407.02430"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 2
+    },
+    {
+     "n": 17,
+     "verdict": "metadata_error",
+     "raw": "Ye Fang, Zeyi Sun, Tong Wu, Jiaqi Wang, Ziwei Liu, Gordon Wetzstein, and Dahua Lin. 2024. Make-it-Real: Unleashing Large Multimodal Model’s Ability for Painting 3D Objects with Realistic Materials. arXiv preprint arXiv:2404.16829 (2024).",
+     "issues": [
+      "Title differs from the published title (cited “models”, cited “ability”, published “model”)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Make-it-Real: Unleashing Large Multimodal Model for Painting 3D Objects with Realistic Materials",
+      "authors": [
+       "Fang",
+       "Sun",
+       "Wu",
+       "Wang",
+       "Liu",
+       "Wetzstein"
+      ],
+      "years": [
+       2024,
+       2025
+      ],
+      "venue": "Advances in Neural Information Processing Systems 37",
+      "doi": "10.52202/079017-3149"
+     },
+     "judgement": "false alarm: cited title matches the arXiv version",
+     "reviewIndex": 3
+    },
+    {
+     "n": 20,
+     "verdict": "metadata_error",
+     "raw": "Jon Hasselgren, Zheng Zeng, Milos Hasan, and Jacob Munkberg. 2026. VideoMatGen: PBR Materials through Joint Generative Modeling. arXiv preprint arXiv:2603.16566 (2026).",
+     "issues": [
+      "Author list does not match the published work: arXiv not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "VideoMatGen: PBR Materials Through Joint Generative Modeling",
+      "authors": [
+       "Hasselgren",
+       "Hašan",
+       "Zeng",
+       "Munkberg"
+      ],
+      "years": [
+       2026
+      ],
+      "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+      "doi": "10.1109/cvprf71909.2026.00238"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 4
+    },
+    {
+     "n": 25,
+     "verdict": "metadata_error",
+     "raw": "Xin Huang, Tengfei Wang, Ziwei Liu, and Qing Wang. 2024b. Material Anything: Generating Materials for Any 3D Object via Diffusion. arXiv preprint arXiv:2411.15138 (2024).",
+     "issues": [
+      "Author list does not match the published work: arXiv not among its authors"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "Material Anything: Generating Materials for Any 3D Object via Diffusion",
+      "authors": [
+       "Huang",
+       "Wang",
+       "Liu",
+       "Wang"
+      ],
+      "years": [
+       2024
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2411.15138"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 5
+    },
+    {
+     "n": 33,
+     "verdict": "metadata_error",
+     "raw": "Nasir Mohammad Khalid, Tianhao Xie, Eugene Belilovsky, and Popa Tiberiu. 2022. CLIP-Mesh: Generating textured meshes from text using pretrained image-text models. (December 2022).",
+     "issues": [
+      "Published in “SIGGRAPH Asia 2022 Conference Papers”, not “(December”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "CLIP-Mesh: Generating textured meshes from text using pretrained image-text models",
+      "authors": [
+       "Mohammad Khalid",
+       "Xie",
+       "Belilovsky",
+       "Popa"
+      ],
+      "years": [
+       2022
+      ],
+      "venue": "SIGGRAPH Asia 2022 Conference Papers",
+      "doi": "10.1145/3550469.3555392"
+     },
+     "judgement": "false alarm: venue mis-parsed",
+     "reviewIndex": 6
+    },
+    {
+     "n": 44,
+     "verdict": "metadata_error",
+     "raw": "Oscar Michel, Roi Bar-On, Richard Liu, Sagie Benaim, and Rana Hanocka. 2021. Text2Mesh: Text-Driven Neural Stylization for Meshes. arXiv preprint arXiv:2112.03221 (2021).",
+     "issues": [
+      "Author list does not match the published work: arXiv not among its authors"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "Text2Mesh: Text-Driven Neural Stylization for Meshes",
+      "authors": [
+       "Michel",
+       "Bar-On",
+       "Liu",
+       "Benaim",
+       "Hanocka"
+      ],
+      "years": [
+       2021
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2112.03221"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 7
+    },
+    {
+     "n": 45,
+     "verdict": "metadata_error",
+     "raw": "Jacob Munkberg, Zian Wang, Ruofan Liang, Tianchang Shen, and Jon Hasselgren. 2025. VideoMat: Extracting PBR Materials from Video Diffusion Models. arXiv preprint arXiv:2506.09665 (2025).",
+     "issues": [
+      "Author list does not match the published work: arXiv not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "VideoMat: Extracting PBR Materials from Video Diffusion Models",
+      "authors": [
+       "Munkberg",
+       "Wang",
+       "Liang",
+       "Shen",
+       "Hasselgren"
+      ],
+      "years": [
+       2025
+      ],
+      "venue": "Computer Graphics Forum",
+      "doi": "10.1111/cgf.70180"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 8
+    },
+    {
+     "n": 48,
+     "verdict": "metadata_error",
+     "raw": "Matt Pharr, Wenzel Jakob, and Greg Humphreys. 2016. Physically Based Rendering: From Theory to Implementation (3rd ed.). Morgan Kaufmann Publishers Inc., San Francisco, CA, USA.",
+     "issues": [
+      "Author list does not match the published work: Jakob not among its authors"
+     ],
+     "match": {
+      "source": "openalex",
+      "title": "Physically Based Rendering: From Theory to Implementation",
+      "authors": [
+       "Pharr",
+       "Humphreys"
+      ],
+      "years": [
+       2004
+      ],
+      "doi": "10.1016/c2013-0-15557-2"
+     },
+     "judgement": "false alarm: 3rd edition (2016) matched to 1st edition",
+     "reviewIndex": 9
+    },
+    {
+     "n": 50,
+     "verdict": "metadata_error",
+     "raw": "Ben Poole, Ajay Jain, Jonathan T. Barron, and Ben Mildenhall. 2022. DreamFusion: Text-to-3D using 2D Diffusion. arXiv (2022).",
+     "issues": [
+      "Author list does not match the published work: arXiv not among its authors"
+     ],
+     "match": {
+      "source": "openalex",
+      "title": "DreamFusion: Text-to-3D using 2D Diffusion",
+      "authors": [
+       "Poole",
+       "Jain",
+       "Barron",
+       "Mildenhall"
+      ],
+      "years": [
+       2022
+      ],
+      "venue": "arXiv (Cornell University)",
+      "doi": "10.48550/arxiv.2209.14988"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 10
+    },
+    {
+     "n": 52,
+     "verdict": "metadata_error",
+     "raw": "Qwen Team. 2026. Qwen3.5: Towards Native Multimodal Agents. https://qwen.ai/ blog?id=qwen3.5",
+     "issues": [
+      "Closest real work has a different title: “Qwen3.8-Omni: Towards Native Omni-Modal Agents”"
+     ],
+     "match": {
+      "source": "openalex",
+      "title": "Qwen3.8-Omni: Towards Native Omni-Modal Agents",
+      "authors": [
+       "Team"
+      ],
+      "years": [
+       2026
+      ],
+      "venue": "arXiv (Cornell University)",
+      "doi": "10.48550/arxiv.2609.25611"
+     },
+     "judgement": "false alarm: blog post matched to an unrelated report",
+     "reviewIndex": 11
+    },
+    {
+     "n": 58,
+     "verdict": "metadata_error",
+     "raw": "Tencent Hunyuan3D Team. 2025a. Hunyuan3D 2.1: From Images to High-Fidelity 3D Assets with Production-Ready PBR Material. arXiv preprint arXiv:2506.15442 (2025).",
+     "issues": [
+      "Author list does not match the published work: arXiv not among its authors"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "Hunyuan3D 2.1: From Images to High-Fidelity 3D Assets with Production-Ready PBR Material",
+      "authors": [
+       "Hunyuan3D",
+       "Yang",
+       "Yang",
+       "Feng",
+       "Huang",
+       "Zhang"
+      ],
+      "years": [
+       2025
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2506.15442"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 12
+    },
+    {
+     "n": 59,
+     "verdict": "metadata_error",
+     "raw": "Tencent Hunyuan3D Team. 2025b. Hunyuan3D 2.5: Towards High-Fidelity 3D Assets Generation with Ultimate Details. arXiv preprint arXiv:2506.16504 (2025).",
+     "issues": [
+      "Author list does not match the published work: arXiv not among its authors"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "Hunyuan3D 2.5: Towards High-Fidelity 3D Assets Generation with Ultimate Details",
+      "authors": [
+       "Lai",
+       "Zhao",
+       "Liu",
+       "Zhao",
+       "Lin",
+       "Shi"
+      ],
+      "years": [
+       2025
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2506.16504"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 13
+    },
+    {
+     "n": 63,
+     "verdict": "metadata_error",
+     "raw": "Peng Wang and Yichun Shi. 2023. Imagedream: Image-prompt multi-view diffusion for 3d generation. arXiv preprint arXiv:2312.02201 (2023).",
+     "issues": [
+      "Author list does not match the published work: arXiv not among its authors"
+     ],
+     "match": {
+      "source": "openalex",
+      "title": "ImageDream: Image-Prompt Multi-view Diffusion for 3D Generation",
+      "authors": [
+       "Wang",
+       "Shi"
+      ],
+      "years": [
+       2023
+      ],
+      "venue": "arXiv (Cornell University)",
+      "doi": "10.48550/arxiv.2312.02201"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 14
+    },
+    {
+     "n": 69,
+     "verdict": "metadata_error",
+     "raw": "Xudong Xu, Zhaoyang Lyu, Xingang Pan, and Bo Dai. 2023. Matlaber: Material-aware text-to-3d via latent brdf auto-encoder. arXiv preprint arXiv:2308.09278 (2023).",
+     "issues": [
+      "Author list does not match the published work: arXiv not among its authors"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "MATLABER: Material-Aware Text-to-3D via LAtent BRDF auto-EncodeR",
+      "authors": [
+       "Xu",
+       "Lyu",
+       "Pan",
+       "Dai"
+      ],
+      "years": [
+       2023
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2308.09278"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 15
+    },
+    {
+     "n": 79,
+     "verdict": "metadata_error",
+     "raw": "Yifei Zeng, Yajie Bao, Jiachen Qian, Shuang Wu, Youtian Lin, Hao Zhu, Buyu Li, Feihu Zhang, Xun Cao, and Yao Yao. 2025. TEXTRIX: Latent Attribute Grid for Native Texture Generation and Beyond. arXiv preprint arXiv:2512.02993 (2025).",
+     "issues": [
+      "Author list does not match the published work: Generation, arXiv not among its authors"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "TEXTRIX: Latent Attribute Grid for Native Texture Generation and Beyond",
+      "authors": [
+       "Zeng",
+       "Bao",
+       "Qian",
+       "Wu",
+       "Lin",
+       "Zhu"
+      ],
+      "years": [
+       2025
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2512.02993"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 16
+    },
+    {
+     "n": 84,
+     "verdict": "metadata_error",
+     "raw": "Yibo Zhang, Li Zhang, Rui Ma, and Nan Cao. 2025. TexVerse: A Universe of 3D Objects with High-Resolution Textures. arXiv preprint arXiv:2508.10868 (2025).",
+     "issues": [
+      "Author list does not match the published work: arXiv not among its authors"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "TexVerse: A Universe of 3D Objects with High-Resolution Textures",
+      "authors": [
+       "Zhang",
+       "Zhang",
+       "Ma",
+       "Cao"
+      ],
+      "years": [
+       2025
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2508.10868"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 17
+    },
+    {
+     "n": 86,
+     "verdict": "metadata_error",
+     "raw": "Shenhao Zhu, Lingteng Qiu, Xiaodong Gu, Zhengyi Zhao, Chao Xu, Yuxiao He, Zhe Li, Xiaoguang Han, Yao Yao, Xun Cao, Siyu Zhu, Weihao Yuan, Zilong Dong, and Hao Zhu. 2024. MCMat: Multiview-Consistent and Physically Accurate PBR Material Generation. arXiv preprint arXiv:2412.14148 (2024).",
+     "issues": [
+      "Author list does not match the published work: Multiview-Consistent, arXiv not among its authors"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "MCMat: Multiview-Consistent and Physically Accurate PBR Material Generation",
+      "authors": [
+       "Zhu",
+       "Qiu",
+       "Gu",
+       "Zhao",
+       "Xu",
+       "He"
+      ],
+      "years": [
+       2024
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2412.14148"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 18
+    }
+   ]
+  },
+  {
+   "source": "arXiv",
+   "cat": "cs.SE",
+   "id": "2611.24924v1",
+   "title": "Agentic Harness Engineering Beta: Requirement-Centered Evolution of Agent Harnesses",
+   "file": "cs.SE_2611.24924v1.pdf",
+   "refsParsed": 90,
+   "pages": 47,
+   "refs": 90,
+   "citances": 34,
+   "style": "numeric",
+   "parseMs": 32845,
+   "verifyMs": 976016,
+   "counts": {
+    "verified": 69,
+    "not_found": 4,
+    "metadata_error": 14,
+    "verified_minor": 1,
+    "id_mismatch": 1,
+    "unchecked": 1
+   },
+   "coverage": 0.7777777777777778,
+   "unverifiableShare": 0,
+   "uncheckedShare": 0.011111111111111112,
+   "flagged": 19,
+   "flags": [
+    {
+     "n": 7,
+     "verdict": "not_found",
+     "raw": "[7] Jason Starace. Scaffold effects on gaia: A controlled comparison, 2026. URL https://arxiv. org/abs/2606.08529.",
+     "issues": [
+      "Semantic Scholar and OpenAlex did not respond; re-run later to confirm",
+      "No matching work in Hugging Face"
+     ],
+     "judgement": "false alarm: index rate-limited or down, the work exists (checked on arXiv)",
+     "reviewIndex": 19
+    },
+    {
+     "n": 13,
+     "verdict": "metadata_error",
+     "raw": "[13] Xin Zhou, Chun Yong Chong, Kisub Kim, Yun Peng, Rui Shu, Zihan Wu, Xu Han, Guowen Yuan, Zeyang Zhuang, Jounghoon Kim, Jeongjin Ju, Seongmin Ju, Taein Yoon, and David Lo. A unified issue resolution benchmark for requirement clarification, planning, and code generation for coding agents, 2026. URL https://arxiv.org/abs/2608.09072.",
+     "issues": [
+      "Title differs from the published title (cited “2026”)"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "A Unified Issue Resolution Benchmark for Requirement Clarification, Planning, and Code Generation for Coding Agents",
+      "authors": [
+       "Zhou",
+       "Chong",
+       "Kim",
+       "Peng",
+       "Shu",
+       "Wu"
+      ],
+      "years": [
+       2026
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2608.09072"
+     },
+     "judgement": "false alarm: year glued onto the title by the parser",
+     "reviewIndex": 20
+    },
+    {
+     "n": 14,
+     "verdict": "metadata_error",
+     "raw": "[14] Yike Wang, Huaisheng Zhu, Zhengyu Hu, Yige Yuan, Zhengyu Chen, Shakti Senthil, Hannaneh Hajishirzi, Yulia Tsvetkov, Pradeep Dasigi, and Teng Xiao. Rethinking the evaluation of harness evolution for agents, 2026. URL https://arxiv.org/abs/2607.12227.",
+     "issues": [
+      "Title differs from the published title (cited “2026”)"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "Rethinking the Evaluation of Harness Evolution for Agents",
+      "authors": [
+       "Wang",
+       "Zhu",
+       "Hu",
+       "Yuan",
+       "Chen",
+       "Senthil"
+      ],
+      "years": [
+       2026
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2607.12227"
+     },
+     "judgement": "false alarm: year glued onto the title by the parser",
+     "reviewIndex": 21
+    },
+    {
+     "n": 19,
+     "verdict": "metadata_error",
+     "raw": "[19] Chengrun Yang, Xuezhi Wang, Yifeng Lu, Hanxiao Liu, Quoc V. Le, Denny Zhou, and Xinyun Chen. Large language models as optimizers, 2023. URL https://arxiv.org/abs/2309. 03409.",
+     "issues": [
+      "Title differs from the published title (cited “2023”)"
+     ],
+     "match": {
+      "source": "openalex",
+      "title": "Large Language Models as Optimizers",
+      "authors": [
+       "Yang",
+       "Wang",
+       "Lu",
+       "Liu",
+       "Le",
+       "Zhou"
+      ],
+      "years": [
+       2023
+      ],
+      "venue": "International Conference on Learning Representations",
+      "doi": "10.48550/arxiv.2309.03409"
+     },
+     "judgement": "false alarm: year glued onto the title by the parser",
+     "reviewIndex": 22
+    },
+    {
+     "n": 20,
+     "verdict": "metadata_error",
+     "raw": "[20] Reid Pryzant, Dan Iter, Jerry Li, Yin Tat Lee, Chenguang Zhu, and Michael Zeng. Automatic prompt optimization with \"gradient descent\" and beam search, 2023. URL https://arxiv. org/abs/2305.03495.",
+     "issues": [
+      "Published in “Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing”, not “and beam search”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Automatic Prompt Optimization with “Gradient Descent” and Beam Search",
+      "authors": [
+       "Pryzant",
+       "Iter",
+       "Li",
+       "Lee",
+       "Zhu",
+       "Zeng"
+      ],
+      "years": [
+       2023
+      ],
+      "venue": "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+      "doi": "10.18653/v1/2023.emnlp-main.494"
+     },
+     "judgement": "false alarm: venue mis-parsed",
+     "reviewIndex": 23
+    },
+    {
+     "n": 31,
+     "verdict": "not_found",
+     "raw": "[31] Guanzhi Wang, Yuqi Xie, Yunfan Jiang, Ajay Mandlekar, Chaowei Xiao, Yuke Zhu, Linxi Fan, and Anima Anandkumar. Voyager: An open-ended embodied agent with large language models, 2023. URL https://arxiv.org/abs/2305.16291.",
+     "issues": [
+      "Semantic Scholar and OpenAlex did not respond; re-run later to confirm",
+      "No matching work in Hugging Face"
+     ],
+     "judgement": "false alarm: index rate-limited, the work exists (Voyager)",
+     "reviewIndex": 24
+    },
+    {
+     "n": 32,
+     "verdict": "metadata_error",
+     "raw": "[32] Zora Zhiruo Wang, Jiayuan Mao, Daniel Fried, and Graham Neubig. Agent workflow memory, 2024. URL https://arxiv.org/abs/2409.07429.",
+     "issues": [
+      "Title differs from the published title (cited “2024”)"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "Agent Workflow Memory",
+      "authors": [
+       "Wang",
+       "Mao",
+       "Fried",
+       "Neubig"
+      ],
+      "years": [
+       2024
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2409.07429"
+     },
+     "judgement": "false alarm: year glued onto the title by the parser",
+     "reviewIndex": 25
+    },
+    {
+     "n": 35,
+     "verdict": "metadata_error",
+     "raw": "[35] Shengran Hu, Cong Lu, and Jeff Clune. Automated design of agentic systems, 2024. URL https://arxiv.org/abs/2408.08435.",
+     "issues": [
+      "Title differs from the published title (cited “2024”)"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "Automated Design of Agentic Systems",
+      "authors": [
+       "Hu",
+       "Lu",
+       "Clune"
+      ],
+      "years": [
+       2024
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2408.08435"
+     },
+     "judgement": "false alarm: year glued onto the title by the parser",
+     "reviewIndex": 26
+    },
+    {
+     "n": 42,
+     "verdict": "id_mismatch",
+     "raw": "[42] Lirong Che, Yuzhe yang, Peiwen lin, Chuang wang, Xueqian wang, and Jian su. Demoevolve: Overcoming sparse feedback in agentic harness evolution with demonstrations, 2026. URL https://arxiv.org/abs/2605.24539.",
+     "issues": [
+      "arXiv:2605.24539 points to a different work: “DemoEvolve: Demonstration-Guided Harness Evolution under Sparse Feedback”"
+     ],
+     "judgement": "real but overstated: cited title differs from the arXiv record title; flagged as wrong identifier",
+     "reviewIndex": 27
+    },
+    {
+     "n": 44,
+     "verdict": "metadata_error",
+     "raw": "[44] Krisztian Balog and ChengXiang Zhai. User simulation in the era of generative ai: User modeling, synthetic data generation, and system evaluation, 2025. URL https://arxiv.org/ abs/2501.04410.",
+     "issues": [
+      "Published in “arXiv.org”, not “abs/2501.04410”"
+     ],
+     "match": {
+      "source": "semanticscholar",
+      "title": "User Simulation in the Era of Generative AI: User Modeling, Synthetic Data Generation, and System Evaluation",
+      "authors": [
+       "Balog",
+       "Zhai"
+      ],
+      "years": [
+       2025,
+       2025
+      ],
+      "venue": "arXiv.org",
+      "doi": "10.48550/arxiv.2501.04410"
+     },
+     "judgement": "false alarm: venue mis-parsed",
+     "reviewIndex": 28
+    },
+    {
+     "n": 45,
+     "verdict": "metadata_error",
+     "raw": "[45] Shunyu Yao, Noah Shinn, Pedram Razavi, and Karthik Narasimhan. au-bench: A benchmark for tool-agent-user interaction in real-world domains, 2024. URL https://arxiv.org/abs/ 2406.12045.",
+     "issues": [
+      "Title differs from the published title (cited “au”, cited “2024”)"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "$τ$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
+      "authors": [
+       "Yao",
+       "Shinn",
+       "Razavi",
+       "Narasimhan"
+      ],
+      "years": [
+       2024
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2406.12045"
+     },
+     "judgement": "false alarm: τ lost in PDF text extraction",
+     "reviewIndex": 29
+    },
+    {
+     "n": 46,
+     "verdict": "metadata_error",
+     "raw": "[46] Victor Barres, Honghua Dong, Soham Ray, Xujie Si, and Karthik Narasimhan. au2-bench: Evaluating conversational agents in a dual-control environment, 2025. URL https://arxiv. org/abs/2506.07982.",
+     "issues": [
+      "Title differs from the published title (cited “au2”, cited “2025”, published “2”)"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "$τ^2$-Bench: Evaluating Conversational Agents in a Dual-Control Environment",
+      "authors": [
+       "Barres",
+       "Dong",
+       "Ray",
+       "Si",
+       "Narasimhan"
+      ],
+      "years": [
+       2025
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2506.07982"
+     },
+     "judgement": "false alarm: τ lost in PDF text extraction",
+     "reviewIndex": 30
+    },
+    {
+     "n": 55,
+     "verdict": "metadata_error",
+     "raw": "[55] Cheng Qian, Bingxiang He, Zhong Zhuang, Jia Deng, Yujia Qin, Xin Cong, Zhong Zhang, Jie Zhou, Yankai Lin, Zhiyuan Liu, and Maosong Sun. Tell me more! towards implicit user intention understanding of language model driven agents, 2024. URL https://arxiv.org/ abs/2402.09205.",
+     "issues": [
+      "Published in “Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)”, not “towards implicit user intention understanding of language model driven agents”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Tell Me More! Towards Implicit User Intention Understanding of Language Model Driven Agents",
+      "authors": [
+       "Qian",
+       "He",
+       "Zhuang",
+       "Deng",
+       "Qin",
+       "Cong"
+      ],
+      "years": [
+       2024
+      ],
+      "venue": "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+      "doi": "10.18653/v1/2024.acl-long.61"
+     },
+     "judgement": "false alarm: venue mis-parsed",
+     "reviewIndex": 31
+    },
+    {
+     "n": 65,
+     "verdict": "metadata_error",
+     "raw": "[65] Weiwei Sun, Xuhui Zhou, Weihua Du, Xingyao Wang, Sean Welleck, Graham Neubig, Maarten Sap, and Yiming Yang. Training proactive and personalized llm agents, 2025. URL https: //arxiv.org/abs/2511.02208.",
+     "issues": [
+      "Title differs from the published title (cited “2025”)"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "Training Proactive and Personalized LLM Agents",
+      "authors": [
+       "Sun",
+       "Zhou",
+       "Du",
+       "Wang",
+       "Welleck",
+       "Neubig"
+      ],
+      "years": [
+       2025
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2511.02208"
+     },
+     "judgement": "false alarm: year glued onto the title by the parser",
+     "reviewIndex": 32
+    },
+    {
+     "n": 71,
+     "verdict": "metadata_error",
+     "raw": "[71] Daman Arora, Atharv Sonwane, Nalin Wadhwa, Abhav Mehrotra, Saiteja Utpala, Ramakrishna Bairi, Aditya Kanade, and Nagarajan Natarajan. MASAI: Modular architecture for softwareengineering AI agents, 2024. URL https://arxiv.org/abs/2406.11638.",
+     "issues": [
+      "Title differs from the published title (cited “softwareengineering”, cited “2024”, published “software”, published “engineering”)"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "MASAI: Modular Architecture for Software-engineering AI Agents",
+      "authors": [
+       "Arora",
+       "Sonwane",
+       "Wadhwa",
+       "Mehrotra",
+       "Utpala",
+       "Bairi"
+      ],
+      "years": [
+       2024
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2406.11638"
+     },
+     "judgement": "false alarm: hyphenation joined in PDF text",
+     "reviewIndex": 33
+    },
+    {
+     "n": 77,
+     "verdict": "metadata_error",
+     "raw": "[77] Michael E. Bratman, David J. Israel, and Martha E. Pollack. Plans and resource-bounded practical reasoning. Computational Intelligence, 4(3):349-355, September 1988. doi: 10. 1111/j.1467-8640.1988.tb00284.x. URL https://doi.org/10.1111/j.1467-8640.1988. tb00284.x.",
+     "issues": [
+      "doi:10.1111/j.1467-8640.1988 does not resolve to any record"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Plans and resource‐bounded practical reasoning",
+      "authors": [
+       "Bratman",
+       "Israel",
+       "Pollack"
+      ],
+      "years": [
+       1988,
+       2007
+      ],
+      "venue": "Computational Intelligence",
+      "doi": "10.1111/j.1467-8640.1988.tb00284.x"
+     },
+     "judgement": "false alarm: DOI broken across a line, truncated by the parser",
+     "reviewIndex": 34
+    },
+    {
+     "n": 84,
+     "verdict": "metadata_error",
+     "raw": "[84] Quan Shi, Michael Tang, Karthik Narasimhan, and Shunyu Yao. Can language models solve olympiad programming?, 2024. URL https://arxiv.org/abs/2404.10952.",
+     "issues": [
+      "Title differs from the published title (cited “2024”)"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "Can Language Models Solve Olympiad Programming?",
+      "authors": [
+       "Shi",
+       "Tang",
+       "Narasimhan",
+       "Yao"
+      ],
+      "years": [
+       2024
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2404.10952"
+     },
+     "judgement": "false alarm: year glued onto the title by the parser",
+     "reviewIndex": 35
+    },
+    {
+     "n": 87,
+     "verdict": "not_found",
+     "raw": "[87] Grégoire Mialon, Clémentine Fourrier, Craig Swift, Thomas Wolf, Yann LeCun, and Thomas Scialom. GAIA: A benchmark for general AI assistants, 2023. URL https://arxiv.org/ abs/2311.12983.",
+     "issues": [
+      "Semantic Scholar and OpenAlex did not respond; re-run later to confirm",
+      "No matching work in Hugging Face"
+     ],
+     "judgement": "false alarm: index rate-limited, the work exists (GAIA)",
+     "reviewIndex": 36
+    },
+    {
+     "n": 88,
+     "verdict": "not_found",
+     "raw": "[88] Xiangyi Li, Yimin Liu, Wenbo Chen, Bingran You, Zonglin Di, Yifeng He, Shenghan Zheng, Kyoung Whan Choe, Jiankai Sun, Shuyi Wang, et al. SkillsBench: Benchmarking how well agent skills work across diverse tasks, 2026. URL https://arxiv.org/abs/2602.12670.",
+     "issues": [
+      "Semantic Scholar and OpenAlex did not respond; re-run later to confirm",
+      "No matching work in Hugging Face"
+     ],
+     "judgement": "false alarm: index rate-limited, the work exists (checked on arXiv)",
+     "reviewIndex": 37
+    }
+   ]
+  },
+  {
+   "source": "arXiv",
+   "cat": "cs.HC",
+   "id": "2611.24888v1",
+   "title": "Who are you? The Personal Imitation Game",
+   "file": "cs.HC_2611.24888v1.pdf",
+   "refsParsed": 101,
+   "pages": 19,
+   "refs": 101,
+   "citances": 120,
+   "style": "numeric",
+   "parseMs": 1816,
+   "verifyMs": 347342,
+   "counts": {
+    "verified_minor": 18,
+    "verified": 50,
+    "unverifiable": 13,
+    "fabricated": 3,
+    "not_found": 2,
+    "metadata_error": 11,
+    "id_mismatch": 1,
+    "unchecked": 3
+   },
+   "coverage": 0.6732673267326733,
+   "unverifiableShare": 0.12871287128712872,
+   "uncheckedShare": 0.0297029702970297,
+   "flagged": 17,
+   "flags": [
+    {
+     "n": 13,
+     "verdict": "fabricated",
+     "raw": "[13] Heewon Chang. 2016.",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in Crossref, OpenAlex, Europe PMC"
+     ],
+     "judgement": "false alarm: reference truncated by the parser",
+     "reviewIndex": 38
+    },
+    {
+     "n": 18,
+     "verdict": "not_found",
+     "raw": "[18] Michael Davern, Rene Bautista, Jeremy Freese, Pamela Herd, and Stephen L. Morgan. 2025. General Social Survey 1972-2024. Data accessed from the GSS Data Explorer website at gssdataexplorer.norc.org. Principal Investigator, Michael Davern; Co-Principal Investigators, Rene Bautista, Jeremy Freese, Pamela Herd, and Stephen L. Morgan. Sponsored by National Science Foundation.",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in Crossref, OpenAlex",
+      "Nearest record: “General Social Survey, 1972: Version 1” (75% title similarity)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "General Social Survey, 1972: Version 1",
+      "authors": [
+       "Davis"
+      ],
+      "years": [
+       1984,
+       2011
+      ],
+      "venue": "ICPSR Data Holdings",
+      "doi": "10.3886/icpsr07309.v1"
+     },
+     "judgement": "false alarm: dataset (General Social Survey), exists",
+     "reviewIndex": 39
+    },
+    {
+     "n": 21,
+     "verdict": "metadata_error",
+     "raw": "[21] Jenna Drenten and Gillian Brooks. 2020. Celebrity 2.0: Lil Miquela and the rise of a virtual star system. Feminist Media Studies 20, 8 (2020), 1319-1323. doi:10.1080/14680777.2020.1830927",
+     "issues": [
+      "Author list does not match the published work: Miquela not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Celebrity 2.0: Lil Miquela and the rise of a virtual star system",
+      "authors": [
+       "Drenten",
+       "Brooks"
+      ],
+      "years": [
+       2020
+      ],
+      "venue": "Feminist Media Studies",
+      "doi": "10.1080/14680777.2020.1830927"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 40
+    },
+    {
+     "n": 25,
+     "verdict": "fabricated",
+     "raw": "[25] GDPR. 2024. GDPR.",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in Crossref, OpenAlex, Europe PMC"
+     ],
+     "judgement": "false alarm: legal text (GDPR), labelled fabricated",
+     "reviewIndex": 41
+    },
+    {
+     "n": 34,
+     "verdict": "metadata_error",
+     "raw": "[34] Steffen Herbold, Alexander Trautsch, Zlata Kikteva, and Annette Hautli-Janisz. 2026. LLM-impersonated debate contributions are more authentic, relevant and coherent than their original: A representative study using BBC1’s Question Time. PLOS ONE 21, 7 (2026), e0347757. doi:10.1371/journal.pone.0347757",
+     "issues": [
+      "Author list does not match the published work: authentic, relevant not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "LLM-impersonated debate contributions are more authentic, relevant and coherent than their original: A representative study using BBC1’s Question Time",
+      "authors": [
+       "Herbold",
+       "Trautsch",
+       "Kikteva",
+       "Hautli-Janisz"
+      ],
+      "years": [
+       2026
+      ],
+      "venue": "PLOS One",
+      "doi": "10.1371/journal.pone.0347757"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 42
+    },
+    {
+     "n": 39,
+     "verdict": "metadata_error",
+     "raw": "[39] Daniel Jannai, Amos Meron, Barak Lenz, Yoav Levine, and Yoav Shoham. 2023. Human or Not? A Gamified Approach to the Turing Test. arXiv.org (2023). doi:10.48550/ARXIV.2305.20010",
+     "issues": [
+      "Author list does not match the published work: org not among its authors"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "Human or Not? A Gamified Approach to the Turing Test",
+      "authors": [
+       "Jannai",
+       "Meron",
+       "Lenz",
+       "Levine",
+       "Shoham"
+      ],
+      "years": [
+       2023
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2305.20010"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 43
+    },
+    {
+     "n": 51,
+     "verdict": "fabricated",
+     "raw": "[51] Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel, Sebastian Riedel, and Douwe Kiela. 2020. Retrieval-augmented generation for knowledge-intensive NLP tasks. Advances in Neural Information Processing Systems 33 (2020), 9459-9474.",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in Crossref, OpenAlex, Europe PMC",
+      "Nearest record: “KILT: a Benchmark for Knowledge Intensive Language Tasks” (62% title similarity)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "KILT: a Benchmark for Knowledge Intensive Language Tasks",
+      "authors": [
+       "Petroni",
+       "Piktus",
+       "Fan",
+       "Lewis",
+       "Yazdani",
+       "De Cao"
+      ],
+      "years": [
+       2021
+      ],
+      "venue": "Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+      "doi": "10.18653/v1/2021.naacl-main.200"
+     },
+     "judgement": "false alarm: RAG (Lewis et al., NeurIPS 2020) labelled fabricated while Semantic Scholar was rate-limited",
+     "reviewIndex": 44
+    },
+    {
+     "n": 63,
+     "verdict": "not_found",
+     "raw": "[63] Helen Nissenbaum. 2004. Privacy as Contextual Integrity. Washington Law Review 79, 1 (2004), 119-157.",
+     "issues": [
+      "Semantic Scholar did not respond; re-run later to confirm",
+      "No matching work in OpenAlex",
+      "Nearest record: “PrivaCI: Privacy as Contextual Integrity” (82% title similarity)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "PrivaCI: Privacy as Contextual Integrity",
+      "authors": [
+       "Martin",
+       "Nissenbaum",
+       "Shvartzshnaider"
+      ],
+      "years": [
+       2026
+      ],
+      "venue": "IEEE Security &amp; Privacy",
+      "doi": "10.1109/msec.2026.3697946"
+     },
+     "judgement": "false alarm: law review article, exists",
+     "reviewIndex": 45
+    },
+    {
+     "n": 64,
+     "verdict": "metadata_error",
+     "raw": "[64] OpenClaw Contributors. 2025. OpenClaw - Personal AI Assistant. https: //openclaw.ai/. Accessed: 2026-03-01.",
+     "issues": [
+      "Author list does not match the published work: Contributors not among its authors",
+      "Published in “International Journal of Innovative Research in Information Security”, not “https: //openclaw.ai/”"
+     ],
+     "match": {
+      "source": "semanticscholar",
+      "title": "Personal AI Assistant",
+      "authors": [
+       "V"
+      ],
+      "years": [
+       2025,
+       2025
+      ],
+      "venue": "International Journal of Innovative Research in Information Security",
+      "doi": "10.26562/ijiris.2025.v1109.27"
+     },
+     "judgement": "false alarm: web page matched to an unrelated article",
+     "reviewIndex": 46
+    },
+    {
+     "n": 67,
+     "verdict": "metadata_error",
+     "raw": "[67] R. Parasuraman, T.B. Sheridan, and C.D. Wickens. 2000. A model for types and levels of human interaction with automation. IEEE Transactions on Systems, Man, and Cybernetics - Part A: Systems and Humans 30, 3 (2000), 286-297. doi:10.1109/3468.844354",
+     "issues": [
+      "Author list does not match the published work: types, Systems, Man, Systems not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "A model for types and levels of human interaction with automation",
+      "authors": [
+       "Parasuraman",
+       "Sheridan",
+       "Wickens"
+      ],
+      "years": [
+       2000,
+       2002
+      ],
+      "venue": "IEEE Transactions on Systems, Man, and Cybernetics - Part A: Systems and Humans",
+      "doi": "10.1109/3468.844354"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 47
+    },
+    {
+     "n": 70,
+     "verdict": "id_mismatch",
+     "raw": "[70] Joon Sung Park, Carolyn Q. Zou, Jonne Kamphorst, Niles Egan, Aaron Shaw, Benjamin Mako Hill, Carrie Cai, Meredith Ringel Morris, Percy Liang, Robb Willer, and Michael S. Bernstein. 2026. LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals. arXiv:2411.10109v3 [cs.AI] https://arxiv.org/abs/2411.10109v3",
+     "issues": [
+      "arXiv:2411.10109 points to a different work: “AI Simulations Grounded in Rich Self-Reports Increase Accuracy and Reduce Distortion”"
+     ],
+     "judgement": "false alarm: citation names arXiv v3, whose title differs from the current version",
+     "reviewIndex": 48
+    },
+    {
+     "n": 74,
+     "verdict": "metadata_error",
+     "raw": "[74] Machel Reid, Nikolay Savinov, Denis Teplyashin, et al. 2024. Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context. arXiv preprint arXiv:2403.05530 (2024).",
+     "issues": [
+      "Author list does not match the published work: arXiv not among its authors"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context",
+      "authors": [
+       "Team",
+       "Georgiev",
+       "Lei",
+       "Burnell",
+       "Bai",
+       "Gulati"
+      ],
+      "years": [
+       2024
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2403.05530"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 49
+    },
+    {
+     "n": 77,
+     "verdict": "metadata_error",
+     "raw": "[77] Ayse Pinar Saygin, Ilyas Cicekli, and Varol Akman. 2000. Turing Test: 50 Years Later. Minds and Machines 10, 4 (2000), 463-518. doi:10.1023/A:1011288000451",
+     "issues": [
+      "Author list does not match the published work: Minds not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Turing Test: 50 Years Later",
+      "authors": [
+       "Pinar Saygin",
+       "Cicekli",
+       "Akman"
+      ],
+      "years": [
+       2000,
+       2002
+      ],
+      "venue": "Minds and Machines",
+      "doi": "10.1023/a:1011288000451"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 50
+    },
+    {
+     "n": 85,
+     "verdict": "metadata_error",
+     "raw": "[85] Ben Shneiderman. 2020. Human-centered artificial intelligence: Reliable, safe & trustworthy. International Journal of Human-Computer Interaction 36, 6 (2020), 495-504.",
+     "issues": [
+      "Author list does not match the published work: Reliable, safe not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Human-Centered Artificial Intelligence: Reliable, Safe &amp; Trustworthy",
+      "authors": [
+       "Shneiderman"
+      ],
+      "years": [
+       2020
+      ],
+      "venue": "International Journal of Human–Computer Interaction",
+      "doi": "10.1080/10447318.2020.1741118"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 51
+    },
+    {
+     "n": 86,
+     "verdict": "metadata_error",
+     "raw": "[86] Efstathios Stamatatos. 2009. A survey of modern authorship attribution methods. Journal of the American Society for Information Science and Technology 60, 3 (2009), 538-556.",
+     "issues": [
+      "Author list does not match the published work: Science not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "A survey of modern authorship attribution methods",
+      "authors": [
+       "Stamatatos"
+      ],
+      "years": [
+       2008,
+       2009
+      ],
+      "venue": "Journal of the American Society for Information Science and Technology",
+      "doi": "10.1002/asi.21001"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 52
+    },
+    {
+     "n": 90,
+     "verdict": "metadata_error",
+     "raw": "[90] Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, et al. 2023. LLaMA: Open and efficient foundation language models. arXiv preprint arXiv:2302.13971 (2023).",
+     "issues": [
+      "Author list does not match the published work: Open, arXiv not among its authors"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "LLaMA: Open and Efficient Foundation Language Models",
+      "authors": [
+       "Touvron",
+       "Lavril",
+       "Izacard",
+       "Martinet",
+       "Lachaux",
+       "Lacroix"
+      ],
+      "years": [
+       2023
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2302.13971"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 53
+    },
+    {
+     "n": 93,
+     "verdict": "metadata_error",
+     "raw": "[93] A. M. Turing. 1950. Computing Machinery and Intelligence. Mind LIX, 236 (1950), 433-460. doi:10.1093/mind/LIX.236.433",
+     "issues": [
+      "Author list does not match the published work: Machinery, Intelligence. Mind not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "I.—COMPUTING MACHINERY AND INTELLIGENCE",
+      "authors": [
+       "TURING"
+      ],
+      "years": [
+       1950,
+       2007
+      ],
+      "venue": "Mind",
+      "doi": "10.1093/mind/lix.236.433"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 54
+    }
+   ]
+  },
+  {
+   "source": "arXiv",
+   "cat": "astro-ph.GA",
+   "id": "2611.24937v1",
+   "title": "LEMUR: A Searchable Web Archive of Deep Chandra Images of Galaxies and Galaxy Clusters",
+   "file": "astro-ph.GA_2611.24937v1.pdf",
+   "refsParsed": 11,
+   "pages": 12,
+   "refs": 11,
+   "citances": 9,
+   "style": "author-year",
+   "parseMs": 912,
+   "verifyMs": 47999,
+   "counts": {
+    "metadata_error": 3,
+    "verified": 7,
+    "id_mismatch": 1
+   },
+   "coverage": 0.6363636363636364,
+   "unverifiableShare": 0,
+   "uncheckedShare": 0,
+   "flagged": 4,
+   "flags": [
+    {
+     "n": 1,
+     "verdict": "metadata_error",
+     "raw": "Astropy Collaboration, Price-Whelan, A. M., Lim, P. L., et al. 2022, The Astropy Project: Sustaining and Growing a Community-oriented Open-source Project and the Latest Major Release (v5.0) of the Core Package*, ApJ, 935, 167, doi: 10.3847/1538-4357/ac7c74",
+     "issues": [
+      "Title differs from the published title (cited “2022”, cited “the”, cited “apj”, cited “935”, cited “167”)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "The Astropy Project: Sustaining and Growing a Community-oriented Open-source Project and the Latest Major Release (v5.0) of the Core Package*",
+      "authors": [
+       "The Astropy Collaboration",
+       "Price-Whelan",
+       "Lim",
+       "Earl",
+       "Starkman",
+       "Bradley"
+      ],
+      "years": [
+       2022
+      ],
+      "venue": "The Astrophysical Journal",
+      "doi": "10.3847/1538-4357/ac7c74"
+     },
+     "judgement": "false alarm: AAS style parsed wrongly",
+     "reviewIndex": 55
+    },
+    {
+     "n": 2,
+     "verdict": "metadata_error",
+     "raw": "Baldi, A., Forman, W., Jones, C., et al. 2009, The Unusual X-ray Morphology of NGC 4636 Revealed by Deep Chandra Observations: Cavities and Shocks Created by Past Active Galactic Nucleus Outbursts, ApJ, 707, 1034, doi: 10.1088/0004-637X/707/2/1034",
+     "issues": [
+      "Title differs from the published title (cited “2009”, cited “the”, cited “apj”, cited “707”, cited “1034”)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "THE UNUSUAL X-RAY MORPHOLOGY OF NGC 4636 REVEALED BY DEEP CHANDRA OBSERVATIONS: CAVITIES AND SHOCKS CREATED BY PAST ACTIVE GALACTIC NUCLEUS OUTBURSTS",
+      "authors": [
+       "Baldi",
+       "Forman",
+       "Jones",
+       "Kraft",
+       "Nulsen",
+       "Churazov"
+      ],
+      "years": [
+       2009
+      ],
+      "venue": "The Astrophysical Journal",
+      "doi": "10.1088/0004-637x/707/2/1034"
+     },
+     "judgement": "false alarm: AAS style parsed wrongly",
+     "reviewIndex": 56
+    },
+    {
+     "n": 3,
+     "verdict": "metadata_error",
+     "raw": "Bulbul, E., Liu, A., Kluge, M., et al. 2024, The SRG/eROSITA All-Sky Survey. The first catalog of galaxy clusters and groups in the Western Galactic Hemisphere, Astronomy and Astrophysics, 685, A106, doi: 10.1051/0004-6361/202348264",
+     "issues": [
+      "Author list does not match the published work: Survey not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "The SRG/eROSITA All-Sky Survey: The first catalog of galaxy clusters and groups in the Western Galactic Hemisphere",
+      "authors": [
+       "Bulbul",
+       "Liu",
+       "Kluge",
+       "Zhang",
+       "Sanders",
+       "Bahar"
+      ],
+      "years": [
+       2024
+      ],
+      "venue": "Astronomy &amp; Astrophysics",
+      "doi": "10.1051/0004-6361/202348264"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 57
+    },
+    {
+     "n": 9,
+     "verdict": "id_mismatch",
+     "raw": "Evans, I. N., Primini, F. A., Glotfelty, K. J., et al. 2010, The Chandra Source Catalog, The Astrophysical Journal Supplement Series, 189, 37, doi: 10.1088/0067-0049/189/1/37",
+     "issues": [
+      "doi:10.1088/0067-0049/189/1/37 points to a different work: “THE CHANDRA SOURCE CATALOG”"
+     ],
+     "judgement": "false alarm: same title in capitals, AAS style parsed wrongly",
+     "reviewIndex": 58
+    }
+   ]
+  },
+  {
+   "source": "arXiv",
+   "cat": "cond-mat.mtrl-sci",
+   "id": "2611.24759v1",
+   "title": "Characterizing adsorption thermodynamics in carbon capture materials: an efficient first-principles approach",
+   "file": "cond-mat.mtrl-sci_2611.24759v1.pdf",
+   "refsParsed": 28,
+   "pages": 31,
+   "refs": 28,
+   "citances": 0,
+   "style": "unknown",
+   "parseMs": 10190,
+   "verifyMs": 68240,
+   "counts": {
+    "verified": 11,
+    "verified_minor": 13,
+    "unchecked": 2,
+    "metadata_error": 2
+   },
+   "coverage": 0.8571428571428571,
+   "unverifiableShare": 0,
+   "uncheckedShare": 0.07142857142857142,
+   "flagged": 2,
+   "flags": [
+    {
+     "n": 14,
+     "verdict": "metadata_error",
+     "raw": "15Y. Lim, H. Park, A. Walsh, and J. Kim, “Accelerating CO direct air capture screening for metal-organic frameworks with a transferable machine learning force field,” Matter 8, 102203 (2025).",
+     "issues": [
+      "Title differs from the published title (cited “co”, published “co2”)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Accelerating CO2 direct air capture screening for metal-organic frameworks with a transferable machine learning force field",
+      "authors": [
+       "Lim",
+       "Park",
+       "Walsh",
+       "Kim"
+      ],
+      "years": [
+       2025
+      ],
+      "venue": "Matter",
+      "doi": "10.1016/j.matt.2025.102203"
+     },
+     "judgement": "false alarm: subscript lost in PDF text",
+     "reviewIndex": 59
+    },
+    {
+     "n": 24,
+     "verdict": "metadata_error",
+     "raw": "25J. H. Cavka, C. A. Grande, G. Mondino, and R. Blom, “High pressure adsorption of CO and CH on zr-MOFs,” Ind. Eng. Chem. Res. 53, 15500-15507 (2014).",
+     "issues": [
+      "Title differs from the published title (published “2”, published “4”)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "High Pressure Adsorption of CO 2 and CH 4 on Zr-MOFs",
+      "authors": [
+       "Cavka",
+       "Grande",
+       "Mondino",
+       "Blom"
+      ],
+      "years": [
+       2014
+      ],
+      "venue": "Industrial &amp; Engineering Chemistry Research",
+      "doi": "10.1021/ie500421h"
+     },
+     "judgement": "false alarm: subscript lost in PDF text",
+     "reviewIndex": 60
+    }
+   ]
+  },
+  {
+   "source": "arXiv",
+   "cat": "quant-ph",
+   "id": "2611.24886v1",
+   "title": "CREST: A Hardware-Aware GNN-Based Framework for High-Fidelity and Robust Superconducting Quantum Compilation",
+   "file": "quant-ph_2611.24886v1.pdf",
+   "refsParsed": 39,
+   "pages": 14,
+   "refs": 39,
+   "citances": 56,
+   "style": "numeric",
+   "parseMs": 1525,
+   "verifyMs": 106710,
+   "counts": {
+    "verified": 28,
+    "metadata_error": 4,
+    "id_mismatch": 3,
+    "verified_minor": 2,
+    "unverifiable": 2
+   },
+   "coverage": 0.7692307692307693,
+   "unverifiableShare": 0.05128205128205128,
+   "uncheckedShare": 0,
+   "flagged": 7,
+   "flags": [
+    {
+     "n": 13,
+     "verdict": "metadata_error",
+     "raw": "[13] F. Wagner, D. J. Egger, and F. Liers, “Optimized Noise Suppression for Quantum Circuits,” Jan. 2024, arXiv:2401.06423 [quant-ph]. [Online]. Available: http://arxiv.org/abs/2401.06423",
+     "issues": [
+      "Published in “INFORMS Journal on Computing”, not “Jan”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Optimized Noise Suppression for Quantum Circuits",
+      "authors": [
+       "Wagner",
+       "Egger",
+       "Liers"
+      ],
+      "years": [
+       2025,
+       2024
+      ],
+      "venue": "INFORMS Journal on Computing",
+      "doi": "10.1287/ijoc.2024.0551"
+     },
+     "judgement": "false alarm: venue mis-parsed",
+     "reviewIndex": 61
+    },
+    {
+     "n": 15,
+     "verdict": "id_mismatch",
+     "raw": "[15] H.-Z. Xu et al., Compilation Framework for Real Quantum Computing Quantum Research, vol. 8, p. 0947, Oct. 2025. [Online]. Available: Processors,” https://spj.science.org/doi/full/10.34133/research.0947 “HAQA: a hardware-guided and fidelity-aware",
+     "issues": [
+      "doi:10.34133/research.0947 points to a different work: “A Resource-Virtualized and Hardware-Aware Quantum Compilation Framework for Real Quantum Computing Processors”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "A Modular Quantum Compilation Framework for Distributed Quantum Computing",
+      "authors": [
+       "Ferrari",
+       "Carretta",
+       "Amoretti"
+      ],
+      "years": [
+       2023
+      ],
+      "venue": "IEEE Transactions on Quantum Engineering",
+      "doi": "10.1109/tqe.2023.3303935"
+     },
+     "judgement": "false alarm: two-column text interleaved in one reference",
+     "reviewIndex": 62
+    },
+    {
+     "n": 16,
+     "verdict": "id_mismatch",
+     "raw": "[16] W. Sun et al., efficient qubit mapping optimization,” EPJ Quantum strategy for , vol. 13, no. 1, p. 61, Apr. 2026. [Online]. Available: Technology https://doi.org/10.1140/epjqt/s40507-026-00505-y V. Saravanan and S. M. Saeed, “Noise Adaptive Quantum Circuit",
+     "issues": [
+      "doi:10.1140/epjqt/s40507-026-00505-y points to a different work: “HAQA: a hardware-guided and fidelity-aware strategy for efficient qubit mapping optimization”"
+     ],
+     "judgement": "false alarm: two-column text interleaved in one reference",
+     "reviewIndex": 63
+    },
+    {
+     "n": 19,
+     "verdict": "metadata_error",
+     "raw": "[19] S. Sivarajah, S. and R. Duncan, “t|ket〉: a retargetable compiler for NISQ devices,” Quantum Science and Technology, vol. 6, no. 1, p. 014003, Nov. 2020. [Online]. Available: https://dx.doi.org/10.1088/2058-9565/ab8e92 M. Y. Siraichi, V. F. d. Santos, C. Collange, and F. M. Q. Pereira,",
+     "issues": [
+      "Incomplete author list: 4 of 6 authors omitted without “et al.”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "t|ket⟩: a retargetable compiler for NISQ devices",
+      "authors": [
+       "Sivarajah",
+       "Dilkes",
+       "Cowtan",
+       "Simmons",
+       "Edgington",
+       "Duncan"
+      ],
+      "years": [
+       2020,
+       2021
+      ],
+      "venue": "Quantum Science and Technology",
+      "doi": "10.1088/2058-9565/ab8e92"
+     },
+     "judgement": "false alarm: two-column text interleaved in one reference",
+     "reviewIndex": 64
+    },
+    {
+     "n": 21,
+     "verdict": "metadata_error",
+     "raw": "[21] P. Krantz, M. Kjaergaard, F. Yan, T. P. Orlando, S. Gustavsson, and W. D. Oliver, “A quantum engineer’s guide to superconducting qubits,” Applied Physics Reviews, vol. 6, no. 2, p. 021318, Jun. 2019. [Online]. Available: https://doi.org/10.1063/1.5089550",
+     "issues": [
+      "Title differs from the published title (cited “engineer”, published “engineers”, published “guide”, published “to”, published “superconducting”, published “qubits”)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "A quantum engineer's guide to superconducting qubits",
+      "authors": [
+       "Krantz",
+       "Kjaergaard",
+       "Yan",
+       "Orlando",
+       "Gustavsson",
+       "Oliver"
+      ],
+      "years": [
+       2019
+      ],
+      "venue": "Applied Physics Reviews",
+      "doi": "10.1063/1.5089550"
+     },
+     "judgement": "false alarm: apostrophe tokenisation",
+     "reviewIndex": 65
+    },
+    {
+     "n": 37,
+     "verdict": "metadata_error",
+     "raw": "[37] B. M. Terhal, “Quantum error correction for quantum memories,” Reviews of Modern Physics, vol. 87, no. 2, pp. 307-346, Apr. 2015. [Online]. Available: https://link.aps.org/doi/10.1103/RevModPhys.87.",
+     "issues": [
+      "doi:10.1103/revmodphys.87 does not resolve to any record"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Quantum error correction for quantum memories",
+      "authors": [
+       "Terhal"
+      ],
+      "years": [
+       2015
+      ],
+      "venue": "Reviews of Modern Physics",
+      "doi": "10.1103/revmodphys.87.307"
+     },
+     "judgement": "false alarm: DOI broken across a line, truncated by the parser",
+     "reviewIndex": 66
+    },
+    {
+     "n": 38,
+     "verdict": "id_mismatch",
+     "raw": "[38] B. Efron, “Bootstrap Methods: Another Look at the Jackknife,” in Breakthroughs in Statistics: Methodology and Distribution, S. Kotz and N. L. Johnson, Eds. New York, NY: Springer, 1992, pp. 569-593. [Online]. Available: https://doi.org/10.1007/978-1-4612-4380-9 41",
+     "issues": [
+      "doi:10.1007/978-1-4612-4380-9 points to a different work: “Breakthroughs in Statistics: Methodology and Distribution”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Bootstrap Methods: Another Look at the Jackknife",
+      "authors": [
+       "Efron"
+      ],
+      "years": [
+       1992,
+       2011
+      ],
+      "venue": "Springer Series in Statistics",
+      "doi": "10.1007/978-1-4612-4380-9_41"
+     },
+     "judgement": "false alarm: underscore of the chapter DOI lost in PDF text",
+     "reviewIndex": 67
+    }
+   ]
+  },
+  {
+   "source": "arXiv",
+   "cat": "math.PR",
+   "id": "2611.24875v1",
+   "title": "Cameron--Martin theorem for SLE welding measures",
+   "file": "math.PR_2611.24875v1.pdf",
+   "refsParsed": 36,
+   "pages": 152,
+   "refs": 36,
+   "citances": 0,
+   "style": "unknown",
+   "parseMs": 11605,
+   "verifyMs": 59057,
+   "counts": {
+    "verified": 24,
+    "not_found": 1,
+    "metadata_error": 6,
+    "unchecked": 3,
+    "verified_minor": 2
+   },
+   "coverage": 0.7222222222222222,
+   "unverifiableShare": 0,
+   "uncheckedShare": 0.08333333333333333,
+   "flagged": 7,
+   "flags": [
+    {
+     "n": 5,
+     "verdict": "not_found",
+     "raw": "[BJ25] Guillaume Baverez and Antoine Jego. Conformal welding and the matter- Liouville-ghost factorisation, 2025.",
+     "issues": [
+      "OpenAlex did not respond; re-run later to confirm",
+      "No matching work in Crossref, Semantic Scholar"
+     ],
+     "judgement": "false alarm: index rate-limited, the work exists (checked on arXiv)",
+     "reviewIndex": 68
+    },
+    {
+     "n": 6,
+     "verdict": "metadata_error",
+     "raw": "[BP25] Nathanaël Berestycki and Ellen Powell. Gaussian free field and Liouville quantum gravity, 2025. 2404.16642.",
+     "issues": [
+      "Title differs from the published title (cited “2025”)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Gaussian Free Field and Liouville Quantum Gravity",
+      "authors": [
+       "Berestycki",
+       "Powell"
+      ],
+      "years": [
+       2025
+      ],
+      "doi": "10.1017/9781009405492"
+     },
+     "judgement": "false alarm: year glued onto the title by the parser",
+     "reviewIndex": 69
+    },
+    {
+     "n": 7,
+     "verdict": "metadata_error",
+     "raw": "[Cai26] Chunhao Cai. Closed response calculus for SLE weldings and Weil- Petersson Kähler geometry, 2026. 2609.29195.",
+     "issues": [
+      "Title differs from the published title (cited “kahler”, cited “2026”, published “k”, published “ahler”)"
+     ],
+     "match": {
+      "source": "semanticscholar",
+      "title": "Closed Response Calculus for SLE Weldings and Weil--Petersson K\\\"ahler Geometry",
+      "authors": [
+       "Cai"
+      ],
+      "years": [
+       2026,
+       2026
+      ]
+     },
+     "judgement": "false alarm: accent lost in PDF text",
+     "reviewIndex": 70
+    },
+    {
+     "n": 8,
+     "verdict": "metadata_error",
+     "raw": "[CDCH+14] Dmitry Chelkak, Hugo Duminil-Copin, Clément Hongler, Antti Kemppainen, and Stanislav Smirnov. Convergence of Ising interfaces to Schramm’s SLE curves. C. R. Math. Acad. Sci. Paris, 352(2):157-161, 2014.",
+     "issues": [
+      "Published in “Comptes Rendus. Mathématique”, not “C. R. Math. Acad. Sci. Paris”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Convergence of Ising interfaces to Schrammʼs SLE curves",
+      "authors": [
+       "Chelkak",
+       "Duminil-Copin",
+       "Hongler",
+       "Kemppainen",
+       "Smirnov"
+      ],
+      "years": [
+       2014
+      ],
+      "venue": "Comptes Rendus. Mathématique",
+      "doi": "10.1016/j.crma.2013.12.002"
+     },
+     "judgement": "false alarm: journal abbreviation",
+     "reviewIndex": 71
+    },
+    {
+     "n": 9,
+     "verdict": "metadata_error",
+     "raw": "[CM44] R. H. Cameron and W. T. Martin. Transformations of Wiener integrals under translations. Annals of Mathematics, 45(2):386-396, 1944.",
+     "issues": [
+      "Title differs from the published title (cited “wiener”, published “weiner”)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Transformations of Weiner Integrals Under Translations",
+      "authors": [
+       "Cameron",
+       "Martin"
+      ],
+      "years": [
+       1944,
+       2006
+      ],
+      "venue": "The Annals of Mathematics",
+      "doi": "10.2307/1969276"
+     },
+     "judgement": "false alarm: the original 1944 record misspells Wiener",
+     "reviewIndex": 72
+    },
+    {
+     "n": 12,
+     "verdict": "metadata_error",
+     "raw": "[GQW24] Maria Gordina, Wei Qian, and Yilin Wang. Infinitesimal conformal restriction and unitarizing measures for Virasoro algebra, 2024. arXiv:2407.09426.",
+     "issues": [
+      "Title differs from the published title (cited “2024”)"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "Infinitesimal conformal restriction and unitarizing measures for Virasoro algebra",
+      "authors": [
+       "Gordina",
+       "Qian",
+       "Wang"
+      ],
+      "years": [
+       2024
+      ],
+      "venue": "arXiv",
+      "doi": "10.48550/arxiv.2407.09426"
+     },
+     "judgement": "false alarm: year glued onto the title by the parser",
+     "reviewIndex": 73
+    },
+    {
+     "n": 21,
+     "verdict": "metadata_error",
+     "raw": "[PW24] Eveliina Peltola and Yilin Wang. Large deviations of multichordal SLE0+, real rational functions, and zeta-regularized determinants of Laplacians. J. Eur. Math. Soc. (JEMS), 26(2):469-535, 2024.",
+     "issues": [
+      "Title differs from the published title (cited “sle0”, published “operatornamesle0”)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Large deviations of multichordal operatornameSLE0+, real rational functions, and zeta-regularized determinants of Laplacians",
+      "authors": [
+       "Peltola",
+       "Wang"
+      ],
+      "years": [
+       2023
+      ],
+      "venue": "Journal of the European Mathematical Society",
+      "doi": "10.4171/jems/1274"
+     },
+     "judgement": "false alarm: LaTeX in the index title",
+     "reviewIndex": 74
+    }
+   ]
+  },
+  {
+   "source": "arXiv",
+   "cat": "q-bio.NC",
+   "id": "2611.24767v1",
+   "title": "Inferring Neural Activity Changes under Recording Uncertainty with Transformers and Variational Inference",
+   "file": "q-bio.NC_2611.24767v1.pdf",
+   "refsParsed": 36,
+   "pages": 18,
+   "refs": 36,
+   "citances": 36,
+   "style": "author-year",
+   "parseMs": 1388,
+   "verifyMs": 86048,
+   "counts": {
+    "verified": 32,
+    "metadata_error": 3,
+    "unchecked": 1
+   },
+   "coverage": 0.8888888888888888,
+   "unverifiableShare": 0,
+   "uncheckedShare": 0.027777777777777776,
+   "flagged": 3,
+   "flags": [
+    {
+     "n": 12,
+     "verdict": "metadata_error",
+     "raw": "M. D. Hoffman and A. Gelman. The No-U-Turn Sampler: Adaptively Setting Path Lengths in Hamiltonian Monte Carlo. Journal of Machine Learning Research 15, 1593- 1623, 2014. JMLR 15.",
+     "issues": [
+      "Year 2014 does not match the published record (2011/2011)"
+     ],
+     "match": {
+      "source": "semanticscholar",
+      "title": "The No-U-turn sampler: adaptively setting path lengths in Hamiltonian Monte Carlo",
+      "authors": [
+       "Hoffman",
+       "Gelman"
+      ],
+      "years": [
+       2011,
+       2011
+      ],
+      "venue": "Journal of machine learning research",
+      "doi": "10.5555/2627435.2638586"
+     },
+     "judgement": "false alarm: index record year (2011, arXiv) differs from the JMLR year 2014",
+     "reviewIndex": 75
+    },
+    {
+     "n": 25,
+     "verdict": "metadata_error",
+     "raw": "J. P. Simoncelli. A Model-Based Spike Sorting Algorithm for Removing Correlation Artifacts in Multi- Neuron Recordings. PLOS ONE 8, e62123, 2013. doi:10.1371/journal.pone.0062123.",
+     "issues": [
+      "Incomplete author list: 3 of 4 authors omitted without “et al.”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "A Model-Based Spike Sorting Algorithm for Removing Correlation Artifacts in Multi-Neuron Recordings",
+      "authors": [
+       "Pillow",
+       "Shlens",
+       "Chichilnisky",
+       "Simoncelli"
+      ],
+      "years": [
+       2013
+      ],
+      "venue": "PLoS ONE",
+      "doi": "10.1371/journal.pone.0062123"
+     },
+     "judgement": "real: cited author list (J. P. Simoncelli) omits the actual first three authors",
+     "reviewIndex": 76
+    },
+    {
+     "n": 32,
+     "verdict": "metadata_error",
+     "raw": "A. Vehtari, A. Gelman, D. Simpson, B. Carpenter and P.-C. Bürkner. Rank-normalization, Folding, and Localization: An Improved Rb for Assessing Convergence of MCMC (with discussion). Bayesian Analysis 16(2), 667-718, 2021. doi:10.1214/20-BA1221.",
+     "issues": [
+      "Title differs from the published title (cited “rb”, published “r”)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Rank-Normalization, Folding, and Localization: An Improved Rˆ for Assessing Convergence of MCMC (with Discussion)",
+      "authors": [
+       "Vehtari",
+       "Gelman",
+       "Simpson",
+       "Carpenter",
+       "Bürkner"
+      ],
+      "years": [
+       2021,
+       2020
+      ],
+      "venue": "Bayesian Analysis",
+      "doi": "10.1214/20-ba1221"
+     },
+     "judgement": "false alarm: R-hat symbol lost in PDF text",
+     "reviewIndex": 77
+    }
+   ]
+  },
+  {
+   "source": "arXiv",
+   "cat": "eess.SP",
+   "id": "2611.24829v1",
+   "title": "Greedy Vector Approximation Based on Rotation for Multiplierless Complex Products",
+   "file": "eess.SP_2611.24829v1.pdf",
+   "refsParsed": 13,
+   "pages": 5,
+   "refs": 13,
+   "citances": 9,
+   "style": "numeric",
+   "parseMs": 733,
+   "verifyMs": 23567,
+   "counts": {
+    "verified": 13
+   },
+   "coverage": 1,
+   "unverifiableShare": 0,
+   "uncheckedShare": 0,
+   "flagged": 0,
+   "flags": []
+  },
+  {
+   "source": "arXiv",
+   "cat": "econ.EM",
+   "id": "2611.24402v1",
+   "title": "Design-Based Inference for Fuzzy Difference-in-Differences",
+   "file": "econ.EM_2611.24402v1.pdf",
+   "refsParsed": 37,
+   "pages": 30,
+   "refs": 37,
+   "citances": 35,
+   "style": "author-year",
+   "parseMs": 915,
+   "verifyMs": 125027,
+   "counts": {
+    "verified": 34,
+    "metadata_error": 2,
+    "unverifiable": 1
+   },
+   "coverage": 0.918918918918919,
+   "unverifiableShare": 0.02702702702702703,
+   "uncheckedShare": 0,
+   "flagged": 2,
+   "flags": [
+    {
+     "n": 10,
+     "verdict": "metadata_error",
+     "raw": "de Chaisemartin, C. (2017). Tolerating defiance? Local average treatment effects without monotonicity. Quantitative Economics, 8:367-396.",
+     "issues": [
+      "Title differs from the published title (published “local”, published “average”, published “treatment”, published “effects”, published “without”, published “monotonicity”)"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Tolerating defiance? Local average treatment effects without monotonicity",
+      "authors": [
+       "de Chaisemartin"
+      ],
+      "years": [
+       2017
+      ],
+      "venue": "Quantitative Economics",
+      "doi": "10.3982/qe601"
+     },
+     "judgement": "false alarm: tokenisation after \"?\"",
+     "reviewIndex": 78
+    },
+    {
+     "n": 33,
+     "verdict": "metadata_error",
+     "raw": "Splawa-Neyman, J. (1990). On the application of probability theory to agricultural experiments. Essay on principles. Section 9. Statistical Science, 5:465-472. Translated and edited by D. M. Dabrowska and T. P. Speed from the Polish original (1923).",
+     "issues": [
+      "Incomplete author list: 2 of 3 authors omitted without “et al.”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "On the Application of Probability Theory to Agricultural Experiments. Essay on Principles. Section 9",
+      "authors": [
+       "Splawa-Neyman",
+       "Dabrowska",
+       "Speed"
+      ],
+      "years": [
+       1990,
+       2017
+      ],
+      "venue": "Statistical Science",
+      "doi": "10.1214/ss/1177012031"
+     },
+     "judgement": "false alarm: translators listed in the index as authors",
+     "reviewIndex": 79
+    }
+   ]
+  },
+  {
+   "source": "arXiv",
+   "cat": "stat.ME",
+   "id": "2611.24929v1",
+   "title": "Improving External Prediction in New Clusters with Mixed-Effects Models: Implications for Multicenter Studies",
+   "file": "stat.ME_2611.24929v1.pdf",
+   "refsParsed": 33,
+   "pages": 14,
+   "refs": 33,
+   "citances": 26,
+   "style": "author-year",
+   "parseMs": 538,
+   "verifyMs": 53118,
+   "counts": {
+    "verified_minor": 3,
+    "verified": 30
+   },
+   "coverage": 1,
+   "unverifiableShare": 0,
+   "uncheckedShare": 0,
+   "flagged": 0,
+   "flags": []
+  },
+  {
+   "source": "PLOS ONE",
+   "id": "10.1371/journal.pone.0360919",
+   "title": "Navigating the adolescent digital playground: Executive function impacts mental health associations through digital media use in the ABCD Study",
+   "published": "2026-11-18T00:00:00Z",
+   "file": "plos_10_1371_journal_pone_0360919.pdf",
+   "refsParsed": 39,
+   "pages": 17,
+   "refs": 39,
+   "citances": 33,
+   "style": "numeric",
+   "parseMs": 472,
+   "verifyMs": 126535,
+   "counts": {
+    "verified": 27,
+    "id_mismatch": 1,
+    "verified_minor": 6,
+    "metadata_error": 4,
+    "unchecked": 1
+   },
+   "coverage": 0.8461538461538461,
+   "unverifiableShare": 0,
+   "uncheckedShare": 0.02564102564102564,
+   "flagged": 5,
+   "flags": [
+    {
+     "n": 2,
+     "verdict": "id_mismatch",
+     "raw": "2. Bitsko RH, Claussen AH, Lichstein J, Black LI, Jones SE, Danielson ML, et al. Mental health surveillance among children and adolescents in the United States, 2013-2019. MMWR Suppl. 2022;71(2):1-42. https://doi.org/10.15585/mmwr.su7102a1",
+     "issues": [
+      "doi:10.15585/mmwr.su7102a1 points to a different work: “Mental Health Surveillance Among Children — United States, 2013–2019”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Mental Health Surveillance Among Children — United States, 2013–2019",
+      "authors": [
+       "Bitsko",
+       "Claussen",
+       "Lichstein",
+       "Black",
+       "Jones",
+       "Danielson"
+      ],
+      "years": [
+       2022
+      ],
+      "venue": "MMWR Supplements",
+      "doi": "10.15585/mmwr.su7102a1"
+     },
+     "judgement": "real but overstated: cited title is not the official MMWR title; flagged as wrong identifier, should be a title discrepancy",
+     "reviewIndex": 80
+    },
+    {
+     "n": 7,
+     "verdict": "metadata_error",
+     "raw": "7. Blakemore S-J, Choudhury S. Development of the adolescent brain: implications for executive function and social cognition. J Child Psychol Psychiatry. 2006;47(3-4):296-312. https://doi.org/10.1111/j.1469-7610.2006.01611.x PMID: 16492261",
+     "issues": [
+      "Author list does not match the published work: S-J not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Development of the adolescent brain: implications for executive function and social cognition",
+      "authors": [
+       "Blakemore",
+       "Choudhury"
+      ],
+      "years": [
+       2006
+      ],
+      "venue": "Journal of Child Psychology and Psychiatry",
+      "doi": "10.1111/j.1469-7610.2006.01611.x"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 81
+    },
+    {
+     "n": 8,
+     "verdict": "metadata_error",
+     "raw": "8. Schweizer S, Gotlib IH, Blakemore S-J. The role of affective control in emotion regulation during adolescence. Emotion. 2020;20(1):80-6. https:// doi.org/10.1037/emo0000695 PMID: 31961183",
+     "issues": [
+      "Author list does not match the published work: S-J not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "The role of affective control in emotion regulation during adolescence.",
+      "authors": [
+       "Schweizer",
+       "Gotlib",
+       "Blakemore"
+      ],
+      "years": [
+       2020
+      ],
+      "venue": "Emotion",
+      "doi": "10.1037/emo0000695"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 82
+    },
+    {
+     "n": 20,
+     "verdict": "metadata_error",
+     "raw": "20. Véronneau M-H, Schwartz-Mette R. Social media and peer relationships in adolescence: current state of science and directions for future research. Merrill-Palmer Quarterly. 2021;67(4):485-508. https://doi.org/10.1353/mpq.2021.0023",
+     "issues": [
+      "Author list does not match the published work: M-H not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Social Media and Peer Relationships in Adolescence: Current State of Science and Directions for Future Research",
+      "authors": [
+       "Véronneau",
+       "Schwartz-Mette"
+      ],
+      "years": [
+       2021,
+       2022
+      ],
+      "venue": "Merrill-Palmer Quarterly",
+      "doi": "10.1353/mpq.2021.0023"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 83
+    },
+    {
+     "n": 27,
+     "verdict": "metadata_error",
+     "raw": "27. Noon EJ, Vranken I, Schreurs L. Age matters? the moderating effect of age on the longitudinal relationship between upward and downward comparisons on instagram and identity processes during emerging adulthood. Emerging Adulthood. 2022;11(2):288-302. https://doi. org/10.1177/21676968221098293",
+     "issues": [
+      "Title differs from the published title (published “age”, published “the”, published “matters”)",
+      "Author list does not match the published work: matters not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Age Matters? The Moderating Effect of Age on the Longitudinal Relationship between Upward and Downward Comparisons on Instagram and Identity Processes During Emerging Adulthood",
+      "authors": [
+       "Noon",
+       "Vranken",
+       "Schreurs"
+      ],
+      "years": [
+       2022,
+       2023
+      ],
+      "venue": "Emerging Adulthood",
+      "doi": "10.1177/21676968221098293"
+     },
+     "judgement": "false alarm: tokenisation after \"?\"",
+     "reviewIndex": 84
+    }
+   ]
+  },
+  {
+   "source": "PLOS ONE",
+   "id": "10.1371/journal.pone.0359947",
+   "title": "The global burden of Alzheimer’s disease and related dementias: New public health intervention targets driven by the long-term impact of COVID-19 and sex and age differences",
+   "published": "2026-11-18T00:00:00Z",
+   "file": "plos_10_1371_journal_pone_0359947.pdf",
+   "refsParsed": 40,
+   "pages": 19,
+   "refs": 40,
+   "citances": 29,
+   "style": "numeric",
+   "parseMs": 548,
+   "verifyMs": 95258,
+   "counts": {
+    "verified": 28,
+    "metadata_error": 8,
+    "verified_minor": 4
+   },
+   "coverage": 0.8,
+   "unverifiableShare": 0,
+   "uncheckedShare": 0,
+   "flagged": 8,
+   "flags": [
+    {
+     "n": 6,
+     "verdict": "metadata_error",
+     "raw": "6. Nichols E, Vos T. The estimation of the global prevalence of dementia from 1990-2019 and forecasted prevalence through 2050: An analysis for the Global Burden of Disease (GBD) study 2019. Alzheimer’s Dement. 2021;17(S10). https://doi.org/10.1002/alz.051496",
+     "issues": [
+      "Template / placeholder content: publication year 2050 is in the future"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "The estimation of the global prevalence of dementia from 1990‐2019 and forecasted prevalence through 2050: An analysis for the Global Burden of Disease (GBD) study 2019",
+      "authors": [
+       "Nichols",
+       "Vos"
+      ],
+      "years": [
+       2021
+      ],
+      "venue": "Alzheimer's &amp; Dementia",
+      "doi": "10.1002/alz.051496"
+     },
+     "judgement": "false alarm: year inside the title read as publication year",
+     "reviewIndex": 85
+    },
+    {
+     "n": 7,
+     "verdict": "metadata_error",
+     "raw": "7. Nandi A, Counts N, Chen S, Seligman B, Tortorice D, Vigo D, et al. Global and regional projections of the economic burden of Alzheimer’s disease and related dementias from 2019 to 2050: A value of statistical life approach. EClinicalMedicine. 2022;51:101580. https://doi.org/10.1016/j. eclinm.2022.101580 PMID: 35898316",
+     "issues": [
+      "Template / placeholder content: publication year 2050 is in the future"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Global and regional projections of the economic burden of Alzheimer's disease and related dementias from 2019 to 2050: A value of statistical life approach",
+      "authors": [
+       "Nandi",
+       "Counts",
+       "Chen",
+       "Seligman",
+       "Tortorice",
+       "Vigo"
+      ],
+      "years": [
+       2022
+      ],
+      "venue": "eClinicalMedicine",
+      "doi": "10.1016/j.eclinm.2022.101580"
+     },
+     "judgement": "false alarm: year inside the title read as publication year",
+     "reviewIndex": 86
+    },
+    {
+     "n": 19,
+     "verdict": "metadata_error",
+     "raw": "19. Hua CL, Cornell PY, Zimmerman S. Excess mortality among assisted living residents with dementia during the COVID-19 pandemic. J Am Med Direct Assoc. 2022;23(10):1743-1749.e6. https://doi.org/10.1016/j.jamda.2022.07.023",
+     "issues": [
+      "Incomplete author list: 2 of 5 authors omitted without “et al.”",
+      "Published in “Journal of the American Medical Directors Association”, not “J Am Med Direct Assoc”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Excess Mortality Among Assisted Living Residents With Dementia During the COVID-19 Pandemic",
+      "authors": [
+       "Hua",
+       "Cornell",
+       "Zimmerman",
+       "Carder",
+       "Thomas"
+      ],
+      "years": [
+       2022
+      ],
+      "venue": "Journal of the American Medical Directors Association",
+      "doi": "10.1016/j.jamda.2022.07.023"
+     },
+     "judgement": "real: 2 of 5 authors dropped without et al. (venue part of the message is a false alarm: abbreviation)",
+     "reviewIndex": 87
+    },
+    {
+     "n": 24,
+     "verdict": "metadata_error",
+     "raw": "24. Masurkar AV, Marsh K, Morgan B, Leitner D, Wisniewski T. Factors Affecting Resilience and Prevention of Alzheimer’s Disease and Related Dementias. Ann Neurol. 2024;96(4):633-49. https://doi.org/10.1002/ana.27055 PMID: 39152774",
+     "issues": [
+      "Author list does not match the published work: Resilience, Disease, Dementias not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Factors Affecting Resilience and Prevention of Alzheimer's Disease and Related Dementias",
+      "authors": [
+       "Masurkar",
+       "Marsh",
+       "Morgan",
+       "Leitner",
+       "Wisniewski"
+      ],
+      "years": [
+       2024
+      ],
+      "venue": "Annals of Neurology",
+      "doi": "10.1002/ana.27055"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 88
+    },
+    {
+     "n": 26,
+     "verdict": "metadata_error",
+     "raw": "26. Alfaris N, Alqahtani AM, Alamuddin N, et al. Global Impact of Obesity. Gastroenterol Clin N Am. 2023;52:277-93. https://doi.org/10.1016/j. gtc.2023.03.002",
+     "issues": [
+      "Published in “Gastroenterology Clinics of North America”, not “Gastroenterol Clin N Am”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Global Impact of Obesity",
+      "authors": [
+       "Alfaris",
+       "Alqahtani",
+       "Alamuddin",
+       "Rigas"
+      ],
+      "years": [
+       2023
+      ],
+      "venue": "Gastroenterology Clinics of North America",
+      "doi": "10.1016/j.gtc.2023.03.002"
+     },
+     "judgement": "false alarm: journal abbreviation",
+     "reviewIndex": 89
+    },
+    {
+     "n": 29,
+     "verdict": "metadata_error",
+     "raw": "29. Stites SD, Cao H, Harkins K, Flatt JD. Measuring Sex and Gender in Aging and Alzheimer’s Research: Results of a National Survey. J Gerontol B Psychol Sci Soc Sci. 2022;77(6):1005-16. https://doi.org/10.1093/geronb/gbab226 PMID: 34865028",
+     "issues": [
+      "Published in “The Journals of Gerontology: Series B”, not “J Gerontol B Psychol Sci Soc Sci”"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Measuring Sex and Gender in Aging and Alzheimer’s Research: Results of a National Survey",
+      "authors": [
+       "Stites",
+       "Cao",
+       "Harkins",
+       "Flatt"
+      ],
+      "years": [
+       2021,
+       2022
+      ],
+      "venue": "The Journals of Gerontology: Series B",
+      "doi": "10.1093/geronb/gbab226"
+     },
+     "judgement": "false alarm: journal abbreviation",
+     "reviewIndex": 90
+    },
+    {
+     "n": 37,
+     "verdict": "metadata_error",
+     "raw": "37. Yang M-T, Temkin-Greener H, Veazie P, Cai S. Post-acute care transitions during COVID-19: Racial, ethnic, and socioeconomic differences in older adults with Alzheimer’s disease and related dementia. J Am Geriatr Soc. 2024;72(7):2006-16. https://doi.org/10.1111/jgs.18884 PMID: 38539279",
+     "issues": [
+      "Author list does not match the published work: M-T not among its authors"
+     ],
+     "match": {
+      "source": "crossref",
+      "title": "Post‐acute care transitions during COVID ‐19: Racial, ethnic, and socioeconomic differences in older adults with Alzheimer's disease and related dementia",
+      "authors": [
+       "Yang",
+       "Temkin‐Greener",
+       "Veazie",
+       "Cai"
+      ],
+      "years": [
+       2024
+      ],
+      "venue": "Journal of the American Geriatrics Society",
+      "doi": "10.1111/jgs.18884"
+     },
+     "judgement": "false alarm: parser put a title, venue or \"arXiv\" token into the author list",
+     "reviewIndex": 91
+    },
+    {
+     "n": 38,
+     "verdict": "metadata_error",
+     "raw": "38. Thanarajan V, Shum TY, Kaur J. Alzheimer’s disease in the era of COVID-19 pandemic: A mini review. Quest Int J Med Health Sci. 2021;4(2):41-6. https://doi.org/10.5281/zenodo.5976578",
+     "issues": [
+      "Author list does not match the published work: Kaur not among its authors"
+     ],
+     "match": {
+      "source": "datacite",
+      "title": "Alzheimer's disease in the era of COVID-19 pandemic: A mini review",
+      "authors": [
+       "Thanarajan",
+       "Shum",
+       "Dhillon",
+       "Mohamed",
+       "Kee"
+      ],
+      "years": [
+       2021
+      ],
+      "venue": "Zenodo",
+      "doi": "10.5281/zenodo.5976578"
+     },
+     "judgement": "uncertain: record lists more authors; \"Kaur\" may be part of a co-author name",
+     "reviewIndex": 92
+    }
+   ]
+  }
+ ],
+ "finishedAt": "2026-11-20T02:10:04.739Z",
+ "hostStats": {
+  "api.crossref.org": {
+   "200": 1403,
+   "404": 6,
+   "429": 963,
+   "error": 11,
+   "cache": 4
+  },
+  "api.datacite.org": {
+   "200": 158,
+   "404": 2,
+   "error": 5,
+   "cache": 1
+  },
+  "api.openalex.org": {
+   "200": 99,
+   "404": 1,
+   "429": 1,
+   "error": 2
+  },
+  "api.semanticscholar.org": {
+   "200": 78,
+   "404": 85,
+   "429": 412,
+   "error": 1,
+   "cache": 1
+  },
+  "www.ebi.ac.uk": {
+   "200": 38,
+   "503": 2,
+   "504": 1,
+   "cache": 1,
+   "error": 29
+  },
+  "doi.org": {
+   "404": 2
+  },
+  "api.github.com": {
+   "200": 1
+  }
+ },
+ "totals": {
+  "papers": 14,
+  "refs": 635,
+  "verified": 506,
+  "flagged": 92,
+  "unverifiable": 24,
+  "unchecked": 13,
+  "verifySeconds": 2517
+ },
+ "review": {
+  "judgedBy": "manual, 2026-11-20, every flag checked against the index record and, for \"not found\", against arXiv",
+  "tally": {
+   "real": 5,
+   "uncertain": 1,
+   "false": 86
+  },
+  "byCause": {
+   "parser put a title, venue or \"arXiv\" token into the author list": 29,
+   "cited title matches the arXiv version": 1,
+   "venue mis-parsed": 5,
+   "3rd edition (2016) matched to 1st edition": 1,
+   "blog post matched to an unrelated report": 1,
+   "index rate-limited or down, the work exists": 1,
+   "year glued onto the title by the parser": 9,
+   "index rate-limited, the work exists": 4,
+   "τ lost in PDF text extraction": 2,
+   "hyphenation joined in PDF text": 1,
+   "DOI broken across a line, truncated by the parser": 2,
+   "reference truncated by the parser": 1,
+   "dataset (General Social Survey), exists": 1,
+   "legal text (GDPR), labelled fabricated": 1,
+   "RAG (Lewis et al., NeurIPS 2020) labelled fabricated while Semantic Scholar was rate-limited": 1,
+   "law review article, exists": 1,
+   "web page matched to an unrelated article": 1,
+   "citation names arXiv v3, whose title differs from the current version": 1,
+   "AAS style parsed wrongly": 2,
+   "same title in capitals, AAS style parsed wrongly": 1,
+   "subscript lost in PDF text": 2,
+   "two-column text interleaved in one reference": 3,
+   "apostrophe tokenisation": 1,
+   "underscore of the chapter DOI lost in PDF text": 1,
+   "accent lost in PDF text": 1,
+   "journal abbreviation": 3,
+   "the original 1944 record misspells Wiener": 1,
+   "LaTeX in the index title": 1,
+   "index record year (2011, arXiv) differs from the JMLR year 2014": 1,
+   "R-hat symbol lost in PDF text": 1,
+   "tokenisation after \"?\"": 2,
+   "translators listed in the index as authors": 1,
+   "year inside the title read as publication year": 2
+  },
+  "missSample": {
+   "checked": 42,
+   "missed": 0,
+   "note": "3 verified references per paper (seeded); none contained an error"
+  }
+ }
+}

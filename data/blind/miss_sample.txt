@@ -1,0 +1,209 @@
+## cs.CL_2611.24936v1.pdf [40] verified
+CITED: Eric Wallace, Kai Xiao, Reimar Leike, Lilian Weng, Johannes Heidecke, and Alex Beutel. 2024. The instruction hierarchy: Training llms to prioritize privileged instructions. Preprint, arXiv:2404.13208.
+MATCH: The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions | Wallace, Xiao, Leike, Weng, Heidecke, Beutel | 2024 | arXiv | 10.48550/arxiv.2404.13208
+JUDGEMENT: correct (no error in the cited reference)
+
+## cs.CL_2611.24936v1.pdf [46] verified
+CITED: Andy Zou, Zifan Wang, Nicholas Carlini, Milad Nasr, J. Zico Kolter, and Matt Fredrikson. 2023. Universal and transferable adversarial attacks on aligned language models. Preprint, arXiv:2307.15043.
+MATCH: Universal and Transferable Adversarial Attacks on Aligned Language Models | Zou, Wang, Carlini, Nasr, Kolter, Fredrikson | 2023 | arXiv | 10.48550/arxiv.2307.15043
+JUDGEMENT: correct (no error in the cited reference)
+
+## cs.CL_2611.24936v1.pdf [39] verified
+CITED: Lewis Tunstall, Nils Reimers, Unso Eun Seo Jo, Luke Bates, Daniel Korat, Moshe Wasserblat, and Oren Pereg. 2022. Efficient few-shot learning without prompts. Preprint, arXiv:2209.11055.
+MATCH: Efficient Few-Shot Learning Without Prompts | Tunstall, Reimers, Jo, Bates, Korat, Wasserblat, Pereg | 2022 | arXiv | 10.48550/arxiv.2209.11055
+JUDGEMENT: correct (no error in the cited reference)
+
+## cs.CV_2611.24941v1.pdf [72] verified
+CITED: Kim Youwang, Tae-Hyun Oh, and Gerard Pons-Moll. 2024a. Paint-it: Text-to-texture synthesis via deep convolutional texture map optimization and physically-based rendering. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 4347-4356.
+MATCH: Paint-it: Text-to-Texture Synthesis via Deep Convolutional Texture Map Optimization and Physically-Based Rendering | Youwang, Oh, Pons-Moll | 2024 | 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) | 10.1109/cvpr52733.2024.00416
+JUDGEMENT: correct (no error in the cited reference)
+
+## cs.CV_2611.24941v1.pdf [85] verified_minor
+CITED: Zibo Zhao, Zeqiang Lai, Qingxiang Lin, Yunfei Zhao, Haolin Liu, Shuhui Yang, Yifei Feng, Mingxin Yang, Sheng Zhang, Xianghui Yang, et al. 2025. Hunyuan3D 2.0: Scaling Diffusion Models for High Resolution Textured 3D Assets Generation. arXiv preprint arXiv:2501.12202 (2025).
+MATCH: Hunyuan3D 2.0: Scaling Diffusion Models for High Resolution Textured 3D Assets Generation | Zhao, Lai, Lin, Zhao, Liu, Yang, Feng, Yang, Zhang, Yang, Shi, Liu, Wu, Lian, Yang, Tang, He, Wang, Liu, Zuo, Chen, Lei, Weng, Xu, Zhu, Liu, Xu, Hu, Yang, Zhang, Liu, Huang, Wang, Zhang, Chen, Dong, Jia, Cai, Yu, Tang, Zhang, Ye, He, Wu, Zhang, Tan, Xiao, Tao, Zhu, Xue, Liu, Zhao, Wu, Hu, Qin, Peng, Li, Chen, Zhang, Niu, Wang, Wang, Kuang, Fan, Zheng, Zhuang, He, Liu, Yang, Wang, Liu, Jiang, Huang, Guo | 2025 | arXiv (Cornell University) | 10.48550/arxiv.2501.12202
+JUDGEMENT: correct (no error in the cited reference)
+
+## cs.CV_2611.24941v1.pdf [74] verified
+CITED: Sihyun Yu, Sangkyung Kwak, Huiwon Jang, Jongheon Jeong, Jonathan Huang, Jinwoo Shin, and Saining Xie. 2025. Representation Alignment for Generation: Training Diffusion Transformers Is Easier Than You Think. In International Conference on Learning Representations.
+MATCH: Representation Alignment for Generation: Training Diffusion Transformers Is Easier Than You Think | Yu, Kwak, Jang, Jeong, Huang, Shin, Xie | 2024 | International Conference on Learning Representations | 10.48550/arxiv.2410.06940
+JUDGEMENT: correct (no error in the cited reference)
+
+## cs.SE_2611.24924v1.pdf [72] verified
+CITED: [72] Dongming Jin, Zhi Jin, Xiaohong Chen, and Chunhui Wang. MARE: Multi-agents collaboration framework for requirements engineering, 2024. URL https://arxiv.org/abs/2405. 03256.
+MATCH: MARE: Multi-Agents Collaboration Framework for Requirements Engineering | Jin, Jin, Chen, Wang | 2024/2024 | arXiv.org | 10.48550/arxiv.2405.03256
+JUDGEMENT: correct (no error in the cited reference)
+
+## cs.SE_2611.24924v1.pdf [54] verified
+CITED: [54] Fangwen Mu, Lin Shi, Song Wang, Zhuohao Yu, Binquan Zhang, Chenxue Wang, Shichao Liu, and Qing Wang. Clarifygpt: Empowering llm-based code generation with intention clarification, 2023. URL https://arxiv.org/abs/2310.10996.
+MATCH: ClarifyGPT: Empowering LLM-based Code Generation with Intention Clarification | Mu, Shi, Wang, Yu, Zhang, Wang, Liu, Wang | 2023 | arXiv | 10.48550/arxiv.2310.10996
+JUDGEMENT: correct (no error in the cited reference)
+
+## cs.SE_2611.24924v1.pdf [34] verified
+CITED: [34] Tianxin Wei, Noveen Sachdeva, Benjamin Coleman, Zhankui He, Yuanchen Bei, Xuying Ning, Mengting Ai, Yunzhe Li, Jingrui He, Ed H. Chi, Chi Wang, Shuo Chen, Fernando Pereira, Wang- Cheng Kang, and Derek Zhiyuan Cheng. Evo-memory: Benchmarking llm agent test-time learning with self-evolving memory, 2025. URL https://arxiv.org/abs/2511.20857.
+MATCH: Evo-Memory: Benchmarking LLM Agent Test-time Learning with Self-Evolving Memory | Wei, Sachdeva, Coleman, He, Bei, Ning, Ai, Li, He, Chi, Wang, Chen, Pereira, Kang, Cheng | 2025 | arXiv | 10.48550/arxiv.2511.20857
+JUDGEMENT: correct (no error in the cited reference)
+
+## cs.HC_2611.24888v1.pdf [82] verified
+CITED: [82] Thomas B Sheridan and William L Verplank. 1978. Human and computer control of undersea teleoperators. Technical Report. Man-Machine Systems Laboratory, Massachusetts Institute of Technology.
+MATCH: Human and Computer Control of Undersea Teleoperators | Sheridan, Verplank | 1978/2017 |  | 10.21236/ada057655
+JUDGEMENT: correct (no error in the cited reference)
+
+## cs.HC_2611.24888v1.pdf [62] verified
+CITED: [62] Ani Nenkova and Kathleen McKeown. 2012. A Survey of Text Summarization Techniques. In Mining Text Data. Springer, 43-76. doi:10.1007/978-1-4614-3223- 4_3
+MATCH: A Survey of Text Summarization Techniques | Nenkova, McKeown | 2012 | Mining Text Data | 10.1007/978-1-4614-3223-4_3
+JUDGEMENT: correct (no error in the cited reference)
+
+## cs.HC_2611.24888v1.pdf [87] verified_minor
+CITED: [87] Gemini Team, Rohan Anil, Sebastian Borgeaud, Jean-Baptiste Alayrac, Jiahui Yu, Radu Soricut, Johan Schalkwyk, Andrew M Dai, Anja Hauth, Katie Millican, et al. 2023. Gemini: a family of highly capable multimodal models. arXiv preprint arXiv:2312.11805 (2023).
+MATCH: Gemini: A Family of Highly Capable Multimodal Models | Team, Anil, Borgeaud, Alayrac, Yu, Soricut, Schalkwyk, Dai, Hauth, Millican, Silver, Johnson, Antonoglou, Schrittwieser, Glaese, Chen, Pitler, Lillicrap, Lazaridou, Firat, Molloy, Isard, Barham, Hennigan, Lee, Viola, Reynolds, Xu, Doherty, Collins, Meyer, Rutherford, Moreira, Ayoub, Goel, Krawczyk, Du, Chi, Cheng, Ni, Shah, Kane, Chan, Faruqui, Severyn, Lin, Li, Cheng, Ittycheriah, Mahdieh, Chen, Sun, Tran, Bagri, Lakshminarayanan, Liu, Orban, Güra, Zhou, Song, Boffy, Ganapathy, Zheng, Choe, Weisz, Zhu, Lu, Gopal, Kahn, Kula, Pitman, Shah, Taropa, Merey, Baeuml, Chen, Shafey, Zhang, Sercinoglu, Tucker, Piqueras, Krikun, Barr, Savinov, Danihelka, Roelofs, White, Andreassen, von Glehn, Yagati, Kazemi, Gonzalez, Khalman, Sygnowski, Frechette, Smith, Culp, Proleev, Luan, Chen, Lottes, Schucher, Lebron, Rrustemi, Clay, Crone, Kocisky, Zhao, Perz, Yu, Howard, Bloniarz, Rae, Lu, Sifre, Maggioni, Alcober, Garrette, Barnes, Thakoor, Austin, Barth-Maron, Wong, Joshi, Chaabouni, Fatiha, Ahuja, Tomar, Senter, Chadwick, Kornakov, Attaluri, Iturrate, Liu, Li, Cogan, Chen, Jia, Gu, Zhang, Grimstad, Hartman, Garcia, Pillai, Devlin, Laskin, Casas, Valter, Tao, Blanco, Badia, Reitter, Chen, Brennan, Rivera, Brin, Iqbal, Surita, Labanowski, Rao, Winkler, Parisotto, Gu, Olszewska, Addanki, Miech, Louis, Teplyashin, Brown, Catt, Balaguer, Xiang, Wang, Ashwood, Briukhov, Webson, Ganapathy, Sanghavi, Kannan, Chang, Stjerngren, Djolonga, Sun, Bapna, Aitchison, Pejman, Michalewski, Yu, Wang, Love, Ahn, Bloxwich, Han, Humphreys, Sellam, Bradbury, Godbole, Samangooei, Damoc, Kaskasoli, Arnold, Vasudevan, Agrawal, Riesa, Lepikhin, Tanburn, Srinivasan, Lim, Hodkinson, Shyam, Ferret, Hand, Garg, Paine, Li, Li, Giang, Neitz, Abbas, York, Reid, Cole, Chowdhery, Das, Rogozińska, Nikolaev, Sprechmann, Nado, Zilka, Prost, He, Monteiro, Mishra, Welty, Newlan, Jia, Allamanis, Hu, de Liedekerke, Gilmer, Saroufim, Rijhwani, Hou, Shrivastava, Baddepudi, Goldin, Ozturel, Cassirer, Xu, Sohn, Sachan, Amplayo, Swanson, Petrova, Narayan, Guez, Brahma, Landon, Patel, Zhao, Villela, Wang, Jia, Rahtz, Giménez, Yeung, Keeling, Georgiev, Mincu, Wu, Haykal, Saputro, Vodrahalli, Qin, Cankara, Sharma, Fernando, Hawkins, Neyshabur, Kim, Hutter, Agrawal, Castro-Ros, Driessche, Wang, Yang, Chang, Komarek, McIlroy, Lučić, Zhang, Farhan, Sharman, Natsev, Michel, Bansal, Qiao, Cao, Shakeri, Butterfield, Chung, Rubenstein, Agrawal, Mensch, Soparkar, Lenc, Chung, Pope, Maggiore, Kay, Jhakra, Wang, Maynez, Phuong, Tobin, Tacchetti, Trebacz, Robinson, Katariya, Riedel, Bailey, Xiao, Ghelani, Aroyo, Slone, Houlsby, Xiong, Yang, Gribovskaya, Adler, Wirth, Lee, Li, Kagohara, Pavagadhi, Bridgers, Bortsova, Ghemawat, Ahmed, Liu, Powell, Bolina, Iinuma, Zablotskaia, Besley, Chung, Dozat, Comanescu, Si, Greer, Su, Polacek, Kaufman, Tokumine, Hu, Buchatskaya, Miao, Elhawaty, Siddhant, Tomasev, Xing, Greer, Miller, Ashraf, Roy, Zhang, Ma, Filos, Besta, Blevins, Klimenko, Yeh, Changpinyo, Mu, Chang, Pajarskas, Muir, Cohen, Lan, Haridasan, Marathe, Hansen, Douglas, Samuel, Wang, Austin, Lan, Jiang, Chiu, Lorenzo, Sjösund, Cevey, Gleicher, Avrahami, Boral, Srinivasan, Selo, May, Aisopos, Hussenot, Soares, Baumli, Chang, Recasens, Caine, Pritzel, Pavetic, Pardo, Gergely, Frye, Ramasesh, Horgan, Badola, Kassner, Roy, Dyer, Campos, Tomala, Tang, Badawy, White, Mustafa, Lang, Jindal, Vikram, Gong, Caelles, Hemsley, Thornton, Feng, Stokowiec, Zheng, Thacker, Ünlü, Zhang, Saleh, Svensson, Bileschi, Patil, Anand, Ring, Tsihlas, Vezer, Selvi, Shevlane, Rodriguez, Kwiatkowski, Daruki, Rong, Dafoe, FitzGerald, Gu-Lemberg, Khan, Hendricks, Pellat, Feinberg, Cobon-Kerr, Sainath, Rauh, Hashemi, Ives, Hasson, Noland, Cao, Byrd, Hou, Wang, Sottiaux, Paganini, Lespiau, Moufarek, Hassan, Shivakumar, van Amersfoort, Mandhane, Joshi, Goyal, Tung, Brock, Sheahan, Misra, Li, Rakićević, Dehghani, Liu, Mittal, Oh, Noury, Sezener, Huot, Lamm, De Cao, Chen, Mudgal, Stella, Brooks, Vasudevan, Liu, Chain, Melinkeri, Cohen, Wang, Seymore, Zubkov, Goel, Yue, Krishnakumaran, Albert, Hurley, Sano, Mohananey, Joughin, Filonov, Kępa, Eldawy, Lim, Rishi, Badiezadegan, Bos, Chang, Jain, Padmanabhan, Puttagunta, Krishna, Baker, Kalb, Bedapudi, Kurzrok, Lei, Yu, Litvin, Zhou, Wu, Sobell, Siciliano, Papir, Neale, Bragagnolo, Toor, Chen, Anklin, Wang, Feng, Gholami, Ling, Liu, Walter, Moghaddam, Kishore, Adamek, Mercado, Mallinson, Wandekar, Cagle, Ofek, Garrido, Lombriser, Mukha, Sun, Mohammad, Matak, Qian, Peswani, Janus, Yuan, Schelin, David, Garg, He, Duzhyi, Älgmyr, Lottaz, Li, Yadav, Xu, Chinien, Shivanna, Chuklin, Li, Spadine, Wolfe, Mohamed, Das, Dai, He, von Dincklage, Upadhyay, Maurya, Chi, Krause, Salama, Rabinovitch, M, Selvan, Dektiarev, Ghiasi, Guven, Gupta, Liu, Sharma, Shtacher, Paul, Akerlund, Aubet, Huang, Zhu, Zhu, Teixeira, Fritze, Bertolini, Marinescu, Bölle, Paulus, Gupta, Latkar, Chang, Sanders, Wilson, Wu, Tan, Thiet, Doshi, Lall, Mishra, Chen, Luong, Benjamin, Lee, Andrejczuk, Rabiej, Ranjan, Styrc, Yin, Simon, Harriott, Bansal, Robsky, Bacon, Greene, Mirylenka, Zhou, Sarvana, Goyal, Andermatt, Siegler, Horn, Israel, Pongetti, Chen, Selvatici, Silva, Wang, Tolins, Guu, Yogev, Cai, Agostini, Shah, Nguyen, Donnaile, Pereira, Friso, Stambler, Kurzrok, Kuang, Romanikhin, Geller, Yan, Jang, Lee, Fica, Malmi, Tan, Banica, Balle, Pham, Huang, Avram, Shi, Singh, Hidey, Ahuja, Saxena, Dooley, Potharaju, O'Neill, Gokulchandran, Foley, Zhao, Dusenberry, Liu, Mehta, Kotikalapudi, Safranek-Shrader, Goodman, Kessinger, Globen, Kolhar, Gorgolewski, Ibrahim, Song, Eichenbaum, Brovelli, Potluri, Lahoti, Baetu, Ghorbani, Chen, Crawford, Pal, Sridhar, Gurita, Mujika, Petrovski, Cedoz, Li, Chen, Santo, Goyal, Punjabi, Kappaganthu, Kwak, LV, Velury, Choudhury, Hall, Shah, Figueira, Thomas, Lu, Zhou, Kumar, Jurdi, Chikkerur, Ma, Yu, Kwak, Ähdel, Rajayogam, Choma, Liu, Barua, Ji, Park, Hellendoorn, Bailey, Bilal, Zhou, Khatir, Sutton, Rzadkowski, Macintosh, Vij, Shagin, Medina, Liang, Zhou, Shah, Bi, Dankovics, Banga, Lehmann, Bredesen, Lin, Hoffmann, Lai, Chung, Yang, Balani, Bražinskas, Sozanschi, Hayes, Alcalde, Makarov, Chen, Stella, Snijders, Mandl, Kärrman, Nowak, Wu, Dyck, Vaidyanathan, R, Mallet, Rudominer, Johnston, Mittal, Udathu, Christensen, Verma, Irving, Santucci, Elsayed, Davoodi, Georgiev, Tenney, Hua, Cideron, Leurent, Alnahlawi, Georgescu, Wei, Zheng, Scandinaro, Jiang, Snoek, Sundararajan, Wang, Ontiveros, Karo, Cole, Rajashekhar, Tumeh, Ben-David, Jain, Uesato, Datta, Bunyan, Wu, Zhang, Stanczyk, Zhang, Steiner, Naskar, Azzam, Johnson, Paszke, Chiu, Elias, Mohiuddin, Muhammad, Miao, Lee, Vieillard, Park, Zhang, Stanway, Garmon, Karmarkar, Dong, Lee, Kumar, Zhou, Evens, Isaac, Irving, Loper, Fink, Arkatkar, Chen, Shafran, Petrychenko, Chen, Jia, Levskaya, Zhu, Grabowski, Mao, Magni, Yao, Snaider, Casagrande, Palmer, Suganthan, Castaño, Giannoumis, Kim, Rybiński, Sreevatsa, Prendki, Soergel, Goedeckemeyer, Gierke, Jafari, Gaba, Wiesner, Wright, Wei, Vashisht, Kulizhskaya, Hoover, Le, Li, Iwuanyanwu, Liu, Ramirez, Khorlin, Cui, LIN, Wu, Aguilar, Pallo, Chakladar, Perng, Abellan, Zhang, Dasgupta, Kushman, Penchev, Repina, Wu, van der Weide, Ponnapalli, Kaplan, Simsa, Li, Dousse, Yang, Piper, Ie, Pasumarthi, Lintz, Vijayakumar, Andor, Valenzuela, Lui, Paduraru, Peng, Lee, Zhang, Greene, Nguyen, Kurylowicz, Hardin, Dixon, Janzer, Choo, Feng, Zhang, Singhal, Du, McKinnon, Antropova, Bolukbasi, Keller, Reid, Finchelstein, Raad, Crocker, Hawkins, Dadashi, Gaffney, Franko, Bulanova, Leblond, Chung, Askham, Cobo, Xu, Fischer, Xu, Sorokin, Alberti, Lin, Evans, Dimitriev, Forbes, Banarse, Tung, Omernick, Bishop, Sterneck, Jain, Xia, Amid, Piccinno, Wang, Banzal, Mankowitz, Polozov, Krakovna, Brown, Bateni, Duan, Firoiu, Thotakuri, Natan, Geist, Girgin, Li, Ye, Roval, Tojo, Kwong, Lee-Thorp, Yew, Sinopalnikov, Ramos, Mellor, Sharma, Wu, Miller, Sonnerat, Vnukov, Greig, Beattie, Caveness, Bai, Eisenschlos, Korchemniy, Tsai, Jasarevic, Kong, Dao, Zheng, Liu, Yang, Zhu, Teh, Sanmiya, Gladchenko, Trdin, Toyama, Rosen, Tavakkol, Xue, Elkind, Woodman, Carpenter, Papamakarios, Kemp, Kafle, Grunina, Sinha, Talbert, Wu, Owusu-Afriyie, Du, Thornton, Pont-Tuset, Narayana, Li, Fatehi, Wieting, Ajmeri, Uria, Ko, Knight, Héliou, Niu, Gu, Pang, Li, Levine, Stolovich, Santamaria-Fernandez, Goenka, Yustalim, Strudel, Elqursh, Deck, Lee, Li, Levin, Hoffmann, Holtmann-Rice, Bachem, Arora, Koh, Yeganeh, Põder, Tariq, Sun, Ionita, Seyedhosseini, Tafti, Liu, Gulati, Liu, Ye, Chrzaszcz, Wang, Sethi, Li, Brown, Singh, Fan, Parisi, Stanton, Koverkathu, Choquette-Choo, Li, Lu, Ittycheriah, Shroff, Varadarajan, Bahargam, Willoughby, Gaddy, Desjardins, Cornero, Robenek, Mittal, Albrecht, Shenoy, Moiseev, Jacobsson, Ghaffarkhah, Rivière, Walton, Crepy, Parrish, Zhou, Farabet, Radebaugh, Srinivasan, van der Salm, Fidjeland, Scellato, Latorre-Chimoto, Klimczak-Plucińska, Bridson, de Cesare, Hudson, Mendolicchio, Walker, Morris, Mauger, Guseynov, Reid, Odoom, Loher, Cotruta, Yenugula, Grewe, Petrushkina, Duerig, Sanchez, Yadlowsky, Shen, Globerson, Webb, Dua, Li, Bhupatiraju, Hurt, Qureshi, Agarwal, Shani, Eyal, Khare, Belle, Wang, Tekur, Kale, Wei, Sang, Saeta, Liechty, Sun, Zhao, Lee, Nayak, Fritz, Vuyyuru, Aslanides, Vyas, Wicke, Ma, Eltyshev, Martin, Cate, Manyika, Amiri, Kim, Xiong, Kang, Luisier, Tripuraneni, Madras, Guo, Waters, Wang, Ainslie, Baldridge, Zhang, Pruthi, Bauer, Yang, Mansour, Gelman, Xu, Polovets, Liu, Cai, Chen, Sheng, Xue, Ozair, Angermueller, Li, Sinha, Wang, Wiesinger, Koukoumidis, Tian, Iyer, Gurumurthy, Goldenson, Shah, Blake, Yu, Urbanowicz, Palomaki, Fernando, Durden, Mehta, Momchev, Rahimtoroghi, Georgaki, Raul, Ruder, Redshaw, Lee, Zhou, Jalan, Li, Hechtman, Schuh, Nasr, Milan, Mikulik, Franco, Green, Nguyen, Kelley, Mahendru, Hu, Howland, Vargas, Hui, Bansal, Rao, Ghiya, Wang, Ye, Sarr, Preston, Elish, Li, Kaku, Gupta, Pasupat, Juan, Someswar, M., Chen, Amini, Fabrikant, Chu, Dong, Muthal, Buthpitiya, Jauhari, Hua, Khandelwal, Hitron, Ren, Rinaldi, Drath, Dabush, Jiang, Godhia, Sachs, Chen, Fan, Taitelbaum, Noga, Dai, Wang, Liang, Hamer, Ferng, Elkind, Atias, Lee, Listík, Carlen, van de Kerkhof, Pikus, Zaher, Müller, Zykova, Stefanec, Gatsko, Hirnschall, Sethi, Xu, Ahuja, Tsai, Stefanoiu, Feng, Dhandhania, Katyal, Gupta, Parulekar, Pitta, Zhao, Bhatia, Bhavnani, Alhadlaq, Li, Danenberg, Tu, Pine, Filippova, Ghosh, Limonchik, Urala, Lanka, Clive, Sun, Li, Wu, Hongtongsak, Li, Thakkar, Omarov, Majmundar, Alverson, Kucharski, Patel, Jain, Zabelin, Pelagatti, Kohli, Kumar, Kim, Sankar, Shah, Ramachandruni, Zeng, Bariach, Weidinger, Vu, Andreev, He, Hui, Kashem, Subramanya, Hsiao, Hassabis, Kavukcuoglu, Sadovsky, Le, Strohman, Wu, Petrov, Dean, Vinyals | 2023 | arXiv | 10.48550/arxiv.2312.11805
+JUDGEMENT: correct (no error in the cited reference)
+
+## astro-ph.GA_2611.24937v1.pdf [10] verified
+CITED: Evans, I. N., Evans, J. D., Mart´ınez-Galarza, J. R., et al. 2024, The Chandra Source Catalog Release 2 Series, The Astrophysical Journal Supplement Series, 274, 22, doi: 10.3847/1538-4365/ad6319
+MATCH: The Chandra Source Catalog Release 2 Series | Evans, Evans, Martínez-Galarza, Miller, Primini, Azadi, Burke, Civano, D’Abrusco, Fabbiano, Graessle, Grier, Houck, Lauer, McCollough, Nowak, Plummer, Rots, Siemiginowska, Tibbetts | 2024 | The Astrophysical Journal Supplement Series | 10.3847/1538-4365/ad6319
+JUDGEMENT: correct (no error in the cited reference)
+
+## astro-ph.GA_2611.24937v1.pdf [4] verified
+CITED: Cavagnolo, K. W., Donahue, M., Voit, G. M., & Sun, M. 2009, Intracluster Medium Entropy Profiles for a Chandra Archival Sample of Galaxy Clusters, The Astrophysical Journal Supplement Series, 182, 12, doi: 10.1088/0067-0049/182/1/12
+MATCH: INTRACLUSTER MEDIUM ENTROPY PROFILES FOR A CHANDRA ARCHIVAL SAMPLE OF GALAXY CLUSTERS | Cavagnolo, Donahue, Voit, Sun | 2009 | The Astrophysical Journal Supplement Series | 10.1088/0067-0049/182/1/12
+JUDGEMENT: correct (no error in the cited reference)
+
+## astro-ph.GA_2611.24937v1.pdf [5] verified
+CITED: Clowe, D., Bradaˇc, M., Gonzalez, A. H., et al. 2006, A Direct Empirical Proof of the Existence of Dark Matter, The Astrophysical Journal Letters, 648, L109, doi: 10.1086/508162
+MATCH: A Direct Empirical Proof of the Existence of Dark Matter | Clowe, Bradač, Gonzalez, Markevitch, Randall, Jones, Zaritsky | 2006 | The Astrophysical Journal | 10.1086/508162
+JUDGEMENT: correct (no error in the cited reference)
+
+## cond-mat.mtrl-sci_2611.24759v1.pdf [25] verified_minor
+CITED: 26J. M. Simmons, H. Wu, W. Zhou, and T. Yildirim, “Carbon capture in metal-organic frameworks - a comparative study,” Energy Environ. Sci. 4, 2177 (2011).
+MATCH: Carbon capture in metal–organic frameworks—a comparative study | Simmons, Wu, Zhou, Yildirim | 2011 | Energy &amp; Environmental Science | 10.1039/c0ee00700e
+JUDGEMENT: correct (no error in the cited reference)
+
+## cond-mat.mtrl-sci_2611.24759v1.pdf [8] verified_minor
+CITED: 8D. G. Anderson, “Iterative procedures for nonlinear integral equations,” J. ACM 12, 547-560 (1965).
+MATCH: Iterative Procedures for Nonlinear Integral Equations | Anderson | 1965/2002 | Journal of the ACM | 10.1145/321296.321305
+JUDGEMENT: correct (no error in the cited reference)
+
+## cond-mat.mtrl-sci_2611.24759v1.pdf [18] verified_minor
+CITED: 19J. Borycz, D. Tiana, E. Haldoupis, J. C. Sung, O. K. Farha, J. I. Siepmann, and L. Gagliardi, “CO adsorption in M-IRMOF-10 (M = Mg, Ca, Fe, Cu, Zn, Ge, Sr, Cd, Sn, Ba),” J. Phys. Chem. C 120, 12819-12830 (2016).
+MATCH: CO 2 Adsorption in M-IRMOF-10 (M = Mg, Ca, Fe, Cu, Zn, Ge, Sr, Cd, Sn, Ba) | Borycz, Tiana, Haldoupis, Sung, Farha, Siepmann, Gagliardi | 2016 | The Journal of Physical Chemistry C | 10.1021/acs.jpcc.6b02235
+JUDGEMENT: correct (no error in the cited reference)
+
+## quant-ph_2611.24886v1.pdf [35] verified
+CITED: [35] A. W. Cross, L. S. Bishop, S. Sheldon, P. D. Nation, and J. M. Gambetta, “Validating quantum computers using randomized model circuits,” Physical Review A, vol. 100, no. 3, p. 032328, Sep. 2019. [Online]. Available: https://link.aps.org/doi/10.1103/PhysRevA.100.032328
+MATCH: Validating quantum computers using randomized model circuits | Cross, Bishop, Sheldon, Nation, Gambetta | 2019 | Physical Review A | 10.1103/physreva.100.032328
+JUDGEMENT: correct (no error in the cited reference)
+
+## quant-ph_2611.24886v1.pdf [5] verified
+CITED: [5] S. S. Tannu and M. K. Qureshi, “Not All Qubits Are Created Equal: A Case for Variability-Aware Policies for NISQ-Era Quantum Computers,” in Proceedings of the Twenty-Fourth International Conference on Architectural Support for Programming Languages and Operating Systems, ser. ASPLOS ’19. New York, NY, USA: Association for Computing Machinery, Apr. 2019, pp. 987-999. [Online]. Available: https://dl.acm.org/doi/10.1145/3297858.3304007
+MATCH: Not All Qubits Are Created Equal: A Case for Variability-Aware Policies for NISQ-Era Quantum Computers | Tannu, Qureshi | 2019 | Proceedings of the Twenty-Fourth International Conference on Architectural Support for Programming Languages and Operating Systems | 10.1145/3297858.3304007
+JUDGEMENT: correct (no error in the cited reference)
+
+## quant-ph_2611.24886v1.pdf [39] verified
+CITED: [39] C. A. Field and A. H. Welsh, “Bootstrapping clustered data,” Journal of the Royal Statistical Society: Series B (Statistical Methodology), vol. 69, no. 3, pp. 369-390, 2007. [Online]. Available: https: //onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9868.2007.00593.x
+MATCH: Bootstrapping Clustered Data | Field, Welsh | 2007 | Journal of the Royal Statistical Society Series B: Statistical Methodology | 10.1111/j.1467-9868.2007.00593.x
+JUDGEMENT: correct (no error in the cited reference)
+
+## math.PR_2611.24875v1.pdf [26] verified
+CITED: [She16] Scott Sheffield. Conformal weldings of random surfaces: SLE and the quantum gravity zipper. Ann. Probab., 44(5):3474-3545, 2016.
+MATCH: Conformal weldings of random surfaces: SLE and the quantum gravity zipper | Sheffield | 2016 | The Annals of Probability | 10.1214/15-aop1055
+JUDGEMENT: correct (no error in the cited reference)
+
+## math.PR_2611.24875v1.pdf [32] verified
+CITED: [TT06] Leon A. Takhtajan and Lee-Peng Teo. Weil-Petersson metric on the universal Teichmüller space. Mem. Amer. Math. Soc., 183(861):viii+119, 2006.
+MATCH: Weil-Petersson metric on the universal Teichmüller space | Takhtajan, Teo | 2006/2013 | Memoirs of the American Mathematical Society | 10.1090/memo/0861
+JUDGEMENT: correct (no error in the cited reference)
+
+## math.PR_2611.24875v1.pdf [13] verified
+CITED: [HP21] Nina Holden and Ellen Powell. Conformal welding for critical Liouville quantum gravity. Ann. Inst. Henri Poincaré Probab. Stat., 57(3):1229- 1254, 2021.
+MATCH: Conformal welding for critical Liouville quantum gravity | Holden, Powell | 2021 | Annales de l'Institut Henri Poincaré, Probabilités et Statistiques | 10.1214/20-aihp1116
+JUDGEMENT: correct (no error in the cited reference)
+
+## q-bio.NC_2611.24767v1.pdf [3] verified
+CITED: M. Betancourt. Diagnosing Suboptimal Cotangent Disintegrations in Hamiltonian Monte Carlo. arXiv preprint arXiv:1604.00695, version 1, 2016. arXiv:1604.00695v1.
+MATCH: Diagnosing Suboptimal Cotangent Disintegrations in Hamiltonian Monte Carlo | Betancourt | 2016 | arXiv | 10.48550/arxiv.1604.00695
+JUDGEMENT: correct (no error in the cited reference)
+
+## q-bio.NC_2611.24767v1.pdf [17] verified
+CITED: A. Kipnis, M. Binz and E. Schulz. Prior-Amortized In- Context Bayesian Inference for Generalized Linear Mixed-Effects Models. arXiv preprint arXiv:2609.24422, version 2, October 19, 2026. arXiv:2609.24422v2.
+MATCH: Prior-Amortized In-Context Bayesian Inference for Generalized Linear Mixed-Effects Models | Kipnis, Binz, Schulz | 2026 | arXiv | 10.48550/arxiv.2609.24422
+JUDGEMENT: correct (no error in the cited reference)
+
+## q-bio.NC_2611.24767v1.pdf [31] verified
+CITED: E. H. van Beest, C. Bimbard et al. Tracking neurons across days with high-density probes. Nature Methods 22, 778- 787, 2025; published online September 27, 2024. doi: 10.1038/s41592-024-02440-1.
+MATCH: Tracking neurons across days with high-density probes | van Beest, Bimbard, Fabre, Dodgson, Takács, Coen, Lebedeva, Harris, Carandini | 2024/2025 | Nature Methods | 10.1038/s41592-024-02440-1
+JUDGEMENT: correct (no error in the cited reference)
+
+## eess.SP_2611.24829v1.pdf [2] verified
+CITED: [2] Cheolyong Bae and Oscar Gustafsson, “Architectural trade-offs for high-speed real-time chromatic dispersion compensation fir filters with time-multiplexed streaming ffts,” Journal of Lightwave Technology, vol. 43, no. 14, pp. 6744-6753, 2025.
+MATCH: Architectural Trade-Offs for High-Speed Real-Time Chromatic Dispersion Compensation FIR Filters With Time-Multiplexed Streaming FFTs | Bae, Gustafsson | 2025 | Journal of Lightwave Technology | 10.1109/jlt.2025.3558510
+JUDGEMENT: correct (no error in the cited reference)
+
+## eess.SP_2611.24829v1.pdf [4] verified
+CITED: [4] Eduardo A. B. da Silva, Lisandro Lovisolo, Alessandro J. S. Dutra, and Paulo S. R. Diniz, “Fir filter design based on successive approximation of vectors,” IEEE Transactions on Signal Processing, vol. 62, no. 15, pp. 3833-3848, 2014.
+MATCH: FIR Filter Design Based on Successive Approximation of Vectors | da Silva, Lovisolo, Dutra, Diniz | 2014 | IEEE Transactions on Signal Processing | 10.1109/tsp.2014.2324992
+JUDGEMENT: correct (no error in the cited reference)
+
+## eess.SP_2611.24829v1.pdf [6] verified
+CITED: [6] Ray Andraka, “A survey of cordic algorithms for fpga based computers,” in Proceedings of the 1998 ACM/SIGDA Sixth International Symposium on Field Programmable Gate Arrays, New York, NY, USA, 1998, FPGA ’98, p. 191-200, Association for Computing Machinery.
+MATCH: A survey of CORDIC algorithms for FPGA based computers | Andraka | 1998/2004 | Proceedings of the 1998 ACM/SIGDA sixth international symposium on Field programmable gate arrays - FPGA '98 | 10.1145/275107.275139
+JUDGEMENT: correct (no error in the cited reference)
+
+## econ.EM_2611.24402v1.pdf [22] verified
+CITED: Imbens, G. W. and Manski, C. F. (2004). Confidence intervals for partially identified parameters. Econometrica, 72:1845-1857.
+MATCH: Confidence Intervals for Partially Identified Parameters | Imbens, Manski | 2004 | Econometrica | 10.1111/j.1468-0262.2004.00555.x
+JUDGEMENT: correct (no error in the cited reference)
+
+## econ.EM_2611.24402v1.pdf [4] verified
+CITED: Aronow, P. M., Green, D. P., and Lee, D. K. K. (2014). Sharp bounds on the variance in randomized experiments. Annals of Statistics, 42:850-871.
+MATCH: Sharp bounds on the variance in randomized experiments | Aronow, Green, Lee | 2014 | The Annals of Statistics | 10.1214/13-aos1200
+JUDGEMENT: correct (no error in the cited reference)
+
+## econ.EM_2611.24402v1.pdf [3] verified
+CITED: Andrews, I., Stock, J. H., and Sun, L. (2019). Weak instruments in instrumental variables regression: Theory and practice. Annual Review of Economics, 11:727-753.
+MATCH: Weak Instruments in Instrumental Variables Regression: Theory and Practice | Andrews, Stock, Sun | 2019/2019 | Annual Review of Economics | 10.1146/annurev-economics-080218-025643
+JUDGEMENT: correct (no error in the cited reference)
+
+## stat.ME_2611.24929v1.pdf [10] verified
+CITED: C. R. Henderson. Best linear unbiased estimation and prediction under a selection model. Biometrics, 31(2):423-447, 1975. doi: 10.2307/2529430.
+MATCH: Best Linear Unbiased Estimation and Prediction under a Selection Model | Henderson | 1975/2006 | Biometrics | 10.2307/2529430
+JUDGEMENT: correct (no error in the cited reference)
+
+## stat.ME_2611.24929v1.pdf [32] verified_minor
+CITED: Laure Wynants, Yvonne Vergouwe, Sabine Van Huffel, Dirk Timmerman, and Ben Van Calster. Does ignoring clustering in multicenter data influence the performance of prediction models? A simulation study. Statistical Methods in Medical Research, 27(6):1723-1736, 2018. doi: 10.1177/0962280216668555.
+MATCH: Does ignoring clustering in multicenter data influence the performance of prediction models? A simulation study | Wynants, Vergouwe, Van Huffel, Timmerman, Van Calster | 2016/2018 | Statistical Methods in Medical Research | 10.1177/0962280216668555
+JUDGEMENT: correct (no error in the cited reference)
+
+## stat.ME_2611.24929v1.pdf [33] verified
+CITED: Laure Wynants, David M. Kent, Dirk Timmerman, Christine M. Lundquist, and Ben Van Calster. Untapped potential of multicenter studies: A review of cardiovascular risk prediction models revealed inappropriate analyses and wide variation in reporting. Diagnostic and Prognostic Research, 3:6, 2019. doi: 10.1186/s41512-019-0046-9.
+MATCH: Untapped potential of multicenter studies: a review of cardiovascular risk prediction models revealed inappropriate analyses and wide variation in reporting | Wynants, Kent, Timmerman, Lundquist, Van Calster | 2019 | Diagnostic and Prognostic Research | 10.1186/s41512-019-0046-9
+JUDGEMENT: correct (no error in the cited reference)
+
+## plos_10_1371_journal_pone_0360919.pdf [32] verified_minor
+CITED: 32. Adachi PJC, Willoughby T. More than just fun and games: the longitudinal relationships between strategic video games, self-reported problem solving skills, and academic grades. J Youth Adolesc. 2013;42(7):1041-52. https://doi.org/10.1007/s10964-013-9913-9 PMID: 23344653
+MATCH: More Than Just Fun and Games: The Longitudinal Relationships Between Strategic Video Games, Self-Reported Problem Solving Skills, and Academic Grades | Adachi, Willoughby | 2013 | Journal of Youth and Adolescence | 10.1007/s10964-013-9913-9
+JUDGEMENT: correct (no error in the cited reference)
+
+## plos_10_1371_journal_pone_0360919.pdf [19] verified
+CITED: 19. Burke M, Kraut RE. The relationship between Facebook use and well-being depends on communication type and tie strength. J Comput Mediat Commun. 2016;21(4):265-81. https://doi.org/10.1111/jcc4.12162
+MATCH: The Relationship Between Facebook Use and Well-Being Depends on Communication Type and Tie Strength: FACEBOOK AND WELL-BEING | Burke, Kraut | 2016 | Journal of Computer-Mediated Communication | 10.1111/jcc4.12162
+JUDGEMENT: correct (no error in the cited reference)
+
+## plos_10_1371_journal_pone_0360919.pdf [6] verified
+CITED: 6. Gotlib IH, Miller JG, Borchers LR, Coury SM, Costello LA, Garcia JM, et al. Effects of the COVID-19 pandemic on mental health and brain maturation in adolescents: implications for analyzing longitudinal data. Biol Psychiatry Glob Open Sci. 2023;3(4):912-8. https://doi.org/10.1016/j. bpsgos.2022.11.002 15 / 17
+MATCH: Effects of the COVID-19 Pandemic on Mental Health and Brain Maturation in Adolescents: Implications for Analyzing Longitudinal Data | Gotlib, Miller, Borchers, Coury, Costello, Garcia, Ho | 2023/2022 | Biological Psychiatry Global Open Science | 10.1016/j.bpsgos.2022.11.002
+JUDGEMENT: correct (no error in the cited reference)
+
+## plos_10_1371_journal_pone_0359947.pdf [23] verified
+CITED: 23. Shafighi K, Villeneuve S, Rosa Neto P, Badhwar A, Poirier J, Sharma V, et al. Social isolation is linked to classical risk factors of Alzheimer’s disease-related dementias. PLoS One. 2023;18(2):e0280471. https://doi.org/10.1371/journal.pone.0280471 PMID: 36724157
+MATCH: Social isolation is linked to classical risk factors of Alzheimer’s disease-related dementias | Shafighi, Villeneuve, Rosa Neto, Badhwar, Poirier, Sharma, Medina, Silveira, Dube, Glahn, Bzdok | 2023 | PLOS ONE | 10.1371/journal.pone.0280471
+JUDGEMENT: correct (no error in the cited reference)
+
+## plos_10_1371_journal_pone_0359947.pdf [11] verified
+CITED: 11. Ding Q, et al. Global, regional, and national burden of ischemic stroke, 1990-2019. Neurology. 2022;98:e279-90. https://doi.org/10.1212/ WNL.0000000000013115
+MATCH: Global, Regional, and National Burden of Ischemic Stroke, 1990–2019 | Ding, Liu, Yao, Liu, Cai, Han | 2022/2021 | Neurology | 10.1212/wnl.0000000000013115
+JUDGEMENT: correct (no error in the cited reference)
+
+## plos_10_1371_journal_pone_0359947.pdf [20] verified
+CITED: 20. Bai C, Lei X. New trends in population aging and challenges for China’s sustainable development. China Economic J. 2019;13(1):3-23. https://doi. org/10.1080/17538963.2019.1700608
+MATCH: New trends in population aging and challenges for China’s sustainable development | Bai, Lei | 2019/2020 | China Economic Journal | 10.1080/17538963.2019.1700608
+JUDGEMENT: correct (no error in the cited reference)
