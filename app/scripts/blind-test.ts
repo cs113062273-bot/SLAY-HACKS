@@ -7,7 +7,7 @@
  * Usage: npx tsx scripts/blind-test.ts   (BLIND_SET=2 for data/blind2/)
  */
 import { execSync } from 'node:child_process';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, openSync, closeSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import * as pdfjs from 'pdfjs-dist/legacy/build/pdf.mjs';
 import { buildDoc } from '../src/core/doc';
@@ -19,8 +19,16 @@ import { verifyReference } from '../src/core/verify';
 const root = fileURLToPath(new URL('../../data/', import.meta.url));
 const B = process.env.BLIND_SET && process.env.BLIND_SET !== '1' ? `blind${process.env.BLIND_SET}` : 'blind';
 const manifest = JSON.parse(readFileSync(`${root}${B}/manifest.json`, 'utf-8'));
-const commit = execSync('git rev-parse --short HEAD').toString().trim();
+const commit = execSync('git rev-parse HEAD').toString().trim();
 const dirty = execSync('git status --porcelain -- src').toString().trim().length > 0;
+if (B === 'blind3') {
+  if (!manifest.selectionComplete) throw new Error('Blind 3 selection is incomplete; keep every selected PDF');
+  if (dirty || manifest.freezeCommit !== commit) throw new Error('Blind 3 requires clean source at the manifest freeze commit');
+  if (existsSync(`${root}${B}/results.json`)) throw new Error('Blind 3 results already exist; do not rerun a held-out test');
+  const lock = openSync(`${root}${B}/run.lock`, 'wx');
+  writeFileSync(lock, JSON.stringify({ commit, pid: process.pid, startedAt: new Date().toISOString() }));
+  closeSync(lock);
+}
 
 // in-memory cache only: nothing from earlier runs is reused
 const mem = new Map<string, unknown>();
@@ -37,10 +45,19 @@ const rand = () => ((seed = (seed * 1103515245 + 12345) % 2 ** 31) / 2 ** 31);
 
 const out: any = { commit, srcDirty: dirty, startedAt: new Date().toISOString(), node: process.version, papers: [] };
 const missLines: string[] = [];
+const fieldSample: unknown[] = [];
 for (const p of manifest.picked) {
   const t0 = Date.now();
-  const { lines, pageWidths } = await pdfToLines(pdfjs as any, new Uint8Array(readFileSync(`${root}pdfs/${B}/${p.file}`)));
-  const doc = buildDoc(lines, pageWidths);
+  let parseError: string | undefined;
+  let doc: ReturnType<typeof buildDoc>;
+  try {
+    const { lines, pageWidths } = await pdfToLines(pdfjs as any, new Uint8Array(readFileSync(`${root}pdfs/${B}/${p.file}`)));
+    doc = buildDoc(lines, pageWidths);
+  } catch (e) {
+    if (B !== 'blind3') throw e;
+    parseError = String(e);
+    doc = { references: [], rawReferences: [], citances: [], sentences: [], style: 'unknown', stats: { pages: 0, words: 0 } };
+  }
   const tParse = Date.now() - t0;
   const res: RefResult[] = new Array(doc.references.length);
   let next = 0;
@@ -86,9 +103,23 @@ for (const p of manifest.picked) {
     uncheckedShare: n ? (counts.unchecked ?? 0) / n : 0,
     flagged: flags.length,
     flags,
+    ...(B === 'blind3' ? {
+      parseError,
+      countCompleteness: p.truthRefs ? Math.min(n, p.truthRefs) / p.truthRefs : null,
+      excessEntries: p.truthRefs ? Math.max(0, n - p.truthRefs) : null,
+      references: res,
+    } : {}),
   };
   out.papers.push(row);
   console.log(`${p.file}: ${n} refs, verified ${verified} (${(row.coverage * 100).toFixed(0)}%), flagged ${flags.length}, unverifiable ${counts.unverifiable ?? 0}, unchecked ${counts.unchecked ?? 0}, ${(tVerify / 1000).toFixed(0)} s`);
+  if (B === 'blind3') {
+    const fieldPool = doc.references.map((parsed, i) => ({ parsed, n: i + 1 }));
+    for (let k = 0; k < 5 && fieldPool.length; k++) {
+      const ref = fieldPool.splice(Math.floor(rand() * fieldPool.length), 1)[0];
+      fieldSample.push({ file: p.file, ...ref, pdfPage: null, expected: {}, correct: { segmentation: null, title: null, authors: null, year: null, venue: null, identifiers: null }, note: '' });
+    }
+    writeFileSync(`${root}${B}/field_sample.json`, JSON.stringify(fieldSample, null, 2));
+  }
   // miss check: 3 random verified references per paper, cited text next to the matched record
   const pool = res.map((r, i) => ({ r, i })).filter(({ r }) => r.verdict === 'verified' || r.verdict === 'verified_minor');
   for (let k = 0; k < 3 && pool.length; k++) {
@@ -96,6 +127,7 @@ for (const p of manifest.picked) {
     missLines.push(`## ${p.file} [${i + 1}] ${r.verdict}\nCITED: ${doc.references[i].raw}\nMATCH: ${r.match?.title} | ${r.match?.authors.map((a) => a.family).join(', ')} | ${r.match?.years.join('/')} | ${r.match?.venue ?? ''} | ${r.match?.doi ?? r.match?.url ?? ''}\nJUDGEMENT: \n`);
   }
   writeFileSync(`${root}${B}/results.json`, JSON.stringify(out, null, 1));
+  if (B === 'blind3') writeFileSync(`${root}${B}/miss_sample.txt`, missLines.join('\n'));
 }
 out.finishedAt = new Date().toISOString();
 out.hostStats = hostStats;

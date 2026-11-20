@@ -121,7 +121,7 @@ function extractYears(s: string): { years: number[]; cited?: number } {
 
 /* ---------------------------- authors ---------------------------- */
 
-const INITIALS_RE = /^(?:(?:\p{Lu}[a-z]?\.\s*-?\s*){1,4}\p{Lu}?|\p{Lu}{1,3})$/u;
+const INITIALS_RE = /^(?:(?:\p{Lu}[a-z]?\.\s*-?\s*){1,4}\p{Lu}?|\p{Lu}{1,3}|\p{Lu}(?:-\p{Lu}){1,3})$/u;
 const NAME_TOKEN_RE = /^[\p{Lu}][\p{L}'’`?-]*\.?$|^(?:van|von|der|den|de|del|della|di|da|du|le|la|dos|das|bin|al|el|ten|ter)$/u;
 
 function isInitials(s: string): boolean {
@@ -208,12 +208,12 @@ function finalizePeople(people: Person[]): Person[] {
 }
 
 function splitName(p: string): Person {
-  const toks = p.replace(/\.(?=\p{L})/gu, '. ').split(/\s+/).filter(Boolean);
+  const toks = p.replace(/\s+(?:Jr|Sr|2nd|3rd|II|III|IV)\.?$/i, '').replace(/\.(?=\p{L})/gu, '. ').split(/\s+/).filter(Boolean);
   if (toks.length === 1) return { family: toks[0] };
   // Vancouver "Smith JA" — trailing all-caps initials
   const last = toks[toks.length - 1];
   // ("Hu Zz" for Zhi-zhong Hu: hyphenated given names keep a lowercase second initial)
-  if ((/^\p{Lu}{1,3}$/u.test(last) || /^(\p{Lu})(\p{Ll})$/u.test(last) && last[1] === last[0].toLowerCase()) && toks.length >= 2 && !/^\p{Lu}{1,3}$/u.test(toks[0])) {
+  if ((/^\p{Lu}{1,3}$/u.test(last) || /^\p{Lu}(?:-\p{Lu}){1,3}$/u.test(last) || /^(\p{Lu})(\p{Ll})$/u.test(last) && last[1] === last[0].toLowerCase()) && toks.length >= 2 && !/^\p{Lu}{1,3}$/u.test(toks[0])) {
     return { family: toks.slice(0, -1).join(' '), given: last };
   }
   // "Holovatch Yu.", "Krasnytska M.", "Timoshyn D." — family first, dotted initials after
@@ -268,7 +268,8 @@ const APS_NAME = String.raw`(?:\p{Lu}\p{Ll}?\.(?:\s?-?\p{Lu}\p{Ll}?\.)*\s)+(?:(?
 // an initials-first author list followed by a comma (APS, AIP, many physics and maths journals)
 const APS_HEAD = new RegExp(String.raw`^(${APS_NAME}(?:,\s(?:and\s)?${APS_NAME})*(?:,?\s(?:and|&)\s${APS_NAME})?(?:,?\s+et\s+al\.?)?),\s+(.+)$`, 'u');
 // a comma-free journal name, then "volume, page (year)"
-const JOURNAL_TAIL = String.raw`([\p{Lu}][\p{L}.&\s:'-]{1,80}?)\s\d{1,4}[A-Z]?,\s*[A-Z]?\d[\d–-]*\s*\((?:1[89]|20)\d\d\)`;
+// "Phys. Rev. B 59, 1758 (1999)" (APS) or "JHEP 02 (2021) 139" / "Canad. J. Math. (2025) 1-36" (JHEP, many math journals)
+const JOURNAL_TAIL = String.raw`([\p{Lu}][\p{L}.&\s:'-]{1,80}?)(?:\s\d{1,4}[A-Z]?,\s*[A-Z]?\d[\d–-]*\s*\((?:1[89]|20)\d\d\)|(?:\s\d{1,4}[A-Z]?)?\s\((?:1[89]|20)\d\d\)\s*(?:,\s*)?(?:no\.\s*\d+\s*)?(?:[A-Z]?\d|Paper\b))`;
 const APS_NOTITLE = new RegExp(String.raw`^${JOURNAL_TAIL}`, 'u');
 const APS_TITLED = new RegExp(String.raw`^(.{8,300}?),\s+${JOURNAL_TAIL}`, 'u');
 const APS_BOOK = /^(.{8,300}?)\s\(([^()]{3,120}?),\s*((?:1[89]|20)\d\d)\)/u;
@@ -281,9 +282,10 @@ export function parseReference(input: string): ParsedRef {
   const raw = cleanRefString(input);
   let s = raw;
   let label: string | undefined;
-  const lab = s.match(/^\s*(?:\[(\w{1,12})\]|\((\d{1,4})\)|(\d{1,4})\.(?=\s)|(\d{1,4})\s(?=\p{Lu}))\s*/u);
+  // labels: "[12]", "[ABC+20]", "(12)", "12.", "12 " and author–year keys "[Bacon et al., 2016]", "[Sutton and Barto 2018a]"
+  const lab = s.match(/^\s*(?:\[(\w{1,12})\]|\((\d{1,4})\)|(\d{1,4})\.(?=\s)|(\d{1,4})\s(?=\p{Lu})|\[(\p{Lu}[^\]\d]{1,80}?,?\s(?:1[89]|20)\d\d[a-z]?)\])\s*/u);
   if (lab) {
-    label = lab[1] ?? lab[2] ?? lab[3] ?? lab[4];
+    label = lab[1] ?? lab[2] ?? lab[3] ?? lab[4] ?? lab[5];
     s = s.slice(lab[0].length);
   }
   const dois = extractDois(s);
@@ -448,7 +450,13 @@ export function parseReference(input: string): ParsedRef {
     const tt = nt ? null : rest.match(APS_TITLED);
     const bk = nt || tt ? null : rest.match(APS_BOOK);
     const inp = nt || tt || bk ? null : rest.match(/^(.{8,300}?),\s+[Ii]n:?\s+(?=\p{Lu})/u); // "…, Title, in Proc. CVPR (2016)"
-    if (nt && journalLike(nt[1])) {
+    // only an e-print: "A. Lewis, arXiv e-prints , arXiv:2607.14854 (2026)" / "J. Doe, arXiv:2101.00001 (2021)"
+    const ep = /^(?:arXiv\s+e-prints\s*,\s*)?arXiv:\s?(?:\d{4}\.\d{4,5}|[a-z-]+(?:\.[A-Z]{2})?\/\d{7})|^arXiv\s+e-prints\b/i.test(rest);
+    if (ep) {
+      authorsText = head[1];
+      title = undefined;
+      after = rest;
+    } else if (nt && journalLike(nt[1])) {
       authorsText = head[1];
       title = undefined;
       after = rest;
@@ -464,7 +472,7 @@ export function parseReference(input: string): ParsedRef {
       authorsText = head[1];
       title = inp[1];
       after = rest.slice(inp[0].length);
-    } else if (!(authorsText ?? '').includes(head[1])) {
+    } else if (!(authorsText ?? '').includes(head[1]) || authorLikeness((authorsText ?? '').slice((authorsText ?? '').indexOf(head[1]) + head[1].length).replace(/^[\s,]+/, '')) < 0.5) {
       // the other rules did not capture this author list: the title runs to the next comma
       const seg = rest.match(/^([^,]{8,300}),\s*(.+)$/);
       const words = seg ? seg[1].trim().split(/\s+/) : [];
@@ -478,10 +486,11 @@ export function parseReference(input: string): ParsedRef {
 
   if (title) {
     title = title
-      .replace(/^\s*(?:In:|In)\s+/, '')
+      .replace(/^\s*(?:In:|In|in)\s+(?=\p{Lu})/u, '')
       .replace(/[.,;:\s]+$/, '')
       .replace(/\s*\[[^\]]*\]\s*$/, '') // translated title / medium in brackets
       .replace(/,?\s*in these proceedings$|,?\s*\(?this volume\)?$/i, '')
+      .replace(/,\s*(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+(?:1[89]|20)\d\d[a-z]?$/i, '') // "Title, December 2013" (Zotero arXiv exports)
       .replace(/,\s*(?:1[89]|20)\d\d[a-z]?$/, '') // numbered styles: "Title, 2022. URL …"
       .replace(/,\s*volume\s+\d+\s+of\s+.+$/i, '') // "Title, volume 99 of Series"
       .replace(/\s*\((?:no\.|vol\.|volume|[^()]*\beds?\.)[^()]*\)\s*$/i, '') // "(No. 137)", "(Vol. 26, …)", "(J. B. Carroll, Ed.)"

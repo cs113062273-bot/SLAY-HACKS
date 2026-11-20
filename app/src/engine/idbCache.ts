@@ -4,7 +4,10 @@ import type { Cache } from '../core/http';
 export class IdbCache implements Cache {
   private dbp: Promise<IDBDatabase | null> | null = null;
   private mem = new Map<string, unknown>();
-  constructor(private name = 'veracite-cache') {}
+  private name: string;
+  constructor(name = 'veracite-cache') {
+    this.name = name;
+  }
   /**
    * Opened lazily: on a first visit the cross-origin-isolation service worker reloads the page right after load,
    * and an upgrade interrupted by that reload can leave later opens pending forever. A storage layer that does

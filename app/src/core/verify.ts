@@ -58,6 +58,8 @@ const VENUE_CANON: [string, RegExp][] = [
   ['IJCV', /\bijcv\b|international journal of computer vision/],
   ['TNNLS', /\btnnls\b|transactions on neural networks and learning systems/],
   ['CACM', /\bcacm\b|communications of the acm/],
+  // the English translation of Zh. Eksp. Teor. Fiz.: "Soviet Physics JETP", later "Journal of Experimental and Theoretical Physics"
+  ['JETP', /\bjetp\b|journal of experimental and theoretical physics|zh eksp teor fiz/],
 ];
 
 export function canonVenues(...texts: (string | undefined)[]): Set<string> {
@@ -77,7 +79,7 @@ export function canonVenues(...texts: (string | undefined)[]): Set<string> {
   return out;
 }
 
-const JOURNAL_CANON = new Set(['TPAMI', 'IJCV', 'TNNLS', 'CACM', 'JMLR', 'TMLR', 'TACL']);
+const JOURNAL_CANON = new Set(['TPAMI', 'IJCV', 'TNNLS', 'CACM', 'JMLR', 'TMLR', 'TACL', 'JETP']);
 
 const PREPRINT_RE = /arxiv|corr|biorxiv|medrxiv|ssrn|preprint|research square|openreview|techrxiv|chemrxiv|psyarxiv|zenodo/i;
 
@@ -127,6 +129,8 @@ function isGroupName(r: Person): boolean {
 }
 
 function isOrgAuthor(c: Person, title?: string): boolean {
+  // "CMS Collaboration", "European Muon Collaboration", "Fermilab E665 Collaboration" (parsed as given + family)
+  if (/\b(?:collaboration|consortium)\b/i.test(`${c.given ?? ''} ${c.family}`)) return true;
   if (c.given) return false;
   const f = c.family.trim();
   if (/\s/.test(f) && !/\b(?:team|group|consortium|corporation|inc|ltd|foundation|institute|commission|organization|organisation|committee|association)\b/i.test(f)) return false;
@@ -760,11 +764,11 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
   }
 
   // forthcoming / same-volume works are not indexed yet; a similar older record is not evidence against them
-  if (/\bin these proceedings\b|\bthis volume\b|\bforthcoming\b|\bin press\b|\bto appear\b|\bin preparation\b/i.test(p.raw) && (verdict === 'fabricated' || verdict === 'not_found' || (verdict === 'metadata_error' && checks.some((c) => c.status === 'mismatch' && (c.field === 'year' || c.field === 'authors'))))) {
+  if (/\bin these proceedings\b|\bthis volume\b|\bforthcoming\b|\bin press\b|\bto appear\b|\bin preparation\b|\b(?:work )?in progress\b|\bunpublished\b|\b(?:private|personal) communication\b/i.test(p.raw) && (verdict === 'fabricated' || verdict === 'not_found' || (verdict === 'metadata_error' && checks.some((c) => c.status === 'mismatch' && (c.field === 'year' || c.field === 'authors'))))) {
     verdict = 'unverifiable';
     confidence = 0.5;
     issues.length = 0;
-    issues.push('Forthcoming or same-volume work: not indexed yet; check manually');
+    issues.push('Forthcoming, unpublished or same-volume work: not indexed; check manually');
     best = undefined;
   }
 
@@ -797,7 +801,8 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
     parsed: p,
     verdict,
     confidence,
-    match: best && (best.title >= 0.6 || verdict === 'verified') ? best.rec : undefined,
+    // (a reference without a title is matched by first author, year, volume and page: show that record too)
+    match: best && (best.title >= 0.6 || verdict === 'verified' || (!p.title && verdict === 'verified_minor')) ? best.rec : undefined,
     checks,
     issues,
     candidates: all.slice(0, 5),
@@ -955,6 +960,21 @@ export function venueGeneralCheck(p: ParsedRef, recs: WorkRecord[]): 'match' | '
   if (!names.length) return 'unknown';
   const rawF = ' ' + fold(p.raw) + ' ';
   if (names.some((n) => venueTokens(n).length >= 2 && rawF.includes(' ' + fold(n) + ' '))) return 'match';
+  // the parser cut the title at "?" or "." and read the subtitle as the start of the venue:
+  // "Survival of the fittest? | Entrepreneurial human capital … firms. Adm Sci Q" → venue "Adm Sci Q"
+  let venue = p.venue;
+  const pt = fold(p.title ?? '');
+  for (const r of recs) {
+    const rt = fold(r.title ?? '');
+    if (!pt || !rt.startsWith(pt + ' ')) continue;
+    const rest = rt.slice(pt.length).trim().split(' ');
+    const vw = venue.split(/\s+/);
+    if (vw.length > rest.length && fold(vw.slice(0, rest.length).join(' ')) === rest.join(' ')) {
+      venue = vw.slice(rest.length).join(' ');
+      break;
+    }
+  }
+  if (venue !== p.venue) return venueGeneralCheck({ ...p, venue, title: undefined }, recs);
   const C = venueTokens(p.venue);
   if (!C.length) return 'unknown';
   const citedCanon = canonVenues(p.venue);

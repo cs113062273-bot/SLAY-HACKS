@@ -31,11 +31,11 @@ const BENCH: { name: string; what: string; metric: string; bars: { label: string
       { label: 'Veracite', v: 0.971, ours: true },
       { label: 'Hallucinator (best of 5)', v: 0.644 },
     ],
-    note: 'Badalova & Mayr 2026, Zenodo 10.5281/zenodo.21457492; baseline scores as published. This set was also used during development. On 14 new papers in a frozen blind test, 13.5% of correct references were flagged (mostly PDF parsing, since fixed).',
+    note: 'Badalova & Mayr 2026, Zenodo 10.5281/zenodo.21457492; used during development. Frozen PDF audits: 86/635 (13.5%) and 54/465 (11.6%) references falsely flagged. Later parser fixes need an independent audit.',
   },
   {
     name: 'Hallucinated-citation detection',
-    what: 'HALLMARK v1.2 test_public: 825 citations, 14 fabrication types. Held out, scored once.',
+    what: 'HALLMARK v1.2 test_public: 825 citations, 14 fabrication types. Historical held-out run.',
     metric: 'F1',
     bars: [
       { label: 'Paid agent cascade', v: 0.986 },
@@ -137,7 +137,7 @@ export function Landing() {
             <div className="mode" role="radiogroup" aria-label="Audit depth">
               {(
                 [
-                  ['full', 'Full audit', 'References and claim support. Downloads a 136 MB verifier once.'],
+                  ['full', 'Full audit', 'References and claim support. Downloads 136 MB of models once.'],
                   ['quick', 'Quick check', 'References only, fastest. Claim support stays one click away.'],
                 ] as const
               ).map(([m, label, help]) => (

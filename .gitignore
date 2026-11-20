@@ -21,3 +21,5 @@ SKILL.md
 .claude/
 *.log
 data/mnli/
+.runs/
+data/blind3/run.lock

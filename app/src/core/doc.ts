@@ -125,14 +125,41 @@ export function findReferenceRange(lines: Line[]): [number, number] | null {
     }
   }
   let first = start + 1;
+  // no heading (REVTeX, AIP and some APS styles omit it): a numbered list anywhere in the paper
+  const h = findHeadinglessStart(lines);
   if (start < 0) {
-    // no heading (REVTeX, AIP and some APS styles omit it): a numbered list that runs to the back of the paper
-    const h = findHeadinglessStart(lines);
-    if (h < 0) return null;
-    start = h - 1;
-    first = h;
+    if (h.start < 0) return null;
+    start = h.start - 1;
+    first = h.start;
+  } else if (h.start >= 0 && h.start < start) {
+    // a headed list may be only the supplement's short list ("References" after the supplementary material), while
+    // the main bibliography earlier in the paper has no heading: keep the main list when it is far longer
+    const end = findReferenceRangeFrom(lines, first);
+    const re = LABEL_RES.find((r) => r.test(lines[first]?.text ?? ''));
+    const headed = re ? lines.slice(first, end).filter((l) => re.test(l.text)).length : 0;
+    if (re && h.hits >= 2 * headed && h.hits - headed >= 10) {
+      start = h.start - 1;
+      first = h.start;
+    }
   }
-  return [first, findReferenceRangeFrom(lines, start + 1)];
+  const end = findReferenceRangeFrom(lines, start + 1);
+  // the heading can sit at the top of the next column while the list began at the foot of the previous one
+  // ("[13] …" | "REFERENCES" "[14] …"): walk back to entry 1 when the earlier entries are there in sequence
+  const k = lines.slice(first, first + 3).findIndex((l) => LABEL_RES.some((r) => r.test(l.text)));
+  if (k >= 0) {
+    const re = LABEL_RES.find((r) => r.test(lines[first + k].text))!;
+    const n = Number(lines[first + k].text.match(re)![1]);
+    if (n > 1 && n <= 60) {
+      let expect = n - 1;
+      let i = first - 1;
+      for (; i >= Math.max(0, first - 400) && expect >= 1; i--) {
+        const m = Number(lines[i].text.match(re)?.[1] ?? NaN);
+        if (m === expect) expect--;
+      }
+      if (expect === 0) return [i + 1, end];
+    }
+  }
+  return [first, end];
 }
 
 /** Where a reference list that starts at line `from` ends: a caption, an appendix or a back-matter heading. */
@@ -170,12 +197,20 @@ function continueAcrossBackMatter(lines: Line[], range: [number, number]): Line[
   const out = lines.slice(range[0], range[1]);
   let end = range[1];
   for (let guard = 0; guard < 8 && end < lines.length; guard++) {
-    const re = LABEL_RES.find((r) => out.filter((l) => r.test(l.text)).length >= 3);
+    // the label style of the list; a list cut after its first two entries (it starts at the foot of a column and
+    // the next column holds the conclusions) is recognised by its first line
+    const nLab = (r: RegExp) => out.filter((l) => r.test(l.text)).length;
+    const re = LABEL_RES.find((r) => nLab(r) >= 3) ?? LABEL_RES.find((r) => r.test(out[0]?.text ?? '') && nLab(r) >= 2);
     const ahead = lines.slice(end, end + 400);
     let j = -1;
     if (re) {
-      // numbered: the next labels in sequence
-      const last = Math.max(...out.map((l) => Number(l.text.match(re)?.[1] ?? NaN)).filter((n) => !Number.isNaN(n)));
+      // numbered: the next labels in sequence (followed from the first label, so a citation "[48]" that starts a
+      // line of text set beside the list is not taken for its end)
+      let last = 0;
+      for (const l of out) {
+        const n = Number(l.text.match(re)?.[1] ?? NaN);
+        if (n > last && (last === 0 || n <= last + 3)) last = n;
+      }
       j = ahead.findIndex((l) => {
         const n = Number(l.text.match(re)?.[1] ?? NaN);
         return n > last && n <= last + 3;
@@ -192,13 +227,20 @@ function continueAcrossBackMatter(lines: Line[], range: [number, number]): Line[
     out.push(...lines.slice(end + j, sub));
     end = sub;
   }
+  // a numbered list is set in one size: lines in a larger font are body text from the column beside it
+  const lab = LABEL_RES.find((r) => out.filter((l) => r.test(l.text)).length >= 3);
+  if (lab) {
+    const size = median(out.filter((l) => lab.test(l.text)).map((l) => l.size));
+    const kept = out.filter((l) => l.size <= size * 1.08);
+    if (kept.length >= out.length * 0.5) return kept;
+  }
   return out;
 }
 
 // a label line that begins with a person's name: "[1] Y. Cao, V. Fatemi", "1. Smith, J.", "[2] S. Peotta and …"
 const NAMEY = /^\s*(?:\[\d{1,4}\]|\d{1,3}\.?)\s?(?:\p{Lu}\p{Ll}?\.\s?(?:-?\p{Lu}\p{Ll}?\.\s?)*(?:(?:van|von|de|der|da|di|le|la)\s)?\p{Lu}[\p{L}'’-]+|\p{Lu}[\p{L}'’-]+,\s\p{Lu}\.|\p{Lu}[\p{L}'’-]+\s\p{Lu}{1,3}[,.\s]|\p{Lu}\p{Ll}+\s\p{Lu}[\p{L}'’-]+[,\s])/u;
 
-function findHeadinglessStart(lines: Line[]): number {
+function findHeadinglessStart(lines: Line[]): { start: number; hits: number } {
   // anywhere in the document (REVTeX papers often put supplementary material after the references): the longest
   // sequential run of labels whose lines start with names and whose entries carry years
   let best = -1;
@@ -230,7 +272,7 @@ function findHeadinglessStart(lines: Line[]): number {
       }
     }
   }
-  return best;
+  return { start: best, hits: bestHits };
 }
 
 function median(xs: number[]): number {
@@ -249,7 +291,10 @@ export function splitEntries(lines: Line[]): string[] {
     if (cur.trim()) entries.push(cur.trim());
     cur = '';
   };
-  const join = (a: string, b: string) => (a.endsWith('-') && /^\p{Ll}/u.test(b) ? a.slice(0, -1) + b : a + (a ? ' ' : '') + b);
+  // a word broken at a line end: "regular-" + "ization" → "regularization"; a compound name keeps its hyphen:
+  // "Hutsebaut-" + "Buysse" → "Hutsebaut-Buysse"
+  const join = (a: string, b: string) =>
+    a.endsWith('-') && /^\p{Ll}/u.test(b) ? a.slice(0, -1) + b : a.endsWith('-') && /\p{L}{2}-$/u.test(a) && /^\p{Lu}\p{Ll}/u.test(b) ? a + b : a + (a ? ' ' : '') + b;
 
   if (numbered >= Math.max(3, lines.length * 0.15)) {
     // dominant label style, and labels must be sequential ("2024. Association…" is not entry 2024)
@@ -514,7 +559,7 @@ function keepReferenceLike(entries: string[]): string[] {
   const out: string[] = [];
   let bad = 0;
   for (const e of entries) {
-    const looks = e.length > 15 && e.length < 1600 && (/\b(1[89]\d\d|20[0-3]\d)[a-z]?\b/.test(e) || /\b10\.\d{4,}\/|arxiv|https?:\/\//i.test(e)) && /\p{L}{3}/u.test(e);
+    const looks = e.length > 15 && e.length < 1600 && (/\b(1[89]\d\d|20[0-3]\d)[a-z]?\b/.test(e) || /\b10\.\d{4,}\/|arxiv|https?:\/\//i.test(e) || /\b(?:[0-2]\d[01]\d\.\d{4,5}|[a-z-]+(?:\.[A-Z]{2})?\/\d{7})(?:v\d+)?\b|\b(?:work in progress|in preparation|to appear|unpublished|(?:private|personal) communication)\b/i.test(e)) && /\p{L}{3}/u.test(e);
     if (looks) {
       out.push(e);
       bad = 0;
@@ -530,7 +575,7 @@ export function buildDoc(linesIn: Line[], pageWidths: Map<number, number>): Doc 
   const lines = orderLines(dropFurniture(attachLabels(linesIn), nPages), pageWidths);
   const range = findReferenceRange(lines);
   const bodyLines = range ? lines.slice(0, range[0] - 1) : lines;
-  const refLines = range ? continueAcrossBackMatter(lines, range) : [];
+  const refLines = range ? continueAcrossBackMatter(lines, range).filter((l) => !REF_HEAD.test(l.text.trim())) : [];
   const rawReferences = trimLastEntry(keepReferenceLike(splitEntries(refLines).map(stripBackrefs).map(cleanRefString)));
   const references = rawReferences.map(parseReference);
   // body text: join lines, fix hyphenation

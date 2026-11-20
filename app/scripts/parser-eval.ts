@@ -15,6 +15,14 @@ const verbose = process.argv.includes('--verbose');
 const si = process.argv.indexOf('--show');
 const show = si > 0 ? process.argv[si + 1] : '';
 const rows = readFileSync(`${root}parser_dev/truth.tsv`, 'utf8').trim().split('\n').slice(1).map((l) => l.split('\t'));
+// A cross-listed arXiv paper can appear under two categories. Score its primary ID only once.
+const seenIds = new Set<string>();
+const uniqueRows = rows.filter(([, , id]) => {
+  const key = id.replace(/v\d+$/, '');
+  if (seenIds.has(key)) return false;
+  seenIds.add(key);
+  return true;
+});
 
 // an "author" that is really debris from a misplaced author/title boundary
 const DEBRIS = /^(?:arxiv|preprint|proceedings|proc|journal|conference|in|and|the|of|for|on|vol|pp|ieee|acm|springer|org|http|https|doi|url|available|online)$/i;
@@ -23,7 +31,7 @@ const debrisAuthor = (f: string) => DEBRIS.test(f) || /^\p{Ll}/u.test(f) || /\d/
 let totT = 0, totP = 0, zero = 0, n = 0;
 const agg = { noTitle: 0, noAuthor: 0, noYear: 0, debris: 0, refs: 0 };
 const lines: string[] = [];
-for (const [file, cat, , bib] of rows.filter(([f]) => !show || f.includes(show))) {
+for (const [file, cat, , bib] of (show ? rows : uniqueRows).filter(([f]) => !show || f.includes(show))) {
   const truth = Number(bib);
   let refs: any[] = [];
   let raw: string[] = [];
