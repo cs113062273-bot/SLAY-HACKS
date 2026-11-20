@@ -158,11 +158,11 @@ export function authorLikeness(text: string): number {
 
 export function parseAuthors(text: string): { authors: Person[]; etAl: boolean } {
   let t = text.trim();
-  const etAl = /\bet\.?\s*al\b|\bal\.?,?\s*et\b|\band others\b|\.\.\.|…/i.test(t);
+  const etAl = /\bet\.?\s*al\b|\bal\.?,?\s*et\b|\band (?:others|coauthors)\b|\.\.\.|…/i.test(t);
   t = t
     .replace(/\(eds?\.?\)|\beds?\.\s*$/gi, '')
     .replace(/,?\s*(?:and\s+|&\s*)?(?:et\.?\s*al\.?|al\.?,?\s*et\.?),?/gi, ',') // keep the separator: "Doe, K., et al., Lee, M."
-    .replace(/\band others\b|…|\.\.\./gi, '')
+    .replace(/,?\s*\band (?:others|coauthors)\b|…|\.\.\./gi, '') // AMS: "Irbah, A., and Coauthors"
     .replace(/^\s*(?:by)\s+/i, '')
     .trim()
     .replace(/[.,;\s]+$/, '');
@@ -262,6 +262,21 @@ export function segments(s: string): string[] {
 
 /* ---------------------------- main parse ---------------------------- */
 
+// one "A. B. Surname" name (initials first, particles allowed, accents possibly split off by PDF extraction)
+const NAME_CHARS = "\\p{L}'’´¨ˇ˚`~^-"; // letters plus accents that PDF extraction splits off ("Schir`o", "Gr¨une")
+const APS_NAME = String.raw`(?:\p{Lu}\p{Ll}?\.(?:\s?-?\p{Lu}\p{Ll}?\.)*\s)+(?:(?:van|von|de|der|den|da|di|du|la|le|del|dos)\s)*\p{Lu}[` + NAME_CHARS + ']+';
+// an initials-first author list followed by a comma (APS, AIP, many physics and maths journals)
+const APS_HEAD = new RegExp(String.raw`^(${APS_NAME}(?:,\s(?:and\s)?${APS_NAME})*(?:,?\s(?:and|&)\s${APS_NAME})?(?:,?\s+et\s+al\.?)?),\s+(.+)$`, 'u');
+// a comma-free journal name, then "volume, page (year)"
+const JOURNAL_TAIL = String.raw`([\p{Lu}][\p{L}.&\s:'-]{1,80}?)\s\d{1,4}[A-Z]?,\s*[A-Z]?\d[\d–-]*\s*\((?:1[89]|20)\d\d\)`;
+const APS_NOTITLE = new RegExp(String.raw`^${JOURNAL_TAIL}`, 'u');
+const APS_TITLED = new RegExp(String.raw`^(.{8,300}?),\s+${JOURNAL_TAIL}`, 'u');
+const APS_BOOK = /^(.{8,300}?)\s\(([^()]{3,120}?),\s*((?:1[89]|20)\d\d)\)/u;
+const journalLike = (j: string) => {
+  const words = j.trim().split(/\s+/).filter((w) => /\p{L}/u.test(w));
+  return words.length > 0 && words.filter((w) => /^\p{Lu}/u.test(w) || /^(?:of|and|the|for|in|on|&)$/.test(w)).length / words.length >= 0.8;
+};
+
 export function parseReference(input: string): ParsedRef {
   const raw = cleanRefString(input);
   let s = raw;
@@ -323,6 +338,18 @@ export function parseReference(input: string): ParsedRef {
       const segs = segments(apa[2]);
       title = segs[0];
       after = segs.slice(1).join(' ');
+    }
+  }
+
+  // (b1) AMS / meteorology: "Bréon, F.-M., and B. Dubrulle, 2004: Title. Journal, 61 (23), 2888-2898."
+  if (!title) {
+    const ams = body.match(/^(.{2,6000}?),\s(1[89]\d\d|20[0-3]\d)([a-z])?:\s(.+)$/u);
+    if (ams && (authorLikeness(ams[1]) >= 0.6 || /^[\p{Lu}&\s]{2,40}$/u.test(ams[1]))) {
+      const segs = segments(ams[4]);
+      authorsText = ams[1];
+      title = segs[0];
+      after = segs.slice(1).join(' ');
+      yearAfterAuthors = parseInt(ams[2], 10);
     }
   }
 
@@ -407,6 +434,44 @@ export function parseReference(input: string): ParsedRef {
         title = segs[0];
         after = segs.slice(1).join(' ');
         break;
+      }
+    }
+  }
+
+  // APS / AIP style without a title: "C. Cianci, S. Smith, and R. Grima, Physical Review E 95, 052118 (2017)."
+  // and with an unquoted title: "G. Kresse and D. Joubert, From ultrasoft …, Phys. Rev. B 59, 1758 (1999)."
+  // or a book: "H.-P. Breuer and F. Petruccione, The Theory of Open Quantum Systems (Oxford University Press, 2007)."
+  const head = q ? null : body.match(APS_HEAD);
+  if (head) {
+    const rest = head[2];
+    const nt = rest.match(APS_NOTITLE);
+    const tt = nt ? null : rest.match(APS_TITLED);
+    const bk = nt || tt ? null : rest.match(APS_BOOK);
+    const inp = nt || tt || bk ? null : rest.match(/^(.{8,300}?),\s+[Ii]n:?\s+(?=\p{Lu})/u); // "…, Title, in Proc. CVPR (2016)"
+    if (nt && journalLike(nt[1])) {
+      authorsText = head[1];
+      title = undefined;
+      after = rest;
+    } else if (tt && journalLike(tt[2]) && authorLikeness(tt[1]) < 0.5) {
+      authorsText = head[1];
+      title = tt[1];
+      after = rest.slice(tt[1].length).replace(/^[\s,]+/, '');
+    } else if (bk && PUBLISHER_RE.test(bk[2]) && authorLikeness(bk[1]) < 0.5) {
+      authorsText = head[1];
+      title = bk[1];
+      after = rest.slice(bk[1].length).trim().replace(/^\(/, '');
+    } else if (inp && authorLikeness(inp[1]) < 0.5) {
+      authorsText = head[1];
+      title = inp[1];
+      after = rest.slice(inp[0].length);
+    } else if (!(authorsText ?? '').includes(head[1])) {
+      // the other rules did not capture this author list: the title runs to the next comma
+      const seg = rest.match(/^([^,]{8,300}),\s*(.+)$/);
+      const words = seg ? seg[1].trim().split(/\s+/) : [];
+      if (seg && (words.length >= 4 || (words.length >= 2 && /(?:^|\s)\p{Ll}{3,}/u.test(seg[1]))) && !new RegExp(`^${APS_NAME}$`, 'u').test(seg[1].trim())) {
+        authorsText = head[1];
+        title = seg[1];
+        after = seg[2];
       }
     }
   }

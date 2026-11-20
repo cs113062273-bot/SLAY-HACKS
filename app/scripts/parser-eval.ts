@@ -23,7 +23,7 @@ const debrisAuthor = (f: string) => DEBRIS.test(f) || /^\p{Ll}/u.test(f) || /\d/
 let totT = 0, totP = 0, zero = 0, n = 0;
 const agg = { noTitle: 0, noAuthor: 0, noYear: 0, debris: 0, refs: 0 };
 const lines: string[] = [];
-for (const [file, cat, , bib] of rows) {
+for (const [file, cat, , bib] of rows.filter(([f]) => !show || f.includes(show))) {
   const truth = Number(bib);
   let refs: any[] = [];
   let raw: string[] = [];
