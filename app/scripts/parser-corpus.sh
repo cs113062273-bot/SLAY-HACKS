@@ -13,13 +13,13 @@ SEEN=$(cat "$ROOT"/data/blind*/manifest.json | grep -o '"id": "[^"]*"' | cut -d'
 get() { for t in 1 2 3 4 5 6; do curl -sL -A "$UA" -o "$2" -w '%{http_code}' "$1" | grep -q '^200$' && return 0; sleep $((30 * t)); done; return 1; }
 TRUTH="$ROOT/data/parser_dev/truth.tsv"; [ -f "$TRUTH" ] || printf 'file\tcat\tid\tbibitems\n' > "$TRUTH"
 for cat in $CATS; do
-  get "https://export.arxiv.org/api/query?search_query=cat:$cat&sortBy=submittedDate&sortOrder=descending&max_results=15" "$TMP/list.xml" || continue
-  ids=$(tr -d '\n' < "$TMP/list.xml" | sed 's/<entry>/\n<entry>/g' | grep '<entry>' | while read -r e; do
-      id=$(echo "$e" | grep -o '<id>http://arxiv.org/abs/[^<]*' | sed 's#.*/abs/##'); pc=$(echo "$e" | grep -o 'primary_category[^>]*term="[^"]*"' | sed 's/.*term="//;s/"//'); [ "$pc" = "$cat" ] && echo "$id"; done)
+  # the category's public "recent" listing (the export API rate-limits quickly); newest first
+  get "https://arxiv.org/list/$cat/recent?skip=0&show=25" "$TMP/list.html" || continue
+  ids=$(grep -o -E '/abs/[0-9]{4}\.[0-9]{4,5}' "$TMP/list.html" | sed 's#/abs/##' | awk '!s[$0]++' | head -15)
   sleep 5; n=0
   for id in $ids; do
     [ $n -ge 2 ] && break
-    echo "$SEEN" | grep -qx "$id" && continue
+    echo "$SEEN" | sed "s/v[0-9]*$//" | grep -qx "$id" && continue; grep -q "_${id}" "$TRUTH" && { n=$((n+1)); continue; }
     f="${cat}_${id}.pdf"; grep -q "^$f" "$TRUTH" && { n=$((n+1)); continue; }
     rm -rf "$TMP"/*; get "https://arxiv.org/e-print/$id" "$TMP/src" || continue; sleep 5
     ( cd "$TMP" && (tar -xzf src 2>/dev/null || (gzip -dc src > main.tex 2>/dev/null)) )

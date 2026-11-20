@@ -132,9 +132,14 @@ export function findReferenceRange(lines: Line[]): [number, number] | null {
     start = h - 1;
     first = h;
   }
-  const refSize = median(lines.slice(start + 1, start + 40).map((l) => l.size));
+  return [first, findReferenceRangeFrom(lines, start + 1)];
+}
+
+/** Where a reference list that starts at line `from` ends: a caption, an appendix or a back-matter heading. */
+function findReferenceRangeFrom(lines: Line[], from: number): number {
+  const refSize = median(lines.slice(from, from + 39).map((l) => l.size));
   let end = lines.length;
-  for (let i = start + 1; i < lines.length; i++) {
+  for (let i = from; i < lines.length; i++) {
     const t = lines[i].text.trim();
     // captions and ALL-CAPS appendix headings (ICLR style: "A FURTHER DETAILS ON …") end the list
     if (/^(?:Table|Figure|Fig\.|Algorithm)\s+[A-Z]?\d+[:.]/.test(t) || /^(?:[A-Z]|\d{1,2})(?:\.\d+)*\.?\s+[A-Z][A-Z0-9 ,:'’()\-]{6,}$/.test(t)) {
@@ -147,11 +152,48 @@ export function findReferenceRange(lines: Line[]): [number, number] | null {
       break;
     }
   }
-  return [first, end];
+  return end;
 }
 
 /** Labels of numbered reference lists: "[1]", "1. ", and AIP's label glued to the first initial ("24P. Kunert"). */
 const LABEL_RES = [/^\s*\[(\d{1,4})\]/, /^\s*(\d{1,3})\.\s/, /^\s*(\d{1,3}) ?(?=\p{Lu}\.)/u];
+
+/**
+ * Journals that set back matter (Funding, Conflict of interest, Publisher's note) in the column beside the start of
+ * the reference list (Frontiers, some MDPI layouts) end the list early. If the numbering continues after the back
+ * matter, skip that block and keep collecting.
+ */
+// the first line of an author–year entry: "Fröberg, G., …" / "van der Berg, A. B., …" (the year often wraps)
+const AY_START = /^(?:(?:van|von|de|der|den|da|di|du|la|le)\s)*\p{Lu}[\p{L}'’-]+(?:\s\p{Lu}[\p{L}'’-]+)?,\s\p{Lu}\.(?:\s?-?\p{Lu}\.)*,?\s/u;
+
+function continueAcrossBackMatter(lines: Line[], range: [number, number]): Line[] {
+  const out = lines.slice(range[0], range[1]);
+  let end = range[1];
+  for (let guard = 0; guard < 8 && end < lines.length; guard++) {
+    const re = LABEL_RES.find((r) => out.filter((l) => r.test(l.text)).length >= 3);
+    const ahead = lines.slice(end, end + 400);
+    let j = -1;
+    if (re) {
+      // numbered: the next labels in sequence
+      const last = Math.max(...out.map((l) => Number(l.text.match(re)?.[1] ?? NaN)).filter((n) => !Number.isNaN(n)));
+      j = ahead.findIndex((l) => {
+        const n = Number(l.text.match(re)?.[1] ?? NaN);
+        return n > last && n <= last + 3;
+      });
+    } else {
+      // author–year: entry starts ("Surname, A. B., … (2023).") that continue the alphabetical order
+      const starts = out.filter((l) => AY_START.test(l.text));
+      if (starts.length < 3) break;
+      const lastKey = fold(starts[starts.length - 1].text).slice(0, 3);
+      j = ahead.findIndex((l, k) => AY_START.test(l.text) && fold(l.text).slice(0, 3) >= lastKey && ahead.slice(k + 1, k + 12).filter((m) => AY_START.test(m.text)).length >= 2);
+    }
+    if (j < 0) break;
+    const sub = findReferenceRangeFrom(lines, end + j);
+    out.push(...lines.slice(end + j, sub));
+    end = sub;
+  }
+  return out;
+}
 
 function findHeadinglessStart(lines: Line[]): number {
   for (const re of LABEL_RES) {
@@ -436,7 +478,11 @@ function stripBackrefs(s: string): string {
 
 /** The last entry has nothing after it to end it, so appendix/figure text can leak in: cut an unusually
  *  long final entry at its first natural reference ending (year, page range, DOI or URL + period). */
-function trimLastEntry(entries: string[]): string[] {
+function trimLastEntry(entriesIn: string[]): string[] {
+  // journal boilerplate collected after the last entry ("astro-ph section of the arXiv, making the …"): references
+  // do not start with a lowercase word, except name particles ("van der Berg", "de Vries", "d'Alembert")
+  const entries = [...entriesIn];
+  while (entries.length > 3 && /^\p{Ll}/u.test(entries[entries.length - 1]) && !/^(?:van|von|de|der|den|da|di|du|la|le|d['’]|al-|el-|dos|das|ter|ten)\b/i.test(entries[entries.length - 1])) entries.pop();
   if (entries.length < 3) return entries;
   const lens = entries.slice(0, -1).map((e) => e.length).sort((a, b) => a - b);
   const med = lens[Math.floor(lens.length / 2)];
@@ -467,7 +513,7 @@ export function buildDoc(linesIn: Line[], pageWidths: Map<number, number>): Doc 
   const lines = orderLines(dropFurniture(attachLabels(linesIn), nPages), pageWidths);
   const range = findReferenceRange(lines);
   const bodyLines = range ? lines.slice(0, range[0] - 1) : lines;
-  const refLines = range ? lines.slice(range[0], range[1]) : [];
+  const refLines = range ? continueAcrossBackMatter(lines, range) : [];
   const rawReferences = trimLastEntry(keepReferenceLike(splitEntries(refLines).map(stripBackrefs).map(cleanRefString)));
   const references = rawReferences.map(parseReference);
   // body text: join lines, fix hyphenation
