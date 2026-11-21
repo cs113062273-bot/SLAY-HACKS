@@ -33,7 +33,12 @@ Existing checkers test whether a title exists. On a public benchmark of 104 manu
 
 ## Results
 
-On the public reference benchmarks, Veracite outperformed the evaluated free baselines. Frozen end-to-end PDF audits were weaker: false alarms were 87/635 references (13.7%) in set 1 and 54/465 (11.6%) in set 2. Those errors informed later fixes, so neither set now independently evaluates the current parser. A third audit is pre-registered in `data/blind3/PROTOCOL.md`: selection at `497cb22` is preserved, with a bounded spent/dev-only pre-run amendment and separate audit freeze `3e47ac9`. Its 14 selected papers await the free allowance; no quality result is available yet. Benchmark provenance matters: Zenodo and HALLMARK dev were rechecked on the current core; HALLMARK test .959 is a historical held-out run, and claim-model results concern the retained model described below.
+Two kinds of evidence are kept apart:
+
+- **Public benchmarks** supply clean reference strings, and some of them were used during development. On them Veracite has the best F1 of the evaluated free tools.
+- **Blind audits of real PDFs.** There were three rounds: 42 papers from 36 arXiv categories and PLOS ONE, 2,064 references. Each round's papers were chosen by a rule fixed in code before any was opened, and each ran once with the code frozen. Every flag was then judged by hand against the publisher's record. In the latest round (frozen `3e47ac9`), extraction found 964 of 969 reference entries, and 81.1% of references were verified. One error was real; 98 flags were false alarms, which is **10.2% of all references**, far above our 2% target. The full protocol, per-paper tables and causes are in [docs/EVALUATION.md](docs/EVALUATION.md).
+
+Provenance: Zenodo and HALLMARK dev are rechecked on the current core after every change. HALLMARK test .959 is a historical held-out run. The claim-model results concern the retained model described below.
 
 ### Reference verification: same 104 references the five leading tools were evaluated on
 
@@ -67,85 +72,24 @@ Among these evaluated systems, the historical Veracite run has the highest F1 wi
 
 Per type: perfect on fabricated DOIs, future dates, hybrid fabrications, merged citations, placeholder authors, plausible fabrications and preprint-as-published. Weakest on nonexistent venues (26/37) and near-miss titles (34/40). Historical output: `data/hm_test.txt`. Later commits change the core, so running the test on the latest source would be a new experiment. Current regression uses `cd app && npx tsx scripts/bench-hallmark.ts --split dev_public --per-type 15 --valid 100`.
 
-### Blind test: 14 new papers from 14 fields, code frozen
+### Blind audits of real papers: three frozen rounds, every flag judged by hand
 
-The benchmarks above were used, at least in part, while the code was being developed. To measure what a stranger would see, 14 papers were chosen by a rule fixed in code before any of them was opened (`app/scripts/pick-blind.ts`: the newest paper in each of 12 arXiv categories never used during development, plus the two newest PLOS ONE research articles). They were audited once, from the PDF, with the code frozen (commit `15daf9d`; reference-checking code identical to `79fa273`). Every flag, and a random sample of confirmed references, was then checked by hand against the publisher's record.
+| | Blind 1 | Blind 2 | **Blind 3** |
+|---|---|---|---|
+| Code frozen at | `15daf9d` | `61f1844` | `3e47ac9` |
+| PDFs that yielded no reference list | 4 of 18 (replaced) | 7 of 21 (replaced) | **0 of 14** |
+| References audited | 635 | 465 | 964 (of 969 in the sources) |
+| Verified coverage | 79.7% | 77.8% | **81.1%** |
+| Real errors / uncertain / false alarms | 4 / 1 / 87 | 7 / 2 / 54 | 1 / 2 / 98 |
+| False alarms ÷ all references | 13.7% | 11.6% | **10.2%** (median paper 3.7%) |
+| Misses in a random sample of verified references | 0 / 42 | 0 / 41 | 0 / 42 |
+| Field accuracy, 70 sampled references (blind 3) | | | segmentation 98.6%, year 100%, venue 91%, authors 89%, title 86% |
 
-| | Blind test 1 |
-|---|---|
-| Fields | cs.CL, cs.CV, cs.SE, cs.HC, astro-ph.GA, cond-mat.mtrl-sci, quant-ph, math.PR, q-bio.NC, eess.SP, econ.EM, stat.ME, PLOS ONE ×2 (psychology, public health) |
-| PDFs tried / reference list extracted | 18 / 14. Four physics PDFs (REVTeX/AIP) gave no references and were replaced by the next paper, as the rule specifies |
-| References | 635 |
-| Confirmed (coverage) | 506 (79.7%) |
-| Flagged as a problem | 92 (14.5%) |
-| of which real citation errors | 4, plus 1 uncertain (corrected adjudication) |
-| of which false alarms | **87 (13.7% of all references)** |
-| *Unverifiable* (not indexed: web pages, datasets, legal texts) | 24 (3.8%) |
-| *Unchecked* (an index did not answer) | 13 (2.0%) |
-| Misses: errors among 42 randomly sampled confirmed references | 0 (95% upper bound about 7%) |
-| Time per paper, live, no cache | median 101 s (24 s to 16 min); six papers ran at once against rate-limited free APIs |
+Extraction is no longer the bottleneck. The remaining false alarms concentrate in two physics papers whose citation conventions the verifier did not know. One is particle physics: 52 false alarms in 150 references, from "JHEP", LaTeX in arXiv titles and collaboration names. The other is astrophysics: 18 in 164. The other twelve papers together have 28 false alarms in 650 references (4.3%). Real errors were rare in these papers, so flag precision is low, and the miss samples bound recall only loosely.
 
-These frozen PDF results are weaker than the clean-string benchmarks. Four references remain labelled as real errors: a wrong year, two omitted authors without et al., a title that is not the official one, and a title that differs from its arXiv record (the last two were labelled too severely). The original manual count was 5 real / 86 false. Re-review of the original PDF page 18 showed that all four authors of the Pillow et al. reference were present; the extractor had dropped them. Corrected counts are 4 real / 87 false / 1 uncertain, precision 4.3%. The frozen outputs are unchanged; evidence and the correction overlay are in `data/blind/REVIEW_CORRECTIONS.md` and `review-corrections.json`. False-alarm causes:
+After this round, general fixes were made for the dominant causes (journal abbreviations such as JHEP and ApJ, LaTeX in index titles, collaboration names, spaced DOIs, pre-2007 arXiv identifiers). They are development work, measured only on data we had already seen; `submission/VALIDATION.md` records those regressions. They are not a fourth independent result.
 
-| Cause | False alarms |
-|---|---|
-| Author line lost during extraction (manual label corrected after PDF review) | 1 |
-| Words of the title or venue, or "arXiv", read as author names | 29 |
-| PDF text artefacts: lost symbols (τ, CO₂, R̂), accents, hyphenation, a title cut at "?" | 12 |
-| A year glued onto the title | 9 |
-| The work exists but was not found (six while Semantic Scholar and OpenAlex were rate-limiting; three not indexed) | 9 |
-| The index record differs harmlessly (an arXiv version title, a 3rd edition matched to the 1st, translators listed as authors, a misspelt 1944 record, an arXiv year for a journal paper) | 6 |
-| Venue mis-parsed (5) or abbreviated (3) | 8 |
-| AAS astronomy style, two-column text mixed into one reference | 6 |
-| Other (a year in the title read as the publication year, a DOI split across lines, two wrong matches, a truncated entry) | 7 |
-
-Two real papers (Lewis et al. 2020 on retrieval-augmented generation, and the GDPR) were labelled *fabricated* while an index was down. Crossref answered HTTP 429 963 times and Semantic Scholar 412 times during the run, because six papers ran at once; a single user checking one paper causes far fewer. Every flag, with the record it was compared with and our judgement, is in `data/blind/results.json`; the miss sample is `data/blind/miss_sample.txt`. Preserve that frozen output. Current spent-set regression uses `cd app && npx tsx scripts/recheck-blind.ts`; it is development evidence, not a new independent test.
-
-**After blind test 1.** Each failure class was fixed with a general rule (commits `3f1aad6` and `532c978`): parsing debris is no longer counted as an author; years glued onto titles, text that runs past the title, symbols lost in extraction and a title cut at "?" no longer count as title changes; a DOI that the matched record's DOI extends is treated as cut off; a "wrong identifier" is not reported when the record's full title is written in the reference; journal abbreviations of words such as "Association" are recognised; *fabricated* now requires both broad indexes (Semantic Scholar and OpenAlex) to have answered, otherwise the reference is *not found* or *unchecked*; and reference lists without a heading (REVTeX, AIP) are now found. None of this changed any benchmark result (Zenodo F1 .971, HALLMARK dev F1 .986, identical flags on the 11 development papers). The heading-less lists were fixed using only the four failed PDFs of blind test 1. As an independent check, the seven PDFs that blind set 2 had to skip for the same reason (never opened before) were parsed once after the fix: all seven now yield their reference lists (15 to 58 references each). Blind test 1 itself cannot measure the fixes, because it was used to find the problems. A second blind set (14 papers from 12 further fields, selected before anything was run on it: `data/blind2/manifest.json`) completed at commit `61f1844`. Its unchanged frozen results are below.
-
-### Blind test 2 and current parser regression
-
-| Metric | Frozen set 2 |
-|---|---|
-| Candidate PDFs / extracted papers | 21 / 14; seven zero-reference PDFs were replaced under the original selection rule |
-| Extracted references | 465 |
-| Verified coverage | 362/465 (77.8%) |
-| Flags | 63: 7 real errors, 54 false alarms, 2 uncertain |
-| Flag precision | 7/63 (11.1%); uncertain flags remain in the denominator |
-| False alarms / all extracted references | 54/465 (11.6%); this is not a conditional false-positive rate |
-| Unverifiable / unchecked | 23 (4.9%) / 17 (3.7%) |
-| Sampled misses | 0/41 verified references; not evidence of zero misses overall |
-| Live verification time | median 74 seconds per paper, range 54–157 seconds |
-
-Artifacts: `data/blind2/results.json`, `miss_sample.txt`, `manifest.json`. The frozen set measured the earlier code; subsequent development regressions are not blind results.
-
-The parser development manifest contains 38 PDF files representing **37 distinct papers** (one cross-listed arXiv paper appeared twice). Before deduplication, count completeness was 1890/1896 (99.7%). Deduplicated count completeness is **1833/1839 (99.7%)**, with no zero-reference PDFs. Field-health rates are no author 0.9%, no year 1.1%, debris author 3.3%; the latest amended-core output is in `data/parser_dev/preblind-eval.txt`; these are development measurements and missing-field/debris heuristics, not independently judged field accuracy. Some APS references omit titles in the source, so “no title” alone is not an error.
-
-On the 25 papers in spent sets 1 and 2 with available source/JATS counts, current count completeness is 693/706 (98.2%) and 477/479 (99.6%), compared with the original 599/706 (84.8%) and 359/479 (74.9%). Counts are capped per paper and several source counts are only citation-key approximations. In particular, `cond-mat.mtrl-sci_2611.24759v1.pdf` has main labels [1]–[90] plus a separate supplement; its 103-key estimate mixes scopes. `gr-qc_2611.25786v1.pdf` has 32 labels, including explanatory note [19]; the parser returns 31 bibliographic entries. We retain these denominator discrepancies rather than treating them as proven parser errors or changing them to obtain a better score. The product currently audits the main bibliography, not separately numbered supplementary bibliographies.
-
-### Development papers from six fields
-
-To check behaviour on papers the code had never seen, six arXiv preprints posted after development started were audited end to end from the PDF (cs.CY, econ.GN, physics.soc-ph, q-bio.PE, q-fin.GN, stat.AP; numeric and author-year styles, 17 to 85 pages, 351 references in total). Every flag was judged by hand against the publisher's record.
-
-| | First run | Final run |
-|---|---|---|
-| References flagged as a problem | 95 | 7 |
-| Of which confirmed real citation errors | 5 | 6 |
-| Marked *unverifiable* or *unchecked* (not flagged) | 90 | 65 |
-
-The six real errors are a wrong arXiv ID, a wrong DOI (`…087` cited for `…099`), a DOI that is not registered anywhere, two one-word title changes and a reference that drops two of its authors. The sixth error (the dropped authors) was missed in the first run because an index did not answer. The seventh flag is a conference talk cited under a different title from the one in the index, which is arguable. Most first-run false alarms came from reference styles the parser did not yet handle (economics "Author, Year, Title", Springer "Author: Title", family-name-first initials, line-broken DOIs) and from books matched to their reviews. These were fixed with general rules and checked against the two benchmarks above after each change (Zenodo F1 still .971, HALLMARK dev F1 .986). Of the 65 references that were not confirmed, 52 are in the physics paper, which cites 19th-century laws and archival periodicals that no scholarly index covers. They are reported as *unverifiable* rather than fabricated. Because these six papers were then used to fix bugs, they no longer count as unseen. Output: `data/unseen_audit1.txt` (first run) and `data/unseen_audit10.txt` (final run); reproduce with `cd app && npx tsx scripts/audit-pdfs.ts ../data/pdfs/unseen/*.pdf`.
-
-Five well-known papers were also used as clean controls during development. They cover single- and two-column layouts and numeric, author-year and Vancouver styles:
-
-| Paper | Layout, style | References | Verified | Flagged |
-|---|---|---|---|---|
-| Attention Is All You Need (2017) | 1-column, numeric | 40 | 40 | 0 |
-| BERT (NAACL 2019) | ACL 2-column, author-year | 56 | 53 | 1 |
-| ResNet (CVPR 2016) | CVPR 2-column, numeric | 50 | 48 | 2 |
-| Semantic Uncertainty (ICLR 2023) | 1-column, author-year | 46 | 45 | 0 |
-| Bioinformatics survey (PLOS) | Vancouver | 32 | 32 | 0 |
-
-The three flags are a workshop paper indexed under its host conference (BERT) and two real discrepancies in ResNet's bibliography: a title with an extra word, and a 2008 citation of software whose paper appeared in 2010. Before the two-column fix, BERT's reference list was read across both columns and showed 13 flags. ResNet showed 12 flags before fixes for hyphenated initials ("T.-Y. Lin"), journal acronyms (TPAMI, IJCV) and conference papers whose only indexed record is the later journal version. These papers are development data, not a held-out test.
+Protocols, per-paper tables, cause tables, the development papers and the clean controls are in [docs/EVALUATION.md](docs/EVALUATION.md). Raw outputs are in `data/blind*/` (`results.json` holds every reference, its matched record and our judgement of each flag).
 
 ### Claim support: Citation-Integrity (Sarol et al., 2024), test split
 

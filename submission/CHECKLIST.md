@@ -12,7 +12,7 @@ Source: slayy-hacks.devpost.com (rules and overview, rechecked 2026-11-20).
 | Problem and solution | drafted | done |
 | AI implementation (models, frameworks) | drafted, with model sizes and training data | done |
 | **Working demo link** with access instructions | live at https://cs113062273-bot.github.io/SLAY-HACKS/; production E2E passed; five live inputs passed again on amended source 3e47ac9 (VALIDATION.md) | agent |
-| Screenshots | `submission/shots/` at 1500×1000 (3:2): landing, fabricated reference, wrong identifier, wrong details, quick check, supported claim, needs-review claim, dark mode. Regenerate with `npx tsx scripts/shots.ts` | done; pick 4–6 |
+| Screenshots | `submission/shots/` at 1500×1000 (3:2): landing, fabricated reference, wrong identifier, wrong details, retracted work, supported claim, needs-review claim, dark mode. Regenerate with `npx tsx scripts/shots.ts` | done; pick 4–6 |
 | **Source repository** with docs and setup steps | README.md; repo `cs113062273-bot/SLAY-HACKS` | public repository confirmed |
 | Disclose significant limitations and external dependencies | README "Responsible use" and DEVPOST "Limitations" | done |
 | Description matches what the product actually does (misrepresentation = disqualification) | every claim is tied to a reproducible script | done |
@@ -44,7 +44,7 @@ Source: slayy-hacks.devpost.com (rules and overview, rechecked 2026-11-20).
 | Presentation & Impact (20) / Real-World Impact (20) | Fabricated-citation statistics from *The Lancet* and NeurIPS 2025; deployable static site, no account |
 | AI Integration & Responsible Use (15) | Calibrated labels (no verdict where the model is unreliable), evidence shown for every claim, private by design, limitations disclosed |
 
-## Current acceptance gates (November 20)
+## Current acceptance gates (November 21)
 
 - [x] Public push and free Pages deployment authorized; owner reports Pages enabled.
 - [x] `npm run build` passes the actual application TypeScript project and production build. CI now uses that command.
@@ -54,8 +54,9 @@ Source: slayy-hacks.devpost.com (rules and overview, rechecked 2026-11-20).
 - [x] Fresh-profile five-input E2E passes again on amended source 3e47ac9, without sample snapshots (production-inputs-amended.json).
 - [x] Final-version production privacy audit passes on DOCX (3 refs, 2 claim tasks, 5 body windows); scope and unavailable source in VALIDATION.md.
 - [x] Independent set 3 selection complete (14 PDFs, 67 rejected records); selection identity 497cb22 and separate pre-run audit freeze 3e47ac9 preserved.
-- [ ] Independent set 3 run after positive free allowance, with all flags/miss/field samples reviewed. One local waiter is active; keep computer awake.
-- [ ] False alarms ≤2%, extraction completeness ≥95%, with useful coverage retained.
-- [ ] Final score supported by those results. A 95/100 readiness claim is not justified while these gates are pending.
+- [x] Independent set 3 ran once at `3e47ac9` and every flag, the 70-reference field sample and the 42-reference miss sample were reviewed (`data/blind3/`, `docs/EVALUATION.md`).
+- [x] Extraction completeness ≥95%: 964/969 (99.5%), 14/14 PDFs, no excess entries. Coverage 81.1% verified.
+- [ ] False alarms ≤2%: **not met** (98/964, 10.2%; median paper 3.7%). Post-set-3 fixes are development results only (VALIDATION.md).
+- [ ] A 95/100 readiness claim is not justified while the false-alarm gate fails on independent data.
 
 Live target: https://cs113062273-bot.github.io/SLAY-HACKS/. No video will be recorded and no Devpost submission will be made without the owner's later instruction.

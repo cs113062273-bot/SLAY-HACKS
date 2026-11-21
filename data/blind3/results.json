@@ -40,7 +40,8 @@
       "No matching work in Crossref, OpenAlex, Europe PMC"
      ],
      "judgement": "false alarm",
-     "review": "Web page (SC26 reproducibility badges, 'Accessed ... [Online]. Available: URL'), not a scholarly work; the PDF prints the URL with spaces ('https : / / sc2 6.supercomputing.org/...') so it was not recognised as a web reference and should have been 'not indexed'. https://sc26.supercomputing.org/program/papers/reproducibility-appendices-badges/"
+     "review": "Web page (SC26 reproducibility badges, 'Accessed ... [Online]. Available: URL'), not a scholarly work; the PDF prints the URL with spaces ('https : / / sc2 6.supercomputing.org/...') so it was not recognised as a web reference and should have been 'not indexed'. https://sc26.supercomputing.org/program/papers/reproducibility-appendices-badges/",
+     "reviewIndex": 0
     },
     {
      "n": 28,
@@ -68,7 +69,8 @@
       "doi": "10.48550/arxiv.1909.08704"
      },
      "judgement": "uncertain",
-     "review": "Balsam exists (arXiv:1909.08704, same six authors), but the printed DOI 10.1109/PyHPC49452.2019.00006 is not registered (doi.org handle API responseCode 100; neighbouring PyHPC49452 DOIs also unregistered) and no PyHPC 2019 proceedings record for it was found in Crossref. Publication as cited could not be confirmed by the reviewer either. https://arxiv.org/abs/1909.08704"
+     "review": "Balsam exists (arXiv:1909.08704, same six authors), but the printed DOI 10.1109/PyHPC49452.2019.00006 is not registered (doi.org handle API responseCode 100; neighbouring PyHPC49452 DOIs also unregistered) and no PyHPC 2019 proceedings record for it was found in Crossref. Publication as cited could not be confirmed by the reviewer either. https://arxiv.org/abs/1909.08704",
+     "reviewIndex": 1
     }
    ],
    "countCompleteness": 1,
@@ -11613,7 +11615,8 @@
       "doi": "10.1016/j.jtbi.2010.11.033"
      },
      "judgement": "false alarm",
-     "review": "Correct reference (Isella et al. 2011, J. Theor. Biol. 271(1):166-180). Title 'What's in a crowd? Analysis of face-to-face behavioral networks' was cut at the question mark, so the second half was compared as the venue. https://doi.org/10.1016/j.jtbi.2010.11.033"
+     "review": "Correct reference (Isella et al. 2011, J. Theor. Biol. 271(1):166-180). Title 'What's in a crowd? Analysis of face-to-face behavioral networks' was cut at the question mark, so the second half was compared as the venue. https://doi.org/10.1016/j.jtbi.2010.11.033",
+     "reviewIndex": 2
     }
    ],
    "countCompleteness": 1,
@@ -26422,7 +26425,8 @@
       "doi": "10.2307/3612294"
      },
      "judgement": "false alarm",
-     "review": "Achieser's Theory of Approximation exists as cited: the 2013 Dover (Courier Corporation) reprint of the 1956 English translation. The matched record is a 1960 book review in the Mathematical Gazette, not the book. https://doi.org/10.2307/3612294"
+     "review": "Achieser's Theory of Approximation exists as cited: the 2013 Dover (Courier Corporation) reprint of the 1956 English translation. The matched record is a 1960 book review in the Mathematical Gazette, not the book. https://doi.org/10.2307/3612294",
+     "reviewIndex": 3
     },
     {
      "n": 8,
@@ -26446,7 +26450,8 @@
       "doi": "10.1007/bf02251092"
      },
      "judgement": "false alarm",
-     "review": "Bartels and Stewart, 'Solution of the matrix equation AX+XB=C [F4]' (Algorithm 432), Comm. ACM 15(9):820-826, 1972, exists as cited; Veracite picked a different 1986 paper with a similar title. https://doi.org/10.1145/361573.361582"
+     "review": "Bartels and Stewart, 'Solution of the matrix equation AX+XB=C [F4]' (Algorithm 432), Comm. ACM 15(9):820-826, 1972, exists as cited; Veracite picked a different 1986 paper with a similar title. https://doi.org/10.1145/361573.361582",
+     "reviewIndex": 4
     },
     {
      "n": 32,
@@ -26470,7 +26475,8 @@
       "doi": "10.1016/j.apnum.2012.10.001"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; the indexed title dropped the H2 symbol ('optimal- points'), so the only difference is a lost math symbol. https://doi.org/10.1016/j.apnum.2012.10.001"
+     "review": "Correct reference; the indexed title dropped the H2 symbol ('optimal- points'), so the only difference is a lost math symbol. https://doi.org/10.1016/j.apnum.2012.10.001",
+     "reviewIndex": 5
     }
    ],
    "countCompleteness": 1,
@@ -48190,7 +48196,8 @@
       "doi": "10.1109/sffcs.1999.814639"
      },
      "judgement": "false alarm",
-     "review": "Dasgupta, Learning mixtures of Gaussians, FOCS 1999 (40th Annual Symposium, Cat. No. 99CB37039), pp. 634-644: cited correctly. The IEEE record carries a 2003 online date while its own venue names the 1999 symposium. https://doi.org/10.1109/SFFCS.1999.814639"
+     "review": "Dasgupta, Learning mixtures of Gaussians, FOCS 1999 (40th Annual Symposium, Cat. No. 99CB37039), pp. 634-644: cited correctly. The IEEE record carries a 2003 online date while its own venue names the 1999 symposium. https://doi.org/10.1109/SFFCS.1999.814639",
+     "reviewIndex": 6
     },
     {
      "n": 24,
@@ -48214,7 +48221,8 @@
       "doi": "10.48550/arxiv.1803.06510"
      },
      "judgement": "false alarm",
-     "review": "Fei and Chen, COLT 2018, PMLR vol. 75, pp. 1931-1965, exists as cited; PMLR proceedings have no DOI and only the arXiv version was found. https://proceedings.mlr.press/v75/fei18a.html"
+     "review": "Fei and Chen, COLT 2018, PMLR vol. 75, pp. 1931-1965, exists as cited; PMLR proceedings have no DOI and only the arXiv version was found. https://proceedings.mlr.press/v75/fei18a.html",
+     "reviewIndex": 7
     }
    ],
    "countCompleteness": 1,
@@ -61603,7 +61611,8 @@
       "No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC"
      ],
      "judgement": "false alarm",
-     "review": "Real but incompletely cited book chapter: P. K. Shukla, 'Solitons in Plasma Physics', in Nonlinear Waves (Cambridge University Press, 1983), pp. 197-220; the entry gives only the book title and first page. Labelled fabricated. https://doi.org/10.1017/CBO9780511569500.012"
+     "review": "Real but incompletely cited book chapter: P. K. Shukla, 'Solitons in Plasma Physics', in Nonlinear Waves (Cambridge University Press, 1983), pp. 197-220; the entry gives only the book title and first page. Labelled fabricated. https://doi.org/10.1017/CBO9780511569500.012",
+     "reviewIndex": 8
     },
     {
      "n": 21,
@@ -61614,7 +61623,8 @@
       "No matching work in Crossref, OpenAlex"
      ],
      "judgement": "false alarm",
-     "review": "Exists as cited: Jyoti and H. K. Malik, Physics of Plasmas 18, 102116 (2011) (mononymous first author); not found while Semantic Scholar was rate-limited. https://doi.org/10.1063/1.3654138"
+     "review": "Exists as cited: Jyoti and H. K. Malik, Physics of Plasmas 18, 102116 (2011) (mononymous first author); not found while Semantic Scholar was rate-limited. https://doi.org/10.1063/1.3654138",
+     "reviewIndex": 9
     }
    ],
    "countCompleteness": 1,
@@ -75383,7 +75393,8 @@
       "doi": "10.48550/arxiv.2508.04728"
      },
      "judgement": "false alarm",
-     "review": "Published in CVPR 2026 as cited (CVF open access lists it); CVF papers have no DOI so only the arXiv version was indexed. https://openaccess.thecvf.com/content/CVPR2026/html/Chen_Neural_Field-Based_3D_Surface_Reconstruction_of_Microstructures_from_Multi-Detector_Signals_CVPR_2026_paper.html"
+     "review": "Published in CVPR 2026 as cited (CVF open access lists it); CVF papers have no DOI so only the arXiv version was indexed. https://openaccess.thecvf.com/content/CVPR2026/html/Chen_Neural_Field-Based_3D_Surface_Reconstruction_of_Microstructures_from_Multi-Detector_Signals_CVPR_2026_paper.html",
+     "reviewIndex": 10
     },
     {
      "n": 7,
@@ -75410,7 +75421,8 @@
       "doi": "10.1126/science.abg2533"
      },
      "judgement": "false alarm",
-     "review": "The entry cites the PARADIM dataset that accompanies Chen et al., Science 2021, explicitly labelled 'Dataset' with its licence; comparing it with the Science article's venue is wrong. The dataset should be treated as not indexed. https://doi.org/10.1126/science.abg2533"
+     "review": "The entry cites the PARADIM dataset that accompanies Chen et al., Science 2021, explicitly labelled 'Dataset' with its licence; comparing it with the Science article's venue is wrong. The dataset should be treated as not indexed. https://doi.org/10.1126/science.abg2533",
+     "reviewIndex": 11
     },
     {
      "n": 8,
@@ -75421,7 +75433,8 @@
       "No matching work in Crossref, OpenAlex, Europe PMC"
      ],
      "judgement": "false alarm",
-     "review": "NeurIPS 2023 Deep Learning and Inverse Problems workshop paper hosted on OpenReview, not in scholarly indexes; the PDF prints the URL with a space ('https: //openreview.net'), so it was not recognised as an online-only work. https://openreview.net/forum?id=jjCGqnhTr7"
+     "review": "NeurIPS 2023 Deep Learning and Inverse Problems workshop paper hosted on OpenReview, not in scholarly indexes; the PDF prints the URL with a space ('https: //openreview.net'), so it was not recognised as an online-only work. https://openreview.net/forum?id=jjCGqnhTr7",
+     "reviewIndex": 12
     },
     {
      "n": 13,
@@ -75449,7 +75462,8 @@
       "doi": "10.1109/cvpr52688.2022.01922"
      },
      "judgement": "false alarm",
-     "review": "Exists: CVPR 2026 paper (CVF open access) and arXiv:2602.08029; not found while Semantic Scholar was rate-limited and OpenAlex/Crossref do not index CVF. https://arxiv.org/abs/2602.08029"
+     "review": "Exists: CVPR 2026 paper (CVF open access) and arXiv:2602.08029; not found while Semantic Scholar was rate-limited and OpenAlex/Crossref do not index CVF. https://arxiv.org/abs/2602.08029",
+     "reviewIndex": 13
     }
    ],
    "countCompleteness": 1,
@@ -102734,7 +102748,8 @@
       "doi": "10.1126/sciadv.aat0346"
      },
      "judgement": "false alarm",
-     "review": "Correct reference (Schindler et al., Sci. Adv. 4, eaat0346, 2018). The venue comparison kept the volume and alphanumeric article number ('Science Advances 4, eaat0346') and reported a venue mismatch. https://doi.org/10.1126/sciadv.aat0346"
+     "review": "Correct reference (Schindler et al., Sci. Adv. 4, eaat0346, 2018). The venue comparison kept the volume and alphanumeric article number ('Science Advances 4, eaat0346') and reported a venue mismatch. https://doi.org/10.1126/sciadv.aat0346",
+     "reviewIndex": 14
     },
     {
      "n": 48,
@@ -102761,7 +102776,8 @@
       "doi": "10.1126/sciadv.aax6996"
      },
      "judgement": "false alarm",
-     "review": "Correct reference (Nayak et al., Sci. Adv. 5, eaax6996, 2019); same article-number venue comparison defect. https://doi.org/10.1126/sciadv.aax6996"
+     "review": "Correct reference (Nayak et al., Sci. Adv. 5, eaax6996, 2019); same article-number venue comparison defect. https://doi.org/10.1126/sciadv.aax6996",
+     "reviewIndex": 15
     },
     {
      "n": 60,
@@ -102785,7 +102801,8 @@
       "doi": "10.1103/physrevb.106.l041302"
      },
      "judgement": "false alarm",
-     "review": "Segmentation error: entry [61] (Panigrahi, Moessner, Roy, Non-Hermitian dislocation modes: Stability and melting across exceptional points, PRB 106, L041302, 2022) is interleaved on the last reference page with fragments of a neighbouring column ('Non-Hermitian metals and semimetals, Physical Review B 104, 235113'), so a mixed title was compared. The cited work exists as printed. https://doi.org/10.1103/PhysRevB.106.L041302"
+     "review": "Segmentation error: entry [61] (Panigrahi, Moessner, Roy, Non-Hermitian dislocation modes: Stability and melting across exceptional points, PRB 106, L041302, 2022) is interleaved on the last reference page with fragments of a neighbouring column ('Non-Hermitian metals and semimetals, Physical Review B 104, 235113'), so a mixed title was compared. The cited work exists as printed. https://doi.org/10.1103/PhysRevB.106.L041302",
+     "reviewIndex": 16
     }
    ],
    "countCompleteness": 0.9615384615384616,
@@ -125161,7 +125178,8 @@
       "doi": "10.1103/physrevc.58.1921"
      },
      "judgement": "false alarm",
-     "review": "Correct reference (Baldo et al., PRC 58, 1921, 1998). The cited title is the INSPIRE rendering of the published '3P2-3F2 pairing...' title (spectroscopic notation spelled out); cosmetic only. https://doi.org/10.1103/PhysRevC.58.1921"
+     "review": "Correct reference (Baldo et al., PRC 58, 1921, 1998). The cited title is the INSPIRE rendering of the published '3P2-3F2 pairing...' title (spectroscopic notation spelled out); cosmetic only. https://doi.org/10.1103/PhysRevC.58.1921",
+     "reviewIndex": 17
     },
     {
      "n": 8,
@@ -125184,7 +125202,8 @@
       "doi": "10.1088/2041-8205/719/2/l167"
      },
      "judgement": "false alarm",
-     "review": "Correct: ApJ Letters 719, L167 (2010). Crossref files ApJL articles under 'The Astrophysical Journal', and the L-prefixed article number was left in the cited venue. https://doi.org/10.1088/2041-8205/719/2/L167"
+     "review": "Correct: ApJ Letters 719, L167 (2010). Crossref files ApJL articles under 'The Astrophysical Journal', and the L-prefixed article number was left in the cited venue. https://doi.org/10.1088/2041-8205/719/2/L167",
+     "reviewIndex": 18
     },
     {
      "n": 12,
@@ -125210,7 +125229,8 @@
       "doi": "10.1086/593703"
      },
      "judgement": "false alarm",
-     "review": "Correct: ApJ Letters 687, L87 (2008); same ApJL venue defect. https://doi.org/10.1086/593703"
+     "review": "Correct: ApJ Letters 687, L87 (2008); same ApJL venue defect. https://doi.org/10.1086/593703",
+     "reviewIndex": 19
     },
     {
      "n": 14,
@@ -125237,7 +125257,8 @@
       "doi": "10.1086/432615"
      },
      "judgement": "false alarm",
-     "review": "Correct: ApJ Letters 628, L53 (2005); same ApJL venue defect. https://doi.org/10.1086/432615"
+     "review": "Correct: ApJ Letters 628, L53 (2005); same ApJL venue defect. https://doi.org/10.1086/432615",
+     "reviewIndex": 20
     },
     {
      "n": 15,
@@ -125263,7 +125284,8 @@
       "doi": "10.1103/physrevlett.111.211102"
      },
      "judgement": "false alarm",
-     "review": "arXiv:1304.3566 is the preprint of this very PRL (same five authors); its arXiv title is an abbreviated form ('Imprints of superfluidity on magneto-elastic QPOs of SGRs'), so 'wrong identifier' is false. https://arxiv.org/abs/1304.3566"
+     "review": "arXiv:1304.3566 is the preprint of this very PRL (same five authors); its arXiv title is an abbreviated form ('Imprints of superfluidity on magneto-elastic QPOs of SGRs'), so 'wrong identifier' is false. https://arxiv.org/abs/1304.3566",
+     "reviewIndex": 21
     },
     {
      "n": 21,
@@ -125290,7 +125312,8 @@
       "doi": "10.1063/1.3615093"
      },
      "judgement": "false alarm",
-     "review": "Espinoza, Lyne, Stappers and Kramer, 'A study of 315 glitches in the rotation of 102 pulsars', MNRAS 414, 1679 (2011) exists with exactly these four authors; Veracite compared it with a different AIP conference paper. https://doi.org/10.1111/j.1365-2966.2011.18503.x"
+     "review": "Espinoza, Lyne, Stappers and Kramer, 'A study of 315 glitches in the rotation of 102 pulsars', MNRAS 414, 1679 (2011) exists with exactly these four authors; Veracite compared it with a different AIP conference paper. https://doi.org/10.1111/j.1365-2966.2011.18503.x",
+     "reviewIndex": 22
     },
     {
      "n": 28,
@@ -125315,7 +125338,8 @@
       "doi": "10.1142/s0218271806008504"
      },
      "judgement": "false alarm",
-     "review": "Correct (Carter, Chamel, Haensel, IJMPD 15, 777, 2006); INSPIRE-style '2.' part marker in place of the published colon; cosmetic. https://doi.org/10.1142/S0218271806008504"
+     "review": "Correct (Carter, Chamel, Haensel, IJMPD 15, 777, 2006); INSPIRE-style '2.' part marker in place of the published colon; cosmetic. https://doi.org/10.1142/S0218271806008504",
+     "reviewIndex": 23
     },
     {
      "n": 50,
@@ -125337,7 +125361,8 @@
       "doi": "10.1088/2041-8205/743/1/l20"
      },
      "judgement": "false alarm",
-     "review": "Correct: ApJ Letters 743, L20 (2011); same ApJL venue defect. https://doi.org/10.1088/2041-8205/743/1/L20"
+     "review": "Correct: ApJ Letters 743, L20 (2011); same ApJL venue defect. https://doi.org/10.1088/2041-8205/743/1/L20",
+     "reviewIndex": 24
     },
     {
      "n": 69,
@@ -125360,7 +125385,8 @@
       "doi": "10.1103/physrev.60.356"
      },
      "judgement": "false alarm",
-     "review": "Landau's 1941 paper appeared in Russian in ZhETF 11, 592 (as cited) and in English in Phys. Rev. 60, 356; citing the Russian original is correct. https://doi.org/10.1103/PhysRev.60.356"
+     "review": "Landau's 1941 paper appeared in Russian in ZhETF 11, 592 (as cited) and in English in Phys. Rev. 60, 356; citing the Russian original is correct. https://doi.org/10.1103/PhysRev.60.356",
+     "reviewIndex": 25
     },
     {
      "n": 70,
@@ -125384,7 +125410,8 @@
       "doi": "10.1016/0375-9601(82)90268-7"
      },
      "judgement": "false alarm",
-     "review": "Lebedev and Khalatnikov, ZhETF 83, 1601 (1982) (Sov. Phys. JETP 56, 923) is the cited Russian journal paper; the Physics Letters A article is a separate related publication. https://doi.org/10.1016/0375-9601(82)90268-7"
+     "review": "Lebedev and Khalatnikov, ZhETF 83, 1601 (1982) (Sov. Phys. JETP 56, 923) is the cited Russian journal paper; the Physics Letters A article is a separate related publication. https://doi.org/10.1016/0375-9601(82)90268-7",
+     "reviewIndex": 26
     },
     {
      "n": 86,
@@ -125408,7 +125435,8 @@
       "doi": "10.1007/978-3-642-24525-1"
      },
      "judgement": "false alarm",
-     "review": "Gourgoulhon's arXiv lecture notes gr-qc/0703035 (2007) exist as cited; the old-style arXiv identifier was not extracted and OpenAlex did not respond. https://arxiv.org/abs/gr-qc/0703035"
+     "review": "Gourgoulhon's arXiv lecture notes gr-qc/0703035 (2007) exist as cited; the old-style arXiv identifier was not extracted and OpenAlex did not respond. https://arxiv.org/abs/gr-qc/0703035",
+     "reviewIndex": 27
     },
     {
      "n": 91,
@@ -125433,7 +125461,8 @@
       "doi": "10.1007/978-3-662-04665-4_10"
      },
      "judgement": "false alarm",
-     "review": "Correct; the index record misspells Iordanskii as 'Lordanskii' (OCR error in the record). https://doi.org/10.1007/978-3-662-04665-4_10"
+     "review": "Correct; the index record misspells Iordanskii as 'Lordanskii' (OCR error in the record). https://doi.org/10.1007/978-3-662-04665-4_10",
+     "reviewIndex": 28
     },
     {
      "n": 111,
@@ -125455,7 +125484,8 @@
       "doi": "10.1086/507518"
      },
      "judgement": "false alarm",
-     "review": "Correct: ApJ Letters 648, L51 (2006); same ApJL venue defect. https://doi.org/10.1086/507518"
+     "review": "Correct: ApJ Letters 648, L51 (2006); same ApJL venue defect. https://doi.org/10.1086/507518",
+     "reviewIndex": 29
     },
     {
      "n": 117,
@@ -125478,7 +125508,8 @@
       "doi": "10.1088/2041-8205/740/2/l35"
      },
      "judgement": "false alarm",
-     "review": "Correct: ApJ Letters 740, L35 (2011); same ApJL venue defect. https://doi.org/10.1088/2041-8205/740/2/L35"
+     "review": "Correct: ApJ Letters 740, L35 (2011); same ApJL venue defect. https://doi.org/10.1088/2041-8205/740/2/L35",
+     "reviewIndex": 30
     },
     {
      "n": 132,
@@ -125503,7 +125534,8 @@
       "doi": "10.1051/0004-6361:20077093"
      },
      "judgement": "false alarm",
-     "review": "Correct (Del Zanna et al., A&A 473, 11, 2007); 'an Eulerian Conservative High Order' vs 'a Eulerian conservative high-order' is cosmetic. https://doi.org/10.1051/0004-6361:20077093"
+     "review": "Correct (Del Zanna et al., A&A 473, 11, 2007); 'an Eulerian Conservative High Order' vs 'a Eulerian conservative high-order' is cosmetic. https://doi.org/10.1051/0004-6361:20077093",
+     "reviewIndex": 31
     },
     {
      "n": 134,
@@ -125526,7 +125558,8 @@
       "doi": "10.1017/s0022112006001145"
      },
      "judgement": "false alarm",
-     "review": "Correct (Giacomazzo and Rezzolla, JFM 562, 223, 2006); the arXiv/INSPIRE title abbreviates magnetohydrodynamics as MHD. https://doi.org/10.1017/S0022112006001145"
+     "review": "Correct (Giacomazzo and Rezzolla, JFM 562, 223, 2006); the arXiv/INSPIRE title abbreviates magnetohydrodynamics as MHD. https://doi.org/10.1017/S0022112006001145",
+     "reviewIndex": 32
     },
     {
      "n": 139,
@@ -125553,7 +125586,8 @@
       "doi": "10.1103/physrevd.65.084024"
      },
      "judgement": "false alarm",
-     "review": "Correct PRD 65, 084024 (2002); the cited title is the arXiv gr-qc/0110047 title (without 'numerical', '2.' for 'II'), which the entry also cites. https://doi.org/10.1103/PhysRevD.65.084024"
+     "review": "Correct PRD 65, 084024 (2002); the cited title is the arXiv gr-qc/0110047 title (without 'numerical', '2.' for 'II'), which the entry also cites. https://doi.org/10.1103/PhysRevD.65.084024",
+     "reviewIndex": 33
     },
     {
      "n": 163,
@@ -125578,7 +125612,8 @@
       "doi": "10.1007/978-3-662-12607-3"
      },
      "judgement": "false alarm",
-     "review": "Correct: the 2nd revised edition of Hairer, Nørsett and Wanner was published in 1993 (the entry says '2nd ed.'); the record is the 1987 first edition. https://doi.org/10.1007/978-3-540-78862-1"
+     "review": "Correct: the 2nd revised edition of Hairer, Nørsett and Wanner was published in 1993 (the entry says '2nd ed.'); the record is the 1987 first edition. https://doi.org/10.1007/978-3-540-78862-1",
+     "reviewIndex": 34
     }
    ],
    "countCompleteness": 1,
@@ -171416,7 +171451,8 @@
       "doi": "10.1016/0370-2693(91)90034-n"
      },
      "judgement": "uncertain",
-     "review": "The citation reproduces the INSPIRE title 'On determining a weak phase from CP asymmetries in charged B decays'; the published Phys. Lett. B 265, 172 title is 'On determining a weak phase from charged B decay asymmetries'. Real paper, genuinely different title wording; harmless but not identical. https://doi.org/10.1016/0370-2693(91)90034-N"
+     "review": "The citation reproduces the INSPIRE title 'On determining a weak phase from CP asymmetries in charged B decays'; the published Phys. Lett. B 265, 172 title is 'On determining a weak phase from charged B decay asymmetries'. Real paper, genuinely different title wording; harmless but not identical. https://doi.org/10.1016/0370-2693(91)90034-N",
+     "reviewIndex": 35
     },
     {
      "n": 6,
@@ -171440,7 +171476,8 @@
       "doi": "10.1016/0370-2693(91)91756-l"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://doi.org/10.1016/0370-2693(91)91756-l"
+     "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://doi.org/10.1016/0370-2693(91)91756-l",
+     "reviewIndex": 36
     },
     {
      "n": 13,
@@ -171463,7 +171500,8 @@
       "doi": "10.1007/jhep01(2014)051"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/1308.5663"
+     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/1308.5663",
+     "reviewIndex": 37
     },
     {
      "n": 15,
@@ -171486,7 +171524,8 @@
       "doi": "10.1007/jhep07(2020)177"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/1912.07621"
+     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/1912.07621",
+     "reviewIndex": 38
     },
     {
      "n": 29,
@@ -171510,7 +171549,8 @@
       "doi": "10.2172/1573232"
      },
      "judgement": "false alarm",
-     "review": "The Physics Briefing Book (CERN-ESU-004, arXiv:1910.11775) lists R. K. Ellis among its editors; the OSTI record shows institutions instead of editors. https://arxiv.org/abs/1910.11775"
+     "review": "The Physics Briefing Book (CERN-ESU-004, arXiv:1910.11775) lists R. K. Ellis among its editors; the OSTI record shows institutions instead of editors. https://arxiv.org/abs/1910.11775",
+     "reviewIndex": 39
     },
     {
      "n": 30,
@@ -171538,7 +171578,8 @@
       "doi": "10.48550/arxiv.2411.18639"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/2411.18639"
+     "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/2411.18639",
+     "reviewIndex": 40
     },
     {
      "n": 39,
@@ -171561,7 +171602,8 @@
       "doi": "10.1088/1742-6596/770/1/012028"
      },
      "judgement": "false alarm",
-     "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2310.04277"
+     "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2310.04277",
+     "reviewIndex": 41
     },
     {
      "n": 40,
@@ -171583,7 +171625,8 @@
       "doi": "10.1007/978-3-032-04481-5_9"
      },
      "judgement": "false alarm",
-     "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2311.10434"
+     "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2311.10434",
+     "reviewIndex": 42
     },
     {
      "n": 42,
@@ -171606,7 +171649,8 @@
       "doi": "10.1088/1742-6596/770/1/012028"
      },
      "judgement": "false alarm",
-     "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2309.05514"
+     "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2309.05514",
+     "reviewIndex": 43
     },
     {
      "n": 45,
@@ -171628,7 +171672,8 @@
       "doi": "10.1007/978-3-032-04481-5_9"
      },
      "judgement": "false alarm",
-     "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2509.15139"
+     "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2509.15139",
+     "reviewIndex": 44
     },
     {
      "n": 47,
@@ -171638,7 +171683,8 @@
       "arXiv:2605.03501 points to a different work: “Measurement of $γ$ using $B^{\\pm}\\rightarrow DK^{\\pm}$ and $B^{\\pm}\\rightarrow Dπ^{\\pm}$ decays with $D\\rightarrow K_{\\rm S}^{0}π^{+}π^{-}$ and $D\\rightarrow K_{\\rm S}^{0}K^{+}K^{-}$”"
      ],
      "judgement": "false alarm",
-     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/2605.03501"
+     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/2605.03501",
+     "reviewIndex": 45
     },
     {
      "n": 48,
@@ -171660,7 +171706,8 @@
       "doi": "10.48550/arxiv.2208.06512"
      },
      "judgement": "false alarm",
-     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/2208.06512"
+     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/2208.06512",
+     "reviewIndex": 46
     },
     {
      "n": 50,
@@ -171686,7 +171733,8 @@
       "doi": "10.1093/oso/9780198503996.005.0005"
      },
      "judgement": "false alarm",
-     "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2407.18001"
+     "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2407.18001",
+     "reviewIndex": 47
     },
     {
      "n": 51,
@@ -171710,7 +171758,8 @@
       "doi": "10.1007/jhep03(2022)162"
      },
      "judgement": "false alarm",
-     "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2510.04963"
+     "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2510.04963",
+     "reviewIndex": 48
     },
     {
      "n": 58,
@@ -171737,7 +171786,8 @@
       "doi": "10.1140/epjc/s2005-02169-1"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/hep-ph/0406184"
+     "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/hep-ph/0406184",
+     "reviewIndex": 49
     },
     {
      "n": 61,
@@ -171761,7 +171811,8 @@
       "doi": "10.1007/jhep12(2025)112"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/2508.16337"
+     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/2508.16337",
+     "reviewIndex": 50
     },
     {
      "n": 62,
@@ -171785,7 +171836,8 @@
       "doi": "10.1088/1126-6708/1999/09/031"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/hep-ph/9909391"
+     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/hep-ph/9909391",
+     "reviewIndex": 51
     },
     {
      "n": 63,
@@ -171809,7 +171861,8 @@
       "doi": "10.1016/0370-2693(95)00285-s"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/hep-ph/9502238"
+     "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/hep-ph/9502238",
+     "reviewIndex": 52
     },
     {
      "n": 66,
@@ -171832,7 +171885,8 @@
       "doi": "10.1007/jhep07(2019)020"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/1903.10952"
+     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/1903.10952",
+     "reviewIndex": 53
     },
     {
      "n": 70,
@@ -171855,7 +171909,8 @@
       "doi": "10.1007/jhep04(2013)067"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/1211.3361"
+     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/1211.3361",
+     "reviewIndex": 54
     },
     {
      "n": 73,
@@ -171880,7 +171935,8 @@
       "doi": "10.1007/jhep05(2021)179"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/2101.02560"
+     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/2101.02560",
+     "reviewIndex": 55
     },
     {
      "n": 74,
@@ -171904,7 +171960,8 @@
       "doi": "10.1007/jhep08(2022)278"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/2205.12975"
+     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/2205.12975",
+     "reviewIndex": 56
     },
     {
      "n": 75,
@@ -171927,7 +171984,8 @@
       "doi": "10.1007/jhep12(2024)072"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/2409.03830"
+     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/2409.03830",
+     "reviewIndex": 57
     },
     {
      "n": 76,
@@ -171953,7 +172011,8 @@
       "doi": "10.1007/jhep07(2026)190"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/2512.10911"
+     "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/2512.10911",
+     "reviewIndex": 58
     },
     {
      "n": 77,
@@ -171978,7 +172037,8 @@
       "doi": "10.1007/jhep08(2026)104"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/2602.22320"
+     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/2602.22320",
+     "reviewIndex": 59
     },
     {
      "n": 80,
@@ -172002,7 +172062,8 @@
       "doi": "10.1007/jhep05(2012)140"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/1203.3131"
+     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/1203.3131",
+     "reviewIndex": 60
     },
     {
      "n": 83,
@@ -172025,7 +172086,8 @@
       "doi": "10.1007/jhep03(2022)162"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/2106.02014"
+     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/2106.02014",
+     "reviewIndex": 61
     },
     {
      "n": 84,
@@ -172052,7 +172114,8 @@
       "doi": "10.48550/arxiv.1611.06143"
      },
      "judgement": "false alarm",
-     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/1611.06143"
+     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/1611.06143",
+     "reviewIndex": 62
     },
     {
      "n": 87,
@@ -172077,7 +172140,8 @@
       "doi": "10.1016/j.physletb.2019.135188"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/1909.10196"
+     "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/1909.10196",
+     "reviewIndex": 63
     },
     {
      "n": 90,
@@ -172104,7 +172168,8 @@
       "doi": "10.48550/arxiv.1810.06874"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/1810.06874"
+     "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/1810.06874",
+     "reviewIndex": 64
     },
     {
      "n": 96,
@@ -172131,7 +172196,8 @@
       "doi": "10.48550/arxiv.2405.06556"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/2405.06556"
+     "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/2405.06556",
+     "reviewIndex": 65
     },
     {
      "n": 98,
@@ -172158,7 +172224,8 @@
       "doi": "10.48550/arxiv.1602.03160"
      },
      "judgement": "false alarm",
-     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/1602.03160"
+     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/1602.03160",
+     "reviewIndex": 66
     },
     {
      "n": 100,
@@ -172180,7 +172247,8 @@
       "doi": "10.48550/arxiv.1307.4384"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/1307.4384"
+     "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/1307.4384",
+     "reviewIndex": 67
     },
     {
      "n": 102,
@@ -172202,7 +172270,8 @@
       "doi": "10.1016/s0370-2693(03)00192-8"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/hep-ph/0211282"
+     "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/hep-ph/0211282",
+     "reviewIndex": 68
     },
     {
      "n": 103,
@@ -172225,7 +172294,8 @@
       "doi": "10.2172/882838"
      },
      "judgement": "false alarm",
-     "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/0910.5437"
+     "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/0910.5437",
+     "reviewIndex": 69
     },
     {
      "n": 106,
@@ -172247,7 +172317,8 @@
       "doi": "10.1016/j.nuclphysb.2003.08.010"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/hep-ph/0304027"
+     "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/hep-ph/0304027",
+     "reviewIndex": 70
     },
     {
      "n": 107,
@@ -172275,7 +172346,8 @@
       "doi": "10.48550/arxiv.2206.07501"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/2206.07501"
+     "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/2206.07501",
+     "reviewIndex": 71
     },
     {
      "n": 109,
@@ -172302,7 +172374,8 @@
       "doi": "10.48550/arxiv.2011.12041"
      },
      "judgement": "false alarm",
-     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/2011.12041"
+     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/2011.12041",
+     "reviewIndex": 72
     },
     {
      "n": 112,
@@ -172326,7 +172399,8 @@
       "doi": "10.22323/1.282.0566"
      },
      "judgement": "false alarm",
-     "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2010.08483"
+     "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2010.08483",
+     "reviewIndex": 73
     },
     {
      "n": 113,
@@ -172349,7 +172423,8 @@
       "doi": "10.1088/1742-6596/447/1/012026"
      },
      "judgement": "false alarm",
-     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/2604.05701"
+     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/2604.05701",
+     "reviewIndex": 74
     },
     {
      "n": 117,
@@ -172371,7 +172446,8 @@
       "doi": "10.48550/arxiv.2301.10328"
      },
      "judgement": "false alarm",
-     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/2301.10328"
+     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/2301.10328",
+     "reviewIndex": 75
     },
     {
      "n": 123,
@@ -172398,7 +172474,8 @@
       "doi": "10.48550/arxiv.1709.05855"
      },
      "judgement": "false alarm",
-     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/1709.05855"
+     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/1709.05855",
+     "reviewIndex": 76
     },
     {
      "n": 124,
@@ -172421,7 +172498,8 @@
       "doi": "10.1103/physrevd.94.079902"
      },
      "judgement": "false alarm",
-     "review": "Correct: PRD 93 paper with its Erratum in PRD 94, both cited; the erratum record was matched. https://arxiv.org/abs/1602.03455"
+     "review": "Correct: PRD 93 paper with its Erratum in PRD 94, both cited; the erratum record was matched. https://arxiv.org/abs/1602.03455",
+     "reviewIndex": 77
     },
     {
      "n": 125,
@@ -172448,7 +172526,8 @@
       "doi": "10.48550/arxiv.1210.0939"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/1210.0939"
+     "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/1210.0939",
+     "reviewIndex": 78
     },
     {
      "n": 126,
@@ -172475,7 +172554,8 @@
       "doi": "10.48550/arxiv.2506.07906"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/2506.07906"
+     "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/2506.07906",
+     "reviewIndex": 79
     },
     {
      "n": 132,
@@ -172485,7 +172565,8 @@
       "arXiv:1203.3804 points to a different work: “Studies of the decays D^0 \\rightarrow K_S^0K^-π^+ and D^0 \\rightarrow K_S^0K^+π^-”"
      ],
      "judgement": "false alarm",
-     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/1203.3804"
+     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/1203.3804",
+     "reviewIndex": 80
     },
     {
      "n": 133,
@@ -172512,7 +172593,8 @@
       "doi": "10.48550/arxiv.1509.06628"
      },
      "judgement": "false alarm",
-     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/1509.06628"
+     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/1509.06628",
+     "reviewIndex": 81
     },
     {
      "n": 135,
@@ -172539,7 +172621,8 @@
       "doi": "10.48550/arxiv.1010.2817"
      },
      "judgement": "false alarm",
-     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/1010.2817"
+     "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/1010.2817",
+     "reviewIndex": 82
     },
     {
      "n": 137,
@@ -172562,7 +172645,8 @@
       "doi": "10.1007/jhep07(2019)106"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/1904.01129"
+     "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/1904.01129",
+     "reviewIndex": 83
     },
     {
      "n": 138,
@@ -172572,7 +172656,8 @@
       "doi:10.5281/zenodo.3627034 points to a different work: “gammacombo/gammacombo: LHCb-PAPER-2026-058”"
      ],
      "judgement": "false alarm",
-     "review": "GammaCombo software cited by its Zenodo concept DOI, which always resolves to the latest release ('LHCb-PAPER-2026-058'); software cited correctly, not a mismatch. https://doi.org/10.5281/zenodo.3627034"
+     "review": "GammaCombo software cited by its Zenodo concept DOI, which always resolves to the latest release ('LHCb-PAPER-2026-058'); software cited correctly, not a mismatch. https://doi.org/10.5281/zenodo.3627034",
+     "reviewIndex": 84
     },
     {
      "n": 143,
@@ -172596,7 +172681,8 @@
       "doi": "10.1016/0370-2693(96)00776-9"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/hep-ph/9508362"
+     "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/hep-ph/9508362",
+     "reviewIndex": 85
     },
     {
      "n": 144,
@@ -172621,7 +172707,8 @@
       "doi": "10.1088/1126-6708/1999/12/019"
      },
      "judgement": "false alarm",
-     "review": "Falk, Nir and Petrov, JHEP 12 (1999) 019 has exactly these three authors; the index record lists only two, and JHEP was not recognised as the venue. https://arxiv.org/abs/hep-ph/9911369"
+     "review": "Falk, Nir and Petrov, JHEP 12 (1999) 019 has exactly these three authors; the index record lists only two, and JHEP was not recognised as the venue. https://arxiv.org/abs/hep-ph/9911369",
+     "reviewIndex": 86
     },
     {
      "n": 145,
@@ -172644,7 +172731,8 @@
       "doi": "10.1016/j.physletb.2006.11.069"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/hep-ph/0610389"
+     "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/hep-ph/0610389",
+     "reviewIndex": 87
     }
    ],
    "countCompleteness": 0.9933774834437086,
@@ -574972,7 +575060,8 @@
       "doi": "10.1126/science.adv9817"
      },
      "judgement": "false alarm",
-     "review": "Correct reference (Lewis et al., Science 389, eadv9817, 2025); the alphanumeric article number left in the cited venue caused a venue mismatch. https://doi.org/10.1126/science.adv9817"
+     "review": "Correct reference (Lewis et al., Science 389, eadv9817, 2025); the alphanumeric article number left in the cited venue caused a venue mismatch. https://doi.org/10.1126/science.adv9817",
+     "reviewIndex": 88
     },
     {
      "n": 60,
@@ -574995,7 +575084,8 @@
       "doi": "10.17815/jlsrf-7-183"
      },
      "judgement": "false alarm",
-     "review": "Segmentation error: entry 60 (Brehmer et al., Does equivariance matter at scale?, TMLR 2025) was merged with entry 61 (Jülich Supercomputing Centre, JUWELS, JLSRF 7, 2021) because the superscript label '61' is glued to the next word. Both works exist. https://doi.org/10.17815/jlsrf-7-183"
+     "review": "Segmentation error: entry 60 (Brehmer et al., Does equivariance matter at scale?, TMLR 2025) was merged with entry 61 (Jülich Supercomputing Centre, JUWELS, JLSRF 7, 2021) because the superscript label '61' is glued to the next word. Both works exist. https://doi.org/10.17815/jlsrf-7-183",
+     "reviewIndex": 89
     }
    ],
    "countCompleteness": 0.9841269841269841,
@@ -603556,7 +603646,8 @@
       "doi": "10.1364/josaa.12.001657"
      },
      "judgement": "false alarm",
-     "review": "Correct reference (Everson and Sirovich, JOSA A 12(8):1657-1664, 1995); 'JOSA A' is the standard abbreviation of Journal of the Optical Society of America A, not recognised because 'journal' is dropped before the acronym comparison. https://doi.org/10.1364/JOSAA.12.001657"
+     "review": "Correct reference (Everson and Sirovich, JOSA A 12(8):1657-1664, 1995); 'JOSA A' is the standard abbreviation of Journal of the Optical Society of America A, not recognised because 'journal' is dropped before the acronym comparison. https://doi.org/10.1364/JOSAA.12.001657",
+     "reviewIndex": 90
     },
     {
      "n": 2,
@@ -603581,7 +603672,8 @@
       "doi": "10.1016/j.crma.2004.08.006"
      },
      "judgement": "false alarm",
-     "review": "Correct reference (Barrault, Maday, Nguyen, Patera, C. R. Math. 339(9):667-672, 2004); the title's first word 'An' was read as an extra author. https://doi.org/10.1016/j.crma.2004.08.006"
+     "review": "Correct reference (Barrault, Maday, Nguyen, Patera, C. R. Math. 339(9):667-672, 2004); the title's first word 'An' was read as an extra author. https://doi.org/10.1016/j.crma.2004.08.006",
+     "reviewIndex": 91
     }
    ],
    "countCompleteness": 1,
@@ -622649,7 +622741,8 @@
       "doi": "10.1136/bmj-2020-057926"
      },
      "judgement": "false alarm",
-     "review": "Correct reference (Ralph et al., BMJ 2022;376:e057926); the trailing 'PMID: 34996773' was read as the venue. https://doi.org/10.1136/bmj-2020-057926"
+     "review": "Correct reference (Ralph et al., BMJ 2022;376:e057926); the trailing 'PMID: 34996773' was read as the venue. https://doi.org/10.1136/bmj-2020-057926",
+     "reviewIndex": 92
     },
     {
      "n": 27,
@@ -622671,7 +622764,8 @@
       "doi": "10.4103/sja.sja_543_18"
      },
      "judgement": "false alarm",
-     "review": "Correct reference (Cuschieri S., The STROBE guidelines, Saudi J Anaesth 2019;13 Suppl 1:S31-4); a title word was read as an extra author. https://doi.org/10.4103/sja.SJA_543_18"
+     "review": "Correct reference (Cuschieri S., The STROBE guidelines, Saudi J Anaesth 2019;13 Suppl 1:S31-4); a title word was read as an extra author. https://doi.org/10.4103/sja.SJA_543_18",
+     "reviewIndex": 93
     },
     {
      "n": 28,
@@ -622694,7 +622788,8 @@
       "doi": "10.70190/jq.i80.p108"
      },
      "judgement": "false alarm",
-     "review": "Government report (Uganda Bureau of Statistics, National Population and Housing Census 2024 Final Report), not a scholarly work; should be not indexed, not compared with an unrelated Jerusalem census record. https://www.ubos.org/"
+     "review": "Government report (Uganda Bureau of Statistics, National Population and Housing Census 2024 Final Report), not a scholarly work; should be not indexed, not compared with an unrelated Jerusalem census record. https://www.ubos.org/",
+     "reviewIndex": 94
     },
     {
      "n": 39,
@@ -622721,7 +622816,8 @@
       "doi": "10.1016/j.toxcx.2021.100072"
      },
      "judgement": "real error",
-     "review": "Incomplete author list: the publisher record lists 8 authors (Chuat, Alcoba, Eyong, Wanda, Comte, Nkwescheu, Chappuis, Hudelson); the entry lists the first 6 without 'et al.' and also omits the volume ('2021;:9-10'). https://doi.org/10.1016/j.toxcx.2021.100072"
+     "review": "Incomplete author list: the publisher record lists 8 authors (Chuat, Alcoba, Eyong, Wanda, Comte, Nkwescheu, Chappuis, Hudelson); the entry lists the first 6 without 'et al.' and also omits the volume ('2021;:9-10'). https://doi.org/10.1016/j.toxcx.2021.100072",
+     "reviewIndex": 95
     }
    ],
    "countCompleteness": 1,
@@ -637838,7 +637934,8 @@
       "doi": "10.1080/23744235.2022.2087732"
      },
      "judgement": "false alarm",
-     "review": "Correct reference; 'Infect Dis Lond Engl' is the NLM/PubMed abbreviation of Infectious Diseases (London, England). https://doi.org/10.1080/23744235.2022.2087732"
+     "review": "Correct reference; 'Infect Dis Lond Engl' is the NLM/PubMed abbreviation of Infectious Diseases (London, England). https://doi.org/10.1080/23744235.2022.2087732",
+     "reviewIndex": 96
     },
     {
      "n": 7,
@@ -637863,7 +637960,8 @@
       "doi": "10.1089/vbz.2012.1118"
      },
      "judgement": "false alarm",
-     "review": "Correct reference (Andersson et al., Vector Borne Zoonotic Dis 2013;13(7):438-42); a title word was read as an extra author. https://doi.org/10.1089/vbz.2012.1118"
+     "review": "Correct reference (Andersson et al., Vector Borne Zoonotic Dis 2013;13(7):438-42); a title word was read as an extra author. https://doi.org/10.1089/vbz.2012.1118",
+     "reviewIndex": 97
     },
     {
      "n": 9,
@@ -637888,7 +637986,8 @@
       "doi": "10.1128/jcm.02327-10"
      },
      "judgement": "false alarm",
-     "review": "Correct reference (Diniz PPVP et al., J Clin Microbiol 2011); the four-letter Vancouver initials 'PPVP' were read as a separate author. https://doi.org/10.1128/JCM.02327-10"
+     "review": "Correct reference (Diniz PPVP et al., J Clin Microbiol 2011); the four-letter Vancouver initials 'PPVP' were read as a separate author. https://doi.org/10.1128/JCM.02327-10",
+     "reviewIndex": 98
     },
     {
      "n": 10,
@@ -637914,7 +638013,8 @@
       "doi": "10.1186/1756-3305-7-s1-o28"
      },
      "judgement": "false alarm",
-     "review": "Correct reference (Beck et al., Parasit Vectors 2014;7 Suppl 1:O28); a title word was read as an extra author. https://doi.org/10.1186/1756-3305-7-S1-O28"
+     "review": "Correct reference (Beck et al., Parasit Vectors 2014;7 Suppl 1:O28); a title word was read as an extra author. https://doi.org/10.1186/1756-3305-7-S1-O28",
+     "reviewIndex": 99
     },
     {
      "n": 21,
@@ -637940,7 +638040,8 @@
       "doi": "10.1016/j.ttbdis.2013.11.007"
      },
      "judgement": "false alarm",
-     "review": "Correct reference (Burri et al., Ticks Tick Borne Dis 2014;5:245-51); the title's first words 'Are Apodemus spp.' were read as an author. https://doi.org/10.1016/j.ttbdis.2013.11.007"
+     "review": "Correct reference (Burri et al., Ticks Tick Borne Dis 2014;5:245-51); the title's first words 'Are Apodemus spp.' were read as an author. https://doi.org/10.1016/j.ttbdis.2013.11.007",
+     "reviewIndex": 100
     }
    ],
    "countCompleteness": 1,
@@ -647537,5 +647638,13 @@
   "unverifiable": 50,
   "unchecked": 31,
   "verifySeconds": 2999
+ },
+ "review": {
+  "judgedBy": "manual, 2026-11-21, every flag checked against the PDF (poppler text) and the publisher/identifier record; pending items confirmed online after the run (Crossref, doi.org handles, arXiv, CVF open access); per-flag evidence in data/blind3/reviews.json",
+  "tally": {
+   "false": 98,
+   "uncertain": 2,
+   "real": 1
+  }
  }
 }

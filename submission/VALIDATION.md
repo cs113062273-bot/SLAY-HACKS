@@ -17,7 +17,7 @@ Product correction `07f4f4a` isolates recorded sample responses from subsequent 
 | Final five inputs without sample snapshots | Passed on `07f4f4a`, exit 0: PDF 50 / DOCX 3 / BibTeX 3 / text 2 / arXiv 40 refs; COI true, no site asset/page errors; `data/production-inputs-final.json` |
 | Sample cache isolation in the same tab | Passed on production: 3 live index requests after a 40-ref sample; `data/sample-isolation-production.json` |
 | Production privacy audit | Final `07f4f4a` passed: DOCX 3 refs, 2 claim tasks (1 supported, 1 no source), 5 contiguous seven-word windows; zero non-GET requests or observed leaks, exit 0; `data/production-privacy-final.json` |
-| Independent round 3 | Selection complete: 14 PDFs, 67 rejected records. No selected paper parsed or verified before the pre-run amendment; `data/blind3/AMENDMENT.md`. Awaiting free allowance and frozen run; no quality result yet. |
+| Independent round 3 | Ran once at freeze `3e47ac9` (empty cache, browser settings, 50 min). 14/14 PDFs extracted; 964/969 entries (99.5%), no excess entries; 81.1% verified; flags 101 = 1 real, 2 uncertain, 98 false (10.2% of references; median paper 3.7%); 0/42 sampled misses; field accuracy on 70 sampled references: segmentation 98.6%, title 86.2%, authors 88.6%, year 100%, venue 91.0%, identifiers 67.9%; median 208 s per paper. Every flag reviewed with a source URL. `data/blind3/summary.json`, `reviews.json`, `docs/EVALUATION.md`. ≤2% false-alarm target **not met**. |
 
 The dev corpus originally had 38 files, including one arXiv paper twice under different categories. Deduplicated counts above replace the earlier 1890/1896 headline. Missing-field/debris rates are health heuristics, not manually judged accuracy.
 
