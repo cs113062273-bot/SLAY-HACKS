@@ -1,0 +1,3937 @@
+[
+  {
+    "file": "cs.DC_2611.26526.pdf",
+    "parsed": {
+      "raw": "[34] M. Hategan-Marandiuc et al., “PSI/J: A Portable Interface for Submitting, Monitoring, and Managing Jobs,” in IEEE 19th International Conference on e-Science (e- Science), IEEE, 2023, pp. 1-10. DOI: 10.1109/e-Scien ce58273.2023.10254912",
+      "clean": "M. Hategan-Marandiuc et al., “PSI/J: A Portable Interface for Submitting, Monitoring, and Managing Jobs,” in IEEE 19th International Conference on e-Science (e- Science), IEEE, 2023, pp. 1-10. ce58273.2023.10254912",
+      "label": "34",
+      "dois": [
+        "10.1109/e-scien"
+      ],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2023,
+      "years": [
+        2023
+      ],
+      "authors": [
+        {
+          "family": "Hategan-Marandiuc",
+          "given": "M."
+        }
+      ],
+      "authorsText": "M. Hategan-Marandiuc et al",
+      "etAl": true,
+      "title": "PSI/J: A Portable Interface for Submitting, Monitoring, and Managing Jobs",
+      "venue": "in IEEE 19th International Conference on e-Science (e- Science), IEEE",
+      "pages": "1-10",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 34,
+    "pdfPage": 12,
+    "expected": {
+      "title": "PSI/J: A Portable Interface for Submitting, Monitoring, and Managing Jobs",
+      "authors": "M. Hategan-Marandiuc et al.",
+      "year": 2023,
+      "venue": "IEEE 19th International Conference on e-Science (eScience)",
+      "identifiers": "10.1109/e-Science58273.2023.10254912"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": false
+    },
+    "note": "PDF text spaces the DOI ('e-Scien ce58273'); parsed DOI truncated to 10.1109/e-scien"
+  },
+  {
+    "file": "cs.DC_2611.26526.pdf",
+    "parsed": {
+      "raw": "[40] T. Gamblin et al., “The Spack Package Manager: Bringing Order to HPC Software Chaos,” in Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis (SC), ACM, 2015, 40:1-40:12. DOI: 10.1145/2807591.280 7623",
+      "clean": "T. Gamblin et al., “The Spack Package Manager: Bringing Order to HPC Software Chaos,” in Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis (SC), ACM, 2015, 40:1-40:12. 7623",
+      "label": "40",
+      "dois": [
+        "10.1145/2807591.280"
+      ],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2015,
+      "years": [
+        2015
+      ],
+      "authors": [
+        {
+          "family": "Gamblin",
+          "given": "T."
+        }
+      ],
+      "authorsText": "T. Gamblin et al",
+      "etAl": true,
+      "title": "The Spack Package Manager: Bringing Order to HPC Software Chaos",
+      "venue": "in Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis (SC), ACM",
+      "pages": "1-40",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 40,
+    "pdfPage": 12,
+    "expected": {
+      "title": "The Spack Package Manager: Bringing Order to HPC Software Chaos",
+      "authors": "T. Gamblin et al.",
+      "year": 2015,
+      "venue": "SC 2015 (ACM)",
+      "identifiers": "10.1145/2807591.2807623"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": false
+    },
+    "note": "spaced DOI truncated to 10.1145/2807591.280"
+  },
+  {
+    "file": "cs.DC_2611.26526.pdf",
+    "parsed": {
+      "raw": "[35] G. M. Kurtzer, V. Sochat, and M. W. Bauer, “Singularity: Scientific containers for mobility of compute,” PLOS ONE, vol. 12, no. 5, e0177459, 2017. DOI: 10.1 371/journal.pone.0177459",
+      "clean": "G. M. Kurtzer, V. Sochat, and M. W. Bauer, “Singularity: Scientific containers for mobility of compute,” PLOS ONE, vol. 12, no. 5, e0177459, 2017. 371/journal.pone.0177459",
+      "label": "35",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2017,
+      "years": [
+        2017
+      ],
+      "authors": [
+        {
+          "family": "Kurtzer",
+          "given": "G. M."
+        },
+        {
+          "family": "Sochat",
+          "given": "V."
+        },
+        {
+          "family": "Bauer",
+          "given": "M. W."
+        }
+      ],
+      "authorsText": "G. M. Kurtzer, V. Sochat, and M. W. Bauer",
+      "etAl": false,
+      "title": "Singularity: Scientific containers for mobility of compute",
+      "venue": "PLOS ONE",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 35,
+    "pdfPage": 12,
+    "expected": {
+      "title": "Singularity: Scientific containers for mobility of compute",
+      "authors": "Kurtzer; Sochat; Bauer",
+      "year": 2017,
+      "venue": "PLOS ONE",
+      "identifiers": "10.1371/journal.pone.0177459"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": false
+    },
+    "note": "spaced DOI ('10.1 371/...') not extracted"
+  },
+  {
+    "file": "cs.DC_2611.26526.pdf",
+    "parsed": {
+      "raw": "[30] E. Deelman et al., “Pegasus, a workflow management system for science automation,” Future Generation Computer Systems, vol. 46, pp. 17-35, 2015. DOI: 1 0.1016/j.future.2014.10.008",
+      "clean": "E. Deelman et al., “Pegasus, a workflow management system for science automation,” Future Generation Computer Systems, vol. 46, pp. 17-35, 2015. DOI: 1 0.1016/j.future.2014.10.008",
+      "label": "30",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2015,
+      "years": [
+        2015
+      ],
+      "authors": [
+        {
+          "family": "Deelman",
+          "given": "E."
+        }
+      ],
+      "authorsText": "E. Deelman et al",
+      "etAl": true,
+      "title": "Pegasus, a workflow management system for science automation",
+      "venue": "Future Generation Computer Systems",
+      "volume": "2014",
+      "issue": "10",
+      "pages": "17-35",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 30,
+    "pdfPage": 12,
+    "expected": {
+      "title": "Pegasus, a workflow management system for science automation",
+      "authors": "E. Deelman et al.",
+      "year": 2015,
+      "venue": "Future Generation Computer Systems",
+      "identifiers": "10.1016/j.future.2014.10.008"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": false
+    },
+    "note": "spaced DOI ('1 0.1016/...') not extracted"
+  },
+  {
+    "file": "cs.DC_2611.26526.pdf",
+    "parsed": {
+      "raw": "[39] V. V. Sochat, C. J. Prybol, and G. M. Kurtzer, “Enhancing reproducibility in scientific computing: Metrics and registry for Singularity containers,” PLOS ONE, vol. 12, no. 11, e0188511, 2017. DOI: 10.1371/journal.pone.01 88511",
+      "clean": "V. V. Sochat, C. J. Prybol, and G. M. Kurtzer, “Enhancing reproducibility in scientific computing: Metrics and registry for Singularity containers,” PLOS ONE, vol. 12, no. 11, e0188511, 2017. 88511",
+      "label": "39",
+      "dois": [
+        "10.1371/journal.pone.01"
+      ],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2017,
+      "years": [
+        2017
+      ],
+      "authors": [
+        {
+          "family": "Sochat",
+          "given": "V. V."
+        },
+        {
+          "family": "Prybol",
+          "given": "C. J."
+        },
+        {
+          "family": "Kurtzer",
+          "given": "G. M."
+        }
+      ],
+      "authorsText": "V. V. Sochat, C. J. Prybol, and G. M. Kurtzer",
+      "etAl": false,
+      "title": "Enhancing reproducibility in scientific computing: Metrics and registry for Singularity containers",
+      "venue": "PLOS ONE",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 39,
+    "pdfPage": 12,
+    "expected": {
+      "title": "Enhancing reproducibility in scientific computing: Metrics and registry for Singularity containers",
+      "authors": "Sochat; Prybol; Kurtzer",
+      "year": 2017,
+      "venue": "PLOS ONE",
+      "identifiers": "10.1371/journal.pone.0188511"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": false
+    },
+    "note": "spaced DOI truncated to 10.1371/journal.pone.01"
+  },
+  {
+    "file": "cs.SI_2611.23175.pdf",
+    "parsed": {
+      "raw": "[19] P. Holme and J. Saramäki, Eds., Temporal Network Theory. Cham: Springer International Publishing, 2023.",
+      "clean": "P. Holme and J. Saramäki, Eds., Temporal Network Theory. Cham: Springer International Publishing, 2023.",
+      "label": "19",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2023,
+      "years": [
+        2023
+      ],
+      "authors": [
+        {
+          "family": "Holme",
+          "given": "P."
+        },
+        {
+          "family": "Saramäki",
+          "given": "J."
+        },
+        {
+          "family": "Theory",
+          "given": "Temporal Network"
+        }
+      ],
+      "authorsText": "P. Holme and J. Saramäki, Eds., Temporal Network Theory.",
+      "etAl": false,
+      "title": "Cham: Springer International Publishing",
+      "kind": "book",
+      "placeholders": []
+    },
+    "n": 19,
+    "pdfPage": 18,
+    "expected": {
+      "title": "Temporal Network Theory",
+      "authors": "P. Holme; J. Saramäki (Eds.)",
+      "year": 2023,
+      "venue": "Springer (book)",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": false,
+      "authors": false,
+      "year": true,
+      "venue": "na",
+      "identifiers": "na"
+    },
+    "note": "edited book: title parsed as the publisher place ('Cham: Springer International Publishing'), book title appended as an author"
+  },
+  {
+    "file": "cs.SI_2611.23175.pdf",
+    "parsed": {
+      "raw": "[41] WHO Ebola Response Team, “Ebola Virus Disease in West Africa - The First 9 Months of the Epidemic and Forward Projections,” N. Engl. J. Med., vol. 371, no. 16, pp. 1481-1495, Oct. 2014.",
+      "clean": "WHO Ebola Response Team, “Ebola Virus Disease in West Africa - The First 9 Months of the Epidemic and Forward Projections,” N. Engl. J. Med., vol. 371, no. 16, pp. 1481-1495, Oct. 2014.",
+      "label": "41",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2014,
+      "years": [
+        2014
+      ],
+      "authors": [
+        {
+          "family": "Team",
+          "given": "WHO Ebola Response"
+        }
+      ],
+      "authorsText": "WHO Ebola Response Team",
+      "etAl": false,
+      "title": "Ebola Virus Disease in West Africa - The First 9 Months of the Epidemic and Forward Projections",
+      "venue": "N. Engl. J. Med",
+      "pages": "1481-1495",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 41,
+    "pdfPage": 18,
+    "expected": {
+      "title": "Ebola Virus Disease in West Africa - The First 9 Months of the Epidemic and Forward Projections",
+      "authors": "WHO Ebola Response Team",
+      "year": 2014,
+      "venue": "N. Engl. J. Med.",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": "organisation author kept as one name (split family/given, text intact)"
+  },
+  {
+    "file": "cs.SI_2611.23175.pdf",
+    "parsed": {
+      "raw": "[33] M. Génois, C. L. Vestergaard, J. Fournet, A. Panisson, I. Bonmarin, and A. Barrat, “Data on face-to-face contacts in an office building suggest a low-cost vaccination strategy based on community linkers,” Netw. Sci., vol. 3, no. 3, pp. 326-347, Sep. 2015.",
+      "clean": "M. Génois, C. L. Vestergaard, J. Fournet, A. Panisson, I. Bonmarin, and A. Barrat, “Data on face-to-face contacts in an office building suggest a low-cost vaccination strategy based on community linkers,” Netw. Sci., vol. 3, no. 3, pp. 326-347, Sep. 2015.",
+      "label": "33",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2015,
+      "years": [
+        2015
+      ],
+      "authors": [
+        {
+          "family": "Génois",
+          "given": "M."
+        },
+        {
+          "family": "Vestergaard",
+          "given": "C. L."
+        },
+        {
+          "family": "Fournet",
+          "given": "J."
+        },
+        {
+          "family": "Panisson",
+          "given": "A."
+        },
+        {
+          "family": "Bonmarin",
+          "given": "I."
+        },
+        {
+          "family": "Barrat",
+          "given": "A."
+        }
+      ],
+      "authorsText": "M. Génois, C. L. Vestergaard, J. Fournet, A. Panisson, I. Bonmarin, and A. Barrat",
+      "etAl": false,
+      "title": "Data on face-to-face contacts in an office building suggest a low-cost vaccination strategy based on community linkers",
+      "venue": "Netw. Sci",
+      "pages": "326-347",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 33,
+    "pdfPage": 18,
+    "expected": {
+      "title": "Data on face-to-face contacts in an office building suggest a low-cost vaccination strategy based on community linkers",
+      "authors": "Génois; Vestergaard; Fournet; Panisson; Bonmarin; Barrat",
+      "year": 2015,
+      "venue": "Netw. Sci.",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "cs.SI_2611.23175.pdf",
+    "parsed": {
+      "raw": "[44] G. Foster, B. D. Elderd, R. L. Richards, and T. Dallas, “Estimating R0 from early exponential growth: Parallels between 1918 influenza and 2020 SARS-CoV-2 pandemics,” PNAS Nexus, vol. 1, no. 4, p. pgac194, Sep. 2022.",
+      "clean": "G. Foster, B. D. Elderd, R. L. Richards, and T. Dallas, “Estimating R0 from early exponential growth: Parallels between 1918 influenza and 2020 SARS-CoV-2 pandemics,” PNAS Nexus, vol. 1, no. 4, p. pgac194, Sep. 2022.",
+      "label": "44",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2022,
+      "years": [
+        1918,
+        2020,
+        2022
+      ],
+      "authors": [
+        {
+          "family": "Foster",
+          "given": "G."
+        },
+        {
+          "family": "Elderd",
+          "given": "B. D."
+        },
+        {
+          "family": "Richards",
+          "given": "R. L."
+        },
+        {
+          "family": "Dallas",
+          "given": "T."
+        }
+      ],
+      "authorsText": "G. Foster, B. D. Elderd, R. L. Richards, and T. Dallas",
+      "etAl": false,
+      "title": "Estimating R0 from early exponential growth: Parallels between 1918 influenza and 2020 SARS-CoV-2 pandemics",
+      "venue": "PNAS Nexus",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 44,
+    "pdfPage": 18,
+    "expected": {
+      "title": "Estimating R0 from early exponential growth: Parallels between 1918 influenza and 2020 SARS-CoV-2 pandemics",
+      "authors": "Foster; Elderd; Richards; Dallas",
+      "year": 2022,
+      "venue": "PNAS Nexus",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "cs.SI_2611.23175.pdf",
+    "parsed": {
+      "raw": "[37] V. Gelardi, J. Godard, D. Paleressompoulle, N. Claidiere, and A. Barrat, “Measuring social networks in primates: Wearable sensors versus direct observations,” Proc. R. Soc. Math. Phys. Eng. Sci., vol. 476, no. 2236, p. 20190737, Apr. 2020.",
+      "clean": "V. Gelardi, J. Godard, D. Paleressompoulle, N. Claidiere, and A. Barrat, “Measuring social networks in primates: Wearable sensors versus direct observations,” Proc. R. Soc. Math. Phys. Eng. Sci., vol. 476, no. 2236, p. 20190737, Apr. 2020.",
+      "label": "37",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2020,
+      "years": [
+        2020
+      ],
+      "authors": [
+        {
+          "family": "Gelardi",
+          "given": "V."
+        },
+        {
+          "family": "Godard",
+          "given": "J."
+        },
+        {
+          "family": "Paleressompoulle",
+          "given": "D."
+        },
+        {
+          "family": "Claidiere",
+          "given": "N."
+        },
+        {
+          "family": "Barrat",
+          "given": "A."
+        }
+      ],
+      "authorsText": "V. Gelardi, J. Godard, D. Paleressompoulle, N. Claidiere, and A. Barrat",
+      "etAl": false,
+      "title": "Measuring social networks in primates: Wearable sensors versus direct observations",
+      "venue": "Proc. R. Soc. Math. Phys. Eng. Sci",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 37,
+    "pdfPage": 18,
+    "expected": {
+      "title": "Measuring social networks in primates: Wearable sensors versus direct observations",
+      "authors": "Gelardi; Godard; Paleressompoulle; Claidiere; Barrat",
+      "year": 2020,
+      "venue": "Proc. R. Soc. A (Math. Phys. Eng. Sci.)",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "math.NA_2611.25245.pdf",
+    "parsed": {
+      "raw": "[25] R. K. Cavin, III and S. P. Bhattacharyya, Robust and well-conditioned eigenstructure assignment via Sylvester’s equation, Optim. Control Appl. Methods, 4 (1983), pp. 205-212.",
+      "clean": "R. K. Cavin, III and S. P. Bhattacharyya, Robust and well-conditioned eigenstructure assignment via Sylvester’s equation, Optim. Control Appl. Methods, 4 (1983), pp. 205-212.",
+      "label": "25",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 1983,
+      "years": [
+        1983
+      ],
+      "authors": [
+        {
+          "family": "Cavin",
+          "given": "R. K."
+        }
+      ],
+      "authorsText": "R. K. Cavin",
+      "etAl": false,
+      "title": "III and S. P. Bhattacharyya",
+      "venue": "Robust and well-conditioned eigenstructure assignment via Sylvester’s equation, Optim. Control Appl. Methods",
+      "volume": "4",
+      "issue": "1983",
+      "pages": "205-212",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 25,
+    "pdfPage": 30,
+    "expected": {
+      "title": "Robust and well-conditioned eigenstructure assignment via Sylvester's equation",
+      "authors": "R. K. Cavin III; S. P. Bhattacharyya",
+      "year": 1983,
+      "venue": "Optim. Control Appl. Methods",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": false,
+      "authors": false,
+      "year": true,
+      "venue": false,
+      "identifiers": "na"
+    },
+    "note": "generational suffix ', III' read as the end of the author list: title became the second author, venue absorbed the title"
+  },
+  {
+    "file": "math.NA_2611.25245.pdf",
+    "parsed": {
+      "raw": "[57] E. Lorist and F. L. Schwenninger, A solution to Crouzeix’s conjecture, 2026. arXiv:2608.03841.",
+      "clean": "E. Lorist and F. L. Schwenninger, A solution to Crouzeix’s conjecture, 2026. arXiv.",
+      "label": "57",
+      "dois": [],
+      "arxivIds": [
+        "2608.03841"
+      ],
+      "urls": [],
+      "year": 2026,
+      "years": [
+        2026
+      ],
+      "authors": [
+        {
+          "family": "Lorist",
+          "given": "E."
+        },
+        {
+          "family": "Schwenninger",
+          "given": "F. L."
+        }
+      ],
+      "authorsText": "E. Lorist and F. L. Schwenninger",
+      "etAl": false,
+      "title": "A solution to Crouzeix’s conjecture",
+      "venue": "2026. arXiv",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 57,
+    "pdfPage": 31,
+    "expected": {
+      "title": "A solution to Crouzeix's conjecture",
+      "authors": "Lorist; Schwenninger",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "identifiers": "arXiv:2608.03841"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": true
+    },
+    "note": ""
+  },
+  {
+    "file": "math.NA_2611.25245.pdf",
+    "parsed": {
+      "raw": "[79] G. Starke, Near-circularity for the rational Zolotarev problem in the complex plane, J. Approx. Theory, 70 (1992), pp. 115-130.",
+      "clean": "G. Starke, Near-circularity for the rational Zolotarev problem in the complex plane, J. Approx. Theory, 70 (1992), pp. 115-130.",
+      "label": "79",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 1992,
+      "years": [
+        1992
+      ],
+      "authors": [
+        {
+          "family": "Starke",
+          "given": "G."
+        }
+      ],
+      "authorsText": "G. Starke",
+      "etAl": false,
+      "title": "Near-circularity for the rational Zolotarev problem in the complex plane",
+      "venue": "J. Approx. Theory",
+      "volume": "70",
+      "issue": "1992",
+      "pages": "115-130",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 79,
+    "pdfPage": 32,
+    "expected": {
+      "title": "Near-circularity for the rational Zolotarev problem in the complex plane",
+      "authors": "G. Starke",
+      "year": 1992,
+      "venue": "J. Approx. Theory",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "math.NA_2611.25245.pdf",
+    "parsed": {
+      "raw": "[12] B. Beckermann and A. Townsend, On the singular values of matrices with displacement structure, SIAM J. Matrix Anal. Appl., 38 (2017), pp. 1227-1248.",
+      "clean": "B. Beckermann and A. Townsend, On the singular values of matrices with displacement structure, SIAM J. Matrix Anal. Appl., 38 (2017), pp. 1227-1248.",
+      "label": "12",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2017,
+      "years": [
+        2017
+      ],
+      "authors": [
+        {
+          "family": "Beckermann",
+          "given": "B."
+        },
+        {
+          "family": "Townsend",
+          "given": "A."
+        }
+      ],
+      "authorsText": "B. Beckermann and A. Townsend",
+      "etAl": false,
+      "title": "On the singular values of matrices with displacement structure",
+      "venue": "SIAM J. Matrix Anal. Appl",
+      "volume": "38",
+      "issue": "2017",
+      "pages": "1227-1248",
+      "kind": "book",
+      "placeholders": []
+    },
+    "n": 12,
+    "pdfPage": 30,
+    "expected": {
+      "title": "On the singular values of matrices with displacement structure",
+      "authors": "Beckermann; Townsend",
+      "year": 2017,
+      "venue": "SIAM J. Matrix Anal. Appl.",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "math.NA_2611.25245.pdf",
+    "parsed": {
+      "raw": "[83] H. Wilber, A. Townsend, and G. B. Wright, Computing with functions in spherical and polar geometries II. the disk, SIAM J. Sci. Comput., 39 (2017), pp. C238-C262.",
+      "clean": "H. Wilber, A. Townsend, and G. B. Wright, Computing with functions in spherical and polar geometries II. the disk, SIAM J. Sci. Comput., 39 (2017), pp. C238-C262.",
+      "label": "83",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2017,
+      "years": [
+        2017
+      ],
+      "authors": [
+        {
+          "family": "Wilber",
+          "given": "H."
+        },
+        {
+          "family": "Townsend",
+          "given": "A."
+        },
+        {
+          "family": "Wright",
+          "given": "G. B."
+        }
+      ],
+      "authorsText": "H. Wilber, A. Townsend, and G. B. Wright",
+      "etAl": false,
+      "title": "Computing with functions in spherical and polar geometries II. the disk",
+      "venue": "SIAM J. Sci. Comput",
+      "volume": "39",
+      "issue": "2017",
+      "kind": "book",
+      "placeholders": []
+    },
+    "n": 83,
+    "pdfPage": 32,
+    "expected": {
+      "title": "Computing with functions in spherical and polar geometries II. the disk",
+      "authors": "Wilber; Townsend; Wright",
+      "year": 2017,
+      "venue": "SIAM J. Sci. Comput.",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "math.ST_2611.25163.pdf",
+    "parsed": {
+      "raw": "[BCMV14] Aditya Bhaskara, Moses Charikar, Ankur Moitra, and Aravindan Vijayaraghavan. Smoothed analysis of tensor decompositions. In Proceedings of the 46th Annual ACM Symposium on Theory of Computing, pages 594-603. ACM, 2014.",
+      "clean": "Aditya Bhaskara, Moses Charikar, Ankur Moitra, and Aravindan Vijayaraghavan. Smoothed analysis of tensor decompositions. In Proceedings of the 46th Annual ACM Symposium on Theory of Computing, pages 594-603. ACM, 2014.",
+      "label": "BCMV14",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2014,
+      "years": [
+        2014
+      ],
+      "authors": [
+        {
+          "family": "Bhaskara",
+          "given": "Aditya"
+        },
+        {
+          "family": "Charikar",
+          "given": "Moses"
+        },
+        {
+          "family": "Moitra",
+          "given": "Ankur"
+        },
+        {
+          "family": "Vijayaraghavan",
+          "given": "Aravindan"
+        }
+      ],
+      "authorsText": "Aditya Bhaskara, Moses Charikar, Ankur Moitra, and Aravindan Vijayaraghavan.",
+      "etAl": false,
+      "title": "Smoothed analysis of tensor decompositions",
+      "venue": "Proceedings of the 46th Annual ACM Symposium on Theory of Computing",
+      "pages": "594-603",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 5,
+    "pdfPage": 74,
+    "expected": {
+      "title": "Smoothed analysis of tensor decompositions",
+      "authors": "Bhaskara; Charikar; Moitra; Vijayaraghavan",
+      "year": 2014,
+      "venue": "STOC 2014 (Proc. 46th ACM STOC)",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "math.ST_2611.25163.pdf",
+    "parsed": {
+      "raw": "[HK13] Daniel Hsu and Sham M Kakade. Learning mixtures of spherical Gaussians: moment methods and spectral decompositions. In Proceedings of the 4th conference on Innovations in Theoretical Computer Science, pages 11-20, 2013.",
+      "clean": "Daniel Hsu and Sham M Kakade. Learning mixtures of spherical Gaussians: moment methods and spectral decompositions. In Proceedings of the 4th conference on Innovations in Theoretical Computer Science, pages 11-20, 2013.",
+      "label": "HK13",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2013,
+      "years": [
+        2013
+      ],
+      "authors": [
+        {
+          "family": "Hsu",
+          "given": "Daniel"
+        },
+        {
+          "family": "Kakade",
+          "given": "Sham M"
+        }
+      ],
+      "authorsText": "Daniel Hsu and Sham M Kakade.",
+      "etAl": false,
+      "title": "Learning mixtures of spherical Gaussians: moment methods and spectral decompositions",
+      "venue": "Proceedings of the 4th conference on Innovations in Theoretical Computer Science",
+      "pages": "11-20",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 26,
+    "pdfPage": 75,
+    "expected": {
+      "title": "Learning mixtures of spherical Gaussians: moment methods and spectral decompositions",
+      "authors": "Hsu; Kakade",
+      "year": 2013,
+      "venue": "ITCS 2013",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "math.ST_2611.25163.pdf",
+    "parsed": {
+      "raw": "[Nda22] Mohamed Ndaoud. Sharp optimal recovery in the two component Gaussian mixture model. The Annals of Statistics, 50(4):2096 - 2126, 2022.",
+      "clean": "Mohamed Ndaoud. Sharp optimal recovery in the two component Gaussian mixture model. The Annals of Statistics, 50(4):2096 - 2126, 2022.",
+      "label": "Nda22",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2022,
+      "years": [
+        2022
+      ],
+      "authors": [
+        {
+          "family": "Ndaoud",
+          "given": "Mohamed"
+        }
+      ],
+      "authorsText": "Mohamed Ndaoud.",
+      "etAl": false,
+      "title": "Sharp optimal recovery in the two component Gaussian mixture model",
+      "venue": "The Annals of Statistics",
+      "volume": "50",
+      "issue": "4",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 46,
+    "pdfPage": 77,
+    "expected": {
+      "title": "Sharp optimal recovery in the two component Gaussian mixture model",
+      "authors": "Ndaoud",
+      "year": 2022,
+      "venue": "The Annals of Statistics",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "math.ST_2611.25163.pdf",
+    "parsed": {
+      "raw": "[BAP05] Jinho Baik, Gérard Ben Arous, and Sandrine Péché. Phase transition of the largest eigenvalue for nonnull complex sample covariance matrices. The Annals of Probability, 33(5):1643 - 1697, 2005.",
+      "clean": "Jinho Baik, Gérard Ben Arous, and Sandrine Péché. Phase transition of the largest eigenvalue for nonnull complex sample covariance matrices. The Annals of Probability, 33(5):1643 - 1697, 2005.",
+      "label": "BAP05",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2005,
+      "years": [
+        2005
+      ],
+      "authors": [
+        {
+          "family": "Baik",
+          "given": "Jinho"
+        },
+        {
+          "family": "Arous",
+          "given": "Gérard Ben"
+        },
+        {
+          "family": "Péché",
+          "given": "Sandrine"
+        }
+      ],
+      "authorsText": "Jinho Baik, Gérard Ben Arous, and Sandrine Péché.",
+      "etAl": false,
+      "title": "Phase transition of the largest eigenvalue for nonnull complex sample covariance matrices",
+      "venue": "The Annals of Probability",
+      "volume": "33",
+      "issue": "5",
+      "pages": "1643-1697",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 4,
+    "pdfPage": 74,
+    "expected": {
+      "title": "Phase transition of the largest eigenvalue for nonnull complex sample covariance matrices",
+      "authors": "Baik; Ben Arous; Péché",
+      "year": 2005,
+      "venue": "The Annals of Probability",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": false,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": "compound surname split: family 'Arous', given 'Gérard Ben'"
+  },
+  {
+    "file": "math.ST_2611.25163.pdf",
+    "parsed": {
+      "raw": "[CGV26] Alexandra Carpentier, Christophe Giraud, and Nicolas Verzelen. Phase transition √ for stochastic block model with more than n communities. In Proceedings of Thirty Ninth Conference on Learning Theory, volume 336 of Proceedings of Machine Learning Research, pages 938-1000. PMLR, 2026.",
+      "clean": "Alexandra Carpentier, Christophe Giraud, and Nicolas Verzelen. Phase transition √ for stochastic block model with more than n communities. In Proceedings of Thirty Ninth Conference on Learning Theory, volume 336 of Proceedings of Machine Learning Research, pages 938-1000. PMLR, 2026.",
+      "label": "CGV26",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2026,
+      "years": [
+        2026
+      ],
+      "authors": [
+        {
+          "family": "Carpentier",
+          "given": "Alexandra"
+        },
+        {
+          "family": "Giraud",
+          "given": "Christophe"
+        },
+        {
+          "family": "Verzelen",
+          "given": "Nicolas"
+        }
+      ],
+      "authorsText": "Alexandra Carpentier, Christophe Giraud, and Nicolas Verzelen.",
+      "etAl": false,
+      "title": "Phase transition √ for stochastic block model with more than n communities",
+      "venue": "Proceedings of Thirty Ninth Conference on Learning Theory",
+      "pages": "938-1000",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 11,
+    "pdfPage": 74,
+    "expected": {
+      "title": "Phase transition for stochastic block model with more than √n communities",
+      "authors": "Carpentier; Giraud; Verzelen",
+      "year": 2026,
+      "venue": "COLT 2026 (PMLR 336)",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": false,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": "radical sign displaced in the PDF text layer ('transition √ for ... than n'); all words present, scored strictly as incorrect"
+  },
+  {
+    "file": "physics.plasm-ph_2611.24523.pdf",
+    "parsed": {
+      "raw": "[4] H. Washimi and T. Taniuti, Physical Review Letters 17, 996 (1966).",
+      "clean": "H. Washimi and T. Taniuti, Physical Review Letters 17, 996 (1966).",
+      "label": "4",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 1966,
+      "years": [
+        1966
+      ],
+      "authors": [
+        {
+          "family": "Washimi",
+          "given": "H."
+        },
+        {
+          "family": "Taniuti",
+          "given": "T."
+        }
+      ],
+      "authorsText": "H. Washimi and T. Taniuti",
+      "etAl": false,
+      "venue": "Physical Review Letters 17",
+      "volume": "996",
+      "issue": "1966",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 4,
+    "pdfPage": 38,
+    "expected": {
+      "title": "(no title printed)",
+      "authors": "Washimi; Taniuti",
+      "year": 1966,
+      "venue": "Physical Review Letters 17, 996",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": "na",
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": "APS style without titles"
+  },
+  {
+    "file": "physics.plasm-ph_2611.24523.pdf",
+    "parsed": {
+      "raw": "[18] P. Chatterjee and R. Roychoudhury, Canadian Journal of Physics 75, 337 (1997).",
+      "clean": "P. Chatterjee and R. Roychoudhury, Canadian Journal of Physics 75, 337 (1997).",
+      "label": "18",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 1997,
+      "years": [
+        1997
+      ],
+      "authors": [
+        {
+          "family": "Chatterjee",
+          "given": "P."
+        },
+        {
+          "family": "Roychoudhury",
+          "given": "R."
+        }
+      ],
+      "authorsText": "P. Chatterjee and R. Roychoudhury",
+      "etAl": false,
+      "venue": "Canadian Journal of Physics 75",
+      "volume": "337",
+      "issue": "1997",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 18,
+    "pdfPage": 38,
+    "expected": {
+      "title": "(no title printed)",
+      "authors": "Chatterjee; Roychoudhury",
+      "year": 1997,
+      "venue": "Canadian Journal of Physics 75, 337",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": "na",
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "physics.plasm-ph_2611.24523.pdf",
+    "parsed": {
+      "raw": "[57] F. Verheest, M. A. Hellberg, and C. P. Olivier, Physics of Plasmas 27, 062306 (2020).",
+      "clean": "F. Verheest, M. A. Hellberg, and C. P. Olivier, Physics of Plasmas 27, 062306 (2020).",
+      "label": "57",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2020,
+      "years": [
+        2020
+      ],
+      "authors": [
+        {
+          "family": "Verheest",
+          "given": "F."
+        },
+        {
+          "family": "Hellberg",
+          "given": "M. A."
+        },
+        {
+          "family": "Olivier",
+          "given": "C. P."
+        }
+      ],
+      "authorsText": "F. Verheest, M. A. Hellberg, and C. P. Olivier",
+      "etAl": false,
+      "venue": "Physics of Plasmas 27",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 57,
+    "pdfPage": 40,
+    "expected": {
+      "title": "(no title printed)",
+      "authors": "Verheest; Hellberg; Olivier",
+      "year": 2020,
+      "venue": "Physics of Plasmas 27, 062306",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": "na",
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "physics.plasm-ph_2611.24523.pdf",
+    "parsed": {
+      "raw": "[56] C. P. Olivier, F. Verheest, and S. K. Maharaj, Journal of Plasma Physics 83, 905830605 (2017).",
+      "clean": "C. P. Olivier, F. Verheest, and S. K. Maharaj, Journal of Plasma Physics 83, 905830605 (2017).",
+      "label": "56",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2017,
+      "years": [
+        2017
+      ],
+      "authors": [
+        {
+          "family": "Olivier",
+          "given": "C. P."
+        },
+        {
+          "family": "Verheest",
+          "given": "F."
+        },
+        {
+          "family": "Maharaj",
+          "given": "S. K."
+        }
+      ],
+      "authorsText": "C. P. Olivier, F. Verheest, and S. K. Maharaj",
+      "etAl": false,
+      "venue": "Journal of Plasma Physics 83",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 56,
+    "pdfPage": 40,
+    "expected": {
+      "title": "(no title printed)",
+      "authors": "Olivier; Verheest; Maharaj",
+      "year": 2017,
+      "venue": "Journal of Plasma Physics 83, 905830605",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": "na",
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "physics.plasm-ph_2611.24523.pdf",
+    "parsed": {
+      "raw": "[45] M. A. Hoefer, Journal of Nonlinear Science 24, 525 (2014).",
+      "clean": "M. A. Hoefer, Journal of Nonlinear Science 24, 525 (2014).",
+      "label": "45",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2014,
+      "years": [
+        2014
+      ],
+      "authors": [
+        {
+          "family": "Hoefer",
+          "given": "M. A."
+        }
+      ],
+      "authorsText": "M. A. Hoefer",
+      "etAl": false,
+      "venue": "Journal of Nonlinear Science 24",
+      "volume": "525",
+      "issue": "2014",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 45,
+    "pdfPage": 39,
+    "expected": {
+      "title": "(no title printed)",
+      "authors": "M. A. Hoefer",
+      "year": 2014,
+      "venue": "Journal of Nonlinear Science 24, 525",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": "na",
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "physics.ins-det_2611.24776.pdf",
+    "parsed": {
+      "raw": "[19] Nathan Halko, Per-Gunnar Martinsson, and Joel A. Tropp. Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions. SIAM Review, 53(2):217-288, 2011.",
+      "clean": "Nathan Halko, Per-Gunnar Martinsson, and Joel A. Tropp. Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions. SIAM Review, 53(2):217-288, 2011.",
+      "label": "19",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2011,
+      "years": [
+        2011
+      ],
+      "authors": [
+        {
+          "family": "Halko",
+          "given": "Nathan"
+        },
+        {
+          "family": "Martinsson",
+          "given": "Per-Gunnar"
+        },
+        {
+          "family": "Tropp",
+          "given": "Joel A."
+        }
+      ],
+      "authorsText": "Nathan Halko, Per-Gunnar Martinsson, and Joel A. Tropp.",
+      "etAl": false,
+      "title": "Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions",
+      "venue": "SIAM Review",
+      "volume": "53",
+      "issue": "2",
+      "pages": "217-288",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 19,
+    "pdfPage": 9,
+    "expected": {
+      "title": "Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions",
+      "authors": "Halko; Martinsson; Tropp",
+      "year": 2011,
+      "venue": "SIAM Review",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "physics.ins-det_2611.24776.pdf",
+    "parsed": {
+      "raw": "[39] Andrew M. Maiden and John M. Rodenburg. An improved ptychographical phase retrieval algorithm for diffractive imaging. Ultramicroscopy, 109(10):1256-1262, 2009.",
+      "clean": "Andrew M. Maiden and John M. Rodenburg. An improved ptychographical phase retrieval algorithm for diffractive imaging. Ultramicroscopy, 109(10):1256-1262, 2009.",
+      "label": "39",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2009,
+      "years": [
+        2009
+      ],
+      "authors": [
+        {
+          "family": "Maiden",
+          "given": "Andrew M."
+        },
+        {
+          "family": "Rodenburg",
+          "given": "John M."
+        }
+      ],
+      "authorsText": "Andrew M. Maiden and John M. Rodenburg.",
+      "etAl": false,
+      "title": "An improved ptychographical phase retrieval algorithm for diffractive imaging",
+      "venue": "Ultramicroscopy",
+      "volume": "109",
+      "issue": "10",
+      "pages": "1256-1262",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 39,
+    "pdfPage": 10,
+    "expected": {
+      "title": "An improved ptychographical phase retrieval algorithm for diffractive imaging",
+      "authors": "Maiden; Rodenburg",
+      "year": 2009,
+      "venue": "Ultramicroscopy",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": "line-break hyphen 'diffrac- tive' rejoined"
+  },
+  {
+    "file": "physics.ins-det_2611.24776.pdf",
+    "parsed": {
+      "raw": "[51] Hugh T. Philipp, Mark W. Tate, Katherine S. Shanks, Luigi Mele, Maurice Peemen, Pleun Dona, Reinout Hartong, Gerard van Veen, Yu-Tsun Shao, Zhen Chen, Julia Thom-Levy, David A. Muller, and Sol M. Gruner. Very-high dynamic range, 10,000 frames/second pixel array detector for electron microscopy. Microscopy and Microanalysis, 28(2):425-440, 2022.",
+      "clean": "Hugh T. Philipp, Mark W. Tate, Katherine S. Shanks, Luigi Mele, Maurice Peemen, Pleun Dona, Reinout Hartong, Gerard van Veen, Yu-Tsun Shao, Zhen Chen, Julia Thom-Levy, David A. Muller, and Sol M. Gruner. Very-high dynamic range, 10,000 frames/second pixel array detector for electron microscopy. Microscopy and Microanalysis, 28(2):425-440, 2022.",
+      "label": "51",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2022,
+      "years": [
+        2022
+      ],
+      "authors": [
+        {
+          "family": "Philipp",
+          "given": "Hugh T."
+        },
+        {
+          "family": "Tate",
+          "given": "Mark W."
+        },
+        {
+          "family": "Shanks",
+          "given": "Katherine S."
+        },
+        {
+          "family": "Mele",
+          "given": "Luigi"
+        },
+        {
+          "family": "Peemen",
+          "given": "Maurice"
+        },
+        {
+          "family": "Dona",
+          "given": "Pleun"
+        },
+        {
+          "family": "Hartong",
+          "given": "Reinout"
+        },
+        {
+          "family": "van Veen",
+          "given": "Gerard"
+        },
+        {
+          "family": "Shao",
+          "given": "Yu-Tsun"
+        },
+        {
+          "family": "Chen",
+          "given": "Zhen"
+        },
+        {
+          "family": "Thom-Levy",
+          "given": "Julia"
+        },
+        {
+          "family": "Muller",
+          "given": "David A."
+        },
+        {
+          "family": "Gruner",
+          "given": "Sol M."
+        }
+      ],
+      "authorsText": "Hugh T. Philipp, Mark W. Tate, Katherine S. Shanks, Luigi Mele, Maurice Peemen, Pleun Dona, Reinout Hartong, Gerard van Veen, Yu-Tsun Shao, Zhen Chen, Julia Thom-Levy, David A. Muller, and Sol M. Gruner.",
+      "etAl": false,
+      "title": "Very-high dynamic range, 10,000 frames/second pixel array detector for electron microscopy",
+      "venue": "Microscopy and Microanalysis",
+      "volume": "28",
+      "issue": "2",
+      "pages": "425-440",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 51,
+    "pdfPage": 10,
+    "expected": {
+      "title": "Very-high dynamic range, 10,000 frames/second pixel array detector for electron microscopy",
+      "authors": "13 authors Philipp ... Gruner",
+      "year": 2022,
+      "venue": "Microscopy and Microanalysis",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": "all 13 authors"
+  },
+  {
+    "file": "physics.ins-det_2611.24776.pdf",
+    "parsed": {
+      "raw": "[30] Melvin Lax. Multiple scattering of waves. Reviews of Modern Physics, 23:287-310, 1951.",
+      "clean": "Melvin Lax. Multiple scattering of waves. Reviews of Modern Physics, 23:287-310, 1951.",
+      "label": "30",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 1951,
+      "years": [
+        1951
+      ],
+      "authors": [
+        {
+          "family": "Lax",
+          "given": "Melvin"
+        }
+      ],
+      "authorsText": "Melvin Lax.",
+      "etAl": false,
+      "title": "Multiple scattering of waves",
+      "venue": "Reviews of Modern Physics",
+      "pages": "287-310",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 30,
+    "pdfPage": 9,
+    "expected": {
+      "title": "Multiple scattering of waves",
+      "authors": "Melvin Lax",
+      "year": 1951,
+      "venue": "Reviews of Modern Physics",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "physics.ins-det_2611.24776.pdf",
+    "parsed": {
+      "raw": "[42] Per-Gunnar Martinsson, Vladimir Rokhlin, and Mark Tygert. A randomized algorithm for the decomposition of matrices. Applied and Computational Harmonic Analysis, 30(1):47- 68, 2011.",
+      "clean": "Per-Gunnar Martinsson, Vladimir Rokhlin, and Mark Tygert. A randomized algorithm for the decomposition of matrices. Applied and Computational Harmonic Analysis, 30(1):47- 68, 2011.",
+      "label": "42",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2011,
+      "years": [
+        2011
+      ],
+      "authors": [
+        {
+          "family": "Martinsson",
+          "given": "Per-Gunnar"
+        },
+        {
+          "family": "Rokhlin",
+          "given": "Vladimir"
+        },
+        {
+          "family": "Tygert",
+          "given": "Mark"
+        }
+      ],
+      "authorsText": "Per-Gunnar Martinsson, Vladimir Rokhlin, and Mark Tygert.",
+      "etAl": false,
+      "title": "A randomized algorithm for the decomposition of matrices",
+      "venue": "Applied and Computational Harmonic Analysis",
+      "volume": "30",
+      "issue": "1",
+      "pages": "47-68",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 42,
+    "pdfPage": 10,
+    "expected": {
+      "title": "A randomized algorithm for the decomposition of matrices",
+      "authors": "Martinsson; Rokhlin; Tygert",
+      "year": 2011,
+      "venue": "Applied and Computational Harmonic Analysis",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "cond-mat.mes-hall_2611.26616.pdf",
+    "parsed": {
+      "raw": "[31] X.-Y. Song, Y.-C. He, A. Vishwanath, and C. Wang, Electric polarization as a nonquantized topological response and boundary luttinger theorem, Physical Review Research 3, 023011 (2021).",
+      "clean": "X.-Y. Song, Y.-C. He, A. Vishwanath, and C. Wang, Electric polarization as a nonquantized topological response and boundary luttinger theorem, Physical Review Research 3, 023011 (2021).",
+      "label": "31",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2021,
+      "years": [
+        2021
+      ],
+      "authors": [
+        {
+          "family": "Song",
+          "given": "X.-Y."
+        },
+        {
+          "family": "He",
+          "given": "Y.-C."
+        },
+        {
+          "family": "Vishwanath",
+          "given": "A."
+        },
+        {
+          "family": "Wang",
+          "given": "C."
+        }
+      ],
+      "authorsText": "X.-Y. Song, Y.-C. He, A. Vishwanath, and C. Wang",
+      "etAl": false,
+      "title": "Electric polarization as a nonquantized topological response and boundary luttinger theorem",
+      "venue": "Physical Review Research 3",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 30,
+    "pdfPage": 6,
+    "expected": {
+      "title": "Electric polarization as a nonquantized topological response and boundary luttinger theorem",
+      "authors": "Song; He; Vishwanath; Wang",
+      "year": 2021,
+      "venue": "Physical Review Research 3, 023011",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "cond-mat.mes-hall_2611.26616.pdf",
+    "parsed": {
+      "raw": "[7] M. Geier, L. Trifunovic, M. Hoskam, and P. W. Brouwer, Second-order topological insulators and superconductors with an order-two crystalline symmetry, Physical Review B 97, 205135 (2018), arXiv:1801.10053.",
+      "clean": "M. Geier, L. Trifunovic, M. Hoskam, and P. W. Brouwer, Second-order topological insulators and superconductors with an order-two crystalline symmetry, Physical Review B 97, 205135 (2018). arXiv.",
+      "label": "7",
+      "dois": [],
+      "arxivIds": [
+        "1801.10053"
+      ],
+      "urls": [],
+      "year": 2018,
+      "years": [
+        2018
+      ],
+      "authors": [
+        {
+          "family": "Geier",
+          "given": "M."
+        },
+        {
+          "family": "Trifunovic",
+          "given": "L."
+        },
+        {
+          "family": "Hoskam",
+          "given": "M."
+        },
+        {
+          "family": "Brouwer",
+          "given": "P. W."
+        }
+      ],
+      "authorsText": "M. Geier, L. Trifunovic, M. Hoskam, and P. W. Brouwer",
+      "etAl": false,
+      "title": "Second-order topological insulators and superconductors with an order-two crystalline symmetry",
+      "venue": "Physical Review B 97",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 7,
+    "pdfPage": 5,
+    "expected": {
+      "title": "Second-order topological insulators and superconductors with an order-two crystalline symmetry",
+      "authors": "Geier; Trifunovic; Hoskam; Brouwer",
+      "year": 2018,
+      "venue": "Physical Review B 97, 205135",
+      "identifiers": "arXiv:1801.10053"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": true
+    },
+    "note": ""
+  },
+  {
+    "file": "cond-mat.mes-hall_2611.26616.pdf",
+    "parsed": {
+      "raw": "[40] L. Gioia, C. Wang, and A. A. Burkov, Unquantized anomalies in topological semimetals, Physical Review Research 3, 043067 (2021).",
+      "clean": "L. Gioia, C. Wang, and A. A. Burkov, Unquantized anomalies in topological semimetals, Physical Review Research 3, 043067 (2021).",
+      "label": "40",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2021,
+      "years": [
+        2021
+      ],
+      "authors": [
+        {
+          "family": "Gioia",
+          "given": "L."
+        },
+        {
+          "family": "Wang",
+          "given": "C."
+        },
+        {
+          "family": "Burkov",
+          "given": "A. A."
+        }
+      ],
+      "authorsText": "L. Gioia, C. Wang, and A. A. Burkov",
+      "etAl": false,
+      "title": "Unquantized anomalies in topological semimetals",
+      "venue": "Physical Review Research 3",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 39,
+    "pdfPage": 6,
+    "expected": {
+      "title": "Unquantized anomalies in topological semimetals",
+      "authors": "Gioia; Wang; Burkov",
+      "year": 2021,
+      "venue": "Physical Review Research 3, 043067",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "cond-mat.mes-hall_2611.26616.pdf",
+    "parsed": {
+      "raw": "[56] Y. Liu, X. Zhang, C.-P. Liang, F.-F. Li, Y. Poo, and J.-H. Jiang, Observation of bulk-dislocation correspondence in photonic crystals, Physical Review Applied 22, 064097 (2024).",
+      "clean": "Y. Liu, X. Zhang, C.-P. Liang, F.-F. Li, Y. Poo, and J.-H. Jiang, Observation of bulk-dislocation correspondence in photonic crystals, Physical Review Applied 22, 064097 (2024).",
+      "label": "56",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2024,
+      "years": [
+        2024
+      ],
+      "authors": [
+        {
+          "family": "Liu",
+          "given": "Y."
+        },
+        {
+          "family": "Zhang",
+          "given": "X."
+        },
+        {
+          "family": "Liang",
+          "given": "C.-P."
+        },
+        {
+          "family": "Li",
+          "given": "F.-F."
+        },
+        {
+          "family": "Poo",
+          "given": "Y."
+        },
+        {
+          "family": "Jiang",
+          "given": "J.-H."
+        }
+      ],
+      "authorsText": "Y. Liu, X. Zhang, C.-P. Liang, F.-F. Li, Y. Poo, and J.-H. Jiang",
+      "etAl": false,
+      "title": "Observation of bulk-dislocation correspondence in photonic crystals",
+      "venue": "Physical Review Applied 22",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 55,
+    "pdfPage": 6,
+    "expected": {
+      "title": "Observation of bulk-dislocation correspondence in photonic crystals",
+      "authors": "Liu; Zhang; Liang; Li; Poo; Jiang",
+      "year": 2024,
+      "venue": "Physical Review Applied 22, 064097",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "cond-mat.mes-hall_2611.26616.pdf",
+    "parsed": {
+      "raw": "[51] M. F. Parsons, F. Huber, A. Mazurenko, C. S. Chiu, W. Setiawan, K. Wooley-Brown, S. Blatt, and M. Greiner, Site-resolved imaging of fermionic 6Li in an optical lattice, Physical Review Letters 114, 213002 (2015).",
+      "clean": "M. F. Parsons, F. Huber, A. Mazurenko, C. S. Chiu, W. Setiawan, K. Wooley-Brown, S. Blatt, and M. Greiner, Site-resolved imaging of fermionic 6Li in an optical lattice, Physical Review Letters 114, 213002 (2015).",
+      "label": "51",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2015,
+      "years": [
+        2015
+      ],
+      "authors": [
+        {
+          "family": "Parsons",
+          "given": "M. F."
+        },
+        {
+          "family": "Huber",
+          "given": "F."
+        },
+        {
+          "family": "Mazurenko",
+          "given": "A."
+        },
+        {
+          "family": "Chiu",
+          "given": "C. S."
+        },
+        {
+          "family": "Setiawan",
+          "given": "W."
+        },
+        {
+          "family": "Wooley-Brown",
+          "given": "K."
+        },
+        {
+          "family": "Blatt",
+          "given": "S."
+        },
+        {
+          "family": "Greiner",
+          "given": "M."
+        }
+      ],
+      "authorsText": "M. F. Parsons, F. Huber, A. Mazurenko, C. S. Chiu, W. Setiawan, K. Wooley-Brown, S. Blatt, and M. Greiner",
+      "etAl": false,
+      "title": "Site-resolved imaging of fermionic 6Li in an optical lattice",
+      "venue": "Physical Review Letters 114",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 50,
+    "pdfPage": 6,
+    "expected": {
+      "title": "Site-resolved imaging of fermionic 6Li in an optical lattice",
+      "authors": "8 authors Parsons ... Greiner",
+      "year": 2015,
+      "venue": "Physical Review Letters 114, 213002",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "astro-ph.HE_2611.26547.pdf",
+    "parsed": {
+      "raw": "[125] W. Kastaun, J. V. Kalinani, and R. Ciolfi, Robust Recovery of Primitive Variables in Relativistic Ideal Magnetohydrodynamics, Phys. Rev. D 103, 023018 (2021), arXiv:2005.01821 [gr-qc].",
+      "clean": "W. Kastaun, J. V. Kalinani, and R. Ciolfi, Robust Recovery of Primitive Variables in Relativistic Ideal Magnetohydrodynamics, Phys. Rev. D 103, 023018 (2021). arXiv.",
+      "label": "125",
+      "dois": [],
+      "arxivIds": [
+        "2005.01821"
+      ],
+      "urls": [],
+      "year": 2021,
+      "years": [
+        2021
+      ],
+      "authors": [
+        {
+          "family": "Kastaun",
+          "given": "W."
+        },
+        {
+          "family": "Kalinani",
+          "given": "J. V."
+        },
+        {
+          "family": "Ciolfi",
+          "given": "R."
+        }
+      ],
+      "authorsText": "W. Kastaun, J. V. Kalinani, and R. Ciolfi",
+      "etAl": false,
+      "title": "Robust Recovery of Primitive Variables in Relativistic Ideal Magnetohydrodynamics",
+      "venue": "Phys. Rev. D 103",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 125,
+    "pdfPage": 94,
+    "expected": {
+      "title": "Robust Recovery of Primitive Variables in Relativistic Ideal Magnetohydrodynamics",
+      "authors": "Kastaun; Kalinani; Ciolfi",
+      "year": 2021,
+      "venue": "Phys. Rev. D 103, 023018",
+      "identifiers": "arXiv:2005.01821"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": true
+    },
+    "note": ""
+  },
+  {
+    "file": "astro-ph.HE_2611.26547.pdf",
+    "parsed": {
+      "raw": "[73] B. Carter and D. Langlois, Relativistic models for superconducting superfluid mixtures, Nucl. Phys. B 531, 478 (1998), arXiv:gr-qc/9806024.",
+      "clean": "B. Carter and D. Langlois, Relativistic models for superconducting superfluid mixtures, Nucl. Phys. B 531, 478 (1998), arXiv:gr-qc/9806024.",
+      "label": "73",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 1998,
+      "years": [
+        1998
+      ],
+      "authors": [
+        {
+          "family": "Carter",
+          "given": "B."
+        },
+        {
+          "family": "Langlois",
+          "given": "D."
+        }
+      ],
+      "authorsText": "B. Carter and D. Langlois",
+      "etAl": false,
+      "title": "Relativistic models for superconducting superfluid mixtures",
+      "venue": "Nucl. Phys. B 531",
+      "volume": "478",
+      "issue": "1998",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 73,
+    "pdfPage": 92,
+    "expected": {
+      "title": "Relativistic models for superconducting superfluid mixtures",
+      "authors": "Carter; Langlois",
+      "year": 1998,
+      "venue": "Nucl. Phys. B 531, 478",
+      "identifiers": "arXiv:gr-qc/9806024"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": false
+    },
+    "note": "old-style arXiv identifier not extracted"
+  },
+  {
+    "file": "astro-ph.HE_2611.26547.pdf",
+    "parsed": {
+      "raw": "[7] N. Andersson, A superfluid perspective on neutron star dynamics, Universe 7, 17 (2021), arXiv:2103.10218 [astroph.HE].",
+      "clean": "N. Andersson, A superfluid perspective on neutron star dynamics, Universe 7, 17 (2021). arXiv.",
+      "label": "7",
+      "dois": [],
+      "arxivIds": [
+        "2103.10218"
+      ],
+      "urls": [],
+      "year": 2021,
+      "years": [
+        2021
+      ],
+      "authors": [
+        {
+          "family": "Andersson",
+          "given": "N."
+        }
+      ],
+      "authorsText": "N. Andersson",
+      "etAl": false,
+      "title": "A superfluid perspective on neutron star dynamics",
+      "venue": "Universe 7",
+      "volume": "17",
+      "issue": "2021",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 7,
+    "pdfPage": 91,
+    "expected": {
+      "title": "A superfluid perspective on neutron star dynamics",
+      "authors": "N. Andersson",
+      "year": 2021,
+      "venue": "Universe 7, 17",
+      "identifiers": "arXiv:2103.10218"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": true
+    },
+    "note": ""
+  },
+  {
+    "file": "astro-ph.HE_2611.26547.pdf",
+    "parsed": {
+      "raw": "[133] A. Mignone and L. Del Zanna, Systematic construction of upwind constrained transport schemes for MHD, J. Comput. Phys. 424, 109748 (2021), arXiv:2004.10542 [physics.compph].",
+      "clean": "A. Mignone and L. Del Zanna, Systematic construction of upwind constrained transport schemes for MHD, J. Comput. Phys. 424, 109748 (2021). arXiv.",
+      "label": "133",
+      "dois": [],
+      "arxivIds": [
+        "2004.10542"
+      ],
+      "urls": [],
+      "year": 2021,
+      "years": [
+        2021
+      ],
+      "authors": [
+        {
+          "family": "A. Mignone",
+          "given": "L"
+        }
+      ],
+      "authorsText": "A. Mignone and L",
+      "etAl": false,
+      "title": "Del Zanna, Systematic construction of upwind constrained transport schemes for MHD, J. Comput. Phys. 424, 109748 (2021)",
+      "venue": "arXiv",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 133,
+    "pdfPage": 94,
+    "expected": {
+      "title": "Systematic construction of upwind constrained transport schemes for MHD",
+      "authors": "Mignone; Del Zanna",
+      "year": 2021,
+      "venue": "J. Comput. Phys. 424, 109748",
+      "identifiers": "arXiv:2004.10542"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": false,
+      "authors": false,
+      "year": true,
+      "venue": false,
+      "identifiers": true
+    },
+    "note": "surname particle 'Del Zanna' broke the author list; title absorbed author and venue"
+  },
+  {
+    "file": "astro-ph.HE_2611.26547.pdf",
+    "parsed": {
+      "raw": "[40] N. Andersson, S. Wells, and J. A. Vickers, Quantised vortices and mutual friction in relativistic superfluids, Class. Quant. Grav. 33, 245010 (2016), arXiv:1601.07395 [gr-qc].",
+      "clean": "N. Andersson, S. Wells, and J. A. Vickers, Quantised vortices and mutual friction in relativistic superfluids, Class. Quant. Grav. 33, 245010 (2016). arXiv.",
+      "label": "40",
+      "dois": [],
+      "arxivIds": [
+        "1601.07395"
+      ],
+      "urls": [],
+      "year": 2016,
+      "years": [
+        2016
+      ],
+      "authors": [
+        {
+          "family": "Andersson",
+          "given": "N."
+        },
+        {
+          "family": "Wells",
+          "given": "S."
+        },
+        {
+          "family": "Vickers",
+          "given": "J. A."
+        }
+      ],
+      "authorsText": "N. Andersson, S. Wells, and J. A. Vickers",
+      "etAl": false,
+      "title": "Quantised vortices and mutual friction in relativistic superfluids",
+      "venue": "Class. Quant. Grav. 33",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 40,
+    "pdfPage": 92,
+    "expected": {
+      "title": "Quantised vortices and mutual friction in relativistic superfluids",
+      "authors": "Andersson; Wells; Vickers",
+      "year": 2016,
+      "venue": "Class. Quant. Grav. 33, 245010",
+      "identifiers": "arXiv:1601.07395"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": true
+    },
+    "note": ""
+  },
+  {
+    "file": "hep-ex_2611.26449.pdf",
+    "parsed": {
+      "raw": "[106] R. Fleischer, New strategies to obtain insights into CP violation through B0 → s D±K∓, D∗±K∓, ... and B0 → D±π∓, D±π∓, ... decays, Nucl. Phys. B671 (2003) s s s 459, arXiv:hep-ph/0304027.",
+      "clean": "R. Fleischer, New strategies to obtain insights into CP violation through B0 → s D±K∓, D∗±K∓, … and B0 → D±π∓, D±π∓, … decays, Nucl. Phys. B671 (2003) s s s 459, arXiv:hep-ph/0304027.",
+      "label": "106",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2003,
+      "years": [
+        2003
+      ],
+      "authors": [
+        {
+          "family": "Fleischer",
+          "given": "R."
+        }
+      ],
+      "authorsText": "R. Fleischer",
+      "etAl": false,
+      "title": "New strategies to obtain insights into CP violation through B0 → s D±K∓",
+      "venue": "D∗±K∓, … and B0 → D±π∓, D±π∓, … decays, Nucl. Phys. B671",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 106,
+    "pdfPage": 51,
+    "expected": {
+      "title": "New strategies to obtain insights into CP violation through Bs0 → Ds±K∓, Ds∗±K∓, ... and B0 → D±π∓, Ds±π∓, ... decays",
+      "authors": "R. Fleischer",
+      "year": 2003,
+      "venue": "Nucl. Phys. B671, 459",
+      "identifiers": "arXiv:hep-ph/0304027"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": false,
+      "authors": true,
+      "year": true,
+      "venue": false,
+      "identifiers": false
+    },
+    "note": "subscripts scattered as stray 's'; title cut at a comma inside the decay list; old-style arXiv ID not extracted"
+  },
+  {
+    "file": "hep-ex_2611.26449.pdf",
+    "parsed": {
+      "raw": "[73] A. Dery, Y. Grossman, S. Schacht, and A. Soffer, Probing the ∆U = 0 rule in three body charm decays, JHEP 05 (2021) 179, arXiv:2101.02560.",
+      "clean": "A. Dery, Y. Grossman, S. Schacht, and A. Soffer, Probing the ∆U = 0 rule in three body charm decays, JHEP 05 (2021) 179. arXiv.",
+      "label": "73",
+      "dois": [],
+      "arxivIds": [
+        "2101.02560"
+      ],
+      "urls": [],
+      "year": 2021,
+      "years": [
+        2021
+      ],
+      "authors": [
+        {
+          "family": "Dery",
+          "given": "A."
+        },
+        {
+          "family": "Grossman",
+          "given": "Y."
+        },
+        {
+          "family": "Schacht",
+          "given": "S."
+        },
+        {
+          "family": "Soffer",
+          "given": "A."
+        }
+      ],
+      "authorsText": "A. Dery, Y. Grossman, S. Schacht, and A. Soffer",
+      "etAl": false,
+      "title": "Probing the ∆U = 0 rule in three body charm decays",
+      "venue": "JHEP",
+      "volume": "05",
+      "issue": "2021",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 73,
+    "pdfPage": 49,
+    "expected": {
+      "title": "Probing the ∆U = 0 rule in three body charm decays",
+      "authors": "Dery; Grossman; Schacht; Soffer",
+      "year": 2021,
+      "venue": "JHEP 05 (2021) 179",
+      "identifiers": "arXiv:2101.02560"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": true
+    },
+    "note": ""
+  },
+  {
+    "file": "hep-ex_2611.26449.pdf",
+    "parsed": {
+      "raw": "[107] Heavy Flavor Averaging Group, Y. S. Amhis et al., Averages of b-hadron, chadron, and τ -lepton properties as of 2021, Phys. Rev. D107 (2023) 052008, arXiv:2206.07501, with specific result from doi:10.5281/zenodo.19371140.",
+      "clean": "Heavy Flavor Averaging Group, Y. S. Amhis et al., Averages of b-hadron, chadron, and τ -lepton properties as of 2021, Phys. Rev. D107 (2023) 052008. arXiv. , with specific result from",
+      "label": "107",
+      "dois": [
+        "10.5281/zenodo.19371140"
+      ],
+      "arxivIds": [
+        "2206.07501"
+      ],
+      "urls": [],
+      "year": 2023,
+      "years": [
+        2021,
+        2023
+      ],
+      "authors": [
+        {
+          "family": "Heavy Flavor Averaging Group",
+          "given": "Y. S"
+        }
+      ],
+      "authorsText": "Heavy Flavor Averaging Group, Y. S",
+      "etAl": false,
+      "title": "Amhis et al., Averages of b-hadron, chadron, and τ -lepton properties as of 2021, Phys. Rev. D107 (2023) 052008",
+      "venue": "arXiv. , with specific result from",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 107,
+    "pdfPage": 52,
+    "expected": {
+      "title": "Averages of b-hadron, c-hadron, and τ-lepton properties as of 2021",
+      "authors": "Heavy Flavor Averaging Group, Y. S. Amhis et al.",
+      "year": 2023,
+      "venue": "Phys. Rev. D107, 052008",
+      "identifiers": "arXiv:2206.07501; doi:10.5281/zenodo.19371140"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": false,
+      "authors": false,
+      "year": true,
+      "venue": false,
+      "identifiers": true
+    },
+    "note": "collaboration prefix before the author list broke author/title split"
+  },
+  {
+    "file": "hep-ex_2611.26449.pdf",
+    "parsed": {
+      "raw": "[66] Y. Grossman and S. Schacht, The emergence of the ∆U = 0 rule in charm physics, JHEP 07 (2019) 020, arXiv:1903.10952.",
+      "clean": "Y. Grossman and S. Schacht, The emergence of the ∆U = 0 rule in charm physics, JHEP 07 (2019) 020. arXiv.",
+      "label": "66",
+      "dois": [],
+      "arxivIds": [
+        "1903.10952"
+      ],
+      "urls": [],
+      "year": 2019,
+      "years": [
+        2019
+      ],
+      "authors": [
+        {
+          "family": "Grossman",
+          "given": "Y."
+        },
+        {
+          "family": "Schacht",
+          "given": "S."
+        }
+      ],
+      "authorsText": "Y. Grossman and S. Schacht",
+      "etAl": false,
+      "title": "The emergence of the ∆U = 0 rule in charm physics",
+      "venue": "JHEP",
+      "volume": "07",
+      "issue": "2019",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 66,
+    "pdfPage": 49,
+    "expected": {
+      "title": "The emergence of the ∆U = 0 rule in charm physics",
+      "authors": "Grossman; Schacht",
+      "year": 2019,
+      "venue": "JHEP 07 (2019) 020",
+      "identifiers": "arXiv:1903.10952"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": true
+    },
+    "note": ""
+  },
+  {
+    "file": "hep-ex_2611.26449.pdf",
+    "parsed": {
+      "raw": "[91] LHCb collaboration, R. Aaij et al., Measurement of the charm mixing parameter y - yKπ using two-body D0 meson decays, Phys. Rev. D105 (2022) 092013, CP CP arXiv:2202.09106.",
+      "clean": "LHCb collaboration, R. Aaij et al., Measurement of the charm mixing parameter y - yKπ using two-body D0 meson decays, Phys. Rev. D105 (2022) 092013, CP CP . arXiv.",
+      "label": "91",
+      "dois": [],
+      "arxivIds": [
+        "2202.09106"
+      ],
+      "urls": [],
+      "year": 2022,
+      "years": [
+        2022
+      ],
+      "authors": [
+        {
+          "family": "collaboration",
+          "given": "LHCb"
+        },
+        {
+          "family": "Aaij",
+          "given": "R."
+        },
+        {
+          "family": "decays",
+          "given": "Measurement of the charm mixing parameter y - yKπ using two-body D0 meson"
+        }
+      ],
+      "authorsText": "LHCb collaboration, R. Aaij et al., Measurement of the charm mixing parameter y - yKπ using two-body D0 meson decays, Phys. Rev. D105",
+      "etAl": true,
+      "title": "092013, CP CP",
+      "venue": "arXiv",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 91,
+    "pdfPage": 50,
+    "expected": {
+      "title": "Measurement of the charm mixing parameter yCP - yKπCP using two-body D0 meson decays",
+      "authors": "LHCb collaboration, R. Aaij et al.",
+      "year": 2022,
+      "venue": "Phys. Rev. D105, 092013",
+      "identifiers": "arXiv:2202.09106"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": false,
+      "authors": false,
+      "year": true,
+      "venue": false,
+      "identifiers": true
+    },
+    "note": "collaboration prefix plus displaced CP subscripts: title parsed as '092013, CP CP'"
+  },
+  {
+    "file": "q-bio.BM_2611.19885.pdf",
+    "parsed": {
+      "raw": "C. Ziegler, J. Martin, C. Sinner, and F. Morcos, “Latent generative landscapes as maps of functional diversity in protein sequence space,” Nature Communications 14, 2222 (2023).",
+      "clean": "C. Ziegler, J. Martin, C. Sinner, and F. Morcos, “Latent generative landscapes as maps of functional diversity in protein sequence space,” Nature Communications 14, 2222 (2023).",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2023,
+      "years": [
+        2023
+      ],
+      "authors": [
+        {
+          "family": "Ziegler",
+          "given": "C."
+        },
+        {
+          "family": "Martin",
+          "given": "J."
+        },
+        {
+          "family": "Sinner",
+          "given": "C."
+        },
+        {
+          "family": "Morcos",
+          "given": "F."
+        }
+      ],
+      "authorsText": "C. Ziegler, J. Martin, C. Sinner, and F. Morcos",
+      "etAl": false,
+      "title": "Latent generative landscapes as maps of functional diversity in protein sequence space",
+      "venue": "Nature Communications 14",
+      "volume": "2222",
+      "issue": "2023",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 27,
+    "pdfPage": 19,
+    "expected": {
+      "title": "Latent generative landscapes as maps of functional diversity in protein sequence space",
+      "authors": "Ziegler; Martin; Sinner; Morcos",
+      "year": 2023,
+      "venue": "Nature Communications 14, 2222",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "q-bio.BM_2611.19885.pdf",
+    "parsed": {
+      "raw": "D. Harding-Larsen, J. Funk, N. G. Madsen, H. Gharabli, C. G. Acevedo-Rocha, S. Mazurenko, and D. H. Welner, “Protein representations: Encoding biological information for machine learning in biocatalysis,” Biotechnology Advances 77, 108459 (2024).",
+      "clean": "D. Harding-Larsen, J. Funk, N. G. Madsen, H. Gharabli, C. G. Acevedo-Rocha, S. Mazurenko, and D. H. Welner, “Protein representations: Encoding biological information for machine learning in biocatalysis,” Biotechnology Advances 77, 108459 (2024).",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2024,
+      "years": [
+        2024
+      ],
+      "authors": [
+        {
+          "family": "Harding-Larsen",
+          "given": "D."
+        },
+        {
+          "family": "Funk",
+          "given": "J."
+        },
+        {
+          "family": "Madsen",
+          "given": "N. G."
+        },
+        {
+          "family": "Gharabli",
+          "given": "H."
+        },
+        {
+          "family": "Acevedo-Rocha",
+          "given": "C. G."
+        },
+        {
+          "family": "Mazurenko",
+          "given": "S."
+        },
+        {
+          "family": "Welner",
+          "given": "D. H."
+        }
+      ],
+      "authorsText": "D. Harding-Larsen, J. Funk, N. G. Madsen, H. Gharabli, C. G. Acevedo-Rocha, S. Mazurenko, and D. H. Welner",
+      "etAl": false,
+      "title": "Protein representations: Encoding biological information for machine learning in biocatalysis",
+      "venue": "Biotechnology Advances 77",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 28,
+    "pdfPage": 19,
+    "expected": {
+      "title": "Protein representations: Encoding biological information for machine learning in biocatalysis",
+      "authors": "7 authors Harding-Larsen ... Welner",
+      "year": 2024,
+      "venue": "Biotechnology Advances 77, 108459",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "q-bio.BM_2611.19885.pdf",
+    "parsed": {
+      "raw": "K. T. Schütt, H. E. Sauceda, P.-J. Kindermans, A. Tkatchenko, and K.-R. Müller, “Schnet-a deep learning architecture for molecules and materials,” The Journal of chemical physics 148 (2018).",
+      "clean": "K. T. Schütt, H. E. Sauceda, P.-J. Kindermans, A. Tkatchenko, and K.-R. Müller, “Schnet-a deep learning architecture for molecules and materials,” The Journal of chemical physics 148 (2018).",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2018,
+      "years": [
+        2018
+      ],
+      "authors": [
+        {
+          "family": "Schütt",
+          "given": "K. T."
+        },
+        {
+          "family": "Sauceda",
+          "given": "H. E."
+        },
+        {
+          "family": "Kindermans",
+          "given": "P.-J."
+        },
+        {
+          "family": "Tkatchenko",
+          "given": "A."
+        },
+        {
+          "family": "Müller",
+          "given": "K.-R."
+        }
+      ],
+      "authorsText": "K. T. Schütt, H. E. Sauceda, P.-J. Kindermans, A. Tkatchenko, and K.-R. Müller",
+      "etAl": false,
+      "title": "Schnet-a deep learning architecture for molecules and materials",
+      "venue": "The Journal of chemical physics",
+      "volume": "148",
+      "issue": "2018",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 49,
+    "pdfPage": 20,
+    "expected": {
+      "title": "Schnet–a deep learning architecture for molecules and materials",
+      "authors": "Schütt; Sauceda; Kindermans; Tkatchenko; Müller",
+      "year": 2018,
+      "venue": "The Journal of chemical physics 148",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": "en dash normalised to hyphen"
+  },
+  {
+    "file": "q-bio.BM_2611.19885.pdf",
+    "parsed": {
+      "raw": "J. Brehmer, S. Behrends, P. D. Haan, and T. Cohen, “Does equivariance matter at scale?” Transactions on Machine Learning Research (2025). 61Jülich Supercomputing Centre, “JUWELS Cluster and Booster: Exascale Pathfinder with Modular Supercomputing Architecture at Juelich Supercomputing Centre,” Journal of large-scale research facilities 7 (2021), 10.17815/jlsrf-7-183.",
+      "clean": "J. Brehmer, S. Behrends, P. D. Haan, and T. Cohen, “Does equivariance matter at scale?” Transactions on Machine Learning Research (2025). 61Jülich Supercomputing Centre, “JUWELS Cluster and Booster: Exascale Pathfinder with Modular Supercomputing Architecture at Juelich Supercomputing Centre,” Journal of large-scale research facilities 7 (2021), 10.17815/jlsrf-7-183.",
+      "dois": [
+        "10.17815/jlsrf-7-183"
+      ],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2025,
+      "years": [
+        2025,
+        2021
+      ],
+      "authors": [
+        {
+          "family": "Brehmer",
+          "given": "J."
+        },
+        {
+          "family": "Behrends",
+          "given": "S."
+        },
+        {
+          "family": "Haan",
+          "given": "P. D."
+        },
+        {
+          "family": "Cohen",
+          "given": "T."
+        },
+        {
+          "family": "Centre",
+          "given": "“Does equivariance matter at scale?” Transactions on Machine Learning Research (2025). 61Jülich Supercomputing"
+        }
+      ],
+      "authorsText": "J. Brehmer, S. Behrends, P. D. Haan, and T. Cohen, “Does equivariance matter at scale?” Transactions on Machine Learning Research (2025). 61Jülich Supercomputing Centre",
+      "etAl": false,
+      "title": "JUWELS Cluster and Booster: Exascale Pathfinder with Modular Supercomputing Architecture at Juelich Supercomputing Centre",
+      "venue": "Journal of large-scale research facilities",
+      "volume": "7",
+      "issue": "2021",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 60,
+    "pdfPage": 20,
+    "expected": {
+      "title": "Does equivariance matter at scale?",
+      "authors": "Brehmer; Behrends; Haan; Cohen",
+      "year": 2025,
+      "venue": "Transactions on Machine Learning Research",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": false,
+      "title": false,
+      "authors": false,
+      "year": true,
+      "venue": false,
+      "identifiers": false
+    },
+    "note": "merged with entry 61 (superscript label glued: '61Jülich'); took entry 61's title, venue and DOI"
+  },
+  {
+    "file": "q-bio.BM_2611.19885.pdf",
+    "parsed": {
+      "raw": "D. D. Boehr, R. Nussinov, and P. E. Wright, “The role of dynamic conformational ensembles in biomolecular recognition,” Nature chemical biology 5, 789-796 (2009).",
+      "clean": "D. D. Boehr, R. Nussinov, and P. E. Wright, “The role of dynamic conformational ensembles in biomolecular recognition,” Nature chemical biology 5, 789-796 (2009).",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2009,
+      "years": [
+        2009
+      ],
+      "authors": [
+        {
+          "family": "Boehr",
+          "given": "D. D."
+        },
+        {
+          "family": "Nussinov",
+          "given": "R."
+        },
+        {
+          "family": "Wright",
+          "given": "P. E."
+        }
+      ],
+      "authorsText": "D. D. Boehr, R. Nussinov, and P. E. Wright",
+      "etAl": false,
+      "title": "The role of dynamic conformational ensembles in biomolecular recognition",
+      "venue": "Nature chemical biology 5",
+      "volume": "796",
+      "issue": "2009",
+      "pages": "789-796",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 3,
+    "pdfPage": 19,
+    "expected": {
+      "title": "The role of dynamic conformational ensembles in biomolecular recognition",
+      "authors": "Boehr; Nussinov; Wright",
+      "year": 2009,
+      "venue": "Nature chemical biology 5, 789-796",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "cs.NE_2611.24848.pdf",
+    "parsed": {
+      "raw": "[17] Jenny C. A. Read, Andrew J. Parker, and Bruce G. Cumming. A simple model accounts for the response of disparity-tuned v1 neurons to anticorrelated images. Visual Neuroscience, 19(6): 735-753, 2002.",
+      "clean": "Jenny C. A. Read, Andrew J. Parker, and Bruce G. Cumming. A simple model accounts for the response of disparity-tuned v1 neurons to anticorrelated images. Visual Neuroscience, 19(6): 735-753, 2002.",
+      "label": "17",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2002,
+      "years": [
+        2002
+      ],
+      "authors": [
+        {
+          "family": "Read",
+          "given": "Jenny C. A."
+        },
+        {
+          "family": "Parker",
+          "given": "Andrew J."
+        },
+        {
+          "family": "Cumming",
+          "given": "Bruce G."
+        }
+      ],
+      "authorsText": "Jenny C. A. Read, Andrew J. Parker, and Bruce G. Cumming.",
+      "etAl": false,
+      "title": "A simple model accounts for the response of disparity-tuned v1 neurons to anticorrelated images",
+      "venue": "Visual Neuroscience",
+      "volume": "19",
+      "issue": "6",
+      "pages": "735-753",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 17,
+    "pdfPage": 14,
+    "expected": {
+      "title": "A simple model accounts for the response of disparity-tuned v1 neurons to anticorrelated images",
+      "authors": "Read; Parker; Cumming",
+      "year": 2002,
+      "venue": "Visual Neuroscience",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "cs.NE_2611.24848.pdf",
+    "parsed": {
+      "raw": "[18] Seiji Tanabe, Kazumasa Umeda, and Ichiro Fujita. Rejection of false matches for binocular correspondence in macaque visual cortical area v4. The Journal of Neuroscience, 24(37):8170- 8180, 2004.",
+      "clean": "Seiji Tanabe, Kazumasa Umeda, and Ichiro Fujita. Rejection of false matches for binocular correspondence in macaque visual cortical area v4. The Journal of Neuroscience, 24(37):8170- 8180, 2004.",
+      "label": "18",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2004,
+      "years": [
+        2004
+      ],
+      "authors": [
+        {
+          "family": "Tanabe",
+          "given": "Seiji"
+        },
+        {
+          "family": "Umeda",
+          "given": "Kazumasa"
+        },
+        {
+          "family": "Fujita",
+          "given": "Ichiro"
+        }
+      ],
+      "authorsText": "Seiji Tanabe, Kazumasa Umeda, and Ichiro Fujita.",
+      "etAl": false,
+      "title": "Rejection of false matches for binocular correspondence in macaque visual cortical area v4",
+      "venue": "The Journal of Neuroscience",
+      "volume": "24",
+      "issue": "37",
+      "pages": "8170-8180",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 18,
+    "pdfPage": 14,
+    "expected": {
+      "title": "Rejection of false matches for binocular correspondence in macaque visual cortical area v4",
+      "authors": "Tanabe; Umeda; Fujita",
+      "year": 2004,
+      "venue": "The Journal of Neuroscience",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "cs.NE_2611.24848.pdf",
+    "parsed": {
+      "raw": "[2] Kyle Cranmer, Johann Brehmer, and Gilles Louppe. The frontier of simulation-based inference. Proceedings of the National Academy of Sciences, 117(48):30055-30062, 2020.",
+      "clean": "Kyle Cranmer, Johann Brehmer, and Gilles Louppe. The frontier of simulation-based inference. Proceedings of the National Academy of Sciences, 117(48):30055-30062, 2020.",
+      "label": "2",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2020,
+      "years": [
+        2020
+      ],
+      "authors": [
+        {
+          "family": "Cranmer",
+          "given": "Kyle"
+        },
+        {
+          "family": "Brehmer",
+          "given": "Johann"
+        },
+        {
+          "family": "Louppe",
+          "given": "Gilles"
+        }
+      ],
+      "authorsText": "Kyle Cranmer, Johann Brehmer, and Gilles Louppe.",
+      "etAl": false,
+      "title": "The frontier of simulation-based inference",
+      "venue": "Proceedings of the National Academy of Sciences",
+      "volume": "117",
+      "issue": "48",
+      "pages": "30055-30062",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 2,
+    "pdfPage": 13,
+    "expected": {
+      "title": "The frontier of simulation-based inference",
+      "authors": "Cranmer; Brehmer; Louppe",
+      "year": 2020,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "cs.NE_2611.24848.pdf",
+    "parsed": {
+      "raw": "[5] Takahiro Doi and Ichiro Fujita. Cross-matching: a modified cross-correlation underlying threshold energy model and match-based depth perception. Frontiers in Computational Neuroscience, 8, 2014.",
+      "clean": "Takahiro Doi and Ichiro Fujita. Cross-matching: a modified cross-correlation underlying threshold energy model and match-based depth perception. Frontiers in Computational Neuroscience, 8, 2014.",
+      "label": "5",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2014,
+      "years": [
+        2014
+      ],
+      "authors": [
+        {
+          "family": "Doi",
+          "given": "Takahiro"
+        },
+        {
+          "family": "Fujita",
+          "given": "Ichiro"
+        }
+      ],
+      "authorsText": "Takahiro Doi and Ichiro Fujita.",
+      "etAl": false,
+      "title": "Cross-matching: a modified cross-correlation underlying threshold energy model and match-based depth perception",
+      "venue": "Frontiers in Computational Neuroscience",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 5,
+    "pdfPage": 13,
+    "expected": {
+      "title": "Cross-matching: a modified cross-correlation underlying threshold energy model and match-based depth perception",
+      "authors": "Doi; Fujita",
+      "year": 2014,
+      "venue": "Frontiers in Computational Neuroscience",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "cs.NE_2611.24848.pdf",
+    "parsed": {
+      "raw": "[7] David J. Fleet, Hermann Wagner, and David J. Heeger. Neural encoding of binocular disparity: Energy models, position shifts and phase shifts. Vision Research, 36(12):1839-1857, 1996.",
+      "clean": "David J. Fleet, Hermann Wagner, and David J. Heeger. Neural encoding of binocular disparity: Energy models, position shifts and phase shifts. Vision Research, 36(12):1839-1857, 1996.",
+      "label": "7",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 1996,
+      "years": [
+        1839,
+        1996
+      ],
+      "authors": [
+        {
+          "family": "Fleet",
+          "given": "David J."
+        },
+        {
+          "family": "Wagner",
+          "given": "Hermann"
+        },
+        {
+          "family": "Heeger",
+          "given": "David J."
+        }
+      ],
+      "authorsText": "David J. Fleet, Hermann Wagner, and David J. Heeger.",
+      "etAl": false,
+      "title": "Neural encoding of binocular disparity: Energy models, position shifts and phase shifts",
+      "venue": "Vision Research",
+      "volume": "36",
+      "issue": "12",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 7,
+    "pdfPage": 13,
+    "expected": {
+      "title": "Neural encoding of binocular disparity: Energy models, position shifts and phase shifts",
+      "authors": "Fleet; Wagner; Heeger",
+      "year": 1996,
+      "venue": "Vision Research",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "nlin.CD_2611.23434.pdf",
+    "parsed": {
+      "raw": "[52] Jan P. Williams, Dima Tretiak, Steven L. Brunton, J. Nathan Kutz, and Krithika Manohar. OpenReservoirComputing: GPU-accelerated reservoir computing in JAX. Journal of Open Source Software, 11(123):10486, 2026.",
+      "clean": "Jan P. Williams, Dima Tretiak, Steven L. Brunton, J. Nathan Kutz, and Krithika Manohar. OpenReservoirComputing: GPU-accelerated reservoir computing in JAX. Journal of Open Source Software, 11(123):10486, 2026.",
+      "label": "52",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2026,
+      "years": [
+        2026
+      ],
+      "authors": [
+        {
+          "family": "Williams",
+          "given": "Jan P."
+        },
+        {
+          "family": "Tretiak",
+          "given": "Dima"
+        },
+        {
+          "family": "Brunton",
+          "given": "Steven L."
+        },
+        {
+          "family": "Kutz",
+          "given": "J. Nathan"
+        },
+        {
+          "family": "Manohar",
+          "given": "Krithika"
+        }
+      ],
+      "authorsText": "Jan P. Williams, Dima Tretiak, Steven L. Brunton, J. Nathan Kutz, and Krithika Manohar.",
+      "etAl": false,
+      "title": "OpenReservoirComputing: GPU-accelerated reservoir computing in JAX",
+      "venue": "Journal of Open Source Software",
+      "volume": "11",
+      "issue": "123",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 52,
+    "pdfPage": 21,
+    "expected": {
+      "title": "OpenReservoirComputing: GPU-accelerated reservoir computing in JAX",
+      "authors": "Williams; Tretiak; Brunton; Kutz; Manohar",
+      "year": 2026,
+      "venue": "Journal of Open Source Software",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "nlin.CD_2611.23434.pdf",
+    "parsed": {
+      "raw": "[47] Junyoung Chung, Caglar Gulcehre, KyungHyun Cho, and Yoshua Bengio. Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling, December 2014. arXiv:1412.3555 [cs].",
+      "clean": "Junyoung Chung, Caglar Gulcehre, KyungHyun Cho, and Yoshua Bengio. Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling, December 2014. arXiv.",
+      "label": "47",
+      "dois": [],
+      "arxivIds": [
+        "1412.3555"
+      ],
+      "urls": [],
+      "year": 2014,
+      "years": [
+        2014
+      ],
+      "authors": [
+        {
+          "family": "Chung",
+          "given": "Junyoung"
+        },
+        {
+          "family": "Gulcehre",
+          "given": "Caglar"
+        },
+        {
+          "family": "Cho",
+          "given": "KyungHyun"
+        },
+        {
+          "family": "Bengio",
+          "given": "Yoshua"
+        }
+      ],
+      "authorsText": "Junyoung Chung, Caglar Gulcehre, KyungHyun Cho, and Yoshua Bengio.",
+      "etAl": false,
+      "title": "Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling",
+      "venue": "arXiv",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 47,
+    "pdfPage": 21,
+    "expected": {
+      "title": "Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling",
+      "authors": "Chung; Gulcehre; Cho; Bengio",
+      "year": 2014,
+      "venue": "arXiv",
+      "identifiers": "arXiv:1412.3555"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": true
+    },
+    "note": ""
+  },
+  {
+    "file": "nlin.CD_2611.23434.pdf",
+    "parsed": {
+      "raw": "[11] Peter J. Schmid. Dynamic mode decomposition of numerical and experimental data. Journal of Fluid Mechanics, 656:5-28, 2010.",
+      "clean": "Peter J. Schmid. Dynamic mode decomposition of numerical and experimental data. Journal of Fluid Mechanics, 656:5-28, 2010.",
+      "label": "11",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2010,
+      "years": [
+        2010
+      ],
+      "authors": [
+        {
+          "family": "Schmid",
+          "given": "Peter J."
+        }
+      ],
+      "authorsText": "Peter J. Schmid.",
+      "etAl": false,
+      "title": "Dynamic mode decomposition of numerical and experimental data",
+      "venue": "Journal of Fluid Mechanics",
+      "pages": "5-28",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 11,
+    "pdfPage": 18,
+    "expected": {
+      "title": "Dynamic mode decomposition of numerical and experimental data",
+      "authors": "P. J. Schmid",
+      "year": 2010,
+      "venue": "Journal of Fluid Mechanics",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "nlin.CD_2611.23434.pdf",
+    "parsed": {
+      "raw": "[60] James M. Hyman, Basil Nicolaenko, and Stéphane Zaleski. Order and complexity in the Kuramoto-Sivashinsky model of weakly turbulent interfaces. Physica D: Nonlinear Phenomena, 23(1-3):265-292, 1986.",
+      "clean": "James M. Hyman, Basil Nicolaenko, and Stéphane Zaleski. Order and complexity in the Kuramoto-Sivashinsky model of weakly turbulent interfaces. Physica D: Nonlinear Phenomena, 23(1-3):265-292, 1986.",
+      "label": "60",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 1986,
+      "years": [
+        1986
+      ],
+      "authors": [
+        {
+          "family": "Hyman",
+          "given": "James M."
+        },
+        {
+          "family": "Nicolaenko",
+          "given": "Basil"
+        },
+        {
+          "family": "Zaleski",
+          "given": "Stéphane"
+        }
+      ],
+      "authorsText": "James M. Hyman, Basil Nicolaenko, and Stéphane Zaleski.",
+      "etAl": false,
+      "title": "Order and complexity in the Kuramoto-Sivashinsky model of weakly turbulent interfaces",
+      "venue": "Physica D: Nonlinear Phenomena",
+      "volume": "23",
+      "issue": "1-3",
+      "pages": "265-292",
+      "kind": "book",
+      "placeholders": []
+    },
+    "n": 60,
+    "pdfPage": 22,
+    "expected": {
+      "title": "Order and complexity in the Kuramoto-Sivashinsky model of weakly turbulent interfaces",
+      "authors": "Hyman; Nicolaenko; Zaleski",
+      "year": 1986,
+      "venue": "Physica D: Nonlinear Phenomena",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "nlin.CD_2611.23434.pdf",
+    "parsed": {
+      "raw": "[5] Krithika Manohar, Bingni W. Brunton, J. Nathan Kutz, and Steven L. Brunton. Data-Driven Sparse Sensor Placement for Reconstruction: Demonstrating the Benefits of Exploiting Known Patterns. IEEE Control Systems Magazine, 38(3):63-86, June 2018.",
+      "clean": "Krithika Manohar, Bingni W. Brunton, J. Nathan Kutz, and Steven L. Brunton. Data-Driven Sparse Sensor Placement for Reconstruction: Demonstrating the Benefits of Exploiting Known Patterns. IEEE Control Systems Magazine, 38(3):63-86, June 2018.",
+      "label": "5",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2018,
+      "years": [
+        2018
+      ],
+      "authors": [
+        {
+          "family": "Manohar",
+          "given": "Krithika"
+        },
+        {
+          "family": "Brunton",
+          "given": "Bingni W."
+        },
+        {
+          "family": "Kutz",
+          "given": "J. Nathan"
+        },
+        {
+          "family": "Brunton",
+          "given": "Steven L."
+        }
+      ],
+      "authorsText": "Krithika Manohar, Bingni W. Brunton, J. Nathan Kutz, and Steven L. Brunton.",
+      "etAl": false,
+      "title": "Data-Driven Sparse Sensor Placement for Reconstruction: Demonstrating the Benefits of Exploiting Known Patterns",
+      "venue": "IEEE Control Systems Magazine",
+      "volume": "38",
+      "issue": "3",
+      "pages": "63-86",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 5,
+    "pdfPage": 18,
+    "expected": {
+      "title": "Data-Driven Sparse Sensor Placement for Reconstruction: Demonstrating the Benefits of Exploiting Known Patterns",
+      "authors": "Manohar; Brunton; Kutz; Brunton",
+      "year": 2018,
+      "venue": "IEEE Control Systems Magazine",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "plos_10_1371_journal_pone_0363220.pdf",
+    "parsed": {
+      "raw": "19. Nanyonga SM, Matafwali SK, Kibira D, Kitutu FE. Treatment and treatment outcomes of snakebite envenoming in Uganda: a retrospective analysis. Trans R Soc Trop Med Hyg. 2025;119(7):796-803. https://doi.org/10.1093/trstmh/trae112 PMID: 39749485",
+      "clean": "Nanyonga SM, Matafwali SK, Kibira D, Kitutu FE. Treatment and treatment outcomes of snakebite envenoming in Uganda: a retrospective analysis. Trans R Soc Trop Med Hyg. 2025;119(7):796-803. PMID: 39749485",
+      "label": "19",
+      "dois": [
+        "10.1093/trstmh/trae112"
+      ],
+      "arxivIds": [],
+      "urls": [
+        "https://doi.org/10.1093/trstmh/trae112"
+      ],
+      "pmid": "39749485",
+      "year": 2025,
+      "years": [
+        2025
+      ],
+      "authors": [
+        {
+          "family": "Nanyonga",
+          "given": "SM"
+        },
+        {
+          "family": "Matafwali",
+          "given": "SK"
+        },
+        {
+          "family": "Kibira",
+          "given": "D"
+        },
+        {
+          "family": "Kitutu",
+          "given": "FE"
+        }
+      ],
+      "authorsText": "Nanyonga SM, Matafwali SK, Kibira D, Kitutu FE.",
+      "etAl": false,
+      "title": "Treatment and treatment outcomes of snakebite envenoming in Uganda: a retrospective analysis",
+      "venue": "Trans R Soc Trop Med Hyg",
+      "volume": "119",
+      "issue": "7",
+      "pages": "796-803",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 19,
+    "pdfPage": 16,
+    "expected": {
+      "title": "Treatment and treatment outcomes of snakebite envenoming in Uganda: a retrospective analysis",
+      "authors": "Nanyonga; Matafwali; Kibira; Kitutu",
+      "year": 2025,
+      "venue": "Trans R Soc Trop Med Hyg",
+      "identifiers": "10.1093/trstmh/trae112; PMID 39749485"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": true
+    },
+    "note": "PMID kept in raw, DOI extracted"
+  },
+  {
+    "file": "plos_10_1371_journal_pone_0363220.pdf",
+    "parsed": {
+      "raw": "32. St. Mary’s Hospital Lacor. St. Mary’s Hospital Lacor. 2026. https://www.lacorhospital.org/ Accessed 2026 July 4.",
+      "clean": "St. Mary’s Hospital Lacor. St. Mary’s Hospital Lacor. 2026. 2026 July 4.",
+      "label": "32",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [
+        "https://www.lacorhospital.org/"
+      ],
+      "year": 2026,
+      "years": [
+        2026,
+        2026
+      ],
+      "authors": [
+        {
+          "family": "Lacor",
+          "given": "St. Mary’s Hospital"
+        }
+      ],
+      "authorsText": "St. Mary’s Hospital Lacor.",
+      "etAl": false,
+      "title": "St. Mary’s Hospital Lacor",
+      "venue": "2026",
+      "kind": "web",
+      "placeholders": []
+    },
+    "n": 32,
+    "pdfPage": 16,
+    "expected": {
+      "title": "St. Mary's Hospital Lacor",
+      "authors": "St. Mary's Hospital Lacor (organisation)",
+      "year": 2026,
+      "venue": "web page",
+      "identifiers": "https://www.lacorhospital.org/"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": "na",
+      "identifiers": true
+    },
+    "note": "web page"
+  },
+  {
+    "file": "plos_10_1371_journal_pone_0363220.pdf",
+    "parsed": {
+      "raw": "31. Arua Regional Referral Hospital. Overview of Arua Regional Referral Hospital. Arua: Arua Regional Referral Hospital. 2025.",
+      "clean": "Arua Regional Referral Hospital. Overview of Arua Regional Referral Hospital. Arua: Arua Regional Referral Hospital. 2025.",
+      "label": "31",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [],
+      "year": 2025,
+      "years": [
+        2025
+      ],
+      "authors": [
+        {
+          "family": "Hospital",
+          "given": "Arua Regional Referral"
+        }
+      ],
+      "authorsText": "Arua Regional Referral Hospital.",
+      "etAl": false,
+      "title": "Overview of Arua Regional Referral Hospital",
+      "venue": "Arua: Arua Regional Referral Hospital",
+      "kind": "book",
+      "placeholders": []
+    },
+    "n": 31,
+    "pdfPage": 16,
+    "expected": {
+      "title": "Overview of Arua Regional Referral Hospital",
+      "authors": "Arua Regional Referral Hospital (organisation)",
+      "year": 2025,
+      "venue": "report (publisher)",
+      "identifiers": "none printed"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": "na",
+      "identifiers": "na"
+    },
+    "note": ""
+  },
+  {
+    "file": "plos_10_1371_journal_pone_0363220.pdf",
+    "parsed": {
+      "raw": "18. Vaiyapuri S, Vaiyapuri R, Ashokan R, Ramasamy K, Nattamaisundar K, Jeyaraj A, et al. Snakebite and its socio-economic impact on the rural population of Tamil Nadu, India. PLoS One. 2013;8(11):e80090. https://doi.org/10.1371/journal.pone.0080090 PMID: 24278244",
+      "clean": "Vaiyapuri S, Vaiyapuri R, Ashokan R, Ramasamy K, Nattamaisundar K, Jeyaraj A, et al. Snakebite and its socio-economic impact on the rural population of Tamil Nadu, India. PLoS One. 2013;8(11):e80090. PMID: 24278244",
+      "label": "18",
+      "dois": [
+        "10.1371/journal.pone.0080090"
+      ],
+      "arxivIds": [],
+      "urls": [
+        "https://doi.org/10.1371/journal.pone.0080090"
+      ],
+      "pmid": "24278244",
+      "year": 2013,
+      "years": [
+        2013
+      ],
+      "authors": [
+        {
+          "family": "Vaiyapuri",
+          "given": "S"
+        },
+        {
+          "family": "Vaiyapuri",
+          "given": "R"
+        },
+        {
+          "family": "Ashokan",
+          "given": "R"
+        },
+        {
+          "family": "Ramasamy",
+          "given": "K"
+        },
+        {
+          "family": "Nattamaisundar",
+          "given": "K"
+        },
+        {
+          "family": "Jeyaraj",
+          "given": "A"
+        }
+      ],
+      "authorsText": "Vaiyapuri S, Vaiyapuri R, Ashokan R, Ramasamy K, Nattamaisundar K, Jeyaraj A, et al.",
+      "etAl": true,
+      "title": "Snakebite and its socio-economic impact on the rural population of Tamil Nadu, India",
+      "venue": "PLoS One",
+      "volume": "8",
+      "issue": "11",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 18,
+    "pdfPage": 16,
+    "expected": {
+      "title": "Snakebite and its socio-economic impact on the rural population of Tamil Nadu, India",
+      "authors": "Vaiyapuri S ... Jeyaraj A, et al.",
+      "year": 2013,
+      "venue": "PLoS One",
+      "identifiers": "10.1371/journal.pone.0080090"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": true
+    },
+    "note": ""
+  },
+  {
+    "file": "plos_10_1371_journal_pone_0363220.pdf",
+    "parsed": {
+      "raw": "21. Wafula ST, Mugume IB, Namakula LN, Nalugya A, Naggayi V, Walekhwa AW, et al. Healthcare practitioners’ knowledge of snakebite management and associated factors in high-burden, low-resource settings in Uganda. Trans R Soc Trop Med Hyg. 2023;117(8):569-79. https://doi.org/10.1093/ trstmh/trad015 PMID: 37072287",
+      "clean": "Wafula ST, Mugume IB, Namakula LN, Nalugya A, Naggayi V, Walekhwa AW, et al. Healthcare practitioners’ knowledge of snakebite management and associated factors in high-burden, low-resource settings in Uganda. Trans R Soc Trop Med Hyg. 2023;117(8):569-79. trstmh/trad015 PMID: 37072287",
+      "label": "21",
+      "dois": [],
+      "arxivIds": [],
+      "urls": [
+        "https://doi.org/10.1093/"
+      ],
+      "pmid": "37072287",
+      "year": 2023,
+      "years": [
+        2023
+      ],
+      "authors": [
+        {
+          "family": "Wafula",
+          "given": "ST"
+        },
+        {
+          "family": "Mugume",
+          "given": "IB"
+        },
+        {
+          "family": "Namakula",
+          "given": "LN"
+        },
+        {
+          "family": "Nalugya",
+          "given": "A"
+        },
+        {
+          "family": "Naggayi",
+          "given": "V"
+        },
+        {
+          "family": "Walekhwa",
+          "given": "AW"
+        }
+      ],
+      "authorsText": "Wafula ST, Mugume IB, Namakula LN, Nalugya A, Naggayi V, Walekhwa AW, et al.",
+      "etAl": true,
+      "title": "Healthcare practitioners’ knowledge of snakebite management and associated factors in high-burden, low-resource settings in Uganda",
+      "venue": "Trans R Soc Trop Med Hyg",
+      "volume": "117",
+      "issue": "8",
+      "pages": "569-79",
+      "kind": "web",
+      "placeholders": []
+    },
+    "n": 21,
+    "pdfPage": 16,
+    "expected": {
+      "title": "Healthcare practitioners' knowledge of snakebite management and associated factors in high-burden, low-resource settings in Uganda",
+      "authors": "Wafula ST ... Walekhwa AW, et al.",
+      "year": 2023,
+      "venue": "Trans R Soc Trop Med Hyg",
+      "identifiers": "10.1093/trstmh/trad015"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": false
+    },
+    "note": "DOI broken at a line end after the slash ('10.1093/ trstmh/trad015'); only 'https://doi.org/10.1093/' kept"
+  },
+  {
+    "file": "plos_10_1371_journal_pone_0360499.pdf",
+    "parsed": {
+      "raw": "6. Obiegala A, Silaghi C. Candidatus Neoehrlichia Mikurensis - Recent insights and future perspectives on clinical cases, vectors, and reservoirs in Europe. Curr Clin Microbiol Rep. 2018;5:1-9. https://doi.org/10.1007/s40588-018-0085-y",
+      "clean": "Obiegala A, Silaghi C. Candidatus Neoehrlichia Mikurensis - Recent insights and future perspectives on clinical cases, vectors, and reservoirs in Europe. Curr Clin Microbiol Rep. 2018;5:1-9.",
+      "label": "6",
+      "dois": [
+        "10.1007/s40588-018-0085-y"
+      ],
+      "arxivIds": [],
+      "urls": [
+        "https://doi.org/10.1007/s40588-018-0085-y"
+      ],
+      "year": 2018,
+      "years": [
+        2018
+      ],
+      "authors": [
+        {
+          "family": "Obiegala",
+          "given": "A"
+        },
+        {
+          "family": "Silaghi",
+          "given": "C"
+        }
+      ],
+      "authorsText": "Obiegala A, Silaghi C",
+      "etAl": false,
+      "title": "Candidatus Neoehrlichia Mikurensis - Recent insights and future perspectives on clinical cases, vectors, and reservoirs in Europe",
+      "venue": "Curr Clin Microbiol Rep",
+      "pages": "1-9",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 6,
+    "pdfPage": 7,
+    "expected": {
+      "title": "Candidatus Neoehrlichia Mikurensis—Recent insights and future perspectives on clinical cases, vectors, and reservoirs in Europe",
+      "authors": "Obiegala; Silaghi",
+      "year": 2018,
+      "venue": "Curr Clin Microbiol Rep",
+      "identifiers": "10.1007/s40588-018-0085-y"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": true
+    },
+    "note": ""
+  },
+  {
+    "file": "plos_10_1371_journal_pone_0360499.pdf",
+    "parsed": {
+      "raw": "11. Jahfari S, Fonville M, Hengeveld P, Reusken C, Scholte E-J, Takken W, et al. Prevalence of Neoehrlichia mikurensis in ticks and rodents from North-west Europe. Parasit Vectors. 2012;5:74. https://doi.org/10.1186/1756-3305-5-74 PMID: 22515314",
+      "clean": "Jahfari S, Fonville M, Hengeveld P, Reusken C, Scholte E-J, Takken W, et al. Prevalence of Neoehrlichia mikurensis in ticks and rodents from North-west Europe. Parasit Vectors. 2012;5:74. PMID: 22515314",
+      "label": "11",
+      "dois": [
+        "10.1186/1756-3305-5-74"
+      ],
+      "arxivIds": [],
+      "urls": [
+        "https://doi.org/10.1186/1756-3305-5-74"
+      ],
+      "pmid": "22515314",
+      "year": 2012,
+      "years": [
+        2012
+      ],
+      "authors": [
+        {
+          "family": "Jahfari",
+          "given": "S"
+        },
+        {
+          "family": "Fonville",
+          "given": "M"
+        },
+        {
+          "family": "Hengeveld",
+          "given": "P"
+        },
+        {
+          "family": "Reusken",
+          "given": "C"
+        },
+        {
+          "family": "Scholte",
+          "given": "E-J"
+        },
+        {
+          "family": "Takken",
+          "given": "W"
+        }
+      ],
+      "authorsText": "Jahfari S, Fonville M, Hengeveld P, Reusken C, Scholte E-J, Takken W, et al.",
+      "etAl": true,
+      "title": "Prevalence of Neoehrlichia mikurensis in ticks and rodents from North-west Europe",
+      "venue": "Parasit Vectors",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 11,
+    "pdfPage": 7,
+    "expected": {
+      "title": "Prevalence of Neoehrlichia mikurensis in ticks and rodents from North-west Europe",
+      "authors": "Jahfari S ... Takken W, et al.",
+      "year": 2012,
+      "venue": "Parasit Vectors",
+      "identifiers": "10.1186/1756-3305-5-74; PMID 22515314"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": true
+    },
+    "note": ""
+  },
+  {
+    "file": "plos_10_1371_journal_pone_0360499.pdf",
+    "parsed": {
+      "raw": "16. Jenkins A, Raasok C, Pedersen BN, Jensen K, Andreassen Å, Soleng A, et al. Detection of Candidatus Neoehrlichia mikurensis in Norway up to the northern limit of Ixodes ricinus distribution using a novel real time PCR test targeting the groEL gene. BMC Microbiol. 2019;19(1):199. https:// doi.org/10.1186/s12866-019-1502-y PMID: 31462211",
+      "clean": "Jenkins A, Raasok C, Pedersen BN, Jensen K, Andreassen Å, Soleng A, et al. Detection of Candidatus Neoehrlichia mikurensis in Norway up to the northern limit of Ixodes ricinus distribution using a novel real time PCR test targeting the groEL gene. BMC Microbiol. 2019;19(1):199. https:// doi.org/10.1186/s12866-019-1502-y PMID: 31462211",
+      "label": "16",
+      "dois": [
+        "10.1186/s12866-019-1502-y"
+      ],
+      "arxivIds": [],
+      "urls": [],
+      "pmid": "31462211",
+      "year": 2019,
+      "years": [
+        2019
+      ],
+      "authors": [
+        {
+          "family": "Jenkins",
+          "given": "A"
+        },
+        {
+          "family": "Raasok",
+          "given": "C"
+        },
+        {
+          "family": "Pedersen",
+          "given": "BN"
+        },
+        {
+          "family": "Jensen",
+          "given": "K"
+        },
+        {
+          "family": "Andreassen",
+          "given": "Å"
+        },
+        {
+          "family": "Soleng",
+          "given": "A"
+        }
+      ],
+      "authorsText": "Jenkins A, Raasok C, Pedersen BN, Jensen K, Andreassen Å, Soleng A, et al.",
+      "etAl": true,
+      "title": "Detection of Candidatus Neoehrlichia mikurensis in Norway up to the northern limit of Ixodes ricinus distribution using a novel real time PCR test targeting the groEL gene",
+      "venue": "BMC Microbiol",
+      "volume": "19",
+      "issue": "1",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 16,
+    "pdfPage": 7,
+    "expected": {
+      "title": "Detection of Candidatus Neoehrlichia mikurensis in Norway up to the northern limit of Ixodes ricinus distribution using a novel real time PCR test targeting the groEL gene",
+      "authors": "Jenkins A ... Soleng A, et al.",
+      "year": 2019,
+      "venue": "BMC Microbiol",
+      "identifiers": "10.1186/s12866-019-1502-y"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": true
+    },
+    "note": "DOI recovered despite 'https:// doi.org' break"
+  },
+  {
+    "file": "plos_10_1371_journal_pone_0360499.pdf",
+    "parsed": {
+      "raw": "19. Fabri ND, Sprong H, Hofmeester TR, Heesterbeek H, Donnars BF, Widemo F, et al. Wild ungulate species differ in their contribution to the transmission of Ixodes ricinus-borne pathogens. Parasit Vectors. 2021;14(1):360. https://doi.org/10.1186/s13071-021-04860-w PMID: 34246293",
+      "clean": "Fabri ND, Sprong H, Hofmeester TR, Heesterbeek H, Donnars BF, Widemo F, et al. Wild ungulate species differ in their contribution to the transmission of Ixodes ricinus-borne pathogens. Parasit Vectors. 2021;14(1):360. PMID: 34246293",
+      "label": "19",
+      "dois": [
+        "10.1186/s13071-021-04860-w"
+      ],
+      "arxivIds": [],
+      "urls": [
+        "https://doi.org/10.1186/s13071-021-04860-w"
+      ],
+      "pmid": "34246293",
+      "year": 2021,
+      "years": [
+        2021
+      ],
+      "authors": [
+        {
+          "family": "Fabri",
+          "given": "ND"
+        },
+        {
+          "family": "Sprong",
+          "given": "H"
+        },
+        {
+          "family": "Hofmeester",
+          "given": "TR"
+        },
+        {
+          "family": "Heesterbeek",
+          "given": "H"
+        },
+        {
+          "family": "Donnars",
+          "given": "BF"
+        },
+        {
+          "family": "Widemo",
+          "given": "F"
+        }
+      ],
+      "authorsText": "Fabri ND, Sprong H, Hofmeester TR, Heesterbeek H, Donnars BF, Widemo F, et al.",
+      "etAl": true,
+      "title": "Wild ungulate species differ in their contribution to the transmission of Ixodes ricinus-borne pathogens",
+      "venue": "Parasit Vectors",
+      "volume": "14",
+      "issue": "1",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 19,
+    "pdfPage": 7,
+    "expected": {
+      "title": "Wild ungulate species differ in their contribution to the transmission of Ixodes ricinus-borne pathogens",
+      "authors": "Fabri ND ... Widemo F, et al.",
+      "year": 2021,
+      "venue": "Parasit Vectors",
+      "identifiers": "10.1186/s13071-021-04860-w"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": true,
+      "authors": true,
+      "year": true,
+      "venue": true,
+      "identifiers": true
+    },
+    "note": ""
+  },
+  {
+    "file": "plos_10_1371_journal_pone_0360499.pdf",
+    "parsed": {
+      "raw": "21. Burri C, Schumann O, Schumann C, Gern L. Are Apodemus spp. mice and Myodes glareolus reservoirs for Borrelia miyamotoi, Candidatus Neoehrlichia mikurensis, Rickettsia helvetica, R. monacensis and Anaplasma phagocytophilum?. Ticks Tick-Borne Dis. 2014;5:245-51. https://doi. org/10.1016/j.ttbdis.2013.11.007",
+      "clean": "Burri C, Schumann O, Schumann C, Gern L. Are Apodemus spp. mice and Myodes glareolus reservoirs for Borrelia miyamotoi, Candidatus Neoehrlichia mikurensis, Rickettsia helvetica, R. monacensis and Anaplasma phagocytophilum?. Ticks Tick-Borne Dis. 2014;5:245-51. org/10.1016/j.ttbdis.2013.11.007",
+      "label": "21",
+      "dois": [
+        "10.1016/j.ttbdis.2013.11.007"
+      ],
+      "arxivIds": [],
+      "urls": [
+        "https://doi"
+      ],
+      "year": 2014,
+      "years": [
+        2014
+      ],
+      "authors": [
+        {
+          "family": "Burri",
+          "given": "C"
+        },
+        {
+          "family": "Schumann",
+          "given": "O"
+        },
+        {
+          "family": "Schumann",
+          "given": "C"
+        },
+        {
+          "family": "spp",
+          "given": "Gern L. Are Apodemus"
+        }
+      ],
+      "authorsText": "Burri C, Schumann O, Schumann C, Gern L. Are Apodemus spp.",
+      "etAl": false,
+      "title": "mice and Myodes glareolus reservoirs for Borrelia miyamotoi, Candidatus Neoehrlichia mikurensis, Rickettsia helvetica, R. monacensis and Anaplasma phagocytophilum?",
+      "venue": "Ticks Tick-Borne Dis",
+      "volume": "2013",
+      "issue": "11",
+      "pages": "245-51",
+      "kind": "article",
+      "placeholders": []
+    },
+    "n": 21,
+    "pdfPage": 7,
+    "expected": {
+      "title": "Are Apodemus spp. mice and Myodes glareolus reservoirs for Borrelia miyamotoi, Candidatus Neoehrlichia mikurensis, Rickettsia helvetica, R. monacensis and Anaplasma phagocytophilum?",
+      "authors": "Burri; Schumann; Schumann; Gern",
+      "year": 2014,
+      "venue": "Ticks Tick-Borne Dis",
+      "identifiers": "10.1016/j.ttbdis.2013.11.007"
+    },
+    "correct": {
+      "segmentation": true,
+      "title": false,
+      "authors": false,
+      "year": true,
+      "venue": true,
+      "identifiers": true
+    },
+    "note": "'Are Apodemus spp.' read into the author list"
+  }
+]

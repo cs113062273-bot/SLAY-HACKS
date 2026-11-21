@@ -1,0 +1,1785 @@
+{
+ "about": "Manual blind3 review records, merged into results.json / field_sample.json / miss_sample.txt by app/scripts/merge-blind3-reviews.py after the frozen run finished. Field truth is the PDF itself (poppler pdftotext, independent of pdf.js), page numbers are physical PDF pages. Identifier truth = identifiers printed in the PDF entry.",
+ "flags": {
+  "cs.DC_2611.26526.pdf#6": {
+   "judgement": "false alarm",
+   "review": "Web page (SC26 reproducibility badges, 'Accessed ... [Online]. Available: URL'), not a scholarly work; the PDF prints the URL with spaces ('https : / / sc2 6.supercomputing.org/...') so it was not recognised as a web reference and should have been 'not indexed'. https://sc26.supercomputing.org/program/papers/reproducibility-appendices-badges/"
+  },
+  "cs.DC_2611.26526.pdf#28": {
+   "judgement": "uncertain",
+   "review": "Balsam exists (arXiv:1909.08704, same six authors), but the printed DOI 10.1109/PyHPC49452.2019.00006 is not registered (doi.org handle API responseCode 100; neighbouring PyHPC49452 DOIs also unregistered) and no PyHPC 2019 proceedings record for it was found in Crossref. Publication as cited could not be confirmed by the reviewer either. https://arxiv.org/abs/1909.08704"
+  },
+  "cs.SI_2611.23175.pdf#32": {
+   "judgement": "false alarm",
+   "review": "Correct reference (Isella et al. 2011, J. Theor. Biol. 271(1):166-180). Title 'What's in a crowd? Analysis of face-to-face behavioral networks' was cut at the question mark, so the second half was compared as the venue. https://doi.org/10.1016/j.jtbi.2010.11.033"
+  },
+  "math.NA_2611.25245.pdf#1": {
+   "judgement": "false alarm",
+   "review": "Achieser's Theory of Approximation exists as cited: the 2013 Dover (Courier Corporation) reprint of the 1956 English translation. The matched record is a 1960 book review in the Mathematical Gazette, not the book. https://doi.org/10.2307/3612294"
+  },
+  "math.NA_2611.25245.pdf#8": {
+   "judgement": "false alarm",
+   "review": "Bartels and Stewart, 'Solution of the matrix equation AX+XB=C [F4]' (Algorithm 432), Comm. ACM 15(9):820-826, 1972, exists as cited; Veracite picked a different 1986 paper with a similar title. https://doi.org/10.1145/361573.361582"
+  },
+  "math.NA_2611.25245.pdf#32": {
+   "judgement": "false alarm",
+   "review": "Correct reference; the indexed title dropped the H2 symbol ('optimal- points'), so the only difference is a lost math symbol. https://doi.org/10.1016/j.apnum.2012.10.001"
+  },
+  "math.ST_2611.25163.pdf#15": {
+   "judgement": "false alarm",
+   "review": "Dasgupta, Learning mixtures of Gaussians, FOCS 1999 (40th Annual Symposium, Cat. No. 99CB37039), pp. 634-644: cited correctly. The IEEE record carries a 2003 online date while its own venue names the 1999 symposium. https://doi.org/10.1109/SFFCS.1999.814639"
+  },
+  "math.ST_2611.25163.pdf#24": {
+   "judgement": "false alarm",
+   "review": "Fei and Chen, COLT 2018, PMLR vol. 75, pp. 1931-1965, exists as cited; PMLR proceedings have no DOI and only the arXiv version was found. https://proceedings.mlr.press/v75/fei18a.html"
+  },
+  "physics.plasm-ph_2611.24523.pdf#2": {
+   "judgement": "false alarm",
+   "review": "Real but incompletely cited book chapter: P. K. Shukla, 'Solitons in Plasma Physics', in Nonlinear Waves (Cambridge University Press, 1983), pp. 197-220; the entry gives only the book title and first page. Labelled fabricated. https://doi.org/10.1017/CBO9780511569500.012"
+  },
+  "physics.plasm-ph_2611.24523.pdf#21": {
+   "judgement": "false alarm",
+   "review": "Exists as cited: Jyoti and H. K. Malik, Physics of Plasmas 18, 102116 (2011) (mononymous first author); not found while Semantic Scholar was rate-limited. https://doi.org/10.1063/1.3654138"
+  },
+  "physics.ins-det_2611.24776.pdf#5": {
+   "judgement": "false alarm",
+   "review": "Published in CVPR 2026 as cited (CVF open access lists it); CVF papers have no DOI so only the arXiv version was indexed. https://openaccess.thecvf.com/content/CVPR2026/html/Chen_Neural_Field-Based_3D_Surface_Reconstruction_of_Microstructures_from_Multi-Detector_Signals_CVPR_2026_paper.html"
+  },
+  "physics.ins-det_2611.24776.pdf#7": {
+   "judgement": "false alarm",
+   "review": "The entry cites the PARADIM dataset that accompanies Chen et al., Science 2021, explicitly labelled 'Dataset' with its licence; comparing it with the Science article's venue is wrong. The dataset should be treated as not indexed. https://doi.org/10.1126/science.abg2533"
+  },
+  "physics.ins-det_2611.24776.pdf#8": {
+   "judgement": "false alarm",
+   "review": "NeurIPS 2023 Deep Learning and Inverse Problems workshop paper hosted on OpenReview, not in scholarly indexes; the PDF prints the URL with a space ('https: //openreview.net'), so it was not recognised as an online-only work. https://openreview.net/forum?id=jjCGqnhTr7"
+  },
+  "physics.ins-det_2611.24776.pdf#13": {
+   "judgement": "false alarm",
+   "review": "Exists: CVPR 2026 paper (CVF open access) and arXiv:2602.08029; not found while Semantic Scholar was rate-limited and OpenAlex/Crossref do not index CVF. https://arxiv.org/abs/2602.08029"
+  },
+  "cond-mat.mes-hall_2611.26616.pdf#5": {
+   "judgement": "false alarm",
+   "review": "Correct reference (Schindler et al., Sci. Adv. 4, eaat0346, 2018). The venue comparison kept the volume and alphanumeric article number ('Science Advances 4, eaat0346') and reported a venue mismatch. https://doi.org/10.1126/sciadv.aat0346"
+  },
+  "cond-mat.mes-hall_2611.26616.pdf#48": {
+   "judgement": "false alarm",
+   "review": "Correct reference (Nayak et al., Sci. Adv. 5, eaax6996, 2019); same article-number venue comparison defect. https://doi.org/10.1126/sciadv.aax6996"
+  },
+  "cond-mat.mes-hall_2611.26616.pdf#60": {
+   "judgement": "false alarm",
+   "review": "Segmentation error: entry [61] (Panigrahi, Moessner, Roy, Non-Hermitian dislocation modes: Stability and melting across exceptional points, PRB 106, L041302, 2022) is interleaved on the last reference page with fragments of a neighbouring column ('Non-Hermitian metals and semimetals, Physical Review B 104, 235113'), so a mixed title was compared. The cited work exists as printed. https://doi.org/10.1103/PhysRevB.106.L041302"
+  },
+  "astro-ph.HE_2611.26547.pdf#2": {
+   "judgement": "false alarm",
+   "review": "Correct reference (Baldo et al., PRC 58, 1921, 1998). The cited title is the INSPIRE rendering of the published '3P2-3F2 pairing...' title (spectroscopic notation spelled out); cosmetic only. https://doi.org/10.1103/PhysRevC.58.1921"
+  },
+  "astro-ph.HE_2611.26547.pdf#8": {
+   "judgement": "false alarm",
+   "review": "Correct: ApJ Letters 719, L167 (2010). Crossref files ApJL articles under 'The Astrophysical Journal', and the L-prefixed article number was left in the cited venue. https://doi.org/10.1088/2041-8205/719/2/L167"
+  },
+  "astro-ph.HE_2611.26547.pdf#12": {
+   "judgement": "false alarm",
+   "review": "Correct: ApJ Letters 687, L87 (2008); same ApJL venue defect. https://doi.org/10.1086/593703"
+  },
+  "astro-ph.HE_2611.26547.pdf#14": {
+   "judgement": "false alarm",
+   "review": "Correct: ApJ Letters 628, L53 (2005); same ApJL venue defect. https://doi.org/10.1086/432615"
+  },
+  "astro-ph.HE_2611.26547.pdf#15": {
+   "judgement": "false alarm",
+   "review": "arXiv:1304.3566 is the preprint of this very PRL (same five authors); its arXiv title is an abbreviated form ('Imprints of superfluidity on magneto-elastic QPOs of SGRs'), so 'wrong identifier' is false. https://arxiv.org/abs/1304.3566"
+  },
+  "astro-ph.HE_2611.26547.pdf#21": {
+   "judgement": "false alarm",
+   "review": "Espinoza, Lyne, Stappers and Kramer, 'A study of 315 glitches in the rotation of 102 pulsars', MNRAS 414, 1679 (2011) exists with exactly these four authors; Veracite compared it with a different AIP conference paper. https://doi.org/10.1111/j.1365-2966.2011.18503.x"
+  },
+  "astro-ph.HE_2611.26547.pdf#28": {
+   "judgement": "false alarm",
+   "review": "Correct (Carter, Chamel, Haensel, IJMPD 15, 777, 2006); INSPIRE-style '2.' part marker in place of the published colon; cosmetic. https://doi.org/10.1142/S0218271806008504"
+  },
+  "astro-ph.HE_2611.26547.pdf#50": {
+   "judgement": "false alarm",
+   "review": "Correct: ApJ Letters 743, L20 (2011); same ApJL venue defect. https://doi.org/10.1088/2041-8205/743/1/L20"
+  },
+  "astro-ph.HE_2611.26547.pdf#69": {
+   "judgement": "false alarm",
+   "review": "Landau's 1941 paper appeared in Russian in ZhETF 11, 592 (as cited) and in English in Phys. Rev. 60, 356; citing the Russian original is correct. https://doi.org/10.1103/PhysRev.60.356"
+  },
+  "astro-ph.HE_2611.26547.pdf#70": {
+   "judgement": "false alarm",
+   "review": "Lebedev and Khalatnikov, ZhETF 83, 1601 (1982) (Sov. Phys. JETP 56, 923) is the cited Russian journal paper; the Physics Letters A article is a separate related publication. https://doi.org/10.1016/0375-9601(82)90268-7"
+  },
+  "astro-ph.HE_2611.26547.pdf#86": {
+   "judgement": "false alarm",
+   "review": "Gourgoulhon's arXiv lecture notes gr-qc/0703035 (2007) exist as cited; the old-style arXiv identifier was not extracted and OpenAlex did not respond. https://arxiv.org/abs/gr-qc/0703035"
+  },
+  "astro-ph.HE_2611.26547.pdf#91": {
+   "judgement": "false alarm",
+   "review": "Correct; the index record misspells Iordanskii as 'Lordanskii' (OCR error in the record). https://doi.org/10.1007/978-3-662-04665-4_10"
+  },
+  "astro-ph.HE_2611.26547.pdf#111": {
+   "judgement": "false alarm",
+   "review": "Correct: ApJ Letters 648, L51 (2006); same ApJL venue defect. https://doi.org/10.1086/507518"
+  },
+  "astro-ph.HE_2611.26547.pdf#117": {
+   "judgement": "false alarm",
+   "review": "Correct: ApJ Letters 740, L35 (2011); same ApJL venue defect. https://doi.org/10.1088/2041-8205/740/2/L35"
+  },
+  "astro-ph.HE_2611.26547.pdf#132": {
+   "judgement": "false alarm",
+   "review": "Correct (Del Zanna et al., A&A 473, 11, 2007); 'an Eulerian Conservative High Order' vs 'a Eulerian conservative high-order' is cosmetic. https://doi.org/10.1051/0004-6361:20077093"
+  },
+  "astro-ph.HE_2611.26547.pdf#134": {
+   "judgement": "false alarm",
+   "review": "Correct (Giacomazzo and Rezzolla, JFM 562, 223, 2006); the arXiv/INSPIRE title abbreviates magnetohydrodynamics as MHD. https://doi.org/10.1017/S0022112006001145"
+  },
+  "astro-ph.HE_2611.26547.pdf#139": {
+   "judgement": "false alarm",
+   "review": "Correct PRD 65, 084024 (2002); the cited title is the arXiv gr-qc/0110047 title (without 'numerical', '2.' for 'II'), which the entry also cites. https://doi.org/10.1103/PhysRevD.65.084024"
+  },
+  "astro-ph.HE_2611.26547.pdf#163": {
+   "judgement": "false alarm",
+   "review": "Correct: the 2nd revised edition of Hairer, Nørsett and Wanner was published in 1993 (the entry says '2nd ed.'); the record is the 1987 first edition. https://doi.org/10.1007/978-3-540-78862-1"
+  },
+  "hep-ex_2611.26449.pdf#5": {
+   "judgement": "uncertain",
+   "review": "The citation reproduces the INSPIRE title 'On determining a weak phase from CP asymmetries in charged B decays'; the published Phys. Lett. B 265, 172 title is 'On determining a weak phase from charged B decay asymmetries'. Real paper, genuinely different title wording; harmless but not identical. https://doi.org/10.1016/0370-2693(91)90034-N"
+  },
+  "hep-ex_2611.26449.pdf#6": {
+   "judgement": "false alarm",
+   "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://doi.org/10.1016/0370-2693(91)91756-l"
+  },
+  "hep-ex_2611.26449.pdf#13": {
+   "judgement": "false alarm",
+   "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/1308.5663"
+  },
+  "hep-ex_2611.26449.pdf#15": {
+   "judgement": "false alarm",
+   "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/1912.07621"
+  },
+  "hep-ex_2611.26449.pdf#29": {
+   "judgement": "false alarm",
+   "review": "The Physics Briefing Book (CERN-ESU-004, arXiv:1910.11775) lists R. K. Ellis among its editors; the OSTI record shows institutions instead of editors. https://arxiv.org/abs/1910.11775"
+  },
+  "hep-ex_2611.26449.pdf#30": {
+   "judgement": "false alarm",
+   "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/2411.18639"
+  },
+  "hep-ex_2611.26449.pdf#39": {
+   "judgement": "false alarm",
+   "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2310.04277"
+  },
+  "hep-ex_2611.26449.pdf#40": {
+   "judgement": "false alarm",
+   "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2311.10434"
+  },
+  "hep-ex_2611.26449.pdf#42": {
+   "judgement": "false alarm",
+   "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2309.05514"
+  },
+  "hep-ex_2611.26449.pdf#45": {
+   "judgement": "false alarm",
+   "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2509.15139"
+  },
+  "hep-ex_2611.26449.pdf#47": {
+   "judgement": "false alarm",
+   "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/2605.03501"
+  },
+  "hep-ex_2611.26449.pdf#48": {
+   "judgement": "false alarm",
+   "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/2208.06512"
+  },
+  "hep-ex_2611.26449.pdf#50": {
+   "judgement": "false alarm",
+   "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2407.18001"
+  },
+  "hep-ex_2611.26449.pdf#51": {
+   "judgement": "false alarm",
+   "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2510.04963"
+  },
+  "hep-ex_2611.26449.pdf#58": {
+   "judgement": "false alarm",
+   "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/hep-ph/0406184"
+  },
+  "hep-ex_2611.26449.pdf#61": {
+   "judgement": "false alarm",
+   "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/2508.16337"
+  },
+  "hep-ex_2611.26449.pdf#62": {
+   "judgement": "false alarm",
+   "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/hep-ph/9909391"
+  },
+  "hep-ex_2611.26449.pdf#63": {
+   "judgement": "false alarm",
+   "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/hep-ph/9502238"
+  },
+  "hep-ex_2611.26449.pdf#66": {
+   "judgement": "false alarm",
+   "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/1903.10952"
+  },
+  "hep-ex_2611.26449.pdf#70": {
+   "judgement": "false alarm",
+   "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/1211.3361"
+  },
+  "hep-ex_2611.26449.pdf#73": {
+   "judgement": "false alarm",
+   "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/2101.02560"
+  },
+  "hep-ex_2611.26449.pdf#74": {
+   "judgement": "false alarm",
+   "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/2205.12975"
+  },
+  "hep-ex_2611.26449.pdf#75": {
+   "judgement": "false alarm",
+   "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/2409.03830"
+  },
+  "hep-ex_2611.26449.pdf#76": {
+   "judgement": "false alarm",
+   "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/2512.10911"
+  },
+  "hep-ex_2611.26449.pdf#77": {
+   "judgement": "false alarm",
+   "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/2602.22320"
+  },
+  "hep-ex_2611.26449.pdf#80": {
+   "judgement": "false alarm",
+   "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/1203.3131"
+  },
+  "hep-ex_2611.26449.pdf#83": {
+   "judgement": "false alarm",
+   "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/2106.02014"
+  },
+  "hep-ex_2611.26449.pdf#84": {
+   "judgement": "false alarm",
+   "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/1611.06143"
+  },
+  "hep-ex_2611.26449.pdf#87": {
+   "judgement": "false alarm",
+   "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/1909.10196"
+  },
+  "hep-ex_2611.26449.pdf#90": {
+   "judgement": "false alarm",
+   "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/1810.06874"
+  },
+  "hep-ex_2611.26449.pdf#96": {
+   "judgement": "false alarm",
+   "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/2405.06556"
+  },
+  "hep-ex_2611.26449.pdf#98": {
+   "judgement": "false alarm",
+   "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/1602.03160"
+  },
+  "hep-ex_2611.26449.pdf#100": {
+   "judgement": "false alarm",
+   "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/1307.4384"
+  },
+  "hep-ex_2611.26449.pdf#102": {
+   "judgement": "false alarm",
+   "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/hep-ph/0211282"
+  },
+  "hep-ex_2611.26449.pdf#103": {
+   "judgement": "false alarm",
+   "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/0910.5437"
+  },
+  "hep-ex_2611.26449.pdf#106": {
+   "judgement": "false alarm",
+   "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/hep-ph/0304027"
+  },
+  "hep-ex_2611.26449.pdf#107": {
+   "judgement": "false alarm",
+   "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/2206.07501"
+  },
+  "hep-ex_2611.26449.pdf#109": {
+   "judgement": "false alarm",
+   "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/2011.12041"
+  },
+  "hep-ex_2611.26449.pdf#112": {
+   "judgement": "false alarm",
+   "review": "Real paper cited correctly (collaboration paper with arXiv ID and journal reference); Veracite compared it with a different record (proceedings, thesis chapter or book section with a similar title). https://arxiv.org/abs/2010.08483"
+  },
+  "hep-ex_2611.26449.pdf#113": {
+   "judgement": "false alarm",
+   "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/2604.05701"
+  },
+  "hep-ex_2611.26449.pdf#117": {
+   "judgement": "false alarm",
+   "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/2301.10328"
+  },
+  "hep-ex_2611.26449.pdf#123": {
+   "judgement": "false alarm",
+   "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/1709.05855"
+  },
+  "hep-ex_2611.26449.pdf#124": {
+   "judgement": "false alarm",
+   "review": "Correct: PRD 93 paper with its Erratum in PRD 94, both cited; the erratum record was matched. https://arxiv.org/abs/1602.03455"
+  },
+  "hep-ex_2611.26449.pdf#125": {
+   "judgement": "false alarm",
+   "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/1210.0939"
+  },
+  "hep-ex_2611.26449.pdf#126": {
+   "judgement": "false alarm",
+   "review": "Correct reference; differences come from LaTeX/HTML markup in the index title ($y_{CP}$, &gt;) or a collaboration name ('LHCb/CLEO/BESIII collaboration', 'CKMfitter Group', 'Heavy Flavor Averaging Group') read as an author missing from the record. https://arxiv.org/abs/2506.07906"
+  },
+  "hep-ex_2611.26449.pdf#132": {
+   "judgement": "false alarm",
+   "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/1203.3804"
+  },
+  "hep-ex_2611.26449.pdf#133": {
+   "judgement": "false alarm",
+   "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/1509.06628"
+  },
+  "hep-ex_2611.26449.pdf#135": {
+   "judgement": "false alarm",
+   "review": "The arXiv identifier is this paper's own preprint; the arXiv title is written in LaTeX ($B^{\\pm}\rightarrow$, $K_S^0$) while the citation uses Unicode symbols, so the titles were wrongly judged different and 'wrong identifier' is false. https://arxiv.org/abs/1010.2817"
+  },
+  "hep-ex_2611.26449.pdf#137": {
+   "judgement": "false alarm",
+   "review": "Correct reference; 'JHEP' is the standard abbreviation of Journal of High Energy Physics, which the venue check did not recognise (acronym of a name whose first word is a stop word). https://arxiv.org/abs/1904.01129"
+  },
+  "hep-ex_2611.26449.pdf#138": {
+   "judgement": "false alarm",
+   "review": "GammaCombo software cited by its Zenodo concept DOI, which always resolves to the latest release ('LHCb-PAPER-2026-058'); software cited correctly, not a mismatch. https://doi.org/10.5281/zenodo.3627034"
+  },
+  "hep-ex_2611.26449.pdf#143": {
+   "judgement": "false alarm",
+   "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/hep-ph/9508362"
+  },
+  "hep-ex_2611.26449.pdf#144": {
+   "judgement": "false alarm",
+   "review": "Falk, Nir and Petrov, JHEP 12 (1999) 019 has exactly these three authors; the index record lists only two, and JHEP was not recognised as the venue. https://arxiv.org/abs/hep-ph/9911369"
+  },
+  "hep-ex_2611.26449.pdf#145": {
+   "judgement": "false alarm",
+   "review": "Correct reference; the PDF text layer scatters subscripts and symbols (stray 'S'/'s' from K0_S/B0_s, broken arrows and primes), so title/venue fragments were compared instead of the real fields. https://arxiv.org/abs/hep-ph/0610389"
+  },
+  "q-bio.BM_2611.19885.pdf#32": {
+   "judgement": "false alarm",
+   "review": "Correct reference (Lewis et al., Science 389, eadv9817, 2025); the alphanumeric article number left in the cited venue caused a venue mismatch. https://doi.org/10.1126/science.adv9817"
+  },
+  "q-bio.BM_2611.19885.pdf#60": {
+   "judgement": "false alarm",
+   "review": "Segmentation error: entry 60 (Brehmer et al., Does equivariance matter at scale?, TMLR 2025) was merged with entry 61 (Jülich Supercomputing Centre, JUWELS, JLSRF 7, 2021) because the superscript label '61' is glued to the next word. Both works exist. https://doi.org/10.17815/jlsrf-7-183"
+  },
+  "nlin.CD_2611.23434.pdf#1": {
+   "judgement": "false alarm",
+   "review": "Correct reference (Everson and Sirovich, JOSA A 12(8):1657-1664, 1995); 'JOSA A' is the standard abbreviation of Journal of the Optical Society of America A, not recognised because 'journal' is dropped before the acronym comparison. https://doi.org/10.1364/JOSAA.12.001657"
+  },
+  "nlin.CD_2611.23434.pdf#2": {
+   "judgement": "false alarm",
+   "review": "Correct reference (Barrault, Maday, Nguyen, Patera, C. R. Math. 339(9):667-672, 2004); the title's first word 'An' was read as an extra author. https://doi.org/10.1016/j.crma.2004.08.006"
+  },
+  "plos_10_1371_journal_pone_0363220.pdf#1": {
+   "judgement": "false alarm",
+   "review": "Correct reference (Ralph et al., BMJ 2022;376:e057926); the trailing 'PMID: 34996773' was read as the venue. https://doi.org/10.1136/bmj-2020-057926"
+  },
+  "plos_10_1371_journal_pone_0363220.pdf#27": {
+   "judgement": "false alarm",
+   "review": "Correct reference (Cuschieri S., The STROBE guidelines, Saudi J Anaesth 2019;13 Suppl 1:S31-4); a title word was read as an extra author. https://doi.org/10.4103/sja.SJA_543_18"
+  },
+  "plos_10_1371_journal_pone_0363220.pdf#28": {
+   "judgement": "false alarm",
+   "review": "Government report (Uganda Bureau of Statistics, National Population and Housing Census 2024 Final Report), not a scholarly work; should be not indexed, not compared with an unrelated Jerusalem census record. https://www.ubos.org/"
+  },
+  "plos_10_1371_journal_pone_0363220.pdf#39": {
+   "judgement": "real error",
+   "review": "Incomplete author list: the publisher record lists 8 authors (Chuat, Alcoba, Eyong, Wanda, Comte, Nkwescheu, Chappuis, Hudelson); the entry lists the first 6 without 'et al.' and also omits the volume ('2021;:9-10'). https://doi.org/10.1016/j.toxcx.2021.100072"
+  },
+  "plos_10_1371_journal_pone_0360499.pdf#2": {
+   "judgement": "false alarm",
+   "review": "Correct reference; 'Infect Dis Lond Engl' is the NLM/PubMed abbreviation of Infectious Diseases (London, England). https://doi.org/10.1080/23744235.2022.2087732"
+  },
+  "plos_10_1371_journal_pone_0360499.pdf#7": {
+   "judgement": "false alarm",
+   "review": "Correct reference (Andersson et al., Vector Borne Zoonotic Dis 2013;13(7):438-42); a title word was read as an extra author. https://doi.org/10.1089/vbz.2012.1118"
+  },
+  "plos_10_1371_journal_pone_0360499.pdf#9": {
+   "judgement": "false alarm",
+   "review": "Correct reference (Diniz PPVP et al., J Clin Microbiol 2011); the four-letter Vancouver initials 'PPVP' were read as a separate author. https://doi.org/10.1128/JCM.02327-10"
+  },
+  "plos_10_1371_journal_pone_0360499.pdf#10": {
+   "judgement": "false alarm",
+   "review": "Correct reference (Beck et al., Parasit Vectors 2014;7 Suppl 1:O28); a title word was read as an extra author. https://doi.org/10.1186/1756-3305-7-S1-O28"
+  },
+  "plos_10_1371_journal_pone_0360499.pdf#21": {
+   "judgement": "false alarm",
+   "review": "Correct reference (Burri et al., Ticks Tick Borne Dis 2014;5:245-51); the title's first words 'Are Apodemus spp.' were read as an author. https://doi.org/10.1016/j.ttbdis.2013.11.007"
+  }
+ },
+ "fields": {
+  "cs.DC_2611.26526.pdf#34": {
+   "pdfPage": 12,
+   "expected": {
+    "title": "PSI/J: A Portable Interface for Submitting, Monitoring, and Managing Jobs",
+    "authors": "M. Hategan-Marandiuc et al.",
+    "year": 2023,
+    "venue": "IEEE 19th International Conference on e-Science (eScience)",
+    "identifiers": "10.1109/e-Science58273.2023.10254912"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": false
+   },
+   "note": "PDF text spaces the DOI ('e-Scien ce58273'); parsed DOI truncated to 10.1109/e-scien"
+  },
+  "cs.DC_2611.26526.pdf#40": {
+   "pdfPage": 12,
+   "expected": {
+    "title": "The Spack Package Manager: Bringing Order to HPC Software Chaos",
+    "authors": "T. Gamblin et al.",
+    "year": 2015,
+    "venue": "SC 2015 (ACM)",
+    "identifiers": "10.1145/2807591.2807623"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": false
+   },
+   "note": "spaced DOI truncated to 10.1145/2807591.280"
+  },
+  "cs.DC_2611.26526.pdf#35": {
+   "pdfPage": 12,
+   "expected": {
+    "title": "Singularity: Scientific containers for mobility of compute",
+    "authors": "Kurtzer; Sochat; Bauer",
+    "year": 2017,
+    "venue": "PLOS ONE",
+    "identifiers": "10.1371/journal.pone.0177459"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": false
+   },
+   "note": "spaced DOI ('10.1 371/...') not extracted"
+  },
+  "cs.DC_2611.26526.pdf#30": {
+   "pdfPage": 12,
+   "expected": {
+    "title": "Pegasus, a workflow management system for science automation",
+    "authors": "E. Deelman et al.",
+    "year": 2015,
+    "venue": "Future Generation Computer Systems",
+    "identifiers": "10.1016/j.future.2014.10.008"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": false
+   },
+   "note": "spaced DOI ('1 0.1016/...') not extracted"
+  },
+  "cs.DC_2611.26526.pdf#39": {
+   "pdfPage": 12,
+   "expected": {
+    "title": "Enhancing reproducibility in scientific computing: Metrics and registry for Singularity containers",
+    "authors": "Sochat; Prybol; Kurtzer",
+    "year": 2017,
+    "venue": "PLOS ONE",
+    "identifiers": "10.1371/journal.pone.0188511"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": false
+   },
+   "note": "spaced DOI truncated to 10.1371/journal.pone.01"
+  },
+  "cs.SI_2611.23175.pdf#19": {
+   "pdfPage": 18,
+   "expected": {
+    "title": "Temporal Network Theory",
+    "authors": "P. Holme; J. Saramäki (Eds.)",
+    "year": 2023,
+    "venue": "Springer (book)",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": false,
+    "authors": false,
+    "year": true,
+    "venue": "na",
+    "identifiers": "na"
+   },
+   "note": "edited book: title parsed as the publisher place ('Cham: Springer International Publishing'), book title appended as an author"
+  },
+  "cs.SI_2611.23175.pdf#41": {
+   "pdfPage": 18,
+   "expected": {
+    "title": "Ebola Virus Disease in West Africa - The First 9 Months of the Epidemic and Forward Projections",
+    "authors": "WHO Ebola Response Team",
+    "year": 2014,
+    "venue": "N. Engl. J. Med.",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": "organisation author kept as one name (split family/given, text intact)"
+  },
+  "cs.SI_2611.23175.pdf#33": {
+   "pdfPage": 18,
+   "expected": {
+    "title": "Data on face-to-face contacts in an office building suggest a low-cost vaccination strategy based on community linkers",
+    "authors": "Génois; Vestergaard; Fournet; Panisson; Bonmarin; Barrat",
+    "year": 2015,
+    "venue": "Netw. Sci.",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "cs.SI_2611.23175.pdf#44": {
+   "pdfPage": 18,
+   "expected": {
+    "title": "Estimating R0 from early exponential growth: Parallels between 1918 influenza and 2020 SARS-CoV-2 pandemics",
+    "authors": "Foster; Elderd; Richards; Dallas",
+    "year": 2022,
+    "venue": "PNAS Nexus",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "cs.SI_2611.23175.pdf#37": {
+   "pdfPage": 18,
+   "expected": {
+    "title": "Measuring social networks in primates: Wearable sensors versus direct observations",
+    "authors": "Gelardi; Godard; Paleressompoulle; Claidiere; Barrat",
+    "year": 2020,
+    "venue": "Proc. R. Soc. A (Math. Phys. Eng. Sci.)",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "math.NA_2611.25245.pdf#25": {
+   "pdfPage": 30,
+   "expected": {
+    "title": "Robust and well-conditioned eigenstructure assignment via Sylvester's equation",
+    "authors": "R. K. Cavin III; S. P. Bhattacharyya",
+    "year": 1983,
+    "venue": "Optim. Control Appl. Methods",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": false,
+    "authors": false,
+    "year": true,
+    "venue": false,
+    "identifiers": "na"
+   },
+   "note": "generational suffix ', III' read as the end of the author list: title became the second author, venue absorbed the title"
+  },
+  "math.NA_2611.25245.pdf#57": {
+   "pdfPage": 31,
+   "expected": {
+    "title": "A solution to Crouzeix's conjecture",
+    "authors": "Lorist; Schwenninger",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "identifiers": "arXiv:2608.03841"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": true
+   },
+   "note": ""
+  },
+  "math.NA_2611.25245.pdf#79": {
+   "pdfPage": 32,
+   "expected": {
+    "title": "Near-circularity for the rational Zolotarev problem in the complex plane",
+    "authors": "G. Starke",
+    "year": 1992,
+    "venue": "J. Approx. Theory",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "math.NA_2611.25245.pdf#12": {
+   "pdfPage": 30,
+   "expected": {
+    "title": "On the singular values of matrices with displacement structure",
+    "authors": "Beckermann; Townsend",
+    "year": 2017,
+    "venue": "SIAM J. Matrix Anal. Appl.",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "math.NA_2611.25245.pdf#83": {
+   "pdfPage": 32,
+   "expected": {
+    "title": "Computing with functions in spherical and polar geometries II. the disk",
+    "authors": "Wilber; Townsend; Wright",
+    "year": 2017,
+    "venue": "SIAM J. Sci. Comput.",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "math.ST_2611.25163.pdf#5": {
+   "pdfPage": 74,
+   "expected": {
+    "title": "Smoothed analysis of tensor decompositions",
+    "authors": "Bhaskara; Charikar; Moitra; Vijayaraghavan",
+    "year": 2014,
+    "venue": "STOC 2014 (Proc. 46th ACM STOC)",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "math.ST_2611.25163.pdf#26": {
+   "pdfPage": 75,
+   "expected": {
+    "title": "Learning mixtures of spherical Gaussians: moment methods and spectral decompositions",
+    "authors": "Hsu; Kakade",
+    "year": 2013,
+    "venue": "ITCS 2013",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "math.ST_2611.25163.pdf#46": {
+   "pdfPage": 77,
+   "expected": {
+    "title": "Sharp optimal recovery in the two component Gaussian mixture model",
+    "authors": "Ndaoud",
+    "year": 2022,
+    "venue": "The Annals of Statistics",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "math.ST_2611.25163.pdf#4": {
+   "pdfPage": 74,
+   "expected": {
+    "title": "Phase transition of the largest eigenvalue for nonnull complex sample covariance matrices",
+    "authors": "Baik; Ben Arous; Péché",
+    "year": 2005,
+    "venue": "The Annals of Probability",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": false,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": "compound surname split: family 'Arous', given 'Gérard Ben'"
+  },
+  "math.ST_2611.25163.pdf#11": {
+   "pdfPage": 74,
+   "expected": {
+    "title": "Phase transition for stochastic block model with more than √n communities",
+    "authors": "Carpentier; Giraud; Verzelen",
+    "year": 2026,
+    "venue": "COLT 2026 (PMLR 336)",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": false,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": "radical sign displaced in the PDF text layer ('transition √ for ... than n'); all words present, scored strictly as incorrect"
+  },
+  "physics.plasm-ph_2611.24523.pdf#4": {
+   "pdfPage": 38,
+   "expected": {
+    "title": "(no title printed)",
+    "authors": "Washimi; Taniuti",
+    "year": 1966,
+    "venue": "Physical Review Letters 17, 996",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": "na",
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": "APS style without titles"
+  },
+  "physics.plasm-ph_2611.24523.pdf#18": {
+   "pdfPage": 38,
+   "expected": {
+    "title": "(no title printed)",
+    "authors": "Chatterjee; Roychoudhury",
+    "year": 1997,
+    "venue": "Canadian Journal of Physics 75, 337",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": "na",
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "physics.plasm-ph_2611.24523.pdf#57": {
+   "pdfPage": 40,
+   "expected": {
+    "title": "(no title printed)",
+    "authors": "Verheest; Hellberg; Olivier",
+    "year": 2020,
+    "venue": "Physics of Plasmas 27, 062306",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": "na",
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "physics.plasm-ph_2611.24523.pdf#56": {
+   "pdfPage": 40,
+   "expected": {
+    "title": "(no title printed)",
+    "authors": "Olivier; Verheest; Maharaj",
+    "year": 2017,
+    "venue": "Journal of Plasma Physics 83, 905830605",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": "na",
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "physics.plasm-ph_2611.24523.pdf#45": {
+   "pdfPage": 39,
+   "expected": {
+    "title": "(no title printed)",
+    "authors": "M. A. Hoefer",
+    "year": 2014,
+    "venue": "Journal of Nonlinear Science 24, 525",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": "na",
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "physics.ins-det_2611.24776.pdf#19": {
+   "pdfPage": 9,
+   "expected": {
+    "title": "Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions",
+    "authors": "Halko; Martinsson; Tropp",
+    "year": 2011,
+    "venue": "SIAM Review",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "physics.ins-det_2611.24776.pdf#39": {
+   "pdfPage": 10,
+   "expected": {
+    "title": "An improved ptychographical phase retrieval algorithm for diffractive imaging",
+    "authors": "Maiden; Rodenburg",
+    "year": 2009,
+    "venue": "Ultramicroscopy",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": "line-break hyphen 'diffrac- tive' rejoined"
+  },
+  "physics.ins-det_2611.24776.pdf#51": {
+   "pdfPage": 10,
+   "expected": {
+    "title": "Very-high dynamic range, 10,000 frames/second pixel array detector for electron microscopy",
+    "authors": "13 authors Philipp ... Gruner",
+    "year": 2022,
+    "venue": "Microscopy and Microanalysis",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": "all 13 authors"
+  },
+  "physics.ins-det_2611.24776.pdf#30": {
+   "pdfPage": 9,
+   "expected": {
+    "title": "Multiple scattering of waves",
+    "authors": "Melvin Lax",
+    "year": 1951,
+    "venue": "Reviews of Modern Physics",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "physics.ins-det_2611.24776.pdf#42": {
+   "pdfPage": 10,
+   "expected": {
+    "title": "A randomized algorithm for the decomposition of matrices",
+    "authors": "Martinsson; Rokhlin; Tygert",
+    "year": 2011,
+    "venue": "Applied and Computational Harmonic Analysis",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "cond-mat.mes-hall_2611.26616.pdf#30": {
+   "pdfPage": 6,
+   "expected": {
+    "title": "Electric polarization as a nonquantized topological response and boundary luttinger theorem",
+    "authors": "Song; He; Vishwanath; Wang",
+    "year": 2021,
+    "venue": "Physical Review Research 3, 023011",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "cond-mat.mes-hall_2611.26616.pdf#7": {
+   "pdfPage": 5,
+   "expected": {
+    "title": "Second-order topological insulators and superconductors with an order-two crystalline symmetry",
+    "authors": "Geier; Trifunovic; Hoskam; Brouwer",
+    "year": 2018,
+    "venue": "Physical Review B 97, 205135",
+    "identifiers": "arXiv:1801.10053"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": true
+   },
+   "note": ""
+  },
+  "cond-mat.mes-hall_2611.26616.pdf#39": {
+   "pdfPage": 6,
+   "expected": {
+    "title": "Unquantized anomalies in topological semimetals",
+    "authors": "Gioia; Wang; Burkov",
+    "year": 2021,
+    "venue": "Physical Review Research 3, 043067",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "cond-mat.mes-hall_2611.26616.pdf#55": {
+   "pdfPage": 6,
+   "expected": {
+    "title": "Observation of bulk-dislocation correspondence in photonic crystals",
+    "authors": "Liu; Zhang; Liang; Li; Poo; Jiang",
+    "year": 2024,
+    "venue": "Physical Review Applied 22, 064097",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "cond-mat.mes-hall_2611.26616.pdf#50": {
+   "pdfPage": 6,
+   "expected": {
+    "title": "Site-resolved imaging of fermionic 6Li in an optical lattice",
+    "authors": "8 authors Parsons ... Greiner",
+    "year": 2015,
+    "venue": "Physical Review Letters 114, 213002",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "astro-ph.HE_2611.26547.pdf#125": {
+   "pdfPage": 94,
+   "expected": {
+    "title": "Robust Recovery of Primitive Variables in Relativistic Ideal Magnetohydrodynamics",
+    "authors": "Kastaun; Kalinani; Ciolfi",
+    "year": 2021,
+    "venue": "Phys. Rev. D 103, 023018",
+    "identifiers": "arXiv:2005.01821"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": true
+   },
+   "note": ""
+  },
+  "astro-ph.HE_2611.26547.pdf#73": {
+   "pdfPage": 92,
+   "expected": {
+    "title": "Relativistic models for superconducting superfluid mixtures",
+    "authors": "Carter; Langlois",
+    "year": 1998,
+    "venue": "Nucl. Phys. B 531, 478",
+    "identifiers": "arXiv:gr-qc/9806024"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": false
+   },
+   "note": "old-style arXiv identifier not extracted"
+  },
+  "astro-ph.HE_2611.26547.pdf#7": {
+   "pdfPage": 91,
+   "expected": {
+    "title": "A superfluid perspective on neutron star dynamics",
+    "authors": "N. Andersson",
+    "year": 2021,
+    "venue": "Universe 7, 17",
+    "identifiers": "arXiv:2103.10218"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": true
+   },
+   "note": ""
+  },
+  "astro-ph.HE_2611.26547.pdf#133": {
+   "pdfPage": 94,
+   "expected": {
+    "title": "Systematic construction of upwind constrained transport schemes for MHD",
+    "authors": "Mignone; Del Zanna",
+    "year": 2021,
+    "venue": "J. Comput. Phys. 424, 109748",
+    "identifiers": "arXiv:2004.10542"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": false,
+    "authors": false,
+    "year": true,
+    "venue": false,
+    "identifiers": true
+   },
+   "note": "surname particle 'Del Zanna' broke the author list; title absorbed author and venue"
+  },
+  "astro-ph.HE_2611.26547.pdf#40": {
+   "pdfPage": 92,
+   "expected": {
+    "title": "Quantised vortices and mutual friction in relativistic superfluids",
+    "authors": "Andersson; Wells; Vickers",
+    "year": 2016,
+    "venue": "Class. Quant. Grav. 33, 245010",
+    "identifiers": "arXiv:1601.07395"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": true
+   },
+   "note": ""
+  },
+  "hep-ex_2611.26449.pdf#106": {
+   "pdfPage": 51,
+   "expected": {
+    "title": "New strategies to obtain insights into CP violation through Bs0 → Ds±K∓, Ds∗±K∓, ... and B0 → D±π∓, Ds±π∓, ... decays",
+    "authors": "R. Fleischer",
+    "year": 2003,
+    "venue": "Nucl. Phys. B671, 459",
+    "identifiers": "arXiv:hep-ph/0304027"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": false,
+    "authors": true,
+    "year": true,
+    "venue": false,
+    "identifiers": false
+   },
+   "note": "subscripts scattered as stray 's'; title cut at a comma inside the decay list; old-style arXiv ID not extracted"
+  },
+  "hep-ex_2611.26449.pdf#73": {
+   "pdfPage": 49,
+   "expected": {
+    "title": "Probing the ∆U = 0 rule in three body charm decays",
+    "authors": "Dery; Grossman; Schacht; Soffer",
+    "year": 2021,
+    "venue": "JHEP 05 (2021) 179",
+    "identifiers": "arXiv:2101.02560"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": true
+   },
+   "note": ""
+  },
+  "hep-ex_2611.26449.pdf#107": {
+   "pdfPage": 52,
+   "expected": {
+    "title": "Averages of b-hadron, c-hadron, and τ-lepton properties as of 2021",
+    "authors": "Heavy Flavor Averaging Group, Y. S. Amhis et al.",
+    "year": 2023,
+    "venue": "Phys. Rev. D107, 052008",
+    "identifiers": "arXiv:2206.07501; doi:10.5281/zenodo.19371140"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": false,
+    "authors": false,
+    "year": true,
+    "venue": false,
+    "identifiers": true
+   },
+   "note": "collaboration prefix before the author list broke author/title split"
+  },
+  "hep-ex_2611.26449.pdf#66": {
+   "pdfPage": 49,
+   "expected": {
+    "title": "The emergence of the ∆U = 0 rule in charm physics",
+    "authors": "Grossman; Schacht",
+    "year": 2019,
+    "venue": "JHEP 07 (2019) 020",
+    "identifiers": "arXiv:1903.10952"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": true
+   },
+   "note": ""
+  },
+  "hep-ex_2611.26449.pdf#91": {
+   "pdfPage": 50,
+   "expected": {
+    "title": "Measurement of the charm mixing parameter yCP - yKπCP using two-body D0 meson decays",
+    "authors": "LHCb collaboration, R. Aaij et al.",
+    "year": 2022,
+    "venue": "Phys. Rev. D105, 092013",
+    "identifiers": "arXiv:2202.09106"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": false,
+    "authors": false,
+    "year": true,
+    "venue": false,
+    "identifiers": true
+   },
+   "note": "collaboration prefix plus displaced CP subscripts: title parsed as '092013, CP CP'"
+  },
+  "q-bio.BM_2611.19885.pdf#27": {
+   "pdfPage": 19,
+   "expected": {
+    "title": "Latent generative landscapes as maps of functional diversity in protein sequence space",
+    "authors": "Ziegler; Martin; Sinner; Morcos",
+    "year": 2023,
+    "venue": "Nature Communications 14, 2222",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "q-bio.BM_2611.19885.pdf#28": {
+   "pdfPage": 19,
+   "expected": {
+    "title": "Protein representations: Encoding biological information for machine learning in biocatalysis",
+    "authors": "7 authors Harding-Larsen ... Welner",
+    "year": 2024,
+    "venue": "Biotechnology Advances 77, 108459",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "q-bio.BM_2611.19885.pdf#49": {
+   "pdfPage": 20,
+   "expected": {
+    "title": "Schnet–a deep learning architecture for molecules and materials",
+    "authors": "Schütt; Sauceda; Kindermans; Tkatchenko; Müller",
+    "year": 2018,
+    "venue": "The Journal of chemical physics 148",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": "en dash normalised to hyphen"
+  },
+  "q-bio.BM_2611.19885.pdf#60": {
+   "pdfPage": 20,
+   "expected": {
+    "title": "Does equivariance matter at scale?",
+    "authors": "Brehmer; Behrends; Haan; Cohen",
+    "year": 2025,
+    "venue": "Transactions on Machine Learning Research",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": false,
+    "title": false,
+    "authors": false,
+    "year": true,
+    "venue": false,
+    "identifiers": false
+   },
+   "note": "merged with entry 61 (superscript label glued: '61Jülich'); took entry 61's title, venue and DOI"
+  },
+  "q-bio.BM_2611.19885.pdf#3": {
+   "pdfPage": 19,
+   "expected": {
+    "title": "The role of dynamic conformational ensembles in biomolecular recognition",
+    "authors": "Boehr; Nussinov; Wright",
+    "year": 2009,
+    "venue": "Nature chemical biology 5, 789-796",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "cs.NE_2611.24848.pdf#17": {
+   "pdfPage": 14,
+   "expected": {
+    "title": "A simple model accounts for the response of disparity-tuned v1 neurons to anticorrelated images",
+    "authors": "Read; Parker; Cumming",
+    "year": 2002,
+    "venue": "Visual Neuroscience",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "cs.NE_2611.24848.pdf#18": {
+   "pdfPage": 14,
+   "expected": {
+    "title": "Rejection of false matches for binocular correspondence in macaque visual cortical area v4",
+    "authors": "Tanabe; Umeda; Fujita",
+    "year": 2004,
+    "venue": "The Journal of Neuroscience",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "cs.NE_2611.24848.pdf#2": {
+   "pdfPage": 13,
+   "expected": {
+    "title": "The frontier of simulation-based inference",
+    "authors": "Cranmer; Brehmer; Louppe",
+    "year": 2020,
+    "venue": "Proceedings of the National Academy of Sciences",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "cs.NE_2611.24848.pdf#5": {
+   "pdfPage": 13,
+   "expected": {
+    "title": "Cross-matching: a modified cross-correlation underlying threshold energy model and match-based depth perception",
+    "authors": "Doi; Fujita",
+    "year": 2014,
+    "venue": "Frontiers in Computational Neuroscience",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "cs.NE_2611.24848.pdf#7": {
+   "pdfPage": 13,
+   "expected": {
+    "title": "Neural encoding of binocular disparity: Energy models, position shifts and phase shifts",
+    "authors": "Fleet; Wagner; Heeger",
+    "year": 1996,
+    "venue": "Vision Research",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "nlin.CD_2611.23434.pdf#52": {
+   "pdfPage": 21,
+   "expected": {
+    "title": "OpenReservoirComputing: GPU-accelerated reservoir computing in JAX",
+    "authors": "Williams; Tretiak; Brunton; Kutz; Manohar",
+    "year": 2026,
+    "venue": "Journal of Open Source Software",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "nlin.CD_2611.23434.pdf#47": {
+   "pdfPage": 21,
+   "expected": {
+    "title": "Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling",
+    "authors": "Chung; Gulcehre; Cho; Bengio",
+    "year": 2014,
+    "venue": "arXiv",
+    "identifiers": "arXiv:1412.3555"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": true
+   },
+   "note": ""
+  },
+  "nlin.CD_2611.23434.pdf#11": {
+   "pdfPage": 18,
+   "expected": {
+    "title": "Dynamic mode decomposition of numerical and experimental data",
+    "authors": "P. J. Schmid",
+    "year": 2010,
+    "venue": "Journal of Fluid Mechanics",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "nlin.CD_2611.23434.pdf#60": {
+   "pdfPage": 22,
+   "expected": {
+    "title": "Order and complexity in the Kuramoto-Sivashinsky model of weakly turbulent interfaces",
+    "authors": "Hyman; Nicolaenko; Zaleski",
+    "year": 1986,
+    "venue": "Physica D: Nonlinear Phenomena",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "nlin.CD_2611.23434.pdf#5": {
+   "pdfPage": 18,
+   "expected": {
+    "title": "Data-Driven Sparse Sensor Placement for Reconstruction: Demonstrating the Benefits of Exploiting Known Patterns",
+    "authors": "Manohar; Brunton; Kutz; Brunton",
+    "year": 2018,
+    "venue": "IEEE Control Systems Magazine",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "plos_10_1371_journal_pone_0363220.pdf#19": {
+   "pdfPage": 16,
+   "expected": {
+    "title": "Treatment and treatment outcomes of snakebite envenoming in Uganda: a retrospective analysis",
+    "authors": "Nanyonga; Matafwali; Kibira; Kitutu",
+    "year": 2025,
+    "venue": "Trans R Soc Trop Med Hyg",
+    "identifiers": "10.1093/trstmh/trae112; PMID 39749485"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": true
+   },
+   "note": "PMID kept in raw, DOI extracted"
+  },
+  "plos_10_1371_journal_pone_0363220.pdf#32": {
+   "pdfPage": 16,
+   "expected": {
+    "title": "St. Mary's Hospital Lacor",
+    "authors": "St. Mary's Hospital Lacor (organisation)",
+    "year": 2026,
+    "venue": "web page",
+    "identifiers": "https://www.lacorhospital.org/"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": "na",
+    "identifiers": true
+   },
+   "note": "web page"
+  },
+  "plos_10_1371_journal_pone_0363220.pdf#31": {
+   "pdfPage": 16,
+   "expected": {
+    "title": "Overview of Arua Regional Referral Hospital",
+    "authors": "Arua Regional Referral Hospital (organisation)",
+    "year": 2025,
+    "venue": "report (publisher)",
+    "identifiers": "none printed"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": "na",
+    "identifiers": "na"
+   },
+   "note": ""
+  },
+  "plos_10_1371_journal_pone_0363220.pdf#18": {
+   "pdfPage": 16,
+   "expected": {
+    "title": "Snakebite and its socio-economic impact on the rural population of Tamil Nadu, India",
+    "authors": "Vaiyapuri S ... Jeyaraj A, et al.",
+    "year": 2013,
+    "venue": "PLoS One",
+    "identifiers": "10.1371/journal.pone.0080090"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": true
+   },
+   "note": ""
+  },
+  "plos_10_1371_journal_pone_0363220.pdf#21": {
+   "pdfPage": 16,
+   "expected": {
+    "title": "Healthcare practitioners' knowledge of snakebite management and associated factors in high-burden, low-resource settings in Uganda",
+    "authors": "Wafula ST ... Walekhwa AW, et al.",
+    "year": 2023,
+    "venue": "Trans R Soc Trop Med Hyg",
+    "identifiers": "10.1093/trstmh/trad015"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": false
+   },
+   "note": "DOI broken at a line end after the slash ('10.1093/ trstmh/trad015'); only 'https://doi.org/10.1093/' kept"
+  },
+  "plos_10_1371_journal_pone_0360499.pdf#6": {
+   "pdfPage": 7,
+   "expected": {
+    "title": "Candidatus Neoehrlichia Mikurensis—Recent insights and future perspectives on clinical cases, vectors, and reservoirs in Europe",
+    "authors": "Obiegala; Silaghi",
+    "year": 2018,
+    "venue": "Curr Clin Microbiol Rep",
+    "identifiers": "10.1007/s40588-018-0085-y"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": true
+   },
+   "note": ""
+  },
+  "plos_10_1371_journal_pone_0360499.pdf#11": {
+   "pdfPage": 7,
+   "expected": {
+    "title": "Prevalence of Neoehrlichia mikurensis in ticks and rodents from North-west Europe",
+    "authors": "Jahfari S ... Takken W, et al.",
+    "year": 2012,
+    "venue": "Parasit Vectors",
+    "identifiers": "10.1186/1756-3305-5-74; PMID 22515314"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": true
+   },
+   "note": ""
+  },
+  "plos_10_1371_journal_pone_0360499.pdf#16": {
+   "pdfPage": 7,
+   "expected": {
+    "title": "Detection of Candidatus Neoehrlichia mikurensis in Norway up to the northern limit of Ixodes ricinus distribution using a novel real time PCR test targeting the groEL gene",
+    "authors": "Jenkins A ... Soleng A, et al.",
+    "year": 2019,
+    "venue": "BMC Microbiol",
+    "identifiers": "10.1186/s12866-019-1502-y"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": true
+   },
+   "note": "DOI recovered despite 'https:// doi.org' break"
+  },
+  "plos_10_1371_journal_pone_0360499.pdf#19": {
+   "pdfPage": 7,
+   "expected": {
+    "title": "Wild ungulate species differ in their contribution to the transmission of Ixodes ricinus-borne pathogens",
+    "authors": "Fabri ND ... Widemo F, et al.",
+    "year": 2021,
+    "venue": "Parasit Vectors",
+    "identifiers": "10.1186/s13071-021-04860-w"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": true,
+    "authors": true,
+    "year": true,
+    "venue": true,
+    "identifiers": true
+   },
+   "note": ""
+  },
+  "plos_10_1371_journal_pone_0360499.pdf#21": {
+   "pdfPage": 7,
+   "expected": {
+    "title": "Are Apodemus spp. mice and Myodes glareolus reservoirs for Borrelia miyamotoi, Candidatus Neoehrlichia mikurensis, Rickettsia helvetica, R. monacensis and Anaplasma phagocytophilum?",
+    "authors": "Burri; Schumann; Schumann; Gern",
+    "year": 2014,
+    "venue": "Ticks Tick-Borne Dis",
+    "identifiers": "10.1016/j.ttbdis.2013.11.007"
+   },
+   "correct": {
+    "segmentation": true,
+    "title": false,
+    "authors": false,
+    "year": true,
+    "venue": true,
+    "identifiers": true
+   },
+   "note": "'Are Apodemus spp.' read into the author list"
+  }
+ },
+ "misses": {
+  "cs.DC_2611.26526.pdf#35": "correct: title, 3 authors, year, venue and DOI agree with the PLOS ONE record",
+  "cs.DC_2611.26526.pdf#33": "correct: all fields agree with the IEEE record 10.1109/SBAC-PADW64858.2024.00013",
+  "cs.DC_2611.26526.pdf#25": "correct: all fields agree with 10.1016/j.future.2017.02.026",
+  "cs.SI_2611.23175.pdf#4": "correct: agrees with IEEE Trans. Big Data record (online 2024, issue 2025)",
+  "cs.SI_2611.23175.pdf#5": "correct: agrees with 10.1109/JSTSP.2014.2315533",
+  "cs.SI_2611.23175.pdf#42": "correct: agrees with 10.1371/journal.pone.0248731",
+  "math.NA_2611.25245.pdf#51": "correct: agrees with 10.1016/0041-5553(77)90036-2",
+  "math.NA_2611.25245.pdf#72": "correct: Saad's MTNS-89 chapter exists; the matched NASA report has the same title and author (1989 version); no citation error",
+  "math.NA_2611.25245.pdf#16": "correct: agrees with 10.1007/s11075-012-9569-7",
+  "math.ST_2611.25163.pdf#17": "correct: agrees with 10.1109/FOCS.2017.16",
+  "math.ST_2611.25163.pdf#32": "correct: agrees with 10.1017/CBO9780511526169",
+  "math.ST_2611.25163.pdf#5": "correct: agrees with 10.1145/2591796.2591881",
+  "physics.plasm-ph_2611.24523.pdf#27": "correct: Phys. Fluids 12, 2388 (1969), Ott and Sudan, agrees with 10.1063/1.1692358",
+  "physics.plasm-ph_2611.24523.pdf#7": "correct: PRL 25, 11 (1970), Ikezi, Taylor, Baker, agrees with 10.1103/PhysRevLett.25.11",
+  "physics.plasm-ph_2611.24523.pdf#38": "correct: J. Plasma Phys. 59, 561 (1998), Rao, agrees with 10.1017/S0022377898006473",
+  "physics.ins-det_2611.24776.pdf#71": "correct: agrees with 10.1109/ICCV48922.2021.00403",
+  "physics.ins-det_2611.24776.pdf#68": "correct: agrees with 10.1109/ICCV51070.2023.00747",
+  "physics.ins-det_2611.24776.pdf#3": "correct: agrees with 10.1016/j.ultramic.2013.05.001",
+  "cond-mat.mes-hall_2611.26616.pdf#8": "correct: agrees with 10.1103/PhysRevB.97.205136",
+  "cond-mat.mes-hall_2611.26616.pdf#39": "correct: agrees with 10.1103/PhysRevResearch.3.043067",
+  "cond-mat.mes-hall_2611.26616.pdf#65": "correct: agrees with 10.1103/5nsr-rw4d (PRL 135, 256602)",
+  "astro-ph.HE_2611.26547.pdf#53": "correct: agrees with 10.3847/1538-4357/ad77d5",
+  "astro-ph.HE_2611.26547.pdf#154": "correct: arXiv:1307.7782, same title and authors",
+  "astro-ph.HE_2611.26547.pdf#114": "correct: agrees with 10.1142/S0219891604000111",
+  "hep-ex_2611.26449.pdf#1": "correct: agrees with 10.1103/PhysRevLett.10.531",
+  "hep-ex_2611.26449.pdf#24": "correct: agrees with 10.1103/PhysRevD.2.1285",
+  "hep-ex_2611.26449.pdf#129": "correct: BESIII paper arXiv:2409.07197 = PRD 111, 012007; same title",
+  "q-bio.BM_2611.19885.pdf#38": "correct: agrees with 10.1021/bi00231a018",
+  "q-bio.BM_2611.19885.pdf#23": "correct: arXiv:2512.07692, same title and authors",
+  "q-bio.BM_2611.19885.pdf#43": "correct: agrees with 10.1103/PhysRevLett.105.218101",
+  "cs.NE_2611.24848.pdf#19": "correct: NeurIPS 2025 proceedings record 10.52202/085713-3231, same title and 7 authors (record gives first author's given name as family)",
+  "cs.NE_2611.24848.pdf#18": "correct: agrees with 10.1523/JNEUROSCI.5292-03.2004",
+  "cs.NE_2611.24848.pdf#2": "correct: agrees with 10.1073/pnas.1912789117",
+  "nlin.CD_2611.23434.pdf#47": "correct: arXiv:1412.3555, same title and authors",
+  "nlin.CD_2611.23434.pdf#11": "correct: agrees with 10.1017/S0022112010001217",
+  "nlin.CD_2611.23434.pdf#40": "correct: agrees with 10.1162/089976602760407955",
+  "plos_10_1371_journal_pone_0363220.pdf#12": "correct: agrees with 10.1371/journal.pntd.0011572",
+  "plos_10_1371_journal_pone_0363220.pdf#29": "correct: agrees with 10.4314/thrb.v24i2.5",
+  "plos_10_1371_journal_pone_0363220.pdf#34": "correct: the CIOMS 2016 guidelines (4th ed.) exist as cited; Veracite matched a JAMA article about them, so the match is wrong but no citation error was missed",
+  "plos_10_1371_journal_pone_0360499.pdf#5": "correct: agrees with 10.1093/cid/ciu189",
+  "plos_10_1371_journal_pone_0360499.pdf#8": "correct: agrees with 10.1016/j.nmni.2017.12.011",
+  "plos_10_1371_journal_pone_0360499.pdf#24": "correct: agrees with 10.1186/s13028-026-00860-x"
+ }
+}

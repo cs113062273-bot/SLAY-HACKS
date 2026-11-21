@@ -1,0 +1,209 @@
+## cs.DC_2611.26526.pdf [35] verified
+CITED: [35] G. M. Kurtzer, V. Sochat, and M. W. Bauer, “Singularity: Scientific containers for mobility of compute,” PLOS ONE, vol. 12, no. 5, e0177459, 2017. DOI: 10.1 371/journal.pone.0177459
+MATCH: Singularity: Scientific containers for mobility of compute | Kurtzer, Sochat, Bauer | 2017 | PLOS ONE | 10.1371/journal.pone.0177459
+JUDGEMENT: correct: title, 3 authors, year, venue and DOI agree with the PLOS ONE record
+
+## cs.DC_2611.26526.pdf [33] verified
+CITED: [33] R. Ceccato, J. Cléto, G. Leite, S. Rigo, J. M. Monsalve Diaz, and H. Yviquel, “Spinner: Enhancing HPC Experimentation with a Streamlined Parameter Sweep Tool,” in International Symposium on Computer Architecture and High Performance Computing Workshops (SBAC- PADW), IEEE, 2024, pp. 1-11. DOI: 10.1109/SBAC- PADW64858.2024.00013
+MATCH: Spinner: Enhancing HPC Experimentation with a Streamlined Parameter Sweep Tool | Ceccato, Cléto, Leite, Rigo, Diaz, Yviquel | 2024 | 2024 International Symposium on Computer Architecture and High Performance Computing Workshops (SBAC-PADW) | 10.1109/sbac-padw64858.2024.00013
+JUDGEMENT: correct: all fields agree with the IEEE record 10.1109/SBAC-PADW64858.2024.00013
+
+## cs.DC_2611.26526.pdf [25] verified_minor
+CITED: [25] R. Ferreira da Silva, R. Filgueira, I. Pietri, M. Jiang, R. Sakellariou, and E. Deelman, “A characterization of workflow management systems for extreme-scale applications,” Future Generation Computer Systems, vol. 75, pp. 228-238, 2017. DOI: 10 . 1016 / j . future . 2 017.02.026
+MATCH: A characterization of workflow management systems for extreme-scale applications | Ferreira da Silva, Filgueira, Pietri, Jiang, Sakellariou, Deelman | 2017 | Future Generation Computer Systems | 10.1016/j.future.2017.02.026
+JUDGEMENT: correct: all fields agree with 10.1016/j.future.2017.02.026
+
+## cs.SI_2611.23175.pdf [4] verified
+CITED: [4] O. Sattarov and J. Choi, “Detection of Rumors and Their Sources in Social Networks: A Comprehensive Survey,” IEEE Trans. Big Data, vol. 11, no. 3, pp. 1528-1547, Jun. 2025.
+MATCH: Detection of Rumors and Their Sources in Social Networks: A Comprehensive Survey | Sattarov, Choi | 2025/2024 | IEEE Transactions on Big Data | 10.1109/tbdata.2024.3522801
+JUDGEMENT: correct: agrees with IEEE Trans. Big Data record (online 2024, issue 2025)
+
+## cs.SI_2611.23175.pdf [5] verified
+CITED: [5] W. Luo, W. P. Tay, and M. Leng, “How to Identify an Infection Source With Limited Observations,” IEEE J. Sel. Top. Signal Process., vol. 8, no. 4, pp. 586-597, Aug. 2014.
+MATCH: How to Identify an Infection Source With Limited Observations | Luo, Tay, Leng | 2014 | IEEE Journal of Selected Topics in Signal Processing | 10.1109/jstsp.2014.2315533
+JUDGEMENT: correct: agrees with 10.1109/JSTSP.2014.2315533
+
+## cs.SI_2611.23175.pdf [42] verified
+CITED: [42] I. Locatelli, B. Trächsel, and V. Rousson, “Estimating the basic reproduction number for COVID-19 in Western Europe,” PLOS ONE, vol. 16, no. 3, p. e0248731, Mar. 2021.
+MATCH: Estimating the basic reproduction number for COVID-19 in Western Europe | Locatelli, Trächsel, Rousson | 2021 | PLOS ONE | 10.1371/journal.pone.0248731
+JUDGEMENT: correct: agrees with 10.1371/journal.pone.0248731
+
+## math.NA_2611.25245.pdf [51] verified
+CITED: [51] V. I. Lebedev, On a Zolotarev problem in the method of alternating directions, USSR Comput. Math. Math. Phys., 17 (1977), pp. 58-76.
+MATCH: On a Zolotarev problem in the method of alternating directions | Lebedev | 1977/2005 | USSR Computational Mathematics and Mathematical Physics | 10.1016/0041-5553(77)90036-2
+JUDGEMENT: correct: agrees with 10.1016/0041-5553(77)90036-2
+
+## math.NA_2611.25245.pdf [72] verified
+CITED: [72] Y. Saad, Numerical solution of large Lyapunov equations, in Signal Processing, Scattering, Operator Theory, and Numerical Methods (Proc. MTNS-89), M. A. Kaashoek, J. H. van Schuppen, and A. C. M. Ran, eds., Birkhäuser, 1990, pp. 503-511.
+MATCH: Numerical solution of large Lyapunov equations | Saad | 1989 | NASA STI Repository (National Aeronautics and Space Administration) | https://openalex.org/W845130065
+JUDGEMENT: correct: Saad's MTNS-89 chapter exists; the matched NASA report has the same title and author (1989 version); no citation error
+
+## math.NA_2611.25245.pdf [16] verified
+CITED: [16] P. Benner, P. Kürschner, and J. Saak, Efficient handling of complex shift parameters in the low-rank Cholesky factor ADI method, Numer. Algorithms, 62 (2013), pp. 225-251, https://doi.org/10.1007/s11075-012-9569-7.
+MATCH: Efficient handling of complex shift parameters in the low-rank Cholesky factor ADI method | Benner, Kürschner, Saak | 2012/2013 | Numerical Algorithms | 10.1007/s11075-012-9569-7
+JUDGEMENT: correct: agrees with 10.1007/s11075-012-9569-7
+
+## math.ST_2611.25163.pdf [17] verified
+CITED: [DKS17] Ilias Diakonikolas, Daniel M. Kane, and Alistair Stewart. Statistical query lower bounds for robust estimation of high-dimensional Gaussians and Gaussian mixtures. In 2017 IEEE 58th Annual Symposium on Foundations of Computer Science (FOCS), pages 73-84. IEEE, 2017.
+MATCH: Statistical Query Lower Bounds for Robust Estimation of High-Dimensional Gaussians and Gaussian Mixtures | Diakonikolas, Kane, Stewart | 2017 | 2017 IEEE 58th Annual Symposium on Foundations of Computer Science (FOCS) | 10.1109/focs.2017.16
+JUDGEMENT: correct: agrees with 10.1109/FOCS.2017.16
+
+## math.ST_2611.25163.pdf [32] verified
+CITED: [Jan97] Svante Janson. Gaussian Hilbert Spaces, volume 129 of Cambridge Tracts in Mathematics. Cambridge University Press, 1997.
+MATCH: Gaussian Hilbert Spaces | Janson | 1997/2009 |  | 10.1017/cbo9780511526169
+JUDGEMENT: correct: agrees with 10.1017/CBO9780511526169
+
+## math.ST_2611.25163.pdf [5] verified
+CITED: [BCMV14] Aditya Bhaskara, Moses Charikar, Ankur Moitra, and Aravindan Vijayaraghavan. Smoothed analysis of tensor decompositions. In Proceedings of the 46th Annual ACM Symposium on Theory of Computing, pages 594-603. ACM, 2014.
+MATCH: Smoothed analysis of tensor decompositions | Bhaskara, Charikar, Moitra, Vijayaraghavan | 2014/2015 | Proceedings of the forty-sixth annual ACM symposium on Theory of computing | 10.1145/2591796.2591881
+JUDGEMENT: correct: agrees with 10.1145/2591796.2591881
+
+## physics.plasm-ph_2611.24523.pdf [27] verified_minor
+CITED: [27] E. Ott and R. N. Sudan, The Physics of Fluids 12, 2388 (1969).
+MATCH: Nonlinear Theory of Ion Acoustic Waves with Landau Damping | Ott, Sudan | 1969/2003/2004 | The Physics of Fluids | 10.1063/1.1692358
+JUDGEMENT: correct: Phys. Fluids 12, 2388 (1969), Ott and Sudan, agrees with 10.1063/1.1692358
+
+## physics.plasm-ph_2611.24523.pdf [7] verified_minor
+CITED: [7] H. Ikezi, R. J. Taylor, and D. R. Baker, Physical Review Letters 25, 11 (1970).
+MATCH: Formation and Interaction of Ion-Acoustic Solitions | Ikezi, Taylor, Baker | 1970/2002 | Physical Review Letters | 10.1103/physrevlett.25.11
+JUDGEMENT: correct: PRL 25, 11 (1970), Ikezi, Taylor, Baker, agrees with 10.1103/PhysRevLett.25.11
+
+## physics.plasm-ph_2611.24523.pdf [38] verified_minor
+CITED: [38] N. N. Rao, Journal of Plasma Physics 59, 561 (1998).
+MATCH: Linear and nonlinear dust-acoustic waves in non-ideal dusty plasmas | RAO | 1998/2002 | Journal of Plasma Physics | 10.1017/s0022377898006473
+JUDGEMENT: correct: J. Plasma Phys. 59, 561 (1998), Rao, agrees with 10.1017/S0022377898006473
+
+## physics.ins-det_2611.24776.pdf [71] verified_minor
+CITED: [71] Ellen D. Zhong, Adam Lerer, Joseph H. Davis, and Bonnie Berger. CryoDRGN2: Ab initio neural reconstruction of 3D protein structures from real cryo-EM images. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 4066-4075, 2021.
+MATCH: CryoDRGN2: Ab initio neural reconstruction of 3D protein structures from real cryo-EM images | Zhong, Lerer, Davis, Berger | 2021/2022 | 2021 IEEE/CVF International Conference on Computer Vision (ICCV) | 10.1109/iccv48922.2021.00403
+JUDGEMENT: correct: agrees with 10.1109/ICCV48922.2021.00403
+
+## physics.ins-det_2611.24776.pdf [68] verified_minor
+CITED: [68] Mian Wei, Sotiris Nousias, Rahul Gulve, David B. Lindell, and Kiriakos N. Kutulakos. Passive ultra-wideband singlephoton imaging. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8135- 8146, 2023.
+MATCH: Passive Ultra-Wideband Single-Photon Imaging | Wei, Nousias, Gulve, Lindell, Kutulakos | 2023/2024 | 2023 IEEE/CVF International Conference on Computer Vision (ICCV) | 10.1109/iccv51070.2023.00747
+JUDGEMENT: correct: agrees with 10.1109/ICCV51070.2023.00747
+
+## physics.ins-det_2611.24776.pdf [3] verified
+CITED: [3] Juri Barthel and Andreas Thust. On the optical stability of high-resolution transmission electron microscopes. Ultramicroscopy, 134:6-17, 2013.
+MATCH: On the optical stability of high-resolution transmission electron microscopes | Barthel, Thust | 2013 | Ultramicroscopy | 10.1016/j.ultramic.2013.05.001
+JUDGEMENT: correct: agrees with 10.1016/j.ultramic.2013.05.001
+
+## cond-mat.mes-hall_2611.26616.pdf [8] verified
+CITED: [8] E. Khalaf, Higher-order topological insulators and superconductors protected by inversion symmetry, Physical Review B 97, 205136 (2018), arXiv:1801.10050.
+MATCH: Higher-order topological insulators and superconductors protected by inversion symmetry | Khalaf | 2018 | Physical Review B | 10.1103/physrevb.97.205136
+JUDGEMENT: correct: agrees with 10.1103/PhysRevB.97.205136
+
+## cond-mat.mes-hall_2611.26616.pdf [39] verified
+CITED: [40] L. Gioia, C. Wang, and A. A. Burkov, Unquantized anomalies in topological semimetals, Physical Review Research 3, 043067 (2021).
+MATCH: Unquantized anomalies in topological semimetals | Gioia, Wang, Burkov | 2021 | Physical Review Research | 10.1103/physrevresearch.3.043067
+JUDGEMENT: correct: agrees with 10.1103/PhysRevResearch.3.043067
+
+## cond-mat.mes-hall_2611.26616.pdf [65] verified
+CITED: [66] S. Vaidya, A. G. Fonseca, M. R. Hirsbrunner, T. L. Hughes, and M. Soljačić, Quantized crystallineelectromagnetic responses in insulators, Physical Review Letters 135, 256602 (2025).
+MATCH: Quantized Crystalline-Electromagnetic Responses in Insulators | Vaidya, Fonseca, Hirsbrunner, Hughes, Soljačić | 2025 | Physical Review Letters | 10.1103/5nsr-rw4d
+JUDGEMENT: correct: agrees with 10.1103/5nsr-rw4d (PRL 135, 256602)
+
+## astro-ph.HE_2611.26547.pdf [53] verified_minor
+CITED: [53] J. R. Fuentes and V. Graber, Superfluid Spin-up: Threedimensional Simulations of Post-glitch Dynamics in Neutron Star Cores, Astrophys. J. 974, 300 (2024), arXiv:2407.18810 [astro-ph.HE].
+MATCH: Superfluid Spin-up: Three-dimensional Simulations of Post-glitch Dynamics in Neutron Star Cores | Fuentes, Graber | 2024 | The Astrophysical Journal | 10.3847/1538-4357/ad77d5
+JUDGEMENT: correct: agrees with 10.3847/1538-4357/ad77d5
+
+## astro-ph.HE_2611.26547.pdf [154] verified
+CITED: [154] H. P. Pfeiffer and A. I. MacFadyen, Hyperbolicity of Force-Free Electrodynamics (2013), arXiv:1307.7782 [gr-qc].
+MATCH: Hyperbolicity of Force-Free Electrodynamics | Pfeiffer, MacFadyen | 2013 | arXiv | 10.48550/arxiv.1307.7782
+JUDGEMENT: correct: arXiv:1307.7782, same title and authors
+
+## astro-ph.HE_2611.26547.pdf [114] verified_minor
+CITED: [114] O. A. Reula, Strongly hyperbolic systems in general relativity, J. Hyperbol. Diff. Equat. 1, 251 (2004), arXiv:gr-qc/0403007.
+MATCH: STRONGLY HYPERBOLIC SYSTEMS IN GENERAL RELATIVITY | REULA | 2004/2012 | Journal of Hyperbolic Differential Equations | 10.1142/s0219891604000111
+JUDGEMENT: correct: agrees with 10.1142/S0219891604000111
+
+## hep-ex_2611.26449.pdf [1] verified
+CITED: [1] N. Cabibbo, Unitary symmetry and leptonic decays, Phys. Rev. Lett. 10 (1963) 531.
+MATCH: Unitary Symmetry and Leptonic Decays | Cabibbo | 1963/2002 | Physical Review Letters | 10.1103/physrevlett.10.531
+JUDGEMENT: correct: agrees with 10.1103/PhysRevLett.10.531
+
+## hep-ex_2611.26449.pdf [24] verified
+CITED: [24] S. L. Glashow, J. Iliopoulos, and L. Maiani, Weak interactions with lepton-hadron symmetry, Phys. Rev. D2 (1970) 1285.
+MATCH: Weak Interactions with Lepton-Hadron Symmetry | Glashow, Iliopoulos, Maiani | 1970/2002 | Physical Review D | 10.1103/physrevd.2.1285
+JUDGEMENT: correct: agrees with 10.1103/PhysRevD.2.1285
+
+## hep-ex_2611.26449.pdf [129] verified_minor
+CITED: [129] BESIII collaboration, M. Ablikim et al., Measurements of the CP -even fractions of D0 → π+π-π0 and D0 → K+K-π0 at BESIII, Phys. Rev. D111 (2025) 012007, arXiv:2409.07197.
+MATCH: Measurements of the $CP$-even fractions of $D^0\toπ^{+}π^{-}π^{0}$ and $D^0\to K^{+}K^{-}π^{0}$ at BESIII | Collaboration, Ablikim, Achasov, Adlarson, Afedulidis, Ai, Aliberti, Amoroso, An, Bai, Bakina, Balossino, Ban, Bao, Batozskaya, Begzsuren, Berger, Berlowski, Bertani, Bettoni, Bianchi, Bianco, Bortone, Boyko, Briere, Brueggemann, Cai, Cai, Calcaterra, Cao, Cao, Cetin, Chai, Chang, Che, Che, Chelkov, Chen, Chen, Chen, Chen, Chen, Chen, Chen, Chen, Chen, Chen, Chen, Chen, Chen, Chen, Chen, Chen, Chen, Choi, Cibinetto, Cossio, Cui, Dai, Dai, Dbeyssi, de Boer, Dedovich, Deng, Deng, Denig, Denysenko, Destefanis, De Mori, Ding, Ding, Ding, Ding, Dong, Dong, Dong, Dong, Du, Du, Duan, Duan, Egorov, Fan, Fang, Fang, Fang, Fang, Fang, Fang, Farinelli, Fava, Feldbauer, Felici, Feng, Feng, Feng, Fritsch, Fu, Fu, Fu, Gao, Gao, Gao, Gao, Garbolino, Garzia, Ge, Ge, Ge, Geng, Gersabeck, Gilman, Goetzen, Gong, Gong, Gradl, Gramigna, Greco, Gu, Gu, Guan, Guo, Guo, Guo, Guo, Guo, Guskov, Gutierrez, Han, Han, Hanisch, Hao, Harris, He, He, Heinsius, Heinz, Heng, Herold, Holtmann, Hong, Hou, Hou, Hou, Hou, Hu, Hu, Hu, Hu, Hu, Hu, Hu, Huang, Huang, Huang, Huang, Huang, Huang, Hussain, Hölzken, Hüsken, der Wiesche, Jackson, Janchiv, Jeong, Ji, Ji, Ji, Ji, Ji, Ji, Jia, Jia, Jiang, Jiang, Jiang, Jiang, Jiang, Jiang, Jiang, Jiao, Jiao, Jiao, Jin, Jin, Jing, Jing, Johansson, Kabana, Kalantar-Nayestanaki, Kang, Kang, Kavatsyuk, Ke, Khachatryan, Khoukaz, Kiuchi, Kolcu, Kopf, Kuessner, Kui, Kumar, Kupsc, Kühn, Lane, Lavezzi, Lei, Lei, Lellmann, Lenz, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Li, Liang, Liang, Liang, Liang, Liang, Liao, Liao, Libby, Limphirat, Lin, Lin, Lin, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Liu, Lou, Lu, Lu, Lu, Lu, Lu, Lu, Lu, Luo, Luo, Luo, Luo, Luo, Lyu, Lyu, Ma, Ma, Ma, Ma, Ma, Ma, Ma, Ma, Ma, Ma, Ma, Ma, Ma, Maas, MacKay, Maggiora, Malde, Mao, Mao, Marcello, Meng, Messchendorp, Mezzadri, Miao, Min, Mitchell, Mo, Moses, Muchnoi, Muskalla, Nefedov, Nerling, Nie, Nikolaev, Ning, Nisar, Niu, Niu, Niu, Olsen, Olsen, Ouyang, Pacetti, Pan, Pan, Pathak, Pei, Pelizaeus, Peng, Peng, Peters, Ping, Ping, Plura, Prasad, Qi, Qi, Qi, Qi, Qi, Qian, Qian, Qiao, Qiao, Qin, Qin, Qin, Qin, Qin, Qin, Qiu, Qu, Redmer, Ren, Rivetti, Rolo, Rong, Rosner, Ruan, Ruan, Salone, Sarantsev, Schelhaas, Schoenning, Scodeggio, Shan, Shan, Shan, Shang, Shangguan, Shao, Shao, Shen, Shen, Shen, Shen, Shi, Shi, Shi, Shi, Shi, Shi, Shi, Shi, Song, Song, Song, Song, Song, Sosio, Spataro, Stieler, Su, Su, Sun, Sun, Sun, Sun, Sun, Sun, Sun, Sun, Sun, Sun, Sun, Sun, Sun, Sun, Sun, Tang, Tang, Tang, Tang, Tang, Tao, Tao, Tat, Teng, Thoren, Tian, Tian, Tian, Uman, Wan, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wang, Wei, Weidner, Wen, Wen, Wiedner, Wilkinson, Wolke, Wollenberg, Wu, Wu, Wu, Wu, Wu, Wu, Wu, Wu, Wu, Wu, Xia, Xian, Xiang, Xiang, Xiao, Xiao, Xiao, Xiao, Xiao, Xie, Xie, Xie, Xie, Xie, Xie, Xing, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Xu, Yan, Yan, Yan, Yan, Yan, Yang, Yang, Yang, Yang, Yang, Yang, Yang, Yang, Yang, Yang, Yao, Ye, Ye, Yin, Yin, You, Yu, Yu, Yu, Yu, Yu, Yu, Yu, Yu, Yuan, Yuan, Yuan, Yuan, Yuan, Yuan, Yuan, Yue, Zafar, Zeng, Zeng, Zeng, Zeng, Zeng, Zeng, Zhai, Zhai, Zhan, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhang, Zhao, Zhao, Zhao, Zhao, Zhao, Zhao, Zhao, Zhao, Zhao, Zhao, Zhao, Zhao, Zhemchugov, Zheng, Zheng, Zheng, Zheng, Zheng, Zhong, Zhong, Zhou, Zhou, Zhou, Zhou, Zhou, Zhou, Zhou, Zhou, Zhou, Zhou, Zhu, Zhu, Zhu, Zhu, Zhu, Zhu, Zhu, Zhu, Zhu, Zhu, Zhu, Zhu, Zou, Zu | 2024 | arXiv | 10.48550/arxiv.2409.07197
+JUDGEMENT: correct: BESIII paper arXiv:2409.07197 = PRD 111, 012007; same title
+
+## q-bio.BM_2611.19885.pdf [38] verified_minor
+CITED: G. M. Crippen, “Prediction of protein folding from amino acid sequence over discrete conformation spaces,” Biochemistry 30, 4232-4237 (1991).
+MATCH: Prediction of protein folding from amino acid sequence over discrete conformation spaces | Crippen | 1991/2002/2005 | Biochemistry | 10.1021/bi00231a018
+JUDGEMENT: correct: agrees with 10.1021/bi00231a018
+
+## q-bio.BM_2611.19885.pdf [23] verified
+CITED: F. Görlich and J. Zavadlav, “Mapping still matters: Coarse-graining with machine learning potentials,” arXiv preprint arXiv:2512.07692 (2025).
+MATCH: Mapping Still Matters: Coarse-Graining with Machine Learning Potentials | Görlich, Zavadlav | 2025 | arXiv | 10.48550/arxiv.2512.07692
+JUDGEMENT: correct: arXiv:2512.07692, same title and authors
+
+## q-bio.BM_2611.19885.pdf [43] verified
+CITED: M. S. Li, N. T. Co, G. Reddy, C.-K. Hu, J. Straub, and D. Thirumalai, “Factors governing fibrillogenesis of polypeptide chains revealed by lattice models,” Physical review letters 105, 218101 (2010).
+MATCH: Factors Governing Fibrillogenesis of Polypeptide Chains Revealed by Lattice Models | Li, Co, Reddy, Hu, Straub, Thirumalai | 2010 | Physical Review Letters | 10.1103/physrevlett.105.218101
+JUDGEMENT: correct: agrees with 10.1103/PhysRevLett.105.218101
+
+## cs.NE_2611.24848.pdf [19] verified_minor
+CITED: [19] Yun Wang, Junjie Hu, Qiaole Dong, Yongjian Zhang, Yanwei Fu, Tin Lun Lam, and Dapeng Wu. PPMStereo: Pick-and-play memory construction for consistent dynamic stereo matching. In Advances in Neural Information Processing Systems (NeurIPS), 2025.
+MATCH: PPMStereo: Pick-and-Play Memory Construction for Consistent Dynamic Stereo Matching | Yun, Hu, Dong, Zhang, Fu, Lam, Wu | 2025/2026 | Advances in Neural Information Processing Systems 38 | 10.52202/085713-3231
+JUDGEMENT: correct: NeurIPS 2025 proceedings record 10.52202/085713-3231, same title and 7 authors (record gives first author's given name as family)
+
+## cs.NE_2611.24848.pdf [18] verified
+CITED: [18] Seiji Tanabe, Kazumasa Umeda, and Ichiro Fujita. Rejection of false matches for binocular correspondence in macaque visual cortical area v4. The Journal of Neuroscience, 24(37):8170- 8180, 2004.
+MATCH: Rejection of False Matches for Binocular Correspondence in Macaque Visual Cortical Area V4 | Tanabe, Umeda, Fujita | 2004 | The Journal of Neuroscience | 10.1523/jneurosci.5292-03.2004
+JUDGEMENT: correct: agrees with 10.1523/JNEUROSCI.5292-03.2004
+
+## cs.NE_2611.24848.pdf [2] verified
+CITED: [2] Kyle Cranmer, Johann Brehmer, and Gilles Louppe. The frontier of simulation-based inference. Proceedings of the National Academy of Sciences, 117(48):30055-30062, 2020.
+MATCH: The frontier of simulation-based inference | Cranmer, Brehmer, Louppe | 2020 | Proceedings of the National Academy of Sciences | 10.1073/pnas.1912789117
+JUDGEMENT: correct: agrees with 10.1073/pnas.1912789117
+
+## nlin.CD_2611.23434.pdf [47] verified
+CITED: [47] Junyoung Chung, Caglar Gulcehre, KyungHyun Cho, and Yoshua Bengio. Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling, December 2014. arXiv:1412.3555 [cs].
+MATCH: Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling | Chung, Gulcehre, Cho, Bengio | 2014 | arXiv | 10.48550/arxiv.1412.3555
+JUDGEMENT: correct: arXiv:1412.3555, same title and authors
+
+## nlin.CD_2611.23434.pdf [11] verified
+CITED: [11] Peter J. Schmid. Dynamic mode decomposition of numerical and experimental data. Journal of Fluid Mechanics, 656:5-28, 2010.
+MATCH: Dynamic mode decomposition of numerical and experimental data | SCHMID | 2010 | Journal of Fluid Mechanics | 10.1017/s0022112010001217
+JUDGEMENT: correct: agrees with 10.1017/S0022112010001217
+
+## nlin.CD_2611.23434.pdf [40] verified
+CITED: [40] Wolfgang Maass, Thomas Natschläger, and Henry Markram. Real-Time Computing Without Stable States: A New Framework for Neural Computation Based on Perturbations. Neural Computation, 14(11):2531-2560, November 2002.
+MATCH: Real-Time Computing Without Stable States: A New Framework for Neural Computation Based on Perturbations | Maass, Natschläger, Markram | 2002 | Neural Computation | 10.1162/089976602760407955
+JUDGEMENT: correct: agrees with 10.1162/089976602760407955
+
+## plos_10_1371_journal_pone_0363220.pdf [12] verified
+CITED: 12. Pandey DP, Thapa NB. Analysis of news media-reported snakebite envenoming in Nepal during 2010-2022. PLoS Negl Trop Dis. 2023;17(8):e0011572. https://doi.org/10.1371/journal.pntd.0011572 PMID: 37639403
+MATCH: Analysis of News Media-Reported Snakebite Envenoming in Nepal during 2010–2022 | Pandey, Thapa | 2023 | PLOS Neglected Tropical Diseases | 10.1371/journal.pntd.0011572
+JUDGEMENT: correct: agrees with 10.1371/journal.pntd.0011572
+
+## plos_10_1371_journal_pone_0363220.pdf [29] verified
+CITED: 29. Turyamureba M, Yawe B, Oryema JB. Health Care Delivery System in Uganda: a review. Tanzania J Hlth Res. 2023;24(2):57-64. https://doi. org/10.4314/thrb.v24i2.5
+MATCH: Health Care Delivery System in Uganda: a review | Turyamureba, Yawe, Oryema | 2023/2026 | Tanzania Journal of Health Research | 10.4314/thrb.v24i2.5
+JUDGEMENT: correct: agrees with 10.4314/thrb.v24i2.5
+
+## plos_10_1371_journal_pone_0363220.pdf [34] verified_minor
+CITED: 34. Council for International Organizations of Medical Sciences (CIOMS), World Health Organization. International ethical guidelines for health-related research involving humans. 4th ed. Geneva: CIOMS. 2016.
+MATCH: Revised CIOMS International Ethical Guidelines for Health-Related Research Involving Humans | van Delden, van der Graaf | 2017/2016 | JAMA | 10.1001/jama.2016.18977
+JUDGEMENT: correct: the CIOMS 2016 guidelines (4th ed.) exist as cited; Veracite matched a JAMA article about them, so the match is wrong but no citation error was missed
+
+## plos_10_1371_journal_pone_0360499.pdf [5] verified
+CITED: 5. Grankvist A, Andersson P-O, Mattsson M, Sender M, Vaht K, Höper L, et al. Infections with the tick-borne bacterium “Candidatus Neoehrlichia mikurensis” mimic noninfectious conditions in patients with B cell malignancies or autoimmune diseases. Clin Infect Dis. 2014;58(12):1716-22. https://doi.org/10.1093/cid/ciu189 PMID: 24647019
+MATCH: Infections With the Tick-Borne Bacterium "Candidatus Neoehrlichia mikurensis" Mimic Noninfectious Conditions in Patients With B Cell Malignancies or Autoimmune Diseases | Grankvist, Andersson, Mattsson, Sender, Vaht, Hoper, Sakiniene, Trysberg, Stenson, Fehr, Pekova, Bogdan, Bloemberg, Wenneras | 2014 | Clinical Infectious Diseases | 10.1093/cid/ciu189
+JUDGEMENT: correct: agrees with 10.1093/cid/ciu189
+
+## plos_10_1371_journal_pone_0360499.pdf [8] verified_minor
+CITED: 8. Portillo A, Santibáñez P, Palomar AM, Santibáñez S, Oteo JA. ‘ Candidatus Neoehrlichia mikurensis’ in Europe. New Microbes New Infect. 2018;22:30-6. https://doi.org/10.1016/j.nmni.2017.12.011
+MATCH: ‘ Candidatus Neoehrlichia mikurensis’ in Europe | Portillo, Santibáñez, Palomar, Santibáñez, Oteo | 2018 | New Microbes and New Infections | 10.1016/j.nmni.2017.12.011
+JUDGEMENT: correct: agrees with 10.1016/j.nmni.2017.12.011
+
+## plos_10_1371_journal_pone_0360499.pdf [24] verified
+CITED: 24. Cotes-Perdomo A, Soleng A, Méndez-Gutierrez K, Alfsnes K, Renssen H, Kjelland V, et al. Seasonal variation in prevalence of Borrelia burgdorferi sensu lato and Neoehrlichia mikurensis in Ixodes ricinus nymphs in southern Norway. Acta Vet Scand. 2026;68(1):19. https://doi.org/10.1186/ s13028-026-00860-x PMID: 41987306
+MATCH: Seasonal variation in prevalence of Borrelia burgdorferi sensu lato and Neoehrlichia mikurensis in Ixodes ricinus nymphs in southern Norway | Cotes-Perdomo, Soleng, Méndez-Gutierrez, Alfsnes, Renssen, Kjelland, Vikse, Andreassen, Jenkins | 2026 | Acta Veterinaria Scandinavica | 10.1186/s13028-026-00860-x
+JUDGEMENT: correct: agrees with 10.1186/s13028-026-00860-x

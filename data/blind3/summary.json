@@ -1,0 +1,149 @@
+{
+  "freezeCommit": "3e47ac9dedfaa3d90e981f16437e29928b99c8d7",
+  "startedAt": "2026-11-21T07:02:24.834Z",
+  "finishedAt": "2026-11-21T07:53:02.947Z",
+  "selectedPDFs": 14,
+  "selectionRejectedRecords": 67,
+  "extractionSuccesses": 14,
+  "extractionSuccessRate": 1.0,
+  "extractionFailures": [],
+  "references": 964,
+  "mainBibliographyTruthCount": 969,
+  "cappedCountCompleteness": 0.9948400412796697,
+  "excessEntries": 0,
+  "verified": 782,
+  "verifiedCoverage": 0.8112033195020747,
+  "verifiedCountOverTruthCount": 0.8070175438596491,
+  "unverifiable": 50,
+  "unchecked": 31,
+  "unverifiableShare": 0.05186721991701245,
+  "uncheckedShare": 0.032157676348547715,
+  "verdictCounts": {
+    "verified": 557,
+    "unverifiable": 50,
+    "not_found": 5,
+    "verified_minor": 225,
+    "metadata_error": 78,
+    "unchecked": 31,
+    "fabricated": 1,
+    "id_mismatch": 17
+  },
+  "flags": 101,
+  "flagReview": {
+    "real": 1,
+    "false": 98,
+    "uncertain": 2,
+    "pending": 0
+  },
+  "flagEvidencePending": 0,
+  "flagPrecision": 0.009900990099009901,
+  "falseAlarmsOverAllReferences": 0.1016597510373444,
+  "conditionalFalsePositiveRate": null,
+  "fieldSampleReferences": 70,
+  "fieldEvidencePending": 0,
+  "fields": {
+    "segmentation": {
+      "correct": 69,
+      "incorrect": 1,
+      "notApplicable": 0,
+      "pending": 0,
+      "accuracyAmongReviewedApplicable": 0.9857142857142858
+    },
+    "title": {
+      "correct": 56,
+      "incorrect": 9,
+      "notApplicable": 5,
+      "pending": 0,
+      "accuracyAmongReviewedApplicable": 0.8615384615384616
+    },
+    "authors": {
+      "correct": 62,
+      "incorrect": 8,
+      "notApplicable": 0,
+      "pending": 0,
+      "accuracyAmongReviewedApplicable": 0.8857142857142857
+    },
+    "year": {
+      "correct": 70,
+      "incorrect": 0,
+      "notApplicable": 0,
+      "pending": 0,
+      "accuracyAmongReviewedApplicable": 1.0
+    },
+    "venue": {
+      "correct": 61,
+      "incorrect": 6,
+      "notApplicable": 3,
+      "pending": 0,
+      "accuracyAmongReviewedApplicable": 0.9104477611940298
+    },
+    "identifiers": {
+      "correct": 19,
+      "incorrect": 9,
+      "notApplicable": 42,
+      "pending": 0,
+      "accuracyAmongReviewedApplicable": 0.6785714285714286
+    }
+  },
+  "missSample": {
+    "selected": 42,
+    "pending": 0,
+    "unclassified": 0,
+    "missed": 0
+  },
+  "endToEndSeconds": {
+    "median": 207.75799999999998,
+    "min": 63.807,
+    "max": 541.319
+  },
+  "parseSeconds": 36.674,
+  "verifySeconds": 2999.477,
+  "hostStats": {
+    "api.crossref.org": {
+      "200": 1824,
+      "404": 22,
+      "429": 1992,
+      "cache": 4
+    },
+    "api.openalex.org": {
+      "200": 104,
+      "404": 18,
+      "429": 349
+    },
+    "api.semanticscholar.org": {
+      "200": 69,
+      "404": 120,
+      "429": 561,
+      "cache": 1
+    },
+    "www.ebi.ac.uk": {
+      "200": 30,
+      "error": 2
+    },
+    "api.datacite.org": {
+      "200": 251,
+      "404": 18,
+      "cache": 1
+    },
+    "doi.org": {
+      "404": 9
+    },
+    "api.github.com": {
+      "200": 1
+    }
+  },
+  "manualReviewComplete": true,
+  "numericTargetsMet": false,
+  "overallAcceptance": "pending independent review of coverage and abstention; numeric targets alone are insufficient",
+  "coverageComparators": {
+    "blind1": 0.7968503937007874,
+    "blind2": 0.7784946236559139
+  },
+  "caveats": [
+    "Selection requires a >=10-entry .bbl or JATS; source availability limits generality.",
+    "Node uses the browser core/settings but does not reproduce browser CORS behavior.",
+    "Main bibliography only; count completeness does not prove field accuracy.",
+    "Uncertain flags remain in precision denominator; no flags means undefined precision.",
+    "No sampled misses does not establish zero misses overall."
+  ]
+}

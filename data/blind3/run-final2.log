@@ -1,0 +1,18 @@
+2026-11-21T07:02:23.455577+00:00 {"openalexStatus": 200, "headers": {"x-ratelimit-cost-usd": "0.0001", "x-ratelimit-credits-used": "1", "x-ratelimit-limit": "1000", "x-ratelimit-limit-usd": "0.1", "x-ratelimit-onetime-remaining": "0", "x-ratelimit-prepaid-remaining-usd": "0", "x-ratelimit-remaining": "999", "x-ratelimit-remaining-usd": "0.0999", "x-ratelimit-reset": "61058"}}
+2026-11-21T07:02:23.456469+00:00 Starting one frozen blind3 run, empty cache, no API keys
+cs.DC_2611.26526.pdf: 40 refs, verified 34 (85%), flagged 2, unverifiable 4, unchecked 0, 77 s
+cs.SI_2611.23175.pdf: 48 refs, verified 47 (98%), flagged 1, unverifiable 0, unchecked 0, 104 s
+math.NA_2611.25245.pdf: 85 refs, verified 79 (93%), flagged 3, unverifiable 1, unchecked 2, 308 s
+math.ST_2611.25163.pdf: 52 refs, verified 50 (96%), flagged 2, unverifiable 0, unchecked 0, 125 s
+physics.plasm-ph_2611.24523.pdf: 58 refs, verified 37 (64%), flagged 2, unverifiable 19, unchecked 0, 280 s
+physics.ins-det_2611.24776.pdf: 72 refs, verified 64 (89%), flagged 4, unverifiable 1, unchecked 3, 209 s
+cond-mat.mes-hall_2611.26616.pdf: 75 refs, verified 70 (93%), flagged 3, unverifiable 0, unchecked 2, 212 s
+astro-ph.HE_2611.26547.pdf: 164 refs, verified 142 (87%), flagged 18, unverifiable 0, unchecked 4, 498 s
+hep-ex_2611.26449.pdf: 150 refs, verified 67 (45%), flagged 53, unverifiable 15, unchecked 15, 532 s
+q-bio.BM_2611.19885.pdf: 62 refs, verified 57 (92%), flagged 2, unverifiable 0, unchecked 3, 203 s
+cs.NE_2611.24848.pdf: 22 refs, verified 21 (95%), flagged 0, unverifiable 0, unchecked 1, 64 s
+nlin.CD_2611.23434.pdf: 66 refs, verified 61 (92%), flagged 2, unverifiable 2, unchecked 1, 206 s
+plos_10_1371_journal_pone_0363220.pdf: 45 refs, verified 34 (76%), flagged 4, unverifiable 7, unchecked 0, 117 s
+plos_10_1371_journal_pone_0360499.pdf: 25 refs, verified 19 (76%), flagged 5, unverifiable 1, unchecked 0, 64 s
+{"papers":14,"refs":964,"verified":782,"flagged":101,"unverifiable":50,"unchecked":31,"verifySeconds":2999} {"api.crossref.org":{"200":1824,"404":22,"429":1992,"cache":4},"api.openalex.org":{"200":104,"404":18,"429":349},"api.semanticscholar.org":{"200":69,"404":120,"429":561,"cache":1},"www.ebi.ac.uk":{"200":30,"error":2},"api.datacite.org":{"200":251,"404":18,"cache":1},"doi.org":{"404":9},"api.github.com":{"200":1}}
+2026-11-21T07:53:03.475899+00:00 Audit exited 0; manual flag, miss and field reviews still required
