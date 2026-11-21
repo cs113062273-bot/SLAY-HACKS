@@ -88,7 +88,7 @@ Precision matters more than recall for a tool like this: one wrong accusation co
 ## Limitations (disclosed)
 
 - Claim support is weakest on subtle misrepresentation ("not substantiated"), a class where GPT-4 also fails. That is why the interface never states that verdict.
-- False alarms on new papers: the frozen blind sets had 87/635 (13.7%), 54/465 (11.6%) and 98/964 (10.2%), far above our 2% target. Fixes made after the third set have been checked only on data we had already seen, so they are not an independent result. Each flag shows the record it was compared with and the fields that differ, so a reader can dismiss a false alarm quickly, but it is still a false alarm.
+- False alarms on new papers: the frozen blind sets had 87/635 (13.7%), 54/465 (11.6%) and 98/964 (10.2%), far above our 2% target. Fixes made after the third set bring that same set to about 4.4%, but it was used to write them, so this is not an independent result. Each flag shows the record it was compared with and the fields that differ, so a reader can dismiss a false alarm quickly, but it is still a false alarm.
 - Separately numbered supplementary bibliographies are not included in the main-bibliography audit.
 - Papers that cite with superscript numbers (common in AIP physics journals) get reference checks but no claim checks.
 - Coverage depends on public indexes. Archival, regional and very old literature is often *unverifiable*, and is reported that way.

@@ -1,0 +1,127 @@
+{
+ "base": "https://cs113062273-bot.github.io/SLAY-HACKS/",
+ "crossOriginIsolated": true,
+ "results": [
+  {
+   "name": "sample-planted",
+   "sec": 38,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 12,
+   "verdicts": {
+    "verified": 5,
+    "id_mismatch": 1,
+    "metadata_error": 2,
+    "fabricated": 3,
+    "retracted": 1
+   }
+  },
+  {
+   "name": "exports",
+   "files": [
+    "Reference_list_with_planted_errors-audit.json 13480B",
+    "Reference_list_with_planted_errors-audit.md 3242B",
+    "Reference_list_with_planted_errors-corrected.bib 3560B"
+   ]
+  },
+  {
+   "name": "sample-neurips",
+   "sec": 22,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 65,
+   "verdicts": {
+    "verified": 35,
+    "fabricated": 14,
+    "metadata_error": 9,
+    "verified_minor": 2,
+    "id_mismatch": 2,
+    "not_found": 2,
+    "unverifiable": 1
+   }
+  },
+  {
+   "name": "sample-attention",
+   "sec": 10,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 40,
+   "verdicts": {
+    "verified": 36,
+    "verified_minor": 4
+   }
+  },
+  {
+   "name": "claim-upgrade",
+   "sec": 268,
+   "claimPhase": "done",
+   "claims": {
+    "mention": 16,
+    "supported": 15,
+    "unclear": 20,
+    "no_source": 4,
+    "review": 1
+   }
+  },
+  {
+   "name": "upload-pdf",
+   "sec": 184,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 50,
+   "verdicts": {
+    "verified": 44,
+    "metadata_error": 3,
+    "unchecked": 1,
+    "verified_minor": 2
+   }
+  },
+  {
+   "name": "upload-docx",
+   "sec": 41,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 3,
+   "verdicts": {
+    "verified": 2,
+    "unchecked": 1
+   }
+  },
+  {
+   "name": "upload-bib",
+   "sec": 40,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 3,
+   "verdicts": {
+    "verified": 1,
+    "id_mismatch": 1,
+    "fabricated": 1
+   }
+  },
+  {
+   "name": "paste",
+   "sec": 41,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 2,
+   "verdicts": {
+    "verified": 1,
+    "unchecked": 1
+   }
+  },
+  {
+   "name": "arxiv-id",
+   "sec": 140,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 40,
+   "verdicts": {
+    "verified": 36,
+    "verified_minor": 4
+   }
+  }
+ ],
+ "http4xx": [],
+ "pageErrors": []
+}

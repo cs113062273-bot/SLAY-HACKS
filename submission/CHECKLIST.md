@@ -48,7 +48,7 @@ Source: slayy-hacks.devpost.com (rules and overview, rechecked 2026-11-20).
 
 - [x] Public push and free Pages deployment authorized; owner reports Pages enabled.
 - [x] `npm run build` passes the actual application TypeScript project and production build. CI now uses that command.
-- [x] Zenodo F1 .971; HALLMARK dev 310 rows F1 .986, FPR 0, on the current core (`ed205f7`, offline replay of recorded responses so rate limits cannot distort the result; `data/reg_*_replay2.txt`).
+- [x] Zenodo F1 .971; HALLMARK dev 310 rows F1 .986, FPR 0, on the current core (`ad06636`, offline replay of recorded responses so rate limits cannot distort the result; `data/reg_*_replay2.txt`).
 - [x] Frozen set-2 results and sampled misses disclosed; historical test results distinguished from current regressions.
 - [x] Production URL responds; amended source 3e47ac9 build/deployment succeeded in workflow 44776807750.
 - [x] Fresh-profile five-input E2E passes again on amended source 3e47ac9, without sample snapshots (production-inputs-amended.json).
@@ -56,7 +56,7 @@ Source: slayy-hacks.devpost.com (rules and overview, rechecked 2026-11-20).
 - [x] Independent set 3 selection complete (14 PDFs, 67 rejected records); selection identity 497cb22 and separate pre-run audit freeze 3e47ac9 preserved.
 - [x] Independent set 3 ran once at `3e47ac9` and every flag, the 70-reference field sample and the 42-reference miss sample were reviewed (`data/blind3/`, `docs/EVALUATION.md`).
 - [x] Extraction completeness ≥95%: 964/969 (99.5%), 14/14 PDFs, no excess entries. Coverage 81.1% verified.
-- [ ] False alarms ≤2%: **not met** on independent data (98/964, 10.2%; median paper 3.7%). After the post-set-3 fixes, the same (now spent) set shows 43 flags instead of 101 and 55/98 judged false alarms resolved; development evidence only (EVALUATION.md).
+- [ ] False alarms ≤2%: **not met** on independent data (98/964, 10.2%; median paper 3.7%). After the post-set-3 fixes, the same (now spent) set shows 45 flags instead of 101, about 4.4% false alarms; development evidence only (EVALUATION.md).
 - [ ] A 95/100 readiness claim is not justified while the false-alarm gate fails on independent data.
 
 Live target: https://cs113062273-bot.github.io/SLAY-HACKS/. No video will be recorded and no Devpost submission will be made without the owner's later instruction.

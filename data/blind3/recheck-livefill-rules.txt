@@ -1,0 +1,197 @@
+
+=== cs.DC_2611.26526.pdf: refs 40 → 40, flags 2 → 1
+  #0 fixed          not_found → unverifiable  [6] SC26 Reproducibility Committee. “SC26 Artifact Description and Evaluation Process and 
+  #1 uncertain kept metadata_error → not_found  [28] M. A. Salim, T. D. Uram, J. T. Childers, P. Balaprakash, V. Vishwanath, and M. E. Pap
+      now: doi:10.1109/pyhpc49452.2019.00006 does not resolve to any record
+
+=== cs.SI_2611.23175.pdf: refs 48 → 48, flags 1 → 1
+  #2 fixed          metadata_error → verified  [32] L. Isella, J. Stehlé, A. Barrat, C. Cattuto, J.-F. Pinton, and W. Van Den Broeck, “Wh
+  NEW FLAG [39] metadata_error  [39] D. Yang, D. Zhang, V. W. Zheng, and Z. Yu, “Modeling User Activity Preference by Leveraging User Spatial Temporal Characteristics in LBSNs,” IEEE Trans. Syst. Man Cybern. Syst., vol. 45, no. 1, p
+      Author list does not match the published work: Yu not among its authors
+      rec: Modeling User Activity Preference by Leveraging User Spatial Temporal Characteristics in LBSNs / Dingqi Yang, Daqing Zhang, Zheng, Zhiyong Yu / 2015/2014 / IEEE Transactions on Systems, Man, and Cybernetics: Systems / 10.1109/tsmc.2014.2327053
+
+=== math.NA_2611.25245.pdf: refs 85 → 85, flags 3 → 3
+  #3 STILL FALSE    metadata_error → metadata_error  [1] N. I. Achieser, Theory of approximation, Courier Corporation, 2013.
+      now: Incomplete author list: 2 of 3 authors omitted without “et al.” | Year 2013 does not match the published record (1960/1960) | Published in “Mathematical Gazette”, not “Courier Corporation”
+  #4 STILL FALSE    metadata_error → metadata_error  [8] R. H. Bartels and G. W. Stewart, Solution of the matrix equation AX+XB = C: Algorithm 
+      now: Author list does not match the published work: Bartels, Stewart not among its authors | Published in “Computing”, not “Comm. ACM”
+  #5 STILL FALSE    metadata_error → metadata_error  [32] G. M. Flagg and S. Gugercin, On the ADI method for the Sylvester equation and the opt
+      now: Title differs from the published title (cited “h2”)
+
+=== math.ST_2611.25163.pdf: refs 52 → 52, flags 2 → 2
+  #6 STILL FALSE    metadata_error → metadata_error  [Das99] Sanjoy Dasgupta. Learning mixtures of gaussians. In 40th Annual Symposium on Found
+      now: Year 1999 does not match the published record (2003)
+  #7 STILL FALSE    metadata_error → metadata_error  [FC18] Yingjie Fei and Yudong Chen. Hidden integrality of sdp relaxations for sub-gaussian
+      now: Only a preprint was found; publication in “Proceedings of the 31st Conference On Learning Theory” could not be confirmed
+
+=== physics.plasm-ph_2611.24523.pdf: refs 58 → 58, flags 2 → 1
+  #8 STILL FALSE    fabricated → not_found  [2] P. Shukla, Nonlinear Waves , 197 (1983).
+      now: OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC
+  #9 fixed          not_found → unchecked  [21] Jyoti and H. K. Malik, Physics of Plasmas 18, 102116 (2011).
+
+=== physics.ins-det_2611.24776.pdf: refs 72 → 72, flags 4 → 1
+  #10 fixed          metadata_error → unchecked  [5] Shuo Chen, Yijin Li, Xi Zheng, and Guofeng Zhang. Neural field-based 3D surface recons
+  #11 STILL FALSE    metadata_error → metadata_error  [7] Zhen Chen, Yi Jiang, Yu-Tsun Shao, Megan E. Holtz, Michal Odstrčil, Manuel Guizar-Sica
+      now: Published in “Science”, not “PARADIM, an NSF Materials Innovation Platform”
+  #12 fixed          not_found → unverifiable  [8] Tiffany Chien, Colin Ophus, and Laura Waller. Space-time implicit neural representatio
+  #13 fixed          not_found → unchecked  [13] Berthy T. Feng, Andrew A. Chael, David Bromley, Aviad Levis, William T. Freeman, and 
+
+=== cond-mat.mes-hall_2611.26616.pdf: refs 75 → 75, flags 3 → 1
+  #14 fixed          metadata_error → verified  [5] F. Schindler, A. M. Cook, M. G. Vergniory, Z. Wang, S. S. P. Parkin, B. A. Bernevig, a
+  #15 fixed          metadata_error → verified  [49] A. K. Nayak, J. Reiner, R. Queiroz, H. Fu, C. Shekhar, B. Yan, C. Felser, N. Avraham,
+  #16 STILL FALSE    metadata_error → metadata_error  [61] A. Panigrahi, R. Moessner, and B. Roy, Non-Hermitian metals and semimetals, Physical 
+      now: Closest real work has a different title: “Non-Hermitian dislocation modes: Stability and melting across exceptional points”
+
+=== astro-ph.HE_2611.26547.pdf: refs 164 → 164, flags 18 → 9
+  #17 STILL FALSE    metadata_error → metadata_error  [2] M. Baldo, O. Elgaroey, L. Engvik, M. Hjorth-Jensen, and H. J. Schulze, Triplet P-3(2) 
+      now: Title differs from the published title (cited “triplet”)
+  #18 fixed          metadata_error → verified  [8] C. O. Heinke and W. C. G. Ho, Direct Observation of the Cooling of the Cassiopeia A Ne
+  #19 fixed          metadata_error → verified  [12] E. M. Cackett, R. Wijnands, J. M. Miller, E. F. Brown, and N. Degenaar, Cooling of th
+  #20 fixed          metadata_error → verified  [14] G. Israel, T. Belloni, L. Stella, Y. Rephaeli, D. Gruber, P. G. Casella, S. Dall’Osso
+  #21 STILL FALSE    id_mismatch → id_mismatch  [15] M. Gabler, P. Cerdá-Durán, N. Stergioulas, J. A. Font, and E. Müller, Imprints of Sup
+      now: arXiv:1304.3566 points to a different work: “Imprints of superfluidity on magneto-elastic QPOs of SGRs”
+  #22 STILL FALSE    metadata_error → metadata_error  [21] C. M. Espinoza, A. G. Lyne, B. W. Stappers, and M. Kramer, A study of 315 glitches in
+      now: Incomplete author list: 5 of 9 authors omitted without “et al.”
+  #23 STILL FALSE    metadata_error → metadata_error  [28] B. Carter, N. Chamel, and P. Haensel, Entrainment coefficient and effective mass for 
+      now: Title differs from the published title (cited “2”)
+  #24 fixed          metadata_error → verified  [50] P. M. Pizzochero, Angular Momentum Transfer in Velalike Pulsar Glitches, Astrophys. J
+  #25 STILL FALSE    metadata_error → metadata_error  [69] L. D. Landau, Theory of superfluidity of Helium-II, Zhurnal Eksperimentalnoi i Teoret
+      now: Published in “Physical Review”, not “Zhurnal Eksperimentalnoi i Teoreticheskoi Fiziki 11”
+  #26 STILL FALSE    metadata_error → metadata_error  [70] V. V. Lebedev and I. M. Khalatnikov, The relativistic hydrodynamics of a superfluid, 
+      now: Published in “Physics Letters A”, not “Zhurnal Eksperimentalnoi i Teoreticheskoi Fiziki 83”
+  #27 fixed          not_found → verified  [86] E. Gourgoulhon, 3+1 formalism and bases of numerical relativity (2007), arXiv:gr-qc/0
+  #28 fixed          metadata_error → verified  [91] B. Carter, D. Langlois, and R. Prix, Relativistic solution of Iordanskii problem in m
+  #29 fixed          metadata_error → verified  [111] A. Spitkovsky, Time-dependent force-free pulsar magnetospheres: axisymmetric and obl
+  #30 fixed          metadata_error → verified  [117] K. Glampedakis and N. Andersson, Magneto-rotational neutron star evolution: the role
+  #31 STILL FALSE    metadata_error → metadata_error  [132] L. Del Zanna, O. Zanotti, N. Bucciantini, and P. Londrillo, ECHO: an Eulerian Conser
+      now: Title differs from the published title (cited “londrillo”, cited “an”, cited “astron”)
+  #32 fixed          metadata_error → verified  [134] B. Giacomazzo and L. Rezzolla, The Exact solution of the Riemann problem in relativi
+  #33 STILL FALSE    metadata_error → metadata_error  [139] J. A. Font, T. Goodale, S. Iyer, M. A. Miller, L. Rezzolla, E. Seidel, N. Stergioula
+      now: Title differs from the published title (cited “2”, published “numerical”, published “ii”)
+  #34 fixed          metadata_error → verified_minor  [163] E. Hairer, S. P. Nørsett, and G. Wanner, Solving Ordinary Differential Equations I: 
+  NEW FLAG [96] not_found  [96] E. G. Harris, Relativistic Magnetohydrodynamics, Physical Review 108, 1357 (1957).
+      Semantic Scholar did not respond; re-run later to confirm | No matching work in Crossref, OpenAlex, Europe PMC
+      rec: -
+
+=== hep-ex_2611.26449.pdf: refs 150 → 150, flags 53 → 21
+  #35 uncertain kept metadata_error → metadata_error  [5] M. Gronau and D. Wyler, On determining a weak phase from CP asymmetries in charged B d
+      now: Closest real work has a different title: “On determining a weak phase from charged B decay asymmetries”
+  #36 fixed          metadata_error → verified  [6] M. Gronau and D. London, How to determine all the angles of the unitarity triangle fro
+  #37 fixed          metadata_error → verified_minor  [13] J. Brod and J. Zupan, The ultimate theoretical error on γ from B → DK decays, JHEP 01
+  #38 fixed          metadata_error → verified_minor  [15] A. Lenz and G. Tetlalmatzi-Xolocotzi, Model-independent bounds on new physics effects
+  #39 STILL FALSE    metadata_error → metadata_error  [29] R. K. Ellis et al., Physics Briefing Book: Input for the European Strategy for Partic
+      now: Author list does not match the published work: Ellis not among its authors
+  #40 STILL FALSE    id_mismatch → id_mismatch  [30] Heavy Flavor Averaging Group, S. Banerjee et al., Averages of b-hadron, chadron, and 
+      now: Author list does not match the published work: chadron not among its authors | doi:10.5281/zenodo.19446771 points to a different work: “HFLAV results for b-lifetimes and oscillations parameters”
+  #41 fixed          metadata_error → verified_minor  [39] LHCb collaboration, R. Aaij et al., Measurement of the CKM angle γ using the B± → D∗h
+  #42 fixed          metadata_error → verified_minor  [40] LHCb collaboration, R. Aaij et al., A model-independent measurement of the CKM angle 
+  #43 fixed          metadata_error → verified  [42] LHCb collaboration, R. Aaij et al., Measurement of the CKM angle γ in the B0 → D0K∗0 
+  #44 fixed          metadata_error → verified_minor  [45] LHCb collaboration, R. Aaij et al., A model-independent measurement of the CKM angle 
+  #45 fixed          id_mismatch → verified_minor  [47] LHCb collaboration, R. Aaij et al., Measurement of γ using B± → DK± and B± → Dπ± deca
+  #46 STILL FALSE    id_mismatch → metadata_error  [48] LHCb collaboration, R. Aaij et al., Model-independent measurement of charm mixing par
+      now: Author list does not match the published work: Aaij not among its authors
+  #47 fixed          id_mismatch → verified  [50] LHCb collaboration, R. Aaij et al., Measurement of D0-D0 mixing and search for CP vio
+  #48 fixed          metadata_error → verified_minor  [51] LHCb collaboration, R. Aaij et al., Study of charm mixing and CP violation with D0 → 
+  #49 fixed          metadata_error → verified  [58] CKMfitter Group, J. Charles et al., CP violation and the CKM matrix: Assessing the im
+  #50 fixed          metadata_error → verified_minor  [61] L. Dulibić, B. Melić, and A. A. Petrov, Nonperturbative dynamics in D-meson mixing, J
+  #51 fixed          metadata_error → verified_minor  [62] S. Bergmann and Y. Nir, New physics effects in doubly Cabibbo suppressed D decays, JH
+  #52 fixed          metadata_error → verified_minor  [63] I. I. Y. Bigi and H. Yamamoto, Interference between Cabibbo allowed and doubly forbid
+  #53 fixed          metadata_error → verified_minor  [66] Y. Grossman and S. Schacht, The emergence of the ∆U = 0 rule in charm physics, JHEP 0
+  #54 fixed          metadata_error → verified_minor  [70] Y. Grossman and D. J. Robinson, SU (3) sum rules for charm decay, JHEP 04 (2013) 067,
+  #55 fixed          metadata_error → verified_minor  [73] A. Dery, Y. Grossman, S. Schacht, and A. Soffer, Probing the ∆U = 0 rule in three bod
+  #56 fixed          metadata_error → verified_minor  [74] M. Gavrilova, Y. Grossman, and S. Schacht, The mathematical structure of U-spin ampli
+  #57 fixed          metadata_error → verified_minor  [75] M. Gavrilova and S. Schacht, Systematics of U-spin sum rules for systems with direct 
+  #58 fixed          metadata_error → verified_minor  [76] R. Fleischer, M. L. Piscopo, K. K. Vos, and B. Y. Zubaroğlu, Standard model benchmark
+  #59 fixed          metadata_error → verified_minor  [77] M. Gavrilova, Y. Grossman, G. Papiri, and S. Schacht, One sum to rule them all: a sec
+  #60 fixed          metadata_error → verified_minor  [80] E. Franco, S. Mishima, and L. Silvestrini, The Standard Model confronts CP violation 
+  #61 fixed          metadata_error → verified_minor  [83] T. Pajero and M. J. Morello, Mixing and CP violation in D → K-π+ decays, JHEP 03 (202
+  #62 fixed          id_mismatch → verified  [84] LHCb collaboration, R. Aaij et al., Measurements of charm mixing and CP violation usi
+  #63 fixed          metadata_error → verified_minor  [87] T. Evans, J. Libby, S. Malde, and G. Wilkinson, Improved sensitivity to the CKM phase
+  #64 fixed          metadata_error → verified  [90] LHCb collaboration, R. Aaij et al., Measurement of the charm-mixing parameter yCP , P
+  #65 fixed          metadata_error → verified  [96] LHCb collaboration, R. Aaij et al., Search for time-dependent CP violation in D0 → π+
+  #66 fixed          id_mismatch → verified  [98] LHCb collaboration, R. Aaij et al., Measurement of the difference of time-integrated 
+  #67 fixed          metadata_error → verified  [100] M. Rama, Effect of D-D mixing in the extraction of γ with B- → D0K- and B- → D0π- de
+  #68 STILL FALSE    metadata_error → metadata_error  [102] M. Gronau, Improving bounds on γ in B± → DK± and B±,0 → DX±,0, Phys. Lett. s B557 (2
+      now: Published in “Physics Letters B”, not “0 → DX±”
+  #69 fixed          metadata_error → verified  [103] T. Gershon and A. Poluektov, Double Dalitz plot analysis of the decay B0 → DK+π-, D 
+  #70 fixed          metadata_error → verified_minor  [106] R. Fleischer, New strategies to obtain insights into CP violation through B0 → s D±K
+  #71 STILL FALSE    id_mismatch → id_mismatch  [107] Heavy Flavor Averaging Group, Y. S. Amhis et al., Averages of b-hadron, chadron, and
+      now: doi:10.5281/zenodo.19371140 points to a different work: “Zenodo upload for PDG results on CKM UT angles”
+  #72 STILL FALSE    id_mismatch → metadata_error  [109] LHCb collaboration, R. Aaij et al., Measurement of the CKM angle γ and B0-B0 mixing 
+      now: Only a preprint was found; publication in “JHEP” could not be confirmed
+  #73 STILL FALSE    id_mismatch → metadata_error  [112] LHCb collaboration, R. Aaij et al., Measurement of the CKM angle γ in B± → DK± and B
+      now: Only a preprint was found; publication in “JHEP” could not be confirmed
+  #74 STILL FALSE    id_mismatch → metadata_error  [113] BESIII and LHCb collaborations, M. Ablikim et al., Measurement of the CKM angle γ in
+      now: Title differs from the published title (cited “arxiv”, published “k0s”)
+  #75 fixed          id_mismatch → verified  [117] LHCb collaboration, R. Aaij et al., A study of CP violation in the decays B± → [K+K-
+  #76 STILL FALSE    id_mismatch → metadata_error  [123] LHCb collaboration, R. Aaij et al., Measurement of CP observables in B± → DK∗± decay
+      now: Title differs from the published title (cited “meson”) | Has published erratum notice(s)
+  #77 fixed          metadata_error → verified  [124] LHCb collaboration, R. Aaij et al., Constraints on the unitarity triangle angle γ fr
+  #78 fixed          metadata_error → verified  [125] CLEO collaboration, D. M. Asner et al., Updated measurement of the strong phase in D
+  #79 fixed          metadata_error → verified_minor  [126] BESIII collaboration, M. Ablikim et al., First observation of quantum correlations i
+  #80 fixed          id_mismatch → verified  [132] CLEO collaboration, J. Insler et al., Studies of the decays D0 → K0K-π+ and S D0 → K
+  #81 fixed          id_mismatch → verified  [133] LHCb collaboration, R. Aaij et al., Studies of the resonance structure in D0 → K0K±π
+  #82 fixed          id_mismatch → verified_minor  [135] CLEO collaboration, J. Libby et al., Model-independent determination of the strongph
+  #83 fixed          metadata_error → verified_minor  [137] M. Bjørn and S. Malde, CP violation and material interaction of neutral kaons in mea
+  #84 STILL FALSE    id_mismatch → id_mismatch  [138] J. S. Butter et al., GammaCombo: A statistical analysis framework for combining meas
+      now: doi:10.5281/zenodo.3627034 points to a different work: “gammacombo/gammacombo: LHCb-PAPER-2026-058”
+  #85 STILL FALSE    metadata_error → metadata_error  [143] T. E. Browder and S. Pakvasa, Experimental implications of large CP violation and fi
+      now: Title differs from the published title (cited “d0”)
+  #86 fixed          metadata_error → verified_minor  [144] A. F. Falk, Y. Nir, and A. A. Petrov, Strong phases and D0-D0 mixing parameters, JHE
+  #87 STILL FALSE    metadata_error → metadata_error  [145] D.-N. Gao, Strong phases, asymmetries, and SU(3) symmetry breaking in D → Kπ decays,
+      now: Title differs from the published title (published “asymmetries”, published “su”, published “symmetry”, published “breaking”, published “in”, published “decays”)
+  NEW FLAG [54] metadata_error  [54] A. L. Kagan and M. D. Sokoloff, Indirect CP violation and implications for D0-D0 and B0-B0 mixing, Phys. Rev. D80 (2009) 076008, arXiv:0907.3917. s s
+      Title differs from the published title (published “on”, published “bs”)
+      rec: On Indirect CP Violation and Implications for D0-\overline{D0} and Bs -\overline{Bs} mixing / Kagan, Sokoloff / 2009 / arXiv / 10.48550/arxiv.0907.3917
+  NEW FLAG [79] metadata_error  [79] Particle Data Group, F. Takahashi et al., Review of particle physics, Mod. Phys. A41 (2026) 2630011.
+      Year 2026 does not match the published record (2018) | Published in “Physical review. D/Physical review. D.”, not “Mod. Phys. A41”
+      rec: Review of Particle Physics / Tanabashi, Hagiwara, Hikasa, Nakamura / 2018 / Physical review. D/Physical review. D. / 10.1103/physrevd.98.030001
+  NEW FLAG [91] metadata_error  [91] LHCb collaboration, R. Aaij et al., Measurement of the charm mixing parameter y - yKπ using two-body D0 meson decays, Phys. Rev. D105 (2022) 092013, CP CP arXiv:2202.09106.
+      Title differs from the published title (published “ycp”, published “ycpk”)
+      rec: Measurement of the charm mixing parameter $y_{CP} - y_{CP}^{Kπ}$ using two-body $D^0$ meson decays / Collaboration, Aaij, Abdelmotteleb, Beteta / 2022 / arXiv / 10.48550/arxiv.2202.09106
+  NEW FLAG [111] metadata_error  [111] LHCb collaboration, R. Aaij et al., Measurement of CP violation in B0 → D±π∓ decays, JHEP 06 (2018) 084, arXiv:1805.03448.
+      Only a preprint was found; publication in “JHEP” could not be confirmed
+      rec: Measurement of $CP$ violation in $B^{0}\rightarrow D^{\mp}π^{\pm}$ decays / Collaboration, Aaij, Adeva, Adinolfi / 2018 / arXiv / 10.48550/arxiv.1805.03448
+  NEW FLAG [116] metadata_error  [116] LHCb collaboration, R. Aaij et al., Measurement of CP observables in B± → D(∗)K± and B± → D(∗)π± decays using two-body D final states, JHEP 04 (2021) 081, arXiv:2012.09903.
+      Only a preprint was found; publication in “JHEP” could not be confirmed
+      rec: Measurement of $C\!P$ observables in $B^\pm \to D^{(*)} K^\pm$ and $B^\pm \to D^{(*)} π^\pm$ decays using two-body $D$ final states / Collaboration, Aaij, Beteta, Ackernley / 2020 / arXiv / 10.48550/arxiv.2012.09903
+  NEW FLAG [119] metadata_error  [119] LHCb collaboration, R. Aaij et al., Measurement of CP observables in B± → DK± and B± → Dπ± with D → K0K±π∓ decays, JHEP 06 (2020) 58, arXiv:2002.08858. S
+      Only a preprint was found; publication in “JHEP” could not be confirmed
+      rec: Measurement of $CP$ observables in $B^{\pm} \to D K^{\pm}$ and $B^{\pm} \to D π^{\pm}$ with $D \to K_{\rm{S}}^0 K^\pm π^\mp$ decays / Collaboration, Aaij, Beteta, Ackernley / 2020 / arXiv / 10.48550/arxiv.2002.08858
+  NEW FLAG [134] metadata_error  [134] BESIII collaboration, M. Ablikim et al., Updated model-independent measurement of the strong-phase differences between D0 and D0 → K0 π+π- decays, JHEP 06 S/L (2025) 086, arXiv:2503.22126.
+      Title differs from the published title (cited “decays”, published “ks”, published “l0”)
+      rec: Updated model-independent measurement of the strong-phase differences between D0 and D¯0→KS/L0π+π−\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargi / Ablikim, Achasov, Adlarson, Ai / 2025/2025 / Journal of High Energy Physics / 10.1007/jhep06(2025)086
+  NEW FLAG [140] metadata_error  [140] B. Sen, M. Walker, and M. Woodroofe, On the unified method with nuisance parameters, Statist. Sinica 19 (2009) 301.
+      Author list does not match the published work: Sen not among its authors
+      rec: ON THE UNIFIED METHOD WITH NUISANCE PARAMETERS / Bodhisattva, Woodroofe, Walker / 2009 / Statistica Sinica / 
+
+=== q-bio.BM_2611.19885.pdf: refs 62 → 62, flags 2 → 1
+  #88 fixed          metadata_error → verified  S. Lewis, T. Hempel, J. Jiménez-Luna, M. Gastegger, Y. Xie, A. Y. Foong, V. G. Satorras, O
+  #89 STILL FALSE    metadata_error → metadata_error  J. Brehmer, S. Behrends, P. D. Haan, and T. Cohen, “Does equivariance matter at scale?” Tr
+      now: Author list does not match the published work: Brehmer, Behrends, Haan, Cohen, Centre not among its authors | Year 2025 does not match the published record (2021)
+
+=== cs.NE_2611.24848.pdf: refs 22 → 22, flags 0 → 0
+
+=== nlin.CD_2611.23434.pdf: refs 66 → 66, flags 2 → 1
+  #90 fixed          metadata_error → verified  [1] R. Everson and L. Sirovich. Karhunen-Loève procedure for gappy data. JOSA A, 12(8):165
+  #91 fixed          metadata_error → verified  [2] Maxime Barrault, Yvon Maday, Ngoc Cuong Nguyen, and Anthony T. Patera. An ‘empirical i
+  NEW FLAG [39] fabricated  [39] Herbert Jaeger. The “echo state” approach to analysing and training recurrent neural networks. GMD Report 148, German National Research Center for Information Technology, 2001.
+      No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC | Nearest record: “Re-visiting the echo state property” (54% title similarity)
+      rec: -
+
+=== plos_10_1371_journal_pone_0363220.pdf: refs 45 → 45, flags 4 → 2
+  #92 fixed          metadata_error → verified_minor  1. Ralph R, Faiz MA, Sharma SK, Ribeiro I, Chappuis F. Managing snakebite. BMJ. 2022;376:e
+  #93 fixed          metadata_error → verified  27. Cuschieri S. The STROBE guidelines. Saudi J Anaesth. 2019;13(Suppl 1):S31-4. https://d
+  #94 STILL FALSE    metadata_error → metadata_error  28. Uganda Bureau of Statistics. The National Population and Housing Census 2024 - Final R
+      now: Closest real work has a different title: “Population and Housing Census, Main Findings for Jerusalem, 2017”
+  #95 real kept      metadata_error → metadata_error  39. Chuat M, Alcoba G, Eyong J, Wanda F, Comte E, Nkwescheu A. Dealing with snakebite in r
+      now: Incomplete author list: 2 of 8 authors omitted without “et al.”
+
+=== plos_10_1371_journal_pone_0360499.pdf: refs 25 → 25, flags 5 → 1
+  #96 fixed          metadata_error → verified  2. Labbé Sandelin L, Olofsson J, Tolf C, Rohlén L, Brudin L, Tjernberg I, et al. Detection
+  #97 fixed          metadata_error → verified  7. Andersson M, Bartkova S, Lindestad O, Råberg L. Co-infection with “Candidatus Neoehrlic
+  #98 fixed          metadata_error → verified_minor  9. Diniz PPVP, Schulz BS, Hartmann K, Breitschwerdt EB. “Candidatus Neoehrlichia mikurensi
+  #99 fixed          metadata_error → verified  10. Beck R, Čurik V, Ivana R, Nikica Š, Anja V. Identification of “Candidatus Neoehrlichia
+  #100 STILL FALSE    metadata_error → metadata_error  21. Burri C, Schumann O, Schumann C, Gern L. Are Apodemus spp. mice and Myodes glareolus r
+      now: Title differs from the published title (published “are”, published “apodemus”, published “spp”)
+blind3 re-check with the current core: refs 964, flags now 45; judged false alarms fixed 67/98; judged real errors still flagged 1/1; uncertain still flagged 2/2; new flags to judge 11; of the fixes, 3 only became unchecked/unanswered; 2 new flags had a failed or unrecorded lookup
