@@ -10,7 +10,7 @@ import { parsedFromBib } from '../src/core/bibtex';
 import { Http } from '../src/core/http';
 import { FLAGGED_VERDICTS, type RefResult } from '../src/core/types';
 import { verifyReference } from '../src/core/verify';
-import { FileCache } from './node-cache';
+import { makeCache, replayMisses, replayRef } from './node-cache';
 
 const arg = (k: string, d?: string) => {
   const i = process.argv.indexOf(k);
@@ -41,8 +41,9 @@ if (perType || nValid) {
   }
 }
 
-const cache = new FileCache(process.env.VERACITE_CACHE_PATH ?? fileURLToPath(new URL('../../data/cache/http.json', import.meta.url)));
-const http = new Http({ cache, maxRetries: 6 });
+const cache = makeCache(fileURLToPath(new URL('../../data/cache/http.json', import.meta.url)));
+const replay = !!process.env.VERACITE_REPLAY;
+const http = new Http({ cache, maxRetries: replay ? 0 : 6 });
 
 const results: RefResult[] = new Array(rows.length);
 let next = 0;
@@ -53,7 +54,7 @@ await Promise.all(
       const i = next++;
       const p = parsedFromBib(rows[i].fields, rows[i].bibtex_type);
       try {
-        results[i] = await verifyReference(p, { http }, i);
+        results[i] = await replayRef.run(i, () => verifyReference(p, { http }, i));
       } catch (e) {
         results[i] = { index: i, parsed: p, verdict: 'not_found', confidence: 0.5, checks: [], issues: [String(e)], candidates: [], sourcesQueried: [], sourcesFailed: [] };
       }
@@ -67,7 +68,7 @@ cache.flush();
 // (a host disabled for a spent daily allowance will not recover within this run)
 const spent = new Set([...http.disabled].map((h) => (h.includes('openalex') ? 'openalex' : h.includes('semanticscholar') ? 'semanticscholar' : h)));
 const retry = results.map((r, i) => ({ r, i })).filter(({ r }) => FLAGGED_VERDICTS.includes(r.verdict) && r.sourcesFailed.some((s) => !spent.has(s)));
-if (retry.length) {
+if (retry.length && !replay) {
   process.stderr.write(`\nretrying ${retry.length} entries with failed sources after 60s\n`);
   await new Promise((r) => setTimeout(r, 60000));
   for (const { i } of retry) {
@@ -100,15 +101,19 @@ rows.forEach((r, i) => {
   types.set(t, [a + (pred[i] ? 1 : 0), b + 1]);
 });
 for (const [t, [a, b]] of [...types].sort()) console.log(`  ${t.padEnd(26)} ${a}/${b}  ${(a / b).toFixed(2)}`);
+if (replay) {
+  const wrong = rows.map((_, i) => i).filter((i) => pred[i] !== gold[i]);
+  console.log(`Replay: ${rows.length - replayMisses.size}/${rows.length} entries answered entirely from recorded responses; errors with unrecorded lookups: ${wrong.filter((i) => replayMisses.has(i)).length}/${wrong.length}`);
+}
 
 const out = rows.map((r, i) => ({ bibtex_key: r.bibtex_key, label: pred[i] ? 'HALLUCINATED' : 'VALID', confidence: pred[i] ? 1 - results[i].confidence : results[i].confidence, reason: results[i].issues.join(' | ') }));
-writeFileSync(fileURLToPath(new URL(`../../data/hallmark_${split}_veracite.jsonl`, import.meta.url)), out.map((o) => JSON.stringify(o)).join('\n'));
+if (!replay) writeFileSync(fileURLToPath(new URL(`../../data/hallmark_${split}_veracite.jsonl`, import.meta.url)), out.map((o) => JSON.stringify(o)).join('\n'));
 
 if (verbose) {
   rows.forEach((r, i) => {
     if (pred[i] === gold[i]) return;
     const res = results[i];
-    console.log(`${pred[i] ? 'FP' : 'FN'} [${r.hallucination_type ?? 'VALID'}] ${res.verdict} | ${JSON.stringify(r.fields).slice(0, 200)}`);
+    console.log(`${pred[i] ? 'FP' : 'FN'} [${r.hallucination_type ?? 'VALID'}] ${res.verdict}${replay ? ` misses=${replayMisses.get(i)?.length ?? 0}` : ''} | ${JSON.stringify(r.fields).slice(0, 200)}`);
     if (r.explanation) console.log(`   WHY: ${r.explanation.slice(0, 160)}`);
     if (res.match) console.log(`   MATCH[${res.match.source}]: ${res.match.title} | ${res.match.authors.slice(0, 5).map((a) => a.family).join(', ')} | ${res.match.years.join('/')} | ${res.match.venue ?? ''}`);
     for (const s of res.issues) console.log(`   ! ${s}`);

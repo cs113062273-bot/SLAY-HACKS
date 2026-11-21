@@ -1,0 +1,167 @@
+
+=== cs.CR_2611.25479v1.pdf: refs 25 → 25, flags 3 → 2
+  #1 fixed          not_found → unchecked [3 unrecorded lookups]  [1] “Common Criteria for Information Technology Security Evaluation,” Sep. 2006. S. Mangar
+  #2 STILL FALSE    not_found → not_found [2 unrecorded lookups]  [8] for side-channel analysis and benchmarking,” Journal of Cryptographic Engineering, vol
+      now: OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC
+  #3 STILL FALSE    fabricated → not_found [2 unrecorded lookups]  [10] G. Goodwill et al., “A testing methodology for sidechannel resistance validation,” 20
+      now: OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC
+
+=== cs.RO_2611.25462v1.pdf: refs 19 → 19, flags 16 → 2
+  #4 fixed          not_found → verified  [Bacon et al., 2016] Pierre-Luc Bacon, Jean Harb, and Doina Precup. The Option-Critic Arch
+  #5 fixed          not_found → verified [1 unrecorded lookups]  [Bagaria and Konidaris, 2020] Akhil Bagaria and George Konidaris. Option discovery using d
+  #6 fixed          not_found → verified [1 unrecorded lookups]  [Byun and Perrault, 2022] Ju-Seung Byun and Andrew Perrault. Training Transition Policies 
+  #7 STILL FALSE    metadata_error → metadata_error  [Chen et al., 2024] Zixuan Chen, Yang Gao, Jing Huo, and Ze Ji. SCaR: Refining skill chain
+      now: Published in “Advances in Neural Information Processing Systems 37”, not “pages 111679-111714, January”
+  #8 fixed          metadata_error → verified  [Clegg et al., 2018] Alexander Clegg, Wenhao Yu, Jie Tan, C. Karen Liu, and Greg Turk. Lea
+  #9 fixed          not_found → verified [1 unrecorded lookups]  [Eberhard et al., 2023] Onno Eberhard, Jakob Hollenstein, Cristina Pinneri, and Georg Mart
+  #10 fixed          not_found → verified [1 unrecorded lookups]  [Haarnoja et al., 2018] Tuomas Haarnoja, Aurick Zhou, Pieter Abbeel, and Sergey Levine. So
+  #11 fixed          metadata_error → verified  [Hutsebaut-Buysse et al., 2022] Matthias Hutsebaut- Buysse, Kevin Mets, and Steven Latré. 
+  #12 fixed          metadata_error → verified  [Kim et al., 2023] Byeongjun Kim, Gunam Kwon, Chaneun Park, and Nam Kyu Kwon. The task dec
+  #13 fixed          not_found → verified [1 unrecorded lookups]  [Konidaris and Barto, 2009] George Konidaris and Andrew Barto. Skill discovery in continuo
+  #14 fixed          not_found → verified [1 unrecorded lookups]  [Lee et al., 2019] Youngwoon Lee, Shao-Hua Sun, Sriram Somasundaram, Edward S Hu, and Jose
+  #15 fixed          not_found → verified [1 unrecorded lookups]  [Lee et al., 2021] Youngwoon Lee, Joseph J. Lim, Anima Anandkumar, and Yuke Zhu. Adversari
+  #16 fixed          not_found → verified [1 unrecorded lookups]  [Mnih et al., 2013] Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis 
+  #17 fixed          not_found → verified_minor [1 unrecorded lookups]  [Raffin et al., 2021] Antonin Raffin, Ashley Hill, Adam Gleave, Anssi Kanervisto, Maximili
+  #18 fixed          metadata_error → verified  [Sutton et al., 1999] Richard S. Sutton, Doina Precup, and Satinder Singh. Between MDPs an
+  #19 uncertain kept metadata_error → metadata_error [1 unrecorded lookups]  [Zhu et al., 2025] Yuke Zhu, Josiah Wong, Ajay Mandlekar, Roberto Martín-Martín, Abhishek 
+      now: Year 2025 does not match the published record (2020/2020)
+
+=== cs.DB_2611.25416v1.pdf: refs 23 → 23, flags 3 → 2
+  #20 fixed          id_mismatch → verified  [1] evaluation of the state-of-the-art,” Proceedings of An experimental the ACM on Managem
+  #21 STILL FALSE    not_found → not_found [2 unrecorded lookups]  [6] M. Huh, B. Cheung, T. Wang, and P. Isola, “Position: The Platonic representation hypot
+      now: OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Hugging Face, Semantic Scholar, Europe PMC
+  #22 STILL FALSE    metadata_error → metadata_error [1 unrecorded lookups]  [22] Z. Zhang, Z. Liao, H. Yu, P. Di, and R. Wang, “ML-Embed: Inclusive and efficient embe
+      now: Only a preprint was found; publication in “in Proceedings of the 43rd International Conference on Machine Learning, ser. Proceedings of Machine Learning Research” could not be confirmed
+
+=== physics.optics_2611.25432v1.pdf: refs 23 → 23, flags 0 → 0
+
+=== cond-mat.stat-mech_2611.25491v1.pdf: refs 12 → 117, flags 5 → 3
+  #23 fixed          fabricated → unverifiable [3 unrecorded lookups]  [1] M. Harsh and P. Sollich, Journal of Physics A: Mathematical and Theoretical 56, 455004
+  #24 fixed          metadata_error → verified_minor [1 unrecorded lookups]  [5] J. Cardy, in Non-equilibrium Statistical Mechanics and Turbulence, London Mathematical
+  #25 fixed          not_found → missing  [6] R. B. Potts, Australian Journal of Physics 6, 498 (1953).
+  #26 fixed          fabricated → unverifiable [3 unrecorded lookups]  [8] B. Bravi, P. Sollich, and M. Opper, Journal of Physics A: Mathematical and Theoretical
+  #27 fixed          not_found → unverifiable [2 unrecorded lookups]  [11] B. Munsky and M. Khammash, The Journal of Chemical Physics 124, 044104 (2006).
+  NEW FLAG [1] metadata_error [1 unrecorded lookups]  [1] L. Cardelli, M. Kwiatkowska, and L. Laurenti, Biosystems Selected papers from the Computational Methods in Systems Biology 2015 conference, 149, 26 (2016).
+      Author list does not match the published work: Cardelli, Kwiatkowska, Laurenti not among its authors
+      rec: Computational Methods in Systems Biology / Bourdon, Roux / 2016 / Biosystems / 10.1016/j.biosystems.2016.10.006
+  NEW FLAG [19] id_mismatch [3 unrecorded lookups]  [19] A. Sukys and R. Grima, Bioinformatics (Oxford, England) 10.1093/bioinformatics/btab469 (2021).
+      doi:10.1093/bioinformatics/btab469 points to a different work: “MomentClosure.jl: automated moment closure approximations in Julia”
+      rec: -
+  NEW FLAG [31] metadata_error [4 unrecorded lookups]  [31] P. Atkins, J. de Paula, and J. Keeler, Atkins’ Physical Chemistry, 11th ed. (Oxford University Press, Oxford, 2018).
+      Title differs from the published title (cited “oxford”) | Author list does not match the published work: Atkins, de Paula, Keeler, Chemistry not among its authors
+      rec: Oxford University Press / Jones / 2001/2017 / Oxford Music Online / 10.1093/gmo/9781561592630.article.20622
+
+=== hep-ph_2611.25910v1.pdf: refs 66 → 66, flags 14 → 6
+  #28 fixed          metadata_error → verified [1 unrecorded lookups]  [6] E. A. Kuraev, L. N. Lipatov, and V. S. Fadin, “Multi-Reggeon processes in the Yang-Mil
+  #29 fixed          metadata_error → verified [1 unrecorded lookups]  [7] E. A. Kuraev, L. N. Lipatov, and V. S. Fadin, “The Pomeranchuk singularity in nonabeli
+  #30 real kept      id_mismatch → id_mismatch  [15] A. D. Martin, M. G. Ryskin, and G. Watt, “NLO prescription for unintegrated parton di
+      now: arXiv:0912.3685 points to a different work: “Mutual Coupling of two Semiconductor Quantum Dots via an Optical Nanocavity Mode”
+  #31 real kept      metadata_error → metadata_error [1 unrecorded lookups]  [18] A. V. Lipatov, S. P. Baranov, and M. A. Malyshev, “Semi-hard QCD processes beyond the
+      now: Title differs from the published title (cited “approach”, published “approximation”)
+  #32 fixed          metadata_error → verified [1 unrecorded lookups]  [32] ATLAS Collaboration, “Charged-particle multiplicities in pp interactions measured wit
+  #33 fixed          metadata_error → verified_minor [1 unrecorded lookups]  [33] CMS Collaboration, “Transverse-momentum and pseudorapidity distributions of √ charged
+  #34 real kept      id_mismatch → id_mismatch  [42] S. A. Kulagin and R. Petti, “Nuclear parton distributions and the Drell-Yan process”,
+      now: arXiv:1401.1233 points to a different work: “Correlations in double parton distributions: effects of evolution”
+  #35 fixed          metadata_error → unchecked [8 unrecorded lookups]  [48] A. M. Sta´ sto, K. Golec-Biernat, and J. Kwieci ´nski, “Geometric scaling for the tot
+  #36 fixed          metadata_error → verified [1 unrecorded lookups]  [55] European Muon Collaboration, “Measurement of the ratios of deep inelastic muon-nucleu
+  #37 fixed          metadata_error → verified [1 unrecorded lookups]  [56] European Muon Collaboration, “Shadowing in Deep Inelastic Muon Scattering from Nuclea
+  #38 real kept      metadata_error → metadata_error [1 unrecorded lookups]  [58] Fermilab E665 Collaboration, “Shadowing in inelastic scattering of muons on carbon, c
+      now: Year 1992 does not match the published record (1995/1995) | Published in “Zeitschrift für Physik C Particles and Fields”, not “Phys. Rev. Lett”
+  #39 real kept      metadata_error → metadata_error [1 unrecorded lookups]  [59] Fermilab E665 Collaboration, “Shadowing in the muon-xenon inelastic scattering cross 
+      now: Year 1995 does not match the published record (1992/1992) | Published in “Physics Letters B”, not “Z. Phys. C”
+  #40 fixed          metadata_error → verified [1 unrecorded lookups]  [61] CMS Collaboration, “Study of the production of charged pions, kaons, and protons in √
+  #41 fixed          metadata_error → verified [1 unrecorded lookups]  [62] ALICE Collaboration, “Multiplicity dependence of pion, kaon, proton and lambda √ prod
+  NEW FLAG [1] metadata_error [1 unrecorded lookups]  [1] V. N. Gribov and L. N. Lipatov, “Deep inelastic ep scattering in perturbation theory”, Sov. J. Nucl. Phys. 15 (1972) 438.
+      Title differs from the published title (cited “ep”, published “electron”) | Published in “Physics Letters B”, not “Sov. J. Nucl. Phys”
+      rec: Deep inelastic electron scattering in perturbation theory / Gribov, Lipatov / 1971/2002 / Physics Letters B / 10.1016/0370-2693(71)90576-4
+
+=== math.AP_2611.26051v1.pdf: refs 40 → 40, flags 3 → 3
+  #42 STILL FALSE    metadata_error → metadata_error  [21] Marchioro, C., and Pagani, E. Evolution of two concentrated vortices in a two-dimensi
+      now: Incomplete author list: 1 of 3 authors omitted without “et al.”
+  #43 STILL FALSE    metadata_error → metadata_error [1 unrecorded lookups]  [35] von K´arm´an, T. Uber den Mechanismus des Widerstandes,¨ den ein bewegter K¨orper in 
+      now: Title differs from the published title (cited “uber”, published “ueber”)
+  #44 STILL FALSE    metadata_error → metadata_error [1 unrecorded lookups]  [36] von K´arm´an, T. Uber den Mechanismus des Widerstandes, den ein bewegter K¨¨ orper in
+      now: Title differs from the published title (cited “uber”, published “ueber”)
+
+=== q-bio.GN_2611.22256v1.pdf: refs 25 → 25, flags 3 → 0
+  #45 fixed          metadata_error → verified_minor  [11] Enikő Lázár and Joakim Lundeberg. 2026. Spatial architecture of development and disea
+  #46 fixed          id_mismatch → verified_minor [1 unrecorded lookups]  [21] Alexander Tong, Nikolay Malkin, Guillaume Huguet, Yanlei Zhang, Jarrid Rector-Brooks,
+  #47 fixed          metadata_error → verified  [25] Jiaqi Zhang, Erica Larschan, Jeremy Bigness, and Ritambhara Singh. 2024. scN- ODE: ge
+
+=== eess.SY_2611.25962v1.pdf: refs 36 → 36, flags 2 → 0
+  #48 fixed          metadata_error → verified  [4] F. J. Doyle III, “Run-to-run control of blood glucose concentrations for people with t
+  #49 fixed          metadata_error → verified  [6] C. Toumazou, “Method for automatic adjustment of an insulin bolus calculator: In silic
+
+=== stat.ML_2611.25936v1.pdf: refs 39 → 39, flags 3 → 3
+  #50 STILL FALSE    metadata_error → metadata_error [1 unrecorded lookups]  Idan Attias and Aryeh Kontorovich. Fat-shattering dimension of k-fold aggregations. Journa
+      now: Year 2024 does not match the published record (2021/2021)
+  #51 uncertain kept metadata_error → metadata_error [3 unrecorded lookups]  Fabio Sigrist. Gradient and Newton boosting for tree ensembles. Machine Learning, 111(5):1
+      now: Closest real work has a different title: “Gradient and Newton boosting for classification and regression”
+  #52 STILL FALSE    metadata_error → metadata_error [1 unrecorded lookups]  Tyler M. Tomita, James Browne, Cencheng Shen, Jaewon Chung, Jesse L. Patsolic, Benjamin Fa
+      now: Year 2020 does not match the published record (2015/2015)
+
+=== physics.chem-ph_2611.25052v1.pdf: refs 41 → 41, flags 0 → 0
+
+=== gr-qc_2611.25786v1.pdf: refs 18 → 31, flags 0 → 3
+  NEW FLAG [2] metadata_error [2 unrecorded lookups]  [2] B. P. Abbott et al., GW150914: The Advanced LIGO Detectors in the Era of First Discoveries, Phys. Rev. Lett. 116, 131103 (2016), arXiv:1602.03838 [gr-qc].
+      Author list does not match the published work: Abbott not among its authors | Published in “SPIE Proceedings”, not “Phys. Rev. Lett. 116”
+      rec: The advanced LIGO detectors in the era of first discoveries / Sigg / 2016 / SPIE Proceedings / 10.1117/12.2243115
+  NEW FLAG [3] metadata_error [2 unrecorded lookups]  [3] B. P. Abbott et al., GW170817: Observation of Gravitational Waves from a Binary Neutron Star Inspiral, Phys. Rev. Lett. 119, 161101 (2017), arXiv:1710.05832 [gr-qc].
+      Author list does not match the published work: Abbott not among its authors
+      rec: GW170817: Observation of Gravitational Waves from a Binary Neutron Star Inspiral / Collaboration, Collaboration / 2017 / arXiv / 10.48550/arxiv.1710.05832
+  NEW FLAG [5] metadata_error [2 unrecorded lookups]  [5] The Event Horizon Telescope Collaboration, First Sagittarius A* Event Horizon Telescope Results. III: Imaging of the Galactic Center Supermassive Black Hole, arXiv e-prints , arXiv:2311.09479 (202
+      Author list does not match the published work: first author not among its authors
+      rec: First Sagittarius A* Event Horizon Telescope Results. III: Imaging of the Galactic Center Supermassive Black Hole / Collaboration / 2023 / arXiv / 10.48550/arxiv.2311.09479
+
+=== plos_10_1371_journal_pone_0347190.pdf: refs 75 → 75, flags 7 → 13
+  #53 real kept      metadata_error → metadata_error  16. Wood N, Shiferaw S. The impact of partner autonomy constraints on women’s health-seeki
+      now: Incomplete author list: 4 of 6 authors omitted without “et al.”
+  #54 real kept      metadata_error → metadata_error [1 unrecorded lookups]  20. Moran AC. Assessing the continuum of care pathway for maternal health in South Asia an
+      now: Incomplete author list: 2 of 3 authors omitted without “et al.”
+  #55 fixed          metadata_error → verified_minor [1 unrecorded lookups]  22. Chaka EE, Parsaeian M, Majdzadeh R. Factors Associated with the Completion of the Cont
+  #56 STILL FALSE    metadata_error → metadata_error [2 unrecorded lookups]  51. Do Mai, Kurimoto N. Women’s empowerment and choice of contraceptive methods in selecte
+      now: Author list does not match the published work: Mai not among its authors
+  #57 fixed          metadata_error → verified [6 unrecorded lookups]  52. Rimon JG 2nd, Tsui AO. Regaining Momentum in Family Planning. Glob Health Sci Pract. 2
+  #58 STILL FALSE    metadata_error → metadata_error [2 unrecorded lookups]  57. Fedral Democratic Republic of Ethiopia Health Minister. National healthcare quality an
+      now: Year 2021 does not match the published record (2026)
+  #59 fixed          metadata_error → verified [1 unrecorded lookups]  62. Gurara M, Muyldermans K, Jacquemyn Y, Van Geertruyden J-P, Draulans V. Traditional bir
+  NEW FLAG [8] not_found [2 unrecorded lookups]  8. UNFPA H e r a. Research on what determines women’s ability to decide on their SRHR and the relationship between this and other aspects of their lives. 2019.
+      OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC
+      rec: -
+  NEW FLAG [9] not_found [2 unrecorded lookups]  9. FMoH. RH strategic plan - Ethiopia 2021-2025. 2021.
+      OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “Strategic Plan 2021 - 2023” (64% title similarity)
+      rec: Strategic Plan 2021 - 2023 / Dublin / 2021/2025 /  / 10.63227/672.199.33
+  NEW FLAG [42] not_found [11 unrecorded lookups]  42. Rezapour M, Ksaibati K. Application of multinomial and ordinal logistic regression to model injury severity of truck crashes, using violation and crash data. J Mod Transport. 2018;26(4):268-77. ht
+      Semantic Scholar and OpenAlex did not respond; re-run later to confirm | No matching work in Hugging Face
+      rec: -
+  NEW FLAG [44] not_found [11 unrecorded lookups]  44. Argaw MD, Fekadu BD, Mamo E, Abebe MG, Rogers D, Demelash A, et al. Implementing a Social Accountability Approach for Maternal, Neonatal, and Child Health Service Performances in Ethiopia: A Pre-P
+      Semantic Scholar and OpenAlex did not respond; re-run later to confirm | No matching work in Hugging Face
+      rec: -
+  NEW FLAG [45] not_found [2 unrecorded lookups]  45. Ethiopian Federal Ministry of Health FMOH. Implementation of the community scorecard in Ethiopia: Best practices and lessons learned. 2020.
+      OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “Lessons Learned and Best Practices in the Implementation of Post Conflict Community Stabilization Measures in the Darfur Region, S
+      rec: -
+  NEW FLAG [47] not_found [2 unrecorded lookups]  47. JHPIEGO. Monitoring birth preparedness and complication readiness tools and indicators for maternal and newborn health. 2004.
+      OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “Birth Preparedness and Complication Readiness in Uttar Pradesh, India” (75% title similarity)
+      rec: Birth Preparedness and Complication Readiness in Uttar Pradesh, India / Kumar / 2016 / Health / 10.4236/health.2016.86063
+  NEW FLAG [55] not_found [2 unrecorded lookups]  55. FMoH. Health Sector Transformation Plan II (HSTP-II). 2021.
+      OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC
+      rec: -
+  NEW FLAG [56] not_found [2 unrecorded lookups]  56. FMoH. Continuous health care quality improvement through knowledge management. 2019.
+      OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “Enabling continuous learning and quality improvement in health care.” (57% title similarity)
+      rec: -
+  NEW FLAG [63] not_found [11 unrecorded lookups]  63. Aynalem BY, Melesse MF, Bitewa YB. Cultural Beliefs and Traditional Practices During Pregnancy, Child Birth, and the Postpartum Period in East Gojjam Zone, Northwest Ethiopia: A Qualitative Study.
+      Semantic Scholar and OpenAlex did not respond; re-run later to confirm | No matching work in Hugging Face
+      rec: -
+
+=== plos_10_1371_journal_pone_0355629.pdf: refs 23 → 23, flags 4 → 2
+  #60 fixed          metadata_error → verified  1. Gimeno J, Folta TB, Cooper AC, Woo CY. Survival of the fittest? Entrepreneurial human c
+  #61 fixed          metadata_error → verified_minor  8. Sánchez-Escobedo MC, Fernández-Portillo A, Díaz-Casero JC, Hernández-Mogollón R. Resear
+  #62 fixed          metadata_error → verified  13. Chang Y-Y, Chen M-H. Creative entrepreneurs’ creativity, opportunity recognition, and 
+  #63 fixed          metadata_error → verified [1 unrecorded lookups]  14. Georgiou A, Murillo D. From strangers to social collectives? Sensemaking and organizin
+  NEW FLAG [15] not_found [11 unrecorded lookups]  15. Estrada-Cruz M, Mira-Solves I, Martinez-Mateo J. Adaptation, compensation and disengagement: How ICT competences influence nascent entrepreneurs’ strategies in a global crisis environment. Eur J M
+      Semantic Scholar and OpenAlex did not respond; re-run later to confirm | No matching work in Hugging Face
+      rec: -
+  NEW FLAG [23] not_found [11 unrecorded lookups]  23. Acs ZJ, Desai S, Klapper L. What does “entrepreneurship” data really show? Small Bus Econ. 2008;31:265-81. https://doi.org/10.1007/ s11187-008-9137-7 18 / 18
+      Semantic Scholar and OpenAlex did not respond; re-run later to confirm | No matching work in Hugging Face
+      rec: -
+blind2 re-check with the current core: refs 583, flags now 39; judged false alarms fixed 42/54; judged real errors still flagged 7/7; uncertain still flagged 2/2; new flags to judge 18; of the fixes, 28 only became unchecked/unanswered; 18 new flags had a failed or unrecorded lookup (offline replay of recorded responses)

@@ -85,6 +85,14 @@ export function canonVenues(...texts: (string | undefined)[]): Set<string> {
 const JOURNAL_CANON = new Set(['TPAMI', 'IJCV', 'TNNLS', 'CACM', 'JMLR', 'TMLR', 'TACL', 'JETP', 'ApJ', 'JHEP']);
 
 const PREPRINT_RE = /arxiv|corr|biorxiv|medrxiv|ssrn|preprint|research square|openreview|techrxiv|chemrxiv|psyarxiv|zenodo/i;
+/** "Submitted to Phys. Rev. Lett.", "under review at …": the venue names a destination, not a publication */
+const NOT_YET_PUBLISHED_RE = /\b(?:submitted (?:to|for)|under (?:review|submission)|accepted (?:for|in|at|by)|to appear)\b/i;
+function notYetPublished(p: ParsedRef): boolean {
+  if (!p.venue) return false;
+  if (NOT_YET_PUBLISHED_RE.test(p.venue)) return true;
+  const at = p.raw.indexOf(p.venue);
+  return at > 0 && /\b(?:submitted (?:to|for)|under review (?:at|in|for)|accepted (?:for|in|at|by)|to appear in)[\s:]*(?:publication in\s*)?$/i.test(p.raw.slice(Math.max(0, at - 40), at));
+}
 
 /* ------------------------------ authors ------------------------------ */
 
@@ -669,7 +677,7 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
     }
 
     // publication status: cited as published in a venue, but every matching record is a preprint
-    const citedPublished = !!p.venue && !PREPRINT_RE.test(p.venue) && (canonVenues(p.venue).size > 0 || /proceedings|journal|transactions|conference|symposium|workshop|meeting|congress|letters|review/i.test(p.venue));
+    const citedPublished = !!p.venue && !PREPRINT_RE.test(p.venue) && !notYetPublished(p) && (canonVenues(p.venue).size > 0 || /proceedings|journal|transactions|conference|symposium|workshop|meeting|congress|letters|review/i.test(p.venue));
     const strongRecs = aligned.filter((x) => x.title >= 0.85 && x.authors.score >= 0.5);
     const anyPublished = strongRecs.some((x) => (x.rec.venue && !PREPRINT_RE.test(x.rec.venue)) || canonVenues(x.rec.venue, ...x.rec.venueAliases).size > 0);
     const anyPreprint = strongRecs.some((x) => PREPRINT_RE.test([x.rec.venue ?? '', ...x.rec.venueAliases].join(' ')) || x.rec.source === 'datacite');
@@ -957,6 +965,13 @@ export function titleDiff(cited: string, found: string): { kind: 'identical' | '
   if ([...plus].sort().join('') === [...minus].sort().join('') || plus.join('') === minus.join('')) return { kind: 'cosmetic', words: [] };
   // plural/singular only
   if (plus.length === minus.length && plus.every((t) => minus.some((m) => m === t + 's' || t === m + 's' || m === t + 'es' || t === m + 'es'))) return { kind: 'cosmetic', words: [] };
+  // math in the title (particle physics: "B0 → D K0S π+"): the text layer scatters sub- and superscripts and the index
+  // writes them in LaTeX, so leftovers are short symbol tokens ("ks0" vs "k0 s", "d0bar", "pi"). Only when the title
+  // really carries math, at least one leftover mixes letters and digits, and no ordinary word differs.
+  const mathy = symbolic || /[$_^]|\\[a-z]+|→/.test(found + cited);
+  const sym = (t: string) => /^[a-z]{0,5}\d[a-z\d]{0,5}$/.test(t) || /^[a-z]{1,3}$/.test(t) || /^[a-z]\d?bar$/.test(t);
+  const left = [...plus, ...minus];
+  if (mathy && left.length && left.every(sym) && left.some((t) => /[a-z]/.test(t) && /\d/.test(t))) return { kind: 'cosmetic', words: [] };
   if (!plus.length && minus.length === 1) return { kind: 'omission', words: [`missing “${minus[0]}”`] };
   if (!plus.length && A.length >= 3 && B.slice(0, A.length).join(' ') === A.join(' ')) return { kind: 'omission', words: ['abbreviated title'] };
   return { kind: 'word', words: [...plus.map((t) => `cited “${t}”`), ...minus.map((t) => `published “${t}”`)].slice(0, 6) };
@@ -965,6 +980,8 @@ export function titleDiff(cited: string, found: string): { kind: 'identical' | '
 /* ------------------------------ venue (general) ------------------------------ */
 
 const VENUE_STOP = new Set('proceedings proc of the in on and for international intl conference conf annual meeting workshop workshops symposium journal j ieee acm transactions trans advances adv th st nd rd volume vol part series lecture notes computer science lncs findings association new york ny usa pp p pages page no doi url issn isbn publisher en inc press ed eds editors at'.split(' '));
+
+const NLM_PLACE = new Set('lond engl basel oxf phila berl wash chic auckl edinb amst balt noisy grand'.split(' '));
 
 function venueTokens(s: string): string[] {
   return fold(s)
@@ -991,7 +1008,7 @@ function initials(s: string): string {
 
 /** Does the cited venue plausibly name the venue of any of the records (aliases, abbreviations, acronyms)? */
 export function venueGeneralCheck(p: ParsedRef, recs: WorkRecord[]): 'match' | 'mismatch' | 'unknown' {
-  if (!p.venue || PREPRINT_RE.test(p.venue)) return 'unknown';
+  if (!p.venue || PREPRINT_RE.test(p.venue) || notYetPublished(p)) return 'unknown';
   // "Technical report", "PhD thesis": a document type, not a venue
   if (p.kind === 'report' || p.kind === 'thesis' || /^(?:tech(?:nical|\.)?\s*rep(?:ort|\.)?|(?:ph\.?\s?d\.?|master'?s|doctoral)\s*(?:thesis|dissertation)|thesis|dissertation|manuscript|unpublished|white\s*paper)\b/i.test(p.venue.trim())) return 'unknown';
   // a publisher ("Cambridge University Press", "Springer") is not a venue that can be compared
@@ -1025,7 +1042,17 @@ export function venueGeneralCheck(p: ParsedRef, recs: WorkRecord[]): 'match' | '
     }
   }
   if (venue !== p.venue) return venueGeneralCheck({ ...p, venue, title: undefined }, recs);
+  // a title with commas in its math ("… B0 → D±π∓, D±π∓, … decays, Nucl. Phys. B671") runs into the venue: the
+  // journal is the last comma segment, often with the volume glued to the series letter
+  if (p.venue.includes(',')) {
+    const last = p.venue.slice(p.venue.lastIndexOf(',') + 1).replace(/\b([A-Z])(\d+)\b/g, '$1 $2').trim();
+    if (venueTokens(last).length >= 2 && venueGeneralCheck({ ...p, venue: last, title: undefined }, recs) === 'match') return 'match';
+  }
   const C = venueTokens(p.venue);
+  // NLM abbreviations tell same-named journals apart by place of publication ("Infect Dis (Lond)", "… Lond Engl",
+  // "Cell Mol Biol (Noisy-le-grand)"): a trailing place is not part of the journal's name
+  while (C.length > 2 && NLM_PLACE.has(C[C.length - 1])) C.pop();
+  if (C.length > 3 && C[C.length - 2] === 'n' && C[C.length - 1] === 'y') C.splice(-2);
   if (!C.length) return 'unknown';
   const citedCanon = canonVenues(p.venue);
   const recCanon = canonVenues(...names);

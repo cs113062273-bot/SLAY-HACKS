@@ -1,0 +1,36 @@
+
+HALLMARK dev_public (sample 310): n=310 DR=0.971 FPR=0.000 P=1.000 F1=0.986  [57s]
+  VALID (flagged=FP)         0/100  0.00
+  arxiv_version_mismatch     15/15  1.00
+  chimeric_title             15/15  1.00
+  fabricated_doi             15/15  1.00
+  future_date                15/15  1.00
+  hybrid_fabrication         15/15  1.00
+  merged_citation            15/15  1.00
+  near_miss_title            12/15  0.80
+  nonexistent_venue          14/15  0.93
+  partial_author_list        14/15  0.93
+  placeholder_authors        15/15  1.00
+  plausible_fabrication      15/15  1.00
+  preprint_as_published      15/15  1.00
+  swapped_authors            14/15  0.93
+  wrong_venue                15/15  1.00
+Replay: 109/310 entries answered entirely from recorded responses; errors with unrecorded lookups: 4/6
+FN [near_miss_title] verified misses=0 | {"title":"UniT: Unified Multimodal Chain of-Thought Test-time Scaling","author":"Leon Liangyu Chen and Haoyu Ma and Zhipeng Fan and Ziqi Huang and Animesh Sinha and Xiaoliang Dai and Jialiang Wang and
+   WHY: Title slightly modified: 'UniT: Unified Multimodal Chain of-Thought Test-time Scaling' (original: 'UniT: Unified Multimodal Chain-of-Thought Test-time Scaling')
+   MATCH[datacite]: UniT: Unified Multimodal Chain-of-Thought Test-time Scaling | Chen, Ma, Fan, Huang, Sinha | 2026 | arXiv
+FN [near_miss_title] verified misses=1 | {"title":"How Faithful is your Synthetic Data? Sample-level Metrics for Evaluating and Auditing Generative Model","author":"Ahmed M. Alaa and Boris van Breugel and Evgeny S. Saveliev and Mihaela van d
+   WHY: Title slightly modified: 'How Faithful is your Synthetic Data? Sample-level Metrics for Evaluating and Auditing Generative Model' (original: 'How Faithful is yo
+   MATCH[semanticscholar]: How Faithful is your Synthetic Data? Sample-level Metrics for Evaluating and Auditing Generative Models | Alaa, van Breugel, Saveliev, van der Schaar | 2021/2021 | International Conference on Machine Learning
+FN [near_miss_title] verified misses=1 | {"title":"Meta-Learnings Bidirectional Update Rules","author":"Mark Sandler and Max Vladymyrov and Andrey Zhmoginov and Nolan Miller and Tom Madams and Andrew Jackson and Blaise Agüera y Arcas","year"
+   WHY: Title slightly modified: 'Meta-Learnings Bidirectional Update Rules' (original: 'Meta-Learning Bidirectional Update Rules')
+   MATCH[semanticscholar]: Meta-Learning Bidirectional Update Rules | Sandler, Vladymyrov, Zhmoginov, Miller, Jackson | 2021/2021 | International Conference on Machine Learning
+FN [partial_author_list] verified_minor misses=1 | {"title":"Online Fast Adaptation and Knowledge Accumulation (OSAKA): A New Approach to Continual Learning","author":"Massimo Caccia and Pau Rodriguez and Oleksiy Ostapenko and Fabrice Normandin and Mi
+   WHY: LLM-generated via openai(gpt-5.1). Prompt: 'Bibliography on continual learning and catastrophic forgetting'. Verification: Authors don't match CrossRef: 'Caccia
+   MATCH[semanticscholar]: Online Fast Adaptation and Knowledge Accumulation (OSAKA): a New Approach to Continual Learning | Caccia, López, Ostapenko, Normandin, Lin | 2020/2020 | Neural Information Processing Systems
+FN [swapped_authors] verified_minor misses=0 | {"title":"Learning from Protein Structure with Geometric Vector Perceptrons","author":"Bowen Jing and Stephan Eismann and Pratham Suriana and Raphael Townshend and Ron O. Dror","booktitle":"ICLR","yea
+   WHY: Author 'Pratham Suriana' is a swapped name; the real third co-author is Patricia Suriana.
+   MATCH[semanticscholar]: Learning from Protein Structure with Geometric Vector Perceptrons | Jing, Eismann, Suriana, Townshend, Dror | 2020/2020 | International Conference on Learning Representations
+FN [nonexistent_venue] verified_minor misses=2 | {"title":"Capability-Oriented Training Induced Alignment Risk","author":"Yujun Zhou and Yue Huang and Han Bao and Kehan Guo and Zhenwen Liang and Pin-Yu Chen and Tian Gao and Werner Geyer and Nuno Mon
+   WHY: Venue fabricated: 'Workshop on Domain Generalization' does not exist
+   ! arXiv:2602.12124 now carries the title “Alignment Risks from Capability-Seeking RL Training” (same authors; likely a renamed version)

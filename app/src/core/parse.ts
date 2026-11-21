@@ -657,13 +657,17 @@ function classifyKind(raw: string, urls: string[], dois: string[], arxiv: string
   if (arxiv.length) return 'article';
   // standards and specifications
   if (/\b(?:ansi|niso|iso(?:\/iec)?|ieee std|rfc|w3c|ietf|astm)\s*[/\s]?\s*[a-z]?\d/i.test(raw) && !dois.length) return 'web';
-  if (urls.some((u) => SOFTWARE_HOSTS.test(u) && !/huggingface\.co\/(?:blog|docs|papers|learn|posts)\b/i.test(u)) || /\[computer software\]|\(version [\d.]+\)/.test(r)) {
+  // "owner/repo: v1.2" is how Zenodo titles archived GitHub releases
+  if (urls.some((u) => SOFTWARE_HOSTS.test(u) && !/huggingface\.co\/(?:blog|docs|papers|learn|posts)\b/i.test(u)) || /\[computer software\]|\(version [\d.]+\)/.test(r) || /(?:^|[\s“"])[\w.-]+\/[\w.-]+:\s*v?\d+\.\d+/.test(raw)) {
     if (/\bdataset\b/.test(r)) return 'dataset';
     return 'software';
   }
   if (/\bdataset\b|\bdata set\b|\bcorpus\b/.test(r) && (dois.some((d) => /zenodo|figshare|dryad|ordo|5061|6084|21954/.test(d)) || urls.length)) return 'dataset';
   if (/\b(?:ph\.?\s?d\.?|master'?s|doctoral)\s+(?:thesis|dissertation)|\bdissertation\b|\bthesis\b/.test(r)) return 'thesis';
   if (/\btech(?:nical)?\.?\s*rep(?:ort)?\b|white\s*paper|working paper/.test(r)) return 'report';
+  // institutional report numbers ("CERN-LHCC-2012-007", "LHCb-CONF-2022-003", "ATL-PHYS-PUB-2020-001") on an
+  // entry that carries no DOI and no journal volume/page: a laboratory report, which scholarly indexes rarely hold
+  if (!dois.length && /\b[A-Z][A-Za-z]{1,9}(?:-[A-Z]{2,8}){1,3}-(?:19|20)\d\d-\d{2,4}\b/.test(raw) && !/\b[A-Z]?\d{1,4}\s*\((?:19|20)\d\d\)\s*[A-Z]?\d/.test(raw)) return 'report';
   const scholarlyVenue = /proceedings|journal|conference|transactions|\bin:/.test(r);
   // encyclopedia / dictionary entries are not indexed as scholarly works
   if (/encyclop(?:a)?edia|\bdictionary\b|wikipedia|\bglossary\b/.test(r) && !dois.length) return 'web';

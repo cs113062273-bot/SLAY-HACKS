@@ -26,3 +26,33 @@ export class FileCache implements Cache {
     this.dirty = false;
   }
 }
+
+/**
+ * Offline replay for regression runs: layered read-only caches, no network. A lookup that no recorded
+ * response answers counts as a miss for the reference being verified (tracked with AsyncLocalStorage),
+ * so a score change can be split into "new code asked a question nobody recorded" vs a real verdict change.
+ */
+import { AsyncLocalStorage } from 'node:async_hooks';
+export const replayRef = new AsyncLocalStorage<number>();
+export const replayMisses = new Map<number, string[]>();
+export class ReplayCache implements Cache {
+  private layers: Record<string, unknown>[];
+  constructor(paths: string[]) {
+    this.layers = paths.filter((p) => existsSync(p)).map((p) => JSON.parse(readFileSync(p, 'utf8')));
+    // an unrecorded lookup answers 500 (a failed source, never negative evidence) without the host-wide cooldown a network error triggers
+    globalThis.fetch = (async () => new Response(null, { status: 500 })) as typeof fetch;
+  }
+  async get(k: string) {
+    for (const l of this.layers) if (k in l) return l[k];
+    const i = replayRef.getStore();
+    if (i !== undefined) replayMisses.set(i, [...(replayMisses.get(i) ?? []), k]);
+    return undefined;
+  }
+  async set() {}
+  flush() {}
+}
+export function makeCache(defaultPath: string): FileCache | ReplayCache {
+  const r = process.env.VERACITE_REPLAY;
+  if (r) return new ReplayCache(r.split(';'));
+  return new FileCache(process.env.VERACITE_CACHE_PATH ?? defaultPath);
+}

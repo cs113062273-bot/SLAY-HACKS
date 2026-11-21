@@ -9,14 +9,15 @@ import { Http } from '../src/core/http';
 import { FLAGGED_VERDICTS, type RefResult } from '../src/core/types';
 import { verifyReference } from '../src/core/verify';
 import { loadBench } from './bench-data';
-import { FileCache } from './node-cache';
+import { makeCache, replayMisses, replayRef } from './node-cache';
 
 const verbose = process.argv.includes('--verbose');
 const onlyIdx = process.argv.indexOf('--only');
 const only = onlyIdx > 0 ? process.argv[onlyIdx + 1] : undefined;
 
-const cache = new FileCache(process.env.VERACITE_CACHE_PATH ?? fileURLToPath(new URL('../../data/cache/http.json', import.meta.url)));
-const http = new Http({ cache, maxRetries: 8 });
+const cache = makeCache(fileURLToPath(new URL('../../data/cache/http.json', import.meta.url)));
+const replay = !!process.env.VERACITE_REPLAY;
+const http = new Http({ cache, maxRetries: replay ? 0 : 8 });
 
 const rows = loadBench().filter((r) => !only || r.doc === only);
 
@@ -47,7 +48,7 @@ async function main() {
   async function worker() {
     while (next < rows.length) {
       const i = next++;
-      results[i] = await verifyReference(rows[i].reference, { http }, i);
+      results[i] = await replayRef.run(i, () => verifyReference(rows[i].reference, { http }, i));
       process.stderr.write('.');
     }
   }
@@ -70,14 +71,20 @@ async function main() {
     const g = gold[i];
     const p = ours[i];
     if (g !== p || verbose) {
-      console.log(`${g !== p ? (p ? 'FP' : 'FN') : 'ok'} ${rows[i].doc} ${rows[i].num} gold=${rows[i].label} → ${r.verdict} (${r.confidence.toFixed(2)}) failed=[${r.sourcesFailed}]`);
+      console.log(`${g !== p ? (p ? 'FP' : 'FN') : 'ok'} ${rows[i].doc} ${rows[i].num} gold=${rows[i].label} → ${r.verdict} (${r.confidence.toFixed(2)}) failed=[${r.sourcesFailed}]${replay ? ` replayMisses=${replayMisses.get(i)?.length ?? 0}` : ''}`);
       console.log(`   REF: ${rows[i].reference.slice(0, 200)}`);
       if (r.match) console.log(`   MATCH[${r.match.source}]: ${r.match.title} | ${r.match.authors.slice(0, 6).map((a) => a.family).join(', ')} | ${r.match.years.join('/')} | ${r.match.venue ?? ''}`);
       for (const c of r.checks.filter((c) => c.status !== 'match' && c.status !== 'na')) console.log(`   ${c.field}:${c.status} ${c.note ?? ''} cited=${(c.cited ?? '').slice(0, 80)} found=${(c.found ?? '').slice(0, 80)}`);
       for (const s of r.issues) console.log(`   ! ${s}`);
     }
   });
-  writeFileSync(new URL('../../data/bench-refs-results.json', import.meta.url), JSON.stringify({ table, results: results.map((r, i) => ({ id: `${rows[i].doc} ${rows[i].num}`, gold: rows[i].label, verdict: r.verdict, issues: r.issues })) }, null, 1));
+  if (replay) {
+    const full = results.map((_, i) => !replayMisses.has(i));
+    const m = metrics(ours.filter((_, i) => full[i]), gold.filter((_, i) => full[i]));
+    console.log(`
+Replay: ${full.filter(Boolean).length}/${rows.length} references answered entirely from recorded responses; on those: TP ${m.tp} FN ${m.fn} FP ${m.fp} TN ${m.tn} F1 ${fmt(m.f1)}`);
+  }
+  if (!replay) writeFileSync(new URL('../../data/bench-refs-results.json', import.meta.url), JSON.stringify({ table, results: results.map((r, i) => ({ id: `${rows[i].doc} ${rows[i].num}`, gold: rows[i].label, verdict: r.verdict, issues: r.issues })) }, null, 1));
   process.exit(0);
 }
 main();

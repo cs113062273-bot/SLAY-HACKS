@@ -13,7 +13,7 @@ import { Http } from '../src/core/http';
 import { pdfToLines } from '../src/core/pdf';
 import { FLAGGED_VERDICTS, type RefResult } from '../src/core/types';
 import { verifyReference } from '../src/core/verify';
-import { FileCache } from './node-cache';
+import { makeCache, replayMisses, replayRef } from './node-cache';
 
 const B = process.env.BLIND_SET && process.env.BLIND_SET !== '1' ? `blind${process.env.BLIND_SET}` : 'blind';
 const suffix = process.env.RECHECK_SUFFIX ?? '';
@@ -24,8 +24,10 @@ if (!frozen.review) throw new Error(`${B} has not been judged yet: re-checking i
 const correctionsPath = `${root}${B}/review-corrections.json`;
 const corrections = new Map<number, string>(existsSync(correctionsPath)
   ? JSON.parse(readFileSync(correctionsPath, 'utf8')).corrections.map((c: any) => [c.reviewIndex, c.correctedJudgement]) : []);
-const cache = new FileCache(process.env.VERACITE_CACHE_PATH ?? `${root}cache/http.json`);
-const http = new Http({ cache, maxRetries: 6 });
+const cache = makeCache(`${root}cache/http.json`);
+const replay = !!process.env.VERACITE_REPLAY;
+const http = new Http({ cache, maxRetries: replay ? 0 : 6 });
+let refSeq = 0;
 
 const toks = (s: string) => new Set(s.toLowerCase().normalize('NFKD').replace(/[^a-z0-9 ]+/g, ' ').split(/\s+/).filter((t) => t.length > 2));
 const sim = (a: string, b: string) => {
@@ -37,21 +39,26 @@ const sim = (a: string, b: string) => {
 };
 
 const out: string[] = [];
-const tally = { oldFalse: 0, oldFalseGone: 0, oldReal: 0, oldRealKept: 0, oldUncertain: 0, oldUncertainKept: 0, refs: 0, flagsNow: 0, newFlags: 0 };
+const tally = { oldFalse: 0, oldFalseGone: 0, oldFalseGoneUnanswered: 0, newFlagsUnanswered: 0, oldReal: 0, oldRealKept: 0, oldUncertain: 0, oldUncertainKept: 0, refs: 0, flagsNow: 0, newFlags: 0 };
 for (const p of frozen.papers) {
   const { lines, pageWidths } = await pdfToLines(pdfjs as any, new Uint8Array(readFileSync(`${root}pdfs/${B}/${p.file}`)));
   const doc = buildDoc(lines, pageWidths);
   const res: RefResult[] = new Array(doc.references.length);
+  const ids: number[] = [];
   let next = 0;
   await Promise.all(
     Array.from({ length: 4 }, async () => {
       while (next < doc.references.length) {
         const i = next++;
-        res[i] = await verifyReference(doc.references[i], { http, budgetMs: 60000 }, i);
+        ids[i] = refSeq++;
+        res[i] = await replayRef.run(ids[i], () => verifyReference(doc.references[i], { http, budgetMs: 60000 }, i));
       }
     }),
   );
   cache.flush();
+  // a lookup that no recorded response answered (replay) or that failed live can hide a flag: such a disappearance is not a fix
+  const unanswered = (i: number) => replayMisses.has(ids[i]) || res[i].verdict === 'unchecked';
+  const tag = (i: number) => (replay && replayMisses.has(ids[i]) ? ` [${replayMisses.get(ids[i])!.length} unrecorded lookups]` : '');
   tally.refs += res.length;
   const flaggedNow = new Set(res.map((r, i) => (FLAGGED_VERDICTS.includes(r.verdict) ? i : -1)).filter((i) => i >= 0));
   tally.flagsNow += flaggedNow.size;
@@ -76,6 +83,7 @@ for (const p of frozen.papers) {
     if (kind === 'false') {
       tally.oldFalse++;
       if (!still) tally.oldFalseGone++;
+      if (!still && now && unanswered(bi)) tally.oldFalseGoneUnanswered++;
     } else if (kind === 'real') {
       tally.oldReal++;
       if (still) tally.oldRealKept++;
@@ -84,19 +92,20 @@ for (const p of frozen.papers) {
       if (still) tally.oldUncertainKept++;
     }
     const mark = kind === 'false' ? (still ? 'STILL FALSE' : 'fixed') : kind === 'real' ? (still ? 'real kept' : 'REAL LOST') : still ? 'uncertain kept' : 'uncertain gone';
-    out.push(`  #${f.reviewIndex} ${mark.padEnd(14)} ${f.verdict} → ${now?.verdict ?? 'missing'}  ${f.raw.slice(0, 90)}`);
+    out.push(`  #${f.reviewIndex} ${mark.padEnd(14)} ${f.verdict} → ${now?.verdict ?? 'missing'}${now ? tag(bi) : ''}  ${f.raw.slice(0, 90)}`);
     if (still || kind === 'real') out.push(`      now: ${now?.issues.join(' | ').slice(0, 220)}`);
   }
   for (const i of flaggedNow) {
     if (explained.has(i)) continue;
     tally.newFlags++;
+    if (unanswered(i) || res[i].sourcesFailed.length) tally.newFlagsUnanswered++;
     const r = res[i];
-    out.push(`  NEW FLAG [${i + 1}] ${r.verdict}  ${doc.rawReferences[i].slice(0, 200)}\n      ${r.issues.join(' | ').slice(0, 260)}\n      rec: ${r.match ? `${r.match.title} / ${r.match.authors.slice(0, 4).map((a) => a.family).join(', ')} / ${r.match.years.join('/')} / ${r.match.venue ?? ''} / ${r.match.doi ?? ''}` : '-'}`);
+    out.push(`  NEW FLAG [${i + 1}] ${r.verdict}${tag(i)}  ${doc.rawReferences[i].slice(0, 200)}\n      ${r.issues.join(' | ').slice(0, 260)}\n      rec: ${r.match ? `${r.match.title} / ${r.match.authors.slice(0, 4).map((a) => a.family).join(', ')} / ${r.match.years.join('/')} / ${r.match.venue ?? ''} / ${r.match.doi ?? ''}` : '-'}`);
   }
   console.log(`${B}: completed ${p.file}, ${res.length} refs, ${flaggedNow.size} flags`);
   writeFileSync(`${root}${B}/recheck${suffix}-progress.json`, JSON.stringify({ completedThrough: p.file, tally }, null, 2));
 }
-const summary = `\n${B} re-check with the current core: refs ${tally.refs}, flags now ${tally.flagsNow}; judged false alarms fixed ${tally.oldFalseGone}/${tally.oldFalse}; judged real errors still flagged ${tally.oldRealKept}/${tally.oldReal}; uncertain still flagged ${tally.oldUncertainKept}/${tally.oldUncertain}; new flags to judge ${tally.newFlags}`;
+const summary = `\n${B} re-check with the current core: refs ${tally.refs}, flags now ${tally.flagsNow}; judged false alarms fixed ${tally.oldFalseGone}/${tally.oldFalse}; judged real errors still flagged ${tally.oldRealKept}/${tally.oldReal}; uncertain still flagged ${tally.oldUncertainKept}/${tally.oldUncertain}; new flags to judge ${tally.newFlags}; of the fixes, ${tally.oldFalseGoneUnanswered} only became unchecked/unanswered; ${tally.newFlagsUnanswered} new flags had a failed or unrecorded lookup${replay ? ' (offline replay of recorded responses)' : ''}`;
 console.log(out.join('\n') + summary);
 writeFileSync(`${root}${B}/recheck${suffix}.txt`, out.join('\n') + summary + '\n');
 process.exit(0);
