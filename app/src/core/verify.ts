@@ -765,10 +765,12 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
       confidence = 0.1;
       issues.push(...idProblems);
     } else {
-      const answered = [...queried].filter((s) => !failed.has(s));
+      // GitHub and Hugging Face only cover software and models: their silence says nothing about a paper
+      const answered = [...queried].filter((s) => !failed.has(s) && s !== 'github' && s !== 'huggingface');
       const broadDown = ['semanticscholar', 'openalex'].every((s) => !queried.has(s as SourceName) || failed.has(s as SourceName)) && ['semanticscholar', 'openalex'].some((s) => queried.has(s as SourceName));
       // (an arXiv ID alone does not help: arXiv records are looked up through the same broad indexes)
-      if (answered.length === 0 || (broadDown && !p.dois.length && !idProblems.length)) {
+      // a DOI that no index answered for is not negative evidence either: only a positively wrong identifier is
+      if (answered.length === 0 || (broadDown && !idProblems.length)) {
         // an outage is not evidence against the reference
         verdict = 'unchecked';
         confidence = 0.5;
