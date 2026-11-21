@@ -4,7 +4,14 @@
 
 Built for SLAY HACKS 2026.
 
-Try [Veracite on GitHub Pages](https://cs113062273-bot.github.io/SLAY-HACKS/). Freeze `497cb22` deployed successfully on November 20. Production acceptance evidence is recorded in `submission/VALIDATION.md`. Local setup is below.
+**Try it:** [cs113062273-bot.github.io/SLAY-HACKS](https://cs113062273-bot.github.io/SLAY-HACKS/). No account, install or API key. Validated on desktop Chrome. Deployed from `main` by GitHub Actions; production acceptance evidence is in `submission/VALIDATION.md`. Local setup is below.
+
+| At a glance | |
+|---|---|
+| Reference benchmark (104 hand-verified references, 5 published checkers) | **F1 .971** vs best published .644 |
+| HALLMARK v1.2 held-out test (825 citations) | **F1 .959** with no LLM; best paid-LLM cascade .986 |
+| Three blind audits of real PDFs (42 papers, 2,064 references, every flag judged by hand) | latest round: 99.5% of entries extracted, 81.1% verified, false alarms 10.2% of references |
+| Claim support (Citation-Integrity test) | micro-F1 .634 in the browser vs GPT-4 .65, MultiVerS .59 |
 
 ## The problem
 
@@ -87,7 +94,7 @@ Per type: perfect on fabricated DOIs, future dates, hybrid fabrications, merged 
 
 Extraction is no longer the bottleneck. The remaining false alarms concentrate in two physics papers whose citation conventions the verifier did not know. One is particle physics: 52 false alarms in 150 references, from "JHEP", LaTeX in arXiv titles and collaboration names. The other is astrophysics: 18 in 164. The other twelve papers together have 28 false alarms in 650 references (4.3%). Real errors were rare in these papers, so flag precision is low, and the miss samples bound recall only loosely.
 
-After this round, general fixes were made for the dominant causes (journal abbreviations such as JHEP and ApJ, LaTeX in index titles, collaboration names, spaced DOIs, pre-2007 arXiv identifiers). They are development work, measured only on data we had already seen; `submission/VALIDATION.md` records those regressions. They are not a fourth independent result.
+After this round, general fixes were made for the dominant causes (journal abbreviations such as JHEP and ApJ, LaTeX in index titles, collaboration names, spaced DOIs, pre-2007 arXiv identifiers, laboratory report numbers, math symbols scattered by the PDF text layer). Re-checked offline against recorded index responses, so that rate limits cannot masquerade as fixes, they leave the public benchmarks unchanged (Zenodo F1 .971, HALLMARK dev F1 .986) and keep every judged real error flagged. On the round-3 papers, flags fall from 101 to 43, and 55 of the 98 judged false alarms now match their record. That set was used to write the fixes, so this is development progress, not a fourth independent result; details in [docs/EVALUATION.md](docs/EVALUATION.md).
 
 Protocols, per-paper tables, cause tables, the development papers and the clean controls are in [docs/EVALUATION.md](docs/EVALUATION.md). Raw outputs are in `data/blind*/` (`results.json` holds every reference, its matched record and our judgement of each flag).
 

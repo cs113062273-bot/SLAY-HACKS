@@ -48,3 +48,21 @@ One bounded pass on spent/dev data fixes AAS author-year segmentation, comma-sep
 | arXiv (Attention development control) | 40 | 38 | 0 | 2 | 121 |
 
 These are observed live timings and functional completion, not a quality benchmark. The three PDF flags have not been adjudicated in this smoke test; prior runs' flags/coverage differ with index responses. This test does not establish their precision. The model and sample-cache routing were unchanged by the bounded amendment; full claim/export/isolation/privacy acceptance remains explicitly attributed to 07f4f4a above rather than relabelled as a new test.
+
+## Post-blind-3 fixes and production acceptance (November 22)
+
+Source `ed205f7` (two bounded passes after the third blind set: `7356413` and `ed205f7`). `npm run build` passed; [build and deployment](https://github.com/cs113062273-bot/SLAY-HACKS/actions/runs/44931030568) succeeded and the served bundle `index-CtHDlSAf.js` matched the local build.
+
+**Regression method.** Live regressions of `7356413` ran while OpenAlex's free allowance was spent and Semantic Scholar returned HTTP 429: Zenodo fell to F1 .780, and all ten misses were *unchecked* (`data/reg_zenodo_postblind3.txt`). The benchmarks and spent sets were therefore re-run with `VERACITE_REPLAY`, which answers every lookup from responses recorded in earlier runs, makes no network request, and counts an unrecorded lookup as a failed source for that reference. A judged false alarm counts as fixed only when the reference now matches a record (*verified* or *minor*).
+
+| Check | `7356413` | `ed205f7` | Output |
+|---|---|---|---|
+| Zenodo, 104 references | F1 .971 (unchanged) | F1 .971 | `data/reg_zenodo_replay*.txt` |
+| HALLMARK dev, 310 | DR .971, FPR 0, F1 .986 (unchanged) | same | `data/reg_hallmark_replay*.txt` |
+| Spent set 1 (729 refs) | 69/87 judged false alarms matched, 4/4 real kept, 32 flags | same | `data/blind/recheck-replay*.txt` |
+| Spent set 2 (583 refs) | 36/54 matched, 7/7 real kept, 39 flags | same | `data/blind2/recheck-replay*.txt` |
+| Spent set 3 (964 refs) | 47/98 matched, 1/1 real kept, 57 flags | 55/98 matched, 1/1 real kept, **43 flags** (frozen run 101) | `data/blind3/recheck-replay*.txt` |
+
+The six `ed205f7` rules were also checked for collateral effects on all 6,096 references in the 119 local PDFs: the new report and software types matched exactly six references, all correct (five CERN/LHCb reports, one archived GitHub release). These are development results on data used to design the rules, not independent precision.
+
+**Production E2E on `ed205f7`** (`data/production-live-e2e-ed205f7.txt`, exit 0, empty stderr): crossOriginIsolated true, no HTTP 4xx or page errors. Samples: planted 12 refs (5 verified, 1 wrong ID, 2 wrong details, 3 fabricated, 1 retracted), NeurIPS 65, Attention 40/40 verified or minor; three non-empty exports; claim upgrade finished all 56 tasks (15 supported, 1 needs review, 20 inconclusive, 16 mentions, 4 without source text). Live inputs: PDF 50 refs (44 verified/minor, 2 flags, 1 not indexed, 3 unchecked) 170 s; DOCX 3 refs 33 s; BibTeX 3 (verified / wrong ID / fabricated) 40 s; pasted text 2 21 s; arXiv 40 (32 verified/minor, 8 unchecked) 104 s. The run overlapped a live regression from the same machine while OpenAlex's allowance was spent, which explains the unchecked references; they are functional results, not coverage or speed benchmarks.

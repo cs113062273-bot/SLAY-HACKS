@@ -72,8 +72,21 @@ Artifacts: `data/blind3/results.json` (every reference, verdict, matched record 
 
 ### After blind test 3 (development, not independent)
 
-General rules were added for the dominant causes above: JHEP and ApJ as known journals, venue tokens without volume numbers, full-word initials, LaTeX commands and sub/superscripts in titles, Springer's LaTeX preamble in Crossref titles, collaboration names before author lists, Western and Vancouver names glued into one author, pre-2007 arXiv identifiers, DOIs and URLs spaced by the text layer, explicit editions, and page-footer date stamps. Blind set 3 is now spent: re-checking it measures development progress, not independent quality. Regression results on the public benchmarks and on all three spent sets are recorded in `submission/VALIDATION.md` as they are completed.
+General rules were added for the dominant causes above: JHEP and ApJ as known journals, venue tokens without volume numbers, full-word initials, LaTeX commands and sub/superscripts in titles, Springer's LaTeX preamble in Crossref titles, collaboration names before author lists, Western and Vancouver names glued into one author, pre-2007 arXiv identifiers, DOIs and URLs spaced by the text layer, explicit editions and page-footer date stamps (`7356413`). A second bounded pass (`ed205f7`) added six more: laboratory report numbers ("CERN-LHCC-2012-007") and archived GitHub releases ("owner/repo: 0.1") are typed as reports and software instead of being called fabricated; "Submitted to …" is not compared as a published venue; math symbols scattered by the text layer no longer count as title changes; a venue is also read from the last comma segment when title math runs into it; and NLM place qualifiers ("Infect Dis Lond Engl") are ignored. Blind set 3 was used to find all of these, so re-checking it measures development progress, not independent quality.
 
+**Measuring without the rate limits.** The first live regressions of `7356413` were unusable: OpenAlex's free daily allowance was spent and Semantic Scholar answered HTTP 429, so the Zenodo run fell to F1 .780, with all ten misses reported as *unchecked*. The regressions were therefore re-run offline (`VERACITE_REPLAY`): every lookup is answered from responses recorded in earlier runs, and a lookup that nobody recorded counts as a failed source for that reference and is tracked. A flag that disappears only because a lookup went unanswered is not counted as fixed.
+
+| | Before the fixes | `7356413`, replay | `ed205f7`, replay |
+|---|---|---|---|
+| Zenodo, 104 references | F1 .971 | F1 .971 (same two false positives) | F1 .971 |
+| HALLMARK dev, 310 entries | F1 .986, FPR 0 | F1 .986, FPR 0 | F1 .986, FPR 0 |
+| Set 1, judged false alarms now confirmed by a matched record | n/a | 69 / 87 | 69 / 87 |
+| Set 2, same | n/a | 36 / 54 | 36 / 54 |
+| Set 3, same | n/a | 47 / 98 | **55 / 98** |
+| Judged real errors still flagged (sets 1 / 2 / 3) | | 4/4 · 7/7 · 1/1 | 4/4 · 7/7 · 1/1 |
+| Set 3 flags (frozen run: 101) | | 57 | **43** |
+
+On set 3, 26 judged false alarms became *unchecked* or *not indexed* only because the new code asks questions (for example about pre-2007 arXiv identifiers) that no earlier run recorded; they are neither counted as fixed nor as flags here. On `ed205f7` set 3 has 17 judged false alarms left, the real error and one uncertain flag, and 24 new flags that have not been judged (18 of them had an unanswered lookup). If every new flag were a false alarm, false alarms would be 41 / 964 = 4.3% of references; if none were, 1.8%. The remaining judged false alarms are particle-physics specifics (journal versions the indexes did not return for arXiv-cited JHEP papers, collaboration author lists, Zenodo DOIs of averaging-group reports) plus one parse that dropped the first words of a title. This is the same set that was used to write the rules, so it is an optimistic development number; the independent estimate remains the frozen 10.2%.
 
 ## Earlier rounds
 

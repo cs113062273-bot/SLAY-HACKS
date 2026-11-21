@@ -59,3 +59,13 @@ Veracite is weaker than MultiVerS on macro-F1. It is the only one of the three t
 | Cost and setup | install; some need GROBID or API keys | paid tiers | paid tiers | **free, no account, no install** |
 
 "Not documented" means we found no public statement either way; it does not mean the feature is absent.
+
+### Research systems from 2026 that use an LLM
+
+Three further checkers were published in 2026. Each checks whether a reference exists and whether its metadata is faithful; none of their papers describes checking whether the cited work supports the citing sentence, and each puts an LLM in the verification loop:
+
+- **CiteCheck** (arXiv:2605.27700): candidates from scholarly sources, then a structured LLM verifier; labels Exact / Minor / Major. Reports 88.7 macro-F1 on its own 982-citation physics benchmark with controlled corruptions. No public tool is linked from the paper page.
+- **CiteAudit** (arXiv:2602.23452): a benchmark plus a multi-agent pipeline (metadata extraction, memory lookup, web retrieval, judgment). Code on GitHub; the abstract gives no figures.
+- **Hallucination Detector on AtomGPT.org** (arXiv:2607.09774): LLM field extraction plus Semantic Scholar retrieval, scoring title, authors and venue; a web tool. Its abstract reports that it flags "the great majority" of the NeurIPS 2025 hallucinated citations, without numbers.
+
+None of them has been run on the Zenodo set, HALLMARK or our blind papers, so no accuracy comparison is claimed. What differs by design is that Veracite needs no LLM or API key, keeps the document on the device, and adds evidence-based claim triage.
