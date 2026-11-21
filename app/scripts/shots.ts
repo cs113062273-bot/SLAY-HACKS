@@ -52,9 +52,15 @@ await clickRow(md);
 await pause(600);
 await page.screenshot({ path: `${out}/4-wrong-details.png` });
 
-// 5. quick check: claim support one click away
-await page.evaluate(() => window.scrollTo(0, 0));
-await page.screenshot({ path: `${out}/5-quick-check.png`, clip: { x: 0, y: 0, width: 1500, height: 1000 } });
+// 5. planted list: a retracted paper cited as if it were sound
+await open('sample-planted', 'quick');
+s = await wait((x) => x.phase === 'done');
+const ret = s.results.findIndex((r: any) => r?.verdict === 'retracted');
+if (ret >= 0) {
+  await clickRow(ret);
+  await pause(600);
+  await page.screenshot({ path: `${out}/5-retracted.png` });
+}
 
 // 6–7. claim support on Attention (full audit)
 await open('sample-attention', 'full');

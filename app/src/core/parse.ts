@@ -2,12 +2,33 @@ import type { ParsedRef, Person, RefKind } from './types';
 import { fold } from './text';
 
 const DOI_RE = /\b(10\.\d{4,9}\/[^\s"<>]+)/gi;
+const OLD_ARXIV = String.raw`(?:astro-ph|cond-mat|gr-qc|hep-(?:ex|lat|ph|th)|math-ph|nlin|nucl-(?:ex|th)|physics|quant-ph|math|cs|q-bio|chao-dyn|solv-int|patt-sol|adap-org|cmp-lg|supr-con|mtrl-th|acc-phys|alg-geom|dg-ga|funct-an|q-alg|chem-ph|atom-ph|plasm-ph)(?:\.[A-Z]{2})?\/\d{7}`;
+
+/**
+ * PDF text layers often space out a DOI or URL ("DOI: 10 . 1109 / Py HPC49452.2019.00006", "https : / / host").
+ * Rejoin a DOI only when it ends the entry (optionally followed by a PMID) and every piece looks like a DOI
+ * fragment, so ordinary words after a DOI are never glued on.
+ */
+export function joinSpacedIds(s: string): string {
+  s = s.replace(/\bhttps?\s*:\s*\/\s*\/\s*/gi, (m) => m.replace(/\s+/g, ''));
+  return s.replace(/(\b(?:doi|DOI)\s*:?\s*|https?:\/\/(?:dx\.)?doi\.org\/\s*)(1\s?0\s?\.[\s\S]+?)(\s+PMID:?\s*\d{5,9})?\s*\.?\s*$/, (all, marker: string, tail: string, pmid?: string) => {
+    // "doi:10.18653/v1/D16-1250. URL https://…" is a DOI followed by a URL, not one DOI split by the text layer
+    if (!/\s/.test(tail) || /[,;[\]"“”]|:\/\/|\b(?:url|www|available|accessed|retrieved)\b/i.test(tail)) return all;
+    const pieces = tail.split(/\s+/);
+    if (!pieces.slice(1).every((x) => /[\d./\-_]/.test(x) || x.length <= 3)) return all;
+    const joined = pieces.join('');
+    if (!/^10\.\d{4,9}\/\S+$/.test(joined)) return all;
+    return `${marker}${joined}${pmid ?? ''}`;
+  });
+}
 const ARXIV_RES = [
   /arxiv(?:\s*preprint)?(?:\s*,)?\s*(?:arxiv)?\s*[:\s]\s*(\d{4}\.\d{4,5})(v\d+)?/gi,
   /arxiv\.org\/(?:abs|pdf)\/(\d{4}\.\d{4,5})(v\d+)?/gi,
   /\babs\/(\d{4}\.\d{4,5})(v\d+)?/gi,
   /10\.48550\/arxiv\.(\d{4}\.\d{4,5})/gi,
   /arxiv[^0-9]{0,30}?(\d{4}\.\d{4,5})(v\d+)?/gi,
+  // pre-2007 identifiers: "arXiv:gr-qc/0703035", "hep-ph/0406184", "math.AG/0101001"
+  new RegExp(String.raw`(?<![\w/])(${OLD_ARXIV})(v\d+)?`, 'gi'),
 ];
 const URL_RE = /\b(?:https?:\/\/|www\.)[^\s<>"]+/gi;
 
@@ -99,10 +120,15 @@ const YEAR_RE = /(?<![\p{L}\d./-])(1[89]\d\d|20[0-3]\d)[a-z]?(?![\d])/gu;
 
 function extractYears(s: string): { years: number[]; cited?: number } {
   // remove identifiers & urls & page ranges first
-  const t = s
+  let t = s
     .replace(URL_RE, ' ')
     .replace(DOI_RE, ' ')
-    .replace(/\d{4}\.\d{4,5}/g, ' ')
+    .replace(/\d{4}\.\d{4,5}/g, ' ');
+  // an ISO date ("accessed 2024-05-01", a page-footer stamp "2026-11-19") is not the publication year when one is cited
+  const noIso = t.replace(/\b(?:1[89]|20)\d\d-[01]\d-[0-3]\d\b/g, ' ');
+  if (noIso !== t && YEAR_RE.test(noIso)) t = noIso;
+  YEAR_RE.lastIndex = 0;
+  t = t
     .replace(/\b\d+\s*[-–]\s*\d+\b/g, (m) => (/^(1[89]|20)\d\d\s*[-–]\s*(1[89]|20)?\d\d$/.test(m) ? m : ' '));
   const years: number[] = [];
   for (const m of t.matchAll(YEAR_RE)) years.push(parseInt(m[1], 10));
@@ -288,6 +314,7 @@ export function parseReference(input: string): ParsedRef {
     label = lab[1] ?? lab[2] ?? lab[3] ?? lab[4] ?? lab[5];
     s = s.slice(lab[0].length);
   }
+  s = joinSpacedIds(s);
   const dois = extractDois(s);
   const arxivIds = extractArxiv(s);
   const urls = [...s.matchAll(URL_RE)].map((m) => stripTrailingPunct(m[0]));
@@ -309,6 +336,11 @@ export function parseReference(input: string): ParsedRef {
     .replace(URL_RE, ' ')
     .replace(/\b(?:url|URL|Available (?:at|from)|Retrieved from|Accessed|\(visited on [^)]*\))\s*:?/g, ' ')
     .replace(/(?:,\s*)?\b(?:in\s+)?(?:arxiv\s+preprint|corr|arxiv)\b[\s,:]*(?:arxiv)?[\s,:]*(?:abs\/)?\d{4}\.[\dXx?_]{3,5}(?:v\d+)?(?:\s*\[[^\]]*\])?/gi, '. arXiv. ')
+    .replace(new RegExp(String.raw`(?:,\s*)?\b(?:arxiv\s+preprint|arxiv)\b[\s,:]*${OLD_ARXIV}(?:v\d+)?`, 'gi'), '. arXiv. ')
+    .replace(/\bPMID:?\s*\d{5,9}|\bPMCID:?\s*PMC\d+/gi, ' ')
+    // "LHCb collaboration, R. Aaij et al., Title" / "Heavy Flavor Averaging Group, S. Banerjee et al.": the group
+    // name precedes the person list; keep the persons
+    .replace(/^(?:[\p{Lu}][\p{L}\d-]*\s+){1,4}(?:and\s+(?:[\p{Lu}][\p{L}\d-]*\s+){1,3})?(?:[Cc]ollaborations?|[Gg]roup|[Cc]onsortium),\s+(?=\p{Lu}\.)/u, '')
     .replace(/(\p{Ll})\.(\p{Lu}\p{Ll}{2,})/gu, '$1. $2')
     .replace(/\s+/g, ' ')
     .replace(/(?:\.\s*){2,}/g, '. ')
@@ -322,7 +354,10 @@ export function parseReference(input: string): ParsedRef {
 
   // (a) quoted title
   const q = [...body.matchAll(/[“"‘«]([^”"’»]{8,400})[”"’»]/g)].sort((a, b) => b[1].length - a[1].length)[0];
-  if (q && (q[1].trim().split(/\s+/).length >= 2 || (q[1].trim().length >= 6 && /^[,.]/.test(body.slice((q.index ?? 0) + q[0].length))))) {
+  // a quote inside a title ("Co-infection with “Candidatus N. mikurensis” and ...") is not the title: the
+  // words before it, after the last sentence break, end in a lowercase title word
+  const beforeQuote = q ? body.slice(0, q.index).split(/\.\s+/).pop()! : '';
+  if (q && (/[“"‘«]/.test(beforeQuote) || !/(?:^|\s)(?!(?:and|et|al|van|von|der|den|de|del|da|la|le|du|di|dos|ter|ten|zu)\s*$)\p{Ll}[\p{L}-]{1,}\s*$/u.test(beforeQuote)) && (q[1].trim().split(/\s+/).length >= 2 ||(q[1].trim().length >= 6 && /^[,.]/.test(body.slice((q.index ?? 0) + q[0].length))))) {
     title = q[1].trim().replace(/[,.]$/, '');
     authorsText = body.slice(0, q.index).replace(/[\s,:.]+$/, '');
     after = body.slice((q.index ?? 0) + q[0].length);

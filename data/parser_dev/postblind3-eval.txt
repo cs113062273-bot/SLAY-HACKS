@@ -1,0 +1,40 @@
+    104/104   100%  noT 0 noA 1 noY 0 deb 4  cs.LG cs.LG_2611.26521v1.pdf
+     60/60    100%  noT 0 noA 0 noY 0 deb 2  cs.IR cs.IR_2611.25738v1.pdf
+     39/39    100%  noT 0 noA 0 noY 0 deb 0  cs.IR cs.IR_2611.25659v1.pdf
+    121/121   100%  noT 0 noA 1 noY 0 deb 0  cs.NI cs.NI_2611.26156v1.pdf
+     62/62    100%  noT 1 noA 0 noY 0 deb 4  cs.NI cs.NI_2611.26134v1.pdf
+     33/33    100%  noT 0 noA 0 noY 0 deb 0  cs.DS cs.DS_2611.26609v1.pdf
+     29/29    100%  noT 0 noA 0 noY 0 deb 2  cs.DS cs.DS_2611.26188v1.pdf
+     51/51    100%  noT 0 noA 0 noY 1 deb 0  math.CO math.CO_2611.26513v1.pdf
+     14/14    100%  noT 0 noA 0 noY 0 deb 0  math.OC math.OC_2611.26572v1.pdf
+     56/57     98%  noT 0 noA 2 noY 0 deb 0  math.OC math.OC_2611.26501v1.pdf
+     95/95    100%  noT 0 noA 0 noY 0 deb 3  physics.flu-dyn physics.flu-dyn_2611.25750v1.pdf
+     45/46     98%  noT 39 noA 0 noY 0 deb 3  physics.bio-ph physics.bio-ph_2611.24513v1.pdf
+     36/36    100%  noT 32 noA 1 noY 0 deb 0  physics.bio-ph physics.bio-ph_2611.22902v1.pdf
+     14/14    100%  noT 0 noA 0 noY 0 deb 1  cs.LG cs.LG_2611.26504.pdf
+     71/71    100%  noT 0 noA 0 noY 0 deb 1  cs.AI cs.AI_2611.26538.pdf
+     34/34    100%  noT 0 noA 1 noY 0 deb 1  cs.AI cs.AI_2611.26491.pdf
+     25/25    100%  noT 15 noA 1 noY 1 deb 3  astro-ph.CO astro-ph.CO_2611.26460v1.pdf
+     35/35    100%  noT 0 noA 0 noY 0 deb 1  pub:Frontiers pub-Frontiers_PMC13750087.pdf
+      9/9     100%  noT 0 noA 0 noY 0 deb 0  math.NT math.NT_2204.13689.pdf
+     42/43     98%  noT 2 noA 0 noY 0 deb 2  nucl-th nucl-th_2611.25899v1.pdf
+     21/21    100%  noT 0 noA 0 noY 0 deb 0  pub:Frontiers pub-Frontiers_PMC13728923.pdf
+     57/57    100%  noT 0 noA 0 noY 0 deb 4  physics.bio-ph physics.bio-ph_2611.26182.pdf
+     22/22    100%  noT 17 noA 0 noY 0 deb 2  cond-mat.soft cond-mat.soft_2611.24560.pdf
+     47/47    100%  noT 37 noA 2 noY 0 deb 1  cond-mat.str-el cond-mat.str-el_2611.26327.pdf
+     36/36    100%  noT 27 noA 1 noY 0 deb 1  cond-mat.str-el cond-mat.str-el_2611.25792.pdf
+     75/75    100%  noT 0 noA 0 noY 0 deb 6  astro-ph.CO astro-ph.CO_2611.26593.pdf
+     49/49    100%  noT 40 noA 1 noY 1 deb 4  astro-ph.CO astro-ph.CO_2611.26461.pdf
+     36/38     95%  noT 0 noA 0 noY 0 deb 3  pub:Frontiers pub-Frontiers_PMC13732009.pdf
+     18/18    100%  noT 0 noA 0 noY 0 deb 0  eess.IV eess.IV_2611.25548v1.pdf
+     31/31    100%  noT 0 noA 0 noY 0 deb 2  eess.AS eess.AS_2611.25569v1.pdf
+    117/117   100%  noT 0 noA 3 noY 18 deb 3  hep-th hep-th_2611.26597.pdf
+     18/18    100%  noT 0 noA 0 noY 0 deb 0  eess.AS eess.AS_2611.24125v1.pdf
+     34/34    100%  noT 0 noA 0 noY 0 deb 1  econ.TH econ.TH_2611.25368v1.pdf
+     69/69    100%  noT 0 noA 0 noY 0 deb 1  q-bio.QM q-bio.QM_2611.25525.pdf
+     99/100    99%  noT 0 noA 2 noY 0 deb 4  physics.ao-ph physics.ao-ph_2611.25209v1.pdf
+     72/72    100%  noT 0 noA 0 noY 0 deb 0  q-fin.ST q-fin.ST_2611.23723.pdf
+     57/57    100%  noT 0 noA 0 noY 0 deb 0  physics.ao-ph physics.ao-ph_2611.26095.pdf
+
+papers 37, extraction failures 0, completeness 99.7% (1833/1839 bibitems, capped per paper)
+parsed refs 1833: no title 11.5%, no author 0.9%, no year 1.1%, debris author 3.2%

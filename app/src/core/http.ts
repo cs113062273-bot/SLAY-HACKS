@@ -122,20 +122,27 @@ export class Http {
       if (cd && cd > Date.now()) await sleep(Math.max(0, cd - Date.now()));
       await this.acquire(host);
       let res: Response | undefined;
+      let body: unknown;
+      let bodyOk = false;
+      // the timeout covers the body too: a response whose body stalls after the headers would otherwise hang forever
+      const ctl = new AbortController();
+      const t = setTimeout(() => ctl.abort(), this.opts.timeoutMs ?? 25000);
       try {
-        const ctl = new AbortController();
-        const t = setTimeout(() => ctl.abort(), this.opts.timeoutMs ?? 25000);
         res = await fetch(u.toString(), { signal: ctl.signal, headers: { ...(this.opts.hostHeaders?.[host] ?? {}), ...(init.headers ?? {}) } });
-        clearTimeout(t);
+        if (res.ok) {
+          body = as === 'json' ? await res.json() : as === 'text' ? await res.text() : await res.arrayBuffer();
+          bodyOk = true;
+        }
       } catch {
-        res = undefined;
+        if (!res?.ok) res = undefined;
       } finally {
+        clearTimeout(t);
         this.release(host);
       }
+      if (res && res.ok && !bodyOk) res = undefined; // truncated or unparsable body: retry like a network error
       if (res && res.ok) {
         this.fails.set(host, 0);
         this.opts.onEvent?.({ host, url, status: res.status, attempt });
-        const body = as === 'json' ? await res.json() : as === 'text' ? await res.text() : await res.arrayBuffer();
         if (this.opts.cache && !init.noCache && as !== 'arraybuffer') await this.opts.cache.set(key, body);
         return body as T;
       }

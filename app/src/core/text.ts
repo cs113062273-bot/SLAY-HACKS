@@ -9,7 +9,13 @@ const HTML_ENT: Record<string, string> = { amp: '&', apos: "'", quot: '"', lt: '
 export function fold(s: string): string {
   return s
     .replace(/&(amp|apos|quot|lt|gt|nbsp);/gi, (_, e: string) => HTML_ENT[e.toLowerCase()])
+    // Springer deposits inline math in Crossref titles as a whole LaTeX document preamble
+    .replace(/\\documentclass[\s\S]*?(?:\\begin\{document\}|$)|\\end\{document\}/g, ' ')
     .replace(/\\(?:mathrm|text|textrm|textit|textbf|mathit|mathbf|mathcal|emph|rm|it|bf|sqrt|left|right)\b\s*|[{}$]/g, '') // LaTeX in titles: "${\mathrm{Latent}Out}$" → "LatentOut"
+    // remaining LaTeX symbols (\rightarrow, \pm, \gamma, \bar) are punctuation-like, as their Unicode forms are;
+    // sub/superscript markers join their operand ("D^0", "K_S^0" → "D0", "KS0") as PDF text does
+    .replace(/\\[a-zA-Z]+\s*|\\[,;:!]/g, ' ')
+    .replace(/[\^_]/g, '')
     .replace(/(\p{L})['’`](\p{L})/gu, '$1$2') // can't → cant, O'Brien → OBrien
     // Cyrillic look-alikes inside Latin words ("СERN" typed with a Cyrillic С)
     .replace(/[\p{Script=Latin}\p{Script=Cyrillic}]+/gu, (w) => (/\p{Script=Latin}/u.test(w) && /\p{Script=Cyrillic}/u.test(w) ? w.replace(/[АВСЕНІКМОРТХаеіорсухԁј]/g, (c) => HOMOGLYPH[c] ?? c) : w))

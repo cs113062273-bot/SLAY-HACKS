@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { FieldCheck, RefResult, Verdict } from '../core/types';
+import { titleSim } from '../core/text';
 import { formatReference, kindLabel, sourceLabel, toBibtex } from '../core/verify';
 import { getState, reset, retryUnchecked, runClaimAudit, useSession, type ClaimCheck } from '../engine/session';
 import { Brand } from './Brand';
@@ -371,7 +372,10 @@ function RefDetail({ i, onToast, openClaim }: { i: number; onToast: (m: string) 
       </>
     );
   const v = VERDICT[r.verdict];
-  const tone = r.verdict === 'verified' ? 'ok' : r.verdict === 'verified_minor' || r.verdict === 'unverifiable' ? 'muted' : r.verdict === 'metadata_error' ? 'warn' : 'bad';
+  // A wrong-identifier or missing reference can carry a loosely similar record; showing it as the match
+  // (with Copy BibTeX) would read as the correction. Only show it when it really is the cited work.
+  const showMatch = !!r.match && (!['id_mismatch', 'fabricated', 'not_found'].includes(r.verdict) || !p.title || titleSim(p.title, r.match.title) >= 0.85);
+  const tone =r.verdict === 'verified' ? 'ok' : r.verdict === 'verified_minor' || r.verdict === 'unverifiable' ? 'muted' : r.verdict === 'metadata_error' ? 'warn' : 'bad';
   return (
     <>
       <div className="dhead">
@@ -421,7 +425,7 @@ function RefDetail({ i, onToast, openClaim }: { i: number; onToast: (m: string) 
         </table>
       )}
 
-      {r.match && (
+      {showMatch && r.match && (
         <>
           <div className="section-h">
             <h3>Matched record</h3>

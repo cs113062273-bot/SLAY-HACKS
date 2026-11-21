@@ -60,6 +60,9 @@ const VENUE_CANON: [string, RegExp][] = [
   ['CACM', /\bcacm\b|communications of the acm/],
   // the English translation of Zh. Eksp. Teor. Fiz.: "Soviet Physics JETP", later "Journal of Experimental and Theoretical Physics"
   ['JETP', /\bjetp\b|journal of experimental and theoretical physics|zh eksp teor fiz/],
+  // ApJ Letters shares ApJ's volumes (L-prefixed pages) and Crossref files many of its articles under ApJ
+  ['ApJ', /\bapjl?\b|\bastrophysical journal\b(?! supplement)|\bastrophys j\b(?! suppl)/],
+  ['JHEP', /\bjhep\b|journal of high energy physics/],
 ];
 
 export function canonVenues(...texts: (string | undefined)[]): Set<string> {
@@ -79,7 +82,7 @@ export function canonVenues(...texts: (string | undefined)[]): Set<string> {
   return out;
 }
 
-const JOURNAL_CANON = new Set(['TPAMI', 'IJCV', 'TNNLS', 'CACM', 'JMLR', 'TMLR', 'TACL', 'JETP']);
+const JOURNAL_CANON = new Set(['TPAMI', 'IJCV', 'TNNLS', 'CACM', 'JMLR', 'TMLR', 'TACL', 'JETP', 'ApJ', 'JHEP']);
 
 const PREPRINT_RE = /arxiv|corr|biorxiv|medrxiv|ssrn|preprint|research square|openreview|techrxiv|chemrxiv|psyarxiv|zenodo/i;
 
@@ -141,13 +144,38 @@ function isParseDebris(c: Person, rec: WorkRecord): boolean {
   const f = c.family.trim();
   if (/^(?:arxiv|org|preprint|corr|abs|doi|url|https?|online|available)$/i.test(f)) return true;
   if (!c.given && /^\p{Lu}{1,2}(?:-\p{Lu}{1,2})+\.?$/u.test(f)) return true;
+  // title text read as a name: family "channels", given "Measurement of the CKM angle γ using the …"
+  if (/^\p{Ll}/u.test(f) && !/^(?:van|von|de|der|den|del|della|di|da|du|dos|le|la|ter|ten|zu|al|el|bin|ibn)\b/.test(f) && (c.given ?? '').split(/\s+/).filter((w) => /^\p{Ll}{3,}/u.test(w)).length >= 2) return true;
   const words = tokens(`${c.given ?? ''} ${f}`).filter((t) => t.length >= 3);
   if (!words.length) return false;
   const pool = new Set(tokens(`${rec.title} ${rec.venue ?? ''} ${(rec.venueAliases ?? []).join(' ')}`));
   return words.every((t) => pool.has(t));
 }
 
-function alignAuthors(cited: Person[], etAl: boolean, rec: WorkRecord): AuthorAlign {
+/**
+ * Repair author entries where the author/title boundary was misplaced. Only fires when the "family name" is
+ * clearly not a surname (a lowercase word or two-three letters) or a group label, so ordinary names pass through.
+ */
+function salvagePerson(c: Person): Person[] {
+  const f = c.family.trim();
+  const g = (c.given ?? '').trim();
+  // a group name ahead of the person list ("LHCb collaboration, R. Aaij et al.")
+  if (/^(?:collaborations?|group|consortium)$/i.test(f)) return [];
+  // Vancouver initials read as the family name: "Diniz PPVP" → Diniz, P. P. V. P.
+  if (/^\p{Lu}{2,4}$/u.test(f) && /^\p{Lu}\p{Ll}[\p{L}'’-]+$/u.test(g)) return [{ family: g, given: f }];
+  if ((/^\p{Ll}/u.test(f) || f.length <= 3) && g.split(/\s+/).length >= 2) {
+    // last author swallowed the title start: "Anthony T. Patera." (+ "An" ’empirical interpolation’ …)
+    const western = g.match(/^((?:\p{Lu}[\p{L}'’-]*\.?\s)+)(\p{Lu}[\p{L}'’-]+)\.$/u);
+    if (western) return [{ family: western[2], given: western[1].trim() }];
+    // Vancouver: "Råberg L. Co-infection" (+ "with" “Candidatus …”), "Cuschieri S. The STROBE" (+ "guidelines")
+    const vancouver = g.match(/^(\p{Lu}[\p{L}'’-]+(?:\s\p{Lu}[\p{L}'’-]+)?)\s(\p{Lu}{1,4})\.\s+(?=\p{Lu}?\p{Ll})/u);
+    if (vancouver) return [{ family: vancouver[1], given: vancouver[2] }];
+  }
+  return [c];
+}
+
+function alignAuthors(citedIn: Person[], etAl: boolean, rec: WorkRecord): AuthorAlign {
+  const cited = citedIn.flatMap(salvagePerson);
   // indexes sometimes list the same person twice ("Nielsen, S. F.; Nielsen, S. F.")
   const seenNames = new Set<string>();
   const R = rec.authors.filter((a) => {
@@ -590,7 +618,9 @@ export async function verifyReference(input: string | ParsedRef, ctx: VerifyCont
       const recMin = Math.min(...r.years);
       const recMax = Math.max(...r.years);
       // a book cited by a later edition or reprint, or an old work whose only record is a modern reprint/digitization
-      const edition = !!p.year && ((bookLike && (p.year > recMax || p.year < recMin)) || p.year <= recMin - 10);
+      // (an explicit "2nd ed." / "revised edition" says the cited year is that edition's, whatever the record dates)
+      const explicitEdition = /\b(?:\d+(?:st|nd|rd|th)|second|third|fourth|fifth|sixth|revised)\s+(?:rev(?:ised)?\.?\s+)?(?:ed\b|edn\b|edition\b)/i.test(p.raw);
+      const edition = !!p.year && ((bookLike && (p.year > recMax || p.year < recMin)) || p.year <= recMin - 10 || explicitEdition);
       if (a.yearDiff > tol && p.kind === 'book' && /chapter|article|section/i.test(r.type ?? '')) otherItem = true;
       if (a.yearDiff > tol && (edition || laterVersion)) {
         minor++;
@@ -939,7 +969,17 @@ const VENUE_STOP = new Set('proceedings proc of the in on and for international 
 function venueTokens(s: string): string[] {
   return fold(s)
     .split(' ')
-    .filter((t) => t && !VENUE_STOP.has(t) && !/^\d+$/.test(t));
+    // volume, page and article numbers ("4", "eaat0346", "l167") never name a venue
+    .filter((t) => t && !VENUE_STOP.has(t) && !/\d/.test(t));
+}
+
+/** Initials of every word but articles and prepositions: "Journal of High Energy Physics" → "jhep". */
+function fullInitials(s: string): string {
+  return fold(s)
+    .split(' ')
+    .filter((t) => t && !/^(?:of|the|and|for|on|in|at|a|an)$/.test(t) && !/\d/.test(t))
+    .map((t) => t[0])
+    .join('');
 }
 
 function initials(s: string): string {
@@ -1002,7 +1042,9 @@ export function venueGeneralCheck(p: ParsedRef, recs: WorkRecord[]): 'match' | '
     const NF = nf.split(' ').filter(Boolean);
     const covered = C.filter((c) => NF.some((t) => t === c || (c.length >= 3 && t.startsWith(c)) || (c.length === 2 && t.length >= 6 && t.startsWith(c)) || (t.length >= 3 && c.startsWith(t) && N.includes(t)) || ratio(t, c) >= 0.85)).length;
     if (covered / C.length >= 0.6) return 'match';
-    // acronym ↔ long form ("TPAMI", "JMLR", "CVPR")
+    // acronym ↔ long form ("TPAMI", "JMLR", "CVPR"); "JOSA A" / "JHEP" keep the initial of "Journal"
+    const nFull = fullInitials(n);
+    if (C.some((c) => c.length >= 4 && (c === nFull || nFull.startsWith(c)))) return 'match';
     const nInit = initials(n);
     if (C.some((c) => c.length >= 3 && (c === nInit || nf.split(' ').includes(c)))) return 'match';
     if (N.some((t) => t.length >= 3 && (t === cInit || (t.length >= 4 && cInit.startsWith(t)) || cf.split(' ').includes(t)))) return 'match';
