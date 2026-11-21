@@ -667,7 +667,7 @@ function classifyKind(raw: string, urls: string[], dois: string[], arxiv: string
   if (/\btech(?:nical)?\.?\s*rep(?:ort)?\b|white\s*paper|working paper/.test(r)) return 'report';
   // institutional report numbers ("CERN-LHCC-2012-007", "LHCb-CONF-2022-003", "ATL-PHYS-PUB-2020-001") on an
   // entry that carries no DOI and no journal volume/page: a laboratory report, which scholarly indexes rarely hold
-  if (!dois.length && /\b[A-Z][A-Za-z]{1,9}(?:-[A-Z]{2,8}){1,3}-(?:19|20)\d\d-\d{2,4}\b/.test(raw) && !/\b[A-Z]?\d{1,4}\s*\((?:19|20)\d\d\)\s*[A-Z]?\d/.test(raw)) return 'report';
+  if (!dois.length && (/\b[A-Z][A-Za-z]{1,9}(?:-[A-Z]{2,8}){1,3}-(?:19|20)\d\d-\d{2,4}\b/.test(raw) || /\b[A-Z][A-Za-z]{1,8} Report,? (?:No\.? ?)?\d{1,5}\b/.test(raw)) && !/\b[A-Z]?\d{1,4}\s*\((?:19|20)\d\d\)\s*[A-Z]?\d/.test(raw)) return 'report';
   const scholarlyVenue = /proceedings|journal|conference|transactions|\bin:/.test(r);
   // encyclopedia / dictionary entries are not indexed as scholarly works
   if (/encyclop(?:a)?edia|\bdictionary\b|wikipedia|\bglossary\b/.test(r) && !dois.length) return 'web';
