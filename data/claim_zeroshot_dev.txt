@@ -1,0 +1,19 @@
+dev n=316 ACC 191 NOT 64 NEI 61
+shipped: AUROC ACC-vs-NOT 0.709  NOT-vs-rest 0.641  macro-F1 0.576
+  CV-LR on shipped probs alone: macro-F1 0.541 per-class [0.734, 0.305, 0.583]
+mc-roberta   retrieved     AUROC ACC-vs-NOT 0.588  ACC-vs-rest 0.659  NOT-vs-rest 0.529
+mc-roberta   gold          AUROC ACC-vs-NOT 0.638  ACC-vs-rest 0.641  NOT-vs-rest 0.597
+mc-roberta   top20-chunked AUROC ACC-vs-NOT 0.665  ACC-vs-rest 0.719  NOT-vs-rest 0.593
+  CV-LR shipped + mc-roberta: macro-F1 0.552 per-class [0.754, 0.324, 0.58]
+nli-deberta  retrieved     AUROC ACC-vs-NOT 0.659  ACC-vs-rest 0.725  NOT-vs-rest 0.577
+nli-deberta  gold          AUROC ACC-vs-NOT 0.692  ACC-vs-rest 0.680  NOT-vs-rest 0.651
+nli-deberta  top20-chunked AUROC ACC-vs-NOT 0.689  ACC-vs-rest 0.740  NOT-vs-rest 0.605
+  CV-LR shipped + nli-deberta: macro-F1 0.547 per-class [0.732, 0.321, 0.587]
+mc-deberta   retrieved     AUROC ACC-vs-NOT 0.632  ACC-vs-rest 0.702  NOT-vs-rest 0.559
+mc-deberta   gold          AUROC ACC-vs-NOT 0.646  ACC-vs-rest 0.686  NOT-vs-rest 0.584
+mc-deberta   top20-chunked AUROC ACC-vs-NOT 0.654  ACC-vs-rest 0.722  NOT-vs-rest 0.579
+  CV-LR shipped + mc-deberta: macro-F1 0.537 per-class [0.739, 0.314, 0.557]
+mc-t5        retrieved     AUROC ACC-vs-NOT 0.617  ACC-vs-rest 0.708  NOT-vs-rest 0.530
+mc-t5        gold          AUROC ACC-vs-NOT 0.689  ACC-vs-rest 0.735  NOT-vs-rest 0.611
+mc-t5        top20-chunked AUROC ACC-vs-NOT 0.643  ACC-vs-rest 0.721  NOT-vs-rest 0.556
+  CV-LR shipped + mc-t5: macro-F1 0.538 per-class [0.724, 0.31, 0.582]

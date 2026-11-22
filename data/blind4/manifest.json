@@ -95,6 +95,17 @@
   },
   {
    "source": "arXiv",
+   "cat": "q-bio.MN",
+   "replaces": "q-bio.CB",
+   "id": "2611.18062v1",
+   "pdfUrl": "https://arxiv.org/pdf/2611.18062v1",
+   "title": "Exact stochastic theory of post-transcriptional gene autoregulation mediated by RNA-binding proteins",
+   "file": "q-bio.MN_2611.18062.pdf",
+   "truthRefs": 42,
+   "truthMethod": "main .bbl, else largest .bbl"
+  },
+  {
+   "source": "arXiv",
    "cat": "physics.med-ph",
    "id": "2611.18301v1",
    "pdfUrl": "https://arxiv.org/pdf/2611.18301v1",
@@ -1063,7 +1074,83 @@
    "id": "2611.19004",
    "title": "Tunable Multi-Frequency-Band Generator and Detector of AC Signals Based on a Spin Hall Device with Two Antiferromagnetic Layers",
    "reason": "no .bbl"
+  },
+  {
+   "cat": "q-bio.CB",
+   "id": "2611.24705",
+   "title": "Chemotactic aggregation as cue-mediated adaptation toward Nash equilibrium in a spatial patterning game",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "q-bio.CB",
+   "id": "2611.19257",
+   "title": "A unified cross-scale framework for the dynamic Waddington landscape",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "q-bio.CB",
+   "id": "2611.18783",
+   "title": "Motility-induced phase separation drives aggregation in chemotactic systems",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "q-bio.CB",
+   "id": "2611.18414",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "q-bio.MN",
+   "id": "2611.25491",
+   "reason": "previously downloaded or selected"
+  },
+  {
+   "cat": "q-bio.MN",
+   "id": "2611.23921",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "q-bio.MN",
+   "id": "2611.23291",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "q-bio.MN",
+   "id": "2611.22710",
+   "title": "Feedback and Resource Competition in Incoherent Feedforward Loops: When Is Cumulative Dose Ordering Preserved?",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "q-bio.MN",
+   "id": "2611.22554",
+   "title": "Molecular memory reduces timing noise in stochastic gene expression",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "q-bio.MN",
+   "id": "2611.21775",
+   "title": "Rule-based curation and validation in batch fermentation of a genome-scale metabolic model of the mycoprotein fungus Fusarium venenatum A3/5",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "q-bio.MN",
+   "id": "2611.20172",
+   "title": "From the possible to the optimal: differentiable optimization of gene regulatory networks",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "q-bio.MN",
+   "id": "2611.19639",
+   "reason": "not primary category"
   }
  ],
- "selectionComplete": false
+ "selectionComplete": true,
+ "amendment": {
+  "file": "data/blind4/AMENDMENT.md",
+  "replaced": "q-bio.CB",
+  "fallbackOrder": [
+   "q-bio.MN",
+   "q-bio.TO",
+   "q-bio.SC"
+  ]
+ }
 }
