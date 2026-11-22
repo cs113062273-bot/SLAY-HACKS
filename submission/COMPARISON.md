@@ -42,7 +42,7 @@ Among the systems in this table, Veracite scores highest without a paid LLM. One
 | GPT-4, in-context | paid API | .65 | .45 |
 | **Veracite** | **in the browser, 102 MB** | .634 | .486 |
 
-Veracite is weaker than MultiVerS on macro-F1. It is the only one of the three that runs on the reader's own device. The test split has been scored for two Veracite models (see README).
+The rows are not on the same labels (our loader counted unsupported ETIQUETTE citations as "unrelated", the paper as "not accurate"), so they do not rank the systems. Veracite is weaker than MultiVerS on macro-F1. It is the only one of the three that runs on the reader's own device. The test split has been scored for two Veracite models (see README).
 
 ## Capabilities
 

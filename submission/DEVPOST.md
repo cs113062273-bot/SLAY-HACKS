@@ -54,7 +54,7 @@ There are two modes: **Quick check** (references only) and **Full audit** (refer
 |---|---|---|
 | 104 hand-verified references (Badalova & Mayr 2026) | **F1 .971**, 2 of 71 genuine references flagged | Hallucinator F1 .644 (28 of 71 flagged) |
 | HALLMARK v1.2 test, 825 citations, historical held-out run | **F1 .959**, no LLM | Claude Sonnet 4.6 alone .916; paid agent cascade .986 |
-| Citation-Integrity claim support, test split | macro-F1 .486, micro .634, in the browser | MultiVerS (GPU) .52 / .59; GPT-4 .45 / .65 |
+| Citation-Integrity claim support, test split (labels mapped differently from the published rows, so not a ranking) | macro-F1 .486, micro .634, in the browser | MultiVerS (GPU) .52 / .59; GPT-4 .45 / .65 |
 | Blind test 1: 14 new papers from 14 fields, code frozen, every flag checked by hand | 635 references: 80% confirmed, 4 labelled real errors, **87 false alarms (13.7% of references)**, 0 misses in a random sample of 42 | n/a (no published tool has been run on these papers) |
 | Blind test 2: 14 more papers from 12 further fields, after the fixes | 465 references: 77.8% verified, 7 real errors, 54 false alarms (11.6% of references), 2 uncertain flags; 0/41 sampled misses | n/a |
 | Blind test 3: 14 more papers from 12 further fields plus PLOS ONE, code frozen | every PDF yielded its reference list; 964 of 969 entries found; **81.1% verified**; 1 real error, 2 uncertain, 98 false alarms (**10.2%** of references; median paper 3.7%); 0/42 sampled misses; field accuracy on 70 sampled references: year 100%, venue 91%, authors 89%, title 86% | n/a |

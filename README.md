@@ -110,7 +110,7 @@ The shipped browser model (DeBERTa-v3-base, 4-bit, 102 MB) uses top-5 hybrid-ret
 
 These rows are not on the same labels. Our loader counted every citation without evidence segments as "unrelated", while Sarol et al. map the ETIQUETTE ones (300 of 442 in train) to "not accurate". The "not accurate", "unrelated" and macro columns, and micro-F1, are therefore not comparable with the published systems. Re-running our own dev evaluation of the shipped model (macro .485) also does not reproduce the .523/.525 quoted below; this is being investigated.
 
-Veracite beats the paper's best model on micro-F1 and on recognising accurate and unrelated citations. It is weaker on subtle "not substantiated" errors, a class where GPT-4 also fails. The interface is built around that measured profile, so it never shows "not substantiated" as a verdict:
+Only the "accurate" column uses the same class definition in every row (.768 vs .69 for MultiVerS and .80 for GPT-4). Veracite is weak on "not accurate" citations, a class where GPT-4 also fails. The interface is built around that measured profile, so it never shows "not substantiated" as a verdict:
 
 - **Supported** when P(accurate) ≥ 0.5. Precision is .93 on SemanticCite (8 fields, used for calibration/selection rather than weight training) and .75 on Citation-Integrity dev. These are calibration results, not independent estimates for new papers.
 - **Needs review** when P(not accurate or unrelated) ≥ 0.98. Across fields this flags 8% of supported and 41% of unsupported citations.
