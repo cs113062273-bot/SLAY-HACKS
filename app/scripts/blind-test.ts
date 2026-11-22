@@ -21,10 +21,11 @@ const B = process.env.BLIND_SET && process.env.BLIND_SET !== '1' ? `blind${proce
 const manifest = JSON.parse(readFileSync(`${root}${B}/manifest.json`, 'utf-8'));
 const commit = execSync('git rev-parse HEAD').toString().trim();
 const dirty = execSync('git status --porcelain -- src').toString().trim().length > 0;
-if (B === 'blind3') {
-  if (!manifest.selectionComplete) throw new Error('Blind 3 selection is incomplete; keep every selected PDF');
-  if (dirty || manifest.freezeCommit !== commit) throw new Error('Blind 3 requires clean source at the manifest freeze commit');
-  if (existsSync(`${root}${B}/results.json`)) throw new Error('Blind 3 results already exist; do not rerun a held-out test');
+const strict = B === 'blind3' || B === 'blind4'; // pre-registered held-out sets: frozen, run once
+if (strict) {
+  if (!manifest.selectionComplete) throw new Error(B + ' selection is incomplete; keep every selected PDF');
+  if (dirty || manifest.freezeCommit !== commit) throw new Error(B + ' requires clean source at the manifest freeze commit');
+  if (existsSync(`${root}${B}/results.json`)) throw new Error(B + ' results already exist; do not rerun a held-out test');
   const lock = openSync(`${root}${B}/run.lock`, 'wx');
   writeFileSync(lock, JSON.stringify({ commit, pid: process.pid, startedAt: new Date().toISOString() }));
   closeSync(lock);
@@ -54,7 +55,7 @@ for (const p of manifest.picked) {
     const { lines, pageWidths } = await pdfToLines(pdfjs as any, new Uint8Array(readFileSync(`${root}pdfs/${B}/${p.file}`)));
     doc = buildDoc(lines, pageWidths);
   } catch (e) {
-    if (B !== 'blind3') throw e;
+    if (!strict) throw e;
     parseError = String(e);
     doc = { references: [], rawReferences: [], citances: [], sentences: [], style: 'unknown', stats: { pages: 0, words: 0 } };
   }
@@ -73,6 +74,16 @@ for (const p of manifest.picked) {
       }
     }),
   );
+  // same as the browser (engine/session.ts): one sequential re-check of 1-30 references left unchecked by rate limits;
+  // only a definite answer replaces "unchecked"
+  const pending = res.map((r, i) => (r.verdict === 'unchecked' ? i : -1)).filter((i) => i >= 0);
+  if (strict && B !== 'blind3' && pending.length && pending.length <= 30) {
+    await new Promise((r) => setTimeout(r, 3000));
+    for (const i of pending) {
+      const r = await verifyReference(doc.references[i], { http, budgetMs: 30000 }, i).catch(() => null);
+      if (r && r.verdict !== 'unchecked') res[i] = r;
+    }
+  }
   const tVerify = Date.now() - t0 - tParse;
   const counts: Record<string, number> = {};
   for (const r of res) counts[r.verdict] = (counts[r.verdict] ?? 0) + 1;
@@ -103,7 +114,7 @@ for (const p of manifest.picked) {
     uncheckedShare: n ? (counts.unchecked ?? 0) / n : 0,
     flagged: flags.length,
     flags,
-    ...(B === 'blind3' ? {
+    ...(strict ? {
       parseError,
       countCompleteness: p.truthRefs ? Math.min(n, p.truthRefs) / p.truthRefs : null,
       excessEntries: p.truthRefs ? Math.max(0, n - p.truthRefs) : null,
@@ -112,7 +123,7 @@ for (const p of manifest.picked) {
   };
   out.papers.push(row);
   console.log(`${p.file}: ${n} refs, verified ${verified} (${(row.coverage * 100).toFixed(0)}%), flagged ${flags.length}, unverifiable ${counts.unverifiable ?? 0}, unchecked ${counts.unchecked ?? 0}, ${(tVerify / 1000).toFixed(0)} s`);
-  if (B === 'blind3') {
+  if (strict) {
     const fieldPool = doc.references.map((parsed, i) => ({ parsed, n: i + 1 }));
     for (let k = 0; k < 5 && fieldPool.length; k++) {
       const ref = fieldPool.splice(Math.floor(rand() * fieldPool.length), 1)[0];
@@ -127,7 +138,7 @@ for (const p of manifest.picked) {
     missLines.push(`## ${p.file} [${i + 1}] ${r.verdict}\nCITED: ${doc.references[i].raw}\nMATCH: ${r.match?.title} | ${r.match?.authors.map((a) => a.family).join(', ')} | ${r.match?.years.join('/')} | ${r.match?.venue ?? ''} | ${r.match?.doi ?? r.match?.url ?? ''}\nJUDGEMENT: \n`);
   }
   writeFileSync(`${root}${B}/results.json`, JSON.stringify(out, null, 1));
-  if (B === 'blind3') writeFileSync(`${root}${B}/miss_sample.txt`, missLines.join('\n'));
+  if (strict) writeFileSync(`${root}${B}/miss_sample.txt`, missLines.join('\n'));
 }
 out.finishedAt = new Date().toISOString();
 out.hostStats = hostStats;
