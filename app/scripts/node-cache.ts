@@ -47,7 +47,10 @@ export class ReplayCache implements Cache {
     // an unrecorded lookup answers 500 (a failed source, never negative evidence) without the host-wide cooldown a network error triggers
     globalThis.fetch = (async () => new Response(null, { status: 500 })) as typeof fetch;
   }
+  // VERACITE_REPLAY_FAIL=<regex>: recorded lookups whose key matches are treated as failed (simulates a throttled host)
+  private fail = process.env.VERACITE_REPLAY_FAIL ? new RegExp(process.env.VERACITE_REPLAY_FAIL) : null;
   async get(k: string) {
+    if (this.fail?.test(k)) return undefined;
     for (const l of this.layers) if (k in l) return l[k];
     const i = replayRef.getStore();
     if (i !== undefined) replayMisses.set(i, [...(replayMisses.get(i) ?? []), k]);
