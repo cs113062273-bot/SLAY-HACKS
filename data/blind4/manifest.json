@@ -1,0 +1,1069 @@
+{
+ "rule": "blind set 4: first recent primary-category arXiv paper per category with a >=10-entry .bbl; two newest PLOS ONE research articles; parser not used in selection",
+ "freezeCommit": "515543020c529020c5e3df4ed9d957dbf0a56b50",
+ "queriedAt": "2026-11-22T07:16:12.990503+00:00",
+ "picked": [
+  {
+   "source": "arXiv",
+   "cat": "cs.MA",
+   "id": "2611.23913v1",
+   "pdfUrl": "https://arxiv.org/pdf/2611.23913v1",
+   "title": "Resilient Federated LQR over Noisy and Lossy Uplinks via Scalar Communication",
+   "file": "cs.MA_2611.23913.pdf",
+   "truthRefs": 28,
+   "truthMethod": "main .bbl, else largest .bbl"
+  },
+  {
+   "source": "arXiv",
+   "cat": "cs.GT",
+   "id": "2611.25757v1",
+   "pdfUrl": "https://arxiv.org/pdf/2611.25757v1",
+   "title": "Uniqueness, Proximity, and Scaling in Atomic Splittable Polymatroid Congestion Games",
+   "file": "cs.GT_2611.25757.pdf",
+   "truthRefs": 33,
+   "truthMethod": "main .bbl, else largest .bbl"
+  },
+  {
+   "source": "arXiv",
+   "cat": "cs.IT",
+   "id": "2611.25968v1",
+   "pdfUrl": "https://arxiv.org/pdf/2611.25968v1",
+   "title": "Feedback-Free FDD Cell-Free Massive MIMO With Sparse AP Activation and Dual-Mode Precoding",
+   "file": "cs.IT_2611.25968.pdf",
+   "truthRefs": 10,
+   "truthMethod": "main .bbl, else largest .bbl"
+  },
+  {
+   "source": "arXiv",
+   "cat": "cs.GR",
+   "id": "2611.20948v1",
+   "pdfUrl": "https://arxiv.org/pdf/2611.20948v1",
+   "title": "One Code per Material: Neural Representation and Generation of Measured BTFs",
+   "file": "cs.GR_2611.20948.pdf",
+   "truthRefs": 62,
+   "truthMethod": "main .bbl, else largest .bbl"
+  },
+  {
+   "source": "arXiv",
+   "cat": "astro-ph.EP",
+   "id": "2611.22571v1",
+   "pdfUrl": "https://arxiv.org/pdf/2611.22571v1",
+   "title": "Planet Formation in a Warped Disc: Gravitational Instability and Misaligned Infall",
+   "file": "astro-ph.EP_2611.22571.pdf",
+   "truthRefs": 87,
+   "truthMethod": "main .bbl, else largest .bbl"
+  },
+  {
+   "source": "arXiv",
+   "cat": "cond-mat.supr-con",
+   "id": "2611.22493v1",
+   "pdfUrl": "https://arxiv.org/pdf/2611.22493v1",
+   "title": "From the Full Fermionic Hilbert Space to the BCS Paired Subspace",
+   "file": "cond-mat.supr-con_2611.22493.pdf",
+   "truthRefs": 17,
+   "truthMethod": "main .bbl, else largest .bbl"
+  },
+  {
+   "source": "arXiv",
+   "cat": "hep-lat",
+   "id": "2611.21860v1",
+   "pdfUrl": "https://arxiv.org/pdf/2611.21860v1",
+   "title": "Anomaly inflow for simplicial K\\&#34;{a}hler fermions",
+   "file": "hep-lat_2611.21860.pdf",
+   "truthRefs": 50,
+   "truthMethod": "main .bbl, else largest .bbl"
+  },
+  {
+   "source": "arXiv",
+   "cat": "nucl-ex",
+   "id": "2611.20189v1",
+   "pdfUrl": "https://arxiv.org/pdf/2611.20189v1",
+   "title": "Study on net-proton number fluctuations in Au+Au collisions at $\\sqrt{\\textit{s}_{\\text{NN}}}$ = 7.7-27 GeV with the SMASH model",
+   "file": "nucl-ex_2611.20189.pdf",
+   "truthRefs": 29,
+   "truthMethod": "main .bbl, else largest .bbl"
+  },
+  {
+   "source": "arXiv",
+   "cat": "math.DS",
+   "id": "2611.26566v1",
+   "pdfUrl": "https://arxiv.org/pdf/2611.26566v1",
+   "title": "Topological notions of Shadowing under Semi-Conjugacy",
+   "file": "math.DS_2611.26566.pdf",
+   "truthRefs": 14,
+   "truthMethod": "main .bbl, else largest .bbl"
+  },
+  {
+   "source": "arXiv",
+   "cat": "physics.med-ph",
+   "id": "2611.18301v1",
+   "pdfUrl": "https://arxiv.org/pdf/2611.18301v1",
+   "title": "Scan-specific k-space interpolation using deep Koopman autoencoders",
+   "file": "physics.med-ph_2611.18301.pdf",
+   "truthRefs": 76,
+   "truthMethod": "main .bbl, else largest .bbl"
+  },
+  {
+   "source": "arXiv",
+   "cat": "physics.app-ph",
+   "id": "2611.18953v1",
+   "pdfUrl": "https://arxiv.org/pdf/2611.18953v1",
+   "title": "Reflective Spin Wave Filtering Limiters with Bandpass to Bandstop Bifurcation",
+   "file": "physics.app-ph_2611.18953.pdf",
+   "truthRefs": 43,
+   "truthMethod": "main .bbl, else largest .bbl"
+  },
+  {
+   "source": "PLOS ONE",
+   "id": "10.1371/journal.pone.0363369",
+   "title": "Comparative evaluation of single and multiple camera-based pose estimation methods for gait spatiotemporal parameter estimation",
+   "published": "2026-11-20T00:00:00Z",
+   "file": "plos_10_1371_journal_pone_0363369.pdf",
+   "truthRefs": 27
+  },
+  {
+   "source": "PLOS ONE",
+   "id": "10.1371/journal.pone.0359139",
+   "title": "A descriptive study of diabetes management practices among persons with diabetes in rural and urban Tororo District, Uganda",
+   "published": "2026-11-20T00:00:00Z",
+   "file": "plos_10_1371_journal_pone_0359139.pdf",
+   "truthRefs": 71
+  }
+ ],
+ "skipped": [
+  {
+   "cat": "cs.MA",
+   "id": "2611.26154",
+   "title": "Public-Private Cooperation in the Port of Rotterdam: An Agent-Based Toy Model of Cooperative Efforts Against Cocaine Trafficking",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cs.MA",
+   "id": "2611.25852",
+   "title": "Interlacing Committees with Edge-Expansion",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cs.MA",
+   "id": "2611.25774",
+   "title": "DS2Agent: Holistic Device Agents for Accelerated Embedded Board-Level Design",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cs.MA",
+   "id": "2611.25158",
+   "title": "GridAnchor: Specialized Multi-Agent AI for Safeguarding Autonomous Energy Systems Against Cyber-Physical Hallucinations",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cs.MA",
+   "id": "2611.26553",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.MA",
+   "id": "2611.25985",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.MA",
+   "id": "2611.25880",
+   "reason": "previously downloaded or selected"
+  },
+  {
+   "cat": "cs.MA",
+   "id": "2611.25879",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.MA",
+   "id": "2611.25661",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.MA",
+   "id": "2611.25167",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.MA",
+   "id": "2611.25088",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.MA",
+   "id": "2611.25071",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.MA",
+   "id": "2611.25056",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.MA",
+   "id": "2611.24839",
+   "title": "Kaer: Security-Aware Replanning for Multi-Agent Systems",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cs.MA",
+   "id": "2611.24037",
+   "title": "FormalFixer: Intent-Aligned Automated Hardware Repair via Joint Refinement of Specifications, Assertions, and RTL Implementations",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cs.GT",
+   "id": "2611.26623",
+   "title": "Path-Independent Deleveraging Rules",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cs.GT",
+   "id": "2611.25988",
+   "title": "Sequential Contract Design for Budgeted Crowdsourcing",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cs.GT",
+   "id": "2611.25981",
+   "title": "Safe Subgame Resolving in Multiplayer Games",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cs.GT",
+   "id": "2611.25892",
+   "title": "Closing Gaps in Temporal Fair Division for Chores",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cs.IT",
+   "id": "2611.26378",
+   "title": "Optimal Preemption: Guaranteeing Information Freshness in Mean Age and Beyond",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cs.IT",
+   "id": "2601.16624",
+   "title": "Taming the Heavy Tail: Age-Optimal Preemption",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cs.IT",
+   "id": "2611.26220",
+   "title": "Spherical Tessellation of Circular Arrays for Massive MIMO: Favourable Propagation Conditions and Spectral Design",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cs.IT",
+   "id": "2611.26068",
+   "title": "Physics-Informed Deep Learning for Channel Prediction in Satellite-Mounted Metasurface Reflection Communication Networks",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cs.IT",
+   "id": "2611.25995",
+   "title": "Two-Timescale Channel Estimation and Port Selection for Fluid Antenna Systems With Limited Port Observations",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cs.IT",
+   "id": "2611.25990",
+   "title": "Asymptotic Bounds for Codes in Toroidal Distance",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.26600",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.26431",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.25934",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.25838",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.25340",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.25338",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.24423",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.23755",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.23450",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.22805",
+   "title": "DOOM-GS: Dynamic Out-of-core Optimization for Massive Gaussian Splatting",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.23054",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.22903",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.22512",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.22240",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.22207",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.22124",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.22005",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.21890",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.21867",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cs.GR",
+   "id": "2611.21334",
+   "title": "Real-world Polarimetric Environment Map Dataset",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.26548",
+   "title": "Demographic inference in exoplanet chemistry is shaped by retrieval assumptions",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.26372",
+   "title": "Lower-Mass Giants Can Spare Inner Planets during High-Eccentricity Migration",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.26025",
+   "title": "The Ionospheric Cut-off as a Potential Radio Technosignature",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.25803",
+   "title": "The Atmospheric Circulation of Cloudy Hot and Ultra-hot Jupiters: the Need for Dissipation of Large-scale Flows to Reduce the Nightside Brightness Temperatures of Ultra-hot Jupiters",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.25602",
+   "title": "Dependence of Dust Growth on Magnetic field Strength in Protoplanetary Disks",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.25255",
+   "title": "Transition Zone from ExoEarth to ExoVenus: Critical Insight from Planets on the Edge",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.25230",
+   "title": "The SPACE Program IV: Atmospheric Features on the Cold Transiting Sub-Neptune TOI-6478 b",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.25203",
+   "title": "Where Did the Angular Momentum Go? WASP-12 b May Have Circularized on a Retrograde Orbit",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.25120",
+   "title": "On the High Eccentricity Orbit of 51 Eri b and Constraints on Interactions with a Second Companion",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.25079",
+   "title": "Validation and Physical Characterization of Seven TESS Exoplanets: A Compact Multi-Planet System and Targets for Atmospheric Spectroscopy",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.24854",
+   "title": "Discovery of a Massive Outer Companion to the TOI-178 Resonant Chain",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.24812",
+   "title": "A Homogeneous Benchmark of Exoplanet Mass-Radius Relations",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.24811",
+   "title": "Potential spectral markers of intrinsic magnetic fields of hot exoplanets in the UV range",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.24615",
+   "title": "Thermodynamics of gas giants accreting via shocks: the role of molecular hydrogen dissociation",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.24416",
+   "title": "Analytical formulae for planet-planet or moon-moon tides",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.24397",
+   "title": "Asgard/NOTT: L-band nulling interferometry at the VLTI IV. Prospects for characterising hot exozodiacal dust",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.23818",
+   "title": "NEXONN: Advancing the NEXOTRANS Exoplanet Atmospheric Retrieval Framework with Transformer-Based Neural Posterior Estimation for JWST Transmission Spectroscopy of WASP-39b",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.23643",
+   "title": "MAIC-2 v2.3: A Fortran program for simulating the surface temperature, atmospheric water transport and surface glaciation of the planet Mars",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.24020",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.23393",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.23217",
+   "title": "Near Resonance, Less Ordered: Radius and Mass Ordering in Compact Multi-planet Systems",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.22952",
+   "title": "Observational diagnostics of external photoevaporation at millimetre wavelengths",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "astro-ph.EP",
+   "id": "2611.22913",
+   "title": "A novel method for dust evolution in protoplanetary disks and a new criterion for gap opening",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cond-mat.supr-con",
+   "id": "2611.25554",
+   "title": "Comparative First-Principles Study of the Physical Properties, Phonon-Mediated Superconductivity and Functional Potential of Technetium-Based Binary Borides TcB2, Tc2B and Tc3B",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cond-mat.supr-con",
+   "id": "2611.25456",
+   "title": "Generalized Critical-State Analysis of Local Field Screening in High-Pressure Yttrium Polyhydride",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cond-mat.supr-con",
+   "id": "2611.25349",
+   "title": "Magnetic order in Tb and Dy substituted La3Ni2O7 and effects of high-pressure high-temperature O2 annealing",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cond-mat.supr-con",
+   "id": "2611.25018",
+   "title": "First order vortex-unbinding transition in 2D topological superconductors",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cond-mat.supr-con",
+   "id": "2611.25015",
+   "title": "Umklapp-enhanced high-$T_c$ topological superconductivity mediated by magnons in $p$-wave magnets",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cond-mat.supr-con",
+   "id": "2611.26360",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cond-mat.supr-con",
+   "id": "2611.26327",
+   "reason": "previously downloaded or selected"
+  },
+  {
+   "cat": "cond-mat.supr-con",
+   "id": "2611.25907",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cond-mat.supr-con",
+   "id": "2611.24288",
+   "title": "Reconciling Models for Infinite-Layer Nickelate Superconductors: Role of Interstitial-$s$ Band or $A$-Pocket",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cond-mat.supr-con",
+   "id": "2611.23595",
+   "title": "Layer-dependent $s^{\\pm}$ superconducting pairing and influence of incipient bands in La$_3$Ni$_2$O$_7$ thin films on real LaSrAlO$_4$ substrate",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cond-mat.supr-con",
+   "id": "2611.23390",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "cond-mat.supr-con",
+   "id": "2611.23232",
+   "title": "Emergent Attraction and Competing Orders near the Van Hove Singularity in Rhombohedral $n$-layer Graphene",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cond-mat.supr-con",
+   "id": "2611.23065",
+   "title": "Quasi-long-range order in the quantum XY model on Sierpi\\&#39;nski gaskets",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cond-mat.supr-con",
+   "id": "2611.23060",
+   "title": "Atomic-scale Imaging of Time Reversal Breaking Supercurrents in $\\mathrm{Bi_2Sr_2CaCu_2O_8}$",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "cond-mat.supr-con",
+   "id": "2611.23016",
+   "title": "Ab initio Engineering of Topological Superconductivity in Substrate-Supported Magnetic Chains",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "hep-lat",
+   "id": "2611.26443",
+   "title": "Review of Pion and Nucleon Gluon Parton Distribution Functions from Lattice QCD",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "hep-lat",
+   "id": "2611.26415",
+   "title": "Half-strings across the deconfinement transition of a $U(1)$ quantum link model",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "hep-lat",
+   "id": "2611.25943",
+   "title": "Equation of state of hot and dense QCD at the physical point via the complex Langevin equation",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "hep-lat",
+   "id": "2611.25241",
+   "title": "Testing the D234 Dirac operator",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "hep-lat",
+   "id": "2611.26257",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "hep-lat",
+   "id": "2611.25749",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "hep-lat",
+   "id": "2611.25573",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "hep-lat",
+   "id": "2611.25062",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "hep-lat",
+   "id": "2611.24658",
+   "title": "Light fermions can trigger a Brout-Englert-Higgs effect",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "hep-lat",
+   "id": "2611.24374",
+   "title": "Interpretable uncertainties for bounds on spectral functionals from Euclidean correlators",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "hep-lat",
+   "id": "2611.23982",
+   "title": "Positivity, Noise, and Cones",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "hep-lat",
+   "id": "2611.23399",
+   "title": "Generative diffusion models for lattice field theory",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "hep-lat",
+   "id": "2611.24572",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "hep-lat",
+   "id": "2611.24435",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "hep-lat",
+   "id": "2611.23586",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "hep-lat",
+   "id": "2611.23577",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "nucl-ex",
+   "id": "2611.25487",
+   "title": "Measurements of inclusive $J/\\psi$ production in Au+Au collisions at $\\sqrt{s_{\\rm NN}}$ = 14.6, 17.3, 19.6, and 27 GeV with the STAR experiment",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "nucl-ex",
+   "id": "2611.24957",
+   "title": "A Study of Renyi Entropy in pp Collisions by ALICE Data- A Comparison with UrQMD Simulation and AI-Assisted Modeling",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "nucl-ex",
+   "id": "2611.26404",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "nucl-ex",
+   "id": "2611.25933",
+   "reason": "previously downloaded or selected"
+  },
+  {
+   "cat": "nucl-ex",
+   "id": "2611.24673",
+   "title": "Fluctuations and Correlations of Conserved Charges in Isobar Collisions at $\\sqrt{s_{NN}}$ = 200 GeV with the STAR Detector",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "nucl-ex",
+   "id": "2611.23355",
+   "title": "Isospin effects and symmetry energy in nuclear reactions",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "nucl-ex",
+   "id": "2611.24572",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "nucl-ex",
+   "id": "2611.24538",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "nucl-ex",
+   "id": "2611.24118",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "nucl-ex",
+   "id": "2611.23577",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "nucl-ex",
+   "id": "2611.23506",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "nucl-ex",
+   "id": "2611.23457",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "nucl-ex",
+   "id": "2611.23043",
+   "title": "Precision Muon Physics",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "nucl-ex",
+   "id": "2611.22945",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "nucl-ex",
+   "id": "2611.21807",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "nucl-ex",
+   "id": "2611.20085",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "nucl-ex",
+   "id": "2611.21588",
+   "title": "Recent Advances and Precision Measurements with the JYFLTRAP Double Penning Trap Mass Spectrometer",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "nucl-ex",
+   "id": "2611.21284",
+   "title": "Third-body-corrected Two-Pion Femtoscopic Correlations in Au+Au Collisions at High Baryon Density",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "nucl-ex",
+   "id": "2611.20400",
+   "title": "Observation of Strong Directed Flow for $\\phi$ Mesons in the High Baryon Density Region at RHIC",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "q-bio.CB",
+   "id": "2611.24705",
+   "title": "Chemotactic aggregation as cue-mediated adaptation toward Nash equilibrium in a spatial patterning game",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "q-bio.CB",
+   "id": "2611.19257",
+   "title": "A unified cross-scale framework for the dynamic Waddington landscape",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "q-bio.CB",
+   "id": "2611.18783",
+   "title": "Motility-induced phase separation drives aggregation in chemotactic systems",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "q-bio.CB",
+   "id": "2611.18414",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2611.25260",
+   "title": "Towards consensus on practical probabilistic evaluation metrics for clinical decision making in radiotherapy",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2611.26142",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2611.26111",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2611.25145",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2611.24487",
+   "title": "Unmyelinated axons alter the biological interpretation of MRI biomarkers of demyelination",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2611.24400",
+   "title": "Impact-Based Analysis Method (IBAM) to evaluate the primary stability of the pedicle screw: A proof of concept",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2611.23788",
+   "title": "Geometry-bridge flow matching for blind rigid-motion correction in head cone-beam CT",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2611.24436",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2611.23553",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2611.23549",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2611.21005",
+   "title": "The relationship between junctional zone, smooth muscle tone and intra-uterine pressure",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2611.20964",
+   "title": "A Soft Sponge-Pillar Electrode Platform for Motion-Tolerant Ambulatory EEG and Sleep Monitoring",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2611.20961",
+   "title": "Using an instrumented hammer to predict the lateral hinge fracture in high tibial osteotomy: A cadaveric study",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2611.20959",
+   "title": "Detecting the pterygomaxillary disjunction using an instrumented hammer: A cadaveric study",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2611.20949",
+   "title": "Multimodal assessment of the skin biomechanical properties during wound healing and hyaluronic acid response",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2611.20545",
+   "title": "Dynamic infrared thermography and computed tomography angiography fusion for DIEP flap perforator selection: a novel measurement system",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2611.18928",
+   "title": "SPLAT: An Event-Specific System Response Model for Continuous-Domain List-Mode TOF PET",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2611.18911",
+   "title": "Multi-echo AxCaliberSMT: Mapping effective axon radius from restricted diffusion and radius-dependent intra-axonal T2",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2611.21221",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.med-ph",
+   "id": "2608.29158",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.25609",
+   "title": "Exceptional unidirectional radiation modes",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.25173",
+   "title": "Geometric control of diffusive relaxation: spectral design, transport bounds and transverse mode isolation",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.25145",
+   "title": "Colloquium: Isotopes for medicine and fundamental physics",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.26314",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.26079",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.25212",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.24790",
+   "title": "Design and Modeling of Graded Base III-Nitride HBTs for High-Frequency Applications",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.24194",
+   "title": "Nonideal Absorbers in Hot-Carrier and Hot-Absorber Solar Cells: Losses and Heat Recycling",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.24655",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.24591",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.24530",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.24092",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.23610",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.22694",
+   "title": "Thermal and Acoustic Measurements of Hybrid Bonding Stacks",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.22393",
+   "title": "Development and Validation of a preCICE Based OpenMOC OpenFOAM Coupling Framework for Nuclear Reactor Analysis",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.21930",
+   "title": "Spatiotemporal programming of shape memory polymers for tunable vibration responses",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.21762",
+   "title": "Radiation Response of NbN Superconducting Nanowire Single-Photon Detectors Under $^{210}$Po Alpha-Particle Irradiation",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.23188",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.22877",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.22153",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.22088",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.22057",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.21934",
+   "reason": "not primary category"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.21415",
+   "title": "Shared-State Inverse Synthesis of Dual-Mode Conformal Metasurfaces for Low Scattering and Telemetry",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.21381",
+   "title": "Multilevel AlScN Ferroelectric Diode Crossbar Arrays with Sub-200 nm Cells for Selector-Free Nonvolatile Memory",
+   "reason": "no .bbl"
+  },
+  {
+   "cat": "physics.app-ph",
+   "id": "2611.19004",
+   "title": "Tunable Multi-Frequency-Band Generator and Detector of AC Signals Based on a Spin Hall Device with Two Antiferromagnetic Layers",
+   "reason": "no .bbl"
+  }
+ ],
+ "selectionComplete": false
+}

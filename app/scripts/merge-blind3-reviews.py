@@ -7,7 +7,7 @@ import json
 import re
 from pathlib import Path
 
-B = Path(__file__).resolve().parents[2] / 'data' / 'blind3'
+B = Path(__file__).resolve().parents[2] / 'data' / ('blind' + __import__('os').environ.get('BLIND_SET', '3'))
 rev = json.loads((B / 'reviews.json').read_text(encoding='utf-8'))
 run = json.loads((B / 'results.json').read_text(encoding='utf-8'))
 if not run.get('finishedAt'):

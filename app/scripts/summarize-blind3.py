@@ -9,7 +9,7 @@ import re
 import statistics
 from collections import Counter
 
-ROOT = Path(__file__).resolve().parents[2] / 'data' / 'blind3'
+ROOT = Path(__file__).resolve().parents[2] / 'data' / ('blind' + __import__('os').environ.get('BLIND_SET', '3'))
 manifest = json.loads((ROOT / 'manifest.json').read_text(encoding='utf-8'))
 run = json.loads((ROOT / 'results.json').read_text(encoding='utf-8'))
 if not run.get('finishedAt') or len(run['papers']) != len(manifest['picked']):

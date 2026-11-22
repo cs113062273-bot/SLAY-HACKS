@@ -9,8 +9,8 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-B = ROOT / 'data' / 'blind3'
-PDFS = ROOT / 'data' / 'pdfs' / 'blind3'
+B = ROOT / 'data' / ('blind' + __import__('os').environ.get('BLIND_SET', '3'))
+PDFS = ROOT / 'data' / 'pdfs' / B.name
 sys.stdout.reconfigure(encoding='utf-8')
 mode = sys.argv[1]
 only = sys.argv[2] if len(sys.argv) > 2 else ''
