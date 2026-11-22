@@ -78,7 +78,7 @@ def chunks(sents, tok, size):
 def main():
     names = sys.argv[1:] or ["mc-roberta", "nli-deberta", "mc-deberta", "mc-t5"]
     data = load("dev")
-    ship = np.load(CACHE / "dev_probs_shipped.npy")
+    ship = np.load(CACHE / "dev_probs_verifier_backup_sf_k26.npy")
     assert len(ship) == len(data), (len(ship), len(data))
     ctx = {c["id"]: c["order"] for c in json.load(open(CACHE / "contexts_dev.json"))}
     y = np.array([LABELS.index(x["label"]) for x in data])

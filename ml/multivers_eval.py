@@ -37,7 +37,8 @@ def load_model():
 
 
 def encode(tok, claim, sents):
-    ids = tok(claim + tok.eos_token + tok.eos_token.join(sents), truncation=True, max_length=4096)["input_ids"]
+    # data.py tests `title is not None`: the released corpus has title "" so an empty title still adds one separator
+    ids = tok(claim + tok.eos_token + tok.eos_token + tok.eos_token.join(sents), truncation=True, max_length=4096)["input_ids"]
     ids = torch.tensor(ids)
     first = torch.where(ids == tok.eos_token_id)[0][0]
     g = (ids == tok.bos_token_id) | (ids == tok.eos_token_id); g[: first] = True
@@ -58,7 +59,7 @@ def inputs(split, ours):
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("--split", default="dev"); ap.add_argument("--ours", action="store_true"); a = ap.parse_args()
+    ap = argparse.ArgumentParser(); ap.add_argument("--split", default="dev", choices=["dev"]); ap.add_argument("--ours", action="store_true"); a = ap.parse_args()
     tok = AutoTokenizer.from_pretrained("allenai/longformer-large-4096"); tok.add_tokens(ADD)
     m = load_model(); data = inputs(a.split, a.ours)
     P = []; t0 = time.time()

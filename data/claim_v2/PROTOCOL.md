@@ -41,3 +41,17 @@ CI test was scored before for two models under the old mapping. The MultiVerS re
   Neutral → NEI, as MultiVerS). Rationale: the released MultiVerS-CI starts from a HealthVer model and is better on
   NOT_ACCURATE; this tests whether that data, not the architecture, is the reason. Same gates; the selection rule
   (highest dev macro-F1 among arms passing all gates) now covers A1–A3.
+
+## Disclosure and change (2026-11-22, after A1, before A3/A2 results)
+
+- CI test was run during this work although the standing rule is "no CI test reruns" and the instruction was dev first:
+  shipped model (`rescore_paper.py --split test`, `compare_multivers.py --split test`) and the released MultiVerS
+  (released inputs and our inputs). The test error breakdown by fine label was also used to pick the OVERSIMPLIFY
+  direction, so test is not untouched for design decisions. No v2 arm has been scored on test.
+- The "Test" section above is void: no arm is scored on CI test unless the project owner approves it explicitly.
+- Gate 1 is a weak bar: the shipped model was trained with other labels, so any relabelled model has an advantage under
+  the paper mapping. A1 passes the gates but, on the product's own triage (`calib_a1_vs_shipped.txt`), is not better:
+  SemanticCite flags 9%/38% (supported/unsupported) at .97 vs 8%/41% at .98 shipped; "supported" precision .88 vs .93.
+- MultiVerS numbers are from our own reimplementation, unverified against the authors' code, on released inputs that hold 5
+  sentences (the paper's best model uses 20). "Does not reproduce" and "our retrieval is better" are not established:
+  on dev the released inputs score higher (macro .664 vs .565). The AUROC interval is claim-level, not article-clustered.

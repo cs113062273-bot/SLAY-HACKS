@@ -1,3 +1,12 @@
+CORRECTION 2026-11-22: the "shipped" lines and every "CV-LR shipped + ..." line below used the withdrawn e2b model's
+probabilities (cache/dev_probs_shipped.npy, written 2026-11-20 02:08 after the e2b export), not the model in the app.
+Correct values for the shipped deb_base_sf_k26 (dev n=316): AUROC ACC-vs-NOT .700, NOT-vs-rest .594, macro-F1 .485;
+5-fold CV-LR alone .502; + mc-roberta .515, + nli-deberta .493, + mc-deberta .506, + mc-t5 .508. Zero-shot scores are unaffected.
+By error type, AUROC of P(support) against ACCURATE (zero-shot = better of retrieved / top-20 chunked):
+  CONTRADICT (n=22): shipped 0.695  zero-shot mc-roberta 0.640 nli-deberta 0.669 mc-deberta 0.688 mc-t5 0.612
+  NOT_SUBSTANTIATE (n=25): shipped 0.775  zero-shot mc-roberta 0.699 nli-deberta 0.736 mc-deberta 0.676 mc-t5 0.685
+  OVERSIMPLIFY (n=8): shipped 0.403  zero-shot mc-roberta 0.552 nli-deberta 0.565 mc-deberta 0.431 mc-t5 0.544
+
 dev n=316 ACC 191 NOT 64 NEI 61
 shipped: AUROC ACC-vs-NOT 0.709  NOT-vs-rest 0.641  macro-F1 0.576
   CV-LR on shipped probs alone: macro-F1 0.541 per-class [0.734, 0.305, 0.583]

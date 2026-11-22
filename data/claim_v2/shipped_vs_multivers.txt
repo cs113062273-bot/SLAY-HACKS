@@ -1,3 +1,5 @@
+NOTE (2026-11-22): MultiVerS rows below are INVALID (wrong input format, missing separator) and the test block came from CI test runs that broke the no-rerun rule. See PROTOCOL.md "Disclosure and change".
+
 shipped (raw)                  micro 0.554 macro 0.411 per-class ACC/NOT/NEI [0.752, 0.29, 0.192] binary AUROC 0.765
                                vs MultiVerS: macro diff -0.152 [-0.230, -0.079]  AUROC diff +0.028 [-0.036, +0.093]
 shipped (bias)                 micro 0.633 macro 0.459 per-class ACC/NOT/NEI [0.809, 0.304, 0.263] binary AUROC 0.764

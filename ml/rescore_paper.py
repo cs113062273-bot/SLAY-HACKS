@@ -7,7 +7,7 @@ import numpy as np
 from sklearn.metrics import f1_score, roc_auc_score
 from ci_data import LABELS, load
 
-ap = argparse.ArgumentParser(); ap.add_argument("--split", default="dev"); a = ap.parse_args()
+ap = argparse.ArgumentParser(); ap.add_argument("--split", default="dev", choices=["dev"]); a = ap.parse_args()
 cache = Path("cache") / f"{a.split}_logits_shipped.npy"
 if not cache.exists():
     import onnxruntime as ort

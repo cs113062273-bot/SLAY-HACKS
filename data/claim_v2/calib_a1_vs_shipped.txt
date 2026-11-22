@@ -1,0 +1,66 @@
+== runs/v2_a1_base_pruned/web
+base rates: {'ACCURATE': 0.6, 'NOT_ACCURATE': 0.32, 'NEI': 0.08}
+ACCURATE      p>=0.34: n=207 precision=0.74  recall=0.80
+ACCURATE      p>=0.50: n=199 precision=0.74  recall=0.77
+ACCURATE      p>=0.70: n=163 precision=0.78  recall=0.66
+ACCURATE      p>=0.80: n=133 precision=0.80  recall=0.55
+ACCURATE      p>=0.90: n= 96 precision=0.81  recall=0.41
+ACCURATE      p>=0.95: n= 58 precision=0.83  recall=0.25
+NOT_ACCURATE  p>=0.34: n= 97 precision=0.47  recall=0.46
+NOT_ACCURATE  p>=0.50: n= 88 precision=0.48  recall=0.42
+NOT_ACCURATE  p>=0.70: n= 45 precision=0.53  recall=0.24
+NOT_ACCURATE  p>=0.80: n= 31 precision=0.61  recall=0.19
+NOT_ACCURATE  p>=0.90: n= 22 precision=0.59  recall=0.13
+NOT_ACCURATE  p>=0.95: n= 13 precision=0.54  recall=0.07
+NEI           p>=0.34: n= 12 precision=0.33  recall=0.17
+NEI           p>=0.50: n= 11 precision=0.36  recall=0.17
+NEI           p>=0.70: n=  6 precision=0.50  recall=0.12
+NEI           p>=0.80: n=  3 precision=0.67  recall=0.08
+NEI           p>=0.90: n=  3 precision=0.67  recall=0.08
+NEI           p>=0.95: n=  1 precision=1.00  recall=0.04
+PROBLEM (not acc or nei) p>=0.50: n=117 precision=0.63 recall=0.59
+PROBLEM (not acc or nei) p>=0.70: n= 80 precision=0.69 recall=0.44
+PROBLEM (not acc or nei) p>=0.80: n= 58 precision=0.78 recall=0.36
+PROBLEM (not acc or nei) p>=0.90: n= 45 precision=0.84 recall=0.30
+PROBLEM (not acc or nei) p>=0.95: n= 31 precision=0.84 recall=0.21
+review p>=0.8: flagged 151/351 | flag rate SUPPORTED=0.21 PARTIAL=0.40 UNSUPPORTED=0.71 | precision(unsup)=0.44
+review p>=0.9: flagged 110/351 | flag rate SUPPORTED=0.16 PARTIAL=0.26 UNSUPPORTED=0.55 | precision(unsup)=0.47
+review p>=0.95: flagged 86/351 | flag rate SUPPORTED=0.12 PARTIAL=0.21 UNSUPPORTED=0.44 | precision(unsup)=0.49
+review p>=0.97: flagged 65/351 | flag rate SUPPORTED=0.09 PARTIAL=0.14 UNSUPPORTED=0.38 | precision(unsup)=0.55
+review p>=0.98: flagged 51/351 | flag rate SUPPORTED=0.05 PARTIAL=0.11 UNSUPPORTED=0.31 | precision(unsup)=0.57
+review p>=0.99: flagged 38/351 | flag rate SUPPORTED=0.03 PARTIAL=0.07 UNSUPPORTED=0.26 | precision(unsup)=0.66
+supported p>=0.5: precision(sup or partial)=0.88 n=135
+supported p>=0.7: precision(sup or partial)=0.92 n=93
+== ../app/public/models/veracite-verifier
+base rates: {'ACCURATE': 0.6, 'NOT_ACCURATE': 0.32, 'NEI': 0.08}
+ACCURATE      p>=0.34: n=192 precision=0.75  recall=0.75
+ACCURATE      p>=0.50: n=178 precision=0.76  recall=0.71
+ACCURATE      p>=0.70: n=139 precision=0.76  recall=0.55
+ACCURATE      p>=0.80: n=115 precision=0.80  recall=0.48
+ACCURATE      p>=0.90: n= 78 precision=0.83  recall=0.34
+ACCURATE      p>=0.95: n= 49 precision=0.90  recall=0.23
+NOT_ACCURATE  p>=0.34: n= 44 precision=0.48  recall=0.21
+NOT_ACCURATE  p>=0.50: n= 36 precision=0.47  recall=0.17
+NOT_ACCURATE  p>=0.70: n= 20 precision=0.55  recall=0.11
+NOT_ACCURATE  p>=0.80: n= 15 precision=0.47  recall=0.07
+NOT_ACCURATE  p>=0.90: n=  9 precision=0.44  recall=0.04
+NOT_ACCURATE  p>=0.95: n=  5 precision=0.60  recall=0.03
+NEI           p>=0.34: n= 80 precision=0.12  recall=0.42
+NEI           p>=0.50: n= 63 precision=0.16  recall=0.42
+NEI           p>=0.70: n= 39 precision=0.18  recall=0.29
+NEI           p>=0.80: n= 33 precision=0.18  recall=0.25
+NEI           p>=0.90: n= 19 precision=0.16  recall=0.12
+NEI           p>=0.95: n= 10 precision=0.20  recall=0.08
+PROBLEM (not acc or nei) p>=0.50: n=138 precision=0.59 recall=0.66
+PROBLEM (not acc or nei) p>=0.70: n= 93 precision=0.73 recall=0.54
+PROBLEM (not acc or nei) p>=0.80: n= 73 precision=0.79 recall=0.46
+PROBLEM (not acc or nei) p>=0.90: n= 50 precision=0.84 recall=0.34
+PROBLEM (not acc or nei) p>=0.95: n= 37 precision=0.89 recall=0.26
+review p>=0.8: flagged 181/351 | flag rate SUPPORTED=0.27 PARTIAL=0.51 UNSUPPORTED=0.78 | precision(unsup)=0.41
+review p>=0.9: flagged 143/351 | flag rate SUPPORTED=0.20 PARTIAL=0.41 UNSUPPORTED=0.62 | precision(unsup)=0.41
+review p>=0.95: flagged 108/351 | flag rate SUPPORTED=0.15 PARTIAL=0.27 UNSUPPORTED=0.53 | precision(unsup)=0.46
+review p>=0.97: flagged 89/351 | flag rate SUPPORTED=0.09 PARTIAL=0.20 UNSUPPORTED=0.51 | precision(unsup)=0.54
+review p>=0.98: flagged 71/351 | flag rate SUPPORTED=0.08 PARTIAL=0.15 UNSUPPORTED=0.41 | precision(unsup)=0.55
+review p>=0.99: flagged 44/351 | flag rate SUPPORTED=0.03 PARTIAL=0.09 UNSUPPORTED=0.27 | precision(unsup)=0.59
+supported p>=0.5: precision(sup or partial)=0.93 n=107
+supported p>=0.7: precision(sup or partial)=0.95 n=73

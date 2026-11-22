@@ -6,7 +6,7 @@ import numpy as np
 from sklearn.metrics import f1_score, roc_auc_score
 from ci_data import LABELS, load
 
-ap = argparse.ArgumentParser(); ap.add_argument("--split", default="test"); ap.add_argument("--extra", nargs="*", default=[]); a = ap.parse_args()
+ap = argparse.ArgumentParser(); ap.add_argument("--split", default="dev", choices=["dev"]); ap.add_argument("--extra", nargs="*", default=[]); a = ap.parse_args()
 D = load(a.split, "paper"); y = np.array([LABELS.index(x["label"]) for x in D]); fine = [x["fine"] for x in D]
 def sm(L): e = np.exp(L - L.max(1, keepdims=True)); return e / e.sum(1, keepdims=True)
 bias = np.array([0, *json.load(open("../app/public/models/veracite-verifier/veracite.json"))["bias"]])
