@@ -34,3 +34,10 @@ If both arms pass, the one with the higher dev macro-F1 is chosen. The shipping 
 
 The chosen arm (or none) is scored once on CI test under the paper mapping and reported as is, with the history disclosed:
 CI test was scored before for two models under the old mapping. The MultiVerS reproduction is scored on the same test.
+
+## Amendment 1 (2026-11-22, before any v2 result was seen)
+
+- A3: A1 plus 4,000 HealthVer train pairs (uniform random sample, seed 13; Supports → ACCURATE, Refutes → NOT_ACCURATE,
+  Neutral → NEI, as MultiVerS). Rationale: the released MultiVerS-CI starts from a HealthVer model and is better on
+  NOT_ACCURATE; this tests whether that data, not the architecture, is the reason. Same gates; the selection rule
+  (highest dev macro-F1 among arms passing all gates) now covers A1–A3.

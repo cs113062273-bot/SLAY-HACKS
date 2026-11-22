@@ -143,6 +143,19 @@ def build_scifact(seed=0, nei_ratio=0.3):
     return rows
 
 
+def build_healthver(n=4000, seed=0):
+    """HealthVer train (Sarrouti et al. 2021; COVID health claims vs evidence; MultiVerS-CI starts from a HealthVer model).
+    Supports -> ACCURATE, Refutes -> NOT_ACCURATE, Neutral -> NEI (as MultiVerS); stratified sample of n rows."""
+    import csv
+
+    rows = list(csv.DictReader(open(Path(__file__).resolve().parent.parent / "data" / "healthver" / "healthver_train.csv", encoding="utf-8")))
+    m = {"Supports": "ACCURATE", "Refutes": "NOT_ACCURATE", "Neutral": "NEI"}
+    rng = random.Random(seed)
+    rng.shuffle(rows)
+    rows = rows[:n]
+    return [(r["claim"], r["evidence"], LABELS.index(m[r["label"]])) for r in rows]
+
+
 class DS(Dataset):
     def __init__(self, rows):
         self.rows = rows
@@ -203,6 +216,7 @@ def main():
     ap.add_argument("--semcite", action="store_true", help="add SemanticCite (train split) as cross-domain data")
     ap.add_argument("--perturb", type=float, default=0.0, help="fraction of ACCURATE train claims to turn into synthetic misrepresentations")
     ap.add_argument("--mnli", type=int, default=0, help="number of MNLI pairs for NLI replay")
+    ap.add_argument("--healthver", type=int, default=0, help="number of HealthVer train pairs as auxiliary data")
     ap.add_argument("--k_range", default=None, help="random evidence count per training example, e.g. 1-7")
     ap.add_argument("--out", required=True)
     ap.add_argument("--grad_ckpt", action="store_true", help="gradient checkpointing (lower GPU memory)")
@@ -238,6 +252,10 @@ def main():
         sc = train_rows()
         print("semanticcite rows", len(sc), flush=True)
         tr = tr + sc
+    if a.healthver:
+        hv = build_healthver(a.healthver, a.seed)
+        print("healthver rows", len(hv), flush=True)
+        tr = tr + hv
     if a.scifact:
         sf = build_scifact(a.seed)
         print("scifact rows", len(sf), flush=True)

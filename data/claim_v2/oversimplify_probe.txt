@@ -1,0 +1,6 @@
+OVERSIMPLIFY vs ACCURATE   n+=  64  strength_gap 0.508  claim_strength 0.547  spiced_max 0.588  | dev: shipped 0.403 spiced 0.606 gap 0.358 (n+=8)
+NOT_ACC vs ACC             n+= 731  strength_gap 0.526  claim_strength 0.555  spiced_max 0.612  | dev: shipped 0.749 spiced 0.621 gap 0.523 (n+=101)
+not-supported vs ACC       n+= 898  strength_gap 0.533  claim_strength 0.550  spiced_max 0.648  | dev: shipped 0.765 spiced 0.669 gap 0.555 (n+=125)
+CONTRADICT vs ACCURATE     n+=  80  strength_gap 0.517  claim_strength 0.498  spiced_max 0.583  | dev: shipped 0.695 spiced 0.506 gap 0.503 (n+=22)
+NOT_SUBST vs ACCURATE      n+= 214  strength_gap 0.540  claim_strength 0.553  spiced_max 0.649  | dev: shipped 0.775 spiced 0.661 gap 0.561 (n+=25)
+ETIQUETTE vs ACCURATE      n+= 344  strength_gap 0.529  claim_strength 0.589  spiced_max 0.609  | dev: shipped 0.825 spiced 0.700 gap 0.536 (n+=40)
