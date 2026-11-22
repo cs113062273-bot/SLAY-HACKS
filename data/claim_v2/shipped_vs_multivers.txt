@@ -1,0 +1,31 @@
+shipped (raw)                  micro 0.554 macro 0.411 per-class ACC/NOT/NEI [0.752, 0.29, 0.192] binary AUROC 0.765
+                               vs MultiVerS: macro diff -0.152 [-0.230, -0.079]  AUROC diff +0.028 [-0.036, +0.093]
+shipped (bias)                 micro 0.633 macro 0.459 per-class ACC/NOT/NEI [0.809, 0.304, 0.263] binary AUROC 0.764
+                               vs MultiVerS: macro diff -0.105 [-0.186, -0.026]  AUROC diff +0.027 [-0.037, +0.092]
+MultiVerS-CI (our evidence)    micro 0.617 macro 0.565 per-class ACC/NOT/NEI [0.736, 0.341, 0.618] binary AUROC 0.738
+
+per fine label: share predicted ACCURATE / NOT_ACCURATE / NEI
+  ACCURATE             n=185  shipped [141, 17, 27]  shipped [164, 10, 11]  MultiVerS [140, 36, 9]
+  ETIQUETTE            n= 40  shipped [12, 6, 22]  shipped [14, 7, 19]  MultiVerS [21, 10, 9]
+  NOT_SUBSTANTIATE     n= 25  shipped [8, 8, 9]  shipped [11, 8, 6]  MultiVerS [13, 9, 3]
+  IRRELEVANT           n= 24  shipped [8, 6, 10]  shipped [8, 6, 10]  MultiVerS [0, 3, 21]
+  CONTRADICT           n= 22  shipped [11, 5, 6]  shipped [15, 4, 3]  MultiVerS [15, 6, 1]
+  OVERSIMPLIFY         n=  8  shipped [7, 1, 0]  shipped [7, 1, 0]  MultiVerS [6, 2, 0]
+  MISQUOTE             n=  6  shipped [2, 1, 3]  shipped [3, 1, 2]  MultiVerS [3, 2, 1]
+  INDIRECT             n=  6  shipped [3, 0, 3]  shipped [5, 0, 1]  MultiVerS [5, 1, 0]
+shipped (raw)                  micro 0.573 macro 0.417 per-class ACC/NOT/NEI [0.76, 0.161, 0.33] binary AUROC 0.726
+                               vs MultiVerS: macro diff -0.063 [-0.119, -0.006]  AUROC diff +0.055 [+0.005, +0.105]
+shipped (bias)                 micro 0.606 macro 0.432 per-class ACC/NOT/NEI [0.779, 0.164, 0.354] binary AUROC 0.724
+                               vs MultiVerS: macro diff -0.049 [-0.104, +0.010]  AUROC diff +0.053 [+0.004, +0.104]
+MultiVerS-CI (our evidence)    micro 0.574 macro 0.481 per-class ACC/NOT/NEI [0.709, 0.327, 0.408] binary AUROC 0.672
+
+per fine label: share predicted ACCURATE / NOT_ACCURATE / NEI
+  ACCURATE             n=370  shipped [286, 36, 48]  shipped [308, 32, 30]  MultiVerS [257, 76, 37]
+  ETIQUETTE            n= 73  shipped [23, 9, 41]  shipped [32, 9, 32]  MultiVerS [34, 26, 13]
+  IRRELEVANT           n= 50  shipped [7, 10, 33]  shipped [12, 10, 28]  MultiVerS [10, 10, 30]
+  OVERSIMPLIFY         n= 47  shipped [37, 2, 8]  shipped [40, 2, 5]  MultiVerS [27, 14, 6]
+  NOT_SUBSTANTIATE     n= 29  shipped [18, 3, 8]  shipped [20, 3, 6]  MultiVerS [17, 4, 8]
+  CONTRADICT           n= 12  shipped [6, 3, 3]  shipped [6, 3, 3]  MultiVerS [8, 3, 1]
+  MISQUOTE             n=  9  shipped [4, 2, 3]  shipped [6, 2, 1]  MultiVerS [4, 4, 1]
+  INDIRECT_NOT_REVIEW  n=  9  shipped [4, 1, 4]  shipped [6, 1, 2]  MultiVerS [5, 3, 1]
+  INDIRECT             n=  7  shipped [5, 0, 2]  shipped [6, 0, 1]  MultiVerS [5, 2, 0]
