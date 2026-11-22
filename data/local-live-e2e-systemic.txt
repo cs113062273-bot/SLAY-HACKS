@@ -1,0 +1,127 @@
+{
+ "base": "http://127.0.0.1:4180/",
+ "crossOriginIsolated": false,
+ "results": [
+  {
+   "name": "sample-planted",
+   "sec": 2,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 12,
+   "verdicts": {
+    "verified": 5,
+    "id_mismatch": 1,
+    "metadata_error": 2,
+    "fabricated": 3,
+    "retracted": 1
+   }
+  },
+  {
+   "name": "exports",
+   "files": [
+    "Reference_list_with_planted_errors-audit.json 13481B",
+    "Reference_list_with_planted_errors-audit.md 3893B",
+    "Reference_list_with_planted_errors-corrected.bib 3560B"
+   ]
+  },
+  {
+   "name": "sample-neurips",
+   "sec": 18,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 65,
+   "verdicts": {
+    "verified": 35,
+    "fabricated": 14,
+    "metadata_error": 9,
+    "verified_minor": 2,
+    "id_mismatch": 2,
+    "not_found": 2,
+    "unverifiable": 1
+   }
+  },
+  {
+   "name": "sample-attention",
+   "sec": 3,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 40,
+   "verdicts": {
+    "verified": 37,
+    "verified_minor": 3
+   }
+  },
+  {
+   "name": "claim-upgrade",
+   "sec": 236,
+   "claimPhase": "done",
+   "claims": {
+    "mention": 14,
+    "supported": 15,
+    "unclear": 20,
+    "no_source": 6,
+    "review": 1
+   }
+  },
+  {
+   "name": "upload-pdf",
+   "sec": 61,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 50,
+   "verdicts": {
+    "verified": 46,
+    "unverifiable": 1,
+    "verified_minor": 1,
+    "metadata_error": 2
+   }
+  },
+  {
+   "name": "upload-docx",
+   "sec": 74,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 3,
+   "verdicts": {
+    "verified": 2,
+    "unchecked": 1
+   }
+  },
+  {
+   "name": "upload-bib",
+   "sec": 40,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 3,
+   "verdicts": {
+    "verified": 1,
+    "id_mismatch": 1,
+    "fabricated": 1
+   }
+  },
+  {
+   "name": "paste",
+   "sec": 7,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 2,
+   "verdicts": {
+    "verified": 1,
+    "not_found": 1
+   }
+  },
+  {
+   "name": "arxiv-id",
+   "sec": 95,
+   "phase": "done",
+   "mode": "quick",
+   "refs": 40,
+   "verdicts": {
+    "verified": 37,
+    "verified_minor": 3
+   }
+  }
+ ],
+ "http4xx": [],
+ "pageErrors": []
+}

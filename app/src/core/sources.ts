@@ -21,10 +21,14 @@ function stripTags(s?: string): string | undefined {
   return s?.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
+const TEX_SYMBOL: Record<string, string> = { rightarrow: '→', to: '→', leftarrow: '←', pm: '±', mp: '∓', times: '×', alpha: 'α', beta: 'β', gamma: 'γ', delta: 'δ', Delta: 'Δ', epsilon: 'ε', eta: 'η', theta: 'θ', kappa: 'κ', lambda: 'λ', Lambda: 'Λ', mu: 'μ', nu: 'ν', xi: 'ξ', Xi: 'Ξ', pi: 'π', rho: 'ρ', sigma: 'σ', Sigma: 'Σ', tau: 'τ', phi: 'φ', Phi: 'Φ', chi: 'χ', psi: 'ψ', omega: 'ω', Omega: 'Ω', ell: 'ℓ', infty: '∞', prime: '′' };
+
 /** Record titles: LaTeX math ("$\sqrt{s_{\text{NN}}}$" → "sNN") and article numbering of old journals ("XL. Cathode Rays"). */
 function cleanTitle(t: string): string {
   return t
-    .replace(/\$([^$]{1,80})\$/g, (_, x: string) => x.replace(/\\(?:text|mathrm|rm|mathit|it|bf|mathbf|sqrt|left|right)\b/g, '').replace(/[{}_^\\]/g, ''))
+    // formatting commands vanish; symbols become their characters ("\rightarrow" → "→", "\pi" → "π"); other commands
+    // become a space instead of gluing their names into the words around them ("B^{0}\rightarrow D" → "B0 → D")
+    .replace(/\$([^$]{1,120})\$/g, (_, x: string) => x.replace(/\\(?:text|mathrm|rm|mathit|it|bf|mathbf|sqrt|left|right|rm)\b/g, '').replace(/\\([a-zA-Z]+)\s*/g, (_m, c: string) => ` ${TEX_SYMBOL[c] ?? ''} `).replace(/[{}_^\\]/g, '').replace(/\s+/g, ' ').trim())
     .replace(/^(?:[IVXLCDM]{1,7}|\d{1,3})\.\s+(?=\p{Lu})/u, '')
     .trim();
 }
@@ -41,7 +45,9 @@ function yearsFromParts(...parts: any[]): number[] {
 /* ------------------------------ Crossref ------------------------------ */
 
 export function fromCrossref(it: any): WorkRecord {
-  const years = yearsFromParts(it.issued, it['published-print'], it['published-online'], it.published, it.created);
+  // `created` is when the DOI was deposited (years later for digitized back issues): only a fallback date
+  const pubYears = yearsFromParts(it.issued, it['published-print'], it['published-online'], it.published);
+  const years = pubYears.length ? pubYears : yearsFromParts(it.created);
   const title = stripTags(it.title?.[0]) ?? '';
   const sub = stripTags(it.subtitle?.[0]);
   return {
@@ -62,6 +68,9 @@ export function fromCrossref(it: any): WorkRecord {
     pages: it.page,
     abstract: stripTags(it.abstract?.replace(/<jats:title>[^<]*<\/jats:title>/g, '')),
     updates: (it['update-to'] ?? []).map((u: any) => ({ type: u.type, doi: u.DOI, label: u.label })),
+    // Crossref embeds the notices that update a work (including Retraction Watch data): no extra query needed
+    updatedBy: (it['updated-by'] ?? []).map((u: any) => ({ type: String(u.type ?? ''), doi: u.DOI })),
+    isRetracted: (it['updated-by'] ?? []).some((u: any) => /retract|withdraw|removal/i.test(String(u.type ?? ''))) || undefined,
   };
 }
 
@@ -122,6 +131,55 @@ export async function doiRegistered(http: Http, doi: string): Promise<boolean> {
 
 export async function arxivRecord(http: Http, id: string): Promise<WorkRecord | null> {
   return dataciteDoi(http, `10.48550/arxiv.${id.replace(/v\d+$/, '')}`);
+}
+
+/* ------------------------------ INSPIRE-HEP ------------------------------ */
+// High-energy physics, nuclear physics, gravitation and astrophysics: holds the journal version of arXiv preprints
+// (JHEP, Phys. Rev. D…) and collaboration papers with hundreds of authors. Free, CORS-enabled, 15 requests / 5 s.
+
+const INSPIRE_FIELDS = 'titles,publication_info,authors.full_name,author_count,collaborations,dois,arxiv_eprints,earliest_date,document_type,control_number';
+
+function fromInspire(h: any): WorkRecord {
+  const m = h.metadata ?? {};
+  // (errata and addenda carry later years and other pages: not the work's own publication)
+  const pubs = (m.publication_info ?? []).filter((x: any) => x.journal_title && !/erratum|addendum|corrigendum/i.test(String(x.material ?? '')));
+  const pub = pubs[0] ?? {};
+  const early = Number(String(m.earliest_date ?? '').slice(0, 4));
+  const years = [...new Set([...pubs.map((x: any) => x.year), early].filter((y: unknown): y is number => typeof y === 'number' && y > 1800))].sort();
+  const authors: Person[] = (m.authors ?? []).map((a: any) => splitFullName(a.full_name ?? '')).filter((a: Person) => a.family);
+  const collabs: Person[] = (m.collaborations ?? []).map((c: any) => ({ family: `${c.value} Collaboration` }));
+  const arxiv = m.arxiv_eprints?.[0]?.value as string | undefined;
+  return {
+    source: 'inspire',
+    sourceId: String(m.control_number ?? h.id),
+    url: `https://inspirehep.net/literature/${m.control_number ?? h.id}`,
+    title: cleanTitle(m.titles?.[0]?.title ?? ''),
+    authors: [...authors, ...collabs],
+    authorsTruncated: typeof m.author_count === 'number' && m.author_count > authors.length,
+    year: pub.year ?? years[0],
+    years,
+    venue: pub.journal_title ? pub.journal_title.replace(/\.(?=\S)/g, '. ') : arxiv ? 'arXiv' : undefined,
+    venueAliases: pubs.map((x: any) => x.journal_title as string),
+    venueType: pub.journal_title ? 'journal' : 'repository',
+    type: m.document_type?.[0],
+    doi: m.dois?.[0]?.value?.toLowerCase(),
+    arxivId: arxiv,
+    volume: pub.journal_volume,
+    pages: pub.page_start ?? pub.artid,
+  };
+}
+
+export async function inspireByArxiv(http: Http, id: string): Promise<WorkRecord[]> {
+  const j = await http.get(`https://inspirehep.net/api/literature?q=${enc(`arxiv:${id.replace(/v\d+$/, '')}`)}&size=2&fields=${INSPIRE_FIELDS}`);
+  return (j?.hits?.hits ?? []).map(fromInspire);
+}
+
+export async function inspireSearch(http: Http, title: string, n = 3): Promise<WorkRecord[]> {
+  // INSPIRE's title index: all words of the title (punctuation and math symbols dropped)
+  const words = title.normalize('NFKD').replace(/[^\p{L}\p{N}\s-]+/gu, ' ').split(/\s+/).filter((w) => w.length > 1).slice(0, 14).join(' ');
+  if (!words) return [];
+  const j = await http.get(`https://inspirehep.net/api/literature?q=${enc(`t ${words}`)}&size=${n}&fields=${INSPIRE_FIELDS}`);
+  return (j?.hits?.hits ?? []).map(fromInspire);
 }
 
 /* ------------------------------ OpenAlex ------------------------------ */

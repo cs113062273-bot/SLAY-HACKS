@@ -202,7 +202,7 @@ export function Landing() {
           <div>
             <div className="eyebrow">Resolve</div>
             <h3>Five scholarly indexes</h3>
-            <p>Crossref, OpenAlex, Semantic Scholar, DataCite and Europe PMC, plus GitHub and Hugging Face for software and models.</p>
+            <p>Crossref, OpenAlex, Semantic Scholar, DataCite, Europe PMC and INSPIRE-HEP, plus GitHub and Hugging Face for software and models.</p>
           </div>
           <div>
             <div className="eyebrow">Cross-verify</div>

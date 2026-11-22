@@ -55,6 +55,7 @@ const DEFAULT_PER_HOST: Record<string, number> = {
   'huggingface.co': 2,
   'eutils.ncbi.nlm.nih.gov': 2,
   'arxiv.org': 2,
+  'inspirehep.net': 2,
 };
 
 export class Http {

@@ -382,6 +382,7 @@ function RefDetail({ i, onToast, openClaim }: { i: number; onToast: (m: string) 
         <span className="ref-no">[{shortLabel(p.label, i)}]</span>
         <span className={`chip v-${r.verdict}`}>{v.label}</span>
         <span className="eyebrow" style={{ marginLeft: 4 }}>{kindLabel(p.kind)}</span>
+        {doc.refPages?.[i] ? <span className="eyebrow" title="Where this entry starts in the PDF">PDF p. {doc.refPages[i]}</span> : null}
         <span className="conf num">confidence the reference is accurate: {Math.round(r.confidence * 100)}%</span>
       </div>
       <p className="citetext">{p.raw}</p>

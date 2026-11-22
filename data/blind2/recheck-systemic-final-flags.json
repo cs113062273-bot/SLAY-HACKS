@@ -1,0 +1,2355 @@
+[
+ {
+  "paper": "cs.CR_2611.25479v1.pdf",
+  "n": 1,
+  "judgement": "false: two-column text interleaved: two references merged or cut",
+  "verdict": "not_found",
+  "raw": "[1] The Common Criteria Recognition Agreement Members, “Common Criteria for Information Technology Security Evaluation,” Sep. 2006.",
+  "parsed": {
+   "title": "Common Criteria for Information Technology Security Evaluation",
+   "authors": [
+    "Members"
+   ],
+   "year": 2006,
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [],
+  "issues": [
+   "OpenAlex did not respond; re-run later to confirm",
+   "No matching work in Crossref, Semantic Scholar, Europe PMC",
+   "Nearest record: “The Common Criteria for IT Security Evaluation” (61% title similarity)"
+  ],
+  "match": {
+   "title": "The Common Criteria for IT Security Evaluation",
+   "authors": [],
+   "years": [
+    2007
+   ],
+   "venue": "Information Security Management Handbook",
+   "aliases": [
+    "Information Security Management Handbook"
+   ],
+   "type": "book-chapter",
+   "source": "crossref",
+   "doi": "10.1201/9781439833032-120"
+  },
+  "candidates": [
+   "crossref: The Common Criteria for IT Security Evaluation /  / 2007 / Information Security Management Handbook",
+   "crossref: What Are the Common Criteria? /  / 2002/2009 / Using the Common Criteria for IT Security Evaluation",
+   "crossref: Annex C: Common Criteria Recognition Agreement (CCRA) Participants /  / 2002/2009 / Using the Common Criteria for IT Security Evaluation",
+   "crossref: The Common Criteria for IT Security Evaluation /  / 2003 / Information Security Management Handbook",
+   "crossref: A common criteria framework for the evaluation of information technology systems security /  / 1997 / Computers &amp; Security"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 2
+ },
+ {
+  "paper": "cs.CR_2611.25479v1.pdf",
+  "n": 10,
+  "judgement": "false: two-column text interleaved: two references merged or cut; labelled fabricated",
+  "verdict": "not_found",
+  "raw": "[10] G. Goodwill et al., “A testing methodology for sidechannel resistance validation,” 2011.",
+  "parsed": {
+   "title": "A testing methodology for sidechannel resistance validation",
+   "authors": [
+    "Goodwill"
+   ],
+   "year": 2011,
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [],
+  "issues": [
+   "OpenAlex did not respond; re-run later to confirm",
+   "No matching work in Crossref, Semantic Scholar, Europe PMC"
+  ],
+  "candidates": [
+   "crossref: Methodology Validation and Examples /  / 2010 / Verification, Validation, and Testing of Engineered Systems",
+   "crossref: Crack-Resistance Behavior in Ceramics /  / 1998 / Mechanical Testing Methodology for Ceramic Design and Reliability",
+   "crossref: A testing methodology for the validation of web applications / Morales / 2026 / ",
+   "crossref: A proposed testing methodology for STEP application protocol validation / Mitchell / 1991 / ",
+   "crossref: ITALIAN VALIDATION OF THE BRIEF RESILIENCE SCALE /  / 2025 / Testing, Psychometrics, Methodology in Applied Psychology"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 2
+ },
+ {
+  "paper": "cs.RO_2611.25462v1.pdf",
+  "n": 19,
+  "judgement": "uncertain: cited January 2025; arXiv 2009.12293 has versions from 2020 and 2022 only (the 2025 date may refer to the v1.5 release)",
+  "verdict": "metadata_error",
+  "raw": "[Zhu et al., 2025] Yuke Zhu, Josiah Wong, Ajay Mandlekar, Roberto Martín-Martín, Abhishek Joshi, Kevin Lin, Abhiram Maddukuri, Soroush Nasiriany, and Yifeng Zhu. Robosuite: A Modular Simulation Framework and Benchmark for Robot Learning, January 2025.",
+  "parsed": {
+   "title": "Robosuite: A Modular Simulation Framework and Benchmark for Robot Learning",
+   "authors": [
+    "Zhu",
+    "Wong",
+    "Mandlekar",
+    "Martín-Martín",
+    "Joshi",
+    "Lin",
+    "Maddukuri",
+    "Nasiriany",
+    "Zhu"
+   ],
+   "year": 2025,
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Robosuite: A Modular Simulation Framework and Benchmark for Robot Learning",
+    "found": "robosuite: A Modular Simulation Framework and Benchmark for Robot Learning",
+    "score": 1
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Zhu, Wong, Mandlekar, Martín-Martín, Joshi, Lin, Maddukuri, Nasiriany, Zhu",
+    "found": "Zhu, Wong, Mandlekar, Martín-Martín, Joshi, Lin, Maddukuri, Nasiriany"
+   },
+   {
+    "field": "year",
+    "status": "mismatch",
+    "cited": "2025",
+    "found": "2020/2020"
+   }
+  ],
+  "issues": [
+   "Year 2025 does not match the published record (2020/2020)"
+  ],
+  "match": {
+   "title": "robosuite: A Modular Simulation Framework and Benchmark for Robot Learning",
+   "authors": [
+    [
+     "Zhu",
+     "Yu-Ke"
+    ],
+    [
+     "Wong",
+     "Josiah"
+    ],
+    [
+     "Mandlekar",
+     "Ajay"
+    ],
+    [
+     "Martín-Martín",
+     "R."
+    ],
+    [
+     "Joshi",
+     "Abhishek"
+    ],
+    [
+     "Lin",
+     "Kevin"
+    ],
+    [
+     "Maddukuri",
+     "Abhiram"
+    ],
+    [
+     "Nasiriany",
+     "Soroush"
+    ],
+    [
+     "Zhu",
+     "Yi-Feng"
+    ]
+   ],
+   "years": [
+    2020,
+    2020
+   ],
+   "venue": "arXiv.org",
+   "aliases": [
+    "arXiv.org",
+    "arXiv.org",
+    "ArXiv",
+    "ArXiv"
+   ],
+   "type": "JournalArticle",
+   "source": "semanticscholar",
+   "doi": "10.48550/arxiv.2009.12293"
+  },
+  "candidates": [
+   "semanticscholar: robosuite: A Modular Simulation Framework and Benchmark for Robot Learning / Zhu, Wong, Mandlekar / 2020/2020 / arXiv.org",
+   "crossref: RoboCasa: Large-Scale Simulation of Household Tasks for Generalist Robots / Nasiriany, Maddukuri, Zhang / 2024 / Robotics: Science and Systems XX",
+   "crossref: Sim-and-Real Co-Training: A Simple Recipe for Vision-Based Robotic Manipulation / Maddukuri, Jiang, Chen / 2025 / Robotics: Science and Systems XXI",
+   "crossref: OopsieVerse: A Safety Benchmark with Damage-Aware Simulation for Robot Manipulation / Balaji, Bahety, Ambatipudi / 2026 / Robotics: Science and Systems XXII",
+   "crossref: Memory Retrieval in Visuomotor Policies for Long-Horizon Robot Control / Shah, Li, Bello / 2026 / Robotics: Science and Systems XXII"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 1
+ },
+ {
+  "paper": "cs.DB_2611.25416v1.pdf",
+  "n": 6,
+  "judgement": "false: not found while Semantic Scholar was rate-limited; the work exists",
+  "verdict": "not_found",
+  "raw": "[6] M. Huh, B. Cheung, T. Wang, and P. Isola, “Position: The Platonic representation hypothesis,” in Proceedings of the 41st International Conference on Machine Learning, ser. Proceedings of Machine Learning Research, vol. 235, 2024, pp. 20 617-20 642. [Online]. Available: https://proceedings.mlr.press/v235/huh24a.html",
+  "parsed": {
+   "title": "Position: The Platonic representation hypothesis",
+   "authors": [
+    "Huh",
+    "Cheung",
+    "Wang",
+    "Isola"
+   ],
+   "year": 2024,
+   "venue": "in Proceedings of the 41st International Conference on Machine Learning, ser. Proceedings of Machine Learning Research",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [],
+  "issues": [
+   "OpenAlex did not respond; re-run later to confirm",
+   "No matching work in Crossref, Semantic Scholar, Europe PMC"
+  ],
+  "candidates": [
+   "crossref: Vita Mimetica:: Platonic Dialogues /  / 2023 / Violence and the Mimetic Unconscious, Volume 2",
+   "crossref: Additional Reviewers /  / 2024 / 2024 IEEE International Conference on Machine Learning for Communication and Networking (ICMLCN)",
+   "crossref: The Inevitability of Convergence: A Ramsey-Theoretic Foundation for the Platonic Representation Hypothesis / Larraz / 2026 / ",
+   "crossref: Quantitative Prediction of Position and Orientation for Platonic Nanoparticles at Liquid/Liquid Interfaces /  / 2020 / ",
+   "crossref: Research on Multi-Factor Investment Strategies Utilizing Machine Learning / Wang / 2024/2025 / Proceedings of the 2024 International Conference on Mathematics and Machine Learning"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 2
+ },
+ {
+  "paper": "cs.DB_2611.25416v1.pdf",
+  "n": 22,
+  "judgement": "false: not found while Semantic Scholar was rate-limited; the work exists",
+  "verdict": "metadata_error",
+  "raw": "[22] Z. Zhang, Z. Liao, H. Yu, P. Di, and R. Wang, “ML-Embed: Inclusive and efficient embeddings for a multilingual world,” in Proceedings of the 43rd International Conference on Machine Learning, ser. Proceedings of Machine Learning Research, vol. 306, 2026, pp. 157 026-157 063. [Online]. Available: https://proceedings.mlr.press/v306/zhang26dh.html",
+  "parsed": {
+   "title": "ML-Embed: Inclusive and efficient embeddings for a multilingual world",
+   "authors": [
+    "Zhang",
+    "Liao",
+    "Yu",
+    "Di",
+    "Wang"
+   ],
+   "year": 2026,
+   "venue": "in Proceedings of the 43rd International Conference on Machine Learning, ser. Proceedings of Machine Learning Research",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "ML-Embed: Inclusive and efficient embeddings for a multilingual world",
+    "found": "ML-Embed: Inclusive and Efficient Embeddings for a Multilingual World",
+    "score": 1
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Zhang, Liao, Yu, Di, Wang",
+    "found": "Zhang, Liao, Yu, Di, Wang"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2026",
+    "found": "2026/2026"
+   },
+   {
+    "field": "venue",
+    "status": "na",
+    "cited": "in Proceedings of the 43rd International Conference on Machine Learning, ser. Proceedings of Machine Learning Research",
+    "found": "arXiv.org"
+   },
+   {
+    "field": "venue",
+    "status": "mismatch",
+    "cited": "in Proceedings of the 43rd International Conference on Machine Learning, ser. Proceedings of Machine Learning Research",
+    "found": "arXiv.org",
+    "note": "publication status unconfirmed"
+   }
+  ],
+  "issues": [
+   "Only a preprint was found; publication in “in Proceedings of the 43rd International Conference on Machine Learning, ser. Proceedings of Machine Learning Research” could not be confirmed"
+  ],
+  "match": {
+   "title": "ML-Embed: Inclusive and Efficient Embeddings for a Multilingual World",
+   "authors": [
+    [
+     "Zhang",
+     "Ziyin"
+    ],
+    [
+     "Liao",
+     "Zi-Han"
+    ],
+    [
+     "Yu",
+     "Hang"
+    ],
+    [
+     "Di",
+     "Peng"
+    ],
+    [
+     "Wang",
+     "Rui"
+    ]
+   ],
+   "years": [
+    2026,
+    2026
+   ],
+   "venue": "arXiv.org",
+   "aliases": [
+    "arXiv.org",
+    "arXiv.org",
+    "ArXiv",
+    "ArXiv"
+   ],
+   "type": "JournalArticle",
+   "source": "semanticscholar",
+   "doi": "10.48550/arxiv.2605.15081"
+  },
+  "candidates": [
+   "semanticscholar: ML-Embed: Inclusive and Efficient Embeddings for a Multilingual World / Zhang, Liao, Yu / 2026/2026 / arXiv.org",
+   "crossref: Security and efficient data dissemination over wireless sensor network with raptor codes / Jian-Xin Liao, Lei Zhang, Jing-Yu Wang / 2013 / 2013 International Conference on Machine Learning and Cybernetics",
+   "crossref: Research on Technology Standardization for E-Learning / Zhang, Yu, Shen / 2007 / 2007 International Conference on Machine Learning and Cybernetics",
+   "crossref: Feature selection based on extreme learning machine / Meng-Yao Zhai, Rui-Hua Yu, Su-Fang Zhang / 2012 / 2012 International Conference on Machine Learning and Cybernetics",
+   "crossref: Regularized Regression – Taming Complexity in Machine Learning / Jiang / 2026 / Machine Learning Made Visual with Python"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 1
+ },
+ {
+  "paper": "cond-mat.stat-mech_2611.25491v1.pdf",
+  "n": 1,
+  "judgement": "new",
+  "verdict": "metadata_error",
+  "raw": "[1] L. Cardelli, M. Kwiatkowska, and L. Laurenti, Biosystems Selected papers from the Computational Methods in Systems Biology 2015 conference, 149, 26 (2016).",
+  "parsed": {
+   "title": "Biosystems Selected papers from the Computational Methods in Systems Biology 2015 conference",
+   "authors": [
+    "Cardelli",
+    "Kwiatkowska",
+    "Laurenti"
+   ],
+   "year": 2016,
+   "venue": "149",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Biosystems Selected papers from the Computational Methods in Systems Biology 2015 conference",
+    "found": "Computational Methods in Systems Biology",
+    "score": 1
+   },
+   {
+    "field": "authors",
+    "status": "mismatch",
+    "cited": "Cardelli, Kwiatkowska, Laurenti",
+    "found": "Bourdon, Roux",
+    "note": "3 cited author(s) not on the paper"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2016",
+    "found": "2016"
+   },
+   {
+    "field": "venue",
+    "status": "na",
+    "cited": "149",
+    "found": "Biosystems"
+   },
+   {
+    "field": "pages",
+    "status": "minor",
+    "cited": "26",
+    "found": "149 / 1-2",
+    "note": "Bibliographic details differ: volume 26 vs 149"
+   }
+  ],
+  "issues": [
+   "Author list does not match the published work: Cardelli, Kwiatkowska, Laurenti not among its authors"
+  ],
+  "match": {
+   "title": "Computational Methods in Systems Biology",
+   "authors": [
+    [
+     "Bourdon",
+     "Jérémie"
+    ],
+    [
+     "Roux",
+     "Olivier"
+    ]
+   ],
+   "years": [
+    2016
+   ],
+   "venue": "Biosystems",
+   "aliases": [
+    "Biosystems",
+    "Biosystems"
+   ],
+   "type": "journal-article",
+   "source": "crossref",
+   "doi": "10.1016/j.biosystems.2016.10.006"
+  },
+  "candidates": [
+   "crossref: Computational Methods in Systems Biology / Bourdon, Roux / 2016 / Biosystems",
+   "crossref: Stochastic analysis of Chemical Reaction Networks using Linear Noise Approximation / Cardelli, Kwiatkowska, Laurenti / 2016 / Biosystems",
+   "crossref: A Stochastic Hybrid Approximation for Chemical Kinetics Based on the Linear Noise Approximation / Cardelli, Kwiatkowska, Laurenti / 2016 / Lecture Notes in Computer Science",
+   "crossref: Stochastic Analysis of Chemical Reaction Networks Using Linear Noise Approximation / Cardelli, Kwiatkowska, Laurenti / 2015 / Lecture Notes in Computer Science",
+   "crossref: Experimental Biological Protocols with Formal Semantics / Abate, Cardelli, Kwiatkowska / 2018 / Lecture Notes in Computer Science"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 1
+ },
+ {
+  "paper": "hep-ph_2611.25910v1.pdf",
+  "n": 1,
+  "judgement": "new",
+  "verdict": "metadata_error",
+  "raw": "[1] V. N. Gribov and L. N. Lipatov, “Deep inelastic ep scattering in perturbation theory”, Sov. J. Nucl. Phys. 15 (1972) 438.",
+  "parsed": {
+   "title": "Deep inelastic ep scattering in perturbation theory",
+   "authors": [
+    "Gribov",
+    "Lipatov"
+   ],
+   "year": 1972,
+   "venue": "Sov. J. Nucl. Phys",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "mismatch",
+    "cited": "Deep inelastic ep scattering in perturbation theory",
+    "found": "Deep inelastic electron scattering in perturbation theory",
+    "score": 0.8771929824561404,
+    "note": "words differ: cited “ep”, published “electron”"
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Gribov, Lipatov",
+    "found": "Gribov, Lipatov"
+   },
+   {
+    "field": "year",
+    "status": "minor",
+    "cited": "1972",
+    "found": "1971"
+   },
+   {
+    "field": "venue",
+    "status": "minor",
+    "cited": "Sov. J. Nucl. Phys",
+    "found": "Physics Letters B",
+    "note": "Russian-language journal; the index holds the translated or parallel English publication"
+   },
+   {
+    "field": "pages",
+    "status": "minor",
+    "cited": "15",
+    "found": "37 / 78-80",
+    "note": "Bibliographic details differ: volume 15 vs 37"
+   }
+  ],
+  "issues": [
+   "Title differs from the published title (cited “ep”, published “electron”)"
+  ],
+  "match": {
+   "title": "Deep inelastic electron scattering in perturbation theory",
+   "authors": [
+    [
+     "Gribov",
+     "V.N."
+    ],
+    [
+     "Lipatov",
+     "L.N."
+    ]
+   ],
+   "years": [
+    1971
+   ],
+   "venue": "Physics Letters B",
+   "aliases": [
+    "Physics Letters B",
+    "Physics Letters B"
+   ],
+   "type": "journal-article",
+   "source": "crossref",
+   "doi": "10.1016/0370-2693(71)90576-4"
+  },
+  "candidates": [
+   "crossref: Deep inelastic electron scattering in perturbation theory / Gribov, Lipatov / 1971 / Physics Letters B",
+   "semanticscholar: esup +esup --PAIR ANNIHILATION AND DEEP INELASTIC ep-SCATTERING IN PERTURBATION THEORY. / Gribov, Lipatov / 1972 / ",
+   "crossref: Theory of deep inelastic neutron scattering: Hard-core perturbation theory / Silver / 1988 / Physical Review B",
+   "crossref: Measurement of Dijet Production in Diffractive Deep-Inelastic ep Scattering at HERA / Schmitt / 2016 / Proceedings of XXIII International Workshop on Deep-Inelastic Scattering — PoS(DIS2015)",
+   "crossref: GRIBOV PROGRAM OF UNDERSTANDING CONFINEMENT / DOKSHITZER / 2002/2012 / Deep Inelastic Scattering"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 1
+ },
+ {
+  "paper": "hep-ph_2611.25910v1.pdf",
+  "n": 14,
+  "judgement": "real: arXiv:0912.3685 is a quantum-dot paper; this article is arXiv:0909.5529",
+  "verdict": "id_mismatch",
+  "raw": "[14] G. Watt, A. D. Martin, and M. G. Ryskin, “Unintegrated parton distributions and inclusive jet production at HERA”, Eur. Phys. J. C 31 (2003) 73, arXiv:hep-ph/0306007.",
+  "parsed": {
+   "title": "Unintegrated parton distributions and inclusive jet production at HERA",
+   "authors": [
+    "Watt",
+    "Martin",
+    "Ryskin"
+   ],
+   "year": 2003,
+   "venue": "Eur. Phys. J. C",
+   "kind": "article",
+   "dois": [],
+   "arxiv": [
+    "hep-ph/0306007"
+   ]
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Unintegrated parton distributions and inclusive jet production at HERA",
+    "found": "Unintegrated parton distributions and inclusive jet productionat HERA",
+    "score": 0.9857142857142858
+   },
+   {
+    "field": "identifier",
+    "status": "mismatch",
+    "cited": "arXiv:hep-ph/0306007",
+    "found": "How to reconcile the Rosenbluth and the polarization transfer method in the measurement of the proton form factors",
+    "note": "identifier resolves to a different work"
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Watt, Martin, Ryskin",
+    "found": "Watt, Martin, Ryskin"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2003",
+    "found": "2003"
+   },
+   {
+    "field": "venue",
+    "status": "match",
+    "cited": "Eur. Phys. J. C",
+    "found": "The European Physical Journal C"
+   }
+  ],
+  "issues": [
+   "arXiv:hep-ph/0306007 points to a different work: “How to reconcile the Rosenbluth and the polarization transfer method in the measurement of the proton form factors”"
+  ],
+  "match": {
+   "title": "Unintegrated parton distributions and inclusive jet productionat HERA",
+   "authors": [
+    [
+     "Watt",
+     "G."
+    ],
+    [
+     "Martin",
+     "A. D."
+    ],
+    [
+     "Ryskin",
+     "M. G."
+    ]
+   ],
+   "years": [
+    2003
+   ],
+   "venue": "The European Physical Journal C",
+   "aliases": [
+    "The European Physical Journal C",
+    "Eur. Phys. J. C"
+   ],
+   "type": "journal-article",
+   "source": "crossref",
+   "doi": "10.1140/epjc/s2003-01320-4"
+  },
+  "candidates": [
+   "crossref: Unintegrated parton distributions and inclusive jet productionat HERA / Watt, Martin, Ryskin / 2003 / The European Physical Journal C",
+   "crossref: Unintegrated parton distributions and electroweak boson production at hadron colliders / Watt, Martin, Ryskin / 2004 / Physical Review D",
+   "crossref: Erratum: Unintegrated parton distributions and electroweak boson production at hadron colliders [Phys. Rev. D 70 , 014012 (2004) ] / Watt, Martin, Ryskin / 2004 / Physical Review D",
+   "crossref: NLO prescription for unintegrated parton distributions / Martin, Ryskin, Watt / 2010 / The European Physical Journal C",
+   "crossref: Unintegrated parton distributions and prompt photon hadroproduction / Kimber, Martin, Ryskin / 2000 / The European Physical Journal C"
+  ],
+  "failed": [],
+  "unrecorded": 0
+ },
+ {
+  "paper": "hep-ph_2611.25910v1.pdf",
+  "n": 15,
+  "judgement": "real: arXiv:0912.3685 is a quantum-dot paper; this article is arXiv:0909.5529",
+  "verdict": "id_mismatch",
+  "raw": "[15] A. D. Martin, M. G. Ryskin, and G. Watt, “NLO prescription for unintegrated parton distributions”, Eur. Phys. J. C 66 (2010) 163, arXiv:0912.3685.",
+  "parsed": {
+   "title": "NLO prescription for unintegrated parton distributions",
+   "authors": [
+    "Martin",
+    "Ryskin",
+    "Watt"
+   ],
+   "year": 2010,
+   "venue": "Eur. Phys. J. C",
+   "kind": "article",
+   "dois": [],
+   "arxiv": [
+    "0912.3685"
+   ]
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "NLO prescription for unintegrated parton distributions",
+    "found": "NLO prescription for unintegrated parton distributions",
+    "score": 1
+   },
+   {
+    "field": "identifier",
+    "status": "mismatch",
+    "cited": "arXiv:0912.3685",
+    "found": "Mutual Coupling of two Semiconductor Quantum Dots via an Optical Nanocavity Mode",
+    "note": "identifier resolves to a different work"
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Martin, Ryskin, Watt",
+    "found": "Martin, Ryskin, Watt"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2010",
+    "found": "2010"
+   },
+   {
+    "field": "venue",
+    "status": "match",
+    "cited": "Eur. Phys. J. C",
+    "found": "The European Physical Journal C"
+   }
+  ],
+  "issues": [
+   "arXiv:0912.3685 points to a different work: “Mutual Coupling of two Semiconductor Quantum Dots via an Optical Nanocavity Mode”"
+  ],
+  "match": {
+   "title": "NLO prescription for unintegrated parton distributions",
+   "authors": [
+    [
+     "Martin",
+     "A. D."
+    ],
+    [
+     "Ryskin",
+     "M. G."
+    ],
+    [
+     "Watt",
+     "G."
+    ]
+   ],
+   "years": [
+    2010
+   ],
+   "venue": "The European Physical Journal C",
+   "aliases": [
+    "The European Physical Journal C",
+    "Eur. Phys. J. C"
+   ],
+   "type": "journal-article",
+   "source": "crossref",
+   "doi": "10.1140/epjc/s10052-010-1242-5"
+  },
+  "candidates": [
+   "crossref: NLO prescription for unintegrated parton distributions / Martin, Ryskin, Watt / 2010 / The European Physical Journal C",
+   "crossref: Unintegrated parton distributions and inclusive jet productionat HERA / Watt, Martin, Ryskin / 2003 / The European Physical Journal C",
+   "crossref: Unintegrated generalized parton distributions / Martin, Ryskin / 2001 / Physical Review D",
+   "crossref: Unintegrated parton distributions and electroweak boson production at hadron colliders / Watt, Martin, Ryskin / 2004 / Physical Review D",
+   "crossref: Unintegrated parton distributions and prompt photon hadroproduction / Kimber, Martin, Ryskin / 2000 / The European Physical Journal C"
+  ],
+  "failed": [],
+  "unrecorded": 0
+ },
+ {
+  "paper": "hep-ph_2611.25910v1.pdf",
+  "n": 18,
+  "judgement": "real: title says \"approach\", the published title says \"approximation\"",
+  "verdict": "metadata_error",
+  "raw": "[18] A. V. Lipatov, S. P. Baranov, and M. A. Malyshev, “Semi-hard QCD processes beyond the collinear approach”, Phys. Part. Nucl. 55 (2024) 256.",
+  "parsed": {
+   "title": "Semi-hard QCD processes beyond the collinear approach",
+   "authors": [
+    "Lipatov",
+    "Baranov",
+    "Malyshev"
+   ],
+   "year": 2024,
+   "venue": "Phys. Part. Nucl",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "mismatch",
+    "cited": "Semi-hard QCD processes beyond the collinear approach",
+    "found": "Semihard QCD Processes beyond the Collinear Approximation",
+    "score": 0.8596491228070176,
+    "note": "words differ: cited “approach”, published “approximation”"
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Lipatov, Baranov, Malyshev",
+    "found": "Lipatov, Baranov, Malyshev"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2024",
+    "found": "2024"
+   },
+   {
+    "field": "venue",
+    "status": "match",
+    "cited": "Phys. Part. Nucl",
+    "found": "Physics of Particles and Nuclei"
+   }
+  ],
+  "issues": [
+   "Title differs from the published title (cited “approach”, published “approximation”)"
+  ],
+  "match": {
+   "title": "Semihard QCD Processes beyond the Collinear Approximation",
+   "authors": [
+    [
+     "Lipatov",
+     "A. V."
+    ],
+    [
+     "Baranov",
+     "S. P."
+    ],
+    [
+     "Malyshev",
+     "M. A."
+    ]
+   ],
+   "years": [
+    2024
+   ],
+   "venue": "Physics of Particles and Nuclei",
+   "aliases": [
+    "Physics of Particles and Nuclei",
+    "Phys. Part. Nuclei"
+   ],
+   "type": "journal-article",
+   "source": "crossref",
+   "doi": "10.1134/s1063779624020047"
+  },
+  "candidates": [
+   "crossref: Semihard QCD Processes beyond the Collinear Approximation / Lipatov, Baranov, Malyshev / 2024 / Physics of Particles and Nuclei",
+   "crossref: New Results in kT-Factorization for ep-Processes / Malyshev, Lipatov, Lykasov / 2024 / Physics of Particles and Nuclei",
+   "crossref: Associated production of Z bosons and b-jets at the LHC in the combined $kT$ k T + collinear QCD factorization approach / Baranov, Jung, Lipatov / 2017 / The European Physical Journal C",
+   "crossref: HEAVY QUARK PRODUCTION IN THE SEMIHARD QCD APPROACH AT HERA AND BEYOND / BARANOV, LIPATOV, ZOTOV / 2002/2012 / Deep Inelastic Scattering",
+   "crossref: Inclusive Higgs Boson Production at the LHC within the QCD kt-Factorization Approach / Abdulov, Lipatov, Malyshev / 2019/2020 / Physics of Atomic Nuclei"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 1
+ },
+ {
+  "paper": "hep-ph_2611.25910v1.pdf",
+  "n": 42,
+  "judgement": "real: arXiv:1401.1233 is a different paper (double parton distributions)",
+  "verdict": "id_mismatch",
+  "raw": "[42] S. A. Kulagin and R. Petti, “Nuclear parton distributions and the Drell-Yan process”, Phys. Rev. C 90 (2014) 045204, arXiv:1401.1233.",
+  "parsed": {
+   "title": "Nuclear parton distributions and the Drell-Yan process",
+   "authors": [
+    "Kulagin",
+    "Petti"
+   ],
+   "year": 2014,
+   "venue": "Phys. Rev. C",
+   "kind": "article",
+   "dois": [],
+   "arxiv": [
+    "1401.1233"
+   ]
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Nuclear parton distributions and the Drell-Yan process",
+    "found": "Nuclear parton distributions and the Drell-Yan process",
+    "score": 1
+   },
+   {
+    "field": "identifier",
+    "status": "mismatch",
+    "cited": "arXiv:1401.1233",
+    "found": "Correlations in double parton distributions: effects of evolution",
+    "note": "identifier resolves to a different work"
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Kulagin, Petti",
+    "found": "Kulagin, Petti"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2014",
+    "found": "2014"
+   },
+   {
+    "field": "venue",
+    "status": "match",
+    "cited": "Phys. Rev. C",
+    "found": "Physical Review C"
+   }
+  ],
+  "issues": [
+   "arXiv:1401.1233 points to a different work: “Correlations in double parton distributions: effects of evolution”"
+  ],
+  "match": {
+   "title": "Nuclear parton distributions and the Drell-Yan process",
+   "authors": [
+    [
+     "Kulagin",
+     "S. A."
+    ],
+    [
+     "Petti",
+     "R."
+    ]
+   ],
+   "years": [
+    2014
+   ],
+   "venue": "Physical Review C",
+   "aliases": [
+    "Physical Review C",
+    "Phys. Rev. C"
+   ],
+   "type": "journal-article",
+   "source": "crossref",
+   "doi": "10.1103/physrevc.90.045204"
+  },
+  "candidates": [
+   "crossref: Nuclear parton distributions and the Drell-Yan process / Kulagin, Petti / 2014 / Physical Review C",
+   "crossref: Nuclear Parton Distributions and Applications to Drell-Yan and anti-neutrino Scattering / Petti, Kulagin / 2016 / Proceedings of XXIII International Workshop on Deep-Inelastic Scattering — PoS(DIS2015)",
+   "crossref: Novel phenomenology of parton distributions from the Drell–Yan process / Peng, Qiu / 2014 / Progress in Particle and Nuclear Physics",
+   "crossref: Chiral-odd parton distributions and polarized Drell-Yan process / Jaffe, Ji / 1991 / Physical Review Letters",
+   "inspire: Correlations in double parton distributions: effects of evolution / Diehl, Kasemets, Keane / 2014 / JHEP"
+  ],
+  "failed": [],
+  "unrecorded": 0
+ },
+ {
+  "paper": "hep-ph_2611.25910v1.pdf",
+  "n": 49,
+  "judgement": "new",
+  "verdict": "id_mismatch",
+  "raw": "[49] N. Armesto, C. A. Salgado, and U. A. Wiedemann, “Relating high-energy lepton-hadron, proton-nucleus and nucleus-nucleus collisions through geometric scaling”, Phys. Rev. Lett. 94 (2005) 022002, arXiv:hep-ph/0411341.",
+  "parsed": {
+   "title": "Relating high-energy lepton-hadron, proton-nucleus and nucleus-nucleus collisions through geometric scaling",
+   "authors": [
+    "Armesto",
+    "Salgado",
+    "Wiedemann"
+   ],
+   "year": 2005,
+   "venue": "Phys. Rev. Lett",
+   "kind": "article",
+   "dois": [],
+   "arxiv": [
+    "hep-ph/0411341"
+   ]
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Relating high-energy lepton-hadron, proton-nucleus and nucleus-nucleus collisions through geometric scaling",
+    "found": "Relating High-Energy Lepton-Hadron, Proton-Nucleus, and Nucleus-Nucleus Collisions through Geometric Scaling",
+    "score": 1
+   },
+   {
+    "field": "identifier",
+    "status": "mismatch",
+    "cited": "arXiv:hep-ph/0411341",
+    "found": "Low-pT Collective Flow Induces High-pT Jet Quenching",
+    "note": "identifier resolves to a different work"
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Armesto, Salgado, Wiedemann",
+    "found": "Armesto, Salgado, Wiedemann"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2005",
+    "found": "2005"
+   },
+   {
+    "field": "venue",
+    "status": "match",
+    "cited": "Phys. Rev. Lett",
+    "found": "Physical Review Letters"
+   }
+  ],
+  "issues": [
+   "arXiv:hep-ph/0411341 points to a different work: “Low-pT Collective Flow Induces High-pT Jet Quenching”"
+  ],
+  "match": {
+   "title": "Relating High-Energy Lepton-Hadron, Proton-Nucleus, and Nucleus-Nucleus Collisions through Geometric Scaling",
+   "authors": [
+    [
+     "Armesto",
+     "Néstor"
+    ],
+    [
+     "Salgado",
+     "Carlos A."
+    ],
+    [
+     "Wiedemann",
+     "Urs Achim"
+    ]
+   ],
+   "years": [
+    2005
+   ],
+   "venue": "Physical Review Letters",
+   "aliases": [
+    "Physical Review Letters",
+    "Phys. Rev. Lett."
+   ],
+   "type": "journal-article",
+   "source": "crossref",
+   "doi": "10.1103/physrevlett.94.022002"
+  },
+  "candidates": [
+   "crossref: Relating High-Energy Lepton-Hadron, Proton-Nucleus, and Nucleus-Nucleus Collisions through Geometric Scaling / Armesto, Salgado, Wiedemann / 2005 / Physical Review Letters",
+   "inspire: Low-p(T) collective flow induces high-p(T) jet quenching / Armesto, Salgado, Wiedemann / 2004/2005 / Phys. Rev. C",
+   "crossref: Nucleus-nucleus and proton-nucleus collisions at the LHC /  / 2007 / Springer Proceedings Physics",
+   "datacite: Low-pT Collective Flow Induces High-pT Jet Quenching / Armesto, Salgado, Wiedemann / 2004 / arXiv",
+   "crossref: Slowly Moving Sources in High-Energy Hadron-Nucleus and Nucleus-Nucleus Collisions / Ta-chung, Moeller / 1978 / Physical Review Letters"
+  ],
+  "failed": [],
+  "unrecorded": 0
+ },
+ {
+  "paper": "hep-ph_2611.25910v1.pdf",
+  "n": 58,
+  "judgement": "real: title of the E665 Z. Phys. C 67 (1995) paper cited with the PRL 68 (1992) venue (titles of [58] and [59] swapped)",
+  "verdict": "metadata_error",
+  "raw": "[58] Fermilab E665 Collaboration, “Shadowing in inelastic scattering of muons on carbon, calcium and lead at low xBj ”, Phys. Rev. Lett. 68 (1992) 3266.",
+  "parsed": {
+   "title": "Shadowing in inelastic scattering of muons on carbon, calcium and lead at low xBj",
+   "authors": [
+    "Collaboration"
+   ],
+   "year": 1992,
+   "venue": "Phys. Rev. Lett",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Shadowing in inelastic scattering of muons on carbon, calcium and lead at low xBj",
+    "found": "Shadowing in Inelastic Scattering of Muons on Carbon, Calcium and Lead at Low xBj",
+    "score": 1
+   },
+   {
+    "field": "authors",
+    "status": "na"
+   },
+   {
+    "field": "year",
+    "status": "mismatch",
+    "cited": "1992",
+    "found": "1995"
+   },
+   {
+    "field": "venue",
+    "status": "match",
+    "cited": "Phys. Rev. Lett",
+    "found": "Z. Phys. C"
+   },
+   {
+    "field": "pages",
+    "status": "minor",
+    "cited": "68",
+    "found": "67 / 403",
+    "note": "Bibliographic details differ: volume 68 vs 67"
+   }
+  ],
+  "issues": [
+   "Year 1992 does not match the published record (1995)"
+  ],
+  "match": {
+   "title": "Shadowing in Inelastic Scattering of Muons on Carbon, Calcium and Lead at Low xBj",
+   "authors": [
+    [
+     "Adams",
+     "M.R."
+    ],
+    [
+     "Aïd",
+     "S."
+    ],
+    [
+     "Anthony",
+     "P.L."
+    ],
+    [
+     "Averill",
+     "D.A."
+    ],
+    [
+     "Baker",
+     "M.D."
+    ],
+    [
+     "Baller",
+     "B.R."
+    ],
+    [
+     "Banerjee",
+     "A."
+    ],
+    [
+     "Bhatti",
+     "A.A."
+    ],
+    [
+     "Bratzler",
+     "U."
+    ],
+    [
+     "Braun",
+     "H.M."
+    ],
+    [
+     "Breidung",
+     "H."
+    ],
+    [
+     "Busza",
+     "W."
+    ],
+    [
+     "Carroll",
+     "T.J."
+    ],
+    [
+     "Clark",
+     "H.L."
+    ],
+    [
+     "Conrad",
+     "J.M."
+    ],
+    [
+     "Davisson",
+     "R."
+    ],
+    [
+     "Derado",
+     "I."
+    ],
+    [
+     "Dhawan",
+     "S.K."
+    ],
+    [
+     "Dietrich",
+     "F.S."
+    ],
+    [
+     "Dougherty",
+     "W."
+    ],
+    [
+     "Dreyer",
+     "T."
+    ],
+    [
+     "Eckardt",
+     "V."
+    ],
+    [
+     "Ecker",
+     "U."
+    ],
+    [
+     "Erdmann",
+     "M."
+    ],
+    [
+     "Fang",
+     "G.Y."
+    ],
+    [
+     "Figiel",
+     "J."
+    ],
+    [
+     "Finlay",
+     "R.W."
+    ],
+    [
+     "Gebauer",
+     "H.J."
+    ],
+    [
+     "Geesaman",
+     "D.F."
+    ],
+    [
+     "Griffioen",
+     "K.A."
+    ],
+    [
+     "Guo",
+     "R.S."
+    ],
+    [
+     "Haas",
+     "J."
+    ],
+    [
+     "Halliwell",
+     "C."
+    ],
+    [
+     "Hantke",
+     "D."
+    ],
+    [
+     "Hicks",
+     "K.H."
+    ],
+    [
+     "Hughes",
+     "V.W."
+    ],
+    [
+     "Jackson",
+     "H.E."
+    ],
+    [
+     "Jaffe",
+     "D.E."
+    ],
+    [
+     "Jancso",
+     "G."
+    ],
+    [
+     "Jansen",
+     "D.M."
+    ],
+    [
+     "Jin",
+     "Z."
+    ],
+    [
+     "Kaufman",
+     "S."
+    ],
+    [
+     "Kennedy",
+     "R.D."
+    ],
+    [
+     "Kinney",
+     "E.R."
+    ],
+    [
+     "Kirk",
+     "T."
+    ],
+    [
+     "Kobrak",
+     "H.G. E."
+    ],
+    [
+     "Kotwal",
+     "A.V."
+    ],
+    [
+     "Kunori",
+     "S."
+    ],
+    [
+     "Lord",
+     "J.J."
+    ],
+    [
+     "Lubatti",
+     "H.J."
+    ],
+    [
+     "McLeod",
+     "D."
+    ],
+    [
+     "Madden",
+     "P."
+    ],
+    [
+     "Magill",
+     "S."
+    ],
+    [
+     "Manz",
+     "A."
+    ],
+    [
+     "Melanson",
+     "H."
+    ],
+    [
+     "Michael",
+     "D.G."
+    ],
+    [
+     "Montgomery",
+     "H.E."
+    ],
+    [
+     "Morfin",
+     "J.G."
+    ],
+    [
+     "Nickerson",
+     "R.B."
+    ],
+    [
+     "Novak",
+     "J."
+    ],
+    [
+     "O'Day",
+     "S."
+    ],
+    [
+     "Olkiewicz",
+     "K."
+    ],
+    [
+     "Osborne",
+     "L."
+    ],
+    [
+     "Otten",
+     "R."
+    ],
+    [
+     "Papavassiliou",
+     "V."
+    ],
+    [
+     "Pawlik",
+     "B."
+    ],
+    [
+     "Pipkin",
+     "F.M."
+    ],
+    [
+     "Potterveld",
+     "D.H."
+    ],
+    [
+     "Ramberg",
+     "E.J."
+    ],
+    [
+     "Röser",
+     "A."
+    ],
+    [
+     "Ryan",
+     "J.J."
+    ],
+    [
+     "Salgado",
+     "C.W."
+    ],
+    [
+     "Salvarani",
+     "A."
+    ],
+    [
+     "Schellman",
+     "H."
+    ],
+    [
+     "Schmitt",
+     "M."
+    ],
+    [
+     "Schmitz",
+     "N."
+    ],
+    [
+     "Schüler",
+     "K.P."
+    ],
+    [
+     "Siegert",
+     "G."
+    ],
+    [
+     "Skuja",
+     "A."
+    ],
+    [
+     "Snow",
+     "G.A."
+    ],
+    [
+     "Söldner-Rembold",
+     "S."
+    ],
+    [
+     "Spentzouris",
+     "P."
+    ],
+    [
+     "Stier",
+     "H.E."
+    ],
+    [
+     "Stopa",
+     "P."
+    ],
+    [
+     "Swanson",
+     "R.A."
+    ],
+    [
+     "Venkataramania",
+     "H."
+    ],
+    [
+     "Wilhelm",
+     "M."
+    ],
+    [
+     "Wilson",
+     "Richard"
+    ],
+    [
+     "Wittek",
+     "W."
+    ],
+    [
+     "Wolbers",
+     "S.A."
+    ],
+    [
+     "Zghiche",
+     "A."
+    ],
+    [
+     "Zhao",
+     "T."
+    ],
+    [
+     "E665 Collaboration",
+     ""
+    ]
+   ],
+   "years": [
+    1995
+   ],
+   "venue": "Z. Phys. C",
+   "aliases": [
+    "Z.Phys.C"
+   ],
+   "type": "article",
+   "source": "inspire",
+   "doi": "10.1007/bf01624583"
+  },
+  "candidates": [
+   "inspire: Shadowing in Inelastic Scattering of Muons on Carbon, Calcium and Lead at Low xBj / Adams, Aïd, Anthony / 1995 / Z. Phys. C",
+   "semanticscholar: Shadowing in inelastic scattering of muons on carbon, calcium and lead at lowxBj / Adams, Aïd, Anthony / 1995/1995 / Zeitschrift für Physik C Particles and Fields",
+   "crossref: Observation of Nuclear Shadowing at Low XBj in Carbon, Calcium and Lead / Carroll / 1994 / ",
+   "crossref: The Inelastic Scattering of Fast Neutrons in Carbon and Lead / Whitmore / 1953 / Physical Review",
+   "crossref: Measurement of the cross-section ratio σn/σp in inelastic muon-nucleon scattering at very low x and Q2 / Paopavassiliou, Collaboration / 1992 / AIP Conference Proceedings"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 1
+ },
+ {
+  "paper": "hep-ph_2611.25910v1.pdf",
+  "n": 59,
+  "judgement": "real: title of the E665 Phys. Lett. B (1992) paper cited with the Z. Phys. C 67 (1995) venue (titles of [58] and [59] swapped)",
+  "verdict": "metadata_error",
+  "raw": "[59] Fermilab E665 Collaboration, “Shadowing in the muon-xenon inelastic scattering cross section at 490 GeV”, Z. Phys. C 67 (1995) 403.",
+  "parsed": {
+   "title": "Shadowing in the muon-xenon inelastic scattering cross section at 490 GeV",
+   "authors": [
+    "Collaboration"
+   ],
+   "year": 1995,
+   "venue": "Z. Phys. C",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Shadowing in the muon-xenon inelastic scattering cross section at 490 GeV",
+    "found": "Shadowing in the muon-xenon inelastic scattering cross section at 490 GeV",
+    "score": 1
+   },
+   {
+    "field": "authors",
+    "status": "na"
+   },
+   {
+    "field": "year",
+    "status": "mismatch",
+    "cited": "1995",
+    "found": "1992/1992"
+   },
+   {
+    "field": "venue",
+    "status": "match",
+    "cited": "Z. Phys. C",
+    "found": "Physics Letters B"
+   },
+   {
+    "field": "pages",
+    "status": "minor",
+    "cited": "67",
+    "found": "287 / 375-380",
+    "note": "Bibliographic details differ: volume 67 vs 287"
+   }
+  ],
+  "issues": [
+   "Year 1995 does not match the published record (1992/1992)"
+  ],
+  "match": {
+   "title": "Shadowing in the muon-xenon inelastic scattering cross section at 490 GeV",
+   "authors": [
+    [
+     "Adams",
+     "M."
+    ],
+    [
+     "Aïd",
+     "S."
+    ],
+    [
+     "Anthony",
+     "P."
+    ],
+    [
+     "Baker",
+     "M."
+    ],
+    [
+     "Bartlett",
+     "J."
+    ],
+    [
+     "Bhatti",
+     "A."
+    ],
+    [
+     "Braun",
+     "H."
+    ],
+    [
+     "Busza",
+     "W."
+    ],
+    [
+     "Carroll",
+     "T."
+    ],
+    [
+     "Conrad",
+     "J."
+    ],
+    [
+     "Coutrakon",
+     "G."
+    ],
+    [
+     "Davisson",
+     "R."
+    ],
+    [
+     "Derado",
+     "I."
+    ],
+    [
+     "Dhawan",
+     "S."
+    ],
+    [
+     "Dougherty",
+     "W."
+    ],
+    [
+     "Dreyer",
+     "T."
+    ],
+    [
+     "Dziunikowska",
+     "K."
+    ],
+    [
+     "Eckardt",
+     "V."
+    ],
+    [
+     "Ecker",
+     "U."
+    ],
+    [
+     "Erdmann",
+     "M."
+    ],
+    [
+     "Eskreys",
+     "A."
+    ],
+    [
+     "Fang",
+     "G."
+    ],
+    [
+     "Figiel",
+     "J."
+    ],
+    [
+     "Gebauer",
+     "H."
+    ],
+    [
+     "Geesaman",
+     "D."
+    ],
+    [
+     "Gilman",
+     "R."
+    ],
+    [
+     "Green",
+     "M."
+    ],
+    [
+     "Haas",
+     "J."
+    ],
+    [
+     "Halliwell",
+     "C."
+    ],
+    [
+     "Hanlon",
+     "J."
+    ],
+    [
+     "Hantke",
+     "D."
+    ],
+    [
+     "Hughes",
+     "V."
+    ],
+    [
+     "Jackson",
+     "H."
+    ],
+    [
+     "Jaffe",
+     "D."
+    ],
+    [
+     "Jancsó",
+     "G."
+    ],
+    [
+     "Jansen",
+     "D."
+    ],
+    [
+     "Kaufman",
+     "S."
+    ],
+    [
+     "Kennedy",
+     "R."
+    ],
+    [
+     "Kirk",
+     "T."
+    ],
+    [
+     "Kobrak",
+     "H."
+    ],
+    [
+     "Krzywdzinski",
+     "S."
+    ],
+    [
+     "Kunori",
+     "S."
+    ],
+    [
+     "Lord",
+     "J."
+    ],
+    [
+     "Lubatti",
+     "H."
+    ],
+    [
+     "Mcleod",
+     "D."
+    ],
+    [
+     "Magill",
+     "S."
+    ],
+    [
+     "Malecki",
+     "P."
+    ],
+    [
+     "Manz",
+     "A."
+    ],
+    [
+     "Melanson",
+     "H."
+    ],
+    [
+     "Michael",
+     "D."
+    ],
+    [
+     "Mohr",
+     "W."
+    ],
+    [
+     "Montgomery",
+     "H."
+    ],
+    [
+     "Morfín",
+     "J."
+    ],
+    [
+     "Nickerson",
+     "R."
+    ],
+    [
+     "O'Day",
+     "S."
+    ],
+    [
+     "Olkiewicz",
+     "K."
+    ],
+    [
+     "Osborne",
+     "L."
+    ],
+    [
+     "Papavassiliou",
+     "V."
+    ],
+    [
+     "Pawlik",
+     "B."
+    ],
+    [
+     "Pipkin",
+     "F."
+    ],
+    [
+     "Ramberg",
+     "E."
+    ],
+    [
+     "Röser",
+     "A."
+    ],
+    [
+     "Ryan",
+     "J."
+    ],
+    [
+     "Salgado",
+     "C."
+    ],
+    [
+     "Salvarani",
+     "A."
+    ],
+    [
+     "Schellman",
+     "H."
+    ],
+    [
+     "Schmitt",
+     "M."
+    ],
+    [
+     "Schmitz",
+     "N."
+    ],
+    [
+     "Schüler",
+     "K."
+    ],
+    [
+     "Seyerlein",
+     "H. J."
+    ],
+    [
+     "Skuja",
+     "A."
+    ],
+    [
+     "Snow",
+     "G."
+    ],
+    [
+     "Söldner-Rembold",
+     "S."
+    ],
+    [
+     "Steinberg",
+     "P."
+    ],
+    [
+     "Stier",
+     "H."
+    ],
+    [
+     "Stopa",
+     "P."
+    ],
+    [
+     "Swanson",
+     "R."
+    ],
+    [
+     "Talaga",
+     "R."
+    ],
+    [
+     "Tentindo-Repond",
+     "S."
+    ],
+    [
+     "Trost",
+     "H."
+    ],
+    [
+     "Venkataramania",
+     "H."
+    ],
+    [
+     "Vidal",
+     "M."
+    ],
+    [
+     "Wilhelm",
+     "M."
+    ],
+    [
+     "Wilkes",
+     "J."
+    ],
+    [
+     "Wilson",
+     "R."
+    ],
+    [
+     "Wittek",
+     "W."
+    ],
+    [
+     "Wolbers",
+     "S."
+    ],
+    [
+     "Zhao",
+     "Tian-Chi"
+    ]
+   ],
+   "years": [
+    1992,
+    1992
+   ],
+   "venue": "Physics Letters B",
+   "aliases": [
+    "Physics Letters B"
+   ],
+   "source": "semanticscholar",
+   "doi": "10.1016/0370-2693(92)90999-k"
+  },
+  "candidates": [
+   "semanticscholar: Shadowing in the muon-xenon inelastic scattering cross section at 490 GeV / Adams, Aïd, Anthony / 1992/1992 / Physics Letters B",
+   "inspire: Shadowing in the Muon Xenon Inelastic Scattering Cross Section at 490 GeV / Adams, Aid, Anthony / 1992 / Phys. Lett. B",
+   "crossref: Proton and deuteron structure functions in muon scattering at 470 GeV / Fermi National Accelerator Lab., Kotwal, USDOE / 1995 / ",
+   "crossref: Measurement of the Ratio of Neutron Cross-Section to Proton Cross-Section in Muon Deep Inelastic Scattering at 490-GeV/c / Aid / 1991 / ",
+   "crossref: Measurement of the Ratio of Neutron Cross-Section to Proton Cross-Section in Muon Deep Inelastic Scattering at 490-GeV/c / Aid / 1991 / "
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 1
+ },
+ {
+  "paper": "q-bio.GN_2611.22256v1.pdf",
+  "n": 21,
+  "judgement": "false: arXiv paper renamed after v1; the cited v1 title is right",
+  "verdict": "metadata_error",
+  "raw": "[21] Alexander Tong, Nikolay Malkin, Guillaume Huguet, Yanlei Zhang, Jarrid Rector-Brooks, Kilian Fatras, Guy Wolf, and Yoshua Bengio. 2023. Conditional flow matching: Simulation-free dynamic optimal transport. arXiv preprint arXiv:2302.00482 2, 3 (2023).",
+  "parsed": {
+   "title": "Conditional flow matching: Simulation-free dynamic optimal transport",
+   "authors": [
+    "Tong",
+    "Malkin",
+    "Huguet",
+    "Zhang",
+    "Rector-Brooks",
+    "Fatras",
+    "Wolf",
+    "Bengio"
+   ],
+   "year": 2023,
+   "venue": "arXiv. 2",
+   "kind": "article",
+   "dois": [],
+   "arxiv": [
+    "2302.00482"
+   ]
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Conditional flow matching: Simulation-free dynamic optimal transport",
+    "found": "Conditional Flow Matching: Simulation-Free Dynamic Optimal Transport",
+    "score": 1
+   },
+   {
+    "field": "identifier",
+    "status": "minor",
+    "cited": "arXiv:2302.00482",
+    "found": "Improving and generalizing flow-based generative models with minibatch optimal transport",
+    "note": "same authors; the arXiv entry was likely retitled in a later version"
+   },
+   {
+    "field": "authors",
+    "status": "mismatch",
+    "cited": "Tong, Malkin, Huguet, Zhang, Rector-Brooks, Fatras, Wolf, Bengio",
+    "found": "Tong, Whitammer, Huguet, Zhang, Rector-Brooks, Fatras, Wolf, Bengio",
+    "note": "1 cited author(s) not on the paper"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2023",
+    "found": "2023"
+   },
+   {
+    "field": "venue",
+    "status": "na",
+    "cited": "arXiv. 2",
+    "found": "arXiv.org"
+   }
+  ],
+  "issues": [
+   "arXiv:2302.00482 now carries the title “Improving and generalizing flow-based generative models with minibatch optimal transport” (same authors; likely a renamed version)",
+   "Author list does not match the published work: Malkin not among its authors"
+  ],
+  "match": {
+   "title": "Conditional Flow Matching: Simulation-Free Dynamic Optimal Transport",
+   "authors": [
+    [
+     "Tong",
+     "Alexander"
+    ],
+    [
+     "Whitammer",
+     "Esmeralda S."
+    ],
+    [
+     "Huguet",
+     "G."
+    ],
+    [
+     "Zhang",
+     "Yanlei"
+    ],
+    [
+     "Rector-Brooks",
+     "Jarrid"
+    ],
+    [
+     "Fatras",
+     "Kilian"
+    ],
+    [
+     "Wolf",
+     "Guy"
+    ],
+    [
+     "Bengio",
+     "Y."
+    ]
+   ],
+   "years": [
+    2023
+   ],
+   "venue": "arXiv.org",
+   "aliases": [
+    "arXiv.org",
+    "arXiv.org",
+    "ArXiv",
+    "ArXiv"
+   ],
+   "type": "JournalArticle",
+   "source": "semanticscholar",
+   "doi": "10.48550/arxiv.2302.00482"
+  },
+  "candidates": [
+   "semanticscholar: Conditional Flow Matching: Simulation-Free Dynamic Optimal Transport / Tong, Whitammer, Huguet / 2023 / arXiv.org",
+   "datacite: Improving and generalizing flow-based generative models with minibatch optimal transport / Tong, Fatras, Malkin / 2023 / arXiv",
+   "crossref: Geodesic Sinkhorn For Fast and Accurate Optimal Transport on Manifolds / Huguet, Tong, Zapatero / 2023 / 2023 IEEE 33rd International Workshop on Machine Learning for Signal Processing (MLSP)",
+   "crossref: Sequence-Augmented SE(3)-Flow Matching For Conditional Protein Generation / Huguet, Vuckovic, Fatras / 2024 / Advances in Neural Information Processing Systems 37",
+   "crossref: Dynamic Conditional Optimal Transport through Simulation-Free Flows / Kerrigan, Migliorini, Smyth / 2024 / Advances in Neural Information Processing Systems 37"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 1
+ },
+ {
+  "paper": "stat.ML_2611.25936v1.pdf",
+  "n": 26,
+  "judgement": "uncertain: cited title and venue (Machine Learning 111:1817) not found in Crossref; the closest work is ESWA 2021 with a different title",
+  "verdict": "metadata_error",
+  "raw": "Fabio Sigrist. Gradient and Newton boosting for tree ensembles. Machine Learning, 111(5):1817- 1867, 2022.",
+  "parsed": {
+   "title": "Gradient and Newton boosting for tree ensembles",
+   "authors": [
+    "Sigrist"
+   ],
+   "year": 2022,
+   "venue": "Machine Learning",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "mismatch",
+    "cited": "Gradient and Newton boosting for tree ensembles",
+    "found": "Gradient and Newton boosting for classification and regression",
+    "score": 0.6129032258064516
+   }
+  ],
+  "issues": [
+   "Closest real work has a different title: “Gradient and Newton boosting for classification and regression”"
+  ],
+  "match": {
+   "title": "Gradient and Newton boosting for classification and regression",
+   "authors": [
+    [
+     "Sigrist",
+     "Fabio"
+    ]
+   ],
+   "years": [
+    2021
+   ],
+   "venue": "Expert Systems with Applications",
+   "aliases": [
+    "Expert Systems with Applications",
+    "Expert Systems with Applications"
+   ],
+   "type": "journal-article",
+   "source": "crossref",
+   "doi": "10.1016/j.eswa.2020.114080"
+  },
+  "candidates": [
+   "crossref: Gradient and Newton boosting for classification and regression / Sigrist / 2021 / Expert Systems with Applications",
+   "crossref: Selecting hyperparameters for tree-boosting / Koster, Sigrist / 2026 / Machine Learning with Applications",
+   "crossref: Algorithm 1 : The gradient tree boosting algorithm. /  / 2025 / ",
+   "crossref: Tree-based approaches, ensembles and boosting / Geertsema / 2023 / Machine Learning for Managers",
+   "crossref: A Novel Algorithm of Machine Learning: Fractional Gradient Boosting Decision Tree / Gao, Wang / 2022 / Lecture Notes of the Institute for Computer Sciences, Social Informatics and Telecommunications Engineering"
+  ],
+  "failed": [
+   "openalex",
+   "semanticscholar"
+  ],
+  "unrecorded": 3
+ },
+ {
+  "paper": "plos_10_1371_journal_pone_0347190.pdf",
+  "n": 8,
+  "judgement": "new",
+  "verdict": "not_found",
+  "raw": "8. UNFPA H e r a. Research on what determines women’s ability to decide on their SRHR and the relationship between this and other aspects of their lives. 2019.",
+  "parsed": {
+   "title": "Research on what determines women’s ability to decide on their SRHR and the relationship between this and other aspects of their lives",
+   "authors": [],
+   "year": 2019,
+   "venue": "2019",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [],
+  "issues": [
+   "OpenAlex did not respond; re-run later to confirm",
+   "No matching work in Crossref, Semantic Scholar, Europe PMC"
+  ],
+  "candidates": [
+   "crossref: Mainstreaming Women’s SRHR into Climate Change Policy /  / 2018 / Human Rights Documents Online",
+   "crossref: Mainstreaming Women’s SRHR into Climate Change Policy /  / 2018 / Climate Change and Law Collection",
+   "crossref: What determines gut health? Understanding the relationship between the human gut microbiome and metabolic syndrome / Kumar / 2024 / ",
+   "crossref: Who Determines What Civil Courts Decide? Private Rights, Public Policy and EU Law / Whittaker / 2012 / SSRN Electronic Journal",
+   "crossref: Who Determines What Civil Courts Decide? Private Rights, Public Policy and EU Law /  / 2014 / The Involvement of EU Law in Private Law Relationships"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 2
+ },
+ {
+  "paper": "plos_10_1371_journal_pone_0347190.pdf",
+  "n": 16,
+  "judgement": "real: 2 of 5 authors listed, without \"et al.\"",
+  "verdict": "metadata_error",
+  "raw": "16. Wood N, Shiferaw S. The impact of partner autonomy constraints on women’s health-seeking across the maternal and newborn continuum of care. 2022.",
+  "parsed": {
+   "title": "The impact of partner autonomy constraints on women’s health-seeking across the maternal and newborn continuum of care",
+   "authors": [
+    "Wood",
+    "Shiferaw"
+   ],
+   "year": 2022,
+   "venue": "2022",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "The impact of partner autonomy constraints on women’s health-seeking across the maternal and newborn continuum of care",
+    "found": "The impact of partner autonomy constraints on women's health-seeking across the maternal and newborn continuum of care",
+    "score": 1
+   },
+   {
+    "field": "authors",
+    "status": "mismatch",
+    "cited": "Wood, Shiferaw",
+    "found": "Wood, Yirgu, Karp, Tadesse, Shiferaw, Zimmerman",
+    "note": "4 author(s) omitted"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2022",
+    "found": "2022"
+   },
+   {
+    "field": "venue",
+    "status": "na",
+    "cited": "2022",
+    "found": "eClinicalMedicine"
+   }
+  ],
+  "issues": [
+   "Incomplete author list: 4 of 6 authors omitted without “et al.”"
+  ],
+  "match": {
+   "title": "The impact of partner autonomy constraints on women's health-seeking across the maternal and newborn continuum of care",
+   "authors": [
+    [
+     "Wood",
+     "Shannon N."
+    ],
+    [
+     "Yirgu",
+     "Robel"
+    ],
+    [
+     "Karp",
+     "Celia"
+    ],
+    [
+     "Tadesse",
+     "Meseret Zelalem"
+    ],
+    [
+     "Shiferaw",
+     "Solomon"
+    ],
+    [
+     "Zimmerman",
+     "Linnea A."
+    ]
+   ],
+   "years": [
+    2022
+   ],
+   "venue": "eClinicalMedicine",
+   "aliases": [
+    "eClinicalMedicine",
+    "eClinicalMedicine"
+   ],
+   "type": "journal-article",
+   "source": "crossref",
+   "doi": "10.1016/j.eclinm.2022.101715"
+  },
+  "candidates": [
+   "crossref: The impact of partner autonomy constraints on women's health-seeking across the maternal and newborn continuum of care / Wood, Yirgu, Karp / 2022 / eClinicalMedicine",
+   "crossref: Autonomy, intimate partner violence, and maternal health-seeking behavior: Findings from mixed-methods analysis in Nigeria / Sripad, Ndwiga, Warren / 2019 / ",
+   "crossref: Autonomy, intimate partner violence, and maternal health-seeking behavior: Findings from mixed-methods analysis in Kenya / Warren, Sripad, Ndwiga / 2019 / ",
+   "crossref: Autonomy, intimate partner violence, and maternal health-seeking behavior: Findings from mixed-methods analysis in Ethiopia / Warren, Sripad, Ndwiga / 2019 / ",
+   "crossref: Maternal and Newborn Care Continuum Partner Encouragement among a Cohort of Pregnant Women in Ethiopia / Damtew / 2024 / "
+  ],
+  "failed": [],
+  "unrecorded": 0
+ },
+ {
+  "paper": "plos_10_1371_journal_pone_0347190.pdf",
+  "n": 20,
+  "judgement": "real: only the last of 3 authors listed (Singh K, Story WT omitted)",
+  "verdict": "metadata_error",
+  "raw": "20. Moran AC. Assessing the continuum of care pathway for maternal health in South Asia and sub-Saharan Africa. Maternal and child health journal. 2016;20(2):281-9.",
+  "parsed": {
+   "title": "Assessing the continuum of care pathway for maternal health in South Asia and sub-Saharan Africa",
+   "authors": [
+    "Moran"
+   ],
+   "year": 2016,
+   "venue": "Maternal and child health journal",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Assessing the continuum of care pathway for maternal health in South Asia and sub-Saharan Africa",
+    "found": "Assessing the Continuum of Care Pathway for Maternal Health in South Asia and Sub-Saharan Africa",
+    "score": 1
+   },
+   {
+    "field": "authors",
+    "status": "mismatch",
+    "cited": "Moran",
+    "found": "Singh, Story, Moran",
+    "note": "2 author(s) omitted"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2016",
+    "found": "2015/2016"
+   },
+   {
+    "field": "venue",
+    "status": "match",
+    "cited": "Maternal and child health journal",
+    "found": "Maternal and Child Health Journal"
+   }
+  ],
+  "issues": [
+   "Incomplete author list: 2 of 3 authors omitted without “et al.”"
+  ],
+  "match": {
+   "title": "Assessing the Continuum of Care Pathway for Maternal Health in South Asia and Sub-Saharan Africa",
+   "authors": [
+    [
+     "Singh",
+     "Kavita"
+    ],
+    [
+     "Story",
+     "William T."
+    ],
+    [
+     "Moran",
+     "Allisyn C."
+    ]
+   ],
+   "years": [
+    2015,
+    2016
+   ],
+   "venue": "Maternal and Child Health Journal",
+   "aliases": [
+    "Maternal and Child Health Journal",
+    "Matern Child Health J"
+   ],
+   "type": "journal-article",
+   "source": "crossref",
+   "doi": "10.1007/s10995-015-1827-6"
+  },
+  "candidates": [
+   "crossref: Assessing the Continuum of Care Pathway for Maternal Health in South Asia and Sub-Saharan Africa / Singh, Story, Moran / 2015/2016 / Maternal and Child Health Journal",
+   "semanticscholar: Assessing the Continuum of Care Pathway for Maternal Health in South Asia and Sub-Saharan Africa / Singh, Story, Moran / 2016/2016 / Maternal and Child Health Journal",
+   "crossref: Assessing the continuum of care in South Asia and Sub-Saharan Africa / Singh, Story, Moran / 2015 / Annals of Global Health",
+   "crossref: The Role of Leadership in Sub-Saharan Africa in Promoting Maternal and Child Health / Tsala Dimbuene, Haregu, Muanza Nzuzi / 2023 / Maternal and Child Health",
+   "crossref: HeAlth System StrEngThening in sub-Saharan Africa (ASSET): Maternal Mental Health in the Western Cape, South Africa / Lund / 2020 / http://isrctn.com/"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 1
+ },
+ {
+  "paper": "plos_10_1371_journal_pone_0347190.pdf",
+  "n": 57,
+  "judgement": "false: government strategy document matched to an unrelated record",
+  "verdict": "metadata_error",
+  "raw": "57. Fedral Democratic Republic of Ethiopia Health Minister. National healthcare quality and safety strategy (NQSS), 2021 -25. 2021.",
+  "parsed": {
+   "title": "Fedral Democratic Republic of Ethiopia Health Minister",
+   "authors": [],
+   "year": 2021,
+   "venue": "National healthcare quality and safety strategy (NQSS)",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "minor",
+    "cited": "Fedral Democratic Republic of Ethiopia Health Minister",
+    "found": "The Federal Democratic Republic of Ethiopia",
+    "score": 0.8837209302325582
+   },
+   {
+    "field": "authors",
+    "status": "na"
+   },
+   {
+    "field": "year",
+    "status": "mismatch",
+    "cited": "2021",
+    "found": "2026"
+   }
+  ],
+  "issues": [
+   "Year 2021 does not match the published record (2026)"
+  ],
+  "match": {
+   "title": "The Federal Democratic Republic of Ethiopia",
+   "authors": [
+    [
+     "Fund",
+     "International Monetary"
+    ]
+   ],
+   "years": [
+    2026
+   ],
+   "aliases": [],
+   "type": "component",
+   "source": "crossref",
+   "doi": "10.5089/9781451812725.002.a001"
+  },
+  "candidates": [
+   "crossref: The Federal Democratic Republic of Ethiopia / Fund / 2026 / ",
+   "crossref: The Federal Democratic Republic of Ethiopia / Fund / 2026 / ",
+   "crossref: The Federal Democratic Republic of Ethiopia / Fund / 2026 / ",
+   "crossref: The Federal Democratic Republic of Ethiopia / Fund / 2026 / ",
+   "crossref: Ethiopia, Federal Democratic Republic of / Shelemay, Kimberlin / 2001 / Oxford Music Online"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 2
+ }
+]

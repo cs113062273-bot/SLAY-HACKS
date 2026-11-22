@@ -1,0 +1,4649 @@
+[
+ {
+  "paper": "cs.DC_2611.26526.pdf",
+  "n": 28,
+  "judgement": "uncertain",
+  "verdict": "metadata_error",
+  "raw": "[28] M. A. Salim, T. D. Uram, J. T. Childers, P. Balaprakash, V. Vishwanath, and M. E. Papka, “Balsam: Automated Scheduling and Execution of Dynamic, Data-Intensive HPC Workflows,” in IEEE/ACM 9th Workshop on Python for High-Performance and Scientific Computing (PyHPC), IEEE, 2019, pp. 42-51. DOI: 10 . 1109 / Py HPC49452.2019.00006",
+  "parsed": {
+   "title": "Balsam: Automated Scheduling and Execution of Dynamic, Data-Intensive HPC Workflows",
+   "authors": [
+    "Salim",
+    "Uram",
+    "Childers",
+    "Balaprakash",
+    "Vishwanath",
+    "Papka"
+   ],
+   "year": 2019,
+   "venue": "in IEEE/ACM 9th Workshop on Python for High-Performance and Scientific Computing (PyHPC), IEEE",
+   "kind": "article",
+   "dois": [
+    "10.1109/pyhpc49452.2019.00006"
+   ],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Balsam: Automated Scheduling and Execution of Dynamic, Data-Intensive HPC Workflows",
+    "found": "Balsam: Automated Scheduling and Execution of Dynamic, Data-Intensive HPC Workflows",
+    "score": 1
+   },
+   {
+    "field": "identifier",
+    "status": "mismatch",
+    "cited": "doi:10.1109/pyhpc49452.2019.00006",
+    "note": "identifier not found"
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Salim, Uram, Childers, Balaprakash, Vishwanath, Papka",
+    "found": "Salim, Uram, Childers, Balaprakash, Vishwanath, Papka"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2019",
+    "found": "2019/2019"
+   },
+   {
+    "field": "venue",
+    "status": "na",
+    "cited": "in IEEE/ACM 9th Workshop on Python for High-Performance and Scientific Computing (PyHPC), IEEE",
+    "found": "arXiv.org"
+   },
+   {
+    "field": "venue",
+    "status": "mismatch",
+    "cited": "in IEEE/ACM 9th Workshop on Python for High-Performance and Scientific Computing (PyHPC), IEEE",
+    "found": "arXiv.org",
+    "note": "publication status unconfirmed"
+   }
+  ],
+  "issues": [
+   "doi:10.1109/pyhpc49452.2019.00006 does not resolve to any record",
+   "Only a preprint was found; publication in “in IEEE/ACM 9th Workshop on Python for High-Performance and Scientific Computing (PyHPC), IEEE” could not be confirmed"
+  ],
+  "match": {
+   "title": "Balsam: Automated Scheduling and Execution of Dynamic, Data-Intensive HPC Workflows",
+   "authors": [
+    [
+     "Salim",
+     "Michael A."
+    ],
+    [
+     "Uram",
+     "T."
+    ],
+    [
+     "Childers",
+     "J."
+    ],
+    [
+     "Balaprakash",
+     "Prasanna"
+    ],
+    [
+     "Vishwanath",
+     "V."
+    ],
+    [
+     "Papka",
+     "M."
+    ]
+   ],
+   "years": [
+    2019,
+    2019
+   ],
+   "venue": "arXiv.org",
+   "aliases": [
+    "arXiv.org",
+    "arXiv.org",
+    "ArXiv",
+    "ArXiv"
+   ],
+   "type": "JournalArticle",
+   "source": "semanticscholar",
+   "doi": "10.48550/arxiv.1909.08704"
+  },
+  "candidates": [
+   "semanticscholar: Balsam: Automated Scheduling and Execution of Dynamic, Data-Intensive HPC Workflows / Salim, Uram, Childers / 2019/2019 / arXiv.org",
+   "crossref: Balsam: Near Real-Time Experimental Data Analysis on Supercomputers / Salim, Uram, Childers / 2019 / 2019 IEEE/ACM 1st Annual Workshop on Large-scale Experiment-in-the-Loop Computing (XLOOP)",
+   "crossref: Workshop Organization /  / 2020 / 2020 IEEE/ACM 9th Workshop on Python for High-Performance and Scientific Computing (PyHPC)",
+   "crossref: Python Workflows on HPC Systems / Strasel, Reusch, Keuper / 2020 / 2020 IEEE/ACM 9th Workshop on Python for High-Performance and Scientific Computing (PyHPC)"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 2
+ },
+ {
+  "paper": "math.NA_2611.25245.pdf",
+  "n": 1,
+  "judgement": "false alarm",
+  "verdict": "metadata_error",
+  "raw": "[1] N. I. Achieser, Theory of approximation, Courier Corporation, 2013.",
+  "parsed": {
+   "title": "Theory of approximation",
+   "authors": [
+    "Achieser"
+   ],
+   "year": 2013,
+   "venue": "Courier Corporation",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Theory of approximation",
+    "found": "Theory of Approximation",
+    "score": 1
+   },
+   {
+    "field": "authors",
+    "status": "mismatch",
+    "cited": "Achieser",
+    "found": "Cooper, Achieser, Hyman",
+    "note": "2 author(s) omitted"
+   },
+   {
+    "field": "year",
+    "status": "mismatch",
+    "cited": "2013",
+    "found": "1960/1960"
+   },
+   {
+    "field": "venue",
+    "status": "mismatch",
+    "cited": "Courier Corporation",
+    "found": "Mathematical Gazette"
+   }
+  ],
+  "issues": [
+   "Incomplete author list: 2 of 3 authors omitted without “et al.”",
+   "Year 2013 does not match the published record (1960/1960)",
+   "Published in “Mathematical Gazette”, not “Courier Corporation”"
+  ],
+  "match": {
+   "title": "Theory of Approximation",
+   "authors": [
+    [
+     "Cooper",
+     "J."
+    ],
+    [
+     "Achieser",
+     "N. I."
+    ],
+    [
+     "Hyman",
+     "C."
+    ]
+   ],
+   "years": [
+    1960,
+    1960
+   ],
+   "venue": "Mathematical Gazette",
+   "aliases": [
+    "Mathematical Gazette",
+    "Mathematical Gazette",
+    "Math Gaz",
+    "The Mathematical Gazette",
+    "The Mathematical Gazette"
+   ],
+   "source": "semanticscholar",
+   "doi": "10.2307/3612294"
+  },
+  "candidates": [
+   "semanticscholar: Theory of Approximation / Cooper, Achieser, Hyman / 1960/1960 / Mathematical Gazette",
+   "crossref: Approximation by homogeneous polynomials / Totik / 2013 / Journal of Approximation Theory"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 1
+ },
+ {
+  "paper": "math.ST_2611.25163.pdf",
+  "n": 3,
+  "judgement": "new",
+  "verdict": "metadata_error",
+  "raw": "[AGJ15] Animashree Anandkumar, Rong Ge, and Majid Janzamin. Learning overcomplete latent variable models through tensor methods. In Proceedings of the 28th Conference on Learning Theory, volume 40 of Proceedings of Machine Learning Research, pages 36-112, 2015.",
+  "parsed": {
+   "title": "Learning overcomplete latent variable models through tensor methods",
+   "authors": [
+    "Anandkumar",
+    "Ge",
+    "Janzamin"
+   ],
+   "year": 2015,
+   "venue": "Proceedings of the 28th Conference on Learning Theory",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "mismatch",
+    "cited": "Learning overcomplete latent variable models through tensor methods",
+    "found": "Analyzing Tensor Power Method Dynamics: Applications to Learning Overcomplete Latent Variable Models",
+    "score": 0.6262626262626263
+   }
+  ],
+  "issues": [
+   "Closest real work has a different title: “Analyzing Tensor Power Method Dynamics: Applications to Learning Overcomplete Latent Variable Models”"
+  ],
+  "match": {
+   "title": "Analyzing Tensor Power Method Dynamics: Applications to Learning Overcomplete Latent Variable Models",
+   "authors": [
+    [
+     "Anandkumar",
+     "Anima"
+    ],
+    [
+     "Ge",
+     "Rong"
+    ],
+    [
+     "Janzamin",
+     "Majid"
+    ]
+   ],
+   "years": [
+    2014,
+    2014
+   ],
+   "venue": "arXiv.org",
+   "aliases": [
+    "arXiv.org",
+    "arXiv.org",
+    "ArXiv",
+    "ArXiv"
+   ],
+   "type": "JournalArticle",
+   "source": "semanticscholar",
+   "doi": "10.48550/arxiv.1411.1488"
+  },
+  "candidates": [
+   "semanticscholar: Sample Complexity Analysis for Learning Overcomplete Latent Variable Models through Tensor Methods / Anandkumar, Ge, Janzamin / 2017/2017 / arXiv: Learning",
+   "semanticscholar: Analyzing Tensor Power Method Dynamics: Applications to Learning Overcomplete Latent Variable Models / Anandkumar, Ge, Janzamin / 2014/2014 / arXiv.org",
+   "crossref: Tensor Decompositions for Learning Latent Variable Models (A Survey for ALT) / Anandkumar, Ge, Hsu / 2015 / Lecture Notes in Computer Science",
+   "crossref: Spectral Learning on Matrices and Tensors / Janzamin, Ge, Kossaifi / 2019 / ",
+   "crossref: Spectral Learning on Matrices and Tensors / Janzamin, Ge, Kossaifi / 2019 / Foundations and Trends® in Machine Learning"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 2
+ },
+ {
+  "paper": "math.ST_2611.25163.pdf",
+  "n": 15,
+  "judgement": "false alarm",
+  "verdict": "metadata_error",
+  "raw": "[Das99] Sanjoy Dasgupta. Learning mixtures of gaussians. In 40th Annual Symposium on Foundations of Computer Science (Cat. No. 99CB37039), pages 634-644. IEEE, 1999.",
+  "parsed": {
+   "title": "Learning mixtures of gaussians",
+   "authors": [
+    "Dasgupta"
+   ],
+   "year": 1999,
+   "venue": "40th Annual Symposium on Foundations of Computer Science (Cat. No. 99CB37039)",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Learning mixtures of gaussians",
+    "found": "Learning mixtures of Gaussians",
+    "score": 1
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Dasgupta",
+    "found": "Dasgupta"
+   },
+   {
+    "field": "year",
+    "status": "mismatch",
+    "cited": "1999",
+    "found": "2003"
+   },
+   {
+    "field": "venue",
+    "status": "match",
+    "cited": "40th Annual Symposium on Foundations of Computer Science (Cat. No. 99CB37039)",
+    "found": "40th Annual Symposium on Foundations of Computer Science (Cat. No.99CB37039)"
+   }
+  ],
+  "issues": [
+   "Year 1999 does not match the published record (2003)"
+  ],
+  "match": {
+   "title": "Learning mixtures of Gaussians",
+   "authors": [
+    [
+     "Dasgupta",
+     "S."
+    ]
+   ],
+   "years": [
+    2003
+   ],
+   "venue": "40th Annual Symposium on Foundations of Computer Science (Cat. No.99CB37039)",
+   "aliases": [
+    "40th Annual Symposium on Foundations of Computer Science (Cat. No.99CB37039)",
+    "40th Annual Symposium on Foundations of Computer Science",
+    "SFCS-99"
+   ],
+   "type": "proceedings-article",
+   "source": "crossref",
+   "doi": "10.1109/sffcs.1999.814639"
+  },
+  "candidates": [
+   "crossref: Learning mixtures of Gaussians / Dasgupta / 2003 / 40th Annual Symposium on Foundations of Computer Science (Cat. No.99CB37039)",
+   "semanticscholar: Learning Mixtures of Gaussians Using Diffusion Models / Gatmiry, Kelner, Lee / 2024/2024 / arXiv.org",
+   "crossref: Cache-oblivious algorithms / Frigo, Leiserson, Prokop / 1999 / 40th Annual Symposium on Foundations of Computer Science (Cat. No.99CB37039)",
+   "crossref: Setting parameters by example / Eppstein / 2003 / 40th Annual Symposium on Foundations of Computer Science (Cat. No.99CB37039)",
+   "crossref: Noncryptographic selection protocols / Feige / 2003 / 40th Annual Symposium on Foundations of Computer Science (Cat. No.99CB37039)"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 1
+ },
+ {
+  "paper": "math.ST_2611.25163.pdf",
+  "n": 24,
+  "judgement": "false alarm",
+  "verdict": "metadata_error",
+  "raw": "[FC18] Yingjie Fei and Yudong Chen. Hidden integrality of sdp relaxations for sub-gaussian mixture models. In Proceedings of the 31st Conference On Learning Theory, volume 75 of Proceedings of Machine Learning Research, pages 1931-1965. PMLR, 2018.",
+  "parsed": {
+   "title": "Hidden integrality of sdp relaxations for sub-gaussian mixture models",
+   "authors": [
+    "Fei",
+    "Chen"
+   ],
+   "year": 2018,
+   "venue": "Proceedings of the 31st Conference On Learning Theory",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Hidden integrality of sdp relaxations for sub-gaussian mixture models",
+    "found": "Hidden Integrality of SDP Relaxation for Sub-Gaussian Mixture Models",
+    "score": 0.9855072463768116
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Fei, Chen",
+    "found": "Fei, Chen"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2018",
+    "found": "2018/2018"
+   },
+   {
+    "field": "venue",
+    "status": "na",
+    "cited": "Proceedings of the 31st Conference On Learning Theory",
+    "found": "arXiv.org"
+   },
+   {
+    "field": "venue",
+    "status": "mismatch",
+    "cited": "Proceedings of the 31st Conference On Learning Theory",
+    "found": "arXiv.org",
+    "note": "publication status unconfirmed"
+   }
+  ],
+  "issues": [
+   "Only a preprint was found; publication in “Proceedings of the 31st Conference On Learning Theory” could not be confirmed"
+  ],
+  "match": {
+   "title": "Hidden Integrality of SDP Relaxation for Sub-Gaussian Mixture Models",
+   "authors": [
+    [
+     "Fei",
+     "Yingjie"
+    ],
+    [
+     "Chen",
+     "Yu-Dong"
+    ]
+   ],
+   "years": [
+    2018,
+    2018
+   ],
+   "venue": "arXiv.org",
+   "aliases": [
+    "arXiv.org",
+    "arXiv.org",
+    "ArXiv",
+    "ArXiv"
+   ],
+   "type": "JournalArticle",
+   "source": "semanticscholar",
+   "doi": "10.48550/arxiv.1803.06510"
+  },
+  "candidates": [
+   "semanticscholar: Hidden Integrality of SDP Relaxation for Sub-Gaussian Mixture Models / Fei, Chen / 2018/2018 / arXiv.org",
+   "crossref: Hidden Integrality and Semirandom Robustness of SDP Relaxation for Sub-Gaussian Mixture Model / Fei, Chen / 2022 / Mathematics of Operations Research",
+   "crossref: Gaussian Mixture Models /  / 2018 / Handbook of Machine Learning",
+   "crossref: Gaussian Mixture Models /  / 2018 / Algorithmic Aspects of Machine Learning",
+   "crossref: Incremental Learning Based on Growing Gaussian Mixture Models / Bouchachia, Vanaret / 2011 / 2011 10th International Conference on Machine Learning and Applications and Workshops"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 1
+ },
+ {
+  "paper": "physics.plasm-ph_2611.24523.pdf",
+  "n": 2,
+  "judgement": "false alarm",
+  "verdict": "not_found",
+  "raw": "[2] P. Shukla, Nonlinear Waves , 197 (1983).",
+  "parsed": {
+   "title": "P. Shukla, Nonlinear Waves , 197 (1983)",
+   "authors": [],
+   "year": 1983,
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [],
+  "issues": [
+   "OpenAlex did not respond; re-run later to confirm",
+   "No matching work in Crossref, Semantic Scholar, Europe PMC"
+  ],
+  "candidates": [
+   "semanticscholar: Nonlinear effects at the upper‐hybrid layer / Sharma, Shukla / 1983 / Physics of Fluids",
+   "crossref: Linear and nonlinear modified electron-acoustic waves / Yu, Shukla / 1983/2009 / Journal of Plasma Physics",
+   "crossref: Solitons in Plasma Physics / Shukla / 1983 / Nonlinear Waves",
+   "crossref: Attenuation of Strong Shock Waves in Laminate Materials / Nesterenko, Fomin, Cheskidov / 1983 / Nonlinear Deformation Waves",
+   "crossref: Nonlinear propagation of hydromagnetic waves in high-beta plasmas / Shukla / 1983 / The Astrophysical Journal"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 2
+ },
+ {
+  "paper": "physics.ins-det_2611.24776.pdf",
+  "n": 7,
+  "judgement": "false alarm",
+  "verdict": "metadata_error",
+  "raw": "[7] Zhen Chen, Yi Jiang, Yu-Tsun Shao, Megan E. Holtz, Michal Odstrčil, Manuel Guizar-Sicairos, Isabelle Hanke, Steffen Ganschow, Darrell G. Schlom, and David A. Muller. Dataset: Electron ptychography achieves atomic-resolution limits set by lattice vibrations. PARADIM, an NSF Materials Innovation Platform, 2021. CC BY-NC-ND 4.0.",
+  "parsed": {
+   "title": "Dataset: Electron ptychography achieves atomic-resolution limits set by lattice vibrations",
+   "authors": [
+    "Chen",
+    "Jiang",
+    "Shao",
+    "Holtz",
+    "Odstrčil",
+    "Guizar-Sicairos",
+    "Hanke",
+    "Ganschow",
+    "Schlom",
+    "Muller"
+   ],
+   "year": 2021,
+   "venue": "PARADIM, an NSF Materials Innovation Platform",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Dataset: Electron ptychography achieves atomic-resolution limits set by lattice vibrations",
+    "found": "Electron ptychography achieves atomic-resolution limits set by lattice vibrations",
+    "score": 1,
+    "note": "subtitle differs"
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Chen, Jiang, Shao, Holtz, Odstrčil, Guizar-Sicairos, Hanke, Ganschow, Schlom, Muller",
+    "found": "Chen, Jiang, Shao, Holtz, Odstrčil, Guizar-Sicairos, Hanke, Ganschow"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2021",
+    "found": "2021"
+   },
+   {
+    "field": "venue",
+    "status": "mismatch",
+    "cited": "PARADIM, an NSF Materials Innovation Platform",
+    "found": "Science"
+   },
+   {
+    "field": "pages",
+    "status": "minor",
+    "cited": "4",
+    "found": "372 / 826-831",
+    "note": "Bibliographic details differ: volume 4 vs 372"
+   }
+  ],
+  "issues": [
+   "Published in “Science”, not “PARADIM, an NSF Materials Innovation Platform”"
+  ],
+  "match": {
+   "title": "Electron ptychography achieves atomic-resolution limits set by lattice vibrations",
+   "authors": [
+    [
+     "Chen",
+     "Zhen"
+    ],
+    [
+     "Jiang",
+     "Yi"
+    ],
+    [
+     "Shao",
+     "Yu-Tsun"
+    ],
+    [
+     "Holtz",
+     "Megan E."
+    ],
+    [
+     "Odstrčil",
+     "Michal"
+    ],
+    [
+     "Guizar-Sicairos",
+     "Manuel"
+    ],
+    [
+     "Hanke",
+     "Isabelle"
+    ],
+    [
+     "Ganschow",
+     "Steffen"
+    ],
+    [
+     "Schlom",
+     "Darrell G."
+    ],
+    [
+     "Muller",
+     "David A."
+    ]
+   ],
+   "years": [
+    2021
+   ],
+   "venue": "Science",
+   "aliases": [
+    "Science",
+    "Science"
+   ],
+   "type": "journal-article",
+   "source": "crossref",
+   "doi": "10.1126/science.abg2533"
+  },
+  "candidates": [
+   "crossref: Electron ptychography achieves atomic-resolution limits set by lattice vibrations / Chen, Jiang, Shao / 2021 / Science",
+   "crossref: Multislice electron ptychography enables lattice vibration-limited resolution and linear phase-contrast imaging in thick samples / Chen, Jiang, Shao / 2021 / Microscopy and Microanalysis",
+   "crossref: Lattice-Vibration Limited Resolution, 3D Depth Sectioning and High Dose-Efficient Imaging via Multislice Electron Ptychography / Chen, Jiang, Shao / 2022 / Microscopy and Microanalysis",
+   "crossref: Open data from the first and second observing runs of Advanced LIGO and Advanced Virgo / Rich Abbott, Thomas D. Abbott, Sheelu Abraham / 2021 / SoftwareX",
+   "crossref: Seventh Sense Research Group Home Journals For Authors For Editors For Reviewers Call for Paper May 2023 IJEEE Aim &amp; Scope Editorial Board Paper Submission Current Issue Archives Publication Ethics Guidelines for Authors Guidelines for Editors Guidelines for Reviewer Indexing Article Processing charges Mode of Payment for APC Paper Template Copyright Form Alcohol Sensing Device using Glass Substrates Coated with Agarose Gel and HEC/PVDF Nanomaterial International Journal of Electrical and Electronics Engineering © 2023 by SSRG - IJEEE Journal Volume 10 Issue 4 Year of Publication : 2023 Authors : Marlina Jahava, Mohd Hafiz Jali, Danusha Pillai, Haziezol Helmi Mohd Yusof, Md. Ashadi Md Johari, Aminah Ahmad, Siti Halma Johari, Sulaiman Wadi Harun, Siddharth Thokchom 10.14445/23488379/IJEEE-V10I4P104 pdf How to Cite? Marlina Jahava, Mohd Hafiz Jali, Danusha Pillai, Haziezol Helmi Mohd Yusof, Md. Ashadi Md Johari, Aminah Ahmad, Siti Halma Johari, Sulaiman Wadi Harun, Siddharth Thokchom, \"Alcohol Sensing Device using Glass Substrates Coated with Agarose Gel and HEC/PVDF Nanomaterial,\" SSRG International Journal of Electrical and Electronics Engineering, vol. 10, no. 4, pp. 37-45, 2023. Crossref, https://doi.org/10.14445/23488379/IJEEE-V10I4P104 Abstract: This paper reported the development of an alcohol sensor based on a glass substrate platform. The glass substrate was coated with two nanomaterial types: Hydroxyethylcellulose/Polyvinylidene fluoride (HEC/PVDF) and Agarose Gel, for comparison purposes. Three layers of coating material have been applied to the glass substrate to obtain the optimum sensing response. The coated glass substrate is kept dry for 24 hours before expose to variations of ethanol concentration to investigate the sensing response. A significant response to alcohol concentrations has been observed for both samples due to the changeable refractive index layer of the coating material. The sensitivity improved by a factor of 1.18 and 1.51, respectively, compared to the bared glass. The proposed sensor employed low-cost and commercially available components such as a glass substrate, LED light source and Arduino microcontroller to perform as an alcohol sensor. It prevents using expensive laser-based sensors, which is less practical in real industrial applications. Based on the experiment results, the HEC/PVDF-coated glass produced has demonstrated better results in terms of repeatability, hysteresis, stability and sensitivity as compared to agarose gel-coated glass. Hence the proposed sensor has a decent potential as an alcohol sensor Keywords: Alcohol sensor, Glass substrate, HEC/PVDF, Agarose gel. References: [1] G. Ayares et al., \"Public Health Measures and Prevention of Alcohol-Associated Liver Disease,\" Journal of Clinical and Experimental Hepatology, vol. 12, no. 6, pp. 1480-1491, 2022. [CrossRef] [Google Scholar] [Publisher Link] [2] E. Scafato et al., \"The Undertreatment of Alcohol-Related Liver Diseases Among People with Alcohol Use Disorder,\" European Review for Medical and Pharmacological Sciences, vol. 24, no. 2, pp. 974-982, 2020. [CrossRef] [Google Scholar] [Publisher Link] [3] Izanoordina Ahmad, Muhammad Firdaus Suhaimi, and Nur Asfarina Nasuha Yusri, \"Development of Alcohol Sensor Detector with Engine Locking System for Accident Prevention,\" AIP Conference Proceedings, p. 020196, 2019. [CrossRef] [Google Scholar] [Publisher Link] [4] James C. Fell et al., \"The Impact of Underage Drinking Laws on Alcohol-Related Fatal Crashes of Young Drivers,\" Alcoholism: Clinical and Experimental Research, vol. 33, pp. 1208-1219, 2009. [CrossRef] [Google Scholar] [Publisher Link] [5] Nicholas V. Emanuele, Terrence F. Swade, and Mary Ann Emanuele,, \"Consequences of Alcohol Use in Diabetics,\" Alcohol Health and Research World, vol. 22, no. 3, pp. 211-219, 1998. [Google Scholar] [Publisher Link] [6] Zijie Lin et al., \"Evaluation and Review of Ways to Differentiate Sources of Ethanol in Postmortem Blood,\" International Journal of Legal Medicine, vol. 134, no. 6, pp. 2081-2093, 2020. [CrossRef] [Google Scholar] [Publisher Link] [7] Delvin Sidqey, Veronica Horpestad Liane, and Lena Kristoffersen, \"Quantitative Determination of Ethyl Glucuronide and Ethyl Sulfate in Postmortem and Antemortem Whole Blood Using Phospholipid Removal 96-Well Plate and UHPLC–MS-MS,\" Journal of Analytical Toxicology, vol. 45, no. 4, pp. 378-388, 2021. [CrossRef] [Google Scholar] [Publisher Link] [8] Dr.A.Bhavana, and M.Johnkarol, \"Tensile, Thermal, and Morphological Belongings, with Consumption of Agro Ravage Polymers into PVC/NBR Alloys,\" SSRG International Journal of Chemical Engineering Research, vol. 2, no. 1, pp. 11-14, 2015. [CrossRef] [Publisher Link] [9] E. Filippo, A. Serra, and D. Manno, \"Poly (Vinyl Alcohol) Capped Silver Nanoparticles as Localized Surface Plasmon Resonance-Based Hydrogen Peroxide Sensor,\" Sensors and Actuators B: Chemical, vol. 138, no. 2, pp. 625-630, 2009. [CrossRef] [Google Scholar] [Publisher Link] [10] Lufsyi Mahmudin et al., \"Optical Properties of Silver Nanoparticles for Surface Plasmon Resonance (SPR)-Based Biosensor Applications,\" Journal of Modern Physics, vol. 6, pp. 1071-1076, 2015. [CrossRef] [Google Scholar] [Publisher Link] [11] Colette McDonagh, Conor S. Burke, and Brian D. MacCraith, \"Optical Chemical Sensors,\" Chemical Reviews, vol. 108, pp. 400-422, 2008. [CrossRef] [Google Scholar] [Publisher Link] [12] Jinjun Shi et al., \"Recent Developments in Nanomaterial Optical Sensors,\" TrAC Trends in Analytical Chemistry, vol. 23, no. 5, pp. 351-360, 2004. [CrossRef] [Google Scholar] [Publisher Link] [13] Yuan-Qing Li, Shao-Yun Fu, and Yiu-Wing Mai, \"Preparation and Characterization of Transparent Zno/Epoxy Nanocomposites with High-UV Shielding Efficiency,\" Polymer, vol. 47, no. 6, pp. 2127-2132, 2006. [CrossRef] [Google Scholar] [Publisher Link] [14] Zohra Nazir Kayani et al., \"Fabrication and Properties of Zinc Oxide Thin Film Prepared by Sol-Gel Dip Coating Method,\" Materials Science-Poland, vol. 33, pp. 515-520, 2015. [CrossRef] [Google Scholar] [Publisher Link] [15] Affa Rozana Abdul Rashid et al., \"ZnO Coated Optical Fiber for Alcohol Sensing Applications,\" Solid State Phenomena, pp. 70-77, 2020. [CrossRef] [Google Scholar] [Publisher Link] [16] Kyu J. Lee et al., \"Agarose-Gel Based Guided-Mode Resonance Humidity Sensor,\" IEEE Sensors Journal, vol. 7, no. 3, pp. 409-414, 2007. [CrossRef] [Google Scholar] [Publisher Link] [17] M. Batumalay et al., \"Study of a Fiber Optic Humidity Sensor Based on Agarose Gel,\" Journal of Modern Optics, vol. 61, pp. 244-248, 2014. [CrossRef] [Google Scholar] [Publisher Link] [18] Malathy Batumalay et al., \"Tapered Plastic Optical Fiber Coated With Graphene for Uric Acid Detection,\" IEEE Sensors Journal, vol. 14, no. 5, pp. 1704-1709, 2014. [CrossRef] [Google Scholar] [Publisher Link] [19] Alice Bukola Olanipekun, \"Lattice Dynamics of Mixed Divalent Metal Fluorides,\" SSRG International Journal of Applied Physics, vol. 9, no. 1, pp. 12-16, 2022. [CrossRef] [Google Scholar] [Publisher Link] [20] Mohd Hafiz Jali et al., \"Humidity Sensing Using Microfiber-Zno Nanorods Coated Glass Structure,\" Optik, vol. 238, p. 166715, 2021. [CrossRef] [Google Scholar] [Publisher Link] [21] Md Ashadi Md Johari et al., \"Polyvinyl Alcohol Coating Microbottle Resonator on Whispering Gallery Modes for Ethanol Liquid Sensor,\" Optics &amp; Laser Technology, vol. 143, p. 107379, 2021. [CrossRef] [Google Scholar] [Publisher Link] [22] Huda Adnan Zain et al., \"Agarose Coated Micro-Bottle Sensor for Relative Humidity Detection,\" Optoelectronics Letters, vol. 17, pp. 328-333, 2021. [CrossRef] [Google Scholar] [Publisher Link] [23] Susana Novais, Marta S. Ferreira, and João L. Pinto, \"Relative Humidity Fiber Sensor Based on Multimode Interferometer Coated with Agarose-Gel,\" Coatings, vol. 8, p. 453, 2018. [CrossRef] [Google Scholar] [Publisher Link] [24] Mohd Hafiz Jali et al., \"Effect of HEC/PVDF Coating on Glass Substrate for Formaldehyde Concentration Sensing,\" PrzeglĄd Elektrotechniczny, vol. 98, no. 4, pp. 40-43, 2022. [CrossRef] [Google Scholar] [Publisher Link] [25] H. A. Zain et al., \"HEC/PVDF Coated Microbottle Resonators for Relative Humidity Detection,\" Optik, vol. 232, p. 166534, 2021. [CrossRef] [Google Scholar] [Publisher Link] [26] M. O'Toole and D. Diamond, \"Absorbance Based Light Emitting Diode Optical Sensors and Sensing Devices,\" Sensors, vol. 8, no. 4, pp. 2453-2479, 2008. [CrossRef] [Google Scholar] [Publisher Link] [27] Sarah A. Elawam et al., \"Structural Configuration and Thermal Analyses of Composite Films of Poly (methyl methacrylate)/Lead Oxide Nanoparticles,\" SSRG International Journal of Applied Physics, vol. 3, no. 3, pp. 6-14, 2016. [CrossRef] [Google Scholar] [Publisher Link] [28] Masayuki Morisawa, and Shinzo Muto, \"Plastic Optical Fiber Sensing of Alcohol Concentration in Liquors,\" Journal of Sensors, vol. 2012, 2012. [CrossRef] [Google Scholar] [Publisher Link] [29] Hasnida Saad, Mohd Tarmizi Ali, and M. Kamil Abd Rahman, \"High Sensitivity Optical POF Sensor for Detecting Low Ethanol Concentration in Water,\" Advanced Materials Research, pp. 693-698, 2015. [CrossRef] [Google Scholar] [Publisher Link] [30] Ismel Dominguez et al., \"Dually Nanocoated Planar Waveguides Towards Multi-Parameter Sensing,\" Scientific Reports, vol. 11, p. 3669, 2021. [CrossRef] [Google Scholar] [Publisher Link] [31] Riya Alice B. John, and A. Ruban Kumar, \"A Review on Resistive-Based Gas Sensors for the Detection of Volatile Organic Compounds Using Metal-Oxide Nanostructures,\" Inorganic Chemistry Communications, vol. 133, p. 108893, 2021. [CrossRef] [Google Scholar] [Publisher Link] [32] Yali Cheng et al., \"Low Cost Fabrication of Highly Sensitive Ethanol Sensor Based on Pd-Doped Α-Fe2O3 Porous Nanotubes,\" Materials Research Bulletin, vol. 105, pp. 21-27, 2018. [CrossRef] [Google Scholar] [Publisher Link] [33] K. Arunganesh et al., \"Smart Voltage Protection System for Industries,\" International Journal of Electrical and Electronics Engineering, vol. 8, pp. 5-12, 2021. [CrossRef] [Publisher Link] [34] Mohd Hafiz Jali et al., \"Agarose Gel Coated Glass Substrate for Formaldehyde Sensing Application,\" PrzeglĄd Elektrotechniczny, vol. 1, pp. 97-101, 2022. [CrossRef] [Publisher Link] [35] Gerd H. Woehrle, Marvin G. Warner, and James E. Hutchison, \"Molecular-Level Control of Feature Separation in One-Dimensional Nanostructure Assemblies Formed by Biomolecular Nanolithography,\" Langmuir, vol. 20, pp. 5982-5988, 2004. [CrossRef] [Google Scholar] [Publisher Link] [36] M. Batumalay et al., \"Tapered Plastic Optical Fiber Coated with Zno Nanostructures for the Measurement of Uric Acid Concentrations and Changes in Relative Humidity,\" Sensors and actuators A: Physical, vol. 210, pp. 190-196, 2014. [CrossRef] [Google Scholar] [Publisher Link] [37] Feng-Bo Yang et al., \"A Low-Cost Light-Emitting Diode Induced Fluorescence Detector for Capillary Electrophoresis Based on an Orthogonal Optical Arrangement,\" Talanta, vol. 78, no. 3, pp. 1155-1158, 2009. [CrossRef] [Google Scholar] [Publisher Link] Quick Links Home Journals Call For Paper Authors Paper submission Preparation Guidelines Review Process Editors Reviewer Guidelines Join as Editor Special Issue Proposal Events Conferences Awards Special Issues SSRG Contact Us Indexing Follow Us Facebook Linkedin Twitter © SSRG International Journals - All right reserved Creative Commons License SSRG site and its metadata are licensed under CC BY-NC-ND Designed by VTS / Jahava, Jali, Pillai / 2023 / International Journal of Electrical and Electronics Engineering"
+  ],
+  "failed": [],
+  "unrecorded": 0
+ },
+ {
+  "paper": "cond-mat.mes-hall_2611.26616.pdf",
+  "n": 60,
+  "judgement": "false alarm",
+  "verdict": "metadata_error",
+  "raw": "[61] A. Panigrahi, R. Moessner, and B. Roy, Non-Hermitian metals and semimetals, Physical Review B 104, 235113 dislocation modes: Stability and melting across excep- (2021). tional points, Physical Review B 106, L041302 (2022),",
+  "parsed": {
+   "title": "Non-Hermitian metals and semimetals, Physical Review B 104, 235113 dislocation modes: Stability and melting across excep- (2021). tional points",
+   "authors": [
+    "Panigrahi",
+    "Moessner",
+    "Roy"
+   ],
+   "year": 2021,
+   "venue": "Physical Review B 106, L041302",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "mismatch",
+    "cited": "Non-Hermitian metals and semimetals, Physical Review B 104, 235113 dislocation modes: Stability and melting across excep- (2021). tional points",
+    "found": "Non-Hermitian dislocation modes: Stability and melting across exceptional points",
+    "score": 0.7804878048780488
+   }
+  ],
+  "issues": [
+   "Closest real work has a different title: “Non-Hermitian dislocation modes: Stability and melting across exceptional points”"
+  ],
+  "match": {
+   "title": "Non-Hermitian dislocation modes: Stability and melting across exceptional points",
+   "authors": [
+    [
+     "Panigrahi",
+     "Archisman"
+    ],
+    [
+     "Moessner",
+     "Roderich"
+    ],
+    [
+     "Roy",
+     "Bitan"
+    ]
+   ],
+   "years": [
+    2022
+   ],
+   "venue": "Physical Review B",
+   "aliases": [
+    "Physical Review B",
+    "Phys. Rev. B"
+   ],
+   "type": "journal-article",
+   "source": "crossref",
+   "doi": "10.1103/physrevb.106.l041302"
+  },
+  "candidates": [
+   "crossref: Non-Hermitian dislocation modes: Stability and melting across exceptional points / Panigrahi, Moessner, Roy / 2022 / Physical Review B",
+   "crossref: Non-Hermitian higher-order Weyl semimetals / Ghorashi, Li, Sato / 2021 / Physical Review B",
+   "crossref: Non-Hermitian higher-order Dirac semimetals / Ghorashi, Li, Sato / 2021 / Physical Review B",
+   "crossref: Dislocation non-Hermitian skin effect / Schindler, Prem / 2021 / Physical Review B",
+   "crossref: Classification of Exceptional Points and Non-Hermitian Topological Semimetals / Kawabata, Bessho, Sato / 2019 / Physical Review Letters"
+  ],
+  "failed": [
+   "openalex",
+   "semanticscholar"
+  ],
+  "unrecorded": 3
+ },
+ {
+  "paper": "hep-ex_2611.26449.pdf",
+  "n": 30,
+  "judgement": "false alarm",
+  "verdict": "id_mismatch",
+  "raw": "[30] Heavy Flavor Averaging Group, S. Banerjee et al., Averages of b-hadron, chadron, and τ -lepton properties as of 2023, Phys. Rev. D113 (2026) 012008, arXiv:2411.18639, with specific result from doi:10.5281/zenodo.19446771.",
+  "parsed": {
+   "title": "012008",
+   "authors": [
+    "Banerjee",
+    "b-hadron",
+    "chadron"
+   ],
+   "year": 2026,
+   "venue": "arXiv. , with specific result from",
+   "kind": "article",
+   "dois": [
+    "10.5281/zenodo.19446771"
+   ],
+   "arxiv": [
+    "2411.18639"
+   ]
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "012008",
+    "found": "Averages of <math display=\"inline\"><mi>b</mi></math>-hadron, <math display=\"inline\"><mi>c</mi></math>-hadron, and <math display=\"inline\"><mi>τ</mi></math>-lepton properties as of 2023",
+    "score": 0.9838709677419355
+   },
+   {
+    "field": "identifier",
+    "status": "match",
+    "cited": "arXiv:2411.18639",
+    "found": "10.48550/arxiv.2411.18639"
+   },
+   {
+    "field": "identifier",
+    "status": "mismatch",
+    "cited": "doi:10.5281/zenodo.19446771",
+    "found": "HFLAV results for b-lifetimes and oscillations parameters",
+    "note": "identifier resolves to a different work"
+   },
+   {
+    "field": "authors",
+    "status": "mismatch",
+    "cited": "Banerjee, b-hadron, chadron",
+    "found": "Banerjee, Ben-Haim, Bernlochner, Bertholet, Bona, Bozek, Bozzi, Brodzicka, …",
+    "note": "1 cited author(s) not on the paper"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2026",
+    "found": "2024/2026"
+   },
+   {
+    "field": "venue",
+    "status": "na",
+    "cited": "arXiv. , with specific result from",
+    "found": "Phys. Rev. D"
+   }
+  ],
+  "issues": [
+   "Author list does not match the published work: chadron not among its authors",
+   "doi:10.5281/zenodo.19446771 points to a different work: “HFLAV results for b-lifetimes and oscillations parameters”"
+  ],
+  "match": {
+   "title": "Averages of <math display=\"inline\"><mi>b</mi></math>-hadron, <math display=\"inline\"><mi>c</mi></math>-hadron, and <math display=\"inline\"><mi>τ</mi></math>-lepton properties as of 2023",
+   "authors": [
+    [
+     "Banerjee",
+     "Sw."
+    ],
+    [
+     "Ben-Haim",
+     "Eli"
+    ],
+    [
+     "Bernlochner",
+     "Florian Urs"
+    ],
+    [
+     "Bertholet",
+     "Emilie"
+    ],
+    [
+     "Bona",
+     "Marcella"
+    ],
+    [
+     "Bozek",
+     "Andrzej"
+    ],
+    [
+     "Bozzi",
+     "Concezio"
+    ],
+    [
+     "Brodzicka",
+     "Jolanta"
+    ],
+    [
+     "Chobanova",
+     "Veronika"
+    ],
+    [
+     "Chrzaszcz",
+     "Marcin Jakub"
+    ],
+    [
+     "Egede",
+     "Ulrik"
+    ],
+    [
+     "Gersabeck",
+     "Marco"
+    ],
+    [
+     "Goldenzweig",
+     "Pablo"
+    ],
+    [
+     "Gharbi",
+     "Nada"
+    ],
+    [
+     "Grillo",
+     "Lucia"
+    ],
+    [
+     "Hayasaka",
+     "Kiyoshi"
+    ],
+    [
+     "Humair",
+     "Thibaud"
+    ],
+    [
+     "Johnson",
+     "Daniel"
+    ],
+    [
+     "Kuhr",
+     "Thomas"
+    ],
+    [
+     "Leroy",
+     "Olivier"
+    ],
+    [
+     "Lusiani",
+     "Alberto"
+    ],
+    [
+     "Ma",
+     "Hai Long"
+    ],
+    [
+     "Margoni",
+     "Martino"
+    ],
+    [
+     "Mizuk",
+     "Roman"
+    ],
+    [
+     "Naik",
+     "Paras P."
+    ],
+    [
+     "Nanut Petric",
+     "Tara"
+    ],
+    [
+     "Pereiro Castro",
+     "Asier"
+    ],
+    [
+     "Prim",
+     "Markus Tobias"
+    ],
+    [
+     "Roney",
+     "J.Michael"
+    ],
+    [
+     "Rotondo",
+     "Marcello"
+    ],
+    [
+     "Schneider",
+     "Olivier"
+    ],
+    [
+     "Schwanda",
+     "Christoph"
+    ],
+    [
+     "Schwartz",
+     "Alan Jay"
+    ],
+    [
+     "Serrano",
+     "Justine"
+    ],
+    [
+     "Schwartz",
+     "Boris"
+    ],
+    [
+     "Soffer",
+     "Abner"
+    ],
+    [
+     "Whitehead",
+     "Mark"
+    ],
+    [
+     "Yelton",
+     "John Martin"
+    ],
+    [
+     "Heavy Flavor Averaging Group (HFLAV) Collaboration",
+     ""
+    ]
+   ],
+   "years": [
+    2024,
+    2026
+   ],
+   "venue": "Phys. Rev. D",
+   "aliases": [
+    "Phys.Rev.D"
+   ],
+   "type": "article",
+   "source": "inspire",
+   "doi": "10.1103/x87q-tld5"
+  },
+  "candidates": [
+   "inspire: Averages of <math display=\"inline\"><mi>b</mi></math>-hadron, <math display=\"inline\"><mi>c</mi></math>-hadron, and <math display=\"inline\"><mi>τ</mi></math>-lepton properties as of 2023 / Banerjee, Ben-Haim, Bernlochner / 2024/2026 / Phys. Rev. D",
+   "datacite: Averages of $b$-hadron, $c$-hadron, and $τ$-lepton properties as of 2023 / Banerjee, Ben-Haim, Bernlochner / 2024 / arXiv",
+   "datacite: HFLAV results for b-lifetimes and oscillations parameters / Group / 2026 / HFLAV",
+   "openalex: Improved measurement of C!P violation in B0s ! → J/ψπ+π- decays / collaboration, Aaij, Abdelfatah / 2026 / arXiv (Cornell University)",
+   "crossref: Lepton pair production in hadron-hadron collisions / Paar, Paschos / 1974 / Physical Review D"
+  ],
+  "failed": [],
+  "unrecorded": 0
+ },
+ {
+  "paper": "hep-ex_2611.26449.pdf",
+  "n": 54,
+  "judgement": "new",
+  "verdict": "metadata_error",
+  "raw": "[54] A. L. Kagan and M. D. Sokoloff, Indirect CP violation and implications for D0-D0 and B0-B0 mixing, Phys. Rev. D80 (2009) 076008, arXiv:0907.3917. s s",
+  "parsed": {
+   "title": "Indirect CP violation and implications for D0-D0 and B0-B0 mixing",
+   "authors": [
+    "Kagan",
+    "Sokoloff"
+   ],
+   "year": 2009,
+   "venue": "Phys. Rev. D80",
+   "kind": "article",
+   "dois": [],
+   "arxiv": [
+    "0907.3917"
+   ]
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "mismatch",
+    "cited": "Indirect CP violation and implications for D0-D0 and B0-B0 mixing",
+    "found": "On Indirect CP Violation and Implications for D0-\\overline{D0} and Bs -\\overline{Bs} mixing",
+    "score": 0.8769230769230769,
+    "note": "words differ: published “on”, published “bs”"
+   },
+   {
+    "field": "identifier",
+    "status": "match",
+    "cited": "arXiv:0907.3917",
+    "found": "10.48550/arxiv.0907.3917"
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Kagan, Sokoloff",
+    "found": "Kagan, Sokoloff"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2009",
+    "found": "2009"
+   },
+   {
+    "field": "venue",
+    "status": "na",
+    "cited": "Phys. Rev. D80",
+    "found": "arXiv"
+   }
+  ],
+  "issues": [
+   "Title differs from the published title (published “on”, published “bs”)"
+  ],
+  "match": {
+   "title": "On Indirect CP Violation and Implications for D0-\\overline{D0} and Bs -\\overline{Bs} mixing",
+   "authors": [
+    [
+     "Kagan",
+     "Alexander L."
+    ],
+    [
+     "Sokoloff",
+     "Michael D."
+    ]
+   ],
+   "years": [
+    2009
+   ],
+   "venue": "arXiv",
+   "aliases": [
+    "arXiv"
+   ],
+   "type": "Text",
+   "source": "datacite",
+   "doi": "10.48550/arxiv.0907.3917"
+  },
+  "candidates": [
+   "datacite: On Indirect CP Violation and Implications for D0-\\overline{D0} and Bs -\\overline{Bs} mixing / Kagan, Sokoloff / 2009 / arXiv",
+   "inspire: On Indirect CP Violation and Implications for D0 - anti-D0 and B(s) - anti-B(s) mixing / Kagan, Sokoloff / 2009 / Phys. Rev. D",
+   "crossref: CP VIOLATION IN B0-B¯0 MIXING / WOLFENSTEIN / 1989 / CP Violation",
+   "crossref: New time distributions of D0- or B0- mixing and CP violation / Xing / 1999 / Physics Letters B",
+   "openalex: Search for time-dependent CP violation in D0→K+K− and D0→π+π− decays / Aaij, Beteta, Ackernley / 2021 / Physical review. D/Physical review. D."
+  ],
+  "failed": [],
+  "unrecorded": 0
+ },
+ {
+  "paper": "hep-ex_2611.26449.pdf",
+  "n": 79,
+  "judgement": "new",
+  "verdict": "metadata_error",
+  "raw": "[79] Particle Data Group, F. Takahashi et al., Review of particle physics, Mod. Phys. A41 (2026) 2630011.",
+  "parsed": {
+   "title": "Review of particle physics",
+   "authors": [
+    "Takahashi"
+   ],
+   "year": 2026,
+   "venue": "Mod. Phys. A41",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Review of particle physics",
+    "found": "Review of Particle Physics",
+    "score": 1
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Takahashi",
+    "found": "Tanabashi, Hagiwara, Hikasa, Nakamura, Sumino, Takahashi, Tanaka, Agashe"
+   },
+   {
+    "field": "year",
+    "status": "mismatch",
+    "cited": "2026",
+    "found": "2018"
+   },
+   {
+    "field": "venue",
+    "status": "mismatch",
+    "cited": "Mod. Phys. A41",
+    "found": "Physical review. D/Physical review. D."
+   }
+  ],
+  "issues": [
+   "Year 2026 does not match the published record (2018)",
+   "Published in “Physical review. D/Physical review. D.”, not “Mod. Phys. A41”"
+  ],
+  "match": {
+   "title": "Review of Particle Physics",
+   "authors": [
+    [
+     "Tanabashi",
+     "Masaharu"
+    ],
+    [
+     "Hagiwara",
+     "K."
+    ],
+    [
+     "Hikasa",
+     "Ken‐ichi"
+    ],
+    [
+     "Nakamura",
+     "K."
+    ],
+    [
+     "Sumino",
+     "Y."
+    ],
+    [
+     "Takahashi",
+     "Fuminobu"
+    ],
+    [
+     "Tanaka",
+     "Jun'ichi"
+    ],
+    [
+     "Agashe",
+     "Kaustubh"
+    ],
+    [
+     "Aielli",
+     "G."
+    ],
+    [
+     "Amsler",
+     "C."
+    ],
+    [
+     "Antonelli",
+     "M."
+    ],
+    [
+     "Asner",
+     "David M."
+    ],
+    [
+     "Baer",
+     "Howard"
+    ],
+    [
+     "Banerjee",
+     "Sw."
+    ],
+    [
+     "Barnett",
+     "R. Michael"
+    ],
+    [
+     "Basaglia",
+     "Tullio"
+    ],
+    [
+     "Bauer",
+     "C."
+    ],
+    [
+     "Beatty",
+     "J. J."
+    ],
+    [
+     "Belousov",
+     "Viktor Ivanovich"
+    ],
+    [
+     "Beringer",
+     "J."
+    ],
+    [
+     "Bethke",
+     "Siegfried"
+    ],
+    [
+     "Bettini",
+     "A."
+    ],
+    [
+     "Bichsel",
+     "Hans"
+    ],
+    [
+     "Biebel",
+     "O."
+    ],
+    [
+     "Black",
+     "K. M."
+    ],
+    [
+     "Blucher",
+     "E."
+    ],
+    [
+     "Buchmueller",
+     "O. L."
+    ],
+    [
+     "Burkert",
+     "Volker"
+    ],
+    [
+     "Bychkov",
+     "M."
+    ],
+    [
+     "Cahn",
+     "R. N."
+    ],
+    [
+     "Carena",
+     "Marcela S."
+    ],
+    [
+     "Ceccucci",
+     "A."
+    ],
+    [
+     "Cerri",
+     "A."
+    ],
+    [
+     "Chakraborty",
+     "D."
+    ],
+    [
+     "Chen",
+     "Mu–Chun"
+    ],
+    [
+     "Chivukula",
+     "R. Sekhar"
+    ],
+    [
+     "Cowan",
+     "Glen"
+    ],
+    [
+     "Dahl",
+     "O. I."
+    ],
+    [
+     "D’Ambrosio",
+     "Giancarlo"
+    ],
+    [
+     "Damour",
+     "Thibault"
+    ],
+    [
+     "de Florian",
+     "Daniel"
+    ],
+    [
+     "de Gouvêa",
+     "A."
+    ],
+    [
+     "DeGrand",
+     "Thomas"
+    ],
+    [
+     "de Jong",
+     "P."
+    ],
+    [
+     "Dissertori",
+     "G."
+    ],
+    [
+     "Dobrescu",
+     "Bogdan A."
+    ],
+    [
+     "D’Onofrio",
+     "M."
+    ],
+    [
+     "Doser",
+     "M."
+    ],
+    [
+     "Drees",
+     "M."
+    ],
+    [
+     "Dreiner",
+     "Herbi K."
+    ],
+    [
+     "Dwyer",
+     "D. A."
+    ],
+    [
+     "Eerola",
+     "P."
+    ],
+    [
+     "Eidelman",
+     "S."
+    ],
+    [
+     "Ellis",
+     "J."
+    ],
+    [
+     "Erler",
+     "J."
+    ],
+    [
+     "Ежела",
+     "В. В."
+    ],
+    [
+     "Fetscher",
+     "Wulf"
+    ],
+    [
+     "Fields",
+     "Brian D."
+    ],
+    [
+     "Firestone",
+     "R. B."
+    ],
+    [
+     "Foster",
+     "Brian L."
+    ],
+    [
+     "Freitas",
+     "Ayres"
+    ],
+    [
+     "Gallagher",
+     "H."
+    ],
+    [
+     "Garren",
+     "L. A."
+    ],
+    [
+     "Gerber",
+     "H.-J."
+    ],
+    [
+     "Gerbier",
+     "Gilles"
+    ],
+    [
+     "Gershon",
+     "T."
+    ],
+    [
+     "Gershtein",
+     "Y."
+    ],
+    [
+     "Gherghetta",
+     "Tony"
+    ],
+    [
+     "Godizov",
+     "A. A."
+    ],
+    [
+     "Goodman",
+     "M. C."
+    ],
+    [
+     "Grab",
+     "Christoph"
+    ],
+    [
+     "Gritsan",
+     "Andrei V."
+    ],
+    [
+     "Grojean",
+     "Christophe"
+    ],
+    [
+     "Groom",
+     "Donald E."
+    ],
+    [
+     "Grünewald",
+     "M."
+    ],
+    [
+     "Gurtu",
+     "A."
+    ],
+    [
+     "Gutsche",
+     "Th."
+    ],
+    [
+     "Haber",
+     "Howard E."
+    ],
+    [
+     "Hanhart",
+     "C."
+    ],
+    [
+     "Hashimoto",
+     "Shoji"
+    ],
+    [
+     "Hayato",
+     "Y."
+    ],
+    [
+     "Hayes",
+     "K. G."
+    ],
+    [
+     "Hebecker",
+     "Arthur"
+    ],
+    [
+     "Heinemeyer",
+     "S."
+    ],
+    [
+     "Heltsley",
+     "Brian K."
+    ],
+    [
+     "Hernandez",
+     "J.J."
+    ],
+    [
+     "Hisano",
+     "Junji"
+    ],
+    [
+     "Höcker",
+     "Andreas"
+    ],
+    [
+     "Holder",
+     "Jamie"
+    ],
+    [
+     "Holtkamp",
+     "Annette"
+    ],
+    [
+     "Hyodo",
+     "Tetsuo"
+    ],
+    [
+     "Irwin",
+     "K. D."
+    ],
+    [
+     "Johnson",
+     "K. F."
+    ],
+    [
+     "Kado",
+     "M."
+    ],
+    [
+     "Karliner",
+     "Marek"
+    ],
+    [
+     "Katz",
+     "Uli F."
+    ],
+    [
+     "Klein",
+     "S. R."
+    ],
+    [
+     "Klempt",
+     "E."
+    ],
+    [
+     "Kowalewski",
+     "R."
+    ],
+    [
+     "Krauss",
+     "Frank"
+    ]
+   ],
+   "years": [
+    2018
+   ],
+   "venue": "Physical review. D/Physical review. D.",
+   "aliases": [
+    "Physical review. D/Physical review. D.",
+    "Monash University Research Portal (Monash University)",
+    "DESY Publication Database (PUBDB) (Deutsches Elektronen-Synchrotron)",
+    "Helda - University of Helsinki Institutional Repository",
+    "JuSER (Forschungszentrum Jülich)",
+    "Research Portal (King's College London)",
+    "Research at the University of Copenhagen (University of Copenhagen)",
+    "Bristol Research (University of Bristol)",
+    "Explore Bristol Research",
+    "SDL",
+    "SDL",
+    "Scuola Normale Superiore di Pisa",
+    "CaltechAUTHORS (California Institute of Technology)",
+    "LSU Scholarly Repository (Louisiana State University)",
+    "LSU Scholarly Repository (Louisiana State University)",
+    "HAL",
+    "Cineca Institutional Research Information System (Tor Vergata University)",
+    "BOA (University of Milano-Bicocca)",
+    "CERN Document Server (European Organization for Nuclear Research)",
+    "Archivio istituzionale della ricerca (Alma Mater Studiorum Università di Bologna)",
+    "Institutional Repository of the University of Granada (University of Granada)",
+    "LA Referencia (Red Federada de Repositorios Institucionales de Publicaciones Científicas)",
+    "edoc (University of Basel)",
+    "UCL Discovery (University College London)",
+    "eScholarship (California Digital Library)",
+    "eScholarship (California Digital Library)",
+    "Infoscience (Ecole Polytechnique Fédérale de Lausanne)",
+    "International Linear Collider",
+    "Institutional Repositories DataBase (IRDB)",
+    "IRIS Research product catalog (Sapienza University of Rome)",
+    "Lund University Publications (Lund University)",
+    "OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)",
+    "OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)",
+    "GoeScholar  The Publication Server of the Georg-August-Universität Göttingen (Georg-August-Universität Göttingen)",
+    "Science and Technology Facilities Council",
+    "Spiral (Imperial College London)",
+    "Warwick Research Archive Portal (University of Warwick)",
+    "eScholarship (California Digital Library)",
+    "DESY Publication Database (PUBDB) (Deutsches Elektronen-Synchrotron)"
+   ],
+   "type": "article",
+   "source": "openalex",
+   "doi": "10.1103/physrevd.98.030001"
+  },
+  "candidates": [
+   "openalex: Review of Particle Physics / Tanabashi, Hagiwara, Hikasa / 2018 / Physical review. D/Physical review. D.",
+   "semanticscholar: Review of Particle Physics (RPP) / Beringer, Arguin, Barnett / 2012/2012 / Physical Review D",
+   "openalex: Review of Particle Physics / Navas, Amsler, Gutsche / 2024 / Physical review. D/Physical review. D.",
+   "crossref: Review of Particle Physics / al / 2006 / Journal of Physics G: Nuclear and Particle Physics",
+   "openalex: Review of Particle Physics / Group, Workman, Burkert / 2022 / Progress of Theoretical and Experimental Physics"
+  ],
+  "failed": [],
+  "unrecorded": 0
+ },
+ {
+  "paper": "hep-ex_2611.26449.pdf",
+  "n": 107,
+  "judgement": "false alarm",
+  "verdict": "id_mismatch",
+  "raw": "[107] Heavy Flavor Averaging Group, Y. S. Amhis et al., Averages of b-hadron, chadron, and τ -lepton properties as of 2021, Phys. Rev. D107 (2023) 052008, arXiv:2206.07501, with specific result from doi:10.5281/zenodo.19371140.",
+  "parsed": {
+   "title": "Amhis et al., Averages of b-hadron, chadron, and τ -lepton properties as of 2021, Phys. Rev. D107 (2023) 052008",
+   "authors": [],
+   "year": 2023,
+   "venue": "arXiv. , with specific result from",
+   "kind": "article",
+   "dois": [
+    "10.5281/zenodo.19371140"
+   ],
+   "arxiv": [
+    "2206.07501"
+   ]
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Amhis et al., Averages of b-hadron, chadron, and τ -lepton properties as of 2021, Phys. Rev. D107 (2023) 052008",
+    "found": "Averages of <math display=\"inline\"><mi>b</mi></math>-hadron, <math display=\"inline\"><mi>c</mi></math>-hadron, and <math display=\"inline\"><mi>τ</mi></math>-lepton properties as of 2021",
+    "score": 0.9838709677419355
+   },
+   {
+    "field": "identifier",
+    "status": "match",
+    "cited": "arXiv:2206.07501",
+    "found": "10.48550/arxiv.2206.07501"
+   },
+   {
+    "field": "identifier",
+    "status": "mismatch",
+    "cited": "doi:10.5281/zenodo.19371140",
+    "found": "Zenodo upload for PDG results on CKM UT angles",
+    "note": "identifier resolves to a different work"
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Amhis",
+    "found": "Amhis, Banerjee, Ben-Haim, Bertholet, Bernlochner, Bona, Bozek, Bozzi"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2023",
+    "found": "2022/2023"
+   },
+   {
+    "field": "venue",
+    "status": "na",
+    "cited": "arXiv. , with specific result from",
+    "found": "Phys. Rev. D"
+   }
+  ],
+  "issues": [
+   "doi:10.5281/zenodo.19371140 points to a different work: “Zenodo upload for PDG results on CKM UT angles”"
+  ],
+  "match": {
+   "title": "Averages of <math display=\"inline\"><mi>b</mi></math>-hadron, <math display=\"inline\"><mi>c</mi></math>-hadron, and <math display=\"inline\"><mi>τ</mi></math>-lepton properties as of 2021",
+   "authors": [
+    [
+     "Amhis",
+     "Yasmine Sara"
+    ],
+    [
+     "Banerjee",
+     "Swagato"
+    ],
+    [
+     "Ben-Haim",
+     "Eli"
+    ],
+    [
+     "Bertholet",
+     "Emilie"
+    ],
+    [
+     "Bernlochner",
+     "Florian Urs"
+    ],
+    [
+     "Bona",
+     "Marcella"
+    ],
+    [
+     "Bozek",
+     "Andrzej"
+    ],
+    [
+     "Bozzi",
+     "Concezio"
+    ],
+    [
+     "Brodzicka",
+     "Jolanta"
+    ],
+    [
+     "Chobanova",
+     "Veronika"
+    ],
+    [
+     "Chrzaszcz",
+     "Marcin Jakub"
+    ],
+    [
+     "Duell",
+     "Stephane"
+    ],
+    [
+     "Egede",
+     "Ulrik"
+    ],
+    [
+     "Gersabeck",
+     "Marco"
+    ],
+    [
+     "Gershon",
+     "Timothy John"
+    ],
+    [
+     "Goldenzweig",
+     "Pablo"
+    ],
+    [
+     "Hayasaka",
+     "Kiyoshi"
+    ],
+    [
+     "Johnson",
+     "Daniel"
+    ],
+    [
+     "Kenzie",
+     "Matthew"
+    ],
+    [
+     "Kuhr",
+     "Thomas"
+    ],
+    [
+     "Leroy",
+     "Olivier"
+    ],
+    [
+     "Lusiani",
+     "Alberto"
+    ],
+    [
+     "Ma",
+     "Hai Long"
+    ],
+    [
+     "Margoni",
+     "M."
+    ],
+    [
+     "Miyabayashi",
+     "Kenkichi"
+    ],
+    [
+     "Mizuk",
+     "Roman"
+    ],
+    [
+     "Naik",
+     "Paras P."
+    ],
+    [
+     "Nanut Petrič",
+     "T."
+    ],
+    [
+     "Oyanguren",
+     "Arantza"
+    ],
+    [
+     "Pompili",
+     "Alexis"
+    ],
+    [
+     "Prim",
+     "Markus Tobias"
+    ],
+    [
+     "Roney",
+     "J.Michael"
+    ],
+    [
+     "Rotondo",
+     "Marcello"
+    ],
+    [
+     "Schneider",
+     "Olivier"
+    ],
+    [
+     "Schwanda",
+     "Christoph"
+    ],
+    [
+     "Schwartz",
+     "Alan Jay"
+    ],
+    [
+     "Serrano",
+     "Justine"
+    ],
+    [
+     "Soffer",
+     "Abner"
+    ],
+    [
+     "Tonelli",
+     "Diego"
+    ],
+    [
+     "Urquijo",
+     "Phillip"
+    ],
+    [
+     "Yelton",
+     "John Martin"
+    ],
+    [
+     "HFLAV Collaboration",
+     ""
+    ]
+   ],
+   "years": [
+    2022,
+    2023
+   ],
+   "venue": "Phys. Rev. D",
+   "aliases": [
+    "Phys.Rev.D"
+   ],
+   "type": "article",
+   "source": "inspire",
+   "doi": "10.1103/physrevd.107.052008"
+  },
+  "candidates": [
+   "inspire: Averages of <math display=\"inline\"><mi>b</mi></math>-hadron, <math display=\"inline\"><mi>c</mi></math>-hadron, and <math display=\"inline\"><mi>τ</mi></math>-lepton properties as of 2021 / Amhis, Banerjee, Ben-Haim / 2022/2023 / Phys. Rev. D",
+   "datacite: Averages of $b$-hadron, $c$-hadron, and $τ$-lepton properties as of 2021 / Collaboration, Amhis, Banerjee / 2022 / arXiv",
+   "crossref: Lepton pair production in hadron-hadron collisions / Paar, Paschos / 1974 / Physical Review D",
+   "crossref: Two-fireball model for hadron production in lepton-hadron scattering / Mongan / 1982 / Physical Review D",
+   "crossref: Jet and lepton-pair production in high-energy lepton-hadron and hadron-hadron scattering / Libby, Sterman / 1978 / Physical Review D"
+  ],
+  "failed": [],
+  "unrecorded": 0
+ },
+ {
+  "paper": "hep-ex_2611.26449.pdf",
+  "n": 123,
+  "judgement": "false alarm",
+  "verdict": "metadata_error",
+  "raw": "[123] LHCb collaboration, R. Aaij et al., Measurement of CP observables in B± → DK∗± decays using twoand four-body D-meson final states, JHEP 11 (2017) 156, Erratum ibid. 05 (2018) 067, arXiv:1709.05855.",
+  "parsed": {
+   "title": "Measurement of CP observables in B± → DK∗± decays using twoand four-body D-meson final states",
+   "authors": [
+    "Aaij"
+   ],
+   "year": 2017,
+   "venue": "JHEP",
+   "kind": "article",
+   "dois": [],
+   "arxiv": [
+    "1709.05855"
+   ]
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "mismatch",
+    "cited": "Measurement of CP observables in B± → DK∗± decays using twoand four-body D-meson final states",
+    "found": "Measurement of CP observables in B± → DK*± decays using two- and four-body D final states",
+    "score": 0.9204545454545454,
+    "note": "words differ: cited “meson”"
+   },
+   {
+    "field": "identifier",
+    "status": "match",
+    "cited": "arXiv:1709.05855",
+    "found": "10.48550/arxiv.1709.05855"
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Aaij",
+    "found": "Aaij, Adeva, Adinolfi, Ajaltouni, Akar, Albrecht, Alessio, Alexander"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2017",
+    "found": "2017"
+   },
+   {
+    "field": "venue",
+    "status": "match",
+    "cited": "JHEP",
+    "found": "Journal of High Energy Physics"
+   },
+   {
+    "field": "pages",
+    "status": "minor",
+    "cited": "11",
+    "found": "2017 / 156",
+    "note": "Bibliographic details differ: volume 11 vs 2017"
+   }
+  ],
+  "issues": [
+   "Title differs from the published title (cited “meson”)",
+   "Has published erratum notice(s)"
+  ],
+  "match": {
+   "title": "Measurement of CP observables in B± → DK*± decays using two- and four-body D final states",
+   "authors": [
+    [
+     "Aaij",
+     "R."
+    ],
+    [
+     "Adeva",
+     "B."
+    ],
+    [
+     "Adinolfi",
+     "M."
+    ],
+    [
+     "Ajaltouni",
+     "Z."
+    ],
+    [
+     "Akar",
+     "S."
+    ],
+    [
+     "Albrecht",
+     "J."
+    ],
+    [
+     "Alessio",
+     "F."
+    ],
+    [
+     "Alexander",
+     "Michael Thomas"
+    ],
+    [
+     "Albero",
+     "A. Alfonso"
+    ],
+    [
+     "Ali",
+     "S."
+    ],
+    [
+     "Alkhazov",
+     "G."
+    ],
+    [
+     "Cartelle",
+     "Paula Alvarez"
+    ],
+    [
+     "Junior",
+     "Antonio Augusto Alves"
+    ],
+    [
+     "Amato",
+     "S."
+    ],
+    [
+     "Amerio",
+     "S."
+    ],
+    [
+     "Amhis",
+     "Y."
+    ],
+    [
+     "An",
+     "L."
+    ],
+    [
+     "Anderlini",
+     "L."
+    ],
+    [
+     "Andreassi",
+     "G."
+    ],
+    [
+     "Andreotti",
+     "M."
+    ],
+    [
+     "Andrews",
+     "J. E."
+    ],
+    [
+     "Appleby",
+     "Robert B."
+    ],
+    [
+     "Archilli",
+     "F."
+    ],
+    [
+     "d’Argent",
+     "P."
+    ],
+    [
+     "Romeu",
+     "J. Arnau"
+    ],
+    [
+     "Artamonov",
+     "A."
+    ],
+    [
+     "Artuso",
+     "M."
+    ],
+    [
+     "Aslanides",
+     "E."
+    ],
+    [
+     "Atzeni",
+     "M."
+    ],
+    [
+     "Auriemma",
+     "G."
+    ],
+    [
+     "Baalouch",
+     "M."
+    ],
+    [
+     "Babuschkin",
+     "I."
+    ],
+    [
+     "Bachmann",
+     "S."
+    ],
+    [
+     "Back",
+     "John J"
+    ],
+    [
+     "Badalov",
+     "A."
+    ],
+    [
+     "Baesso",
+     "C."
+    ],
+    [
+     "Baker",
+     "S."
+    ],
+    [
+     "Balagura",
+     "V."
+    ],
+    [
+     "Baldini",
+     "W."
+    ],
+    [
+     "Baranov",
+     "A."
+    ],
+    [
+     "Barlow",
+     "Roger John"
+    ],
+    [
+     "Barschel",
+     "C."
+    ],
+    [
+     "Barsuk",
+     "S."
+    ],
+    [
+     "Barter",
+     "William James"
+    ],
+    [
+     "Baryshnikov",
+     "F."
+    ],
+    [
+     "Batozskaya",
+     "V."
+    ],
+    [
+     "Battista",
+     "V."
+    ],
+    [
+     "Bay",
+     "A."
+    ],
+    [
+     "Beaucourt",
+     "L."
+    ],
+    [
+     "Beddow",
+     "J."
+    ],
+    [
+     "Bedeschi",
+     "F."
+    ],
+    [
+     "Bediaga",
+     "I."
+    ],
+    [
+     "Beiter",
+     "A."
+    ],
+    [
+     "Bel",
+     "L. J."
+    ],
+    [
+     "Beliy",
+     "N."
+    ],
+    [
+     "Bellée",
+     "V."
+    ],
+    [
+     "Belloli",
+     "N."
+    ],
+    [
+     "Belous",
+     "K."
+    ],
+    [
+     "Belyaev",
+     "I."
+    ],
+    [
+     "Ben-Haim",
+     "E."
+    ],
+    [
+     "Bencivenni",
+     "G."
+    ],
+    [
+     "Benson",
+     "S."
+    ],
+    [
+     "Beranek",
+     "S."
+    ],
+    [
+     "Berezhnoy",
+     "Alexander"
+    ],
+    [
+     "Bernet",
+     "R."
+    ],
+    [
+     "Berninghoff",
+     "D."
+    ],
+    [
+     "Bertholet",
+     "E."
+    ],
+    [
+     "Bertolin",
+     "A."
+    ],
+    [
+     "Betancourt",
+     "C."
+    ],
+    [
+     "Betti",
+     "F."
+    ],
+    [
+     "Bettler",
+     "M.-O."
+    ],
+    [
+     "van Beuzekom",
+     "M."
+    ],
+    [
+     "Bezshyiko",
+     "Ia."
+    ],
+    [
+     "Bifani",
+     "S."
+    ],
+    [
+     "Billoir",
+     "P."
+    ],
+    [
+     "Birnkraut",
+     "A."
+    ],
+    [
+     "Bizzeti",
+     "A."
+    ],
+    [
+     "Bjørn",
+     "M."
+    ],
+    [
+     "Blake",
+     "T."
+    ],
+    [
+     "Blanc",
+     "F."
+    ],
+    [
+     "Blusk",
+     "Steven Roy"
+    ],
+    [
+     "Bocci",
+     "V."
+    ],
+    [
+     "Boettcher",
+     "T."
+    ],
+    [
+     "Bondar",
+     "A."
+    ],
+    [
+     "Bondar",
+     "N."
+    ],
+    [
+     "Bordyuzhin",
+     "Igor G."
+    ],
+    [
+     "Borgheresi",
+     "A."
+    ],
+    [
+     "Borghi",
+     "S."
+    ],
+    [
+     "Borisyak",
+     "M."
+    ],
+    [
+     "Borsato",
+     "M."
+    ],
+    [
+     "Bossù",
+     "F."
+    ],
+    [
+     "Boubdir",
+     "M."
+    ],
+    [
+     "Bowcock",
+     "T. J. V."
+    ],
+    [
+     "Bowen",
+     "E."
+    ],
+    [
+     "Bozzi",
+     "C."
+    ],
+    [
+     "Braun",
+     "S."
+    ],
+    [
+     "Britton",
+     "T."
+    ],
+    [
+     "Brodzicka",
+     "J."
+    ],
+    [
+     "Brundu",
+     "D."
+    ],
+    [
+     "Buchanan",
+     "Emma"
+    ]
+   ],
+   "years": [
+    2017
+   ],
+   "venue": "Journal of High Energy Physics",
+   "aliases": [
+    "Journal of High Energy Physics",
+    "Oxford University Research Archive (ORA) (University of Oxford)",
+    "Oxford University Research Archive (ORA) (University of Oxford)",
+    "Edinburgh Research Explorer (University of Edinburgh)",
+    "Explore Bristol Research",
+    "Dipòsit Digital de la Universitat de Barcelona (Universitat de Barcelona)",
+    "LA Referencia (Red Federada de Repositorios Institucionales de Publicaciones Científicas)",
+    "Hispana",
+    "RWTH Publications (RWTH Aachen)",
+    "Research Explorer (The University of Manchester)",
+    "University of Groningen research database (University of Groningen / Centre for Information Technology)",
+    "RECERCAT (Consorci de Serveis Universitaris de Catalunya)",
+    "Enlighten: Publications (University of Glasgow)",
+    "arXiv (Cornell University)",
+    "CERN Document Server (European Organization for Nuclear Research)",
+    "Archivio istituzionale della ricerca (Alma Mater Studiorum Università di Bologna)",
+    "IRIS UNIMORE (University of Modena and Reggio Emilia)",
+    "OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)",
+    "HAL AMU",
+    "Archivio Istituzionale della Ricerca (Universita Degli Studi Di Milano)",
+    "Aisberg (University of Bergamo)",
+    "CINECA IRIS Institutial research information system (University of Pisa)",
+    "Cineca Institutional Research Information System (Tor Vergata University)",
+    "BOA (University of Milano-Bicocca)",
+    "DOAJ (DOAJ: Directory of Open Access Journals)",
+    "DSpace@MIT (Massachusetts Institute of Technology)",
+    "eScholarship (California Digital Library)",
+    "Max Planck Digital Library",
+    "Infoscience (Ecole Polytechnique Fédérale de Lausanne)",
+    "Infoscience (Ecole Polytechnique Fédérale de Lausanne)",
+    "CINECA IRIS Institutional Research Information System (University of Basilicata)",
+    "UNICA IRIS Institutional Research Information System (University of Cagliari)",
+    "CINECA IRIS Institutial Research Information System (University of Genoa)",
+    "IRIS Research product catalog (Sapienza University of Rome)",
+    "Repositorio institucional da Universidade de Santiago de Compostela (University of Santiago de Compostela)",
+    "CINECA IRIS Institutional Research information system (University of Urbino)",
+    "University of Birmingham Research Portal (University of Birmingham)",
+    "University of Birmingham Research Portal (University of Birmingham)",
+    "MPG.PuRe (Max Planck Society)",
+    "Science and Technology Facilities Council",
+    "VU Research Portal",
+    "Scuola Normale Superiore di Pisa",
+    "CINECA IRIS Institutional Research Information System (University of Bari Aldo Moro)",
+    "Institutional Research Information System University of Ferrara (University of Ferrara)",
+    "Spiral (Imperial College London)",
+    "Padua Research Archive (University of Padova)",
+    "Zurich Open Repository and Archive (University of Zurich)",
+    "eScholarship (California Digital Library)",
+    "University of Groningen research database (University of Groningen / Centre for Information Technology)",
+    "Data Archiving and Networked Services (DANS)",
+    "arXiv (Cornell University)",
+    "Springer eBooks",
+    "RWTH Publications (RWTH Aachen)",
+    "RWTH Publications (RWTH Aachen)",
+    "Zurich Open Repository and Archive (University of Zurich)",
+    "Zurich Open Repository and Archive (University of Zurich)",
+    "Journal of High Energy Physics"
+   ],
+   "type": "article",
+   "source": "openalex",
+   "doi": "10.1007/jhep11(2017)156"
+  },
+  "candidates": [
+   "openalex: Measurement of CP observables in B± → DK*± decays using two- and four-body D final states / Aaij, Adeva, Adinolfi / 2017 / Journal of High Energy Physics",
+   "inspire: Measurement of CP observables in B ± → D K* ± decays using two- and four-body D final states / Aaij, Adeva, Adinolfi / 2017 / JHEP",
+   "datacite: Measurement of $CP$ observables in $B^{\\pm} \\rightarrow D K^{*\\pm}$ decays using two- and four-body $D$ final states / Collaboration, Aaij, Adeva / 2017 / arXiv",
+   "openalex: Measurement of the CKM angle γ in B± → DK*(892)± decays / Aaij, Abdelmotteleb, Beteta / 2025 / Journal of High Energy Physics",
+   "openalex: Study of B−→DK−π+π− and B−→Dπ−π+π− decays and determination of the CKM angle γ / Aaij, Adeva, Adinolfi / 2015 / Physical review. D. Particles, fields, gravitation, and cosmology/Physical review. D. Particles and fields"
+  ],
+  "failed": [],
+  "unrecorded": 0
+ },
+ {
+  "paper": "hep-ex_2611.26449.pdf",
+  "n": 134,
+  "judgement": "false alarm",
+  "verdict": "metadata_error",
+  "raw": "[134] BESIII collaboration, M. Ablikim et al., Updated model-independent measurement of the strong-phase differences between D0 and D0 → K0 π+π- decays, JHEP 06 S/L (2025) 086, arXiv:2503.22126.",
+  "parsed": {
+   "title": "Updated model-independent measurement of the strong-phase differences between D0 and D0 → K0 π+π- decays",
+   "authors": [
+    "Ablikim"
+   ],
+   "year": 2025,
+   "venue": "JHEP 06 S/L",
+   "kind": "article",
+   "dois": [],
+   "arxiv": [
+    "2503.22126"
+   ]
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "mismatch",
+    "cited": "Updated model-independent measurement of the strong-phase differences between D0 and D0 → K0 π+π- decays",
+    "found": "Updated model-independent measurement of the strong-phase differences between D0 and D¯0→KS/L0π+π−\\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargi",
+    "score": 0.9574468085106383,
+    "note": "words differ: cited “decays”, published “ks”, published “l0”"
+   },
+   {
+    "field": "identifier",
+    "status": "match",
+    "cited": "arXiv:2503.22126",
+    "found": "10.48550/arxiv.2503.22126"
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Ablikim",
+    "found": "Ablikim, Achasov, Adlarson, Ai, Aliberti, Amoroso, An, Bai"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2025",
+    "found": "2025/2025"
+   },
+   {
+    "field": "venue",
+    "status": "match",
+    "cited": "JHEP 06 S/L",
+    "found": "Journal of High Energy Physics"
+   }
+  ],
+  "issues": [
+   "Title differs from the published title (cited “decays”, published “ks”, published “l0”)"
+  ],
+  "match": {
+   "title": "Updated model-independent measurement of the strong-phase differences between D0 and D¯0→KS/L0π+π−\\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargi",
+   "authors": [
+    [
+     "Ablikim",
+     "M."
+    ],
+    [
+     "Achasov",
+     "M."
+    ],
+    [
+     "Adlarson",
+     "P."
+    ],
+    [
+     "Ai",
+     "X.-C."
+    ],
+    [
+     "Aliberti",
+     "R."
+    ],
+    [
+     "Amoroso",
+     "A."
+    ],
+    [
+     "An",
+     "Q."
+    ],
+    [
+     "Bai",
+     "Y."
+    ],
+    [
+     "Bakina",
+     "O."
+    ],
+    [
+     "Ban",
+     "Y."
+    ],
+    [
+     "Bao",
+     "H."
+    ],
+    [
+     "Batozskaya",
+     "V."
+    ],
+    [
+     "Begzsuren",
+     "K."
+    ],
+    [
+     "Berger",
+     "N."
+    ],
+    [
+     "Berlowski",
+     "M."
+    ],
+    [
+     "Bertani",
+     "M."
+    ],
+    [
+     "Bettoni",
+     "D."
+    ],
+    [
+     "Bianchi",
+     "F."
+    ],
+    [
+     "Bianco",
+     "E."
+    ],
+    [
+     "Bortone",
+     "A."
+    ],
+    [
+     "Boyko",
+     "I."
+    ],
+    [
+     "Briere",
+     "R."
+    ],
+    [
+     "Brueggemann",
+     "A."
+    ],
+    [
+     "Cai",
+     "H."
+    ],
+    [
+     "Cai",
+     "M.-H."
+    ],
+    [
+     "Cai",
+     "X."
+    ],
+    [
+     "Calcaterra",
+     "A."
+    ],
+    [
+     "Cao",
+     "Guo-Fu-Cao G. F."
+    ],
+    [
+     "Cao",
+     "N."
+    ],
+    [
+     "Cetin",
+     "S."
+    ],
+    [
+     "Chai",
+     "X.-Y."
+    ],
+    [
+     "Chang",
+     "J."
+    ],
+    [
+     "Che",
+     "G."
+    ],
+    [
+     "Che",
+     "Y.-Z."
+    ],
+    [
+     "Chen",
+     "C.-H."
+    ],
+    [
+     "Chen",
+     "C."
+    ],
+    [
+     "Chen",
+     "G."
+    ],
+    [
+     "Chen",
+     "H.-S."
+    ],
+    [
+     "Chen",
+     "H.-Y."
+    ],
+    [
+     "Chen",
+     "M.-L."
+    ],
+    [
+     "Chen",
+     "S."
+    ],
+    [
+     "Chen",
+     "S."
+    ],
+    [
+     "Chen",
+     "S."
+    ],
+    [
+     "Chen",
+     "T."
+    ],
+    [
+     "Chen",
+     "X."
+    ],
+    [
+     "Chen",
+     "X.-T."
+    ],
+    [
+     "Chen",
+     "X.-Y."
+    ],
+    [
+     "Chen",
+     "Y."
+    ],
+    [
+     "Chen",
+     "Y.-Q."
+    ],
+    [
+     "Chen",
+     "Y.-Q."
+    ],
+    [
+     "Chen",
+     "Z.-J."
+    ],
+    [
+     "Chen",
+     "Z."
+    ],
+    [
+     "Choi",
+     "S."
+    ],
+    [
+     "Chu",
+     "X."
+    ],
+    [
+     "Cibinetto",
+     "G."
+    ],
+    [
+     "Cossio",
+     "F."
+    ],
+    [
+     "Cottee-Meldrum",
+     "J."
+    ],
+    [
+     "Cui",
+     "J.-J."
+    ],
+    [
+     "Dai",
+     "H.-L."
+    ],
+    [
+     "Dai",
+     "J.-P."
+    ],
+    [
+     "Dbeyssi",
+     "A."
+    ],
+    [
+     "de Boer",
+     "R. E."
+    ],
+    [
+     "Dedovich",
+     "D."
+    ],
+    [
+     "Deng",
+     "C.-Q."
+    ],
+    [
+     "Deng",
+     "Z.-Y."
+    ],
+    [
+     "Denig",
+     "A."
+    ],
+    [
+     "Denysenko",
+     "I."
+    ],
+    [
+     "Destefanis",
+     "M."
+    ],
+    [
+     "De Mori",
+     "F."
+    ],
+    [
+     "Ding",
+     "B."
+    ],
+    [
+     "Ding",
+     "X."
+    ],
+    [
+     "Ding",
+     "Y."
+    ],
+    [
+     "Ding",
+     "Y."
+    ],
+    [
+     "Ding",
+     "Y."
+    ],
+    [
+     "Dong",
+     "J."
+    ],
+    [
+     "Dong",
+     "L.-Y."
+    ],
+    [
+     "Dong",
+     "Ming-Yi-Dong M. Y."
+    ],
+    [
+     "Dong",
+     "X."
+    ],
+    [
+     "Du",
+     "M.-C."
+    ],
+    [
+     "Du",
+     "S.-X."
+    ],
+    [
+     "Du",
+     "S.-X."
+    ],
+    [
+     "Duan",
+     "Y.-Y."
+    ],
+    [
+     "Egorov",
+     "P."
+    ],
+    [
+     "Fan",
+     "Gao"
+    ],
+    [
+     "Fan",
+     "J.-J."
+    ],
+    [
+     "Fan",
+     "Y.-H."
+    ],
+    [
+     "Fang",
+     "J."
+    ],
+    [
+     "Fang",
+     "J."
+    ],
+    [
+     "Fang",
+     "S.-S."
+    ],
+    [
+     "Fang",
+     "W.-X."
+    ],
+    [
+     "Fang",
+     "Y."
+    ],
+    [
+     "Farinelli",
+     "R."
+    ],
+    [
+     "Fava",
+     "L."
+    ],
+    [
+     "Feldbauer",
+     "F."
+    ],
+    [
+     "Felici",
+     "G."
+    ],
+    [
+     "Feng",
+     "Chang-Qing"
+    ],
+    [
+     "Feng",
+     "J.-H."
+    ],
+    [
+     "Feng",
+     "L."
+    ],
+    [
+     "Feng",
+     "Q."
+    ],
+    [
+     "Feng",
+     "Y."
+    ],
+    [
+     "Fritsch",
+     "M."
+    ],
+    [
+     "Fu",
+     "C.-D."
+    ],
+    [
+     "Fu",
+     "J."
+    ],
+    [
+     "Fu",
+     "Y."
+    ],
+    [
+     "Gao",
+     "H."
+    ],
+    [
+     "Gao",
+     "X.-B."
+    ],
+    [
+     "Gao",
+     "Y."
+    ],
+    [
+     "Gao",
+     "Y."
+    ],
+    [
+     "Gao",
+     "Y."
+    ],
+    [
+     "Gao",
+     "Y."
+    ],
+    [
+     "Garbolino",
+     "S."
+    ],
+    [
+     "Garzia",
+     "I."
+    ],
+    [
+     "Ge",
+     "Pin-Xu"
+    ],
+    [
+     "Ge",
+     "Z.-W."
+    ],
+    [
+     "Geng",
+     "C."
+    ],
+    [
+     "Gersabeck",
+     "E."
+    ],
+    [
+     "Gilman",
+     "A."
+    ],
+    [
+     "Goetzen",
+     "K."
+    ],
+    [
+     "Gong",
+     "J."
+    ],
+    [
+     "Gong",
+     "L."
+    ],
+    [
+     "Gong",
+     "W."
+    ],
+    [
+     "Gradl",
+     "W."
+    ],
+    [
+     "Gramigna",
+     "S."
+    ],
+    [
+     "Greco",
+     "M."
+    ],
+    [
+     "Gu",
+     "M.-H."
+    ],
+    [
+     "Gu",
+     "Y.-T."
+    ],
+    [
+     "Guan",
+     "Chun-Yi-Guan C. Y."
+    ],
+    [
+     "Guo",
+     "Ai-Qiang-Guo A. Q."
+    ],
+    [
+     "Guo",
+     "L.-B."
+    ],
+    [
+     "Guo",
+     "M.-J."
+    ],
+    [
+     "Guo",
+     "R.-P."
+    ],
+    [
+     "Guo",
+     "Y."
+    ],
+    [
+     "Guskov",
+     "A."
+    ],
+    [
+     "Gutierrez",
+     "J."
+    ],
+    [
+     "Han",
+     "K. L."
+    ],
+    [
+     "Han",
+     "T. T."
+    ],
+    [
+     "Hanisch",
+     "F."
+    ],
+    [
+     "Hao",
+     "K.-D."
+    ],
+    [
+     "Hao",
+     "X.-Q."
+    ],
+    [
+     "Harris",
+     "F."
+    ],
+    [
+     "He",
+     "K.-K."
+    ],
+    [
+     "He",
+     "Ke-Jian"
+    ],
+    [
+     "Heinsius",
+     "F."
+    ],
+    [
+     "Heinz",
+     "C."
+    ],
+    [
+     "Heng",
+     "Y. K."
+    ],
+    [
+     "Herold",
+     "C."
+    ],
+    [
+     "Hong",
+     "P. C."
+    ],
+    [
+     "Hou",
+     "G."
+    ],
+    [
+     "Hou",
+     "X.-T."
+    ],
+    [
+     "Hou",
+     "Y.-R."
+    ],
+    [
+     "Hou",
+     "Z.-L."
+    ],
+    [
+     "Hu",
+     "H.-M."
+    ],
+    [
+     "Hu",
+     "J.-F."
+    ],
+    [
+     "Hu",
+     "Q.-P."
+    ],
+    [
+     "Hu",
+     "S.-L."
+    ],
+    [
+     "Hu",
+     "T."
+    ],
+    [
+     "Hu",
+     "Y."
+    ],
+    [
+     "Hu",
+     "Z.-M."
+    ],
+    [
+     "Huang",
+     "G.-S."
+    ],
+    [
+     "Huang",
+     "K.-X."
+    ],
+    [
+     "Huang",
+     "L.-Q."
+    ],
+    [
+     "Huang",
+     "P."
+    ],
+    [
+     "Huang",
+     "X."
+    ],
+    [
+     "Huang",
+     "Y."
+    ],
+    [
+     "Huang",
+     "Y.-S."
+    ],
+    [
+     "Hussain",
+     "T."
+    ],
+    [
+     "Hüsken",
+     "N."
+    ],
+    [
+     "der Wiesche",
+     "N. D."
+    ],
+    [
+     "Jackson",
+     "J."
+    ],
+    [
+     "Ji",
+     "Q."
+    ],
+    [
+     "Ji",
+     "Q."
+    ],
+    [
+     "Ji",
+     "W."
+    ],
+    [
+     "Ji",
+     "X."
+    ],
+    [
+     "Ji",
+     "X.-L."
+    ],
+    [
+     "Ji",
+     "Y.-Y."
+    ],
+    [
+     "Jia",
+     "Z."
+    ],
+    [
+     "Jiang",
+     "D."
+    ],
+    [
+     "Jiang",
+     "H.-B."
+    ],
+    [
+     "Jiang",
+     "P.-C."
+    ],
+    [
+     "Jiang",
+     "S.-J."
+    ],
+    [
+     "Jiang",
+     "T.-J."
+    ],
+    [
+     "Jiang",
+     "X.-S."
+    ],
+    [
+     "Jiang",
+     "Y."
+    ],
+    [
+     "Jiao",
+     "J.-B."
+    ],
+    [
+     "Jiao",
+     "J.-K."
+    ],
+    [
+     "Jiao",
+     "Z."
+    ],
+    [
+     "Jin",
+     "S."
+    ],
+    [
+     "Jin",
+     "Y."
+    ],
+    [
+     "Jing",
+     "M.-Q."
+    ],
+    [
+     "Jing",
+     "X.-M."
+    ],
+    [
+     "Johansson",
+     "T."
+    ],
+    [
+     "Kabana",
+     "S."
+    ],
+    [
+     "Kalantar-Nayestanaki",
+     "N."
+    ],
+    [
+     "Kang",
+     "X."
+    ],
+    [
+     "Kang",
+     "X."
+    ],
+    [
+     "Kavatsyuk",
+     "M."
+    ],
+    [
+     "Ke",
+     "B.-C."
+    ],
+    [
+     "Khachatryan",
+     "V."
+    ],
+    [
+     "Khoukaz",
+     "A."
+    ],
+    [
+     "Kiuchi",
+     "R."
+    ],
+    [
+     "Kolcu",
+     "O. B."
+    ],
+    [
+     "Kopf",
+     "B."
+    ],
+    [
+     "Kuessner",
+     "M."
+    ],
+    [
+     "Kui",
+     "X."
+    ],
+    [
+     "Kumar",
+     "N."
+    ],
+    [
+     "Kupść",
+     "A."
+    ],
+    [
+     "Kühn",
+     "W."
+    ],
+    [
+     "Lan",
+     "Q."
+    ],
+    [
+     "Lan",
+     "W.-N."
+    ],
+    [
+     "Lei",
+     "T.-T."
+    ],
+    [
+     "Lellmann",
+     "M."
+    ],
+    [
+     "Lenz",
+     "T."
+    ],
+    [
+     "Li",
+     "C."
+    ],
+    [
+     "Li",
+     "C."
+    ],
+    [
+     "Li",
+     "C."
+    ],
+    [
+     "Li",
+     "C."
+    ],
+    [
+     "Li",
+     "C."
+    ],
+    [
+     "Li",
+     "D."
+    ],
+    [
+     "Li",
+     "F."
+    ],
+    [
+     "Li",
+     "G."
+    ],
+    [
+     "Li",
+     "H."
+    ],
+    [
+     "Li",
+     "H."
+    ],
+    [
+     "Li",
+     "H."
+    ],
+    [
+     "Li",
+     "H."
+    ],
+    [
+     "Li",
+     "J."
+    ],
+    [
+     "Li",
+     "J.-S."
+    ],
+    [
+     "Li",
+     "K."
+    ],
+    [
+     "Li",
+     "K."
+    ],
+    [
+     "Li",
+     "K."
+    ],
+    [
+     "Li",
+     "L.-J."
+    ],
+    [
+     "Li",
+     "Lei"
+    ],
+    [
+     "Li",
+     "M.-H."
+    ],
+    [
+     "Li",
+     "M.-R."
+    ],
+    [
+     "Li",
+     "P.-L."
+    ],
+    [
+     "Li",
+     "P."
+    ],
+    [
+     "Li",
+     "Q.-M."
+    ],
+    [
+     "Li",
+     "Q.-X."
+    ],
+    [
+     "Li",
+     "R."
+    ],
+    [
+     "Li",
+     "S."
+    ],
+    [
+     "Li",
+     "T."
+    ],
+    [
+     "Li",
+     "T."
+    ],
+    [
+     "Li",
+     "W."
+    ],
+    [
+     "Li",
+     "W."
+    ],
+    [
+     "Li",
+     "X."
+    ],
+    [
+     "Li",
+     "X."
+    ],
+    [
+     "Li",
+     "X."
+    ],
+    [
+     "Li",
+     "X.-Y."
+    ],
+    [
+     "Li",
+     "X.-Z."
+    ],
+    [
+     "Li",
+     "Y."
+    ],
+    [
+     "Li",
+     "Y."
+    ],
+    [
+     "Li",
+     "Y.-P."
+    ],
+    [
+     "Li",
+     "Z.-J."
+    ],
+    [
+     "Li",
+     "Z.-Y."
+    ],
+    [
+     "Liang",
+     "H."
+    ],
+    [
+     "Liang",
+     "Y.-F."
+    ],
+    [
+     "Liang",
+     "Y.-T."
+    ],
+    [
+     "Liao",
+     "G.-R."
+    ],
+    [
+     "Liao",
+     "Li"
+    ],
+    [
+     "Liao",
+     "M."
+    ],
+    [
+     "Liao",
+     "Y."
+    ],
+    [
+     "Libby",
+     "J."
+    ],
+    [
+     "Limphirat",
+     "A."
+    ],
+    [
+     "Lin",
+     "C."
+    ],
+    [
+     "Lin",
+     "D."
+    ],
+    [
+     "Lin",
+     "L. Q."
+    ],
+    [
+     "Lin",
+     "T."
+    ],
+    [
+     "Liu",
+     "B."
+    ],
+    [
+     "Liu",
+     "B.-X."
+    ],
+    [
+     "Liu",
+     "C."
+    ],
+    [
+     "Liu",
+     "C."
+    ],
+    [
+     "Liu",
+     "F."
+    ],
+    [
+     "Liu",
+     "F."
+    ],
+    [
+     "Liu",
+     "F."
+    ],
+    [
+     "Liu",
+     "G.-M."
+    ],
+    [
+     "Liu",
+     "H."
+    ],
+    [
+     "Liu",
+     "H."
+    ],
+    [
+     "Liu",
+     "H."
+    ],
+    [
+     "Liu",
+     "H."
+    ],
+    [
+     "Liu",
+     "H."
+    ],
+    [
+     "Liu",
+     "J."
+    ],
+    [
+     "Liu",
+     "J."
+    ],
+    [
+     "Liu",
+     "K."
+    ],
+    [
+     "Liu",
+     "K."
+    ],
+    [
+     "Liu",
+     "K."
+    ],
+    [
+     "Liu",
+     "K."
+    ],
+    [
+     "Liu",
+     "L.-C."
+    ],
+    [
+     "Liu",
+     "L."
+    ],
+    [
+     "Liu",
+     "M.-H."
+    ],
+    [
+     "Liu",
+     "Li-Yu Daisy"
+    ],
+    [
+     "Liu",
+     "Q."
+    ],
+    [
+     "Liu",
+     "S."
+    ],
+    [
+     "Liu",
+     "T."
+    ],
+    [
+     "Liu",
+     "W.-K."
+    ],
+    [
+     "Liu",
+     "W.-M."
+    ],
+    [
+     "Liu",
+     "W.-T."
+    ],
+    [
+     "Liu",
+     "X."
+    ],
+    [
+     "Liu",
+     "X."
+    ],
+    [
+     "Liu",
+     "X."
+    ],
+    [
+     "Liu",
+     "X.-Y."
+    ],
+    [
+     "Liu",
+     "Y."
+    ],
+    [
+     "Liu",
+     "Y."
+    ],
+    [
+     "Liu",
+     "Y."
+    ],
+    [
+     "Liu",
+     "Z.-A."
+    ],
+    [
+     "Liu",
+     "Z.-D."
+    ],
+    [
+     "Liu",
+     "Z.-Q."
+    ],
+    [
+     "Lou",
+     "X."
+    ],
+    [
+     "Lu",
+     "F."
+    ],
+    [
+     "Lu",
+     "H.-J."
+    ],
+    [
+     "Lu",
+     "J.-G."
+    ],
+    [
+     "Lu",
+     "X.-L."
+    ],
+    [
+     "Lu",
+     "Y."
+    ],
+    [
+     "Lu",
+     "Y.-H."
+    ],
+    [
+     "Lu",
+     "Y."
+    ],
+    [
+     "Lu",
+     "Z.-H."
+    ],
+    [
+     "Luo",
+     "Cong-Lun"
+    ],
+    [
+     "Luo",
+     "J.-R."
+    ],
+    [
+     "Luo",
+     "J.-S."
+    ],
+    [
+     "Luo",
+     "Ming-Xing"
+    ],
+    [
+     "Luo",
+     "T."
+    ],
+    [
+     "Luo",
+     "X.-L."
+    ],
+    [
+     "Lv",
+     "Z.-Y."
+    ],
+    [
+     "Lyu",
+     "X."
+    ],
+    [
+     "Lyu",
+     "Y."
+    ],
+    [
+     "Lyu",
+     "Y."
+    ],
+    [
+     "Ma",
+     "F.-C."
+    ],
+    [
+     "Ma",
+     "H."
+    ],
+    [
+     "Ma",
+     "J.-L."
+    ],
+    [
+     "Ma",
+     "L.-L."
+    ],
+    [
+     "Ma",
+     "L.-R."
+    ],
+    [
+     "Ma",
+     "Q.-M."
+    ],
+    [
+     "Ma",
+     "R.-Q."
+    ],
+    [
+     "Ma",
+     "R."
+    ],
+    [
+     "Ma",
+     "T."
+    ],
+    [
+     "Ma",
+     "X.-T."
+    ],
+    [
+     "Ma",
+     "X."
+    ],
+    [
+     "Ma",
+     "Y."
+    ],
+    [
+     "Maas",
+     "F."
+    ],
+    [
+     "Mackay",
+     "I."
+    ],
+    [
+     "Maggiora",
+     "M."
+    ],
+    [
+     "Malde",
+     "S."
+    ],
+    [
+     "Malik",
+     "Q. A."
+    ],
+    [
+     "Mao",
+     "H.-X."
+    ],
+    [
+     "Mao",
+     "Y."
+    ],
+    [
+     "Mao",
+     "Z.-P."
+    ],
+    [
+     "Marcello",
+     "S."
+    ],
+    [
+     "Marshall",
+     "A."
+    ],
+    [
+     "Melendi",
+     "F. M."
+    ],
+    [
+     "Meng",
+     "Y.-H."
+    ],
+    [
+     "Meng",
+     "Z.-X."
+    ],
+    [
+     "Mezzadri",
+     "G."
+    ],
+    [
+     "Miao",
+     "H."
+    ],
+    [
+     "Min",
+     "T."
+    ],
+    [
+     "Mitchell",
+     "R."
+    ],
+    [
+     "Mo",
+     "Xiao-Hu-Mo X. H."
+    ],
+    [
+     "Moses",
+     "B."
+    ],
+    [
+     "Muchnoi",
+     "N."
+    ],
+    [
+     "Muskalla",
+     "J."
+    ],
+    [
+     "Nefedov",
+     "Y."
+    ],
+    [
+     "Nerling",
+     "F."
+    ],
+    [
+     "Nie",
+     "L."
+    ],
+    [
+     "Nikolaev",
+     "I."
+    ],
+    [
+     "Ning",
+     "Z."
+    ],
+    [
+     "Nisar",
+     "S."
+    ],
+    [
+     "Niu",
+     "Q.-L."
+    ],
+    [
+     "Niu",
+     "W.-D."
+    ],
+    [
+     "Normand",
+     "C."
+    ],
+    [
+     "Olsen",
+     "S. L."
+    ],
+    [
+     "Ouyang",
+     "Q."
+    ],
+    [
+     "Pacetti",
+     "S."
+    ],
+    [
+     "Pan",
+     "X."
+    ],
+    [
+     "Pan",
+     "Y."
+    ],
+    [
+     "Pathak",
+     "A."
+    ],
+    [
+     "Pei",
+     "Y.-P."
+    ],
+    [
+     "Pelizaeus",
+     "M."
+    ],
+    [
+     "Peng",
+     "H."
+    ],
+    [
+     "Peng",
+     "X.-J."
+    ],
+    [
+     "Peng",
+     "Y.-Y."
+    ],
+    [
+     "Peters",
+     "K."
+    ],
+    [
+     "Petridis",
+     "K."
+    ],
+    [
+     "Ping",
+     "Jia-Lun-Ping J. L."
+    ],
+    [
+     "Ping",
+     "R."
+    ],
+    [
+     "Plura",
+     "S."
+    ],
+    [
+     "Prasad",
+     "V."
+    ],
+    [
+     "Qi",
+     "F.-Z."
+    ],
+    [
+     "Qi",
+     "H."
+    ],
+    [
+     "Qi",
+     "M."
+    ],
+    [
+     "Qian",
+     "S."
+    ],
+    [
+     "Qian",
+     "W."
+    ],
+    [
+     "Qiao",
+     "C."
+    ],
+    [
+     "Qiao",
+     "J.-H."
+    ],
+    [
+     "Qin",
+     "J.-J."
+    ],
+    [
+     "Qin",
+     "J.-L."
+    ],
+    [
+     "Qin",
+     "L.-Q."
+    ],
+    [
+     "Qin",
+     "L.-Y."
+    ],
+    [
+     "Qin",
+     "P.-B."
+    ],
+    [
+     "Qin",
+     "X."
+    ],
+    [
+     "Qin",
+     "Xin"
+    ],
+    [
+     "Qin",
+     "Z."
+    ],
+    [
+     "Qiu",
+     "J.-F."
+    ],
+    [
+     "Qu",
+     "Z.-H."
+    ],
+    [
+     "Rademacker",
+     "J."
+    ],
+    [
+     "Redmer",
+     "C."
+    ],
+    [
+     "Rivetti",
+     "A."
+    ],
+    [
+     "Rolo",
+     "M."
+    ],
+    [
+     "Rong",
+     "G."
+    ],
+    [
+     "Rong",
+     "S.-S."
+    ],
+    [
+     "Rosini",
+     "F."
+    ],
+    [
+     "Rosner",
+     "C."
+    ],
+    [
+     "Ruan",
+     "M."
+    ],
+    [
+     "Salone",
+     "N."
+    ],
+    [
+     "Sarantsev",
+     "A."
+    ],
+    [
+     "Schelhaas",
+     "Y."
+    ],
+    [
+     "Schoenning",
+     "K."
+    ],
+    [
+     "Scodeggio",
+     "M."
+    ],
+    [
+     "Shan",
+     "K."
+    ],
+    [
+     "Shan",
+     "W."
+    ],
+    [
+     "Shan",
+     "X."
+    ],
+    [
+     "Shang",
+     "Z.-J."
+    ],
+    [
+     "Shangguan",
+     "J."
+    ],
+    [
+     "Shao",
+     "L.-G."
+    ],
+    [
+     "Shao",
+     "M."
+    ],
+    [
+     "Shen",
+     "C.-P."
+    ],
+    [
+     "Shen",
+     "H.-F."
+    ],
+    [
+     "Shen",
+     "W.-H."
+    ],
+    [
+     "Shen",
+     "X.-Y."
+    ],
+    [
+     "Shi",
+     "B.-A."
+    ],
+    [
+     "Shi",
+     "H."
+    ],
+    [
+     "Shi",
+     "J.-L."
+    ],
+    [
+     "Shi",
+     "J.-Y."
+    ],
+    [
+     "Shi",
+     "Song"
+    ],
+    [
+     "Shi",
+     "X."
+    ],
+    [
+     "Song",
+     "H. L."
+    ],
+    [
+     "Song",
+     "J."
+    ],
+    [
+     "Song",
+     "T. Z."
+    ],
+    [
+     "Song",
+     "W."
+    ],
+    [
+     "Song",
+     "Y."
+    ],
+    [
+     "Song",
+     "Y. X."
+    ],
+    [
+     "Sosio",
+     "S."
+    ],
+    [
+     "Spataro",
+     "S."
+    ],
+    [
+     "Stieler",
+     "F."
+    ],
+    [
+     "Su",
+     "S.-S."
+    ],
+    [
+     "Su",
+     "Y."
+    ],
+    [
+     "Sun",
+     "G.-B."
+    ],
+    [
+     "Sun",
+     "G.-X."
+    ],
+    [
+     "Sun",
+     "H."
+    ],
+    [
+     "Sun",
+     "H."
+    ],
+    [
+     "Sun",
+     "J.-F."
+    ],
+    [
+     "Sun",
+     "K."
+    ],
+    [
+     "Sun",
+     "L."
+    ],
+    [
+     "Sun",
+     "S."
+    ],
+    [
+     "Sun",
+     "T."
+    ],
+    [
+     "Sun",
+     "Y.-C."
+    ],
+    [
+     "Sun",
+     "Y.-H."
+    ],
+    [
+     "Sun",
+     "Y.-J."
+    ],
+    [
+     "Sun",
+     "Y."
+    ],
+    [
+     "Sun",
+     "Z.-Q."
+    ],
+    [
+     "Sun",
+     "Z.-T."
+    ],
+    [
+     "Tang",
+     "C.-J."
+    ],
+    [
+     "Tang",
+     "G.-Y."
+    ],
+    [
+     "Tang",
+     "J."
+    ],
+    [
+     "Tang",
+     "J."
+    ],
+    [
+     "Tang",
+     "L.-F."
+    ],
+    [
+     "Tang",
+     "Y."
+    ],
+    [
+     "Tao",
+     "L.-Y."
+    ],
+    [
+     "Tat",
+     "M."
+    ],
+    [
+     "Teng",
+     "J.-X."
+    ],
+    [
+     "Tian",
+     "J.-Y."
+    ],
+    [
+     "Tian",
+     "W."
+    ],
+    [
+     "Tian",
+     "Y."
+    ],
+    [
+     "Tian",
+     "Z.-F."
+    ],
+    [
+     "Uman",
+     "I."
+    ],
+    [
+     "Wang",
+     "B."
+    ],
+    [
+     "Wang",
+     "B."
+    ],
+    [
+     "Wang",
+     "B."
+    ],
+    [
+     "Wang",
+     "C."
+    ],
+    [
+     "Wang",
+     "C."
+    ],
+    [
+     "Wang",
+     "C."
+    ],
+    [
+     "Wang",
+     "D."
+    ],
+    [
+     "Wang",
+     "H.-J."
+    ],
+    [
+     "Wang",
+     "J."
+    ],
+    [
+     "Wang",
+     "K."
+    ],
+    [
+     "Wang",
+     "L."
+    ],
+    [
+     "Wang",
+     "L.-W."
+    ],
+    [
+     "Wang",
+     "M."
+    ],
+    [
+     "Wang",
+     "M."
+    ],
+    [
+     "Wang",
+     "N.-Y."
+    ],
+    [
+     "Wang",
+     "S."
+    ],
+    [
+     "Wang",
+     "T."
+    ],
+    [
+     "Wang",
+     "T."
+    ],
+    [
+     "Wang",
+     "W."
+    ],
+    [
+     "Wang",
+     "W."
+    ],
+    [
+     "Wang",
+     "W."
+    ],
+    [
+     "Wang",
+     "X."
+    ],
+    [
+     "Wang",
+     "X."
+    ],
+    [
+     "Wang",
+     "X.-J."
+    ],
+    [
+     "Wang",
+     "X."
+    ],
+    [
+     "Wang",
+     "X.-N."
+    ],
+    [
+     "Wang",
+     "Y."
+    ],
+    [
+     "Wang",
+     "Y."
+    ],
+    [
+     "Wang",
+     "Y."
+    ]
+   ],
+   "years": [
+    2025,
+    2025
+   ],
+   "venue": "Journal of High Energy Physics",
+   "aliases": [
+    "Journal of High Energy Physics",
+    "Journal of High Energy Physics",
+    "J High Energy Phys",
+    "Journal of High Energy Physics"
+   ],
+   "type": "JournalArticle",
+   "source": "semanticscholar",
+   "doi": "10.1007/jhep06(2025)086"
+  },
+  "candidates": [
+   "inspire: Updated model-independent measurement of the strong-phase differences between D0 and D0 → K0S/L π + π - decays / Ablikim, Achasov, Adlarson / 2025 / arXiv",
+   "datacite: Updated model-independent measurement of the strong-phase differences between $D^0$ and $\\bar{D}^0 \\to K^{0}_{S/L}π^+π^-$ decays / Collaboration, Ablikim, Achasov / 2025 / arXiv",
+   "semanticscholar: Updated model-independent measurement of the strong-phase differences between D0 and D¯0→KS/L0π+π−\\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargi / Ablikim, Achasov, Adlarson / 2025/2025 / Journal of High Energy Physics",
+   "crossref: Updated measurement of the like-sign dimuon charge asymmetry at D0 / Kasper, Collaboration / 2012 / AIP Conference Proceedings",
+   "crossref: Measurement of the Angular Distribution of Electrons from W Boson Decays at D0 / Steinbrück / 1999 / "
+  ],
+  "failed": [],
+  "unrecorded": 0
+ },
+ {
+  "paper": "q-bio.BM_2611.19885.pdf",
+  "n": 60,
+  "judgement": "false alarm",
+  "verdict": "metadata_error",
+  "raw": "J. Brehmer, S. Behrends, P. D. Haan, and T. Cohen, “Does equivariance matter at scale?” Transactions on Machine Learning Research (2025). 61Jülich Supercomputing Centre, “JUWELS Cluster and Booster: Exascale Pathfinder with Modular Supercomputing Architecture at Juelich Supercomputing Centre,” Journal of large-scale research facilities 7 (2021), 10.17815/jlsrf-7-183.",
+  "parsed": {
+   "title": "JUWELS Cluster and Booster: Exascale Pathfinder with Modular Supercomputing Architecture at Juelich Supercomputing Centre",
+   "authors": [
+    "Brehmer",
+    "Behrends",
+    "Haan",
+    "Cohen",
+    "Centre"
+   ],
+   "year": 2025,
+   "venue": "Journal of large-scale research facilities",
+   "kind": "article",
+   "dois": [
+    "10.17815/jlsrf-7-183"
+   ],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "JUWELS Cluster and Booster: Exascale Pathfinder with Modular Supercomputing Architecture at Juelich Supercomputing Centre",
+    "found": "JUWELS Cluster and Booster: Exascale Pathfinder with Modular Supercomputing Architecture at Juelich Supercomputing Centre",
+    "score": 1
+   },
+   {
+    "field": "identifier",
+    "status": "match",
+    "cited": "doi:10.17815/jlsrf-7-183",
+    "found": "10.17815/jlsrf-7-183"
+   },
+   {
+    "field": "authors",
+    "status": "mismatch",
+    "cited": "Brehmer, Behrends, Haan, Cohen, Centre",
+    "found": "Alvarez",
+    "note": "5 cited author(s) not on the paper"
+   },
+   {
+    "field": "year",
+    "status": "mismatch",
+    "cited": "2025",
+    "found": "2021"
+   },
+   {
+    "field": "venue",
+    "status": "match",
+    "cited": "Journal of large-scale research facilities",
+    "found": "Journal of large-scale research facilities JLSRF"
+   }
+  ],
+  "issues": [
+   "Author list does not match the published work: Brehmer, Behrends, Haan, Cohen, Centre not among its authors",
+   "Year 2025 does not match the published record (2021)"
+  ],
+  "match": {
+   "title": "JUWELS Cluster and Booster: Exascale Pathfinder with Modular Supercomputing Architecture at Juelich Supercomputing Centre",
+   "authors": [
+    [
+     "Alvarez",
+     "Damian"
+    ]
+   ],
+   "years": [
+    2021
+   ],
+   "venue": "Journal of large-scale research facilities JLSRF",
+   "aliases": [
+    "Journal of large-scale research facilities JLSRF",
+    "JLSRF"
+   ],
+   "type": "journal-article",
+   "source": "crossref",
+   "doi": "10.17815/jlsrf-7-183"
+  },
+  "candidates": [
+   "crossref: JUWELS Cluster and Booster: Exascale Pathfinder with Modular Supercomputing Architecture at Juelich Supercomputing Centre / Alvarez / 2021 / Journal of large-scale research facilities JLSRF",
+   "semanticscholar: JUWELS Cluster and Booster: Exascale Pathfinder with Modular Supercomputing Architecture at Juelich Supercomputing Centre / Alvarez / 2021/2021 / Journal of large-scale research facilities JLSRF",
+   "openalex: JUWELS Cluster and Booster: Exascale Pathfinder with Modular Supercomputing Architecture at Juelich Supercomputing Centre / Alvarez / 2021 / Journal of large-scale research facilities JLSRF",
+   "crossref: JURECA: Data Centric and Booster Modules implementing the Modular Supercomputing Architecture at Jülich Supercomputing Centre / Thörnig / 2021 / Journal of large-scale research facilities JLSRF",
+   "crossref: JURECA: Modular supercomputer at Jülich Supercomputing Centre / Krause, Thörnig / 2018 / Journal of large-scale research facilities JLSRF"
+  ],
+  "failed": [],
+  "unrecorded": 0
+ },
+ {
+  "paper": "plos_10_1371_journal_pone_0363220.pdf",
+  "n": 39,
+  "judgement": "real error",
+  "verdict": "metadata_error",
+  "raw": "39. Chuat M, Alcoba G, Eyong J, Wanda F, Comte E, Nkwescheu A. Dealing with snakebite in rural Cameroon: a qualitative investigation among victims and traditional healers. Toxicon X. 2021;:9-10. https://doi.org/10.1016/j.toxcx.2021.100072",
+  "parsed": {
+   "title": "Dealing with snakebite in rural Cameroon: a qualitative investigation among victims and traditional healers",
+   "authors": [
+    "Chuat",
+    "Alcoba",
+    "Eyong",
+    "Wanda",
+    "Comte",
+    "Nkwescheu"
+   ],
+   "year": 2021,
+   "venue": "Toxicon X",
+   "kind": "article",
+   "dois": [
+    "10.1016/j.toxcx.2021.100072"
+   ],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Dealing with snakebite in rural Cameroon: a qualitative investigation among victims and traditional healers",
+    "found": "Dealing with snakebite in rural Cameroon: A qualitative investigation among victims and traditional healers",
+    "score": 1
+   },
+   {
+    "field": "identifier",
+    "status": "match",
+    "cited": "doi:10.1016/j.toxcx.2021.100072",
+    "found": "10.1016/j.toxcx.2021.100072"
+   },
+   {
+    "field": "authors",
+    "status": "mismatch",
+    "cited": "Chuat, Alcoba, Eyong, Wanda, Comte, Nkwescheu",
+    "found": "Chuat, Alcoba, Eyong, Wanda, Comte, Nkwescheu, Chappuis, Hudelson",
+    "note": "2 author(s) omitted"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2021",
+    "found": "2021"
+   },
+   {
+    "field": "venue",
+    "status": "match",
+    "cited": "Toxicon X",
+    "found": "Toxicon: X"
+   },
+   {
+    "field": "pages",
+    "status": "minor",
+    "cited": "9-10",
+    "found": "9-10 / 100072",
+    "note": "Bibliographic details differ: pages 9-10 vs 100072"
+   }
+  ],
+  "issues": [
+   "Incomplete author list: 2 of 8 authors omitted without “et al.”"
+  ],
+  "match": {
+   "title": "Dealing with snakebite in rural Cameroon: A qualitative investigation among victims and traditional healers",
+   "authors": [
+    [
+     "Chuat",
+     "Manon"
+    ],
+    [
+     "Alcoba",
+     "Gabriel"
+    ],
+    [
+     "Eyong",
+     "Justin"
+    ],
+    [
+     "Wanda",
+     "Franck"
+    ],
+    [
+     "Comte",
+     "Eric"
+    ],
+    [
+     "Nkwescheu",
+     "Armand"
+    ],
+    [
+     "Chappuis",
+     "François"
+    ],
+    [
+     "Hudelson",
+     "Patricia"
+    ]
+   ],
+   "years": [
+    2021
+   ],
+   "venue": "Toxicon: X",
+   "aliases": [
+    "Toxicon: X",
+    "Toxicon: X"
+   ],
+   "type": "journal-article",
+   "source": "crossref",
+   "doi": "10.1016/j.toxcx.2021.100072"
+  },
+  "candidates": [
+   "crossref: Dealing with snakebite in rural Cameroon: A qualitative investigation among victims and traditional healers / Chuat, Alcoba, Eyong / 2021 / Toxicon: X",
+   "crossref: Snakebite epidemiology and health-seeking behavior in Akonolinga health district, Cameroon: Cross-sectional study / Alcoba, Chabloz, Eyong / 2020 / PLOS Neglected Tropical Diseases",
+   "crossref: What is the impact of snakebite envenoming on domestic animals? A nation-wide community-based study in Nepal and Cameroon / Bolon, Babo Martins, Ochoa / 2021 / Toxicon: X",
+   "crossref: Corrigendum to “What is the impact of snakebite envenoming on domestic animals? A nation-wide community-based study in Nepal and Cameroon” [Toxicon: X 9 (2021) 100068] / Bolon, Babo Martins, Ochoa / 2022 / Toxicon: X",
+   "crossref: Snakebite Epidemiology in Humans and Domestic Animals in Rural Cameroon: A Nationwide Random Multi-Cluster Community Survey / Alcoba, Nkwescheu, Wanda / 2024 / "
+  ],
+  "failed": [],
+  "unrecorded": 0
+ }
+]

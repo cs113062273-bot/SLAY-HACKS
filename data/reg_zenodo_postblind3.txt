@@ -5,52 +5,30 @@ hallucitechecker   18  15  20  51   0.545  0.718  0.474  0.507  0.663
 hallucinator       29   4  28  43   0.879  0.606  0.509  0.644  0.692
 halref             24   9  53  18   0.727  0.254  0.312  0.436  0.404
 refchecker         32   1  36  35   0.970  0.493  0.471  0.634  0.644
-VERACITE           23  10   3  68   0.697  0.958  0.885  0.780  0.875
+VERACITE           33   0   5  66   1.000  0.930  0.868  0.930  0.952
 
 Errors:
 FP P2 R3 gold=verified → fabricated (0.08) failed=[]
    REF: Caifan Du, James Howison, and Patrice Lopez. “Softcite: Automatic Extraction of Software Mentions in Research Literature”. In: Poster abstracts of the 1st Workshop on Natural Language Processing and D
    ! No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC
-FN P3 R9 gold=problematic → unchecked (0.50) failed=[openalex,semanticscholar]
-   REF: X. Ou and et al. Tuqdm: Token unmasking with quantized diffusion models. In ACL, 2024
-   ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
-   ! “and et al.” pattern (common in machine-generated references)
-FP P3 R18 gold=verified → metadata_error (0.35) failed=[openalex]
+FP P3 R18 gold=verified → metadata_error (0.35) failed=[]
    REF: Andrey Malinin, David Uthoff, Roman Heil, Yaya Li, and Mark Gales. Ensemble distribution distillation. International Conference on Learning Representations (ICLR), 2020
    MATCH[semanticscholar]: Ensemble Distribution Distillation | Malinin, Mlodozeniec, Gales | 2019/2019 | International Conference on Learning Representations
    authors:mismatch 3 cited author(s) not on the paper cited=Malinin, Uthoff, Heil, Li, Gales found=Malinin, Mlodozeniec, Gales
    year:minor  cited=2020 found=2019/2019
    ! Author list does not match the published work: Uthoff, Heil, Li not among its authors
-FN P3 R21 gold=problematic → unchecked (0.50) failed=[openalex,semanticscholar]
-   REF: Maria Glushkova, Shiori Kobayashi, and Junichi Suzuki. Uncertainty estimation in neural text regression. In Findings of the Association for Computational Linguistics: EMNLP 2021, pp. 4567–4576, 2021
-   ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
-FN P3 R22 gold=problematic → unchecked (0.50) failed=[openalex,semanticscholar]
-   REF: Yichao Wang, Bowen Zhou, Adam Lopez, and Benjamin Snyder. Uncertainty quantification in abstractive summarization. In Proceedings of the 60th Annual Meeting of the Association for Computational Lingui
-   ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
-FN P3 R26 gold=problematic → unchecked (0.50) failed=[semanticscholar,openalex]
-   REF: Sam Mielke, Elif Akyürek, and Ond?rej Dusek. Evaluating the reliability of self-assessment in language models. In Findings of the Association for Computational Linguistics: EMNLP 2020, pp. 4320–4330, 
-   ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
-FN P3 R27 gold=problematic → unchecked (0.50) failed=[semanticscholar,openalex]
-   REF:  Mohit Jain, Ethan Perez, and James Glass. Learning to predict confidence for language models. In Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (EMNLP), pp. 24
-   ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
-FN P3 R36 gold=problematic → unchecked (0.50) failed=[semanticscholar,openalex]
-   REF: Shauli Ravfogel, Shachar Zalmanski, and Yoav Goldberg. Well-calibrated language models can be produced with small calibration sets. In Findings of the Association for Computational Linguistics: ACL 20
-   ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
-FP P3 R46 gold=verified → metadata_error (0.30) failed=[semanticscholar,openalex]
+FP P3 R30 gold=verified → metadata_error (0.35) failed=[semanticscholar]
+   REF: Jie Ren, Yao Zhao, Tu Vu, Peter J. Liu, and Balaji Lakshminarayanan. Self-evaluation improves selective generation in large language models. In Javier Antorán, Arno Blaas, Kelly Buchanan,Fan Feng, Vin
+   MATCH[openalex]: Self-Evaluation Improves Selective Generation in Large Language Models | Ren, Zhao, Vu, Liu, Lakshminarayanan | 2023 | arXiv (Cornell University)
+   venue:mismatch publication status unconfirmed cited=Proceedings on "I Can’t Believe It’s Not Better: Failure Modes in the Age of Fou found=arXiv (Cornell University)
+   ! Only a preprint was found; publication in “Proceedings on "I Can’t Believe It’s Not Better: Failure Modes in the Age of Foundation Models" at NeurIPS 2023 Workshops” could not be confirmed
+FP P3 R38 gold=verified → metadata_error (0.35) failed=[semanticscholar]
+   REF: Daniel D. Johnson, Daniel Tarlow, David Duvenaud, and Chris J. Maddison. Experts don’t cheat: learning what you don’t know by predicting pairs. In Proceedings of the 41st International Conference on M
+   MATCH[openalex]: Experts Don't Cheat: Learning What You Don't Know By Predicting Pairs | Johnson, Tarlow, Duvenaud, Maddison | 2024 | arXiv (Cornell University)
+   venue:mismatch publication status unconfirmed cited=Proceedings of the 41st International Conference on Machine Learning found=arXiv (Cornell University)
+   ! Only a preprint was found; publication in “Proceedings of the 41st International Conference on Machine Learning” could not be confirmed
+FP P3 R46 gold=verified → metadata_error (0.30) failed=[semanticscholar]
    REF: Sebastian Pado, Michel Galley, Daniel Jurafsky, and Christopher D Manning. Machine translation evaluation with textual entailment features. In Proceedings of the Fourth Workshop on Statistical Machine
-   MATCH[crossref]: Textual entailment features for machine translation evaluation | Padó, Galley, Jurafsky, Manning | 2009/2010 | Proceedings of the Fourth Workshop on Statistical Machine Translation - StatMT '09
-   title:mismatch  cited=Machine translation evaluation with textual entailment features found=Textual entailment features for machine translation evaluation
-   ! Closest real work has a different title: “Textual entailment features for machine translation evaluation”
-FN P3 R48 gold=problematic → unchecked (0.50) failed=[semanticscholar,openalex]
-   REF: Shyam Fernando and Mark Stevenson. Semantic similarity based on lexical substitution. In Proceedings of ACL-08: HLT, pp. 756–764, 2008
-   ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
-FN P3 R49 gold=problematic → unchecked (0.50) failed=[semanticscholar,openalex]
-   REF: Asma Issa, George Mohler, and John Johnson. Paraphrase identification using deep contextualized representations. In Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processi
-   ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
-FN P3 R50 gold=problematic → unchecked (0.50) failed=[semanticscholar,openalex]
-   REF: Lei Yu, Jimmy Dumsmyr, and Kevin Knight. Deep paraphrase identification. In Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP), pp.650–655, 2014
-   ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
-FN P3 R52 gold=problematic → unchecked (0.50) failed=[semanticscholar,openalex]
-   REF: Yi Tay, Kelvin Fu, Kai Wu, Ivan Casanueva, Jianfeng Liu, Byron Wallace, Shuohang Wang, Bajrang Singh, and Julian McAuley. Reasoning with heterogeneous graph representations for knowledge-aware questio
-   MATCH[crossref]: Graph Reasoning Transformers for Knowledge-Aware Question Answering | Zhao, Zhao, Hu, Xu | 2024 | Proceedings of the AAAI Conference on Artificial Intelligence
-   ! Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+   MATCH[openalex]: Robust machine translation evaluation with entailment features | Padó, Galley, Jurafsky, Manning | 2009 | 
+   title:mismatch  cited=Machine translation evaluation with textual entailment features found=Robust machine translation evaluation with entailment features
+   ! Closest real work has a different title: “Robust machine translation evaluation with entailment features”

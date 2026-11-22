@@ -36,6 +36,8 @@ export interface Doc {
   sentences: string[];
   references: ParsedRef[];
   rawReferences: string[];
+  /** PDF page on which each reference entry starts (PDF input only) */
+  refPages?: number[];
   citances: Citance[];
   style: 'numeric' | 'author-year' | 'unknown';
   stats: { pages: number; words: number };
@@ -578,6 +580,7 @@ export function buildDoc(linesIn: Line[], pageWidths: Map<number, number>): Doc 
   const refLines = range ? continueAcrossBackMatter(lines, range).filter((l) => !REF_HEAD.test(l.text.trim())) : [];
   const rawReferences = trimLastEntry(keepReferenceLike(splitEntries(refLines).map(stripBackrefs).map(cleanRefString)));
   const references = rawReferences.map(parseReference);
+  const refPages = locatePages(refLines, rawReferences);
   // body text: join lines, fix hyphenation
   let body = '';
   const bodySize = median(bodyLines.map((l) => l.size));
@@ -609,7 +612,33 @@ export function buildDoc(linesIn: Line[], pageWidths: Map<number, number>): Doc 
     }
   }
   title = title?.replace(/[\s∗*†‡§¶]+$/u, '');
-  return { title, sentences, references, rawReferences, citances, style, stats: { pages: nPages, words: body.split(/\s+/).length } };
+  return { title, sentences, references, rawReferences, refPages, citances, style, stats: { pages: nPages, words: body.split(/\s+/).length } };
+}
+
+/** The page each entry starts on: find its opening words in the reference lines, in order. */
+function locatePages(refLines: Line[], raws: string[]): number[] {
+  let text = '';
+  const starts: { at: number; page: number }[] = [];
+  for (const l of refLines) {
+    starts.push({ at: text.length, page: l.page });
+    text += fold(l.text).replace(/ /g, '');
+  }
+  const pageAt = (k: number) => {
+    let pg = starts[0]?.page ?? 0;
+    for (const s of starts) {
+      if (s.at > k) break;
+      pg = s.page;
+    }
+    return pg;
+  };
+  let from = 0;
+  return raws.map((r) => {
+    const key = fold(r).replace(/ /g, '').slice(0, 24);
+    const k = key ? text.indexOf(key, from) : -1;
+    if (k < 0) return pageAt(from);
+    from = k + key.length;
+    return pageAt(k);
+  });
 }
 
 /** Plain text input: either a full paper (with a References heading) or just a reference list. */

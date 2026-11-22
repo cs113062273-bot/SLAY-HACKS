@@ -93,6 +93,7 @@ const HOST_SOURCE: Record<string, SourceName> = {
   'api.semanticscholar.org': 'semanticscholar',
   'api.datacite.org': 'datacite',
   'www.ebi.ac.uk': 'europepmc',
+  'inspirehep.net': 'inspire',
   'api.github.com': 'github',
   'huggingface.co': 'huggingface',
 };
@@ -101,7 +102,7 @@ export const cache = new IdbCache();
 // Recorded sample responses belong to that audit only. Live inputs use the persistent live-response cache.
 let activeCache: Cache = cache;
 /** date the bundled sample snapshots were recorded (scripts/build-seeds.ts) */
-export const SNAPSHOT_DATE = '2026-11-19';
+export const SNAPSHOT_DATE = '2026-11-22';
 let pendingEvents: HttpEvent[] = [];
 let flushTimer: number | undefined;
 function onHttp(e: HttpEvent) {
@@ -224,6 +225,23 @@ export async function analyze(input: Input, mode: Mode = savedMode()) {
       }
     };
     await Promise.all(Array.from({ length: 6 }, worker));
+    if (my !== runId) return;
+    // A second, sequential pass for references whose indexes were rate-limited during the parallel pass: by now the
+    // limits have usually cooled down. Only a definite answer replaces "unchecked".
+    const pending = getState().results.map((r, i) => (r?.verdict === 'unchecked' ? i : -1)).filter((i) => i >= 0);
+    if (pending.length && pending.length <= 30) {
+      await new Promise((res) => setTimeout(res, 3000));
+      for (const i of pending) {
+        if (my !== runId) return;
+        const r = await verifyReference(doc.references[i], { http, budgetMs: 30000 }, i).catch(() => null);
+        if (r && r.verdict !== 'unchecked' && my === runId)
+          set((s) => {
+            const results = s.results.slice();
+            results[i] = r;
+            return { results };
+          });
+      }
+    }
     if (my !== runId) return;
     set({ phase: 'done', finishedAt: Date.now() });
     if (mode === 'full') await runClaimAudit();

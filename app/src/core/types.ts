@@ -60,6 +60,8 @@ export interface WorkRecord {
   pdfUrl?: string;
   isRetracted?: boolean;
   updates?: { type: string; doi?: string; label?: string }[];
+  /** notices that update this work (retraction, correction…), when the source embeds them (Crossref `updated-by`) */
+  updatedBy?: { type: string; doi?: string }[];
 }
 
 export type SourceName =
@@ -68,6 +70,7 @@ export type SourceName =
   | 'semanticscholar'
   | 'datacite'
   | 'europepmc'
+  | 'inspire'
   | 'github'
   | 'huggingface'
   | 'pubmed';

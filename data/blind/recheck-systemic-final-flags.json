@@ -1,0 +1,1476 @@
+[
+ {
+  "paper": "cs.CL_2611.24936v1.pdf",
+  "n": 19,
+  "judgement": "new",
+  "verdict": "metadata_error",
+  "raw": "Jiaming Ji, Mickel Liu, Juntao Dai, Xuehai Pan, Chi Zhang, Ce Bian, Chi Zhang, Ruiyang Sun, Yizhou Wang, and Yaodong Yang. 2023. Beavertails: Towards improved safety alignment of llm via a humanpreference dataset. Preprint, arXiv:2307.04657.",
+  "parsed": {
+   "title": "Beavertails: Towards improved safety alignment of llm via a humanpreference dataset",
+   "authors": [
+    "Ji",
+    "Liu",
+    "Dai",
+    "Pan",
+    "Zhang",
+    "Bian",
+    "Zhang",
+    "Sun",
+    "Wang",
+    "Yang"
+   ],
+   "year": 2023,
+   "venue": "Preprint. arXiv",
+   "kind": "article",
+   "dois": [],
+   "arxiv": [
+    "2307.04657"
+   ]
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Beavertails: Towards improved safety alignment of llm via a humanpreference dataset",
+    "found": "BeaverTails: Towards Improved Safety Alignment of LLM via a Human-Preference Dataset",
+    "score": 0.9879518072289156
+   },
+   {
+    "field": "identifier",
+    "status": "match",
+    "cited": "arXiv:2307.04657",
+    "found": "10.48550/arxiv.2307.04657"
+   },
+   {
+    "field": "authors",
+    "status": "mismatch",
+    "cited": "Ji, Liu, Dai, Pan, Zhang, Bian, Zhang, Sun, Wang, Yang",
+    "found": "Ji, Liu, Dai, Pan, Zhang, Bian, Chen, Sun, …",
+    "note": "1 cited author(s) not on the paper"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2023",
+    "found": "2023/2023"
+   },
+   {
+    "field": "venue",
+    "status": "na",
+    "cited": "Preprint. arXiv",
+    "found": "Neural Information Processing Systems"
+   }
+  ],
+  "issues": [
+   "Author list does not match the published work: Zhang not among its authors"
+  ],
+  "match": {
+   "title": "BeaverTails: Towards Improved Safety Alignment of LLM via a Human-Preference Dataset",
+   "authors": [
+    [
+     "Ji",
+     "Jia-Ming"
+    ],
+    [
+     "Liu",
+     "Mickel"
+    ],
+    [
+     "Dai",
+     "Josef"
+    ],
+    [
+     "Pan",
+     "Xue-Hai"
+    ],
+    [
+     "Zhang",
+     "Chi"
+    ],
+    [
+     "Bian",
+     "Ce"
+    ],
+    [
+     "Chen",
+     "Bo-Yuan"
+    ],
+    [
+     "Sun",
+     "Ruiyang"
+    ],
+    [
+     "Wang",
+     "Yi-Zhou"
+    ],
+    [
+     "Yang",
+     "Yao-Dong"
+    ]
+   ],
+   "years": [
+    2023,
+    2023
+   ],
+   "venue": "Neural Information Processing Systems",
+   "aliases": [
+    "Neural Information Processing Systems",
+    "Neural Information Processing Systems",
+    "Neural Inf Process Syst",
+    "NeurIPS",
+    "NIPS",
+    "ArXiv",
+    "nips"
+   ],
+   "type": "JournalArticle",
+   "source": "semanticscholar",
+   "doi": "10.48550/arxiv.2307.04657"
+  },
+  "candidates": [
+   "crossref: BeaverTails: Towards Improved Safety Alignment of LLM via a Human-Preference Dataset / Ji, Liu, Dai / 2023 / Advances in Neural Information Processing Systems 36",
+   "datacite: BeaverTails: Towards Improved Safety Alignment of LLM via a Human-Preference Dataset / Ji, Liu, Dai / 2023 / arXiv",
+   "semanticscholar: BeaverTails: Towards Improved Safety Alignment of LLM via a Human-Preference Dataset / Ji, Liu, Dai / 2023/2023 / Neural Information Processing Systems",
+   "crossref: SafeSora: Towards Safety Alignment of Text2Video Generation via a Human Preference Dataset / Dai, Chen, Wang / 2024 / Advances in Neural Information Processing Systems 37",
+   "crossref: SafeVLA: Towards Safety Alignment of Vision-Language-Action Model via Constrained Learning / Zhang, Zhang, Ji / 2025 / Advances in Neural Information Processing Systems 38"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 1
+ },
+ {
+  "paper": "cs.CL_2611.24936v1.pdf",
+  "n": 26,
+  "judgement": "real: year 2006 cited, record and volume 28 are 1982",
+  "verdict": "metadata_error",
+  "raw": "S. Lloyd. 2006. Least squares quantization in pcm. IEEE Trans. Inf. Theor., 28(2):129-137.",
+  "parsed": {
+   "title": "Least squares quantization in pcm",
+   "authors": [
+    "Lloyd"
+   ],
+   "year": 2006,
+   "venue": "IEEE Trans. Inf. Theor",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Least squares quantization in pcm",
+    "found": "Least squares quantization in PCM",
+    "score": 1
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Lloyd",
+    "found": "Lloyd"
+   },
+   {
+    "field": "year",
+    "status": "mismatch",
+    "cited": "2006",
+    "found": "1982"
+   },
+   {
+    "field": "venue",
+    "status": "match",
+    "cited": "IEEE Trans. Inf. Theor",
+    "found": "IEEE Transactions on Information Theory"
+   }
+  ],
+  "issues": [
+   "Year 2006 does not match the published record (1982)"
+  ],
+  "match": {
+   "title": "Least squares quantization in PCM",
+   "authors": [
+    [
+     "Lloyd",
+     "S."
+    ]
+   ],
+   "years": [
+    1982
+   ],
+   "venue": "IEEE Transactions on Information Theory",
+   "aliases": [
+    "IEEE Transactions on Information Theory",
+    "IEEE Trans. Inform. Theory"
+   ],
+   "type": "journal-article",
+   "source": "crossref",
+   "doi": "10.1109/tit.1982.1056489"
+  },
+  "candidates": [
+   "crossref: Least squares quantization in PCM / Lloyd / 1982 / IEEE Transactions on Information Theory",
+   "semanticscholar: Least squares quantization in PCM / Lloyd / 1982/1982 / IEEE Transactions on Information Theory",
+   "crossref: New Diffusion Least-Mean-Squares Algorithms With Quantization and Privacy Awareness / Zhang, Peng, Han / 2026 / IEEE Transactions on Signal and Information Processing over Networks",
+   "crossref: Maximum likelihood, least squares, and penalized least squares for PET / Kaufman / 1993 / IEEE Transactions on Medical Imaging",
+   "crossref: Persistence of excitation in extended least squares / Moore / 1983 / IEEE Transactions on Automatic Control"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 1
+ },
+ {
+  "paper": "cs.SE_2611.24924v1.pdf",
+  "n": 42,
+  "judgement": "real but overstated: cited title differs from the arXiv record title; flagged as wrong identifier",
+  "verdict": "id_mismatch",
+  "raw": "[42] Lirong Che, Yuzhe yang, Peiwen lin, Chuang wang, Xueqian wang, and Jian su. Demoevolve: Overcoming sparse feedback in agentic harness evolution with demonstrations, 2026. URL https://arxiv.org/abs/2605.24539.",
+  "parsed": {
+   "title": "Lirong Che, Yuzhe yang, Peiwen lin, Chuang wang, Xueqian wang, and Jian su",
+   "authors": [],
+   "year": 2026,
+   "venue": "Demoevolve: Overcoming sparse feedback in agentic harness evolution with demonstrations",
+   "kind": "article",
+   "dois": [],
+   "arxiv": [
+    "2605.24539"
+   ]
+  },
+  "checks": [
+   {
+    "field": "identifier",
+    "status": "mismatch",
+    "cited": "arXiv:2605.24539",
+    "found": "DemoEvolve: Demonstration-Guided Harness Evolution under Sparse Feedback",
+    "note": "identifier resolves to a different work"
+   }
+  ],
+  "issues": [
+   "arXiv:2605.24539 points to a different work: “DemoEvolve: Demonstration-Guided Harness Evolution under Sparse Feedback”"
+  ],
+  "candidates": [
+   "crossref: Harness-Level Self-Evolution of Hydrologic AI Systems / Wang, Yang, Wang / 2026 / ",
+   "crossref: Agentic Self-Evolution for Large Language Models: Taxonomy, Techniques, and Applications / Xiang, Yang, Chen / 2026 / ",
+   "crossref: Author response for \"A Modular Two-component Protein cage for Spatially Organized Enzymatic Assembly and Enhanced Metabolic Flux\" / Lingqin Wang, Jian Gao, Xiao Ma / 2025 / ",
+   "crossref: Low-Temperature Sintering Behavior and Microwave Dielectric Properties of Ligaw2o8 Ceramic Materials in Ltcc Technology / Wang, Tang, Cheng / 2024 / ",
+   "datacite: DemoEvolve: Demonstration-Guided Harness Evolution under Sparse Feedback / Che, yang, lin / 2026 / arXiv"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 2
+ },
+ {
+  "paper": "cs.HC_2611.24888v1.pdf",
+  "n": 5,
+  "judgement": "new",
+  "verdict": "metadata_error",
+  "raw": "[5] Saint Augustine. 1838. The confessions of S. Augustine. Vol. 1. JH Parker.",
+  "parsed": {
+   "title": "The confessions of S. Augustine",
+   "authors": [
+    "Augustine"
+   ],
+   "year": 1838,
+   "venue": "Vol. 1. JH Parker",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "The confessions of S. Augustine",
+    "found": "The Confessions Of S. Augustine",
+    "score": 1
+   },
+   {
+    "field": "authors",
+    "status": "mismatch",
+    "cited": "Augustine",
+    "found": "Pusey",
+    "note": "1 cited author(s) not on the paper"
+   }
+  ],
+  "issues": [
+   "Author list does not match the published work: Augustine not among its authors"
+  ],
+  "match": {
+   "title": "The Confessions Of S. Augustine",
+   "authors": [
+    [
+     "Pusey",
+     "E."
+    ]
+   ],
+   "years": [],
+   "aliases": [],
+   "source": "semanticscholar"
+  },
+  "candidates": [
+   "semanticscholar: The Confessions Of S. Augustine / Pusey /  / ",
+   "crossref: Augustine of Hippo, The Confessions of Saint Augustine / Reichardt / 2003 / Exploring Catholic Literature",
+   "crossref: Saint Augustine: Confessions / Vessey, Center / 1993 / Augustinian Studies",
+   "crossref: The Conversion-Scene of the ‘Confessions’ / Ferrari / 1982 / Saint Augustine Lecture",
+   "crossref: A TREMBLING GLANCE /  / 2005 / The Mysticism of Saint Augustine"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 1
+ },
+ {
+  "paper": "cs.HC_2611.24888v1.pdf",
+  "n": 18,
+  "judgement": "false alarm: dataset (General Social Survey), exists",
+  "verdict": "not_found",
+  "raw": "[18] Michael Davern, Rene Bautista, Jeremy Freese, Pamela Herd, and Stephen L. Morgan. 2025. General Social Survey 1972-2024. Data accessed from the GSS Data Explorer website at gssdataexplorer.norc.org. Principal Investigator, Michael Davern; Co-Principal Investigators, Rene Bautista, Jeremy Freese, Pamela Herd, and Stephen L. Morgan. Sponsored by National Science Foundation.",
+  "parsed": {
+   "title": "General Social Survey 1972-2024",
+   "authors": [
+    "Davern",
+    "Bautista",
+    "Freese",
+    "Herd",
+    "Morgan"
+   ],
+   "year": 2025,
+   "venue": "Data accessed from the GSS Data Explorer website at gssdataexplorer.norc.org. Principal Investigator, Michael Davern; Co-Principal Investigators, Rene Bautista, Jeremy Freese, Pamela Herd, and Stephen L. Morgan. Sponsored by National Science Foundation",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [],
+  "issues": [
+   "OpenAlex did not respond; re-run later to confirm",
+   "No matching work in Crossref, Semantic Scholar, Europe PMC",
+   "Nearest record: “General Social Survey, 1972: Version 1” (75% title similarity)"
+  ],
+  "match": {
+   "title": "General Social Survey, 1972: Version 1",
+   "authors": [
+    [
+     "Davis",
+     "James A."
+    ]
+   ],
+   "years": [
+    1984
+   ],
+   "venue": "ICPSR Data Holdings",
+   "aliases": [
+    "ICPSR Data Holdings"
+   ],
+   "type": "dataset",
+   "source": "crossref",
+   "doi": "10.3886/icpsr07309.v1"
+  },
+  "candidates": [
+   "crossref: General Social Survey, 1972: Version 1 / Davis / 1984 / ICPSR Data Holdings",
+   "crossref: Social Trends in American Life: Findings from the General Social Survey since 1972 /  / 2012/2017 / ",
+   "crossref: General Social Survey, 1972: Archival Version / Davis / 1984 / ICPSR Data Holdings",
+   "europepmc: New Cohorts, Not Just New Times: The Declining Happiness of Young Americans in the General Social Survey, 1972-2024 / Tsaban / 2026 / ",
+   "crossref: Appendix:: The General Social Survey Project / Marsden, Smith / 2012 / Social Trends in American Life"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 2
+ },
+ {
+  "paper": "cs.HC_2611.24888v1.pdf",
+  "n": 70,
+  "judgement": "false alarm: citation names arXiv v3, whose title differs from the current version",
+  "verdict": "id_mismatch",
+  "raw": "[70] Joon Sung Park, Carolyn Q. Zou, Jonne Kamphorst, Niles Egan, Aaron Shaw, Benjamin Mako Hill, Carrie Cai, Meredith Ringel Morris, Percy Liang, Robb Willer, and Michael S. Bernstein. 2026. LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals. arXiv:2411.10109v3 [cs.AI] https://arxiv.org/abs/2411.10109v3",
+  "parsed": {
+   "title": "LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals",
+   "authors": [
+    "Park",
+    "Zou",
+    "Kamphorst",
+    "Egan",
+    "Shaw",
+    "Hill",
+    "Cai",
+    "Morris",
+    "Liang",
+    "Willer",
+    "Bernstein"
+   ],
+   "year": 2026,
+   "venue": "arXiv",
+   "kind": "article",
+   "dois": [],
+   "arxiv": [
+    "2411.10109"
+   ]
+  },
+  "checks": [
+   {
+    "field": "identifier",
+    "status": "mismatch",
+    "cited": "arXiv:2411.10109",
+    "found": "AI Simulations Grounded in Rich Self-Reports Increase Accuracy and Reduce Distortion",
+    "note": "identifier resolves to a different work"
+   }
+  ],
+  "issues": [
+   "arXiv:2411.10109 points to a different work: “AI Simulations Grounded in Rich Self-Reports Increase Accuracy and Reduce Distortion”"
+  ],
+  "candidates": [
+   "datacite: AI Simulations Grounded in Rich Self-Reports Increase Accuracy and Reduce Distortion / Park, Zou, Kamphorst / 2024 / arXiv",
+   "crossref: A benchmark of expert-level academic questions to assess AI capabilities / Safety, Phan, Gatti / 2026 / Nature",
+   "crossref: SARS-CoV-2 Viral Load in the Nasopharynx at Time of First Infection Among Unvaccinated Individuals: A Secondary Cross-Protocol Analysis of 4 Randomized Trials / Fisher, Kee, Liu / 2024 / JAMA Network Open",
+   "crossref: GWAS and meta-analysis identifies 49 genetic variants underlying critical COVID-19 / Pairo-Castineira, Rawlik, Bretherick / 2023 / Nature",
+   "crossref: Author Correction: GWAS and meta-analysis identifies 49 genetic variants underlying critical COVID-19 / Pairo-Castineira, Rawlik, Bretherick / 2023 / Nature"
+  ],
+  "failed": [
+   "openalex",
+   "semanticscholar"
+  ],
+  "unrecorded": 3
+ },
+ {
+  "paper": "cond-mat.mtrl-sci_2611.24759v1.pdf",
+  "n": 1,
+  "judgement": "new",
+  "verdict": "metadata_error",
+  "raw": "[1] IPCC, Climate Change 2023: Synthesis Report. Contribution of Working Groups I, II and III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change, edited by Core Writing Team, H. Lee, and J. Romero (IPCC, Geneva, Switzerland, 2023).",
+  "parsed": {
+   "title": "Contribution of Working Groups I, II and III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change, edited by Core Writing Team, H. Lee, and J. Romero (IPCC, Geneva, Switzerland, 2023)",
+   "authors": [
+    "IPCC",
+    "Report"
+   ],
+   "year": 2023,
+   "kind": "report",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "mismatch",
+    "cited": "Contribution of Working Groups I, II and III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change, edited by Core Writing Team, H. Lee, and J. Romero (IPCC, Geneva, Switzerland, 2023)",
+    "found": "IPCC, 2023: Climate Change 2023: Synthesis Report. Contribution of Working Groups I, II and III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Core Writing Team, H. Lee and J. Romero (eds.)]. IPCC, Geneva, Switzerland.",
+    "score": 0.9194915254237288,
+    "note": "words differ: cited “edited”, cited “by”, published “report”, published “climate”, published “change”, published “ipcc”"
+   },
+   {
+    "field": "authors",
+    "status": "minor",
+    "cited": "IPCC, Report",
+    "found": "Calvin, Dasgupta, Krinner, Mukherji, Thorne, Trisos, Romero, Aldunce",
+    "note": "83 author(s) omitted without “et al.”"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2023",
+    "found": "2023/2023"
+   }
+  ],
+  "issues": [
+   "Title differs from the published title (cited “edited”, cited “by”, published “report”, published “climate”, published “change”, published “ipcc”)"
+  ],
+  "match": {
+   "title": "IPCC, 2023: Climate Change 2023: Synthesis Report. Contribution of Working Groups I, II and III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Core Writing Team, H. Lee and J. Romero (eds.)]. IPCC, Geneva, Switzerland.",
+   "authors": [
+    [
+     "Calvin",
+     "K."
+    ],
+    [
+     "Dasgupta",
+     "D."
+    ],
+    [
+     "Krinner",
+     "G."
+    ],
+    [
+     "Mukherji",
+     "A."
+    ],
+    [
+     "Thorne",
+     "P."
+    ],
+    [
+     "Trisos",
+     "C."
+    ],
+    [
+     "Romero",
+     "José"
+    ],
+    [
+     "Aldunce",
+     "P."
+    ],
+    [
+     "Barrett",
+     "K."
+    ],
+    [
+     "Blanco",
+     "G."
+    ],
+    [
+     "Cheung",
+     "W."
+    ],
+    [
+     "Connors",
+     "S."
+    ],
+    [
+     "Denton",
+     "F."
+    ],
+    [
+     "Diongue-Niang",
+     "A."
+    ],
+    [
+     "Dodman",
+     "D."
+    ],
+    [
+     "Garschagen",
+     "M."
+    ],
+    [
+     "Geden",
+     "Oliver"
+    ],
+    [
+     "Hayward",
+     "B."
+    ],
+    [
+     "Jones",
+     "Christopher D."
+    ],
+    [
+     "Jotzo",
+     "F."
+    ],
+    [
+     "Krug",
+     "T."
+    ],
+    [
+     "Lasco",
+     "R."
+    ],
+    [
+     "Lee",
+     "Yunewoo"
+    ],
+    [
+     "Masson-Delmotte",
+     "V."
+    ],
+    [
+     "Meinshausen",
+     "M."
+    ],
+    [
+     "Mintenbeck",
+     "K."
+    ],
+    [
+     "Mokssit",
+     "A."
+    ],
+    [
+     "Otto",
+     "F."
+    ],
+    [
+     "Pathak",
+     "M."
+    ],
+    [
+     "Pirani",
+     "A."
+    ],
+    [
+     "Poloczanska",
+     "E."
+    ],
+    [
+     "Pörtner",
+     "H."
+    ],
+    [
+     "Revi",
+     "Aromar"
+    ],
+    [
+     "Roberts",
+     "D."
+    ],
+    [
+     "Roy",
+     "J."
+    ],
+    [
+     "Ruane",
+     "A."
+    ],
+    [
+     "Skea",
+     "J."
+    ],
+    [
+     "Shukla",
+     "P."
+    ],
+    [
+     "Slade",
+     "R."
+    ],
+    [
+     "Slangen",
+     "A."
+    ],
+    [
+     "Sokona",
+     "Y."
+    ],
+    [
+     "Sörensson",
+     "A."
+    ],
+    [
+     "Tignor",
+     "M."
+    ],
+    [
+     "van Vuuren",
+     "D."
+    ],
+    [
+     "Wei",
+     "Yi-Ming"
+    ],
+    [
+     "Winkler",
+     "H."
+    ],
+    [
+     "Zhai",
+     "P."
+    ],
+    [
+     "Zommers",
+     "Z."
+    ],
+    [
+     "Hourcade",
+     "J."
+    ],
+    [
+     "Johnson",
+     "F."
+    ],
+    [
+     "Pachauri",
+     "S."
+    ],
+    [
+     "Simpson",
+     "N."
+    ],
+    [
+     "Singh",
+     "Chandni"
+    ],
+    [
+     "Thomas",
+     "A."
+    ],
+    [
+     "Totin",
+     "E."
+    ],
+    [
+     "Alegría",
+     "Andrés"
+    ],
+    [
+     "Armour",
+     "K."
+    ],
+    [
+     "Bednar-Friedl",
+     "Birgit"
+    ],
+    [
+     "Blok",
+     "K."
+    ],
+    [
+     "Cissé",
+     "G."
+    ],
+    [
+     "Dentener",
+     "F."
+    ],
+    [
+     "Eriksen",
+     "S."
+    ],
+    [
+     "Fischer",
+     "Erich"
+    ],
+    [
+     "Garner",
+     "G."
+    ],
+    [
+     "Guivarch",
+     "C."
+    ],
+    [
+     "Haasnoot",
+     "M."
+    ],
+    [
+     "Hansen",
+     "G."
+    ],
+    [
+     "Hauser",
+     "M."
+    ],
+    [
+     "Hawkins",
+     "E."
+    ],
+    [
+     "Hermans",
+     "T."
+    ],
+    [
+     "Kopp",
+     "R."
+    ],
+    [
+     "Leprince-Ringuet",
+     "Noëmie"
+    ],
+    [
+     "Lewis",
+     "J."
+    ],
+    [
+     "Ley",
+     "D."
+    ],
+    [
+     "Ludden",
+     "Chloé"
+    ],
+    [
+     "Niamir",
+     "L."
+    ],
+    [
+     "Nicholls",
+     "Z."
+    ],
+    [
+     "Some",
+     "Shreya"
+    ],
+    [
+     "Szopa",
+     "S."
+    ],
+    [
+     "Trewin",
+     "B."
+    ],
+    [
+     "Van Der Wijst",
+     "K."
+    ],
+    [
+     "Winter",
+     "G."
+    ],
+    [
+     "Witting",
+     "M."
+    ],
+    [
+     "Birt",
+     "Arlene"
+    ],
+    [
+     "Ha",
+     "Meeyoung"
+    ]
+   ],
+   "years": [
+    2023,
+    2023
+   ],
+   "aliases": [],
+   "type": "CaseReport",
+   "source": "semanticscholar",
+   "doi": "10.59327/ipcc/ar6-9789291691647"
+  },
+  "candidates": [
+   "crossref: Climate Change 2022 - Mitigation of Climate Change: Working Group III Contribution to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change /  / 2023 / ",
+   "crossref: Climate Change 2021 – The Physical Science Basis: Working Group I Contribution to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change / Intergovernmental Panel on Climate Change (IPCC) / 2023 / ",
+   "crossref: Climate Change 2022 – Impacts, Adaptation and Vulnerability: Working Group II Contribution to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change / Intergovernmental Panel on Climate Change (IPCC) / 2023 / ",
+   "semanticscholar: IPCC, 2023: Climate Change 2023: Synthesis Report. Contribution of Working Groups I, II and III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Core Writing Team, H. Lee and J. Romero (eds.)]. IPCC, Geneva, Switzerland. / Calvin, Dasgupta, Krinner / 2023/2023 / ",
+   "crossref: IPCC, 2023: Annex II: Acronyms, Chemical Symbols and Scientific Units [Fischlin, A., Y. Jung, N. Leprince-Ringuet, C. Ludden, C. Péan, J. Romero (eds.)]. In: Climate Change 2023: Synthesis Report. Contribution of Working Groups I, II and III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Core Writing Team, H. Lee and J. Romero (eds.)]. IPCC, Geneva, Switzerland / Péan, Romero / 2023 / IPCC, 2023: Climate Change 2023: Synthesis Report. Contribution of Working Groups I, II and III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Core Writing Team, H. Lee and J. Romero (eds.)]. IPCC, Geneva, Switzerland."
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 1
+ },
+ {
+  "paper": "quant-ph_2611.24886v1.pdf",
+  "n": 38,
+  "judgement": "false alarm: underscore of the chapter DOI lost in PDF text",
+  "verdict": "metadata_error",
+  "raw": "[38] B. Efron, “Bootstrap Methods: Another Look at the Jackknife,” in Breakthroughs in Statistics: Methodology and Distribution, S. Kotz and N. L. Johnson, Eds. New York, NY: Springer, 1992, pp. 569-593. [Online]. Available: https://doi.org/10.1007/978-1-4612-4380-9 41",
+  "parsed": {
+   "title": "Bootstrap Methods: Another Look at the Jackknife",
+   "authors": [
+    "Efron"
+   ],
+   "year": 1992,
+   "venue": "in Breakthroughs in Statistics: Methodology and Distribution, S. Kotz and N. L. Johnson, Eds. New York, NY: Springer",
+   "kind": "book",
+   "dois": [
+    "10.1007/978-1-4612-4380-941"
+   ],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Bootstrap Methods: Another Look at the Jackknife",
+    "found": "Bootstrap Methods: Another Look at the Jackknife",
+    "score": 1
+   },
+   {
+    "field": "identifier",
+    "status": "mismatch",
+    "cited": "doi:10.1007/978-1-4612-4380-941",
+    "note": "identifier not found"
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Efron",
+    "found": "Efron"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "1992",
+    "found": "1992"
+   },
+   {
+    "field": "venue",
+    "status": "na",
+    "cited": "in Breakthroughs in Statistics: Methodology and Distribution, S. Kotz and N. L. Johnson, Eds. New York, NY: Springer",
+    "found": "Springer Series in Statistics"
+   }
+  ],
+  "issues": [
+   "doi:10.1007/978-1-4612-4380-941 does not resolve to any record"
+  ],
+  "match": {
+   "title": "Bootstrap Methods: Another Look at the Jackknife",
+   "authors": [
+    [
+     "Efron",
+     "Bradley"
+    ]
+   ],
+   "years": [
+    1992
+   ],
+   "venue": "Springer Series in Statistics",
+   "aliases": [
+    "Springer Series in Statistics",
+    "Breakthroughs in Statistics"
+   ],
+   "type": "book-chapter",
+   "source": "crossref",
+   "doi": "10.1007/978-1-4612-4380-9_41"
+  },
+  "candidates": [
+   "crossref: Bootstrap Methods: Another Look at the Jackknife / Efron / 1992 / Springer Series in Statistics",
+   "crossref: Bootstrap Methods: Another Look at the Jackknife / Efron / 1979 / The Annals of Statistics",
+   "crossref: Bootstrap Methods: Another Look at the Jackknife / Hinkley / 2008 / Springer Series in Statistics",
+   "crossref: Introduction to Efron (1979) Bootstrap Methods: Another Look at the Jackknife / Beran / 1992 / Springer Series in Statistics",
+   "crossref: Breakthroughs in Statistics: Methodology and Distribution /  / 1992 / Springer Series in Statistics"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 1
+ },
+ {
+  "paper": "q-bio.NC_2611.24767v1.pdf",
+  "n": 12,
+  "judgement": "false alarm: index record year (2011, arXiv) differs from the JMLR year 2014",
+  "verdict": "metadata_error",
+  "raw": "M. D. Hoffman and A. Gelman. The No-U-Turn Sampler: Adaptively Setting Path Lengths in Hamiltonian Monte Carlo. Journal of Machine Learning Research 15, 1593- 1623, 2014. JMLR 15.",
+  "parsed": {
+   "title": "The No-U-Turn Sampler: Adaptively Setting Path Lengths in Hamiltonian Monte Carlo",
+   "authors": [
+    "Hoffman",
+    "Gelman"
+   ],
+   "year": 2014,
+   "venue": "Journal of Machine Learning Research 15",
+   "kind": "article",
+   "dois": [],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "The No-U-Turn Sampler: Adaptively Setting Path Lengths in Hamiltonian Monte Carlo",
+    "found": "The No-U-turn sampler: adaptively setting path lengths in Hamiltonian Monte Carlo",
+    "score": 1
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Hoffman, Gelman",
+    "found": "Hoffman, Gelman"
+   },
+   {
+    "field": "year",
+    "status": "mismatch",
+    "cited": "2014",
+    "found": "2011/2011"
+   },
+   {
+    "field": "venue",
+    "status": "match",
+    "cited": "Journal of Machine Learning Research 15",
+    "found": "Journal of machine learning research"
+   }
+  ],
+  "issues": [
+   "Year 2014 does not match the published record (2011/2011)"
+  ],
+  "match": {
+   "title": "The No-U-turn sampler: adaptively setting path lengths in Hamiltonian Monte Carlo",
+   "authors": [
+    [
+     "Hoffman",
+     "Matthew D."
+    ],
+    [
+     "Gelman",
+     "A."
+    ]
+   ],
+   "years": [
+    2011,
+    2011
+   ],
+   "venue": "Journal of machine learning research",
+   "aliases": [
+    "Journal of machine learning research",
+    "Journal of machine learning research",
+    "Journal of Machine Learning Research",
+    "J mach learn res",
+    "J Mach Learn Res",
+    "ArXiv",
+    "jmlr"
+   ],
+   "type": "JournalArticle",
+   "source": "semanticscholar",
+   "doi": "10.5555/2627435.2638586"
+  },
+  "candidates": [
+   "semanticscholar: The No-U-turn sampler: adaptively setting path lengths in Hamiltonian Monte Carlo / Hoffman, Gelman / 2011/2011 / Journal of machine learning research",
+   "crossref: Hamiltonian Monte Carlo Methods in Machine Learning /  / 2023 / ",
+   "crossref: Introduction to Hamiltonian Monte Carlo / Marwala, Mongwe, Mbuvha / 2023 / Hamiltonian Monte Carlo Methods in Machine Learning",
+   "crossref: Adaptive Shadow Hamiltonian Monte Carlo / Marwala, Mongwe, Mbuvha / 2023 / Hamiltonian Monte Carlo Methods in Machine Learning",
+   "crossref: Adaptive noncanonical Hamiltonian Monte Carlo / Marwala, Mongwe, Mbuvha / 2023 / Hamiltonian Monte Carlo Methods in Machine Learning"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 1
+ },
+ {
+  "paper": "plos_10_1371_journal_pone_0360919.pdf",
+  "n": 2,
+  "judgement": "real but overstated: cited title is not the official MMWR title; flagged as wrong identifier, should be a title discrepancy",
+  "verdict": "id_mismatch",
+  "raw": "2. Bitsko RH, Claussen AH, Lichstein J, Black LI, Jones SE, Danielson ML, et al. Mental health surveillance among children and adolescents in the United States, 2013-2019. MMWR Suppl. 2022;71(2):1-42. https://doi.org/10.15585/mmwr.su7102a1",
+  "parsed": {
+   "title": "Mental health surveillance among children and adolescents in the United States, 2013-2019",
+   "authors": [
+    "Bitsko",
+    "Claussen",
+    "Lichstein",
+    "Black",
+    "Jones",
+    "Danielson"
+   ],
+   "year": 2022,
+   "venue": "MMWR Suppl",
+   "kind": "article",
+   "dois": [
+    "10.15585/mmwr.su7102a1"
+   ],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "identifier",
+    "status": "mismatch",
+    "cited": "doi:10.15585/mmwr.su7102a1",
+    "found": "Mental Health Surveillance Among Children — United States, 2013–2019",
+    "note": "identifier resolves to a different work"
+   }
+  ],
+  "issues": [
+   "doi:10.15585/mmwr.su7102a1 points to a different work: “Mental Health Surveillance Among Children — United States, 2013–2019”"
+  ],
+  "match": {
+   "title": "Mental Health Surveillance Among Children — United States, 2013–2019",
+   "authors": [
+    [
+     "Bitsko",
+     "Rebecca H."
+    ],
+    [
+     "Claussen",
+     "Angelika H."
+    ],
+    [
+     "Lichstein",
+     "Jesse"
+    ],
+    [
+     "Black",
+     "Lindsey I."
+    ],
+    [
+     "Jones",
+     "Sherry Everett"
+    ],
+    [
+     "Danielson",
+     "Melissa L."
+    ],
+    [
+     "Hoenig",
+     "Jennifer M."
+    ],
+    [
+     "Davis Jack",
+     "Shane P."
+    ],
+    [
+     "Brody",
+     "Debra J."
+    ],
+    [
+     "Gyawali",
+     "Shiromani"
+    ],
+    [
+     "Maenner",
+     "Matthew J."
+    ],
+    [
+     "Warner",
+     "Margaret"
+    ],
+    [
+     "Holland",
+     "Kristin M."
+    ],
+    [
+     "Perou",
+     "Ruth"
+    ],
+    [
+     "Crosby",
+     "Alex E."
+    ],
+    [
+     "Blumberg",
+     "Stephen J."
+    ],
+    [
+     "Avenevoli",
+     "Shelli"
+    ],
+    [
+     "Kaminski",
+     "Jennifer W."
+    ],
+    [
+     "Ghandour",
+     "Reem M."
+    ],
+    [
+     "Contributor",
+     ""
+    ],
+    [
+     "Meyer",
+     "Leah N."
+    ]
+   ],
+   "years": [
+    2022
+   ],
+   "venue": "MMWR Supplements",
+   "aliases": [
+    "MMWR Supplements",
+    "MMWR Suppl."
+   ],
+   "type": "journal-article",
+   "source": "crossref",
+   "doi": "10.15585/mmwr.su7102a1"
+  },
+  "candidates": [
+   "crossref: Mental Health Surveillance Among Children — United States, 2013–2019 / Bitsko, Claussen, Lichstein / 2022 / MMWR Supplements",
+   "crossref: Mental Health Services for Children and Adolescents in the United Kingdom /  / 2013 / Designing Mental Health Services for Children and Adolescents",
+   "crossref: Trends in Stimulant Prescription Fills Among Commercially Insured Children and Adults — United States, 2016–2021 / Danielson, Bohm, Newsome / 2023 / MMWR. Morbidity and Mortality Weekly Report",
+   "crossref: Managed Care: How Is It Managing in the United States? /  / 2013 / Designing Mental Health Services for Children and Adolescents",
+   "crossref: Emergency Department Visits Related to Mental Health Disorders Among Children and Adolescents: United States, 2018–2021 / Davis, Santo / 2023 / "
+  ],
+  "failed": [
+   "openalex",
+   "semanticscholar"
+  ],
+  "unrecorded": 3
+ },
+ {
+  "paper": "plos_10_1371_journal_pone_0359947.pdf",
+  "n": 19,
+  "judgement": "real: 2 of 5 authors dropped without et al. (venue part of the message is a false alarm: abbreviation)",
+  "verdict": "metadata_error",
+  "raw": "19. Hua CL, Cornell PY, Zimmerman S. Excess mortality among assisted living residents with dementia during the COVID-19 pandemic. J Am Med Direct Assoc. 2022;23(10):1743-1749.e6. https://doi.org/10.1016/j.jamda.2022.07.023",
+  "parsed": {
+   "title": "Excess mortality among assisted living residents with dementia during the COVID-19 pandemic",
+   "authors": [
+    "Hua",
+    "Cornell",
+    "Zimmerman"
+   ],
+   "year": 2022,
+   "venue": "J Am Med Direct Assoc",
+   "kind": "article",
+   "dois": [
+    "10.1016/j.jamda.2022.07.023"
+   ],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Excess mortality among assisted living residents with dementia during the COVID-19 pandemic",
+    "found": "Excess Mortality Among Assisted Living Residents With Dementia During the COVID-19 Pandemic",
+    "score": 1
+   },
+   {
+    "field": "identifier",
+    "status": "match",
+    "cited": "doi:10.1016/j.jamda.2022.07.023",
+    "found": "10.1016/j.jamda.2022.07.023"
+   },
+   {
+    "field": "authors",
+    "status": "mismatch",
+    "cited": "Hua, Cornell, Zimmerman",
+    "found": "Hua, Cornell, Zimmerman, Carder, Thomas",
+    "note": "2 author(s) omitted"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2022",
+    "found": "2022"
+   },
+   {
+    "field": "venue",
+    "status": "match",
+    "cited": "J Am Med Direct Assoc",
+    "found": "Journal of the American Medical Directors Association"
+   }
+  ],
+  "issues": [
+   "Incomplete author list: 2 of 5 authors omitted without “et al.”"
+  ],
+  "match": {
+   "title": "Excess Mortality Among Assisted Living Residents With Dementia During the COVID-19 Pandemic",
+   "authors": [
+    [
+     "Hua",
+     "Cassandra L."
+    ],
+    [
+     "Cornell",
+     "Portia Y."
+    ],
+    [
+     "Zimmerman",
+     "Sheryl"
+    ],
+    [
+     "Carder",
+     "Paula"
+    ],
+    [
+     "Thomas",
+     "Kali S."
+    ]
+   ],
+   "years": [
+    2022
+   ],
+   "venue": "Journal of the American Medical Directors Association",
+   "aliases": [
+    "Journal of the American Medical Directors Association",
+    "Journal of the American Medical Directors Association"
+   ],
+   "type": "journal-article",
+   "source": "crossref",
+   "doi": "10.1016/j.jamda.2022.07.023"
+  },
+  "candidates": [
+   "crossref: Excess Mortality Among Assisted Living Residents With Dementia During the COVID-19 Pandemic / Hua, Cornell, Zimmerman / 2022 / Journal of the American Medical Directors Association",
+   "crossref: Estimation of Excess Mortality Rates Among US Assisted Living Residents During the COVID-19 Pandemic / Thomas, Zhang, Dosa / 2021 / JAMA Network Open",
+   "crossref: Excess Mortality Attributable to COVID-19 Among Assisted Living Residents / Thomas, Zhang, Dosa / 2021 / Innovation in Aging",
+   "crossref: Estimating Excess Mortality Among People Living with HIV/AIDS During the COVID-19 Pandemic in the USA / Hall, Karami, Chowell / 2025 / ",
+   "crossref: Excess mortality for care home residents during the first 23 weeks of the COVID-19 pandemic in England: a national cohort study / Morciano, Stokes, Kontopantelis / 2021 / BMC Medicine"
+  ],
+  "failed": [],
+  "unrecorded": 0
+ },
+ {
+  "paper": "plos_10_1371_journal_pone_0359947.pdf",
+  "n": 29,
+  "judgement": "false alarm: journal abbreviation",
+  "verdict": "metadata_error",
+  "raw": "29. Stites SD, Cao H, Harkins K, Flatt JD. Measuring Sex and Gender in Aging and Alzheimer’s Research: Results of a National Survey. J Gerontol B Psychol Sci Soc Sci. 2022;77(6):1005-16. https://doi.org/10.1093/geronb/gbab226 PMID: 34865028",
+  "parsed": {
+   "title": "Measuring Sex and Gender in Aging and Alzheimer’s Research: Results of a National Survey",
+   "authors": [
+    "Stites",
+    "Cao",
+    "Harkins",
+    "Flatt"
+   ],
+   "year": 2022,
+   "venue": "J Gerontol B Psychol Sci Soc Sci",
+   "kind": "article",
+   "dois": [
+    "10.1093/geronb/gbab226"
+   ],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Measuring Sex and Gender in Aging and Alzheimer’s Research: Results of a National Survey",
+    "found": "Measuring Sex and Gender in Aging and Alzheimer’s Research: Results of a National Survey",
+    "score": 1
+   },
+   {
+    "field": "identifier",
+    "status": "match",
+    "cited": "doi:10.1093/geronb/gbab226",
+    "found": "10.1093/geronb/gbab226"
+   },
+   {
+    "field": "authors",
+    "status": "match",
+    "cited": "Stites, Cao, Harkins, Flatt",
+    "found": "Stites, Cao, Harkins, Flatt"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2022",
+    "found": "2021/2022"
+   },
+   {
+    "field": "venue",
+    "status": "mismatch",
+    "cited": "J Gerontol B Psychol Sci Soc Sci",
+    "found": "The Journals of Gerontology: Series B"
+   }
+  ],
+  "issues": [
+   "Published in “The Journals of Gerontology: Series B”, not “J Gerontol B Psychol Sci Soc Sci”"
+  ],
+  "match": {
+   "title": "Measuring Sex and Gender in Aging and Alzheimer’s Research: Results of a National Survey",
+   "authors": [
+    [
+     "Stites",
+     "Shana D"
+    ],
+    [
+     "Cao",
+     "Hannah"
+    ],
+    [
+     "Harkins",
+     "Kristin"
+    ],
+    [
+     "Flatt",
+     "Jason D"
+    ]
+   ],
+   "years": [
+    2021,
+    2022
+   ],
+   "venue": "The Journals of Gerontology: Series B",
+   "aliases": [
+    "The Journals of Gerontology: Series B"
+   ],
+   "type": "journal-article",
+   "source": "crossref",
+   "doi": "10.1093/geronb/gbab226"
+  },
+  "candidates": [
+   "crossref: Measuring Sex and Gender in Aging and Alzheimer’s Research: Results of a National Survey / Stites, Cao, Harkins / 2021/2022 / The Journals of Gerontology: Series B",
+   "crossref: A systematic review of measures of gender and biological sex: Exploring candidates for Alzheimer's disease and related dementias (AD/ADRD) research / Stites, Cao, James / 2023 / Alzheimer's &amp; Dementia: Diagnosis, Assessment &amp; Disease Monitoring",
+   "crossref: The CoGenT3 Study: Examining Gender’s Impact on Education and Cognition Trends in Three American Generations / Stites, Cao, Gill / 2020 / Innovation in Aging",
+   "crossref: Promoting Inclusion of Sexual and Gender Minority Individuals in Aging and Alzheimer’s Disease and Related Dementias Research / Flatt, Stites, Kittle / 2022 / Alzheimer's &amp; Dementia",
+   "crossref: How Biomarker-Based Diagnosis and Treatment Affect Alzheimer’s Stigma: Results of a Randomized Trial / Stites, Gill, Largent / 2021 / Innovation in Aging"
+  ],
+  "failed": [],
+  "unrecorded": 0
+ },
+ {
+  "paper": "plos_10_1371_journal_pone_0359947.pdf",
+  "n": 38,
+  "judgement": "uncertain: record lists more authors; \"Kaur\" may be part of a co-author name",
+  "verdict": "metadata_error",
+  "raw": "38. Thanarajan V, Shum TY, Kaur J. Alzheimer’s disease in the era of COVID-19 pandemic: A mini review. Quest Int J Med Health Sci. 2021;4(2):41-6. https://doi.org/10.5281/zenodo.5976578",
+  "parsed": {
+   "title": "Alzheimer’s disease in the era of COVID-19 pandemic: A mini review",
+   "authors": [
+    "Thanarajan",
+    "Shum",
+    "Kaur"
+   ],
+   "year": 2021,
+   "venue": "Quest Int J Med Health Sci",
+   "kind": "article",
+   "dois": [
+    "10.5281/zenodo.5976578"
+   ],
+   "arxiv": []
+  },
+  "checks": [
+   {
+    "field": "title",
+    "status": "match",
+    "cited": "Alzheimer’s disease in the era of COVID-19 pandemic: A mini review",
+    "found": "Alzheimer's disease in the era of COVID-19 pandemic: A mini review",
+    "score": 1
+   },
+   {
+    "field": "identifier",
+    "status": "match",
+    "cited": "doi:10.5281/zenodo.5976578",
+    "found": "10.5281/zenodo.5976578"
+   },
+   {
+    "field": "authors",
+    "status": "mismatch",
+    "cited": "Thanarajan, Shum, Kaur",
+    "found": "Thanarajan, Shum, Dhillon, Mohamed, Kee",
+    "note": "1 cited author(s) not on the paper"
+   },
+   {
+    "field": "year",
+    "status": "match",
+    "cited": "2021",
+    "found": "2021"
+   },
+   {
+    "field": "venue",
+    "status": "na",
+    "cited": "Quest Int J Med Health Sci",
+    "found": "Zenodo"
+   }
+  ],
+  "issues": [
+   "Author list does not match the published work: Kaur not among its authors"
+  ],
+  "match": {
+   "title": "Alzheimer's disease in the era of COVID-19 pandemic: A mini review",
+   "authors": [
+    [
+     "Thanarajan",
+     "Veenosha"
+    ],
+    [
+     "Shum",
+     "Tze Yee"
+    ],
+    [
+     "Dhillon",
+     "Jaysheena Kaur"
+    ],
+    [
+     "Mohamed",
+     "Fathmath Eman"
+    ],
+    [
+     "Kee",
+     "Kah Wei"
+    ]
+   ],
+   "years": [
+    2021
+   ],
+   "venue": "Zenodo",
+   "aliases": [
+    "Zenodo"
+   ],
+   "type": "JournalArticle",
+   "source": "datacite",
+   "doi": "10.5281/zenodo.5976578"
+  },
+  "candidates": [
+   "datacite: Alzheimer's disease in the era of COVID-19 pandemic: A mini review / Thanarajan, Shum, Dhillon / 2021 / Zenodo",
+   "crossref: COVID-19 Pandemic? A Review / Ghar, Ghosh / 2021 / International Academic Journal of Applied Bio-Medical Sciences",
+   "crossref: COVID-19 Pandemic and Mental Illness: Impact of Gut Microbiota / Rishi, Kaur, Kaur / 2021/2022 / Delineating Health and Health System: Mechanistic Insights into Covid 19 Complications",
+   "crossref: Mental Health and Substance Use among Adolescents during the COVID-19 Pandemic: A Mini Review / De Micheli / 2021 / Psychology &amp; Psychological Research International Journal",
+   "crossref: Healthcare in COVID-19 Era / Kaur / 2023 / Learning from the COVID-19 Pandemic"
+  ],
+  "failed": [
+   "openalex"
+  ],
+  "unrecorded": 1
+ }
+]

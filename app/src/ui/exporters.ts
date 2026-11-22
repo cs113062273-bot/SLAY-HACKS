@@ -26,7 +26,9 @@ export function markdownReport(s: State): string {
   for (const [v, n] of counts) lines.push(`| ${VERDICT[v as keyof typeof VERDICT].label} | ${n} |`);
   lines.push('', '## References needing attention', '');
   for (const r of rs.filter((x) => isProblem(x.verdict))) {
-    lines.push(`### [${r.index + 1}] ${VERDICT[r.verdict].label}`, '', `> ${r.parsed.raw}`, '');
+    const pg = doc.refPages?.[r.index];
+    lines.push(`### [${r.index + 1}] ${VERDICT[r.verdict].label}${pg ? ` (PDF page ${pg})` : ''}`, '', `> ${r.parsed.raw}`, '');
+    for (const c of r.checks.filter((x) => x.status === 'mismatch')) lines.push(`- ${c.field}: cited “${c.cited ?? '—'}”, published record “${c.found ?? '—'}”${c.note ? ` (${c.note})` : ''}`);
     for (const i of r.issues) lines.push(`- ${i}`);
     if (r.suggestedFix) lines.push('', `Suggested correction: ${r.suggestedFix}`);
     lines.push('');

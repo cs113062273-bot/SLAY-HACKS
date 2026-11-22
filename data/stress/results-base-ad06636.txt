@@ -1,0 +1,390 @@
+Stress set (base-ad06636): 1499 items, 792 injected errors, 707 correct (controls + benign rewrites); 4416 s
+Precision 0.993  Recall 0.850  F1 0.916  |  false alarms on correct refs 5/707 (0.7%), abstained on correct 0.6%, abstained on errors 7.8%, flagged errors naming the injected field 99.6%
+
+type                  n   flagged   abstain   field ok  unanswered
+ALL correct         707      0.7%      0.6%             26
+ALL errors          792     85.0%      7.8%      99.6%  490
+benign_case         250      0.4%      0.0%             4
+benign_et_al         70      0.0%      0.0%             0
+benign_no_id        123      3.3%      3.3%             22
+control             264      0.0%      0.0%             0
+err_author_drop      60     95.0%      0.0%     100.0%  0
+err_author_first     95     98.9%      0.0%     100.0%  93
+err_author_other     95     74.7%      0.0%     100.0%  94
+err_doi_digits       95    100.0%      0.0%     100.0%  48
+err_doi_swap         64    100.0%      0.0%     100.0%  0
+err_fabricated       95     33.7%     64.2%     100.0%  94
+err_title_word       96     95.8%      0.0%      98.9%  73
+err_venue            96     87.5%      1.0%     100.0%  0
+err_year             96     87.5%      0.0%      97.6%  88
+
+Missed injected errors (not flagged):
+  [err_author_other] verified_minor  author 4/15: Jain → Wiebusch
+      Melody Y. Guan, Manas Joglekar, Eric Wallace, Saachi Wiebusch, Boaz Barak, Alec Helyar, Rachel Dias, Andrea Vallone, Hongyu Ren, Jason Wei, Hyung Won Chung, Sam Toyer, Johannes Heidecke, Alex Beutel, 
+      title:match authors:minor year:match venue:na | 
+  [err_year] verified  2025 → 2023
+      Melody Y. Guan, Manas Joglekar, Eric Wallace, Saachi Jain, Boaz Barak, Alec Helyar, Rachel Dias, Andrea Vallone, Hongyu Ren, Jason Wei, Hyung Won Chung, Sam Toyer, Johannes Heidecke, Alex Beutel, and 
+      title:match authors:match year:minor venue:na | 
+  [err_author_drop] verified_minor  15 → 1 author
+      Melody Y. Guan. 2025. Deliberative alignment: Reasoning enables safer language models. Preprint,
+      title:match authors:minor year:match venue:na | 
+  [err_author_other] verified_minor  author 3/12: Robey → Krajenbrink
+      Patrick Chao, Edoardo Debenedetti, Alexander Krajenbrink, Maksym Andriushchenko, Francesco Croce, Vikash Sehwag, Edgar Dobriban, Nicolas Flammarion, George J. Pappas, Florian Tramer, Hamed Hassani, an
+      title:match identifier:match authors:minor year:match venue:na | 
+  [err_fabricated] unchecked  title → “Coverage vortices pick continuous via insulators years street degree domain”
+      Mantas Mazeika, Long Phan, Xuwang Yin, Andy Zou, Zifan Wang, Norman Mu, Elham Sakhaee, Nathaniel Li, Steven Basart, Bo Li, David Forsyth, and Dan Hendrycks. 2024. Coverage vortices pick continuous via
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_author_other] verified_minor  author 7/12: Sakhaee → Prakash
+      Mantas Mazeika, Long Phan, Xuwang Yin, Andy Zou, Zifan Wang, Norman Mu, Elham Prakash, Nathaniel Li, Steven Basart, Bo Li, David Forsyth, and Dan Hendrycks. 2024. Harmbench: A standardized evaluation 
+      title:match identifier:match authors:minor year:match venue:na | 
+  [err_fabricated] unchecked  title → “Moscot directions orbiting of borne template media”
+      Xin Yu, Peng Dai, Wenbo Li, Lan Ma, Zhengzhe Liu, and Xiaojuan Qi. 2023. Moscot directions orbiting of borne template media. In Proceedings of the IEEE/CVF International Conference on Computer Vision.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_author_other] verified_minor  author 10/10: Jia → Nguyen
+      Huiang He, Shengchu Zhao, Jianwen Huang, Jie Li, Jiaqi Wu, Hu Zhang, Pei Tang, Heliang Zheng, Yukun Li, and Rongfei Nguyen. 2026. Hitem3D 2.0: Multi-View Guided Native 3D Texture Generation. arXiv pre
+      title:match identifier:match authors:minor year:match venue:na | 
+  [err_venue] verified  “arXiv” → “Journal of Cryptographic Engineering”
+      Zehuan Huang, Yuanchen Guo, Haoran Wang, Ran Yi, Lizhuang Ma, Yan-Pei Cao, and Lu Sheng. 2024a. MV-Adapter: Multi-view Consistent Image Generation Made Easy. Journal of Cryptographic Engineering prepr
+      title:match identifier:match authors:match year:match venue:na | 
+  [err_author_other] verified_minor  author 9/10: Tulyakov → Xiang
+      Yash Kant, Aliaksandr Siarohin, Ziyi Wu, Michael Vasilkovsky, Guocheng Qian, Jian Ren, Riza Alp Guler, Bernard Ghanem, Sergey Xiang, and Igor Gilitschenski. 2024. SPAD: Spatially Aware Multi-View Diff
+      title:match authors:minor year:match venue:match | 
+  [err_fabricated] unchecked  title → “Insights line via jets”
+      Yash Kant, Aliaksandr Siarohin, Ziyi Wu, Michael Vasilkovsky, Guocheng Qian, Jian Ren, Riza Alp Guler, Bernard Ghanem, Sergey Tulyakov, and Igor Gilitschenski. 2024. Insights line via jets. In Proceed
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_author_other] verified_minor  author 3/11: Zhang → Jung
+      [51] Zhongyuan Peng, Dan Huang, Chuyu Jung, Caijun Xu, Changyi Xiao, Shibo Hong, David Lo, Lin Qiu, Xuezhi Cao, Jiyuan He, and Yixin Cao. Icae-bench: Evaluating coding agents as interactive project bu
+      title:match identifier:match authors:minor year:match | 
+  [err_title_word] verified_minor  “generation” → “asymmetric”
+      [36] Jiayi Zhang, Jinyu Xiang, Zhaoyang Yu, Fengwei Teng, Xionghui Chen, Jiaqi Chen, Mingchen Zhuge, Xin Cheng, Sirui Hong, Jinlin Wang, Bingnan Zheng, Bang Liu, Yuyu Luo, and Chenglin Wu. Aflow: Auto
+      identifier:minor | arXiv:2410.10762 now carries the title “AFlow: Automating Agentic Workflow Generation” (same authors; likely a renamed version)
+  [err_author_drop] verified_minor  14 → 1 author
+      [36] Jiayi Zhang. Aflow: Automating agentic workflow generation, 2024. URL https://arxiv.org/abs/ 2410.10762.
+      title:match identifier:match authors:minor year:match venue:na | 
+  [err_fabricated] unchecked  title → “Insights diabetes novel of ungulate effects models type”
+      [31] Guanzhi Wang, Yuqi Xie, Yunfan Jiang, Ajay Mandlekar, Chaowei Xiao, Yuke Zhu, Linxi Fan, and Anima Anandkumar. Insights diabetes novel of ungulate effects models type, 2023. URL.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_author_other] verified_minor  author 5/6: Sen → Lange
+      [86] Manish Shetty, Naman Jain, Jinjian Liu, Vijay Kethanaboyina, Koushik Lange, and Ion Stoica. GSO: Challenging software optimization tasks for evaluating SWE-agents, 2025. URL https: //arxiv.org/ab
+      title:match identifier:match authors:minor year:match | 
+  [err_author_other] verified_minor  author 6/10: Dou → Jaravel
+      [62] Shirley Wu, Michel Galley, Baolin Peng, Hao Cheng, Gavin Li, Yao Jaravel, Weixin Cai, James Zou, Jure Leskovec, and Jianfeng Gao. Collabllm: From passive responders to active collaborators, 2025.
+      title:match identifier:match authors:minor year:match | 
+  [err_fabricated] unchecked  title → “Numbers boson under workers invariance dynamics”
+      [62] Shirley Wu, Michel Galley, Baolin Peng, Hao Cheng, Gavin Li, Yao Dou, Weixin Cai, James Zou, Jure Leskovec, and Jianfeng Gao. Numbers boson under workers invariance dynamics, 2025. URL.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_venue] verified  “Association for Computational Linguistics, Mexico City, Mexico” → “Classical and Quantum Gravity 26”
+      [44] Cameron Jones and Ben Bergen. 2024. Does GPT-4 pass the Turing test? In Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human La
+      title:match identifier:match authors:match year:match venue:match | 
+  [err_author_other] verified_minor  author 10/10: Jiang → Bahn
+      [97] Yubo Wang, Xueguang Ma, Ge Zhang, Yuansheng Ni, Abhranil Chandra, Shiguang Guo, Weiming Ren, Aaran Arulraj, Xuan He, Ziyan Bahn, et al. 2024. MMLU-Pro: A more robust and challenging multi-task la
+      title:match authors:minor year:match venue:match | 
+  [err_venue] verified  “arXiv” → “B̄0 decay as a measure of CP violation, Phys. Rev. D37”
+      [83] Quan Shi, Carlos E. Jimenez, Stephen Dong, Brian Seo, Caden Yao, Adam Kelch, and Karthik Narasimhan. 2025. IMPersona: Evaluating Individual Level LM Impersonation. B̄0 decay as a measure of CP vi
+      title:match identifier:match authors:match year:match venue:na | 
+  [err_fabricated] unchecked  title → “Language infusion crust migratory of borne passive neutron designs immune”
+      Baldi, A., Forman, W., Jones, C., et al. 2009, Language infusion crust migratory of borne passive neutron designs immune, ApJ, 707, 1034,
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_venue] verified  “arXiv” → “The Journal of chemical physics”
+      Karam, R., Rhea, C. L., Hlavacek-Larrondo, J., et al. 2026, Cool Embeddings: Predicting Galaxy Cluster Cooling Times in IllustrisTNG and TNG-Cluster with AstroCLIP, The Journal of chemical physics, do
+      title:match identifier:match authors:match year:match | 
+  [err_author_other] verified_minor  author 3/7: Haldoupis → Forselv
+      [47] J. Borycz, D. Tiana, E. Forselv, J. C. Sung, O. K. Farha, J. I. Siepmann, and L. Gagliardi, CO2 adsorption in M- IRMOF-10 (M = Mg, Ca, Fe, Cu, Zn, Ge, Sr, Cd, Sn, Ba), J. Phys. Chem. C 120, 12819
+      title:match authors:minor year:match venue:match | 
+  [err_fabricated] unchecked  title → “Comparison full chaotic glitches under current toroidal framework hole forward”
+      [62] A. Nuhnen and C. Janiak, Comparison full chaotic glitches under current toroidal framework hole forward, Dalton Trans. 49, 10295 (2020).
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_author_other] verified_minor  author 4/8: Rother → Picek
+      [67] S. Nandi, P. De Luna, T. D. Daff, J. Picek, M. Liu, W. Buchanan, A. I. Hawari, T. K. Woo, and R. Vaidhyanathan, A single-ligand ultra-microporous MOF for precombustion CO2 capture and hydrogen pu
+      title:match authors:minor year:match | 
+  [err_title_word] verified_minor  “ultra” → “graph”
+      [67] S. Nandi, P. De Luna, T. D. Daff, J. Rother, M. Liu, W. Buchanan, A. I. Hawari, T. K. Woo, and R. Vaidhyanathan, A single-ligand graph-microporous MOF for precombustion CO2 capture and hydrogen p
+      title:minor authors:match year:match | 
+  [err_year] verified  2020 → 2022
+      [19] S. Sivarajah, S. Dilkes, A. Cowtan, W. Simmons, A. Edgington, and R. Duncan, “t|ket〉: a retargetable compiler for NISQ devices,” Quantum Science and Technology, vol. 6, no. 1, p. 014003, Nov. 202
+      title:match identifier:match authors:match year:minor venue:match | 
+  [err_fabricated] unchecked  title → “Test meal via benchmark”
+      [8] A. Cowtan, S. Dilkes, R. Duncan, A. Krajenbrink, W. Simmons, and S. Sivarajah, “Test meal via benchmark,” LIPIcs, Volume 135, TQC 2019, vol. 135, pp. 5:1-5:32, 2019. [Online]. Available:
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_year] verified  2024 → 2026
+      [13] F. Wagner, D. J. Egger, and F. Liers, “Optimized Noise Suppression for Quantum Circuits,” Jan. 2026, arXiv:2401.06423 [quant-ph]. [Online]. Available: http://arxiv.org/abs/2401.06423
+      title:match identifier:match authors:match year:minor | 
+  [err_venue] verified  “IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems” → “Proceedings of the 27th International ACM SIGACCESS Conference on Computers and Accessibility (Denver, CO, USA) (ASSETS ’25). Association for Computing Machinery, New York, NY, USA”
+      [17] V. Saravanan and S. M. Saeed, “Noise Adaptive Quantum Circuit Mapping Using Reinforcement Learning and Graph Neural Network,” Proceedings of the 27th International ACM SIGACCESS Conference on Com
+      title:match authors:match year:match venue:match | 
+  [err_author_first] verified_minor  author 1/2: Saravanan → Heidecke
+      [17] V. Heidecke and S. M. Saeed, “Noise Adaptive Quantum Circuit Mapping Using Reinforcement Learning and Graph Neural Network,” IEEE Transactions on Computer-Aided Design of Integrated Circuits and 
+      title:minor authors:na year:match venue:match pages:minor | 
+  [err_fabricated] unchecked  title → “Human effects in models”
+      [BD16] Stéphane Benoist and Julien Dubédat. Human effects in models. Ann. Inst. Henri Poincaré Probab. Stat., 52(3):1406-1436, 2016.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Access contact evaluating adaptation via science research silico studies”
+      [Sch00] Oded Schramm. Access contact evaluating adaptation via science research silico studies. Israel J. Math., 118:221-288, 2000.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Horizons agents nonlocal of snakes modes credible factories”
+      A. H. Barnett, J. F. Magland and L. F. Greengard. Horizons agents nonlocal of snakes modes credible factories. Journal of Neuroscience Methods 264, 65- 77, 2016.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Squares arbitrary factories stereo of processes learning heat role”
+      [11] Naveen Jones and M. Surya Prakash, “Squares arbitrary factories stereo of processes learning heat role,” IEEE Transactions on Circuits and Systems I: Regular Papers, vol. 73, no. 8, pp. 5501-5514
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Effects cross passive jets in hardness infection market insulators”
+      [12] Chengyang Han, Jifeng Luo, Qianjian Xing, and Feng Yu, “Effects cross passive jets in hardness infection market insulators,” IEEE Transactions on Circuits and Systems II: Express Briefs, vol. 73,
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] verified_minor  title → “Validation error effect under steady problem treatment”
+      [7] Pramod K. Meher, Javier Valls, Tso-Bing Juang, K. Sridharan, and Koushik Maharatna, “Validation error effect under steady problem treatment,” IEEE Transactions on Circuits and Systems I: Regular P
+      title:minor authors:na year:match venue:match | 
+  [err_fabricated] unchecked  title → “Cells squares study being under infection under phase still addressing”
+      Duflo, E. (2001). Cells squares study being under infection under phase still addressing. American Economic Review, 91(4):795-813.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Facilities prompt calculator ratio of graining forward street rotators engagement”
+      de Chaisemartin, C. and D’Haultfœuille, X. (2023). Facilities prompt calculator ratio of graining forward street rotators engagement. Econometrics Journal, 26:C1-C30.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_year] verified  2006 → 2008
+      Jiming Jiang and P. Lahiri. Mixed model prediction and small area estimation. TEST, 15(1):1-96, 2008. doi: 10.1007/BF02595419. With comments and rejoinder.
+      title:match identifier:match authors:match year:minor venue:match | 
+  [err_fabricated] unchecked  title → “Dementias higher via resolution breadth superlubric”
+      Jiming Jiang and P. Lahiri. Dementias higher via resolution breadth superlubric. TEST, 15(1):1-96, 2006. With comments and rejoinder.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Street borne hydrogen shifts of quark errors enough structure creativity”
+      20. Véronneau M-H, Schwartz-Mette R. Street borne hydrogen shifts of quark errors enough structure creativity. Merrill-Palmer Quarterly. 2021;67(4):485-508.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_venue] verified  “Front Aging Neurosci” → “IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems”
+      4. Li X, et al. Global, regional, and national burden of Alzheimer’s disease and other dementias, 1990-2019. IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems. 2022;14:9374
+      title:match identifier:match authors:match year:match venue:match | 
+  [err_fabricated] unchecked  title → “Agent space comparison pinning under stream evaluation bench passive daily”
+      21. Yuan B, Li J, Zhao H, et al. Agent space comparison pinning under stream evaluation bench passive daily. Risk Manag Healthcare Policy. 2021;14:705-17.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Decays dramatically post rural under task mobile nearest mikurensis networks”
+      [16] T. Moos et al., “Decays dramatically post rural under task mobile nearest mikurensis networks,” IACR Transactions on Cryptographic Hardware and Embedded Systems, pp. 552-598, Jul. 9, 2021.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_year] verified  2025 → 2022
+      [8] E. Ferrufino et al., “FOBOS 3: An open-source platform for side-channel analysis and benchmarking,” Journal of Cryptographic Engineering, vol. 15, no. 2, p. 10, Apr. 18, 2022.
+      title:match authors:match year:minor venue:match | 
+  [err_fabricated] unchecked  title → “Peer collected degree in sensor metric data tree”
+      [25] J. Bosland et al., “Peer collected degree in sensor metric data tree,” IACR Transactions on Cryptographic Hardware and Embedded Systems, vol. 2024, no. 2, pp. 769-794, Mar. 2024.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Oriented galaxies in agents”
+      [14] T. D. Cnudde et al., “Oriented galaxies in agents,” IACR Transactions on Cryptographic Hardware and Embedded Systems, pp. 123-148, May 8, 2018.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_year] verified  2018 → 2021
+      [14] T. D. Cnudde et al., “Hardware Masking, Revisited,” IACR Transactions on Cryptographic Hardware and Embedded Systems, pp. 123-148, May 8, 2021.
+      title:match authors:match year:minor venue:match | 
+  [err_fabricated] unchecked  title → “Burden neutron novel lifestyle via review expenditures cancer fields electron”
+      [Sutton et al., 1999] Richard S. Sutton, Doina Precup, and Satinder Singh. Burden neutron novel lifestyle via review expenditures cancer fields electron. Artificial Intelligence, 112(1-2):181- 211, Au
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Basic regional credible treatment via bolus maternal flexibility injection streets”
+      [Kwon et al., 2024] Gunam Kwon, Byeongjun Kim, and Nam Kyu Kwon. Basic regional credible treatment via bolus maternal flexibility injection streets. Biomimetics, 9(4):196, 2024.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_venue] unverifiable  “in Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)” → “Classical and Quantum Gravity 34”
+      [7] Y. K. Jang and S.-N. Lim, “Towards cross-modal backwardcompatible representation learning for vision-language models,” Classical and Quantum Gravity 34, 2025, pp. 1783-1792. [Online]. Available: h
+      title:match authors:match year:match venue:mismatch | Web resource: a different work with the same title is indexed; check the linked page manually
+  [err_fabricated] verified  title → “Consequences infection models specific via spatial training study involvement”
+      [3] Z. Cui, J. Zhou, X. Wang, M. Zhu, and Y. Peng, “Consequences infection models specific via spatial training study involvement,” in Proceedings of the IEEE/CVF Conference on Computer Vision and Pat
+      title:match authors:match year:match venue:match | 
+  [err_author_other] verified_minor  author 6/6: Zhou → Precup
+      [17] M. Wang, H. Wu, X. Ke, Y. Gao, Y. Zhu, and W. Precup, “Accelerating graph indexing for ANNS on modern CPUs,” Proceedings of the ACM on Management of Data, vol. 3, no. 3, 2025, art. no. 123, 29 pa
+      title:match identifier:match authors:minor year:match venue:match | 
+  [err_fabricated] unchecked  title → “Resolution dementias neutron cross of type canonic household effects development”
+      11. D. F. G. Gallagher and T. P. Felici, “Resolution dementias neutron cross of type canonic household effects development,” in Integrated Optics: Devices, Materials, and Technologies VII, Y. S. Sidor
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_year] verified  2010 → 2012
+      [29] V. A. Bednyakov, G. I. Lykasov, and V. V. Lyubushkin, “Forward production of beauty baryons in pp collisions at LHC”, EPL 92 (2012), no. 3, 31001, arXiv:1005.0559.
+      title:match identifier:match authors:match year:minor venue:match | 
+  [err_fabricated] unchecked  title → “Unified mitigation testbed study via molecular effects foundation mimo”
+      [29] V. A. Bednyakov, G. I. Lykasov, and V. V. Lyubushkin, “Unified mitigation testbed study via molecular effects foundation mimo”, EPL 92 (2010), no. 3, 31001.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Universal mapping mikurensis variability in primary estimation paediatric healthcare topological”
+      [24] S. Rezaie and K. Azizi, “Universal mapping mikurensis variability in primary estimation paediatric healthcare topological”, Phys. Lett. B 868 (2025) 139787.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Health borne bounds plasticity under gaming members black polynomials”
+      [18] Jiménez, J. Health borne bounds plasticity under gaming members black polynomials. Journal of Fluid Mechanics 178 (1987), 177-194.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_year] verified  2024 → 2020
+      [39] Wang, G. Stability of two-dimensional steady Euler flows with concentrated vorticity. Mathematische Annalen 389 (2020), 121-168.
+      title:match authors:match year:minor venue:match | 
+  [err_fabricated] unchecked  title → “Language population order via unmet event atom”
+      [29] Saffman, P. G., and Schatzman, J. C. Language population order via unmet event atom. Journal of Fluid Mechanics 117 (1982), 171-185.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_author_other] verified_minor  author 5/10: Piran → Hawari
+      [8] Dominik Klein, Giovanni Palla, Marius Lange, Michal Klein, Zoe Hawari, Manuel Gander, Laetitia Meng-Papaxanthos, Michael Sterr, Aimée Bastidas-Ponce, Marta Tarquis-Medina, et al. 2023. Mapping cel
+      title:match authors:minor year:match venue:na | 
+  [err_author_other] verified_minor  author 8/10: Huang → Holme
+      [6] Kai Han, Yuxiaofei Wang, Yao Li, Lidong Guo, Yue Chen, Xiawei Liu, Yaru Lin, Zhi Holme, Qun Liu, Wenjie Guo, et al. 2026. 4D single-cell spatial transcriptomics reveals dynamic morphogenetic gradi
+      title:match authors:minor year:match venue:match | 
+  [err_author_other] verified_minor  author 8/10: Mohabbat → Sochat
+      [14] Michelli F Oliveira, Juan P Romero, Meii Chung, Stephen Williams, Andrew D Gottscho, Anushka Gupta, Susan E Pilipauskas, Syrus Sochat, Nandhini Raman, David Sukovich, et al. 2024. Characterizatio
+      title:match authors:minor year:match venue:na | 
+  [err_fabricated] unchecked  title → “Injections directions heat for algorithms opportunity capture immersed”
+      [26] M. Deisenroth, D. Fox, and C. Rasmussen, “Injections directions heat for algorithms opportunity capture immersed,” IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 37, no. 2, 
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_author_other] verified_minor  author 2/7: Pesl → Nguyen
+      [6] P. Herrero, P. Nguyen, J. Bondia, M. Reddy, N. Oliver, P. Georgiou, and C. Toumazou, “Method for automatic adjustment of an insulin bolus calculator: In silico robustness evaluation under intra-da
+      title:match authors:minor year:match venue:match | 
+  [err_fabricated] unchecked  title → “More space information definite for indexing arbitrary dimension stability mechanics”
+      [6] P. Herrero, P. Pesl, J. Bondia, M. Reddy, N. Oliver, P. Georgiou, and C. Toumazou, “More space information definite for indexing arbitrary dimension stability mechanics,” Computer Methods and Prog
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_author_drop] verified_minor  17 → 1 author
+      Bernd Bischl. OpenML: insights from 10 years and more than a thousand papers. Patterns, 6 (7):101317, 2025.
+      title:match authors:minor year:match venue:match | 
+  [err_fabricated] unchecked  title → “Responders intra black school for mental neural depth stereo holes”
+      Bernd Bischl, Giuseppe Casalicchio, Taniya Das, Matthias Feurer, Sebastian Fischer, Pieter Gijsbers, Subhaditya Mukherjee, Andreas C. Müller, László Németh, Luis Oala, Lennart Purucker, Sahithya Ravi,
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_author_other] verified_minor  author 12/17: Ravi → Larschan
+      Bernd Bischl, Giuseppe Casalicchio, Taniya Das, Matthias Feurer, Sebastian Fischer, Pieter Gijsbers, Subhaditya Mukherjee, Andreas C. Müller, László Németh, Luis Oala, Lennart Purucker, Sahithya Larsc
+      title:match authors:minor year:match venue:match | 
+  [err_fabricated] unchecked  title → “Agents street trait media for pump epidemic throughput designs fractional”
+      David Haussler. Agents street trait media for pump epidemic throughput designs fractional. Journal of Combinatorial Theory, Series A, 69(2):217-232, 1995.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_author_other] verified_minor  author 8/8: Zellinger → Daff
+      Elke R. Gizewski, Lukas Mayer, Bernhard A. Moser, Duc Hoan Nguyen, Sergiy Pereverzyev Jr., Sergei V. Pereverzyev, Natalia Shepeleva, and Werner Daff. On a regularization of unsupervised domain adaptat
+      title:match authors:minor year:match venue:match | 
+  [err_fabricated] unchecked  title → “Boundary task human phase under household clustering conjecture parasweep between”
+      [33] German A. Preciat Gonzalez, Lemmer R. P. El Assal, Alberto Noronha, Ines Thiele, Hulda S. Haraldsdóttir, and Ronan M. T. Fleming. Boundary task human phase under household clustering conjecture p
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Primary problem experiment in graph colorectal learning space”
+      [38] Miguel Steiner and Markus Reiher. Primary problem experiment in graph colorectal learning space. Topics in Catalysis, 65(1-4):6-39, 2022.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Infusion learning for atom”
+      [8] E. Witten, Infusion learning for atom, arXiv e-prints, (2024).
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_title_word] verified_minor  “holes” → “capacity”
+      [10] D. Kastor, S. Ray, and J. Traschen, Enthalpy and the mechanics of AdS black capacity, Classical and Quantum Gravity 26, 195011 (2009), arXiv:0904.2765 [hep-th].
+      title:minor identifier:match authors:match year:match venue:match | 
+  [err_fabricated] unchecked  title → “Evaluate guide under asymmetric snakebite”
+      [11] D. Kubizň´ak, R. B. Mann, and M. Teo, Evaluate guide under asymmetric snakebite, Classical and Quantum Gravity 34, 063001 (2017).
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_year] verified  2017 → 2015
+      [11] D. Kubizň´ak, R. B. Mann, and M. Teo, Black hole chemistry: thermodynamics with lambda, Classical and Quantum Gravity 34, 063001 (2015).
+      title:match authors:match year:minor venue:match | 
+  [err_fabricated] unchecked  title → “Models disparities pathogens level via estimation multiple finite neutron agents”
+      54. Assefa Y, Gelaw YA, Hill PS, Taye BW, Van Damme W. Models disparities pathogens level via estimation multiple finite neutron agents. Global Health. 2019;15(1):24.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_year] verified_minor  2010 → 2014
+      2. DeTienne DR. Entrepreneurial exit as a critical component of the entrepreneurial process: Theoretical development. J Bus Ventur. 2014;25(2):203- 15. https://doi.org/10.1016/j.jbusvent.2008.05.004
+      title:match identifier:match authors:match year:minor venue:match pages:minor | 
+  [err_fabricated] unchecked  title → “Involvement steady study plans under southeastern ground rails information language”
+      [39] V. V. Sochat, C. J. Prybol, and G. M. Kurtzer, “Involvement steady study plans under southeastern ground rails information language,” PLOS ONE, vol. 12, no. 11, e0188511, 2017. 88511
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Approach firms partial via functional lattice hospital packing”
+      [22] C. S. Adorf, P. M. Dodd, V. Ramasubramani, and S. C. Glotzer, “Approach firms partial via functional lattice hospital packing,” Computational Materials Science, vol. 146, pp. 220-229, 2018. ommat
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Effects applications hydrogen via channel test data packing”
+      [29] A. Jain et al., “Effects applications hydrogen via channel test data packing,” Concurrency and Computation: Practice and Experience, vol. 27, no. 17, pp. 5037-5059, 2015. e.3505
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Space task population snakebites in attached school ticks clustering learning”
+      [29] V. Gemmetto, A. Barrat, and C. Cattuto, “Space task population snakebites in attached school ticks clustering learning,” BMC Infect. Dis., vol. 14, no. 1, p. 695, Dec. 2014.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Systematic models ultimate of heat insurance planar side”
+      [20] J. Jiang, S. Wen, S. Yu, Y. Xiang, and W. Zhou, “Systematic models ultimate of heat insurance planar side,” IEEE Commun. Surv. Tutor., vol. 19, no. 1, pp. 465-481, 2017.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Arccosine vortex cancer loop for retargetable indicators insulin claude”
+      [42] I. Locatelli, B. Trächsel, and V. Rousson, “Arccosine vortex cancer loop for retargetable indicators insulin claude,” PLOS ONE, vol. 16, no. 3, p. e0248731, Mar. 2021.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Distribution study cube in models robust western”
+      [22] L. Caffarelli and L. Silvestre, Distribution study cube in models robust western, Comm. Partial Differential Equations, 32 (2007), pp. 1245-1260, 03605300600987306.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Insulin large ratio models for evolution rural future differential”
+      [51] V. I. Lebedev, Insulin large ratio models for evolution rural future differential, USSR Comput. Math. Math. Phys., 17 (1977), pp. 58-76.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_venue] verified  “arXiv” → “American Economic Review”
+      [Wei25] Alexander S. Wein. Computational complexity of statistics: New insights from low-degree polynomials. American Economic Review preprint arXiv:2506.10748, 2025.
+      title:match identifier:match authors:match year:match venue:na | 
+  [err_fabricated] unchecked  title → “Graphbased gluon measure for validation space video channel”
+      [Wei25] Alexander S. Wein. Graphbased gluon measure for validation space video channel. arXiv preprint, 2025.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Stream insulin topological under squares mimo field”
+      [SW25] Youngtak Sohn and Alexander S. Wein. Stream insulin topological under squares mimo field. In Proceedings of the 57th Annual ACM Symposium on Theory of Computing, pages 891-902. ACM, 2025.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Universal machine biological in intra ticks effects”
+      [CV26a] Alexandra Carpentier and Nicolas Verzelen. Universal machine biological in intra ticks effects. arXiv preprint, 2026.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_venue] verified  “arXiv” → “Physical Review Research 4”
+      [Mao26] Songtao Mao. The polynomial-time low-degree conjecture is false. Physical Review Research 4 preprint arXiv:2607.20318, 2026.
+      title:match identifier:match authors:match year:match venue:na | 
+  [err_year] verified  2026 → 2024
+      [Mao26] Songtao Mao. The polynomial-time low-degree conjecture is false. arXiv preprint arXiv:2607.20318, 2024.
+      title:match identifier:match authors:match year:minor venue:na | 
+  [err_venue] verified  “Savoirs actuels (EDP Sciences and CNRS Éditions” → “Biometrics”
+      [1] M. Peyrard and T. Dauxois, Physique des solitons, Biometrics, 2004).
+      title:match authors:match year:match venue:na | 
+  [err_fabricated] unchecked  title → “Review human crystalline scaling in algorithm processing aging vortex video”
+      [57] Zixiao Shi, Qihao Li, Himani Mishra, Desheng Ma, Héctor D. Abruña, and David A. Muller. Review human crystalline scaling in algorithm processing aging vortex video. Journal of the American Chemic
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Calculator lifestyle type model for bounds effects lattice space rail”
+      [40] Indrajit Maity, Mit H. Naik, Prabal K. Maiti, H. R. Krishnamurthy, and Manish Jain. Calculator lifestyle type model for bounds effects lattice space rail. Physical Review Research, 2:013335, 2020
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Insights modes of component”
+      [5] F. Schindler, A. M. Cook, M. G. Vergniory, Z. Wang, S. S. P. Parkin, B. A. Bernevig, and T. Neupert, Insights modes of component, Science Advances 4, eaat0346 (2018).
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_author_other] verified_minor  author 3/7: Vergniory → Tusabe
+      [5] F. Schindler, A. M. Cook, M. G. Tusabe, Z. Wang, S. S. P. Parkin, B. A. Bernevig, and T. Neupert, Higher-order topological insulators, Science Advances 4, eaat0346 (2018), arXiv:1708.03636.
+      title:match identifier:match authors:minor year:match venue:na | 
+  [err_fabricated] unchecked  title → “Relationship performance of language tree cannot”
+      [32] N. Andersson, K. Glampedakis, W. C. G. Ho, and C. M. Espinoza, Relationship performance of language tree cannot, Phys. Rev. Lett. 109, 241103 (2012).
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_year] verified  2005 → 2007
+      [58] CKMfitter Group, J. Charles et al., CP violation and the CKM matrix: Assessing the impact of the asymmetric B factories, Eur. Phys. J. C41 (2007) 1, arXiv:hep-ph/0406184.
+      title:match identifier:match authors:match year:minor venue:match | 
+  [err_title_word] verified_minor  “decays” → “matching”
+      [132] CLEO collaboration, J. Insler et al., Studies of the matching D0 → K0K-π+ and S D0 → K0K+π-, Phys. Rev. D85 (2012) 092016, Erratum ibid. D94 (2016) 099905, S arXiv:1203.3804.
+      identifier:minor | arXiv:1203.3804 now carries the title “Studies of the decays D^0 \rightarrow K_S^0K^-π^+ and D^0 \rightarrow K_S^0K^+π^-” (same authors; likely a renamed version)
+  [err_venue] verified  “Phys. Rev. Lett” → “Diabet. Med”
+      [93] LHCb collaboration, R. Aaij et al., Measurement of the CP violation parameter A in D0 → K+K- and D0 → π+π- decays, Diabet. Med. 118 (2017) 261803, Γ arXiv:1702.06490.
+      title:match identifier:match authors:match year:match venue:na | 
+  [err_fabricated] unchecked  title → “Vortices continual stability agents via policy throughput human lower steady”
+      [14] J. Brod, A. Lenz, G. Tetlalmatzi-Xolocotzi, and M. Wiebusch, Vortices continual stability agents via policy throughput human lower steady, Phys. Rev. D92 (2015) 033002.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_author_other] verified_minor  author 2/7: Funk → Toyer
+      D. Harding-Larsen, J. Toyer, N. G. Madsen, H. Gharabli, C. G. Acevedo-Rocha, S. Mazurenko, and D. H. Welner, “Protein representations: Encoding biological information for machine learning in biocataly
+      title:match authors:minor year:match venue:match | 
+  [err_fabricated] unchecked  title → “Diffusion side degree comparison in routing evaluation cancer definite”
+      D. Harding-Larsen, J. Funk, N. G. Madsen, H. Gharabli, C. G. Acevedo-Rocha, S. Mazurenko, and D. H. Welner, “Diffusion side degree comparison in routing evaluation cancer definite,” Biotechnology Adva
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_author_other] verified_minor  author 3/6: Reddy → Hong
+      M. S. Li, N. T. Co, G. Hong, C.-K. Hu, J. Straub, and D. Thirumalai, “Factors governing fibrillogenesis of polypeptide chains revealed by lattice models,” Physical review letters 105, 218101 (2010).
+      title:match authors:minor year:match venue:match | 
+  [err_venue] verified  “Physical review letters 105” → “Science Advances 4, eaat0346”
+      M. S. Li, N. T. Co, G. Reddy, C.-K. Hu, J. Straub, and D. Thirumalai, “Factors governing fibrillogenesis of polypeptide chains revealed by lattice models,” Science Advances 4, eaat0346, 218101 (2010).
+      title:match authors:match year:match venue:na | 
+  [err_fabricated] unchecked  title → “Balanced graph degree under side order matching”
+      F. Görlich and J. Zavadlav, “Balanced graph degree under side order matching,” arXiv preprint (2025).
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_author_other] verified_minor  author 2/10: Charron → Gustafsson
+      B. E. Husic, N. E. Gustafsson, D. Lemm, J. Wang, A. Pérez, M. Majewski, A. Krämer, Y. Chen, S. Olsson, G. De Fabritiis, et al., “Coarse graining molecular dynamics with graph neural networks,” The Jou
+      title:match authors:minor year:match venue:match | 
+  [err_fabricated] unchecked  title → “Responses anticharmed under models state”
+      A. Irbäck, L. Knuthson, S. Mohanty, and C. Peterson, “Responses anticharmed under models state,” Physical Review Research 4, 043013 (2022).
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Black annealing via dependent”
+      [3] B. G. Cumming and G. C. DeAngelis. Black annealing via dependent. Annual Review of Neuroscience, 24(1):203-238, 2001.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Multi augmented of mobile model northern”
+      [11] Junpeng Jing, Weixun Luo, Ye Mao, and Krystian Mikolajczyk. Multi augmented of mobile model northern. In 2025 IEEE/CVF International Conference on Computer Vision (ICCV), pages 20836-20846, 2025.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Glitches street capture lower for household orbiting degree explained school”
+      [31] Megan R. Ebers, Jan P. Williams, Katherine M. Steele, and J. Nathan Kutz. Glitches street capture lower for household orbiting degree explained school. IEEE Access, 12:97428-97439, 2024.
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_author_other] verified_minor  author 2/6: Namakula → Odstrčil
+      8. Wafula ST, Odstrčil LN, Ninsiima LR, Ssekamatte NK, Walekhwa AW, Mugume IB, et al. Barriers and opportunities for improving management of snakebites: Perspectives of healthcare workers in Northern 
+      title:match identifier:match authors:minor year:match venue:match | 
+  [err_fabricated] unchecked  title → “Future bolus nonlinear fixed under walks plasticity control more vortices”
+      8. Wafula ST, Namakula LN, Ninsiima LR, Ssekamatte NK, Walekhwa AW, Mugume IB, et al. Future bolus nonlinear fixed under walks plasticity control more vortices. PLoS One. 2023;18(9):e0291032. pone.029
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_fabricated] unchecked  title → “Recognition bench production policy under contact regularizer thousand place stars”
+      38. Aron MB, Munyaneza F, Rosenthal A, Dullie L, Krumkamp R, Ndarama E, et al. Recognition bench production policy under contact regularizer thousand place stars. Trop Med Int Health. 2025;30(2):84-92
+       | Semantic Scholar and OpenAlex did not respond, and the other indexes do not cover this kind of work; retry later
+  [err_author_other] verified_minor  author 5/6: Ategyeka → Harville
+      16. Muhoozi M, Kasasa S, Tusabe J, Wambura G, Harville P, Atukunda P, et al. Economic burden and distribution of household expenditures on snakebites: assessing catastrophic health expenditures and fi
+      title:match identifier:match authors:minor year:match | 
+
+False alarms on correct references:
+  [benign_no_id] metadata_error  [8] A. Cowtan, S. Dilkes, R. Duncan, A. Krajenbrink, W. Simmons, and S. Sivarajah, “On the qubit routing problem,” LIPIcs, Volume 135, TQC 2019, vol. 135, pp. 5:1-5:32, 2019. [Online]. Available:
+      Published in “Theory of Quantum Computation, Communication, and Cryptography”, not “LIPIcs”
+  [benign_no_id] metadata_error  Finkelstein, A. and Baicker, K. (2020). The Oregon health insurance experiment: Data. National Bureau of Economic Research.
+      Incomplete author list: 2 of 4 authors omitted without “et al.” | Published in “AEA Randomized Controlled Trials”, not “National Bureau of Economic Research”
+  [benign_no_id] metadata_error  [2] P. Bajaj et al., “MS MARCO: A human generated MAchine reading COmprehension dataset,” 2016. [Online]. Available:
+      Author list does not match the published work: Bajaj not among its authors
+  [benign_case] metadata_error  [131] BESIII collaboration, M. Ablikim et al., measurement of the strong-phase difference between d0 and d0 → k+k-π+π- in bins of phase space, Phys. Rev. D112 (2025) 012015, arXiv:2502.12873.
+      Author list does not match the published work: Ablikim not among its authors
+  [benign_no_id] not_found  [93] LHCb collaboration, R. Aaij et al., Measurement of the CP violation parameter A in D0 → K+K- and D0 → π+π- decays, Phys. Rev. Lett. 118 (2017) 261803, Γ.
+      OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “Measurement of CP asymmetry in D0 → K−K+ and D0 → π−π+ decays” (70% title similarity)

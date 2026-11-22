@@ -418,7 +418,8 @@ export function parseReference(input: string): ParsedRef {
   // (c) ACM style: Authors. 2020. Title. Venue
   if (!title) {
     const acm = body.match(/^(.{2,1500}?)\.\s(?:1[89]\d\d|20[0-3]\d)[a-z]?\.\s(.+)$/);
-    if (acm && authorLikeness(acm[1]) > 0.6) {
+    // (an organization, "Tencent Hunyuan3D Team. 2025a. Title", is not person-like but sits in the same place)
+    if (acm && (authorLikeness(acm[1]) > 0.6 || (/^[\p{L}\d&'’ -]{2,80}$/u.test(acm[1]) && acm[1].trim().split(/\s+/).length <= 8))) {
       authorsText = acm[1];
       const segs = segments(acm[2]);
       title = segs[0];
@@ -579,10 +580,20 @@ export function parseReference(input: string): ParsedRef {
       && /^[\s.,;:(]*(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+(?:\d{1,2},?\s+)?(?:1[89]|20)\d\d\b/i.test(after)) venue = undefined;
   }
 
+  // a "title" that carries a DOI is the tail of an untitled entry ("A. Sukys and R. Grima, Bioinformatics 10.1093/…")
+  if (title && /\b10\.\d{4,9}\//.test(title)) title = undefined;
   let kind = classifyKind(raw, urls, dois, arxivIds, venue);
+  // a GitHub "owner/repo" name cited without a URL ("Raspberrypi/rp2350_hacking_challenge_2, Raspberry Pi, 2026")
+  if (kind === 'article' && !dois.length && !arxivIds.length && /^(?:\[\d+\]\s*|\d+\.\s*)?[A-Za-z][\w.-]*\/[\w.-]*[_-][\w.-]*[,.\s]/.test(raw)) kind = 'software';
   if (kind === 'article' && !arxivIds.length && (publisherParen || (venue && looksLikePublisher(venue)) || (!dois.length && PUBLISHER_RE.test(raw) && !/journal|proceedings|conference|transactions|\d+\s*\(\d+\)/i.test(raw)))) kind = 'book';
   // "…, Dubna: JINR" / ". Kyiv: Phenix": ends in City: Publisher with no volume or pages after the year
   if (kind === 'article' && !arxivIds.length && !dois.length && !urls.length && year && CITY_PUBLISHER_END_RE.test(raw) && !/\d/.test(raw.slice(raw.indexOf(String(year)) + 4).replace(/\(\s*in [A-Z][a-z]+\s*\)/g, '')) && !/journal|proceedings|conference|transactions/i.test(raw)) kind = 'book';
+  // grey literature: an institution as author ("FMoH", "Uganda Bureau of Statistics", "SciPy developers") or as
+  // publisher ("Washington (DC): Pew Research Center"), with no DOI, arXiv ID, journal volume or pages
+  if (kind === 'article' && !arxivIds.length && !dois.length && !volume && !pages && !/journal|proceedings|conference|transactions/i.test(raw)) {
+    const firstAuthor = (authorsText ?? (authors.length ? '' : (title ? raw.slice(0, Math.max(0, raw.indexOf(title))) : ''))).replace(/^\s*(?:\[[^\]]*\]|\d{1,3}\.)\s*/, '').split(/[,;]|\band\b/)[0].replace(/[.\s]+$/, '').trim();
+    if (ORG_AUTHOR_RE.test(firstAuthor) || /^(?:[A-Z]{3,8}|[A-Z][a-z]?[A-Z][A-Za-z]{1,5})$/.test(firstAuthor) || (venue && ORG_PUBLISHER_RE.test(venue))) kind = 'report';
+  }
 
   return {
     raw,
@@ -642,6 +653,8 @@ function splitTitleComma(rest: string): { title: string; after: string; publishe
   return { title: pieces.slice(0, cut).join(', ').replace(/[.\s]+$/, ''), after: [pieces.slice(cut).join(', '), tail].filter(Boolean).join(', '), publisher };
 }
 
+const ORG_AUTHOR_RE = /\b(?:ministry|ministerie|minist[eè]re|minister|bureau|department|agency|office|council|commission|organi[sz]ation|cent(?:er|re)|institute|foundation|fund|programme|authority|administration|government|republic|federal|statistics|developers|secretariat|survey)\b/i;
+const ORG_PUBLISHER_RE = /(?:^|[.,]\s*)\p{Lu}[\p{L}-]+(?:\s*\([A-Z]{2}\))?\s*:\s*[\p{L}&.'’\s-]*\b(?:Cent(?:er|re)|Institute|Organi[sz]ation|Ministry|Bureau|Agency|Office|Council|Foundation|Fund|Bank|Programme|Commission)\b/u;
 const CITY_PUBLISHER_END_RE = /[.,]\s*\p{Lu}[\p{L}-]+(?:[\s-]\p{Lu}[\p{L}-]+)?\s*:\s*\p{Lu}[\p{L}&.'’\s-]{1,40}?\.?(?:\s*\(\s*in [A-Z][a-z]+\s*\))?\.?\s*$/u;
 const PUBLISHER_RE = /\b(?:press|publishers?|publishing|books|verlag|ltd|wiley|springer|elsevier|routledge|sage|norton|penguin|viking|vintage|chapman|crc|blackwell|mcgraw|prentice|addison|pearson|kluwer|birkh[aä]user|dover|freeman|van nostrand|simon (?:and|&) schuster|random house|harper|knopf|allen lane|hamish hamilton|odile jacob|north-holland|basicbooks|siam)\b/i;
 /** "London: Allen Lane", "Wiley, Chichester", "New Haven & London: Yale University Press" — a book's imprint, not a venue. */

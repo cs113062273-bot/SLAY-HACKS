@@ -1,0 +1,178 @@
+
+=== cs.CL_2611.24936v1.pdf: refs 46 → 46, flags 1 → 1
+  #1 real kept      metadata_error → metadata_error [1 unrecorded lookups]  S. Lloyd. 2006. Least squares quantization in pcm. IEEE Trans. Inf. Theor., 28(2):129-137.
+      now: Year 2006 does not match the published record (1982/2004)
+
+=== cs.CV_2611.24941v1.pdf: refs 86 → 86, flags 17 → 3
+  #2 fixed          metadata_error → verified  Raphael Bensadoun, Yanir Kleiman, Idan Azuri, Omri Harosh, Andrea Vedaldi, Natalia Neverov
+  #3 fixed          metadata_error → verified  Ye Fang, Zeyi Sun, Tong Wu, Jiaqi Wang, Ziwei Liu, Gordon Wetzstein, and Dahua Lin. 2024. 
+  #4 fixed          metadata_error → verified  Jon Hasselgren, Zheng Zeng, Milos Hasan, and Jacob Munkberg. 2026. VideoMatGen: PBR Materi
+  #5 fixed          metadata_error → verified  Xin Huang, Tengfei Wang, Ziwei Liu, and Qing Wang. 2024b. Material Anything: Generating Ma
+  #6 fixed          metadata_error → verified_minor  Nasir Mohammad Khalid, Tianhao Xie, Eugene Belilovsky, and Popa Tiberiu. 2022. CLIP-Mesh: 
+  #7 fixed          metadata_error → verified  Oscar Michel, Roi Bar-On, Richard Liu, Sagie Benaim, and Rana Hanocka. 2021. Text2Mesh: Te
+  #8 fixed          metadata_error → verified  Jacob Munkberg, Zian Wang, Ruofan Liang, Tianchang Shen, and Jon Hasselgren. 2025. VideoMa
+  #9 STILL FALSE    metadata_error → metadata_error [1 unrecorded lookups]  Matt Pharr, Wenzel Jakob, and Greg Humphreys. 2016. Physically Based Rendering: From Theor
+      now: Author list does not match the published work: Jakob not among its authors
+  #10 fixed          metadata_error → verified [1 unrecorded lookups]  Ben Poole, Ajay Jain, Jonathan T. Barron, and Ben Mildenhall. 2022. DreamFusion: Text-to-3
+  #11 fixed          metadata_error → unverifiable [2 unrecorded lookups]  Qwen Team. 2026. Qwen3.5: Towards Native Multimodal Agents. https://qwen.ai/ blog?id=qwen3
+  #12 STILL FALSE    metadata_error → not_found [1 unrecorded lookups]  Tencent Hunyuan3D Team. 2025a. Hunyuan3D 2.1: From Images to High-Fidelity 3D Assets with 
+      now: OpenAlex did not respond; re-run later to confirm | No matching work in DataCite, Crossref, Semantic Scholar, Europe PMC
+  #13 STILL FALSE    metadata_error → id_mismatch [1 unrecorded lookups]  Tencent Hunyuan3D Team. 2025b. Hunyuan3D 2.5: Towards High-Fidelity 3D Assets Generation w
+      now: arXiv:2506.16504 points to a different work: “Hunyuan3D 2.5: Towards High-Fidelity 3D Assets Generation with Ultimate Details”
+  #14 fixed          metadata_error → verified  Peng Wang and Yichun Shi. 2023. Imagedream: Image-prompt multi-view diffusion for 3d gener
+  #15 fixed          metadata_error → verified  Xudong Xu, Zhaoyang Lyu, Xingang Pan, and Bo Dai. 2023. Matlaber: Material-aware text-to-3
+  #16 fixed          metadata_error → verified  Yifei Zeng, Yajie Bao, Jiachen Qian, Shuang Wu, Youtian Lin, Hao Zhu, Buyu Li, Feihu Zhang
+  #17 fixed          metadata_error → verified  Yibo Zhang, Li Zhang, Rui Ma, and Nan Cao. 2025. TexVerse: A Universe of 3D Objects with H
+  #18 fixed          metadata_error → verified  Shenhao Zhu, Lingteng Qiu, Xiaodong Gu, Zhengyi Zhao, Chao Xu, Yuxiao He, Zhe Li, Xiaoguan
+
+=== cs.SE_2611.24924v1.pdf: refs 90 → 90, flags 19 → 5
+  #19 fixed          not_found → verified  [7] Jason Starace. Scaffold effects on gaia: A controlled comparison, 2026. URL https://ar
+  #20 fixed          metadata_error → verified  [13] Xin Zhou, Chun Yong Chong, Kisub Kim, Yun Peng, Rui Shu, Zihan Wu, Xu Han, Guowen Yua
+  #21 fixed          metadata_error → verified_minor  [14] Yike Wang, Huaisheng Zhu, Zhengyu Hu, Yige Yuan, Zhengyu Chen, Shakti Senthil, Hannan
+  #22 fixed          metadata_error → verified  [19] Chengrun Yang, Xuezhi Wang, Yifeng Lu, Hanxiao Liu, Quoc V. Le, Denny Zhou, and Xinyu
+  #23 STILL FALSE    metadata_error → metadata_error  [20] Reid Pryzant, Dan Iter, Jerry Li, Yin Tat Lee, Chenguang Zhu, and Michael Zeng. Autom
+      now: Published in “Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing”, not “org/abs/2305.03495”
+  #24 fixed          not_found → verified  [31] Guanzhi Wang, Yuqi Xie, Yunfan Jiang, Ajay Mandlekar, Chaowei Xiao, Yuke Zhu, Linxi F
+  #25 fixed          metadata_error → verified  [32] Zora Zhiruo Wang, Jiayuan Mao, Daniel Fried, and Graham Neubig. Agent workflow memory
+  #26 fixed          metadata_error → verified  [35] Shengran Hu, Cong Lu, and Jeff Clune. Automated design of agentic systems, 2024. URL 
+  #27 real kept      id_mismatch → id_mismatch [2 unrecorded lookups]  [42] Lirong Che, Yuzhe yang, Peiwen lin, Chuang wang, Xueqian wang, and Jian su. Demoevolv
+      now: arXiv:2605.24539 points to a different work: “DemoEvolve: Demonstration-Guided Harness Evolution under Sparse Feedback”
+  #28 STILL FALSE    metadata_error → metadata_error [1 unrecorded lookups]  [44] Krisztian Balog and ChengXiang Zhai. User simulation in the era of generative ai: Use
+      now: Published in “arXiv.org”, not “abs/2501.04410”
+  #29 fixed          metadata_error → verified  [45] Shunyu Yao, Noah Shinn, Pedram Razavi, and Karthik Narasimhan. au-bench: A benchmark 
+  #30 fixed          metadata_error → verified  [46] Victor Barres, Honghua Dong, Soham Ray, Xujie Si, and Karthik Narasimhan. au2-bench: 
+  #31 STILL FALSE    metadata_error → metadata_error  [55] Cheng Qian, Bingxiang He, Zhong Zhuang, Jia Deng, Yujia Qin, Xin Cong, Zhong Zhang, J
+      now: Published in “Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)”, not “towards implicit user intention understanding of language model driven agents”
+  #32 fixed          metadata_error → verified  [65] Weiwei Sun, Xuhui Zhou, Weihua Du, Xingyao Wang, Sean Welleck, Graham Neubig, Maarten
+  #33 fixed          metadata_error → verified  [71] Daman Arora, Atharv Sonwane, Nalin Wadhwa, Abhav Mehrotra, Saiteja Utpala, Ramakrishn
+  #34 fixed          metadata_error → verified [1 unrecorded lookups]  [77] Michael E. Bratman, David J. Israel, and Martha E. Pollack. Plans and resource-bounde
+  #35 fixed          metadata_error → verified  [84] Quan Shi, Michael Tang, Karthik Narasimhan, and Shunyu Yao. Can language models solve
+  #36 fixed          not_found → verified  [87] Grégoire Mialon, Clémentine Fourrier, Craig Swift, Thomas Wolf, Yann LeCun, and Thoma
+  #37 fixed          not_found → verified  [88] Xiangyi Li, Yimin Liu, Wenbo Chen, Bingran You, Zonglin Di, Yifeng He, Shenghan Zheng
+  NEW FLAG [47] metadata_error  [47] Cheng Qian, Zuxin Liu, Akshara Prabhakar, Zhiwei Liu, Jianguo Zhang, Haolin Chen, Heng Ji, Weiran Yao, Shelby Heinecke, Silvio Savarese, Caiming Xiong, and Huan Wang. Userbench: An interactive gy
+      Published in “arXiv”, not “abs/2507.22034”
+      rec: UserBench: An Interactive Gym Environment for User-Centric Agents / Qian, Liu, Prabhakar, Liu / 2025 / arXiv / 10.48550/arxiv.2507.22034
+
+=== cs.HC_2611.24888v1.pdf: refs 101 → 101, flags 17 → 3
+  #38 fixed          fabricated → verified  [13] Heewon Chang. 2016.
+  #39 STILL FALSE    not_found → not_found [2 unrecorded lookups]  [18] Michael Davern, Rene Bautista, Jeremy Freese, Pamela Herd, and Stephen L. Morgan. 202
+      now: OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC | Nearest record: “General Social Survey, 1972: Version 1” (75% title similarity)
+  #40 fixed          metadata_error → verified_minor  [21] Jenna Drenten and Gillian Brooks. 2020. Celebrity 2.0: Lil Miquela and the rise of a 
+  #41 fixed          fabricated → unverifiable [2 unrecorded lookups]  [25] GDPR. 2024. GDPR.
+  #42 fixed          metadata_error → verified_minor  [34] Steffen Herbold, Alexander Trautsch, Zlata Kikteva, and Annette Hautli-Janisz. 2026. 
+  #43 fixed          metadata_error → verified  [39] Daniel Jannai, Amos Meron, Barak Lenz, Yoav Levine, and Yoav Shoham. 2023. Human or N
+  #44 fixed          fabricated → verified [1 unrecorded lookups]  [51] Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Nam
+  #45 fixed          not_found → verified_minor [1 unrecorded lookups]  [63] Helen Nissenbaum. 2004. Privacy as Contextual Integrity. Washington Law Review 79, 1 
+  #46 fixed          metadata_error → unverifiable [2 unrecorded lookups]  [64] OpenClaw Contributors. 2025. OpenClaw - Personal AI Assistant. https: //openclaw.ai/.
+  #47 fixed          metadata_error → verified_minor  [67] R. Parasuraman, T.B. Sheridan, and C.D. Wickens. 2000. A model for types and levels o
+  #48 STILL FALSE    id_mismatch → id_mismatch [3 unrecorded lookups]  [70] Joon Sung Park, Carolyn Q. Zou, Jonne Kamphorst, Niles Egan, Aaron Shaw, Benjamin Mak
+      now: arXiv:2411.10109 points to a different work: “AI Simulations Grounded in Rich Self-Reports Increase Accuracy and Reduce Distortion”
+  #49 fixed          metadata_error → verified [1 unrecorded lookups]  [74] Machel Reid, Nikolay Savinov, Denis Teplyashin, et al. 2024. Gemini 1.5: Unlocking mu
+  #50 fixed          metadata_error → verified_minor  [77] Ayse Pinar Saygin, Ilyas Cicekli, and Varol Akman. 2000. Turing Test: 50 Years Later.
+  #51 fixed          metadata_error → verified_minor  [85] Ben Shneiderman. 2020. Human-centered artificial intelligence: Reliable, safe & trust
+  #52 fixed          metadata_error → verified_minor  [86] Efstathios Stamatatos. 2009. A survey of modern authorship attribution methods. Journ
+  #53 fixed          metadata_error → verified  [90] Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, T
+  #54 fixed          metadata_error → verified  [93] A. M. Turing. 1950. Computing Machinery and Intelligence. Mind LIX, 236 (1950), 433-4
+  NEW FLAG [5] metadata_error [1 unrecorded lookups]  [5] Saint Augustine. 1838. The confessions of S. Augustine. Vol. 1. JH Parker.
+      Author list does not match the published work: Augustine not among its authors
+      rec: The Confessions Of S. Augustine / Pusey /  /  / 
+
+=== astro-ph.GA_2611.24937v1.pdf: refs 11 → 43, flags 4 → 1
+  #55 fixed          metadata_error → verified  Astropy Collaboration, Price-Whelan, A. M., Lim, P. L., et al. 2022, The Astropy Project: 
+  #56 fixed          metadata_error → verified  Baldi, A., Forman, W., Jones, C., et al. 2009, The Unusual X-ray Morphology of NGC 4636 Re
+  #57 fixed          metadata_error → verified  Bulbul, E., Liu, A., Kluge, M., et al. 2024, The SRG/eROSITA All-Sky Survey. The first cat
+  #58 fixed          id_mismatch → verified  Evans, I. N., Primini, F. A., Glotfelty, K. J., et al. 2010, The Chandra Source Catalog, T
+  NEW FLAG [39] metadata_error [2 unrecorded lookups]  The pandas development team. 2026, pandas-dev/pandas: Pandas, v3.1.0 Zenodo, doi: 10.5281/zenodo.23565656
+      Closest real work has a different title: “pandas-dev/pandas: Pandas”
+      rec: pandas-dev/pandas: Pandas / The pandas development team / 2026 / Zenodo / 10.5281/zenodo.23565656
+
+=== cond-mat.mtrl-sci_2611.24759v1.pdf: refs 28 → 90, flags 2 → 4
+  #59 fixed          metadata_error → verified  15Y. Lim, H. Park, A. Walsh, and J. Kim, “Accelerating CO direct air capture screening for
+  #60 fixed          metadata_error → verified  25J. H. Cavka, C. A. Grande, G. Mondino, and R. Blom, “High pressure adsorption of CO and 
+  NEW FLAG [1] metadata_error [1 unrecorded lookups]  [1] IPCC, Climate Change 2023: Synthesis Report. Contribution of Working Groups I, II and III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change, edited by Core Writing Te
+      Title differs from the published title (cited “edited”, cited “by”, published “report”, published “climate”, published “change”, published “ipcc”)
+      rec: IPCC, 2023: Climate Change 2023: Synthesis Report. Contribution of Working Groups I, II and III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Core Writing Team, H. Lee and J. Romero (eds.)]. IPCC, Geneva, Switzerland. / Calvin, Dasgupta, Krinner, Mukherji / 2023/2023 /  / 10.59327/ipcc/ar6-9789291691647
+  NEW FLAG [2] metadata_error [2 unrecorded lookups]  [2] S. M. Smith, O. Geden, M. J. Gidden, W. F. Lamb, G. F. Nemet, J. C. Minx, et al., The State of Carbon Dioxide Removal 2024 - 2nd Edition, Tech. Rep. (The State of Carbon Dioxide Removal, 2024).
+      Closest real work has a different title: “The carbon dioxide removal gap”
+      rec: The carbon dioxide removal gap / Lamb, Gasser, Roman-Cuesta, Grassi / 2024 / Nature Climate Change / 10.1038/s41558-024-01984-6
+  NEW FLAG [28] metadata_error  [28] C. W. Edwards, F. Yang, K. Stracke, and J. D. Evans, MLIP- MC: A framework for adsorption simulations using machinelearned interatomic potentials (2026), arXiv:2602.13725 [cond-mat.mtrl-sci].
+      Title differs from the published title (cited “evans”)
+      rec: MLIP-MC: A Framework for Adsorption Simulations using Machine-Learned Interatomic Potentials / Edwards, Yang, Stracke, Evans / 2026 / arXiv / 10.48550/arxiv.2602.13725
+  NEW FLAG [65] metadata_error  [65] D. Danaci, E. Pulidori, L. Bernazzani, C. Petit, and M. Taddei, Evaluating the CO2 capture performance of a “phasechange” metal-organic framework in a pressure-vacuum swing adsorption process, Mo
+      Title differs from the published title (cited “taddei”, cited “syst”)
+      rec: Evaluating the CO 2 capture performance of a “phase-change” metal–organic framework in a pressure-vacuum swing adsorption process / Danaci, Pulidori, Bernazzani, Petit / 2023 / Molecular Systems Design &amp; Engineering / 10.1039/d3me00098b
+
+=== quant-ph_2611.24886v1.pdf: refs 39 → 39, flags 7 → 2
+  #61 fixed          metadata_error → verified  [13] F. Wagner, D. J. Egger, and F. Liers, “Optimized Noise Suppression for Quantum Circui
+  #62 fixed          id_mismatch → verified  [15] H.-Z. Xu et al., Compilation Framework for Real Quantum Computing Quantum Research, v
+  #63 fixed          id_mismatch → verified  [16] W. Sun et al., efficient qubit mapping optimization,” EPJ Quantum strategy for , vol.
+  #64 fixed          metadata_error → verified  [19] S. Sivarajah, S. and R. Duncan, “t|ket〉: a retargetable compiler for NISQ devices,” Q
+  #65 STILL FALSE    metadata_error → metadata_error  [21] P. Krantz, M. Kjaergaard, F. Yan, T. P. Orlando, S. Gustavsson, and W. D. Oliver, “A 
+      now: Title differs from the published title (published “guide”, published “to”, published “superconducting”, published “qubits”)
+  #66 fixed          metadata_error → verified [1 unrecorded lookups]  [37] B. M. Terhal, “Quantum error correction for quantum memories,” Reviews of Modern Phys
+  #67 STILL FALSE    id_mismatch → metadata_error [1 unrecorded lookups]  [38] B. Efron, “Bootstrap Methods: Another Look at the Jackknife,” in Breakthroughs in Sta
+      now: doi:10.1007/978-1-4612-4380-941 does not resolve to any record
+
+=== math.PR_2611.24875v1.pdf: refs 36 → 36, flags 7 → 1
+  #68 fixed          not_found → verified [1 unrecorded lookups]  [BJ25] Guillaume Baverez and Antoine Jego. Conformal welding and the matter- Liouville-gho
+  #69 fixed          metadata_error → verified  [BP25] Nathanaël Berestycki and Ellen Powell. Gaussian free field and Liouville quantum gr
+  #70 fixed          metadata_error → verified [1 unrecorded lookups]  [Cai26] Chunhao Cai. Closed response calculus for SLE weldings and Weil- Petersson Kähler 
+  #71 STILL FALSE    metadata_error → metadata_error  [CDCH+14] Dmitry Chelkak, Hugo Duminil-Copin, Clément Hongler, Antti Kemppainen, and Stani
+      now: Published in “Comptes Rendus. Mathématique”, not “C. R. Math. Acad. Sci. Paris”
+  #72 fixed          metadata_error → verified  [CM44] R. H. Cameron and W. T. Martin. Transformations of Wiener integrals under translati
+  #73 fixed          metadata_error → verified  [GQW24] Maria Gordina, Wei Qian, and Yilin Wang. Infinitesimal conformal restriction and u
+  #74 fixed          metadata_error → verified [1 unrecorded lookups]  [PW24] Eveliina Peltola and Yilin Wang. Large deviations of multichordal SLE0+, real ratio
+
+=== q-bio.NC_2611.24767v1.pdf: refs 36 → 36, flags 3 → 4
+  #75 STILL FALSE    metadata_error → metadata_error [1 unrecorded lookups]  M. D. Hoffman and A. Gelman. The No-U-Turn Sampler: Adaptively Setting Path Lengths in Ham
+      now: Year 2014 does not match the published record (2011/2011)
+  #76 fixed          metadata_error → verified  J. P. Simoncelli. A Model-Based Spike Sorting Algorithm for Removing Correlation Artifacts
+  #77 fixed          metadata_error → verified  A. Vehtari, A. Gelman, D. Simpson, B. Carpenter and P.-C. Bürkner. Rank-normalization, Fol
+  NEW FLAG [4] metadata_error [1 unrecorded lookups]  D. M. Blei, A. Kucukelbir and J. D. McAuliffe. Variational Inference: A Review for Statisticians. Journal of the American Statistical Association 112, 859-877, 2017. doi:10.1080/01621459.2017.1285773.
+      doi:10.1080/01621459.2017.1285773.arxiv:1601.00670v9 does not resolve to any record
+      rec: Variational Inference: A Review for Statisticians / Blei, Kucukelbir, McAuliffe / 2017 / Journal of the American Statistical Association / 10.1080/01621459.2017.1285773
+  NEW FLAG [18] metadata_error [1 unrecorded lookups]  H. D. Lee, A. Jha, S. E. Clarke, M. P. Silvernagel, P. Nuyujukian and S. W. Linderman. Stiefel Manifold Dynamical Systems for Tracking Representational Drift. bioRxiv preprint, 2026. doi:10.64898/2026
+      doi:10.64898/2026.03.07.710319(v1 does not resolve to any record
+      rec: Stiefel Manifold Dynamical Systems for Tracking Representational Drift / Lee, Jha, Clarke, Silvernagel / 2026 /  / 10.64898/2026.03.07.710319
+  NEW FLAG [28] not_found [2 unrecorded lookups]  SciPy developers. scipy.stats.qmc.Sobol reference documentation. SciPy reference manual, accessed October 30, 2026. Sobol engine documentation.
+      OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC
+      rec: -
+
+=== eess.SP_2611.24829v1.pdf: refs 13 → 13, flags 0 → 0
+
+=== econ.EM_2611.24402v1.pdf: refs 37 → 37, flags 2 → 1
+  #78 fixed          metadata_error → verified  de Chaisemartin, C. (2017). Tolerating defiance? Local average treatment effects without m
+  #79 STILL FALSE    metadata_error → metadata_error  Splawa-Neyman, J. (1990). On the application of probability theory to agricultural experim
+      now: Incomplete author list: 2 of 3 authors omitted without “et al.”
+
+=== stat.ME_2611.24929v1.pdf: refs 33 → 33, flags 0 → 0
+
+=== plos_10_1371_journal_pone_0360919.pdf: refs 39 → 39, flags 5 → 4
+  #80 real kept      id_mismatch → id_mismatch [3 unrecorded lookups]  2. Bitsko RH, Claussen AH, Lichstein J, Black LI, Jones SE, Danielson ML, et al. Mental he
+      now: doi:10.15585/mmwr.su7102a1 points to a different work: “Mental Health Surveillance Among Children — United States, 2013–2019”
+  #81 fixed          metadata_error → verified  7. Blakemore S-J, Choudhury S. Development of the adolescent brain: implications for execu
+  #82 fixed          metadata_error → verified  8. Schweizer S, Gotlib IH, Blakemore S-J. The role of affective control in emotion regulat
+  #83 fixed          metadata_error → verified  20. Véronneau M-H, Schwartz-Mette R. Social media and peer relationships in adolescence: c
+  #84 STILL FALSE    metadata_error → metadata_error  27. Noon EJ, Vranken I, Schreurs L. Age matters? the moderating effect of age on the longi
+      now: Title differs from the published title (published “age”, published “the”, published “matters”)
+  NEW FLAG [6] metadata_error [1 unrecorded lookups]  6. Gotlib IH, Miller JG, Borchers LR, Coury SM, Costello LA, Garcia JM, et al. Effects of the COVID-19 pandemic on mental health and brain maturation in adolescents: implications for analyzing longitu
+      doi:10.1016/j.bpsgos.2022.11.00215/17 does not resolve to any record
+      rec: Effects of the COVID-19 Pandemic on Mental Health and Brain Maturation in Adolescents: Implications for Analyzing Longitudinal Data / Gotlib, Miller, Borchers, Coury / 2023/2022 / Biological Psychiatry Global Open Science / 10.1016/j.bpsgos.2022.11.002
+  NEW FLAG [18] not_found [2 unrecorded lookups]  18. Vogels EA, Gelles-Watnick R, Massarat N. Teens, social media and technology 2022. Washington (DC): Pew Research Center. 2022.
+      OpenAlex did not respond; re-run later to confirm | No matching work in Crossref, Semantic Scholar, Europe PMC
+      rec: -
+
+=== plos_10_1371_journal_pone_0359947.pdf: refs 40 → 40, flags 8 → 3
+  #85 fixed          metadata_error → verified  6. Nichols E, Vos T. The estimation of the global prevalence of dementia from 1990-2019 an
+  #86 fixed          metadata_error → verified  7. Nandi A, Counts N, Chen S, Seligman B, Tortorice D, Vigo D, et al. Global and regional 
+  #87 real kept      metadata_error → metadata_error  19. Hua CL, Cornell PY, Zimmerman S. Excess mortality among assisted living residents with
+      now: Incomplete author list: 2 of 5 authors omitted without “et al.”
+  #88 fixed          metadata_error → verified_minor [1 unrecorded lookups]  24. Masurkar AV, Marsh K, Morgan B, Leitner D, Wisniewski T. Factors Affecting Resilience 
+  #89 fixed          metadata_error → verified  26. Alfaris N, Alqahtani AM, Alamuddin N, et al. Global Impact of Obesity. Gastroenterol C
+  #90 STILL FALSE    metadata_error → metadata_error  29. Stites SD, Cao H, Harkins K, Flatt JD. Measuring Sex and Gender in Aging and Alzheimer
+      now: Published in “The Journals of Gerontology: Series B”, not “J Gerontol B Psychol Sci Soc Sci”
+  #91 fixed          metadata_error → verified_minor [1 unrecorded lookups]  37. Yang M-T, Temkin-Greener H, Veazie P, Cai S. Post-acute care transitions during COVID-
+  #92 uncertain kept metadata_error → metadata_error [1 unrecorded lookups]  38. Thanarajan V, Shum TY, Kaur J. Alzheimer’s disease in the era of COVID-19 pandemic: A 
+      now: Author list does not match the published work: Kaur not among its authors
+blind re-check with the current core: refs 729, flags now 32; judged false alarms fixed 72/87; judged real errors still flagged 4/4; uncertain still flagged 1/1; new flags to judge 12; of the fixes, 14 only became unchecked/unanswered; 9 new flags had a failed or unrecorded lookup (offline replay of recorded responses)
+verdicts: id_mismatch 4, metadata_error 24, not_found 4, unchecked 1, unverifiable 27, verified 573, verified_minor 96

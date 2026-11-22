@@ -10,7 +10,7 @@ Built for SLAY HACKS 2026.
 |---|---|
 | Reference benchmark (104 hand-verified references, 5 published checkers) | **F1 .971** vs best published .644 |
 | HALLMARK v1.2 held-out test (825 citations) | **F1 .959** with no LLM; best paid-LLM cascade .986 |
-| Three blind audits of real PDFs (42 papers, 2,064 references, every flag judged by hand) | latest frozen round: 99.5% of entries extracted, 81.1% verified, false alarms 10.2% of references (about 4.4% after later fixes, on the same now-spent papers) |
+| Three blind audits of real PDFs (42 papers, 2,064 references, every flag judged by hand) | latest frozen round: 99.5% of entries extracted, 81.1% verified, false alarms 10.2% of references (about 1.0–1.5% after later fixes, on the same now-spent papers; development, not independent) |
 | Claim support (Citation-Integrity test) | micro-F1 .634 in the browser vs GPT-4 .65, MultiVerS .59 |
 
 ## The problem
@@ -26,7 +26,7 @@ Existing checkers test whether a title exists. On a public benchmark of 104 manu
 ## What Veracite does
 
 1. **Reads the document.** It does layout-aware PDF parsing (two-column pages, running headers, appendices), isolates the reference section and splits it into entries. It links every in-text marker, numeric (`[3–7]`) or author–year (`Smith et al., 2020`), to its entry. DOCX, BibTeX, plain text and arXiv IDs are also accepted.
-2. **Resolves each reference** against Crossref, DataCite, Semantic Scholar, OpenAlex and Europe PMC, plus GitHub and Hugging Face for software and models. Lookups are tiered: identifiers and Crossref first, and rate-limited indexes only when needed.
+2. **Resolves each reference** against Crossref, DataCite, Semantic Scholar, OpenAlex and Europe PMC (and INSPIRE-HEP for physics and astronomy), plus GitHub and Hugging Face for software and models. Lookups are tiered: identifiers and Crossref first, and rate-limited indexes only when needed.
 3. **Cross-verifies field by field.** Title, every author, year, venue and identifier must point to the *same* record. The candidate record is aligned back onto the raw reference string, so a weak parse doesn't break verification. This catches:
    - fabricated works
    - a real title with swapped or invented co-authors
@@ -94,7 +94,7 @@ Per type: perfect on fabricated DOIs, future dates, hybrid fabrications, merged 
 
 Extraction is no longer the bottleneck. The remaining false alarms concentrate in two physics papers whose citation conventions the verifier did not know. One is particle physics: 52 false alarms in 150 references, from "JHEP", LaTeX in arXiv titles and collaboration names. The other is astrophysics: 18 in 164. The other twelve papers together have 28 false alarms in 650 references (4.3%). Real errors were rare in these papers, so flag precision is low, and the miss samples bound recall only loosely.
 
-After this round, general fixes were made for the dominant causes (journal abbreviations such as JHEP and ApJ, LaTeX in index titles, collaboration names, spaced DOIs, pre-2007 arXiv identifiers, laboratory report numbers, math symbols scattered by the PDF text layer). Re-checked offline against recorded index responses, so that rate limits cannot masquerade as fixes, they leave the public benchmarks unchanged (Zenodo F1 .971, HALLMARK dev F1 .986) and keep every judged real error flagged. On the round-3 papers, flags fall from 101 to 45 and false alarms from 10.2% to about 4.4% of references, while the one real error stays flagged. That set was used to write the fixes, so this is development progress, not a fourth independent result; details in [docs/EVALUATION.md](docs/EVALUATION.md).
+After this round, general fixes were made for the dominant causes (journal abbreviations such as JHEP and ApJ, LaTeX in index titles, collaboration names, spaced DOIs, pre-2007 arXiv identifiers, laboratory report numbers, math symbols scattered by the PDF text layer). Re-checked offline against recorded index responses, so that rate limits cannot masquerade as fixes, they leave the public benchmarks unchanged (Zenodo F1 .971, HALLMARK dev F1 .986) and keep every judged real error flagged. On the round-3 papers, flags fall from 101 to 45 and false alarms from 10.2% to about 4.4% of references, while the one real error stays flagged. A later systemic pass (evidence anchored on the raw reference text, notation and version variants, record choice, INSPIRE-HEP for physics) brings the three spent sets to 49 flags instead of 116, about 1.0%, 1.5% and 1.45% false alarms, with 57 more references verified, unchecked unchanged and every real error kept; on 1,499 references with injected errors (DOI, author, year, title, venue, invented title) F1 rose from .933 to .951 with 4 false alarms in 707 correct references. These sets were used to write the fixes, so this is development progress, not an independent result; details in [docs/EVALUATION.md](docs/EVALUATION.md).
 
 Protocols, per-paper tables, cause tables, the development papers and the clean controls are in [docs/EVALUATION.md](docs/EVALUATION.md). Raw outputs are in `data/blind*/` (`results.json` holds every reference, its matched record and our judgement of each flag).
 
@@ -116,6 +116,8 @@ Veracite beats the paper's best model on micro-F1 and on recognising accurate an
 
 How the test split was used: the shipped model was chosen on dev and then scored on test. Later a retrained variant (adding perturbed claims and 12k MNLI pairs) scored much higher on dev (macro .577 vs .480; paired bootstrap 95% CI +.036 to +.156), but lower on the cross-field SemanticCite set (.817 vs .837). It was briefly shipped and scored on test: micro .609, macro .456. It was then withdrawn, because our pre-set rule required both dev and SemanticCite to improve. The test split has therefore now been scored for two models, so .486 is no longer a single-shot number. The lesson we drew is that our 255-row dev set no longer predicts held-out gains, so we stopped training.
 
+Where the remaining claim errors come from (dev only, `ml/error_analysis.py`): giving the verifier the gold evidence sentences instead of the retrieved ones does not help (macro-F1 .43 with gold evidence vs .48 retrieved; the paper reports .78 for MultiVerS with gold evidence). Retrieval is therefore not the bottleneck for this model; judging subtle misrepresentation is. "Not accurate" is barely separable from the rest (AUROC .58), while "accurate" (.75) and "unrelated" (.73) are. That is why the interface reports only *Supported* and *Needs review* and never a "misrepresented" verdict, and why we stopped retraining on a dev set that no longer predicts held-out gains instead of tuning further.
+
 Training data: Citation-Integrity train + SciFact, with evidence counts randomised between 2 and 6 so a short abstract does not break the model. Retrieval is BM25 + e5-small-v2 with reciprocal rank fusion. On dev it reaches R@5 .36 against .31 for the paper's BM25+MonoT5. 4-bit weight-only quantization and vocabulary pruning (128k → 45k pieces) leave dev accuracy unchanged (macro-F1 .525 vs .523 fp32). Dynamic int8 quantization, by contrast, broke the model (.11), because it quantizes activations inside DeBERTa's disentangled attention.
 
 ## Responsible use
@@ -135,6 +137,7 @@ Veracite is a static site. There is no Veracite server, account, database or req
 | `doi.org` (handle API) | a DOI that no metadata index knows | tells a DOI registered with a smaller agency apart from one that does not exist |
 | `api.semanticscholar.org`, `api.openalex.org` | reference title, DOI or arXiv ID | broad-coverage lookup, abstracts |
 | `www.ebi.ac.uk` (Europe PMC) | reference title or DOI | biomedical records, open-access full text |
+| `inspirehep.net` (INSPIRE-HEP) | arXiv ID or title of a physics/astronomy reference | journal versions of preprints, collaboration author lists |
 | `api.github.com`, `huggingface.co` | repository / model ID from a cited URL | software and model references |
 | `arxiv.org` | arXiv ID | the sample papers, and full text of cited arXiv papers |
 
@@ -198,4 +201,4 @@ The browser and Node evaluations share the same TypeScript core. Historical froz
 
 ## Data and licenses
 
-Benchmarks: Badalova & Mayr reference set (Zenodo), HALLMARK (MIT), Citation-Integrity (ScienceNLP-Lab), SciFact (CC BY-NC 2.0, training only). Metadata comes from Crossref, DataCite, OpenAlex (CC0), Semantic Scholar and Europe PMC. Sample papers are fetched from arXiv at run time, not redistributed.
+Benchmarks: Badalova & Mayr reference set (Zenodo), HALLMARK (MIT), Citation-Integrity (ScienceNLP-Lab), SciFact (CC BY-NC 2.0, training only). Metadata comes from Crossref, DataCite, OpenAlex (CC0), Semantic Scholar, Europe PMC and INSPIRE-HEP. Sample papers are fetched from arXiv at run time, not redistributed.

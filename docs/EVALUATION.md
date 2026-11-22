@@ -90,6 +90,57 @@ Replay alone flatters the new code: when it asks a question that no earlier run 
 
 The final code adds one more fix found by the production test rather than by a blind set: when Semantic Scholar and OpenAlex both fail, a reference with a DOI is now *unchecked* instead of *not found* (`3e6fa6e`), and GitHub or Hugging Face answering no longer counts as an index having answered for a paper. Numbered institutional reports ("GMD Report 148") are typed as reports (`ad06636`).
 
+### Systemic pass and controlled error injection (November 22, development)
+
+The remaining false alarms on the spent sets were grouped by cause rather than fixed one format at a time. Most came from five systemic gaps, now handled by general rules:
+
+- **Evidence is anchored on the reference text, not on the parse.** A title difference is now measured against the stretch of the raw reference that the record's title aligns to. When every word of the record's title is in the reference and the leftover cited words belong to its authors or venue, the parser misplaced a boundary; a substituted word is never excused, because the record's word is then missing from the text. Venue strings that cannot name a journal (URL fragments, pages and months, math, the tail of the record's own title) are no longer compared.
+- **Notation and naming variants.** Acronyms spelled out on the other side ("QPOs of SGRs"), German transliteration, Roman vs Arabic part numbers, function-word-only differences, and symbol tokens in math titles (Greek letters spelled out, "B → K" written as "Bpmto K", tags such as "[C2]") are cosmetic. Index records with LaTeX are converted to symbols instead of glued words.
+- **Version-aware years and venues.** A journal cited a few years after its only indexed preprint (including Semantic Scholar dating JMLR papers by their arXiv year), another edition of a book with different co-authors, Russian journals indexed through their English translations, and an index author list with a trailing editor are minor, not errors. One omitted author placed between cited authors is still an error.
+- **Record choice.** The record reached through the cited DOI or arXiv ID is preferred; a record listing only a collaboration cannot beat one that names the cited people; issue furniture ("2009 Index …", "Information for authors") is never a match; family and given names swapped by the index match.
+- **A new source for physics.** INSPIRE-HEP (free, CORS-enabled) is queried for physics and astronomy references: by arXiv ID it supplies the journal version of a preprint, and by title it finds papers the general indexes miss. Grey literature with an institutional author or publisher (ministries, statistics bureaus, "SciPy developers") is typed as a report and reported as not indexed rather than not found.
+
+The pass also tightened detection where the stress test below showed gaps: a cited name in a long author list that shares nothing with the record's author in that position is a substitution (it was treated as a typo); citing 1 to 3 of more than ten authors without "et al." is an incomplete list; Crossref's `created` date (when a DOI was deposited, often years after publication) no longer counts as a publication year; and a quoted title that has nothing in common with the record it otherwise matches is reported.
+
+**Controlled error injection.** Natural papers contain very few real errors (12 across the three blind sets), which says little about recall. `app/scripts/stress-build.ts` therefore builds a stress set from real PDF reference strings: 264 references from 41 spent-set papers that the system verified cleanly by offline replay, each turned into an unmodified control, two benign rewrites that must still verify (identifiers removed, authors after the first replaced by "et al.", title lower-cased) and three injected errors chosen in rotation: DOI or arXiv ID digits changed, another work's DOI, first or a later author replaced, all authors after the first removed, year shifted by 2–4, one title word replaced, venue replaced, or the title replaced by an invented one with identifiers removed. An injected string is kept only if re-parsing it shows the intended change. 1,499 items: 707 correct, 792 errors. Both code versions were scored by offline replay over the same recorded responses (`data/stress/results-base-replay.*`, `results-systemic-final.*`; `app/scripts/stress-compare.py` lists every changed outcome).
+
+| | Before (`ad06636`) | After this pass |
+|---|---|---|
+| Precision | .991 | **.994** |
+| Recall | .881 | **.910** |
+| F1 | .933 | **.951** |
+| False alarms on correct references | 6 / 707 | 4 / 707 (0 of 264 unmodified controls) |
+| Flags that name the injected field | 99.6% | 99.7% |
+
+| Injected error (n) | Before | After |
+|---|---|---|
+| DOI / arXiv digits (95), another DOI (64) | 100% · 100% | 100% · 100% |
+| First author replaced (95) | 98.9% | 98.9% |
+| Later author replaced (95) | 74.7% | **91.6%** |
+| Authors dropped, no "et al." (60) | 95.0% | **100%** |
+| Year shifted (96) | 87.5% | 88.5% |
+| Title word replaced (96) | 95.8% | 95.8% |
+| Venue replaced (96) | 87.5% | 89.6% |
+| Invented title (95) | 60.0% | 61.1% |
+
+Two items moved the wrong way: a shifted year now lies within one year of the INSPIRE preprint date, and a substituted first author of a collaboration paper is not caught. The remaining misses are design limits rather than bugs: years within the preprint tolerance (±2 when the reference cites arXiv), a renamed arXiv entry by the same authors, and venues that the record does not carry. **Invented titles depend on index availability**: in these bulk runs OpenAlex's free allowance was spent and Semantic Scholar throttled. Of the 59 invented titles for which Semantic Scholar or OpenAlex answered, 57 were flagged; all 36 for which neither answered were reported as *unchecked*, never as verified. In the browser a second, slower pass now re-checks references left unchecked by rate limits before the report is final.
+
+This is development evidence on spent papers, with errors injected by our own generator: it measures sensitivity to known error types, not the false-alarm rate on new papers.
+
+**Spent blind sets, re-checked (development regression, not a new test).** The 2,276 references of the three spent blind sets were re-checked with the code before (`806cbbe`) and after this pass, by offline replay over the same recorded responses (`data/blind*/recheck-cov-{base,new}.txt`; a live pass first recorded the lookups the new code makes, `recheck-livefill2.txt`). Removing a false alarm by turning it into *unchecked* or *unverifiable* does not count as a fix, so the full verdict distribution is reported:
+
+| | Before | After |
+|---|---|---|
+| Flags | 116 | 49 |
+| Verified or verified with minor differences | 1,999 | **2,056** |
+| Unverifiable (not indexed) | 133 | 143 |
+| Unchecked (an index did not answer) | 28 | 28 |
+| Judged real errors still flagged | 12 / 12 | 12 / 12 |
+| Original judged false alarms no longer flagged (set 1 / 2 / 3) | 68 / 36 / 62 | 79 / 43 / 82 of 87 / 54 / 98 |
+| Development false-alarm rate (set 1 / 2 / 3) | — | ≈1.0% / 1.5% / 1.45% |
+
+Of the 67 fewer flags, 57 references now verify and 10 became unverifiable; all 10 had been judged false alarms (a company blog, a regulation, a census report, a committee web page, and physics references whose lookups were not recorded in replay). The new flags include two real errors that the earlier code missed: two arXiv IDs in a hep-ph paper that point to other papers (hep-ph/0306007 and hep-ph/0411341, confirmed in INSPIRE and DataCite). These rates were measured on papers the rules were developed against, so they are an upper bound on what the rules can do, not an independent estimate; the independent figure remains the frozen blind set 3 (10.2%) until a new frozen set is run.
+
 ## Earlier rounds
 
 ### Blind test: 14 new papers from 14 fields, code frozen

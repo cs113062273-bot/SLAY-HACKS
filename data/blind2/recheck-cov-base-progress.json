@@ -1,0 +1,16 @@
+{
+  "completedThrough": "plos_10_1371_journal_pone_0355629.pdf",
+  "tally": {
+    "oldFalse": 54,
+    "oldFalseGone": 41,
+    "oldFalseGoneUnanswered": 22,
+    "newFlagsUnanswered": 15,
+    "oldReal": 7,
+    "oldRealKept": 7,
+    "oldUncertain": 2,
+    "oldUncertainKept": 2,
+    "refs": 583,
+    "flagsNow": 39,
+    "newFlags": 17
+  }
+}

@@ -64,8 +64,51 @@ export function ratio(a: string, b: string): number {
   return 1 - d / Math.max(a.length, b.length);
 }
 
-/** Similarity of two titles, robust to case, punctuation, subtitles and small typos. */
+/**
+ * Spell out acronyms of `a` that `b` writes in full: "QPOs of SGRs" against "Quasiperiodic Oscillations of Soft
+ * Gamma-Ray Repeaters" → "Quasiperiodic Oscillations of Soft Gamma-Ray Repeaters". A word may supply the initials of
+ * its own parts ("Quasiperiodic" → QP). Only all-capital acronyms (2–6 letters, optional plural s) that `b` lacks.
+ */
+export function expandAcronyms(a: string, b: string): string {
+  const words = b.split(/[\s/]+/).map((w) => w.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, '')).filter(Boolean);
+  const inB = new Set(words.map((w) => w.toLowerCase()));
+  // an acronym already written inside a word of `b` ("Re2TAL" for "Re 2 TAL") is not spelled out there
+  const bJoined = b.toLowerCase().replace(/[^a-z0-9]+/g, '');
+  // can words[i..] spell ac[k..]? returns the number of words used, or 0
+  const spell = (ac: string, k: number, i: number): number => {
+    if (k === ac.length) return 0;
+    const w = words[i];
+    if (!w || w[0].toUpperCase() !== ac[k]) return -1;
+    // the word supplies ac[k] and possibly the next letters as inner morphemes (at least 3 letters apart)
+    let pos = 0;
+    for (let m = k; m < ac.length; m++) {
+      if (m > k) {
+        pos = w.toUpperCase().indexOf(ac[m], pos + 3);
+        if (pos < 0) break;
+      }
+      const rest = spell(ac, m + 1, i + 1);
+      if (rest >= 0) return 1 + rest;
+    }
+    return -1;
+  };
+  return a.replace(/\b([A-Z]{2,6})(s?)\b/g, (m, ac: string) => {
+    if (inB.has(m.toLowerCase()) || inB.has(ac.toLowerCase()) || bJoined.includes(ac.toLowerCase())) return m;
+    for (let i = 0; i < words.length; i++) {
+      const n = spell(ac, 0, i);
+      if (n > 0 && n <= ac.length) return words.slice(i, i + n).join(' ');
+    }
+    return m;
+  });
+}
+
+/** Similarity of two titles, robust to case, punctuation, subtitles, acronyms and small typos. */
 export function titleSim(a: string, b: string): number {
+  const base = titleSim0(a, b);
+  if (base >= 0.97 || !/\b[A-Z]{2,6}s?\b/.test(a + ' ' + b)) return base;
+  return Math.max(base, titleSim0(expandAcronyms(a, b), expandAcronyms(b, a)));
+}
+
+function titleSim0(a: string, b: string): number {
   const fa = fold(a);
   const fb = fold(b);
   if (!fa || !fb) return 0;
@@ -76,7 +119,23 @@ export function titleSim(a: string, b: string): number {
   const long = fa.length < fb.length ? fb : fa;
   let sub = 0;
   if (short.length >= 12 && long.startsWith(short)) sub = 0.93;
-  return Math.max(r, sub, tokenJaccard(fa, fb) * 0.97);
+  return Math.max(r, sub, tokenJaccard(fa, fb) * 0.97, containment(fa, fb));
+}
+
+/**
+ * Same words in another order, one side carrying a few extra symbol tokens: "Solution of the matrix equation
+ * AX+XB=C: Algorithm 432" vs "Algorithm 432 [C2]: Solution of the matrix equation AX + XB = C [F4]".
+ */
+function containment(fa: string, fb: string): number {
+  const A = fa.split(' ');
+  const B = fb.split(' ');
+  const [S, L] = A.length <= B.length ? [A, B] : [B, A];
+  if (S.length < 5) return 0;
+  const Ls = new Set(L);
+  if (!S.every((t) => Ls.has(t))) return 0;
+  const Ss = new Set(S);
+  const extra = L.filter((t) => !Ss.has(t));
+  return extra.length <= 3 && extra.every((t) => t.length <= 3 || /\d/.test(t)) ? 0.9 : 0;
 }
 
 function tokenJaccard(fa: string, fb: string): number {

@@ -58,13 +58,13 @@
   "VERACITE": {
    "tp": 33,
    "fn": 0,
-   "fp": 2,
-   "tn": 69,
+   "fp": 5,
+   "tn": 66,
    "rec": 1,
-   "spec": 0.971830985915493,
-   "prec": 0.9428571428571428,
-   "f1": 0.9705882352941176,
-   "acc": 0.9807692307692307
+   "spec": 0.9295774647887324,
+   "prec": 0.868421052631579,
+   "f1": 0.9295774647887324,
+   "acc": 0.9519230769230769
   }
  },
  "results": [
@@ -231,7 +231,6 @@
    "gold": "problematic",
    "verdict": "id_mismatch",
    "issues": [
-    "Published in “The Astrophysical Journal Supplement Series”, not “F1000Research”",
     "doi:10.12688/f1000research.26932.2 points to a different work: “Recognizing the value of software: a software citation guide”"
    ]
   },
@@ -398,9 +397,10 @@
   {
    "id": "P3 R9",
    "gold": "problematic",
-   "verdict": "fabricated",
+   "verdict": "not_found",
    "issues": [
-    "No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC",
+    "Semantic Scholar did not respond; re-run later to confirm",
+    "No matching work in Crossref, OpenAlex, Europe PMC",
     "“and et al.” pattern (common in machine-generated references)"
    ]
   },
@@ -483,9 +483,10 @@
   {
    "id": "P3 R21",
    "gold": "problematic",
-   "verdict": "fabricated",
+   "verdict": "not_found",
    "issues": [
-    "No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC"
+    "Semantic Scholar did not respond; re-run later to confirm",
+    "No matching work in Crossref, OpenAlex, Europe PMC"
    ]
   },
   {
@@ -523,18 +524,20 @@
   {
    "id": "P3 R26",
    "gold": "problematic",
-   "verdict": "fabricated",
+   "verdict": "not_found",
    "issues": [
-    "No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC",
+    "Semantic Scholar did not respond; re-run later to confirm",
+    "No matching work in Crossref, OpenAlex, Europe PMC",
     "Nearest record: “Evaluating the reliability of function calling by large language models for ukrainian-language requests” (54% title similarity)"
    ]
   },
   {
    "id": "P3 R27",
    "gold": "problematic",
-   "verdict": "fabricated",
+   "verdict": "not_found",
    "issues": [
-    "No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC",
+    "Semantic Scholar did not respond; re-run later to confirm",
+    "No matching work in Crossref, OpenAlex, Europe PMC",
     "Nearest record: “Red Teaming Language Models with Language Models” (50% title similarity)"
    ]
   },
@@ -553,8 +556,10 @@
   {
    "id": "P3 R30",
    "gold": "verified",
-   "verdict": "verified",
-   "issues": []
+   "verdict": "metadata_error",
+   "issues": [
+    "Only a preprint was found; publication in “Proceedings on \"I Can’t Believe It’s Not Better: Failure Modes in the Age of Foundation Models\" at NeurIPS 2023 Workshops” could not be confirmed"
+   ]
   },
   {
    "id": "P3 R31",
@@ -593,8 +598,8 @@
    "gold": "problematic",
    "verdict": "not_found",
    "issues": [
-    "OpenAlex did not respond; re-run later to confirm",
-    "No matching work in Crossref, Semantic Scholar, Europe PMC"
+    "Semantic Scholar did not respond; re-run later to confirm",
+    "No matching work in Crossref, OpenAlex, Europe PMC"
    ]
   },
   {
@@ -606,8 +611,10 @@
   {
    "id": "P3 R38",
    "gold": "verified",
-   "verdict": "verified",
-   "issues": []
+   "verdict": "metadata_error",
+   "issues": [
+    "Only a preprint was found; publication in “Proceedings of the 41st International Conference on Machine Learning” could not be confirmed"
+   ]
   },
   {
    "id": "P3 R39",
@@ -654,8 +661,10 @@
   {
    "id": "P3 R46",
    "gold": "verified",
-   "verdict": "verified",
-   "issues": []
+   "verdict": "metadata_error",
+   "issues": [
+    "Closest real work has a different title: “Robust machine translation evaluation with entailment features”"
+   ]
   },
   {
    "id": "P3 R47",
@@ -668,8 +677,8 @@
    "gold": "problematic",
    "verdict": "not_found",
    "issues": [
-    "OpenAlex did not respond; re-run later to confirm",
-    "No matching work in Crossref, Semantic Scholar, Europe PMC",
+    "Semantic Scholar did not respond; re-run later to confirm",
+    "No matching work in Crossref, OpenAlex, Europe PMC",
     "Nearest record: “BERT-based Lexical Substitution” (68% title similarity)"
    ]
   },
@@ -678,8 +687,8 @@
    "gold": "problematic",
    "verdict": "not_found",
    "issues": [
-    "OpenAlex did not respond; re-run later to confirm",
-    "No matching work in Crossref, Semantic Scholar, Europe PMC",
+    "Semantic Scholar did not respond; re-run later to confirm",
+    "No matching work in Crossref, OpenAlex, Europe PMC",
     "Nearest record: “Improved Word Sense Disambiguation Using Pre-Trained Contextualized Word Representations” (58% title similarity)"
    ]
   },
@@ -688,8 +697,8 @@
    "gold": "problematic",
    "verdict": "not_found",
    "issues": [
-    "OpenAlex did not respond; re-run later to confirm",
-    "No matching work in Crossref, Semantic Scholar, Europe PMC"
+    "Semantic Scholar did not respond; re-run later to confirm",
+    "No matching work in Crossref, OpenAlex, Europe PMC"
    ]
   },
   {
@@ -701,9 +710,10 @@
   {
    "id": "P3 R52",
    "gold": "problematic",
-   "verdict": "fabricated",
+   "verdict": "not_found",
    "issues": [
-    "No matching work in Crossref, Semantic Scholar, OpenAlex, Europe PMC",
+    "Semantic Scholar did not respond; re-run later to confirm",
+    "No matching work in Crossref, OpenAlex, Europe PMC",
     "Nearest record: “Graph Reasoning Transformers for Knowledge-Aware Question Answering” (78% title similarity)"
    ]
   },

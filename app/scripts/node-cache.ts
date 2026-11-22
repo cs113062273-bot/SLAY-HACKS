@@ -7,13 +7,18 @@ export class FileCache implements Cache {
   private m: Record<string, unknown> = {};
   private dirty = false;
   private path: string;
-  constructor(path: string) {
+  /** read-only layers consulted after this cache (recorded responses), never written */
+  private layers: Record<string, unknown>[];
+  constructor(path: string, layers: string[] = []) {
     this.path = path;
     if (existsSync(path)) this.m = JSON.parse(readFileSync(path, 'utf8'));
+    this.layers = layers.filter((p) => existsSync(p)).map((p) => JSON.parse(readFileSync(p, 'utf8')));
     setInterval(() => this.flush(), 5000).unref();
   }
   async get(k: string) {
-    return k in this.m ? this.m[k] : undefined;
+    if (k in this.m) return this.m[k];
+    for (const l of this.layers) if (k in l) return l[k];
+    return undefined;
   }
   async set(k: string, v: unknown) {
     this.m[k] = v;
@@ -54,5 +59,6 @@ export class ReplayCache implements Cache {
 export function makeCache(defaultPath: string): FileCache | ReplayCache {
   const r = process.env.VERACITE_REPLAY;
   if (r) return new ReplayCache(r.split(';'));
-  return new FileCache(process.env.VERACITE_CACHE_PATH ?? defaultPath);
+  // VERACITE_READ_LAYERS="a.json;b.json": live run that reuses recorded responses and writes only new ones
+  return new FileCache(process.env.VERACITE_CACHE_PATH ?? defaultPath, process.env.VERACITE_READ_LAYERS?.split(';') ?? []);
 }

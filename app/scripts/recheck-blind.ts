@@ -39,6 +39,9 @@ const sim = (a: string, b: string) => {
 };
 
 const out: string[] = [];
+// RECHECK_DUMP=1: full detail of every flag now (parsed fields, checks, candidates) for root-cause analysis
+const dump: unknown[] = [];
+const verdicts: Record<string, number> = {};
 const tally = { oldFalse: 0, oldFalseGone: 0, oldFalseGoneUnanswered: 0, newFlagsUnanswered: 0, oldReal: 0, oldRealKept: 0, oldUncertain: 0, oldUncertainKept: 0, refs: 0, flagsNow: 0, newFlags: 0 };
 for (const p of frozen.papers) {
   const { lines, pageWidths } = await pdfToLines(pdfjs as any, new Uint8Array(readFileSync(`${root}pdfs/${B}/${p.file}`)));
@@ -60,6 +63,7 @@ for (const p of frozen.papers) {
   const unanswered = (i: number) => replayMisses.has(ids[i]) || res[i].verdict === 'unchecked';
   const tag = (i: number) => (replay && replayMisses.has(ids[i]) ? ` [${replayMisses.get(ids[i])!.length} unrecorded lookups]` : '');
   tally.refs += res.length;
+  for (const r of res) verdicts[r.verdict] = (verdicts[r.verdict] ?? 0) + 1;
   const flaggedNow = new Set(res.map((r, i) => (FLAGGED_VERDICTS.includes(r.verdict) ? i : -1)).filter((i) => i >= 0));
   tally.flagsNow += flaggedNow.size;
   const explained = new Set<number>();
@@ -95,6 +99,13 @@ for (const p of frozen.papers) {
     out.push(`  #${f.reviewIndex} ${mark.padEnd(14)} ${f.verdict} → ${now?.verdict ?? 'missing'}${now ? tag(bi) : ''}  ${f.raw.slice(0, 90)}`);
     if (still || kind === 'real') out.push(`      now: ${now?.issues.join(' | ').slice(0, 220)}`);
   }
+  if (process.env.RECHECK_DUMP)
+    for (const i of flaggedNow) {
+      const r = res[i];
+      const fr = p.flags.find((f: any) => sim(f.raw, doc.rawReferences[i]) >= 0.5);
+      const judgement = fr ? corrections.get(fr.reviewIndex) ?? fr.judgement : 'new';
+      dump.push({ paper: p.file, n: i + 1, judgement, verdict: r.verdict, raw: doc.rawReferences[i], parsed: { title: r.parsed.title, authors: r.parsed.authors.map((a) => a.family), year: r.parsed.year, venue: r.parsed.venue, kind: r.parsed.kind, dois: r.parsed.dois, arxiv: r.parsed.arxivIds }, checks: r.checks, issues: r.issues, match: r.match && { title: r.match.title, authors: r.match.authors.map((a) => [a.family, a.given ?? '']), years: r.match.years, venue: r.match.venue, aliases: r.match.venueAliases, type: r.match.type, source: r.match.source, doi: r.match.doi }, candidates: r.candidates.map((c) => `${c.source}: ${c.title} / ${c.authors.slice(0, 3).map((a) => a.family).join(', ')} / ${c.years.join('/')} / ${c.venue ?? ''}`), failed: r.sourcesFailed, unrecorded: replayMisses.get(ids[i])?.length ?? 0 });
+    }
   for (const i of flaggedNow) {
     if (explained.has(i)) continue;
     tally.newFlags++;
@@ -105,7 +116,8 @@ for (const p of frozen.papers) {
   console.log(`${B}: completed ${p.file}, ${res.length} refs, ${flaggedNow.size} flags`);
   writeFileSync(`${root}${B}/recheck${suffix}-progress.json`, JSON.stringify({ completedThrough: p.file, tally }, null, 2));
 }
-const summary = `\n${B} re-check with the current core: refs ${tally.refs}, flags now ${tally.flagsNow}; judged false alarms fixed ${tally.oldFalseGone}/${tally.oldFalse}; judged real errors still flagged ${tally.oldRealKept}/${tally.oldReal}; uncertain still flagged ${tally.oldUncertainKept}/${tally.oldUncertain}; new flags to judge ${tally.newFlags}; of the fixes, ${tally.oldFalseGoneUnanswered} only became unchecked/unanswered; ${tally.newFlagsUnanswered} new flags had a failed or unrecorded lookup${replay ? ' (offline replay of recorded responses)' : ''}`;
+const summary = `\n${B} re-check with the current core: refs ${tally.refs}, flags now ${tally.flagsNow}; judged false alarms fixed ${tally.oldFalseGone}/${tally.oldFalse}; judged real errors still flagged ${tally.oldRealKept}/${tally.oldReal}; uncertain still flagged ${tally.oldUncertainKept}/${tally.oldUncertain}; new flags to judge ${tally.newFlags}; of the fixes, ${tally.oldFalseGoneUnanswered} only became unchecked/unanswered; ${tally.newFlagsUnanswered} new flags had a failed or unrecorded lookup${replay ? ' (offline replay of recorded responses)' : ''}\nverdicts: ${Object.entries(verdicts).sort().map(([k, v]) => `${k} ${v}`).join(', ')}`;
 console.log(out.join('\n') + summary);
 writeFileSync(`${root}${B}/recheck${suffix}.txt`, out.join('\n') + summary + '\n');
+if (process.env.RECHECK_DUMP) writeFileSync(`${root}${B}/recheck${suffix}-flags.json`, JSON.stringify(dump, null, 1));
 process.exit(0);
